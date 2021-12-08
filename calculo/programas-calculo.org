@@ -1,0 +1,249 @@
+
+#+TITLE:    Programas Cálculo
+#+Author:   Luis Eduardo Galindo Amaya
+#+email:    egalindo54@uabc.edu.mx
+
+#+LATEX_COMPILER: pdflatex
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS:
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage{pifont}
+#+LATEX_HEADER: \usepackage{pagecolor,lipsum}
+#+LATEX_HEADER_EXTRA: \pagecolor{pink!90!pink}
+
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE: es
+#+DATE: \today
+
+# #+OPTIONS: \n:nil num:nil toc:nil
+
+\newpage 
+
+* Conversión Entre Sistemas De Coordenadas
+** TODO Rectangulares a Cilíndricas (o Polares)
+#+BEGIN_SRC
+# Sustituye el valor de 'x', 'y' y 'z'.
+
+x = 4
+y = -5
+z = 2
+
+
+r = sqrt(x^2+y^2)
+theta = arctan(y/x)
+
+# determinar la cantidad de ángulo faltante
+# 'and' regresa 1 = True y 0 = False
+ajuste(x,y) = ( 
+   and(x>=0,y>=0) * 0     + # I
+   and(x<0 ,y>=0) * pi    + # II
+   and(x<0 ,y<0)  * pi    + # III
+   and(x>=0,y<0)  * 2*pi    # IV
+)
+
+# sumamos los grados faltantes
+theta = theta+ajuste(x,y)
+
+"Rectangular (x,y,z):"
+float((x,y,z))
+
+"Cilíndrica (r,theta,z):"
+float((r,theta,z))
+#+END_SRC
+
+-----
+
+\newpage 
+
+** Rectangulares a Esféricas
+#+BEGIN_SRC
+# Sustituye el valor de 'x', 'y' y 'z'.
+
+x = 4
+y = -5
+z = 2
+
+
+rho = sqrt(x^2+y^2+z^2)
+theta = arctan(y/x)
+phi = arccos(z/rho)
+
+# determinar la cantidad de ángulo faltante
+# 'and' regresa 1 = True y 0 = False
+ajuste(x,y) = ( 
+   and(x>=0,y>=0) * 0     + # I
+   and(x<0 ,y>=0) * pi    + # II
+   and(x<0 ,y<0)  * pi    + # III
+   and(x>=0,y<0)  * 2*pi    # IV
+)
+
+# sumamos los grados faltantes
+theta = theta+ajuste(x,y)
+
+"Rectangular (x,y,z):"
+float((x,y,z))
+
+"Esféricas (rho,theta,phi):"
+float((rho,theta,phi))
+#+END_SRC
+
+-----
+
+\newpage 
+
+** Cilíndricas a Rectangulares
+#+BEGIN_SRC 
+# Sustituye el valor de 'r', 'theta' y 'z'.
+
+r = 4
+theta = 2
+z = 4
+
+
+x = r * cos(theta)
+y = r * sin(theta)
+z = z
+
+"Cilíndrica (r,theta,z):"
+float((r,theta,z))
+
+"Rectangular (x,y,z):"
+float((x,y,z))
+#+END_SRC
+
+-----
+
+\newpage 
+
+** Cilíndricas a Esféricas
+#+BEGIN_SRC 
+# Sustituye el valor de 'r', 'theta' y 'z'
+# theta es el angulo de los ejes 'x' y 'y'
+
+r = 1
+theta = 1
+z = 1
+
+
+rho = sqrt(r^2+z^2) 
+theta = theta
+phi = arccos(z/rho)
+
+"Cilindrica (r,theta,z):"
+float((r,theta,z))
+
+"Esferica (rho,theta,phi):"
+float((rho,theta,phi))
+#+END_SRC
+
+-----
+
+\newpage
+
+** Esfericas a Rectangulares
+#+BEGIN_SRC 
+# Sustituye el valor de 'rho', 'theta' y 'phi'
+# theta es el angulo de los ejes 'x' y 'y'
+# phi es el angulo del eje 'z'
+
+rho = 1
+theta = 1
+phi = 1
+
+
+x = rho * sin(phi) * cos(theta)
+y = rho * sin(phi) * sin(theta)
+z = rho * cos(phi)
+
+"Esferica (rho,theta,phi):"
+float((rho,theta,phi))
+
+"Rectangular (x,y,z):"
+float((x,y,z))
+#+END_SRC
+
+-----
+
+\newpage 
+
+** Esfericas a Cilidnricas
+#+BEGIN_SRC 
+# Sustituye el valor de 'rho', 'theta' y 'phi'
+# theta es el angulo de los ejes 'x' y 'y'
+# phi es el angulo del eje 'z'
+
+rho = 1
+theta = 1
+phi = 1
+
+
+r = rho * sin(phi)
+theta = theta
+z = rho * cos(phi)
+
+"Esferica (rho,theta,phi):"
+float((rho,theta,phi))
+
+"Cilindrica (r,theta,z):"
+float((r,theta,z))
+#+END_SRC
+
+-----
+
+\newpage
+
+* Modulo del Vector
+** Modulo - Version 1
+#+BEGIN_SRC 
+# Sustituye el valor de 'x', 'y' y 'z'.
+
+x = 1
+y = 1
+z = 1
+
+
+sqrt(x^2 + y^2 + z^2)
+#+END_SRC
+
+-----
+
+** Modulo - Version 2
+#+BEGIN_SRC 
+# Sustituye los valores por los de tu vector (x,y,z).
+
+v = (1,3,5)
+
+
+abs(v)
+#+END_SRC
+
+-----
+
+** Modulo del Vector Fuera Del Origen
+#+BEGIN_SRC 
+# Sustituye 'v' por los valores por los de tu vector.
+# Sustituye 'g' los valores por los de el origen.
+
+v = (1,3,5) # Vector
+g = (0,0,0) # Origen
+
+
+abs(v-g)
+#+END_SRC
+
+-----
+
+** Vector Unitario
+#+BEGIN_SRC 
+# Sustituye 'v' por los valores por los de tu vector.
+
+v = (1,3,5) # Vector
+
+
+vu = v/abs(v)
+
+
+"Vector unitario:"
+float(vu)
+#+END_SRC
