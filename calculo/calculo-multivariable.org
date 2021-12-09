@@ -29,7 +29,7 @@ Estos apuntes están hechos para usarse en conjunto con el software CAS de Georg
 - Todos los ángulos son en radianes.
 - Utilizare la notación de subíndices al derivar, por ejemplo \(F_x\) es derivada de la variable 'x' y \(F_{xy}\) es la derivada de 'x' y luego la derivada de 'y'.
 - Cuando escriba un vector usare la notación \vec{A}, prefiero usar las negritas a modo de énfasis.
-
+- Los diagramas que aparecen aqui son meramente orientativos, por lo tanto pueden ó pueden no representar los nombres de las variables que uso para las explicaciones.
 
 * Interpretar un plano 
 ** Eje coordenado
@@ -218,11 +218,70 @@ La característica fundamental del vector unitario es que su longitud siempre es
 
 Para verificar que el vector resultante es unitario simplemente volvemos a calcular el valor de su modulo, si el valor resultante es '1' entonces hemos calculado correctamente el vector.
 
-** Producto Punto
+** Producto Punto Y Ángulos Directores
+El producto punto, producto escalar ó producto interno es una operacion que toma dos vectores y nos devuelve el area que se forma paralelogramo entre esto (ó el volumen de un Paralelepípedo si es en R^3) [fn:Paralelogramo].
 
-** Ángulos Entre Vectores
 
-** Ángulos Directores
+[fn:Paralelogramo] El producto punto representa mucho mas que el área de el paralelogramo, si se desea indagar mas en el tema recomiendo el vídeo de '3 blue 1 brown': https://youtu.be/2u1YeOyGuAc.
+
+*** Formula Del Producto Punto
+Para representar el producto punto usamos el operador \( \vec{A} \cdot \vec{B} \). 
+El producto punto se puede calcular de multiples maneras, la forma directa de calcularla es con la siguiente fomrula[fn:formula-pp]:
+
+\[
+\vec{A} \cdot \vec{B} = \vec{A}_x \vec{B}_x + \vec{A}_y \vec{B}_y + \vec{A}_z \vec{B}_z
+\]
+
+Una cosa muy importante que debemos tomar en cuenta es la siguiente igualdad ya que mas adelante nos servira para calcular el ángulo entre vectores[fn:angulo-pp]:
+
+\[
+\vec{A}\cdot\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \cos(\theta)
+\]
+
+[fn:angulo-pp] \theta (theta) es el ángulo entre los dos vectores.
+
+[fn:formula-pp]transpuesta de B por A, \(\vec{A} \cdot \vec{B} = \vec{A}\vec{B}^T\).
+
+*** Angulo Entre Vectores
+como sabemos que \(\vec{A}\cdot\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \cos(\theta)\) donde \theta (theta) es igual a el ángulo entre vectores, nos basta con despejar la formula:
+
+\[
+\cos(\theta) = \frac{ \vec{A} \cdot \vec{B} }{ \vert \vec{A} \vert \vert \vec{B} \vert }
+\]
+
+
+*** Ángulos Directores
+Si en la formula de angulos entre dos vectores sustituimos uno de los vectores por un vector unitario sobre uno de los ejes coordenados podemos determinar el angulo entre ese eje y el vector:
+
+#+attr_latex: :width 4cm
+#+caption: \gamma, \beta, \alpha
+[[file:img/angulos-directores.png]]
+
+\[\begin{aligned}
+ cos(\alpha) = \frac{a_x}{|a|} && 
+  cos(\beta) = \frac{a_y}{|a|} &&
+ cos(\gamma) = \frac{a_z}{|a|} \\
+\end{aligned}\] 
+
+*** Área De Un Paralelogramo
+Recuperando un poco lo que aprendimos en geometría, un paralelogramo es un rectángulo con dos triángulos rectángulos en los lados ó también puede ser un rectángulo cuyas aristas se han inclinado en la misma dirección. 
+
+#+attr_latex: :width 4cm
+#+caption: Formula del paralelogramo.
+[[file:img/area-paralelogramo.png]]
+
+Es bastante fácil calcularla cuando tenemos la altura, sin embargo a comparación de un rectángulo cualquiera las aristas a la derecha y a la izquierda están inclinadas, por lo tanto la longitud de las aristas laterales *NO* representa la altura de nuestro paralelogramo.
+
+*** Extendiendo La Formula Del Área De Un Paralelogramo
+Viendo la figura del paralelogramo es facil deducir que podemos obtener el valor de 'h' usando ley de senos y cosenos, haciendo el despeje obtendriamos que 'h' es igual a el cosen de \theta (theta) por la hipotenusa:
+
+#+attr_latex: :width 4cm
+#+caption: \(h = A \cos(\theta)\)
+[[file:img/despeje-paralelogramo.png]]
+
+Si hacemos la sustucion obtenemos que \(A \cos(\theta) \cdot B \) es igual al área del paralelogramo, ahora con esta formula conocemos la relacion entre el area, el cateto adyacente, cateto opuesto y el angulo. 
+
+Con esta información podemos tener la idea de sustituir las aristas 'A' y 'B' y ahora con nuestra formula \(A \cos(\theta) \cdot B \) podemos despejar el angulo entre los dos vectores, entonces podemos resumir que el producto punto es como calcular el area del paralelogramo.
 
 * Fuentes
 
