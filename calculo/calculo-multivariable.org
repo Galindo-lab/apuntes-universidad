@@ -49,7 +49,7 @@ Un octante en geometría del espacio es cada una de las ocho divisiones coordena
 #+caption: A la derecha cuadrantes y a la izquierda los octantes.
 [[file:img/cuadrante-y-octante-2.png]]
 
-* Representación de punto en el plano
+* Representación De Punto En El Plano
 Cuando trabajamos con planos cartesianos podemos marcar puntos indicando el numero de su coordenada en cada respectivo eje, esta una forma muy rápida de interpretar un punto en el espacio, sin embargo no es la única y sobre todo cuando trabajamos con funciones circulares las representaciones rectangulares terminan complicando nuestro trabajo.
 
 ** Rectangular ó Cartesianas
@@ -85,7 +85,7 @@ Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, 
  r = \sqrt{x^2+y^2} && \theta = arctg\left(y/x\right) \\
 \end{aligned}\] 
 
-- Importante :: Estamos despejando un triangulo y dependiendo el cuadrante donde se encuentre el punto tenemos que sumar los ángulos que nos faltan: 
+*Importante:* Estamos despejando un triangulo y dependiendo el cuadrante donde se encuentre el punto tenemos que sumar los ángulos que nos faltan: 
 
 #+NAME: correcciones-theta
 | Cuadrante | Grados | Radianes |
@@ -109,8 +109,9 @@ Las coordenadas cilíndricas son otra forma de representar las coordenadas polar
  \phi = arccos\left( z/\rho \right) \\
 \end{aligned}\] 
 
-- Importante I: :: el ángulo \phi (phi) *NO* necesita corrección.
-- Importante II: :: el ángulo \theta (theta) *Si* ocupa [[correcciones-theta][corrección]].
+*Importante I:* el ángulo \phi (phi) *NO* necesita corrección.
+
+*Importante II*: el ángulo \theta (theta) *Si* ocupa [[correcciones-theta][corrección]].
 
 -----
 
@@ -198,10 +199,14 @@ Sumar vectores no representa mas que la suma de independiente de cada uno de sus
 \vec{A} - \vec{B} = (\vec{A}_x - \vec{B}_x,\vec{A}_y - \vec{B}_y,\vec{A}_z - \vec{B}_z)
 \]
 
-- Importante: :: esto es solo para coordenadas cartesianas, si tenermos nuestro vector en coordenadas cilíndricas ó esféricas tendremos que hacer la conversión correspondiente.
+*Importante:* Esto es solo para coordenadas cartesianas, si tenermos nuestro vector en coordenadas cilíndricas ó esféricas tendremos que hacer la conversión correspondiente.
 
 ** Multiplicación Escalar
-Podemos multplicar un vector
+Podemos multiplicar un vector por un valor fijo para aumentar su tamaño, simplemente multiplicamos cada componente por la constante de nuestro interés:
+
+\[
+k \cdot \vec{A} = (k\cdot\vec{A_x},k\cdot\vec{A_y},k\cdot\vec{A_z})
+\]
 
 ** Modulo ó magnitud del Vector
 El módulo de un vector es la longitud entre el inicio y el final del vector, podemos calcular la distancia desde el origen con la formula de distancia:
@@ -310,7 +315,6 @@ Una propiedad muy importante que debemos tener en cuenta es su relacion con los 
 
 # [fn:video-pp] Para más información recomiendo el video de zach Star https://youtu.be/TBpDMLCC2uY.
 
-
 ** Producto Cruz
 El producto cruz al igual que el producto punto representa una operacion que raciona dos vectores y sus maginitudes, su operador es \(\times\), a comparacion del producto punto el resultado _No es un escalar_, el producto cruz siempre devuelve otro vector:
 
@@ -329,7 +333,7 @@ El producto cruz al igual que el producto punto representa una operacion que rac
   (\vec{A_x}\vec{B_y} - \vec{A_y}\vec{A_x})k
 \]
 
-Al igual que el producto punto el producto cruz representa la relacion geometrica entre dos vectores:
+Al igual que el producto punto el producto cruz representa la relación geométrica, la formula es muy parecida mas sin embargo ahora usamos el seno en vez del coseno, entre dos vectores:
 
 \[
  \vec{A}\times\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \sin(\theta)
