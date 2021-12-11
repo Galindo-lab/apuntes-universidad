@@ -200,6 +200,9 @@ Sumar vectores no representa mas que la suma de independiente de cada uno de sus
 
 - Importante: :: esto es solo para coordenadas cartesianas, si tenermos nuestro vector en coordenadas cilíndricas ó esféricas tendremos que hacer la conversión correspondiente.
 
+** Multiplicación Escalar
+Podemos multplicar un vector
+
 ** Modulo ó magnitud del Vector
 El módulo de un vector es la longitud entre el inicio y el final del vector, podemos calcular la distancia desde el origen con la formula de distancia:
 
@@ -232,7 +235,9 @@ La característica fundamental del vector unitario es que su longitud siempre es
 Para verificar que el vector resultante es unitario simplemente volvemos a calcular el valor de su modulo, si el valor resultante es '1' entonces hemos calculado correctamente el vector.
 
 ** Producto Punto
-Para representar el producto punto usamos el operador \( \cdot \). Al producto punto también se le llama comúnmente producto escalar ya que el _resultado siempre es una escalar_. Es producto punto en palabras sencillas es la suma de la multiplicación de componente por componente[fn:formula-pp]:
+Para representar el producto punto usamos el operador \( \cdot \). Al producto punto también se le llama comúnmente producto escalar ya que el resultado _siempre es una escalar_. Es producto punto en palabras sencillas es la suma de la multiplicación de componente por componente:
+
+\[\vec{A} \cdot \vec{B} = \vec{A}\vec{B}^T\].
 
 \[
 \vec{A} \cdot \vec{B} = \vec{A}_1 \vec{B}_1 + \vec{A}_2 \vec{B}_2 + ... + \vec{A}_n \vec{B}_n
@@ -244,134 +249,88 @@ Una propiedad muy importante que debemos tener en cuenta es su relacion con los 
  \vec{A}\cdot\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \cos(\theta)
 \]
 
-[fn:formula-pp]Transpuesta de B por A, \(\vec{A} \cdot \vec{B} = \vec{A}\vec{B}^T\).
-
-*** Explicación del producto punto
-Una forma intuitiva de entender el producto punto de dos vector es como una magnitud escalar que nos indica 'que tan diferentes son dos vectores', dicho así es un poco complicado de imaginar, pero es mas fácil de entender con un ejemplo. Primero tenemos cuatro vectores unitarios, cada uno sobre uno de los ejes de nuestro plano:
-
-\[\begin{aligned}
-  \vec{V_1} = <1,0>  && 
-  \vec{V_2} = <0,1>  &&
-  \vec{V_3} = <-1,0> &&
-  \vec{V_4} = <0,-1> \\
-\end{aligned}\] 
-
-y también tenemos un vector de referencia, que al igual que \(\vec{V_1}\) es unitario y se encuentra sobre el eje 'x':
-
-\[
-\vec{R} = <1,0>
-\]
-
-Bien, ahora que tenemos nuestros vectores calculamos los correspondientes productos punto:
-
-\[\begin{aligned}
-  \vec{R} \cdot \vec{V_1} = 1 &&
-  \vec{R} \cdot \vec{V_2} = 0 &&
-  \vec{R} \cdot \vec{V_3} = -1 &&
-  \vec{R} \cdot \vec{V_4} = 0 \\
-\end{aligned}\]
-
-Podemos seguir evaluando vectores unitarios en ángulos intermedios[fn:recomendacion-pp], pero podemos observar tres cosas muy importantes:
-
-- Los vectores con ángulo mayor a 90° son negativos.
-- Los vectores perpendiculares (con ángulo igual a 90°) son iguales a 0.
-- Los vectores con ángulo menor a 90° son positivos.
-
-Si aplicamos trigonometría a nuestras evaluaciones podemos comprobar que el valor obtenido es igual al coseno de el ángulo. Ahora si extendemos nuestro vector de referencia al doble (\( \vec{R} = <2,0> \)) y nuestros vectores de prueba los multiplicamos por 3:
-
-\[\begin{aligned}
-  \vec{V_1} = <3,0>  &&
-  \vec{V_2} = <0,3>  &&
-  \vec{V_3} = <-3,0> &&
-  \vec{V_4} = <0,-3> \\
-\end{aligned}\] 
-
-y volvemos a evaluar obtendremos los siguientes resultados[fn:recomendacion-pp]:
-
-\[\begin{aligned}
-  \vec{R} \cdot \vec{V_1} = 6 &&
-  \vec{R} \cdot \vec{V_2} = 0 &&
-  \vec{R} \cdot \vec{V_3} = -6 &&
-  \vec{R} \cdot \vec{V_4} = 0 \\
-\end{aligned}\]
-
-sabemos que una parte de el valor depende de coseno del ángulo entre los vectores, pero también depende de las magnitudes más específicamente del producto de las magnitudes:
-
-\[
- \vec{A}\cdot\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \cos(\theta)
-\]
-
-Para concluir esta explicación me gustaría agregar que no hay una forma sencilla de entender el producto punto de manera intuitiva, pero es mas fácil analizarlo desde sus aplicaciones que desde su definición[fn:video-pp].
-
-[fn:recomendacion-pp] Recomiendo usar un grficador para verificar esto, es muy importante para entender el resto de planteamientos que se hacen más adelante.
-
-[fn:video-pp] Para más información recomiendo el video de zach Star https://youtu.be/TBpDMLCC2uY.
-
-# ** Produqcto Punto
-# El producto punto, producto escalar ó producto interno es una operacion que toma dos vectores
-
-# *** Formula Del Producto Punto
-# Para representar el producto punto usamos el operador \( \vec{A} \cdot \vec{B} \). 
-# El producto punto se puede calcular de multiples maneras, la forma directa de calcularla es con la siguiente fomrula[fn:formula-pp]:
-
-# \[
-# \vec{A} \cdot \vec{B} = \vec{A}_x \vec{B}_x + \vec{A}_y \vec{B}_y + \vec{A}_z \vec{B}_z
-# \]
-
-# Una cosa muy importante que debemos tomar en cuenta es la siguiente igualdad ya que mas adelante nos servira para calcular el ángulo entre vectores[fn:angulo-pp]:
-
-# \[
-# \vec{A}\cdot\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \cos(\theta)
-# \]
-
-# [fn:angulo-pp] \theta (theta) es el ángulo entre los dos vectores.
-
-# [fn:formula-pp]transpuesta de B por A, \(\vec{A} \cdot \vec{B} = \vec{A}\vec{B}^T\).
-
-# *** Angulo Entre Vectores
-# como sabemos que \(\vec{A}\cdot\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \cos(\theta)\) donde \theta (theta) es igual a el ángulo entre vectores, nos basta con despejar la formula:
-
-# \[
-# \cos(\theta) = \frac{ \vec{A} \cdot \vec{B} }{ \vert \vec{A} \vert \vert \vec{B} \vert }
-# \]
-
-# *** Ángulos Directores
-# Si en la formula de angulos entre dos vectores sustituimos uno de los vectores por un vector unitario sobre uno de los ejes coordenados podemos determinar el angulo entre ese eje y el vector:
-
-# #+attr_latex: :width 4cm
-# #+caption: \gamma, \beta, \alpha
-# [[file:img/angulos-directores.png]]
+# *** Explicación Del Producto Punto 
+# Una forma intuitiva de entender el producto punto de dos vector es como una magnitud escalar que nos indica 'que tan diferentes son dos vectores', dicho así es un poco complicado de imaginar, pero es mas fácil de entender con un ejemplo. Primero tenemos cuatro vectores unitarios, cada uno sobre uno de los ejes de nuestro plano:
 
 # \[\begin{aligned}
-#  cos(\alpha) = \frac{a_x}{|a|} && 
-#   cos(\beta) = \frac{a_y}{|a|} &&
-#  cos(\gamma) = \frac{a_z}{|a|} \\
+#   \vec{V_1} = <1,0>  && 
+#   \vec{V_2} = <0,1>  &&
+#   \vec{V_3} = <-1,0> &&
+#   \vec{V_4} = <0,-1> \\
 # \end{aligned}\] 
 
-# *** Área De Un Paralelogramo
-# Recuperando un poco lo que aprendimos en geometría, un paralelogramo es un rectángulo con dos triángulos rectángulos en los lados ó también puede ser un rectángulo cuyas aristas se han inclinado en la misma dirección. 
+# y también tenemos un vector de referencia, que al igual que \(\vec{V_1}\) es unitario y se encuentra sobre el eje 'x':
 
-# #+attr_latex: :width 4cm
-# #+caption: Formula del paralelogramo.
-# [[file:img/area-paralelogramo.png]]
+# \[
+# \vec{R} = <1,0>
+# \]
 
-# Es bastante fácil calcularla cuando tenemos la altura, sin embargo a comparación de un rectángulo cualquiera las aristas a la derecha y a la izquierda están inclinadas, por lo tanto la longitud de las aristas laterales *NO* representa la altura de nuestro paralelogramo.
+# Bien, ahora que tenemos nuestros vectores calculamos los correspondientes productos punto:
 
-# *** Extendiendo La Formula Del Área De Un Paralelogramo
-# Viendo la figura del paralelogramo es facil deducir que podemos obtener el valor de 'h' usando ley de senos y cosenos, haciendo el despeje obtendriamos que 'h' es igual a el cosen de \theta (theta) por la hipotenusa:
+# \[\begin{aligned}
+#   \vec{R} \cdot \vec{V_1} = 1 &&
+#   \vec{R} \cdot \vec{V_2} = 0 &&
+#   \vec{R} \cdot \vec{V_3} = -1 &&
+#   \vec{R} \cdot \vec{V_4} = 0 \\
+# \end{aligned}\]
 
-# #+attr_latex: :width 4cm
-# #+caption: \(h = A \cos(\theta)\)
-# [[file:img/despeje-paralelogramo.png]]
+# Podemos seguir evaluando vectores unitarios en ángulos intermedios[fn:recomendacion-pp], pero podemos observar tres cosas muy importantes:
 
-# Si hacemos la sustucion obtenemos que \(A \cos(\theta) \cdot B \) es igual al área del paralelogramo, ahora con esta formula conocemos la relacion entre el area, el cateto adyacente, cateto opuesto y el angulo. 
+# - Los vectores con ángulo mayor a 90° son negativos.
+# - Los vectores perpendiculares (con ángulo igual a 90°) son iguales a 0.
+# - Los vectores con ángulo menor a 90° son positivos.
 
-# Con esta información podemos tener la idea de sustituir las aristas 'A' y 'B' y ahora con nuestra formula \(A \cos(\theta) \cdot B \) podemos despejar el angulo entre los dos vectores, entonces podemos resumir que el producto punto es como calcular el area del paralelogramo.
+# Si aplicamos trigonometría a nuestras evaluaciones podemos comprobar que el valor obtenido es igual al coseno de el ángulo. Ahora si extendemos nuestro vector de referencia al doble (\( \vec{R} = <2,0> \)) y nuestros vectores de prueba los multiplicamos por 3:
 
-# ** Producto Cruz
+# \[\begin{aligned}
+#   \vec{V_1} = <3,0>  &&
+#   \vec{V_2} = <0,3>  &&
+#   \vec{V_3} = <-3,0> &&
+#   \vec{V_4} = <0,-3> \\
+# \end{aligned}\] 
+
+# y volvemos a evaluar obtendremos los siguientes resultados[fn:recomendacion-pp]:
+
+# \[\begin{aligned}
+#   \vec{R} \cdot \vec{V_1} = 6 &&
+#   \vec{R} \cdot \vec{V_2} = 0 &&
+#   \vec{R} \cdot \vec{V_3} = -6 &&
+#   \vec{R} \cdot \vec{V_4} = 0 \\
+# \end{aligned}\]
+
+# sabemos que una parte de el valor depende de coseno del ángulo entre los vectores, pero también depende de las magnitudes más específicamente del producto de las magnitudes:
+
+# \[
+#  \vec{A}\cdot\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \cos(\theta)
+# \]
+
+# Para concluir esta explicación me gustaría agregar que no hay una forma sencilla de entender el producto punto de manera intuitiva, pero es mas fácil analizarlo desde sus aplicaciones que desde su definición[fn:video-pp].
+
+# [fn:recomendacion-pp] Recomiendo usar un grficador para verificar esto, es muy importante para entender el resto de planteamientos que se hacen más adelante.
+
+# [fn:video-pp] Para más información recomiendo el video de zach Star https://youtu.be/TBpDMLCC2uY.
 
 
-#  y nos devuelve el area que se forma paralelogramo entre esto (ó el volumen de un Paralelepípedo si es en R^3) [fn:Paralelogramo].
+** Producto Cruz
+El producto cruz al igual que el producto punto representa una operacion que raciona dos vectores y sus maginitudes, su operador es \(\times\), a comparacion del producto punto el resultado _No es un escalar_, el producto cruz siempre devuelve otro vector:
 
+\[
+\vec{A} \times \vec{B} = \det\begin{pmatrix}
+       i    &      j    &     k    \\
+  \vec{A_x} & \vec{A_y} & \vec{A_z}\\
+  \vec{B_x} & \vec{B_y} & \vec{B_z}\\
+\end{pmatrix}
+\]
 
-# [fn:Paralelogramo] El producto punto representa mucho mas que el área de el paralelogramo, si se desea indagar mas en el tema recomiendo el vídeo de '3 blue 1 brown': https://youtu.be/2u1YeOyGuAc.
+\[
+\vec{A} \times \vec{B} = 
+  (\vec{A_y}\vec{B_z} - \vec{A_z}\vec{A_y})i + 
+  (\vec{A_z}\vec{B_x} - \vec{A_x}\vec{A_z})j + 
+  (\vec{A_x}\vec{B_y} - \vec{A_y}\vec{A_x})k
+\]
+
+Al igual que el producto punto el producto cruz representa la relacion geometrica entre dos vectores:
+
+\[
+ \vec{A}\times\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \sin(\theta)
+\]
