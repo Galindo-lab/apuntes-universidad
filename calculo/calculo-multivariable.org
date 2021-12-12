@@ -404,10 +404,20 @@ En primaria aprendimos que el área del paralelogramo es base por altura, sin em
   {\text{Área} = \text{base} \cdot \sin(\theta)}
 \]
 
-Y esto es exactamente a el valor de el producto cruz de dos vectores:
+Y esto es exactamente a el valor de el _producto cruz de dos vectores_:
 
 \[
-  {|a||b|\sin(\theta) = |a \times b|}
+  {|a \times b|=|a||b|\sin(\theta)}
+\]
+
+** Área Del Triangulo
+Sabemos que el área del triangulo es igual al área de un rectángulo entre '2' también sabemos que el área del paralelogramo es su producto cruz, entonces para encontrar el área solo basta con divir el producto cruz entre '2':
+
+#+attr_latex: :width 4cm
+[[file:img/area-triangulo.png]]
+
+\[
+A = \frac{1}{2}|\vec{u}\times\vec{v}|
 \]
 
 ** Volumen De Un Paralelepípedo
@@ -424,3 +434,10 @@ V= [\vec{a},\vec{b},\vec{c}] =\det\begin{pmatrix}
   c_x & c_y & c_z \\
 \end{pmatrix}
 \]
+
+
+
+
+
+
+
