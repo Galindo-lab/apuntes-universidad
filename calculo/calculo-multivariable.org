@@ -11,7 +11,7 @@
 #+LATEX_HEADER: \usepackage{pifont}
 #+LATEX_HEADER: \usepackage{cancel}
 #+LATEX_HEADER: \usepackage{pagecolor,lipsum}
-#+LATEX_HEADER_EXTRA: \pagecolor{pink!90!pink}
+# #+LATEX_HEADER_EXTRA: \pagecolor{pink!90!pink}
 
 #+DESCRIPTION:
 #+KEYWORDS: 
@@ -396,21 +396,31 @@ Estas formulas se despejan de la formula del producto punto, como es un vector u
 Si tenemos dos vectores podemos calcular el area del del paralelogramo que se forma simplemente usando el producto cruz, Esto lo podemos verificar son el siguiente diagrama:
 
 #+attr_latex: :width 4cm
-#+caption: El paralelogramo se parece al rectangulo pero inclinado.
 [[file:img/producto-cruz.png]]
 
 En primaria aprendimos que el área del paralelogramo es base por altura, sin embargo la altura del paralelogramo no se puede obtener midiendo sus lados ya que esta inclinado, si aplicamos trigonometría podemos saber que el valor del cateto opuesto (la altura) es igual al seno del angulo, entonces la formula quedaria:
 
 \[
-\text{Área} = \text{base} \cdot \sin(\theta)
+  {\text{Área} = \text{base} \cdot \sin(\theta)}
 \]
 
 Y esto es exactamente a el valor de el producto cruz de dos vectores:
 
 \[
-{|a||b|\sin(\theta) = |a \times b|}
+  {|a||b|\sin(\theta) = |a \times b|}
 \]
 
 ** Volumen De Un Paralelepípedo
+Si queremos extender el paralelogramo a R^3 obtendremos un paralelepípedo que, al igual que el paralelogramo, podemos formarlo simplemente con vectores y como conocemos sus propiedades es fácil determinar su volumen aplicando el producto mixto:
 
+#+attr_latex: :width 4cm
+#+caption: \(V=\vec{a}\cdot(\vec{b}\times\vec{c})\)
+[[file:img/paralelipedo.png]]
 
+\[
+V= [\vec{a},\vec{b},\vec{c}] =\det\begin{pmatrix}
+  a_x & a_y & a_z \\
+  b_x & b_y & b_z \\
+  c_x & c_y & c_z \\
+\end{pmatrix}
+\]
