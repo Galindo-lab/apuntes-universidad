@@ -230,15 +230,6 @@ De este modo podemos calcular la magnitud del vector independientemente de su or
 \vert\vec{A}\vert &= \sqrt{14} \\
 \end{aligned} \]
 
-** Vector Unitario
-La característica fundamental del vector unitario es que su longitud siempre es igual a '1', no importa la dirección o el cuadrante, un vector es unitario si el valor de su modulo es igual a uno. Para calcularlo simplemente dividimos los valores de nuestro vector entre el modulo.
-
-\[ 
-\hat{A} = \frac{\vec{A}}{\vert\vec{A}\vert} 
-\]
-
-Para verificar que el vector resultante es unitario simplemente volvemos a calcular el valor de su modulo, si el valor resultante es '1' entonces hemos calculado correctamente el vector.
-
 ** Producto Punto
 Para representar el producto punto usamos el operador \( \cdot \). Al producto punto también se le llama comúnmente producto escalar ya que el resultado _siempre es una escalar_. Es producto punto en palabras sencillas es la suma de la multiplicación de componente por componente:
 
@@ -336,5 +327,27 @@ El producto cruz al igual que el producto punto representa una operacion que rac
 Al igual que el producto punto el producto cruz representa la relación geométrica, la formula es muy parecida mas sin embargo ahora usamos el seno en vez del coseno, entre dos vectores:
 
 \[
- \vec{A}\times\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \sin(\theta)
+\vert \vec{A}\times\vec{B}\vert = \vert\vec{A}\vert\vert\vec{B}\vert \sin(\theta)
 \]
+
+* Aplicaciones De Vectores
+** Vector Unitario
+La característica fundamental del vector unitario es que su longitud siempre es igual a '1', no importa la dirección o el cuadrante mientras el modulo es igual a '1' entonces es unitario. El vector unitario es muy util para determinar la direccion de un vector sin tener que tomar en cuenta su magnitud. Para calcularlo simplemente dividimos los valores de nuestro vector entre el modulo.
+
+\[ 
+\hat{A} = \frac{\vec{A}}{\vert\vec{A}\vert} 
+\]
+
+** Ángulos Entre Vectores
+Si recordamos una de las propiedades de el producto punto y el producto cruz es que representan la relación entre el ángulo y las magnitudes de los vectores:
+
+\[ \begin{aligned}
+ \vec{A}\cdot\vec{B} = |\vec{A}||\vec{B}| \cos(\theta) && |\vec{A}\times\vec{B}| = |\vec{A}||\vec{B}| \sin(\theta) \\
+\end{aligned} \]
+
+Entonces si despejamos los vectores obtenemos las siguientes formulas:
+
+\[ \begin{aligned}
+\cos(\theta) = \frac{\vec{A} \cdot \vec{B}}{|\vec{A}||\vec{B}|} &&
+\sin(\theta) = \frac{|\vec{A}\times\vec{B}|}{|\vec{A}||\vec{B}|} \\
+\end{aligned} \]
