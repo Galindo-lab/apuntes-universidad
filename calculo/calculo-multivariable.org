@@ -379,16 +379,38 @@ Es aquel entre un vector y uno de los ejes (ya sea 'x', 'y' ó 'z'), para calcul
 #+caption: Ángulos directores de \(\vec{a}\).
 [[file:img/angulos-directores.png]]
 
-
 [[https://www.superprof.es/diccionario/matematicas/analitica/cosenos-directores.html][Origen]]
 
 *** Despeje Del Los Ángulos Directores:
-Estas formulas se despejan de la formula del producto punto, como es un vector unitario sobre cada eje los valore que no usamos se anulan automáticamente[fn:ad-pp]:
+Estas formulas se despejan de la formula del producto punto, como es un vector unitario sobre cada eje los valorse que no usamos se anulan automáticamente[fn:ad-pp]:
 
 \[\begin{aligned}
-  cos(\alpha) &= \frac{a_x \cdot 1 + \cancel{a_y \cdot 0} + \cancel{a_z \cdot 0}}{|\vec{a}| \cdot \sqrt{1^2+\cancel{0^2}+\cancel{0^2}}} \\
-  cos(\alpha) &= \frac{a_x}{|\vec{a}| \cdot 1} \\
-  {cos(\alpha) &= \frac{a_x}{|\vec{a}|} \\
+  cos(\alpha) &= \frac{a_x \cdot 1 + \cancel{a_y \cdot 0~} + \cancel{a_z \cdot 0} }{|\vec{a}| \cdot \sqrt{1^2+\cancel{0^2}+\cancel{0^2}}} \\
+  cos(\alpha) &= \frac{a_x \cdot 1}{|\vec{a}| \cdot 1} \\
+  cos(\alpha) &= \frac{a_x}{|\vec{a}|} \\
 \end{aligned} \]
 
 [fn:ad-pp] También es posible usar el producto cruz para este procedimiento, pero por simplicidad se prefiere el producto punto.
+
+** Área De Un Paralelogramo
+Si tenemos dos vectores podemos calcular el area del del paralelogramo que se forma simplemente usando el producto cruz, Esto lo podemos verificar son el siguiente diagrama:
+
+#+attr_latex: :width 4cm
+#+caption: El paralelogramo se parece al rectangulo pero inclinado.
+[[file:img/producto-cruz.png]]
+
+En primaria aprendimos que el área del paralelogramo es base por altura, sin embargo la altura del paralelogramo no se puede obtener midiendo sus lados ya que esta inclinado, si aplicamos trigonometría podemos saber que el valor del cateto opuesto (la altura) es igual al seno del angulo, entonces la formula quedaria:
+
+\[
+\text{Área} = \text{base} \cdot \sin(\theta)
+\]
+
+Y esto es exactamente a el valor de el producto cruz de dos vectores:
+
+\[
+{|a||b|\sin(\theta) = |a \times b|}
+\]
+
+** Volumen De Un Paralelepípedo
+
+
