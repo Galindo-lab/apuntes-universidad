@@ -188,6 +188,19 @@ En física usualmente se representan los vectores de forma polar ó cilíndrica,
 ** Notación
 Para identificar que un valor es un vector hay dos formas principales añadiendo una flecha en la parte superior de la variable (\(\vec{A}\)) o resaltando el nombre de la variable con negritas. 
 
+** Vector Negativo 
+Si un vector tiene el simbolo negativo, todos sus componentes cambian su signo: 
+
+\[
+-\vec{A} = (-\vec{A_1},-\vec{A_2},...,-\vec{A_n})
+\]
+
+_Esto si el vector esta en coordenadas rectangulares_, cuando el vector esta en polar añadimos 180° grados al ángulo: 
+
+\[ \begin{aligned}
+\vec{A} = (3,75^\circ) && -\vec{A} = (3,-75^\circ) = (3,255^\circ)
+\end{aligned} \]
+
 ** Suma y Resta de Vectores
 Sumar vectores no representa mas que la suma de independiente de cada uno de sus componentes.
 
