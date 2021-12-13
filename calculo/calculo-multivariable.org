@@ -79,7 +79,7 @@ La representación esférica solo existe en el espacio, y como lo indica su nomb
 * Conversión Entre Sistemas De Coordenadas
 Ocasionalmente tenemos que hacer conversiones entre dos ó más sistemas de coordenadas, para hacer estas conversiones es necesario tomar en cuenta las propiedades geométricas de cada sistemas.
 
-** Rectangulares a Polares
+** Rectangulares A Polares
 Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, tenemos dos formulas para calcular cada uno de los componentes: 
 
 \[\begin{aligned}
@@ -96,12 +96,10 @@ Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, 
 | III       | 180°   | \pi      |
 | IV        | 360°   | 2\pi     |
 
-** Rectangulares a Cilíndricas
+** Rectangulares A Cilíndricas
 las coordenadas cilíndricas son una extencion al espacio de las coordenadas polares por lo tanto solo convertimos las coordenadas de los ejes 'x' y 'y' a polares y añadimos el eje de las 'z' sin hacer ningún cambio.
 
-[[http://www.learningaboutelectronics.com/Articulos/Calculadora-de-conversion-de-coordenadas-cartesianas-a-cilindricas.php][Origen]]
-
-** Rectangulares a Esféricas
+** Rectangulares A Esféricas
 Las coordenadas cilíndricas son otra forma de representar las coordenadas polares en el espacio, pero a comparación de las coordenadas cilíndricas ahora usamos dos ángulos para representar la dirección hacia la que apunta el vector: 
 
 \[\begin{aligned}
@@ -110,13 +108,13 @@ Las coordenadas cilíndricas son otra forma de representar las coordenadas polar
  \phi = arccos\left( z/\rho \right) \\
 \end{aligned}\] 
 
-*Importante I:* el ángulo \phi (phi) *NO* necesita corrección.
-
-*Importante II*: el ángulo \theta (theta) *Si* ocupa [[correcciones-theta][corrección]].
+- *Importante*
+  1. El ángulo \phi (phi) *NO* necesita corrección.
+  2. El ángulo \theta (theta) *Si* ocupa [[correcciones-theta][corrección]].
 
 -----
 
-** Polares a rectangulares
+** Polares A Rectangulares
 La conversión de polares a rectangulares se puede hacer directamente con las siguientes formulas: 
 
 \[\begin{aligned}
@@ -125,19 +123,17 @@ La conversión de polares a rectangulares se puede hacer directamente con las si
 
 Cada una corresponde a un eje coordenado, recordemos que las coordenadas polares solo sirven para representar puntos en el plano, por lo tanto si queremos representar puntos en el espacio tendremos que usar coordenadas cilíndricas.
 
-** Polares a cilíndricas
+** Polares A Cilíndricas
 Las coordenadas cilíndricas son la extencion directa de las coordenadas polares en el espacio, por lo tanto simplemente tendremos que tomar el valor rectangular de nuestra coordenada en el eje 'z' y añadirla a nuestra representación polar.
 
-** Cilindricas a Rectangulares
+** Cilindricas A Rectangulares
 Para esta conversión simplemente tenemos que hacer las siguientes sustituciones:
 
 \[\begin{aligned}
  x = r \cos(\theta) && y = r \sin(\theta) && z = z \\
 \end{aligned}\] 
 
-[[https://www.neurochispas.com/wiki/coordenadas-cilindricas-a-cartesianas/][Origen]]
-
-** Cilíndricas a Esféricas
+** Cilíndricas A Esféricas
 Para hacer esta conversión es necesario extender el radio a tres dimensiones y calcular el ángulo faltante, como ya tenemos el ángulo \theta (theta) no tenemos que hacer correcciones.
 
 \[\begin{aligned}
@@ -146,11 +142,9 @@ Para hacer esta conversión es necesario extender el radio a tres dimensiones y 
  \phi = arccos\left( z/\rho \right) \\
 \end{aligned}\] 
 
-[[http://www.learningaboutelectronics.com/Articulos/Calculadora-de-conversion-de-coordenadas-cilindricas-a-esfericas.php][Origen - 1]] | [[https://math.libretexts.org/Bookshelves/Calculus/Book:_Calculus_(OpenStax)/12:_Vectors_in_Space/12.7:_Cylindrical_and_Spherical_Coordinates#:~:text=To%20convert%20a%20point%20from,r2+z2).][Origen - 2]]
-
 -----
 
-** Esféricas a Rectangulares
+** Esféricas A Rectangulares
 Para esta conversión simplemente tenemos que hacer las siguientes sustituciones:
 
 \[\begin{aligned}
@@ -159,9 +153,7 @@ Para esta conversión simplemente tenemos que hacer las siguientes sustituciones
  z = \rho \cos(\phi) \\
 \end{aligned}\] 
 
-[[https://www.neurochispas.com/wiki/coordenadas-esfericas-a-cartesianas/][Origen]]
-
-** Esféricas a Cilíndricas
+** Esféricas A Cilíndricas
 para convertir las coordenadas esféricas a cilíndricas tendremos que convertir el ángulo \phi (phi) a su coordenada cartesiana 'z':
 
 \[\begin{aligned}
@@ -169,8 +161,6 @@ para convertir las coordenadas esféricas a cilíndricas tendremos que convertir
  \theta = \theta &&
  z = \rho \cos(\phi) \\
 \end{aligned}\] 
-
-[[https://temasdecalculo.com/2017/12/18/4-14-coordenadas-cilindricas-y-coordenadas-esfericas-calculo-vectorial/][Origen]]
 
 -----
 
@@ -180,8 +170,6 @@ Un vector es la representación matemática y gráfica de una magnitud vectorial
 \[\begin{aligned}
   (x,y,z) && (r,\theta) && (\rho, \theta, \phi) \\
 \end{aligned}\] 
-
-[[https://ingemecanica.com/tutoriales/calculo_vectorial.html][Origen]]
 
 ** Representación
 En física usualmente se representan los vectores de forma polar ó cilíndrica, con una magnitud y un ángulo, pero esto no tiene por que ser siempre así, en calculo multivariable con mucha frecuencia se utiliza la la notación cartesiana (tres números dentro de un paréntesis representando cada eje coordenado) ó también la compleja (donde cada uno componentes es una variable 'i' es x 'j' es 'y' y 'z' es 'k'), ejemplo el vector (1,3,4) se puede representar de manera compleja como el punto 'i + 3j + 4k'. 
@@ -245,7 +233,7 @@ De este modo podemos calcular la magnitud del vector independientemente de su or
 \end{aligned} \]
 
 ** Producto Punto
-Para representar el producto punto usamos el operador \( \cdot \). Al producto punto también se le llama comúnmente producto escalar ya que el resultado _siempre es una escalar_. Es producto punto en palabras sencillas es la suma de la multiplicación de componente por componente:
+Para representar el producto punto usamos el operador \( \cdot \). Al producto punto también se le llama comúnmente producto escalar ya que el resultado _siempre es una escalar_. Es producto punto en palabras sencillas es la suma de la multiplicación componente por componente:
 
 \[
 \vec{A} \cdot \vec{B} = \vec{A}\vec{B}^T
@@ -357,8 +345,6 @@ Se le conoce tambien como triple producto escalar, es la operacion que combina e
 \end{pmatrix}
 \]
 
-[[https://es.wikipedia.org/wiki/Producto_mixto][Origen]]
-
 * Aplicaciones De Vectores
 ** Vector Unitario
 La característica fundamental del vector unitario es que su longitud siempre es igual a '1', no importa la dirección o el cuadrante mientras el modulo es igual a '1' entonces es unitario. El vector unitario es muy util para determinar la direccion de un vector sin tener que tomar en cuenta su magnitud. Para calcularlo simplemente dividimos los valores de nuestro vector entre el modulo.
@@ -394,7 +380,6 @@ Es aquel entre un vector y uno de los ejes (ya sea 'x', 'y' ó 'z'), para calcul
 #+caption: Ángulos directores de \(\vec{a}\).
 [[file:img/angulos-directores.png]]
 
-[[https://www.superprof.es/diccionario/matematicas/analitica/cosenos-directores.html][Origen]]
 
 *** Despeje Del Los Ángulos Directores:
 Estas formulas se despejan de la formula del producto punto, como es un vector unitario sobre cada eje los valorse que no usamos se anulan automáticamente[fn:ad-pp]:
@@ -449,9 +434,33 @@ V = \vec{a}\cdot(\vec{b}\times\vec{c}) = \det\begin{pmatrix}
 \end{pmatrix}
 \]
 
+** Volumen De Un Tetraedro
+Al igual que con el paralelepípedo el tetraedro es una forma de extender una figura del plano al espacio, en este caso el triangulo, el volumen del tetraedro es igual a una sexta parte del producto mixto:
 
+\[
+V = \frac{1}{6} \left( \vec{a}\cdot\left[\vec{b}\times\vec{c}\right] \right)
+\]
 
+** Determinar sí dos vectores son Ortogonales
+Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale a cero.
 
+\[
+\vec{A} \cdot \vec{B} = 0
+\]
 
+* Paginas De Consulta Y Recursos Utiles
+** Calculadoras
+- Calculadora De Cartecianas A Clindricas, https://tinyurl.com/y2ljx8fp
+- Calculadora De Cilindricas A Esfericas, https://tinyurl.com/y5dzufw9
 
+** Paginas
+- Coordenadas Cilindricas A Cartesianas, https://tinyurl.com/y3s49cv3
+- Coordenadas Cilidnricas Y Esféricas, https://tinyurl.com/y3kdl2jc
+- Coordenadas Cilindricas Y Esféricas, https://tinyurl.com/yxu823uh
+- Definición De Vector, https://tinyurl.com/y675y7lb
+- Producto Mixto, https://tinyurl.com/y5jzwdy2
+- Ángulos Directores, https://tinyurl.com/yxvvlh7f
+- Volumenes Y Área, https://tinyurl.com/y5s4udhp
 
+** Videos
+- Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
