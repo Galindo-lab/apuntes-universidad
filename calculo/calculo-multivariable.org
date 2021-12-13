@@ -247,7 +247,9 @@ De este modo podemos calcular la magnitud del vector independientemente de su or
 ** Producto Punto
 Para representar el producto punto usamos el operador \( \cdot \). Al producto punto también se le llama comúnmente producto escalar ya que el resultado _siempre es una escalar_. Es producto punto en palabras sencillas es la suma de la multiplicación de componente por componente:
 
-\[\vec{A} \cdot \vec{B} = \vec{A}\vec{B}^T\].
+\[
+\vec{A} \cdot \vec{B} = \vec{A}\vec{B}^T
+\]
 
 \[
 \vec{A} \cdot \vec{B} = \vec{A}_1 \vec{B}_1 + \vec{A}_2 \vec{B}_2 + ... + \vec{A}_n \vec{B}_n
@@ -355,6 +357,8 @@ Se le conoce tambien como triple producto escalar, es la operacion que combina e
 \end{pmatrix}
 \]
 
+[[https://es.wikipedia.org/wiki/Producto_mixto][Origen]]
+
 * Aplicaciones De Vectores
 ** Vector Unitario
 La característica fundamental del vector unitario es que su longitud siempre es igual a '1', no importa la dirección o el cuadrante mientras el modulo es igual a '1' entonces es unitario. El vector unitario es muy util para determinar la direccion de un vector sin tener que tomar en cuenta su magnitud. Para calcularlo simplemente dividimos los valores de nuestro vector entre el modulo.
@@ -435,11 +439,10 @@ A = \frac{1}{2}|\vec{u}\times\vec{v}|
 Si queremos extender el paralelogramo a R^3 obtendremos un paralelepípedo que, al igual que el paralelogramo, podemos formarlo simplemente con vectores y como conocemos sus propiedades es fácil determinar su volumen aplicando el producto mixto:
 
 #+attr_latex: :width 4cm
-#+caption: \(V=\vec{a}\cdot(\vec{b}\times\vec{c})\)
 [[file:img/paralelipedo.png]]
 
 \[
-V= [\vec{a},\vec{b},\vec{c}] =\det\begin{pmatrix}
+V = \vec{a}\cdot(\vec{b}\times\vec{c}) = \det\begin{pmatrix}
   a_x & a_y & a_z \\
   b_x & b_y & b_z \\
   c_x & c_y & c_z \\
