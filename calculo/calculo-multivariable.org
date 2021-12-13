@@ -329,7 +329,7 @@ El producto cruz al igual que el producto punto representa una operacion que rac
   \vec{A_x} & \vec{A_y} & \vec{A_z}\\
   \vec{B_x} & \vec{B_y} & \vec{B_z}\\
 \end{pmatrix}
-\]
+\] 
 
 \[
 \vec{A} \times \vec{B} = 
@@ -342,6 +342,17 @@ Al igual que el producto punto el producto cruz representa la relación geométr
 
 \[
 \vert \vec{A}\times\vec{B}\vert = \vert\vec{A}\vert\vert\vec{B}\vert \sin(\theta)
+\]
+
+** Producto Mixto
+Se le conoce tambien como triple producto escalar, es la operacion que combina el producto punto y el rpoducto cruz. el resultado es un escalar:
+
+\[
+\vec{A}\cdot(\vec{B}\times\vec{C}) = \det\begin{pmatrix}
+  \vec{A_x} & \vec{A_y} & \vec{A_z}\\
+  \vec{B_x} & \vec{B_y} & \vec{B_z}\\
+  \vec{C_x} & \vec{C_y} & \vec{C_z}\\
+\end{pmatrix}
 \]
 
 * Aplicaciones De Vectores
