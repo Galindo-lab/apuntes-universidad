@@ -58,6 +58,24 @@ float((r,theta,z))
 
 -----
 
+#+BEGIN_SRC 
+
+x = 0
+y = 1
+z = 0
+
+
+r = sqrt(x^2+y^2)
+theta = arccos(x/r)
+z = z
+
+"Rectangular"
+float((x,y,z))
+
+"Cilindrica"
+float((r,theta,z))
+#+END_SRC
+
 \newpage 
 
 ** Rectangulares a Esféricas
@@ -240,6 +258,8 @@ B = (1,2,3)
 dot(A,B)
 #+END_SRC
 
+-----
+
 ** Producto Cruz
 #+BEGIN_SRC 
 # Reemplaza 'A' y 'B' con tus vectores
@@ -250,6 +270,8 @@ B = (1,2,3)
 
 cross(A,B)
 #+END_SRC
+
+-----
 
 ** Producto Mixto
 #+BEGIN_SRC 
@@ -276,6 +298,8 @@ vu = v/abs(v)
 float(vu)
 #+END_SRC
 
+-----
+
 ** Angulo entre vectores
 #+BEGIN_SRC 
 # Reemplaza 'A' y 'B' con tus vectores
@@ -285,6 +309,8 @@ B = (1,2,3)
 
 arccos(dot(A,B)/(abs(A)*abs(B)))
 #+END_SRC
+
+-----
 
 ** Angulos Directores
 #+BEGIN_SRC 
@@ -301,3 +327,5 @@ alpha
 beta
 gamma
 #+END_SRC
+
+-----
