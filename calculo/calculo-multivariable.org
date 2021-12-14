@@ -346,7 +346,7 @@ Se le conoce tambien como triple producto escalar, es la operacion que combina e
 \]
 
 * Aplicaciones De Vectores
-** Vector Unitario
+** Vectr Unitario
 La característica fundamental del vector unitario es que su longitud siempre es igual a '1', no importa la dirección o el cuadrante mientras el modulo es igual a '1' entonces es unitario. El vector unitario es muy util para determinar la direccion de un vector sin tener que tomar en cuenta su magnitud. Para calcularlo simplemente dividimos los valores de nuestro vector entre el modulo.
 
 \[ 
@@ -368,7 +368,7 @@ Entonces si despejamos los vectores obtenemos las siguientes formulas:
 \end{aligned} \]
 
 ** Ángulos Directores
-Es aquel entre un vector y uno de los ejes (ya sea 'x', 'y' ó 'z'), para calcularlo solo tenemos que medir el ángulo entre nuestro vector y el eje que nos interesa conocer:
+Es aquel angulo entre un vector y uno de los ejes (ya sea 'x', 'y' ó 'z'), para calcularlo solo tenemos que medir el ángulo entre nuestro vector y el eje que nos interesa conocer:
 
 \[\begin{aligned}
   \cos(\alpha) = \frac{a_x}{|\vec{a}|} &&
