@@ -21,7 +21,7 @@
 \newpage 
 
 * Conversión Entre Sistemas De Coordenadas
-** Rectangulares a Cilíndricas (o Polares)
+** Rectangulares a Cilíndxricas (o Polares)
 #+BEGIN_SRC
 # Sustituye el valor de 'x', 'y' y 'z'.
 
@@ -59,21 +59,18 @@ float((r,theta,z))
 -----
 
 #+BEGIN_SRC 
-
-x = 0
-y = 1
-z = 0
+x = -1
+y = 0
 
 
 r = sqrt(x^2+y^2)
 theta = arccos(x/r)
-z = z
 
 "Rectangular"
-float((x,y,z))
+float((x,y))
 
 "Cilindrica"
-float((r,theta,z))
+float((r,theta))
 #+END_SRC
 
 \newpage 
@@ -281,7 +278,8 @@ B = (2,2,-1)
 C = (-4,3,2)
 
 
-dot(A,cross(B,C))
+dot(A,cross(B,C)))
+float
 #+END_SRC
 
 * Aplicaciones De Vectores
@@ -300,7 +298,7 @@ float(vu)
 
 -----
 
-** Angulo entre vectores
+** Angulo Entre Vectores
 #+BEGIN_SRC 
 # Reemplaza 'A' y 'B' con tus vectores
 
@@ -329,3 +327,52 @@ gamma
 #+END_SRC
 
 -----
+** Área De Un Paralelogramo
+#+BEGIN_SRC 
+# Reemplaza 'A' y 'B' con tus vectores
+
+A = (3,1,-1)
+B = (2,3,4)
+
+
+"Area Paralelogramo"
+float( abs(cross(A,B)) )
+#+END_SRC
+
+** Área Del Triangulo
+#+BEGIN_SRC 
+# Reemplaza 'A' y 'B' con tus vectores
+
+A = (3,1,-1)
+B = (2,3,4)
+
+
+"Area Paralelogramo"
+float( 1/2 * abs(cross(A,B)) )
+#+END_SRC
+
+** Volumen De Un Paralelepípedo
+#+BEGIN_SRC 
+# Reemplaza 'A', 'B' y 'C' con tus vectores
+
+A = (3,-2,5)
+B = (2,2,-1)
+C = (-4,3,2)
+
+
+"Volumen paralelepípedo"
+float(dot(A,cross(B,C)))
+#+END_SRC
+
+** Volumen De Un Tetraedro
+#+BEGIN_SRC 
+# Reemplaza 'A', 'B' y 'C' con tus vectores
+
+A = (3,-2,5)
+B = (2,2,-1)
+C = (-4,3,2)
+
+
+"Volumen paralelepípedo"
+float( 1/6 * dot(A,cross(B,C)))
+#+END_SRC

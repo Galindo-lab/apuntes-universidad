@@ -441,7 +441,7 @@ Al igual que con el paralelepípedo el tetraedro es una forma de extender una fi
 V = \frac{1}{6} \left( \vec{a}\cdot\left[\vec{b}\times\vec{c}\right] \right)
 \]
 
-** Determinar sí dos vectores son Ortogonales
+** Determinar Sí Dos Vectores Son Ortogonales
 Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale a cero.
 
 \[
