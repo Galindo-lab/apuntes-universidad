@@ -448,6 +448,30 @@ Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale 
 \vec{A} \cdot \vec{B} = 0
 \]
 
+* Funciones de dos ó mas variables
+** Funciones
+Anterior mente solo hemos trabajado con funciones de una sola variable, las cuales tiene una variable de entrada y otra de salida, las funciones multivariable son similares pero ahora _toman dos numeros y retornan solo uno_. 
+
+\[
+f(x,y) = x^2 + y^2 - 1
+\]
+
+Normalmente el resultado de una funcion de una funcion que involucra los ejes 'x' y 'y' suelen retornar el valor en un eje extra 'z', así que tambien podrias encontrar esta funcion escrita de la siguiente manera:
+
+\[
+z = x^2 + y^2 - 1
+\]
+
+y ahora que tenemos todas las variables podemos pasarlo a una forma de ecuacion:
+
+\[
+1 = x^2 + y^2 - z
+\]
+
+Podemos traficar las expresiones y comprobar que son exactamente iguales.
+
+
+
 * Paginas De Consulta Y Recursos Utiles
 ** Calculadoras
 - Calculadora De Cartecianas A Clindricas, https://tinyurl.com/y2ljx8fp
@@ -461,6 +485,7 @@ Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale 
 - Producto Mixto, https://tinyurl.com/y5jzwdy2
 - Ángulos Directores, https://tinyurl.com/yxvvlh7f
 - Volumenes Y Área, https://tinyurl.com/y5s4udhp
+- [[https://www.gaussianos.com/representar-superficies-en-tres-dimensiones/][Representar superficies en tres dimensiones]]
 
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
