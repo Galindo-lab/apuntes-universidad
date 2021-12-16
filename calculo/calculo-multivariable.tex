@@ -1,4 +1,4 @@
-% Created 2021-12-13 lun 03:59
+% Created 2021-12-16 jue 00:30
 % Intended LaTeX compiler: pdflatex
 \documentclass{article}
 \usepackage[utf8]{inputenc}
@@ -34,17 +34,18 @@
 \maketitle
 \tableofcontents
 
+\clearpage
 
 \section{Preámbulo}
-\label{sec:orgbbe5a18}
+\label{sec:org5c8e59f}
 Este es un trabajo en proceso, todavía no ha sido finalizado y todavía no ha sido revisado. Sí tienes alguna idea para alguna corrección puedes mandarme un correo a mi correo \href{mailto:egalindo54@uabc.edu.mx}{egalindo54@uabc.edu.mx}.
 
 \subsection{Sistema Algebraico Computacional}
-\label{sec:org88687ba}
-Estos apuntes están hechos para usarse en conjunto con el software CAS de George Weigt, Eigenmath, intentare pasar los apuntes a 
+\label{sec:orgb2d7eab}
+Estos apuntes están hechos para usarse en conjunto con el software CAS de George Weigt, Eigenmath, intentare pasar los apuntes a Maxima en el futuro por si algo llegara a pasar.
 
 \subsection{Especificaciones}
-\label{sec:orged00370}
+\label{sec:org65cb6c0}
 \begin{itemize}
 \item Todos los ángulos son en radianes.
 \item Utilizare la notación de subíndices al derivar, por ejemplo \(F_x\) es derivada de la variable 'x' y \(F_{xy}\) es la derivada de 'x' y luego la derivada de 'y'.
@@ -53,19 +54,19 @@ Estos apuntes están hechos para usarse en conjunto con el software CAS de Georg
 \end{itemize}
 
 \section{Interpretar un plano}
-\label{sec:orgd97f845}
+\label{sec:org7631440}
 \subsection{Eje coordenado}
-\label{sec:org41d1fba}
+\label{sec:orgbf5a724}
 Un eje coordenado es una secciona en la que dividimos una región del plano para despumes numerarla, usualmente los llamamos 'x', 'y' y 'z'.
 
 \subsection{Cuadrante}
-\label{sec:orga442893}
+\label{sec:orgafbb7b5}
 En Geometría euclidiana plana recibe el nombre de cuadrante cada una de las cuatro regiones infinitas en que los ejes del Sistema Cartesiano bidimensional dividen al plano. Estos cuadrantes están numerados de 1 al 4 (empezando en el superior derecho, en sentido anti-reloj) y denotados por números Romanos.
 
 \href{https://es.wikipedia.org/wiki/Cuadrante\_(geometr\%C3\%ADa)}{Origen}
 
 \subsection{Octante}
-\label{sec:orgd756ac6}
+\label{sec:org4f5dc46}
 Un octante en geometría del espacio es cada una de las ocho divisiones coordenadas cartesianas tridimensionales dividen al espacio euclidiano definidos por los signos de las coordenadas. Es similar al cuadrante bidimensional y al semi eje mono-dimensional.
 
 \href{https://es.wikipedia.org/wiki/Octante\_(geometr\%C3\%ADa)}{Origen}
@@ -77,11 +78,11 @@ Un octante en geometría del espacio es cada una de las ocho divisiones coordena
 \end{figure}
 
 \section{Representación De Punto En El Plano}
-\label{sec:orge3279fe}
+\label{sec:orgb2e89e7}
 Cuando trabajamos con planos cartesianos podemos marcar puntos indicando el numero de su coordenada en cada respectivo eje, esta una forma muy rápida de interpretar un punto en el espacio, sin embargo no es la única y sobre todo cuando trabajamos con funciones circulares las representaciones rectangulares terminan complicando nuestro trabajo.
 
 \subsection{Rectangular ó Cartesianas}
-\label{sec:org84a6d37}
+\label{sec:org333b801}
 Las coordenadas rectangulares, son las coordenadas con las que hemos trabajado todo este tiempo, se representa con un numero en cada eje coordenado y para extenderlo simplemente agregamos un numero extra para cada valor que deseamos representar. 
 
 \begin{figure}[htbp]
@@ -91,7 +92,7 @@ Las coordenadas rectangulares, son las coordenadas con las que hemos trabajado t
 \end{figure}
 
 \subsection{Polar ó Cilíndrica}
-\label{sec:org9700b87}
+\label{sec:org25c95e3}
 Una coordenada polar tiene dos partes principales, una longitud ó radio (r) y un ángulo (\(\theta\)), como cabe imaginar podemos representar figuras circulares con mucha facilidad, también es la notación mas común para vectores en física.
 
 \begin{figure}[htbp]
@@ -103,7 +104,7 @@ Una coordenada polar tiene dos partes principales, una longitud ó radio (r) y u
 Podemos extender esta representación en el espacio añadiendo el eje z, el cual nos indicara la altura hacia donde apunta el vector.
 
 \subsection{Esférica}
-\label{sec:org2d5fd54}
+\label{sec:orgc517b1b}
 La representación esférica solo existe en el espacio, y como lo indica su nombre solo representa un valor en el un volumen esférico, esta representación utiliza un radio que abarca los tres ejes (\(\rho\)) dos ángulos para indicar la dirección del punto que deseamos representar, uno para los ejes 'x' y 'y' (\(\theta\)) y uno para el eje 'z' (\(\phi\)).
 
 \begin{figure}[htbp]
@@ -113,11 +114,11 @@ La representación esférica solo existe en el espacio, y como lo indica su nomb
 \end{figure}
 
 \section{Conversión Entre Sistemas De Coordenadas}
-\label{sec:org1636ec2}
+\label{sec:org75b9237}
 Ocasionalmente tenemos que hacer conversiones entre dos ó más sistemas de coordenadas, para hacer estas conversiones es necesario tomar en cuenta las propiedades geométricas de cada sistemas.
 
 \subsection{Rectangulares A Polares}
-\label{sec:org4fd5027}
+\label{sec:orgaf3299e}
 Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, tenemos dos formulas para calcular cada uno de los componentes: 
 
 \[\begin{aligned}
@@ -127,7 +128,7 @@ Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, 
 \textbf{Importante:} Estamos despejando un triangulo y dependiendo el cuadrante donde se encuentre el punto tenemos que sumar los ángulos que nos faltan: 
 
 \begin{center}
-\label{tab:org5bbca28}
+\label{tab:org54b49f1}
 \begin{tabular}{lll}
 Cuadrante & Grados & Radianes\\
 \hline
@@ -139,11 +140,11 @@ IV & 360° & 2\(\pi\)\\
 \end{center}
 
 \subsection{Rectangulares A Cilíndricas}
-\label{sec:org7c8e93b}
+\label{sec:org1500043}
 las coordenadas cilíndricas son una extencion al espacio de las coordenadas polares por lo tanto solo convertimos las coordenadas de los ejes 'x' y 'y' a polares y añadimos el eje de las 'z' sin hacer ningún cambio.
 
 \subsection{Rectangulares A Esféricas}
-\label{sec:org057ec98}
+\label{sec:orgd191fdf}
 Las coordenadas cilíndricas son otra forma de representar las coordenadas polares en el espacio, pero a comparación de las coordenadas cilíndricas ahora usamos dos ángulos para representar la dirección hacia la que apunta el vector: 
 
 \[\begin{aligned}
@@ -156,14 +157,14 @@ Las coordenadas cilíndricas son otra forma de representar las coordenadas polar
 \item \textbf{Importante}
 \begin{enumerate}
 \item El ángulo \(\phi\) (phi) \textbf{NO} necesita corrección.
-\item El ángulo \(\theta\) (theta) \textbf{Si} ocupa \hyperref[tab:org5bbca28]{corrección}.
+\item El ángulo \(\theta\) (theta) \textbf{Si} ocupa \hyperref[tab:org54b49f1]{corrección}.
 \end{enumerate}
 \end{itemize}
 
 \noindent\rule{\textwidth}{0.5pt}
 
 \subsection{Polares A Rectangulares}
-\label{sec:org2f370be}
+\label{sec:orgd0c65c3}
 La conversión de polares a rectangulares se puede hacer directamente con las siguientes formulas: 
 
 \[\begin{aligned}
@@ -173,11 +174,11 @@ La conversión de polares a rectangulares se puede hacer directamente con las si
 Cada una corresponde a un eje coordenado, recordemos que las coordenadas polares solo sirven para representar puntos en el plano, por lo tanto si queremos representar puntos en el espacio tendremos que usar coordenadas cilíndricas.
 
 \subsection{Polares A Cilíndricas}
-\label{sec:orgefc0ba6}
+\label{sec:org70b0766}
 Las coordenadas cilíndricas son la extencion directa de las coordenadas polares en el espacio, por lo tanto simplemente tendremos que tomar el valor rectangular de nuestra coordenada en el eje 'z' y añadirla a nuestra representación polar.
 
 \subsection{Cilindricas A Rectangulares}
-\label{sec:org29a91a8}
+\label{sec:org5f9660b}
 Para esta conversión simplemente tenemos que hacer las siguientes sustituciones:
 
 \[\begin{aligned}
@@ -185,7 +186,7 @@ Para esta conversión simplemente tenemos que hacer las siguientes sustituciones
 \end{aligned}\] 
 
 \subsection{Cilíndricas A Esféricas}
-\label{sec:org78c5489}
+\label{sec:orge19110e}
 Para hacer esta conversión es necesario extender el radio a tres dimensiones y calcular el ángulo faltante, como ya tenemos el ángulo \(\theta\) (theta) no tenemos que hacer correcciones.
 
 \[\begin{aligned}
@@ -197,7 +198,7 @@ Para hacer esta conversión es necesario extender el radio a tres dimensiones y 
 \noindent\rule{\textwidth}{0.5pt}
 
 \subsection{Esféricas A Rectangulares}
-\label{sec:org9306e70}
+\label{sec:org72d00ea}
 Para esta conversión simplemente tenemos que hacer las siguientes sustituciones:
 
 \[\begin{aligned}
@@ -207,7 +208,7 @@ Para esta conversión simplemente tenemos que hacer las siguientes sustituciones
 \end{aligned}\] 
 
 \subsection{Esféricas A Cilíndricas}
-\label{sec:org6c33956}
+\label{sec:org85587ac}
 para convertir las coordenadas esféricas a cilíndricas tendremos que convertir el ángulo \(\phi\) (phi) a su coordenada cartesiana 'z':
 
 \[\begin{aligned}
@@ -219,7 +220,7 @@ para convertir las coordenadas esféricas a cilíndricas tendremos que convertir
 \noindent\rule{\textwidth}{0.5pt}
 
 \section{Vectores}
-\label{sec:orge8a15db}
+\label{sec:orga304c7a}
 Un vector es la representación matemática y gráfica de una magnitud vectorial. Consiste básicamente en una flecha o segmento rectilíneo orientado, es decir, con una determinada longitud, dirección y sentido, y que contiene toda la información de la magnitud que se está midiendo. Ejemplos de vectores: 
 
 \[\begin{aligned}
@@ -227,15 +228,15 @@ Un vector es la representación matemática y gráfica de una magnitud vectorial
 \end{aligned}\] 
 
 \subsection{Representación}
-\label{sec:org41140b1}
+\label{sec:org0a14aae}
 En física usualmente se representan los vectores de forma polar ó cilíndrica, con una magnitud y un ángulo, pero esto no tiene por que ser siempre así, en calculo multivariable con mucha frecuencia se utiliza la la notación cartesiana (tres números dentro de un paréntesis representando cada eje coordenado) ó también la compleja (donde cada uno componentes es una variable 'i' es x 'j' es 'y' y 'z' es 'k'), ejemplo el vector (1,3,4) se puede representar de manera compleja como el punto 'i + 3j + 4k'. 
 
 \subsection{Notación}
-\label{sec:orgcf3f4c2}
+\label{sec:orgb8adca3}
 Para identificar que un valor es un vector hay dos formas principales añadiendo una flecha en la parte superior de la variable (\(\vec{A}\)) o resaltando el nombre de la variable con negritas. 
 
 \subsection{Vector Negativo}
-\label{sec:org081e319}
+\label{sec:orgb29142b}
 Si un vector tiene el simbolo negativo, todos sus componentes cambian su signo: 
 
 \[
@@ -249,7 +250,7 @@ Si un vector tiene el simbolo negativo, todos sus componentes cambian su signo:
 \end{aligned} \]
 
 \subsection{Suma y Resta de Vectores}
-\label{sec:org59d93d3}
+\label{sec:org67dd1cb}
 Sumar vectores no representa mas que la suma de independiente de cada uno de sus componentes.
 
 \[
@@ -263,7 +264,7 @@ Sumar vectores no representa mas que la suma de independiente de cada uno de sus
 \textbf{Importante:} Esto es solo para coordenadas cartesianas, si tenermos nuestro vector en coordenadas cilíndricas ó esféricas tendremos que hacer la conversión correspondiente.
 
 \subsection{Multiplicación Escalar}
-\label{sec:org6873289}
+\label{sec:orgb4c9aa0}
 Podemos multiplicar un vector por un valor fijo para aumentar su tamaño, simplemente multiplicamos cada componente por la constante de nuestro interés:
 
 \[
@@ -271,7 +272,7 @@ k \cdot \vec{A} = (k\cdot\vec{A_x},k\cdot\vec{A_y},k\cdot\vec{A_z})
 \]
 
 \subsection{Modulo ó magnitud del Vector}
-\label{sec:orgceeb687}
+\label{sec:orgf74baac}
 El módulo de un vector es la longitud entre el inicio y el final del vector, podemos calcular la distancia desde el origen con la formula de distancia:
 
 \[
@@ -279,7 +280,7 @@ El módulo de un vector es la longitud entre el inicio y el final del vector, po
 \]
 
 \subsubsection*{Modulo del Vector Fuera Del Origen}
-\label{sec:org3590fd3}
+\label{sec:org46353f2}
 Hay ocaciones en las que tenemos un vector que no parte desde el origen de nuestra gráfica, para eso simplemente tenemos que restar al vector el punto de origen, por ejemplo sí tenemos un vector \(\vec{A} = (3,5,6)\) con origen en \(g = (5,6,3)\) simplemente las restamos:
 
 \[ \begin{aligned}
@@ -295,7 +296,7 @@ De este modo podemos calcular la magnitud del vector independientemente de su or
 \end{aligned} \]
 
 \subsection{Producto Punto}
-\label{sec:org670d3c4}
+\label{sec:org674310d}
 Para representar el producto punto usamos el operador \(\cdot\). Al producto punto también se le llama comúnmente producto escalar ya que el resultado \uline{siempre es una escalar}. Es producto punto en palabras sencillas es la suma de la multiplicación componente por componente:
 
 \[
@@ -313,7 +314,7 @@ Una propiedad muy importante que debemos tener en cuenta es su relacion con los 
 \]
 
 \subsection{Producto Cruz}
-\label{sec:orga6748e0}
+\label{sec:org9a9857a}
 El producto cruz al igual que el producto punto representa una operacion que raciona dos vectores y sus maginitudes, su operador es \(\times\), a comparacion del producto punto el resultado \uline{No es un escalar}, el producto cruz siempre devuelve otro vector:
 
 \[
@@ -338,7 +339,7 @@ Al igual que el producto punto el producto cruz representa la relación geométr
 \]
 
 \subsection{Producto Mixto}
-\label{sec:orgfd54a76}
+\label{sec:org66678d8}
 Se le conoce tambien como triple producto escalar, es la operacion que combina el producto punto y el rpoducto cruz. el resultado es un escalar:
 
 \[
@@ -350,9 +351,9 @@ Se le conoce tambien como triple producto escalar, es la operacion que combina e
 \]
 
 \section{Aplicaciones De Vectores}
-\label{sec:org0f0950c}
-\subsection{Vector Unitario}
-\label{sec:orgbab0944}
+\label{sec:org874ef48}
+\subsection{Vectr Unitario}
+\label{sec:org9752202}
 La característica fundamental del vector unitario es que su longitud siempre es igual a '1', no importa la dirección o el cuadrante mientras el modulo es igual a '1' entonces es unitario. El vector unitario es muy util para determinar la direccion de un vector sin tener que tomar en cuenta su magnitud. Para calcularlo simplemente dividimos los valores de nuestro vector entre el modulo.
 
 \[ 
@@ -360,7 +361,7 @@ La característica fundamental del vector unitario es que su longitud siempre es
 \]
 
 \subsection{Ángulos Entre Vectores}
-\label{sec:orgb97a650}
+\label{sec:org6642f81}
 Si recordamos una de las propiedades de el producto punto y el producto cruz es que representan la relación entre el ángulo y las magnitudes de los vectores:
 
 \[ \begin{aligned}
@@ -375,8 +376,8 @@ Entonces si despejamos los vectores obtenemos las siguientes formulas:
 \end{aligned} \]
 
 \subsection{Ángulos Directores}
-\label{sec:orga32a267}
-Es aquel entre un vector y uno de los ejes (ya sea 'x', 'y' ó 'z'), para calcularlo solo tenemos que medir el ángulo entre nuestro vector y el eje que nos interesa conocer:
+\label{sec:org6da399a}
+Es aquel angulo entre un vector y uno de los ejes (ya sea 'x', 'y' ó 'z'), para calcularlo solo tenemos que medir el ángulo entre nuestro vector y el eje que nos interesa conocer:
 
 \[\begin{aligned}
   \cos(\alpha) = \frac{a_x}{|\vec{a}|} &&
@@ -392,7 +393,7 @@ Es aquel entre un vector y uno de los ejes (ya sea 'x', 'y' ó 'z'), para calcul
 
 
 \subsubsection*{Despeje Del Los Ángulos Directores:}
-\label{sec:org476bc5a}
+\label{sec:org3eebf16}
 Estas formulas se despejan de la formula del producto punto, como es un vector unitario sobre cada eje los valorse que no usamos se anulan automáticamente\footnote{También es posible usar el producto cruz para este procedimiento, pero por simplicidad se prefiere el producto punto.}:
 
 \[\begin{aligned}
@@ -402,7 +403,7 @@ Estas formulas se despejan de la formula del producto punto, como es un vector u
 \end{aligned} \]
 
 \subsection{Área De Un Paralelogramo}
-\label{sec:orgbf7b991}
+\label{sec:org0660709}
 Si tenemos dos vectores podemos calcular el area del del paralelogramo que se forma simplemente usando el producto cruz, Esto lo podemos verificar son el siguiente diagrama:
 
 \begin{center}
@@ -422,7 +423,7 @@ Y esto es exactamente a el valor de el \uline{producto cruz de dos vectores}:
 \]
 
 \subsection{Área Del Triangulo}
-\label{sec:org6d2377c}
+\label{sec:orgeca2331}
 Sabemos que el área del triangulo es igual al área de un rectángulo entre '2' también sabemos que el área del paralelogramo es su producto cruz, entonces para encontrar el área solo basta con divir el producto cruz entre '2':
 
 \begin{center}
@@ -434,7 +435,7 @@ A = \frac{1}{2}|\vec{u}\times\vec{v}|
 \]
 
 \subsection{Volumen De Un Paralelepípedo}
-\label{sec:orgb6f29c2}
+\label{sec:org3e43e62}
 Si queremos extender el paralelogramo a R\(^{\text{3}}\) obtendremos un paralelepípedo que, al igual que el paralelogramo, podemos formarlo simplemente con vectores y como conocemos sus propiedades es fácil determinar su volumen aplicando el producto mixto:
 
 \begin{center}
@@ -450,32 +451,96 @@ V = \vec{a}\cdot(\vec{b}\times\vec{c}) = \det\begin{pmatrix}
 \]
 
 \subsection{Volumen De Un Tetraedro}
-\label{sec:orgef5cede}
+\label{sec:orgb201551}
 Al igual que con el paralelepípedo el tetraedro es una forma de extender una figura del plano al espacio, en este caso el triangulo, el volumen del tetraedro es igual a una sexta parte del producto mixto:
 
 \[
 V = \frac{1}{6} \left( \vec{a}\cdot\left[\vec{b}\times\vec{c}\right] \right)
 \]
 
-\subsection{Determinar sí dos vectores son Ortogonales}
-\label{sec:orgcc74a28}
+\subsection{Determinar Sí Dos Vectores Son Ortogonales}
+\label{sec:org937c441}
 Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale a cero.
 
 \[
 \vec{A} \cdot \vec{B} = 0
 \]
 
+\section{Funciones de dos ó mas variables}
+\label{sec:orga906a36}
+\subsection{Funciones}
+\label{sec:orgce4350c}
+Anterior mente solo hemos trabajado con funciones de una sola variable, las cuales tiene una variable de entrada y otra de salida, las funciones multivariable son similares pero ahora \uline{toman dos numeros y retornan solo uno}. 
+
+\[
+f(x,y) = x^2 + y^2 - 1
+\]
+
+\subsection{Ecuacion Del Plano}
+\label{sec:org5ace169}
+Un plano es un objeto ideal que solo posee dos dimensiones, y contiene infinitos puntos y rectas; es un concepto fundamental de la geometría junto con el punto y la recta. Cuando se habla de un plano de polina, se está hablando del objeto geométrico que no posee volumen, es decir bidimensional, y que contiene un número infinito de rectas y puntos. 
+
+\[ax+by+cz+d=0\]
+
+\subsection{Recta En El Espacio}
+\label{sec:org0bc59bb}
+Para representar una recta es necesario hacer una ecuacion que represente los ejes de nuestro espacio coordenado:
+
+\[
+\frac{x-x_0}{a} = \frac{y-y_0}{b} = \frac{z-z_0}{c}
+\]
+
+\subsection{Planos Más Comunes}
+\label{sec:orge982cd0}
+\begin{longtable}{|p{6cm}|p{5cm}|}
+\hline
+Nombre & Ecuación\\
+\hline
+\endfirsthead
+\multicolumn{2}{l}{Continúa de la página anterior} \\
+\hline
+
+Nombre & Ecuación \\
+
+\hline
+\endhead
+\hline\multicolumn{2}{r}{Continúa en la siguiente página} \\
+\endfoot
+\endlastfoot
+\hline
+ & \\
+Plano & \(ax+by+cz+d=0\)\\
+ & \\
+Cilindro elíptico & \(x^2+y^2=1\)\\
+ & \\
+Cilindro hiperbólico & \(x^2-y^2=1\)\\
+ & \\
+Elipse & \(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1\)\\
+ & \\
+Paraboloide elíptico & \(z=\frac{x^2}{a^2}+\frac{y^2}{b^2}\)\\
+ & \\
+Paraboloide hiperbólico & \(z=\frac{x^2}{a^2}-\frac{y^2}{b^2}\)\\
+ & \\
+Hipérbole de una hoja & \(x^2 + y^2 - z^2 = 1\)\\
+ & \\
+Hipérbole de dos hojas & \(x^2 - y^2 - z^2 = 1\)\\
+ & \\
+Cono & \(z^2 = x^2 + y^2\)\\
+ & \\
+\hline
+\end{longtable}
+
 \section{Paginas De Consulta Y Recursos Utiles}
-\label{sec:org73f1297}
+\label{sec:org2a22693}
 \subsection{Calculadoras}
-\label{sec:org4e7059e}
+\label{sec:org1899e3c}
 \begin{itemize}
 \item Calculadora De Cartecianas A Clindricas, \url{https://tinyurl.com/y2ljx8fp}
 \item Calculadora De Cilindricas A Esfericas, \url{https://tinyurl.com/y5dzufw9}
 \end{itemize}
 
 \subsection{Paginas}
-\label{sec:orgfbdbec7}
+\label{sec:org4b0e522}
 \begin{itemize}
 \item Coordenadas Cilindricas A Cartesianas, \url{https://tinyurl.com/y3s49cv3}
 \item Coordenadas Cilidnricas Y Esféricas, \url{https://tinyurl.com/y3kdl2jc}
@@ -484,10 +549,11 @@ Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale 
 \item Producto Mixto, \url{https://tinyurl.com/y5jzwdy2}
 \item Ángulos Directores, \url{https://tinyurl.com/yxvvlh7f}
 \item Volumenes Y Área, \url{https://tinyurl.com/y5s4udhp}
+\item \href{https://www.gaussianos.com/representar-superficies-en-tres-dimensiones/}{Representar superficies en tres dimensiones}
 \end{itemize}
 
 \subsection{Videos}
-\label{sec:orgaa1b49a}
+\label{sec:orgad3a2f1}
 \begin{itemize}
 \item Producto Punto Por Zach Star, \url{https://tinyurl.com/y2x8dj88}
 \end{itemize}

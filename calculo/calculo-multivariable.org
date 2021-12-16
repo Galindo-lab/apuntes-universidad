@@ -20,6 +20,8 @@
 
 #+OPTIONS: \n:nil num:2
 
+\clearpage
+
 * Preámbulo
 Este es un trabajo en proceso, todavía no ha sido finalizado y todavía no ha sido revisado. Sí tienes alguna idea para alguna corrección puedes mandarme un correo a mi correo [[mailto:egalindo54@uabc.edu.mx][{{{email}}}]].
 
@@ -456,21 +458,44 @@ Anterior mente solo hemos trabajado con funciones de una sola variable, las cual
 f(x,y) = x^2 + y^2 - 1
 \]
 
-Normalmente el resultado de una funcion de una funcion que involucra los ejes 'x' y 'y' suelen retornar el valor en un eje extra 'z', así que tambien podrias encontrar esta funcion escrita de la siguiente manera:
+** Ecuacion Del Plano
+Un plano es un objeto ideal que solo posee dos dimensiones, y contiene infinitos puntos y rectas; es un concepto fundamental de la geometría junto con el punto y la recta. Cuando se habla de un plano de polina, se está hablando del objeto geométrico que no posee volumen, es decir bidimensional, y que contiene un número infinito de rectas y puntos. 
+
+\[ax+by+cz+d=0\]
+
+** Recta En El Espacio
+Para representar una recta es necesario hacer una ecuacion que represente los ejes de nuestro espacio coordenado:
 
 \[
-z = x^2 + y^2 - 1
+\frac{x-x_0}{a} = \frac{y-y_0}{b} = \frac{z-z_0}{c}
 \]
 
-y ahora que tenemos todas las variables podemos pasarlo a una forma de ecuacion:
-
-\[
-1 = x^2 + y^2 - z
-\]
-
-Podemos traficar las expresiones y comprobar que son exactamente iguales.
-
-
+** Planos Más Comunes
+#+ATTR_LATEX: :environment longtable :align |p{6cm}|p{5cm}|
+|-------------------------+----------------------|
+| Nombre                  | Ecuación             |
+|                         | <20>                 |
+|-------------------------+----------------------|
+|                         |                      |
+| Plano                   | \(ax+by+cz+d=0\)     |
+|                         |                      |
+| Cilindro elíptico       | \(x^2+y^2=1\)        |
+|                         |                      |
+| Cilindro hiperbólico    | \(x^2-y^2=1\)        |
+|                         |                      |
+| Elipse                  | \(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1\) |
+|                         |                      |
+| Paraboloide elíptico    | \(z=\frac{x^2}{a^2}+\frac{y^2}{b^2}\) |
+|                         |                      |
+| Paraboloide hiperbólico | \(z=\frac{x^2}{a^2}-\frac{y^2}{b^2}\) |
+|                         |                      |
+| Hipérbole de una hoja   | \( x^2 + y^2 - z^2 = 1 \) |
+|                         |                      |
+| Hipérbole de dos hojas  | \( x^2 - y^2 - z^2 = 1 \) |
+|                         |                      |
+| Cono                    | \( z^2 = x^2 + y^2 \) |
+|                         |                      |
+|-------------------------+----------------------|
 
 * Paginas De Consulta Y Recursos Utiles
 ** Calculadoras
