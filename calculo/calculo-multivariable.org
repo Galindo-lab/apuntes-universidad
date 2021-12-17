@@ -11,6 +11,7 @@
 #+LATEX_HEADER: \usepackage{pifont}
 #+LATEX_HEADER: \usepackage{cancel}
 #+LATEX_HEADER: \usepackage{pagecolor,lipsum}
+#+LATEX_HEADER: \usepackage{tabu}
 # #+LATEX_HEADER_EXTRA: \pagecolor{pink!90!pink}
 
 #+DESCRIPTION:
@@ -348,7 +349,7 @@ Se le conoce tambien como triple producto escalar, es la operacion que combina e
 \]
 
 * Aplicaciones De Vectores
-** Vectr Unitario
+** Vector Unitario
 La característica fundamental del vector unitario es que su longitud siempre es igual a '1', no importa la dirección o el cuadrante mientras el modulo es igual a '1' entonces es unitario. El vector unitario es muy util para determinar la direccion de un vector sin tener que tomar en cuenta su magnitud. Para calcularlo simplemente dividimos los valores de nuestro vector entre el modulo.
 
 \[ 
@@ -450,8 +451,65 @@ Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale 
 \vec{A} \cdot \vec{B} = 0
 \]
 
-* Funciones de dos ó mas variables
-** Funciones
+* Parametrizacion De Curvas Planas
+La parametrizacion es una forma que tenemos en matemáticas de representar una función en con una tercera variable 't' de la cual dependen 'x' y 'y'.
+
+** Parametrizando Una Recta
+Una de las ventajas que tenernos con la parametrizacion es que podemos definir una función si conocemos algunos de los puntos, por ejemplo si queremos parametrizar una recta de la cual desconocemos su función pero de la cual tenemos dos puntos podemos usar la siguiente formula:
+
+\[
+P_0 + t(p_1 - p_0)
+\]
+
+en donde 'P_0' y 'P_1' son los puntos que conocemos y 't' es una variable continua, Ejemplo si tenemos los puntos \(P_0 = <1,2>\) y \(P_1 = <3,4>\) sustituimos en la formula:
+
+\[ \begin{aligned} f(t) &= \begin{cases}
+  x: 1 + t (3-1) \\
+  y: 2 + t (4-2) \\
+\end{cases} \\ &= \begin{cases}
+  x: 1 + 2t \\
+  y: 2 + 2t \\ 
+\end{cases} \end{aligned} \]
+
+Una de las cosas que tenemos que notar es como tenemos una función para cada eje coordenado[fn:extencion], si lo graficamos notaremos que si 't' es igual a '0' el valor que obtendremos es igual a P_0, pero si el valor de 't' es '1' el valor que obtenmos sera igual a P_1.
+
+
+[fn:extencion] La formula anterior se puede extender a R^3.
+
+** Curvas Planas Más Comunes
+# #+ATTR_LATEX: :environment longtable :align |c|c|c|c|
+#+ATTR_LATEX: :environment longtable :align |c|c|c|c|
+|---+------------+------------+------------+------------|
+|   | Nombre     | Parametrizacion | Ecuación   | Rango      |
+| / | <>         | <>         | <>         | <>         |
+|   |            | <10>       | <10>       | <10>       |
+|---+------------+------------+------------+------------|
+|   |            |            |            |            |
+|   |            | \((^x_y)=P_0(1-t)+P_1t\) |            |            |
+|   | Rectas     |            | \(y-y_1=m(x-x_1)\) | \(0\leq t\leq 1\) |
+|   |            | \((^x_y)=P_0+t(P_1-P_0)\) |            |            |
+|   |            |            |            |            |
+|---+------------+------------+------------+------------|
+|   |            |            |            |            |
+|   | Elipse     | \((^x_y)=(^{x_1}_{y_1})+\left(^{a\cos t}_{b\sin t}\right)\) | \(\frac{(x-x_1)^2}{a^2}+\frac{(y-y_1)^2}{b^2}=1\) | \(0\leq t\leq 2\pi\) |
+|   |            |            |            |            |
+|---+------------+------------+------------+------------|
+|   |            |            |            |            |
+|   | Parábola   | \((^x_y)=(^{x_1}_{y_1})+\left(^{t}_{t^2}\right)\) | \(y-y_1=m(x-x_1)^2\) | ---        |
+|   |            |            |            |            |
+|---+------------+------------+------------+------------|
+|   |            |            |            |            |
+|   | Hipérbola  | \((^x_y)=(^{x_1}_{y_1})+\left(^{a\sec t}_{b\tan t}\right)\) | \(\frac{(x-x_1)^2}{a^2}-\frac{(y-y_1)^2}{b^2}=1\) | \(0\leq t\leq 2\pi\) |
+|   |            |            |            |            |
+|---+------------+------------+------------+------------|
+|   |            |            |            |            |
+|   | Hipérbola  | \((^x_y)=(^{x_1}_{y_1})+\left(^{a\cosh t}_{b\sinh t}\right)\) | ---        | \(-2\pi\leq t\leq 2\pi\) |
+|   | (una hoja) |            |            |            |
+|   |            |            |            |            |
+|---+------------+------------+------------+------------|
+
+
+* Funciones De Dos Ó Mas Variables
 Anterior mente solo hemos trabajado con funciones de una sola variable, las cuales tiene una variable de entrada y otra de salida, las funciones multivariable son similares pero ahora _toman dos numeros y retornan solo uno_. 
 
 \[
@@ -471,31 +529,48 @@ Para representar una recta es necesario hacer una ecuacion que represente los ej
 \]
 
 ** Planos Más Comunes
-#+ATTR_LATEX: :environment longtable :align |p{6cm}|p{5cm}|
-|-------------------------+----------------------|
-| Nombre                  | Ecuación             |
-|                         | <20>                 |
-|-------------------------+----------------------|
-|                         |                      |
-| Plano                   | \(ax+by+cz+d=0\)     |
-|                         |                      |
-| Cilindro elíptico       | \(x^2+y^2=1\)        |
-|                         |                      |
-| Cilindro hiperbólico    | \(x^2-y^2=1\)        |
-|                         |                      |
-| Elipse                  | \(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1\) |
-|                         |                      |
-| Paraboloide elíptico    | \(z=\frac{x^2}{a^2}+\frac{y^2}{b^2}\) |
-|                         |                      |
-| Paraboloide hiperbólico | \(z=\frac{x^2}{a^2}-\frac{y^2}{b^2}\) |
-|                         |                      |
-| Hipérbole de una hoja   | \( x^2 + y^2 - z^2 = 1 \) |
-|                         |                      |
-| Hipérbole de dos hojas  | \( x^2 - y^2 - z^2 = 1 \) |
-|                         |                      |
-| Cono                    | \( z^2 = x^2 + y^2 \) |
-|                         |                      |
-|-------------------------+----------------------|
+#+ATTR_LATEX: :environment longtable :align |p{6cm}|p{5.4cm}|
+|---+-------------------------+----------------------|
+|   | Nombre                  | Ecuación             |
+| / | <>                      | <>                   |
+|   |                         | <20>                 |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Plano                   | \(ax+by+cz+d=0\)     |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Cilindro elíptico       | \(x^2+y^2=1\)        |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Cilindro hiperbólico    | \(x^2-y^2=1\)        |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Elipse                  | \(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1\) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Paraboloide elíptico    | \(z=\frac{x^2}{a^2}+\frac{y^2}{b^2}\) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Paraboloide hiperbólico | \(z=\frac{x^2}{a^2}-\frac{y^2}{b^2}\) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Hipérbole de una hoja   | \( x^2 + y^2 - z^2 = 1 \) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Hipérbole de dos hojas  | \( x^2 - y^2 - z^2 = 1 \) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Cono                    | \( z^2 = x^2 + y^2 \) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
 
 * Paginas De Consulta Y Recursos Utiles
 ** Calculadoras
@@ -511,6 +586,9 @@ Para representar una recta es necesario hacer una ecuacion que represente los ej
 - Ángulos Directores, https://tinyurl.com/yxvvlh7f
 - Volumenes Y Área, https://tinyurl.com/y5s4udhp
 - [[https://www.gaussianos.com/representar-superficies-en-tres-dimensiones/][Representar superficies en tres dimensiones]]
+- [[https://www.superprof.es/apuntes/escolar/matematicas/analitica/recta/ecuaciones-de-la-recta-en-el-espacio.html#tema_ecuacion-continua-de-la-recta][Ecuación de la recta en el espacio]]
+
+- [[https://personales.unican.es/alvareze/CalculoWeb/CalculoII/apuntes/curvasParametricas.pdf][Parametrizacion]]
 
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
