@@ -2,5 +2,5 @@
 **/ltximg/
 
 # archivos
-**.pdf
-**.tex
+./calculo/*.pdf
+./calculo/*.tex

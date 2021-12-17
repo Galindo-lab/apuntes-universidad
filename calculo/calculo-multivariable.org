@@ -92,12 +92,17 @@ Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, 
 *Importante:* Estamos despejando un triangulo y dependiendo el cuadrante donde se encuentre el punto tenemos que sumar los ángulos que nos faltan: 
 
 #+NAME: correcciones-theta
-| Cuadrante | Grados | Radianes |
-|-----------+--------+----------|
-| I         | 0°     | 0        |
-| II        | 180°   | \pi      |
-| III       | 180°   | \pi      |
-| IV        | 360°   | 2\pi     |
+#+ATTR_LATEX: :align |c|c|c|c|
+|---+-----------+--------+----------|
+|   | Cuadrante | Grados | Radianes |
+| / | <>        | <>     | <>       |
+|---+-----------+--------+----------|
+|   | I         | 0°     | 0        |
+|   | II        | 180°   | \pi      |
+|   | III       | 180°   | \pi      |
+|   | IV        | 360°   | 2\pi     |
+|---+-----------+--------+----------|
+
 
 ** Rectangulares A Cilíndricas
 las coordenadas cilíndricas son una extencion al espacio de las coordenadas polares por lo tanto solo convertimos las coordenadas de los ejes 'x' y 'y' a polares y añadimos el eje de las 'z' sin hacer ningún cambio.
