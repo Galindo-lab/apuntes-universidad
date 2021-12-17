@@ -11,7 +11,7 @@
 #+LATEX_HEADER: \usepackage{pifont}
 #+LATEX_HEADER: \usepackage{cancel}
 #+LATEX_HEADER: \usepackage{pagecolor,lipsum}
-#+LATEX_HEADER: \usepackage{tabu}
+#+LATEX_HEADER: \usepackage{svg}
 # #+LATEX_HEADER_EXTRA: \pagecolor{pink!90!pink}
 
 #+DESCRIPTION:
@@ -21,7 +21,7 @@
 
 #+OPTIONS: \n:nil num:2
 
-\clearpage
+# \clearpage
 
 * Preámbulo
 Este es un trabajo en proceso, todavía no ha sido finalizado y todavía no ha sido revisado. Sí tienes alguna idea para alguna corrección puedes mandarme un correo a mi correo [[mailto:egalindo54@uabc.edu.mx][{{{email}}}]].
@@ -42,12 +42,8 @@ Un eje coordenado es una secciona en la que dividimos una región del plano para
 ** Cuadrante
 En Geometría euclidiana plana recibe el nombre de cuadrante cada una de las cuatro regiones infinitas en que los ejes del Sistema Cartesiano bidimensional dividen al plano. Estos cuadrantes están numerados de 1 al 4 (empezando en el superior derecho, en sentido anti-reloj) y denotados por números Romanos.
 
-[[https://es.wikipedia.org/wiki/Cuadrante_(geometr%C3%ADa)][Origen]]
-
 ** Octante
 Un octante en geometría del espacio es cada una de las ocho divisiones coordenadas cartesianas tridimensionales dividen al espacio euclidiano definidos por los signos de las coordenadas. Es similar al cuadrante bidimensional y al semi eje mono-dimensional.
-
-[[https://es.wikipedia.org/wiki/Octante_(geometr%C3%ADa)][Origen]]
 
 #+attr_latex: :width 250px
 #+caption: A la derecha cuadrantes y a la izquierda los octantes.
@@ -404,6 +400,7 @@ Estas formulas se despejan de la formula del producto punto, como es un vector u
 Si tenemos dos vectores podemos calcular el area del del paralelogramo que se forma simplemente usando el producto cruz, Esto lo podemos verificar son el siguiente diagrama:
 
 #+attr_latex: :width 4cm
+#+caption: Paralelogramo
 [[file:img/producto-cruz.png]]
 
 En primaria aprendimos que el área del paralelogramo es base por altura, sin embargo la altura del paralelogramo no se puede obtener midiendo sus lados ya que esta inclinado, si aplicamos trigonometría podemos saber que el valor del cateto opuesto (la altura) es igual al seno del angulo, entonces la formula quedaria:
@@ -421,7 +418,7 @@ Y esto es exactamente a el valor de el _producto cruz de dos vectores_:
 ** Área Del Triangulo
 Sabemos que el área del triangulo es igual al área de un rectángulo entre '2' también sabemos que el área del paralelogramo es su producto cruz, entonces para encontrar el área solo basta con divir el producto cruz entre '2':
 
-#+attr_latex: :width 4cm
+#+attr_latex: :width 3cm
 [[file:img/area-triangulo.png]]
 
 \[
@@ -482,7 +479,6 @@ Una de las cosas que tenemos que notar es como tenemos una función para cada ej
 [fn:extencion] La formula anterior se puede extender a R^3.
 
 ** Curvas Planas Más Comunes
-# #+ATTR_LATEX: :environment longtable :align |c|c|c|c|
 #+ATTR_LATEX: :environment longtable :align |c|c|c|c|
 |---+------------+------------+------------+------------|
 |   | Nombre     | Parametrizacion | Ecuación   | Rango      |
@@ -534,7 +530,7 @@ Para representar una recta es necesario hacer una ecuacion que represente los ej
 \]
 
 ** Planos Más Comunes
-#+ATTR_LATEX: :environment longtable :align |p{6cm}|p{5.4cm}|
+#+ATTR_LATEX: :environment longtable :align |c|c|
 |---+-------------------------+----------------------|
 |   | Nombre                  | Ecuación             |
 | / | <>                      | <>                   |
@@ -583,6 +579,8 @@ Para representar una recta es necesario hacer una ecuacion que represente los ej
 - Calculadora De Cilindricas A Esfericas, https://tinyurl.com/y5dzufw9
 
 ** Paginas
+- https://es.wikipedia.org/wiki/Cuadrante_(geometr%C3%ADa)
+- https://es.wikipedia.org/wiki/Octante_(geometr%C3%ADa)
 - Coordenadas Cilindricas A Cartesianas, https://tinyurl.com/y3s49cv3
 - Coordenadas Cilidnricas Y Esféricas, https://tinyurl.com/y3kdl2jc
 - Coordenadas Cilindricas Y Esféricas, https://tinyurl.com/yxu823uh
