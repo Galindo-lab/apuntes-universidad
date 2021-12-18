@@ -24,65 +24,68 @@
 Este es un trabajo en proceso, todavía no ha sido finalizado y todavía no ha sido revisado. Sí tienes alguna idea para alguna corrección puedes mandarme un correo a mi correo [[mailto:egalindo54@uabc.edu.mx][{{{email}}}]].
 
 ** Sistema Algebraico Computacional
-Estos apuntes están hechos para usarse en conjunto con el software CAS de George Weigt, Eigenmath, intentare pasar los apuntes a Maxima en el futuro por si algo llegara a pasar.
+Estos apuntes están hechos para usarse en conjunto con el software CAS de George Weigt, Eigenmath, intentaré pasar los apuntes a Maxima en el futuro por si algo llegara a pasar.
 
 ** Especificaciones
 - Todos los ángulos son en radianes.
-- Utilizare la notación de subíndices al derivar, por ejemplo \(F_x\) es derivada de la variable 'x' y \(F_{xy}\) es la derivada de 'x' y luego la derivada de 'y'.
-- Cuando escriba un vector usare la notación \vec{A}, prefiero usar las negritas a modo de énfasis.
-- Los diagramas que aparecen aqui son meramente orientativos, por lo tanto pueden ó pueden no representar los nombres de las variables que uso para las explicaciones.
+- Utilizaré la notación de subíndices al derivar, por ejemplo \(F_x\) es derivada de la variable 'x' y \(F_{xy}\) es la derivada de 'x' y luego la derivada de 'y'.
+- Cuando escriba un vector emplearé la notación \vec{A}, prefiero emplear las negritas a modo de énfasis.
+- Los diagramas que aparecen aquí son meramente orientativos, por lo tanto, pueden o pueden no representar los nombres de las variables que empleo para las explicaciones.
 
 * Interpretar un plano 
 ** Eje coordenado
-Un eje coordenado es una secciona en la que dividimos una región del plano para despumes numerarla, usualmente los llamamos 'x', 'y' y 'z'.
+Un eje coordenado es una sección en la que dividimos una región del plano para después numerarla, usualmente los llamamos 'x', 'y' y 'z'.
 
 ** Cuadrante
 En Geometría euclidiana plana recibe el nombre de cuadrante cada una de las cuatro regiones infinitas en que los ejes del Sistema Cartesiano bidimensional dividen al plano. Estos cuadrantes están numerados de 1 al 4 (empezando en el superior derecho, en sentido anti-reloj) y denotados por números Romanos.
 
 ** Octante
-Un octante en geometría del espacio es cada una de las ocho divisiones coordenadas cartesianas tridimensionales dividen al espacio euclidiano definidos por los signos de las coordenadas. Es similar al cuadrante bidimensional y al semi eje mono-dimensional.
+Un octante en geometría del espacio es cada una de las ocho divisiones coordenadas cartesianas tridimensionales dividen al espacio euclidiano definido por los signos de las coordenadas. Es similar al cuadrante bidimensional y al semi eje mono-dimensional.
 
 #+attr_latex: :width 250px
 #+caption: A la derecha cuadrantes y a la izquierda los octantes.
 [[file:img/cuadrante-y-octante-2.png]]
 
 * Representación De Punto En El Plano
-Cuando trabajamos con planos cartesianos podemos marcar puntos indicando el numero de su coordenada en cada respectivo eje, esta una forma muy rápida de interpretar un punto en el espacio, sin embargo no es la única y sobre todo cuando trabajamos con funciones circulares las representaciones rectangulares terminan complicando nuestro trabajo.
+Cuando trabajamos con planos cartesianos podemos marcar puntos indicando el número de su coordenada en cada respectivo eje, está una forma muy rápida de interpretar un punto en el espacio, sin embargo, no es la única y sobre todo cuando trabajamos con funciones circulares las representaciones rectangulares terminan complicando nuestro trabajo.
 
-** Rectangular ó Cartesianas
-Las coordenadas rectangulares, son las coordenadas con las que hemos trabajado todo este tiempo, se representa con un numero en cada eje coordenado y para extenderlo simplemente agregamos un numero extra para cada valor que deseamos representar. 
+** Rectangular o Cartesianas
+Las coordenadas rectangulares son las coordenadas con las que hemos trabajado todo este tiempo, se representa con un número en cada eje coordenado y para extenderlo simplemente agregamos un número extra para cada valor que deseamos representar. 
 
 #+attr_latex: :width 4cm
 #+caption: Coordenadas Rectangulares.
 [[file:img/coordenadas-cartesianas.png]]
 
-** Polar ó Cilíndrica
-Una coordenada polar tiene dos partes principales, una longitud ó radio (r) y un ángulo (\theta), como cabe imaginar podemos representar figuras circulares con mucha facilidad, también es la notación mas común para vectores en física.
+** Polar o Cilíndrica
+Una coordenada polar tiene dos partes principales, una longitud o radio (r) y un ángulo (\theta), como cabe imaginar podemos representar figuras circulares con mucha facilidad, también es la notación más común para vectores en física.
 
 #+attr_latex: :width 4cm
 #+caption: Coordenadas Cilíndricas.
 [[file:img/coordenadas-cilindricas.png]]
 
-Podemos extender esta representación en el espacio añadiendo el eje z, el cual nos indicara la altura hacia donde apunta el vector.
+Podemos extender esta representación en el espacio añadiendo el eje 'z', el cual nos indicara la altura hacia donde apunta el vector.
 
 ** Esférica
-La representación esférica solo existe en el espacio, y como lo indica su nombre solo representa un valor en el un volumen esférico, esta representación utiliza un radio que abarca los tres ejes (\rho) dos ángulos para indicar la dirección del punto que deseamos representar, uno para los ejes 'x' y 'y' (\theta) y uno para el eje 'z' (\phi).
+La representación esférica solo existe en el espacio, y como lo indica su nombre solo representa un valor en un volumen esférico, esta representación utiliza un radio que abarca los tres ejes (\rho [fn:rho-no-pe]) dos ángulos para indicar la dirección del punto que deseamos representar, uno para los ejes 'x' y 'y' (\theta) y uno para el eje 'z' (\phi).
 
 #+attr_latex: :width 4cm
 #+caption: Coordenadas esféricas.
 [[file:img/coordenadas-esfericas.png]]
 
+[fn:rho-no-pe] Esta letra se lee como rho, no confundir con p.
+
+
 * Conversión Entre Sistemas De Coordenadas
-Ocasionalmente tenemos que hacer conversiones entre dos ó más sistemas de coordenadas, para hacer estas conversiones es necesario tomar en cuenta las propiedades geométricas de cada sistemas.
+Ocasionalmente, tenemos que hacer conversiones entre dos o más sistemas de coordenadas, para hacer estas conversiones es necesario tomar en cuenta las propiedades geométricas de cada sistema.
 
 ** Rectangulares A Polares
-Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, tenemos dos formulas para calcular cada uno de los componentes: 
+Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, tenemos dos fórmulas para calcular cada uno de los componentes: 
 
 \[\begin{aligned}
  r = \sqrt{x^2+y^2} && \theta = arctg\left(y/x\right) \\
 \end{aligned}\] 
 
-*Importante:* Estamos despejando un triangulo y dependiendo el cuadrante donde se encuentre el punto tenemos que sumar los ángulos que nos faltan: 
+*Importante:* Estamos despejando un triángulo y dependiendo el cuadrante donde se encuentre el punto tenemos que sumar los ángulos que nos faltan: 
 
 #+NAME: correcciones-theta
 #+ATTR_LATEX: :align |c|c|c|c|
@@ -97,7 +100,7 @@ Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, 
 |---+-----------+--------+----------|
 
 ** Rectangulares A Cilíndricas
-las coordenadas cilíndricas son una extencion al espacio de las coordenadas polares por lo tanto solo convertimos las coordenadas de los ejes 'x' y 'y' a polares y añadimos el eje de las 'z' sin hacer ningún cambio.
+las coordenadas cilíndricas son una extensión al espacio de las coordenadas polares, por lo tanto, solo convertimos las coordenadas de los ejes 'x' y 'y' a polares y añadimos el eje de las 'z' sin hacer ningún cambio.
 
 ** Rectangulares A Esféricas
 Las coordenadas cilíndricas son otra forma de representar las coordenadas polares en el espacio, pero a comparación de las coordenadas cilíndricas ahora usamos dos ángulos para representar la dirección hacia la que apunta el vector: 
@@ -112,21 +115,19 @@ Las coordenadas cilíndricas son otra forma de representar las coordenadas polar
   1. El ángulo \phi (phi) *NO* necesita corrección.
   2. El ángulo \theta (theta) *Si* ocupa [[correcciones-theta][corrección]].
 
------
-
 ** Polares A Rectangulares
-La conversión de polares a rectangulares se puede hacer directamente con las siguientes formulas: 
+La conversión de polares a rectangulares se puede hacer directamente con las siguientes fórmulas: 
 
 \[\begin{aligned}
  x = r \cos(\theta) && y = r \sin(\theta) \\
 \end{aligned}\] 
 
-Cada una corresponde a un eje coordenado, recordemos que las coordenadas polares solo sirven para representar puntos en el plano, por lo tanto si queremos representar puntos en el espacio tendremos que usar coordenadas cilíndricas.
+Cada una corresponde a un eje coordenado, recordemos que las coordenadas polares únicamente sirven para representar puntos en el plano, por lo tanto, si queremos representar puntos en el espacio tendremos que usar coordenadas cilíndricas.
 
 ** Polares A Cilíndricas
-Las coordenadas cilíndricas son la extencion directa de las coordenadas polares en el espacio, por lo tanto simplemente tendremos que tomar el valor rectangular de nuestra coordenada en el eje 'z' y añadirla a nuestra representación polar.
+Las coordenadas cilíndricas son la extensión directa de las coordenadas polares en el espacio, por lo tanto, tendremos que tomar el valor rectangular de nuestra coordenada en el eje 'z' y añadirla a nuestra representación polar.
 
-** Cilindricas A Rectangulares
+** Cilíndricas A Rectangulares
 Para esta conversión simplemente tenemos que hacer las siguientes sustituciones:
 
 \[\begin{aligned}
@@ -134,15 +135,13 @@ Para esta conversión simplemente tenemos que hacer las siguientes sustituciones
 \end{aligned}\] 
 
 ** Cilíndricas A Esféricas
-Para hacer esta conversión es necesario extender el radio a tres dimensiones y calcular el ángulo faltante, como ya tenemos el ángulo \theta (theta) no tenemos que hacer correcciones.
+Para hacer esta conversión es necesario extender el radio a tres dimensiones y calcular el ángulo faltante, como ya tenemos el ángulo \theta (theta) no tenemos que hacer correcciones al ángulo.
 
 \[\begin{aligned}
  \rho = \sqrt{r^2+z^2} && 
  \theta = \theta  &&
  \phi = arccos\left( z/\rho \right) \\
 \end{aligned}\] 
-
------
 
 ** Esféricas A Rectangulares
 Para esta conversión simplemente tenemos que hacer las siguientes sustituciones:
@@ -162,8 +161,6 @@ para convertir las coordenadas esféricas a cilíndricas tendremos que convertir
  z = \rho \cos(\phi) \\
 \end{aligned}\] 
 
------
-
 * Vectores
 Un vector es la representación matemática y gráfica de una magnitud vectorial. Consiste básicamente en una flecha o segmento rectilíneo orientado, es decir, con una determinada longitud, dirección y sentido, y que contiene toda la información de la magnitud que se está midiendo. Ejemplos de vectores: 
 
@@ -178,20 +175,20 @@ En física usualmente se representan los vectores de forma polar ó cilíndrica,
 Para identificar que un valor es un vector hay dos formas principales añadiendo una flecha en la parte superior de la variable (\(\vec{A}\)) o resaltando el nombre de la variable con negritas. 
 
 ** Vector Negativo 
-Si un vector tiene el simbolo negativo, todos sus componentes cambian su signo: 
+Si un vector tiene el símbolo negativo, todos sus componentes cambian su signo: 
 
 \[
 -\vec{A} = (-\vec{A_1},-\vec{A_2},...,-\vec{A_n})
 \]
 
-_Esto si el vector esta en coordenadas rectangulares_, cuando el vector esta en polar añadimos 180° grados al ángulo: 
+_Esto si el vector está en coordenadas rectangulares_, cuando el vector está en polar añadimos 180° grados al ángulo: 
 
 \[ \begin{aligned}
 \vec{A} = (3,75^\circ) && -\vec{A} = (3,-75^\circ) = (3,255^\circ)
 \end{aligned} \]
 
 ** Suma y Resta de Vectores
-Sumar vectores no representa mas que la suma de independiente de cada uno de sus componentes.
+Sumar vectores no representa más que la suma de independiente de cada uno de sus componentes.
 
 \[
 \vec{A} + \vec{B} = (\vec{A}_x + \vec{B}_x,\vec{A}_y + \vec{B}_y,\vec{A}_z + \vec{B}_z)
@@ -201,7 +198,7 @@ Sumar vectores no representa mas que la suma de independiente de cada uno de sus
 \vec{A} - \vec{B} = (\vec{A}_x - \vec{B}_x,\vec{A}_y - \vec{B}_y,\vec{A}_z - \vec{B}_z)
 \]
 
-*Importante:* Esto es solo para coordenadas cartesianas, si tenermos nuestro vector en coordenadas cilíndricas ó esféricas tendremos que hacer la conversión correspondiente.
+*Importante:* Esto es solo para coordenadas cartesianas, si tenemos nuestro vector en coordenadas cilíndricas o esféricas tendremos que hacer la conversión correspondiente.
 
 ** Multiplicación Escalar
 Podemos multiplicar un vector por un valor fijo para aumentar su tamaño, simplemente multiplicamos cada componente por la constante de nuestro interés:
@@ -210,15 +207,15 @@ Podemos multiplicar un vector por un valor fijo para aumentar su tamaño, simple
 k \cdot \vec{A} = (k\cdot\vec{A_x},k\cdot\vec{A_y},k\cdot\vec{A_z})
 \]
 
-** Modulo ó magnitud del Vector
-El módulo de un vector es la longitud entre el inicio y el final del vector, podemos calcular la distancia desde el origen con la formula de distancia:
+** Módulo o magnitud del Vector
+El módulo de un vector es la longitud entre el inicio y el final del vector, podemos calcular la distancia desde el origen con la fórmula de distancia:
 
 \[
 \vert\vec{A}\vert = \sqrt{ x^2 + y^2 + z^2 }
 \]
 
-*** Modulo del Vector Fuera Del Origen
-Hay ocaciones en las que tenemos un vector que no parte desde el origen de nuestra gráfica, para eso simplemente tenemos que restar al vector el punto de origen, por ejemplo sí tenemos un vector \(\vec{A} = (3,5,6)\) con origen en \(g = (5,6,3)\) simplemente las restamos:
+*** Módulo del Vector Fuera Del Origen
+Hay ocasiones en las que tenemos un vector que no parte desde el origen de nuestra gráfica, para eso simplemente tenemos que restar al vector el punto de origen, por ejemplo sí tenemos un vector \(\vec{A} = (3,5,6)\) con origen en \(g = (5,6,3)\) simplemente las restamos:
 
 \[ \begin{aligned}
 \vec{A} &= (3-5,5-6,6-3) \\
@@ -233,7 +230,7 @@ De este modo podemos calcular la magnitud del vector independientemente de su or
 \end{aligned} \]
 
 ** Producto Punto
-Para representar el producto punto usamos el operador \( \cdot \). Al producto punto también se le llama comúnmente producto escalar ya que el resultado _siempre es una escalar_. Es producto punto en palabras sencillas es la suma de la multiplicación componente por componente:
+Para representar el producto punto usamos el operador \( \cdot \). Al producto punto también se le llama comúnmente producto escalar, ya que el resultado _siempre es una escalar_. Es producto punto en palabras sencillas es la suma de la multiplicación componente por componente:
 
 \[
 \vec{A} \cdot \vec{B} = \vec{A}\vec{B}^T
@@ -243,75 +240,14 @@ Para representar el producto punto usamos el operador \( \cdot \). Al producto p
 \vec{A} \cdot \vec{B} = \vec{A}_1 \vec{B}_1 + \vec{A}_2 \vec{B}_2 + ... + \vec{A}_n \vec{B}_n
 \]
 
-Una propiedad muy importante que debemos tener en cuenta es su relacion con los ángulos de los vectores, esto es muy útil para determinar los ángulos directores más adelante:
+Una propiedad muy importante que debemos tener en cuenta es su relación con los ángulos de los vectores, esto es muy útil para determinar los ángulos directores más adelante:
 
 \[
  \vec{A}\cdot\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \cos(\theta)
 \]
 
-# *** Explicación Del Producto Punto 
-# Una forma intuitiva de entender el producto punto de dos vector es como una magnitud escalar que nos indica 'que tan diferentes son dos vectores', dicho así es un poco complicado de imaginar, pero es mas fácil de entender con un ejemplo. Primero tenemos cuatro vectores unitarios, cada uno sobre uno de los ejes de nuestro plano:
-
-# \[\begin{aligned}
-#   \vec{V_1} = <1,0>  && 
-#   \vec{V_2} = <0,1>  &&
-#   \vec{V_3} = <-1,0> &&
-#   \vec{V_4} = <0,-1> \\
-# \end{aligned}\] 
-
-# y también tenemos un vector de referencia, que al igual que \(\vec{V_1}\) es unitario y se encuentra sobre el eje 'x':
-
-# \[
-# \vec{R} = <1,0>
-# \]
-
-# Bien, ahora que tenemos nuestros vectores calculamos los correspondientes productos punto:
-
-# \[\begin{aligned}
-#   \vec{R} \cdot \vec{V_1} = 1 &&
-#   \vec{R} \cdot \vec{V_2} = 0 &&
-#   \vec{R} \cdot \vec{V_3} = -1 &&
-#   \vec{R} \cdot \vec{V_4} = 0 \\
-# \end{aligned}\]
-
-# Podemos seguir evaluando vectores unitarios en ángulos intermedios[fn:recomendacion-pp], pero podemos observar tres cosas muy importantes:
-
-# - Los vectores con ángulo mayor a 90° son negativos.
-# - Los vectores perpendiculares (con ángulo igual a 90°) son iguales a 0.
-# - Los vectores con ángulo menor a 90° son positivos.
-
-# Si aplicamos trigonometría a nuestras evaluaciones podemos comprobar que el valor obtenido es igual al coseno de el ángulo. Ahora si extendemos nuestro vector de referencia al doble (\( \vec{R} = <2,0> \)) y nuestros vectores de prueba los multiplicamos por 3:
-
-# \[\begin{aligned}
-#   \vec{V_1} = <3,0>  &&
-#   \vec{V_2} = <0,3>  &&
-#   \vec{V_3} = <-3,0> &&
-#   \vec{V_4} = <0,-3> \\
-# \end{aligned}\] 
-
-# y volvemos a evaluar obtendremos los siguientes resultados[fn:recomendacion-pp]:
-
-# \[\begin{aligned}
-#   \vec{R} \cdot \vec{V_1} = 6 &&
-#   \vec{R} \cdot \vec{V_2} = 0 &&
-#   \vec{R} \cdot \vec{V_3} = -6 &&
-#   \vec{R} \cdot \vec{V_4} = 0 \\
-# \end{aligned}\]
-
-# sabemos que una parte de el valor depende de coseno del ángulo entre los vectores, pero también depende de las magnitudes más específicamente del producto de las magnitudes:
-
-# \[
-#  \vec{A}\cdot\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \cos(\theta)
-# \]
-
-# Para concluir esta explicación me gustaría agregar que no hay una forma sencilla de entender el producto punto de manera intuitiva, pero es mas fácil analizarlo desde sus aplicaciones que desde su definición[fn:video-pp].
-
-# [fn:recomendacion-pp] Recomiendo usar un grficador para verificar esto, es muy importante para entender el resto de planteamientos que se hacen más adelante.
-
-# [fn:video-pp] Para más información recomiendo el video de zach Star https://youtu.be/TBpDMLCC2uY.
-
 ** Producto Cruz
-El producto cruz al igual que el producto punto representa una operacion que raciona dos vectores y sus maginitudes, su operador es \(\times\), a comparacion del producto punto el resultado _No es un escalar_, el producto cruz siempre devuelve otro vector:
+El producto cruz al igual que el producto punto representa una operación que raciona dos vectores y sus magnitudes, su operador es \(\times\), a comparación del producto punto el resultado _No es un escalar_, el producto cruz siempre devuelve otro vector:
 
 \[
 \vec{A} \times \vec{B} = \det\begin{pmatrix}
@@ -328,14 +264,14 @@ El producto cruz al igual que el producto punto representa una operacion que rac
   (\vec{A_x}\vec{B_y} - \vec{A_y}\vec{A_x})k
 \]
 
-Al igual que el producto punto el producto cruz representa la relación geométrica, la formula es muy parecida mas sin embargo ahora usamos el seno en vez del coseno, entre dos vectores:
+Al igual que el producto punto el producto cruz representa la relación geométrica, la fórmula es muy parecida más, sin embargo, ahora usamos el seno en vez del coseno, entre dos vectores:
 
 \[
 \vert \vec{A}\times\vec{B}\vert = \vert\vec{A}\vert\vert\vec{B}\vert \sin(\theta)
 \]
 
 ** Producto Mixto
-Se le conoce tambien como triple producto escalar, es la operacion que combina el producto punto y el rpoducto cruz. el resultado es un escalar:
+Se le conoce también como triple producto escalar, es la operación que combina el producto punto y el producto cruz[fn:resultado]:
 
 \[
 \vec{A}\cdot(\vec{B}\times\vec{C}) = \det\begin{pmatrix}
@@ -345,22 +281,24 @@ Se le conoce tambien como triple producto escalar, es la operacion que combina e
 \end{pmatrix}
 \]
 
+[fn:resultado]El resultado es un escalar.
+
 * Aplicaciones De Vectores
 ** Vector Unitario
-La característica fundamental del vector unitario es que su longitud siempre es igual a '1', no importa la dirección o el cuadrante mientras el modulo es igual a '1' entonces es unitario. El vector unitario es muy util para determinar la direccion de un vector sin tener que tomar en cuenta su magnitud. Para calcularlo simplemente dividimos los valores de nuestro vector entre el modulo.
+La característica fundamental del vector unitario es que su longitud siempre es igual a '1', no importa la dirección o el cuadrante mientras el módulo es igual a '1' entonces es unitario. El vector unitario es muy útil para determinar la dirección de un vector sin tener que tomar en cuenta su magnitud. Para calcularlo simplemente dividimos los valores de nuestro vector entre el módulo.
 
 \[ 
 \hat{A} = \frac{\vec{A}}{\vert\vec{A}\vert} 
 \]
 
 ** Ángulos Entre Vectores
-Si recordamos una de las propiedades de el producto punto y el producto cruz es que representan la relación entre el ángulo y las magnitudes de los vectores:
+Si recordamos una de las propiedades del producto punto y el producto cruz es que representan la relación entre el ángulo y las magnitudes de los vectores:
 
 \[ \begin{aligned}
  \vec{A}\cdot\vec{B} = |\vec{A}||\vec{B}| \cos(\theta) && |\vec{A}\times\vec{B}| = |\vec{A}||\vec{B}| \sin(\theta) \\
 \end{aligned} \]
 
-Entonces si despejamos los vectores obtenemos las siguientes formulas:
+Entonces si despejamos los vectores obtenemos las siguientes fórmulas:
 
 \[ \begin{aligned}
 \cos(\theta) = \frac{\vec{A} \cdot \vec{B}}{|\vec{A}||\vec{B}|} &&
@@ -368,7 +306,7 @@ Entonces si despejamos los vectores obtenemos las siguientes formulas:
 \end{aligned} \]
 
 ** Ángulos Directores
-Es aquel angulo entre un vector y uno de los ejes (ya sea 'x', 'y' ó 'z'), para calcularlo solo tenemos que medir el ángulo entre nuestro vector y el eje que nos interesa conocer:
+Es aquel ángulo entre un vector y uno de los ejes (ya sea 'x', 'y' o 'z'), para calcularlo solo tenemos que medir el ángulo entre nuestro vector y el eje que nos interesa conocer:
 
 \[\begin{aligned}
   \cos(\alpha) = \frac{a_x}{|\vec{a}|} &&
@@ -382,7 +320,7 @@ Es aquel angulo entre un vector y uno de los ejes (ya sea 'x', 'y' ó 'z'), para
 
 
 *** Despeje Del Los Ángulos Directores:
-Estas formulas se despejan de la formula del producto punto, como es un vector unitario sobre cada eje los valorse que no usamos se anulan automáticamente[fn:ad-pp]:
+Estas fórmulas se despejan de la fórmula del producto punto, como es un vector unitario el eje los valores que no usamos se anulan automáticamente[fn:ad-pp]:
 
 \[\begin{aligned}
   cos(\alpha) &= \frac{a_x \cdot 1 + \cancel{a_y \cdot 0~} + \cancel{a_z \cdot 0} }{|\vec{a}| \cdot \sqrt{1^2+\cancel{0^2}+\cancel{0^2}}} \\
@@ -393,26 +331,26 @@ Estas formulas se despejan de la formula del producto punto, como es un vector u
 [fn:ad-pp] También es posible usar el producto cruz para este procedimiento, pero por simplicidad se prefiere el producto punto.
 
 ** Área De Un Paralelogramo
-Si tenemos dos vectores podemos calcular el area del del paralelogramo que se forma simplemente usando el producto cruz, Esto lo podemos verificar son el siguiente diagrama:
+Si tenemos dos vectores podemos calcular el área del paralelogramo que se forma simplemente usando el producto cruz, Esto lo podemos verificar son el siguiente diagrama:
 
 #+attr_latex: :width 4cm
-#+caption: Paralelogramo
+#+caption: Paralelogramo.
 [[file:img/producto-cruz.png]]
 
-En primaria aprendimos que el área del paralelogramo es base por altura, sin embargo la altura del paralelogramo no se puede obtener midiendo sus lados ya que esta inclinado, si aplicamos trigonometría podemos saber que el valor del cateto opuesto (la altura) es igual al seno del angulo, entonces la formula quedaria:
+En primaria aprendimos que el área del paralelogramo es base por altura, sin embargo, la altura del paralelogramo no se puede obtener midiendo sus lados, ya que está inclinado, si aplicamos trigonometría podemos saber que el valor del cateto opuesto (la altura) es igual al seno del ángulo, entonces la fórmula quedaría:
 
 \[
   {\text{Área} = \text{base} \cdot \sin(\theta)}
 \]
 
-Y esto es exactamente a el valor de el _producto cruz de dos vectores_:
+Y esto es exactamente al valor del _producto cruz de dos vectores_:
 
 \[
   {|a \times b|=|a||b|\sin(\theta)}
 \]
 
-** Área Del Triangulo
-Sabemos que el área del triangulo es igual al área de un rectángulo entre '2' también sabemos que el área del paralelogramo es su producto cruz, entonces para encontrar el área solo basta con divir el producto cruz entre '2':
+** Área Del Triángulo
+Sabemos que el área del triángulo es igual al área de un rectángulo entre '2' también sabemos que el área del paralelogramo es su producto cruz, entonces para encontrar el área solo basta con divir el producto cruz entre '2':
 
 #+attr_latex: :width 3cm
 [[file:img/area-triangulo.png]]
@@ -436,7 +374,7 @@ V = \vec{a}\cdot(\vec{b}\times\vec{c}) = \det\begin{pmatrix}
 \]
 
 ** Volumen De Un Tetraedro
-Al igual que con el paralelepípedo el tetraedro es una forma de extender una figura del plano al espacio, en este caso el triangulo, el volumen del tetraedro es igual a una sexta parte del producto mixto:
+Al igual que con el paralelepípedo el tetraedro es una forma de extender una figura del plano al espacio, en este caso el triángulo, el volumen del tetraedro es igual a una sexta parte del producto mixto:
 
 \[
 V = \frac{1}{6} \left( \vec{a}\cdot\left[\vec{b}\times\vec{c}\right] \right)
@@ -449,17 +387,17 @@ Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale 
 \vec{A} \cdot \vec{B} = 0
 \]
 
-* Parametrizacion De Curvas Planas
-La parametrizacion es una forma que tenemos en matemáticas de representar una función en con una tercera variable 't' de la cual dependen 'x' y 'y'.
+* Parametrización De Curvas Planas
+La parametrización es una forma que tenemos en matemáticas de representar una función en con una tercera variable 't' de la cual dependen 'x' y 'y'.
 
-** Parametrizando Una Recta
-Una de las ventajas que tenernos con la parametrizacion es que podemos definir una función si conocemos algunos de los puntos, por ejemplo si queremos parametrizar una recta de la cual desconocemos su función pero de la cual tenemos dos puntos podemos usar la siguiente formula:
+** Parametrización De Una Recta
+Una de las ventajas que tenernos con la parametrización es que podemos definir una función si conocemos algunos de los puntos, por ejemplo si queremos parametrizar una recta de la cual desconocemos su función, pero de la cual tenemos dos puntos podemos usar la siguiente fórmula:
 
 \[
 P_0 + t(p_1 - p_0)
 \]
 
-en donde 'P_0' y 'P_1' son los puntos que conocemos y 't' es una variable continua, Ejemplo si tenemos los puntos \(P_0 = <1,2>\) y \(P_1 = <3,4>\) sustituimos en la formula:
+en donde 'P_0' y 'P_1' son los puntos que conocemos y 't' es una variable continua, Ejemplo si tenemos los puntos \(P_0 = <1,2>\) y \(P_1 = <3,4>\) sustituimos en la fórmula:
 
 \[ \begin{aligned} f(t) &= \begin{cases}
   x: 1 + t (3-1) \\
@@ -469,10 +407,10 @@ en donde 'P_0' y 'P_1' son los puntos que conocemos y 't' es una variable contin
   y: 2 + 2t \\ 
 \end{cases} \end{aligned} \]
 
-Una de las cosas que tenemos que notar es como tenemos una función para cada eje coordenado[fn:extencion], si lo graficamos notaremos que si 't' es igual a '0' el valor que obtendremos es igual a P_0, pero si el valor de 't' es '1' el valor que obtenmos sera igual a P_1.
+Una de las cosas que tenemos que notar es como tenemos una función para cada eje coordenado[fn:extensión], si lo graficamos notaremos que si 't' es igual a '0' el valor que obtendremos es igual a P_0, pero si el valor de 't' es '1' el valor que obtenemos será igual a P_1.
 
 
-[fn:extencion] La formula anterior se puede extender a R^3.
+[fn:extensión] La fórmula anterior se puede extender a R^3.
 
 ** Curvas Planas Más Comunes
 #+ATTR_LATEX: :environment longtable :align |c|c|c|c|
@@ -483,7 +421,7 @@ Una de las cosas que tenemos que notar es como tenemos una función para cada ej
 |---+------------+------------+------------+------------|
 |   |            |            |            |            |
 |   |            | \((^x_y)=P_0(1-t)+P_1t\) |            |            |
-|   | Rectas     |            | \(y-y_1=m(x-x_1)\) | \(0\leq t\leq 1\) |
+|   | Recta      |            | \(y-y_1=m(x-x_1)\) | \(0\leq t\leq 1\) |
 |   |            | \((^x_y)=P_0+t(P_1-P_0)\) |            |            |
 |   |            |            |            |            |
 |---+------------+------------+------------+------------|
@@ -505,21 +443,20 @@ Una de las cosas que tenemos que notar es como tenemos una función para cada ej
 |   |            |            |            |            |
 |---+------------+------------+------------+------------|
 
-
 * Funciones y funciones De Dos Ó Mas Variables
-Anterior mente solo hemos trabajado con funciones de una sola variable, las cuales tiene una variable de entrada y otra de salida, las funciones multivariable son similares pero ahora _toman dos numeros y retornan solo uno_. 
+Anterior mente solo hemos trabajado con funciones de una sola variable, las cuales tiene una variable de entrada y otra de salida, las funciones multivariable son similares, pero ahora _toman dos números y retornan solo uno_. 
 
 \[
 f(x,y) = x^2 + y^2 - 1
 \]
 
-** Ecuacion Del Plano
-Un plano es un objeto ideal que solo posee dos dimensiones, y contiene infinitos puntos y rectas; es un concepto fundamental de la geometría junto con el punto y la recta. Cuando se habla de un plano de polina, se está hablando del objeto geométrico que no posee volumen, es decir bidimensional, y que contiene un número infinito de rectas y puntos. 
+** Ecuación Del Plano
+Un plano es un objeto ideal que únicamente posee dos dimensiones, y contiene infinitos puntos y rectas; es un concepto fundamental de la geometría junto con el punto y la recta. Cuando se habla de un plano, se está hablando del objeto geométrico que no posee volumen, es decir bidimensional, y que contiene un número infinito de rectas y puntos. 
 
 \[ax+by+cz+d=0\]
 
 ** Recta En El Espacio
-Para representar una recta es necesario hacer una ecuacion que represente los ejes de nuestro espacio coordenado:
+Para representar una recta es necesario hacer una ecuación que represente los ejes de nuestro espacio coordenado:
 
 \[
 \frac{x-x_0}{a} = \frac{y-y_0}{b} = \frac{z-z_0}{c}
@@ -532,51 +469,51 @@ El dominio de la función es el conjunto de valores que se le puede dar a las va
 f(x) = \sqrt{2x+4}
 \]
 
-sabemos que la función de raíz cuadrada existe para todos los valores que son igual ó mayor a '0' (en números reales), entonces el dominio de la función seria[fn:son-iguales]:
+sabemos que la función de raíz cuadrada existe para todos los valores que son igual o mayor a '0' (en números reales), entonces el dominio de la función seria[fn:son-iguales]:
 
 \[ \begin{aligned}
 \{x\in\mathbb{R}:2x+4 \geq 0\} &~& \{x\in\mathbb{R}:x \geq -2\}
 \end{aligned} \]
 
-Ahora bien, encontrar el dominio cuando tenemos múltiples variables no es muy diferente pero dependiendo la función tendremos mas condiciones, ejemplo:
+Ahora bien, encontrar el dominio cuando tenemos múltiples variables no es muy diferente, pero dependiendo la función tendremos más condiciones, ejemplo:
 
 \[
 f(x,y) = \frac{ \sqrt{x+y+1} }{ x-1 }
 \]
 
-al igual que en el ejemplo anterior tenemos una raíz, por lo que sabemos que \(x+y+1\geq 0\), pero además tenemos una división por lo tanto tampoco la funcion existe en donde el denominador es '0', por lo tanto el dominio quedaría:
+al igual que en el ejemplo anterior tenemos una raíz, por lo que sabemos que \(x+y+1\geq 0\), pero además tenemos una división, por lo tanto, tampoco la función existe en donde el denominador es '0', como resultado, el dominio seria:
 
 \[
 \{ (x,y) \in \mathbb{R}^2: x + y + 1 \geq 0 \land x \not = 1  \}
 \]
 
-quizá ver el dominio asi es un poco intimidante, así que la voy a explicar parte por parte:
+quizá ver el dominio así es un poco intimidante, así que la voy a explicar parte por parte:
 
 - \((x,y)\in\mathbb{R}^2\), la funcion existe en (\in) los numeros reales cuando... 
-- \(x+y+1 \geq 0\), la suma de \(x+y+1\) es mayor ó igual (\geq) que 0...  
+- \(x+y+1 \geq 0\), la suma de \(x+y+1\) es mayor o igual (\geq) que 0...  
 - \(\land\), y... 
 - \(x \not = 1\), x *NO* es igual a 1.
 
-Es recomendable conocer las funciones discontinuas y en donde son discontinuas para encontrar el rango de manera mas rapida.
+Es recomendable conocer las funciones discontinuas y en donde son discontinuas para encontrar el rango de manera más rápida.
 
 [fn:son-iguales] Ambas formas de expresarlas son correctas.
 
 ** Rango De Una Función
-El Rango ó imagen es el conjunto de números que dependen de la sustitución (tabulación) de los valores que puede tomar 'x' y 'y' en el dominio, en palabras mas sencillas es todos los valores que puede retornar las función:
+El Rango ó imagen es el conjunto de números que dependen de la sustitución (tabulación) de los valores que puede tomar 'x' y 'y' en el dominio, en palabras más sencillas es todos los valores que puede retornar la función:
 
 \[
 f(x,y) = \sqrt{9-x^2-y^2}
 \]
 
-Es recomendable que antes de buscar el rango de la función determinemos el dominio, esto nos permite separar la función en varias funciones mas pequeñas de las cuales podemos encontrar el valor máximo con mas facilidad:
+Es recomendable que antes de buscar el rango de la función determinemos el dominio, esto nos permite separar la función en varias funciones más pequeñas de las cuales podemos encontrar el valor máximo:
 
 \[
 \{ (x,y) \in \mathbb{R}^2: x^2 + y^2 \leq 9  \}
 \]
 
-como los valores de 'x' y 'y' se están restando[fn:cuadrados] y la raiz no puede ser menor a '0' entonces determinamos que el _maximo valor maximo_ de \(9-x^2-y^2\) es '9' y como la funcion es raiz \(\sqrt{9}=3\).
+Como los valores de 'x' y 'y' se están restando[fn:cuadrados] y la raíz no puede ser menor a '0' entonces determinamos que el _máximo valor máximo_ de \(9-x^2-y^2\) es '9' y como la función es raíz \(\sqrt{9}=3\).
 
-Ahora para el _valor minimo_ no hay mucho misterio, la funcion es raiz y en los reales no hay raices negativas, entonces el minimo valor es 0. Entonces el rango quedaria:
+Ahora para el _valor mínimo_ no hay mucho misterio, la función es raíz y en los reales no hay raíces negativas, entonces el mínimo valor es 0. Entonces el rango quedaría:
 
 \[
 \{ f(x,y) \in \mathbb{R}^2: 0 \leq f(x,y) \leq 3  \}
@@ -628,26 +565,26 @@ Ahora para el _valor minimo_ no hay mucho misterio, la funcion es raiz y en los 
 |   |                         |                      |
 |---+-------------------------+----------------------|
 
-* Paginas De Consulta Y Recursos Utiles
+* Páginas De Consulta Y Recursos Útiles
 ** Calculadoras
-- Calculadora De Cartecianas A Clindricas, https://tinyurl.com/y2ljx8fp
-- Calculadora De Cilindricas A Esfericas, https://tinyurl.com/y5dzufw9
-- [[https://www.wolframalpha.com/widgets/view.jsp?id=537159240ca725f712f6c7437d2f3e0c][Maximos y minimos]]
+- Calculadora De Cartesianas A Cilíndricas, https://tinyurl.com/y2ljx8fp
+- Calculadora De Cilíndricas A Esféricas, https://tinyurl.com/y5dzufw9
+- [[https://www.wolframalpha.com/widgets/view.jsp?id=537159240ca725f712f6c7437d2f3e0c][Máximos y mínimos]]
 
-** Paginas
+** Páginas
 - https://es.wikipedia.org/wiki/Cuadrante_(geometr%C3%ADa)
 - https://es.wikipedia.org/wiki/Octante_(geometr%C3%ADa)
-- Coordenadas Cilindricas A Cartesianas, https://tinyurl.com/y3s49cv3
-- Coordenadas Cilidnricas Y Esféricas, https://tinyurl.com/y3kdl2jc
-- Coordenadas Cilindricas Y Esféricas, https://tinyurl.com/yxu823uh
+- Coordenadas Cilíndricas A Cartesianas, https://tinyurl.com/y3s49cv3
+- Coordenadas Cilíndricas Y Esféricas, https://tinyurl.com/y3kdl2jc
+- Coordenadas Cilíndricas Y Esféricas, https://tinyurl.com/yxu823uh
 - Definición De Vector, https://tinyurl.com/y675y7lb
 - Producto Mixto, https://tinyurl.com/y5jzwdy2
 - Ángulos Directores, https://tinyurl.com/yxvvlh7f
-- Volumenes Y Área, https://tinyurl.com/y5s4udhp
+- Volúmenes Y Área, https://tinyurl.com/y5s4udhp
 - [[https://www.gaussianos.com/representar-superficies-en-tres-dimensiones/][Representar superficies en tres dimensiones]]
 - [[https://www.superprof.es/apuntes/escolar/matematicas/analitica/recta/ecuaciones-de-la-recta-en-el-espacio.html#tema_ecuacion-continua-de-la-recta][Ecuación de la recta en el espacio]]
-- [[https://personales.unican.es/alvareze/CalculoWeb/CalculoII/apuntes/curvasParametricas.pdf][Parametrizacion]]
-- [[https://blog.unitips.mx/dominio-y-rango-de-funciones][Rango de una funcion]]
+- [[https://personales.unican.es/alvareze/CalculoWeb/CalculoII/apuntes/curvasParametricas.pdf][Parametrización]]
+- [[https://blog.unitips.mx/dominio-y-rango-de-funciones][Rango de una función]]
 
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
