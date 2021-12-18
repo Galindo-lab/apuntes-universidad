@@ -569,11 +569,10 @@ Ahora para el _valor mínimo_ no hay mucho misterio, la función es raíz y en l
 ** Calculadoras
 - Calculadora De Cartesianas A Cilíndricas, https://tinyurl.com/y2ljx8fp
 - Calculadora De Cilíndricas A Esféricas, https://tinyurl.com/y5dzufw9
-- [[https://www.wolframalpha.com/widgets/view.jsp?id=537159240ca725f712f6c7437d2f3e0c][Máximos y mínimos]]
+- Máximos y mínimos, https://tinyurl.com/y3lku7y8
+- Rango de una función, https://tinyurl.com/yf9cnh26
 
 ** Páginas
-- https://es.wikipedia.org/wiki/Cuadrante_(geometr%C3%ADa)
-- https://es.wikipedia.org/wiki/Octante_(geometr%C3%ADa)
 - Coordenadas Cilíndricas A Cartesianas, https://tinyurl.com/y3s49cv3
 - Coordenadas Cilíndricas Y Esféricas, https://tinyurl.com/y3kdl2jc
 - Coordenadas Cilíndricas Y Esféricas, https://tinyurl.com/yxu823uh
@@ -581,10 +580,10 @@ Ahora para el _valor mínimo_ no hay mucho misterio, la función es raíz y en l
 - Producto Mixto, https://tinyurl.com/y5jzwdy2
 - Ángulos Directores, https://tinyurl.com/yxvvlh7f
 - Volúmenes Y Área, https://tinyurl.com/y5s4udhp
-- [[https://www.gaussianos.com/representar-superficies-en-tres-dimensiones/][Representar superficies en tres dimensiones]]
-- [[https://www.superprof.es/apuntes/escolar/matematicas/analitica/recta/ecuaciones-de-la-recta-en-el-espacio.html#tema_ecuacion-continua-de-la-recta][Ecuación de la recta en el espacio]]
-- [[https://personales.unican.es/alvareze/CalculoWeb/CalculoII/apuntes/curvasParametricas.pdf][Parametrización]]
-- [[https://blog.unitips.mx/dominio-y-rango-de-funciones][Rango de una función]]
+- Representar superficies en tres dimensiones, https://tinyurl.com/y6owjzp
+- Ecuación de la recta en el espacio, https://tinyurl.com/y68tsc7w
+- Parametrización, https://tinyurl.com/y24nhnmv
+- Rango de una función, https://tinyurl.com/yf9cnh26
 
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
