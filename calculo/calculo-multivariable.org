@@ -1,4 +1,3 @@
-
 #+TITLE:    Cálculo Multivariable
 #+SUBTITLE: 
 #+Author:   Luis Eduardo Galindo Amaya
@@ -20,8 +19,6 @@
 #+DATE: \today
 
 #+OPTIONS: \n:nil num:2
-
-# \clearpage
 
 * Preámbulo
 Este es un trabajo en proceso, todavía no ha sido finalizado y todavía no ha sido revisado. Sí tienes alguna idea para alguna corrección puedes mandarme un correo a mi correo [[mailto:egalindo54@uabc.edu.mx][{{{email}}}]].
@@ -98,7 +95,6 @@ Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, 
 |   | III       | 180°   | \pi      |
 |   | IV        | 360°   | 2\pi     |
 |---+-----------+--------+----------|
-
 
 ** Rectangulares A Cilíndricas
 las coordenadas cilíndricas son una extencion al espacio de las coordenadas polares por lo tanto solo convertimos las coordenadas de los ejes 'x' y 'y' a polares y añadimos el eje de las 'z' sin hacer ningún cambio.
@@ -510,7 +506,7 @@ Una de las cosas que tenemos que notar es como tenemos una función para cada ej
 |---+------------+------------+------------+------------|
 
 
-* Funciones De Dos Ó Mas Variables
+* Funciones y funciones De Dos Ó Mas Variables
 Anterior mente solo hemos trabajado con funciones de una sola variable, las cuales tiene una variable de entrada y otra de salida, las funciones multivariable son similares pero ahora _toman dos numeros y retornan solo uno_. 
 
 \[
@@ -529,8 +525,67 @@ Para representar una recta es necesario hacer una ecuacion que represente los ej
 \frac{x-x_0}{a} = \frac{y-y_0}{b} = \frac{z-z_0}{c}
 \]
 
+** Dominio De Una Función
+El dominio de la función es el conjunto de valores que se le puede dar a las variables independientes en una función, por ejemplo:
+
+\[
+f(x) = \sqrt{2x+4}
+\]
+
+sabemos que la función de raíz cuadrada existe para todos los valores que son igual ó mayor a '0' (en números reales), entonces el dominio de la función seria[fn:son-iguales]:
+
+\[ \begin{aligned}
+\{x\in\mathbb{R}:2x+4 \geq 0\} &~& \{x\in\mathbb{R}:x \geq -2\}
+\end{aligned} \]
+
+Ahora bien, encontrar el dominio cuando tenemos múltiples variables no es muy diferente pero dependiendo la función tendremos mas condiciones, ejemplo:
+
+\[
+f(x,y) = \frac{ \sqrt{x+y+1} }{ x-1 }
+\]
+
+al igual que en el ejemplo anterior tenemos una raíz, por lo que sabemos que \(x+y+1\geq 0\), pero además tenemos una división por lo tanto tampoco la funcion existe en donde el denominador es '0', por lo tanto el dominio quedaría:
+
+\[
+\{ (x,y) \in \mathbb{R}^2: x + y + 1 \geq 0 \land x \not = 1  \}
+\]
+
+quizá ver el dominio asi es un poco intimidante, así que la voy a explicar parte por parte:
+
+- \((x,y)\in\mathbb{R}^2\), la funcion existe en (\in) los numeros reales cuando... 
+- \(x+y+1 \geq 0\), la suma de \(x+y+1\) es mayor ó igual (\geq) que 0...  
+- \(\land\), y... 
+- \(x \not = 1\), x *NO* es igual a 1.
+
+Es recomendable conocer las funciones discontinuas y en donde son discontinuas para encontrar el rango de manera mas rapida.
+
+[fn:son-iguales] Ambas formas de expresarlas son correctas.
+
+** Rango De Una Función
+El Rango ó imagen es el conjunto de números que dependen de la sustitución (tabulación) de los valores que puede tomar 'x' y 'y' en el dominio, en palabras mas sencillas es todos los valores que puede retornar las función:
+
+\[
+f(x,y) = \sqrt{9-x^2-y^2}
+\]
+
+Es recomendable que antes de buscar el rango de la función determinemos el dominio, esto nos permite separar la función en varias funciones mas pequeñas de las cuales podemos encontrar el valor máximo con mas facilidad:
+
+\[
+\{ (x,y) \in \mathbb{R}^2: x^2 + y^2 \leq 9  \}
+\]
+
+como los valores de 'x' y 'y' se están restando[fn:cuadrados] y la raiz no puede ser menor a '0' entonces determinamos que el _maximo valor maximo_ de \(9-x^2-y^2\) es '9' y como la funcion es raiz \(\sqrt{9}=3\).
+
+Ahora para el _valor minimo_ no hay mucho misterio, la funcion es raiz y en los reales no hay raices negativas, entonces el minimo valor es 0. Entonces el rango quedaria:
+
+\[
+\{ f(x,y) \in \mathbb{R}^2: 0 \leq f(x,y) \leq 3  \}
+\]
+
+[fn:cuadrados] Al ser cuadrados los valores que obtenemos siempre son positivos.
+
 ** Planos Más Comunes
-#+ATTR_LATEX: :environment longtable :align |c|c|
+#+ATTR_LATEX: :environment longtable :align |p{6cm}|p{5.2cm}|
 |---+-------------------------+----------------------|
 |   | Nombre                  | Ecuación             |
 | / | <>                      | <>                   |
@@ -577,6 +632,7 @@ Para representar una recta es necesario hacer una ecuacion que represente los ej
 ** Calculadoras
 - Calculadora De Cartecianas A Clindricas, https://tinyurl.com/y2ljx8fp
 - Calculadora De Cilindricas A Esfericas, https://tinyurl.com/y5dzufw9
+- [[https://www.wolframalpha.com/widgets/view.jsp?id=537159240ca725f712f6c7437d2f3e0c][Maximos y minimos]]
 
 ** Paginas
 - https://es.wikipedia.org/wiki/Cuadrante_(geometr%C3%ADa)
@@ -590,8 +646,8 @@ Para representar una recta es necesario hacer una ecuacion que represente los ej
 - Volumenes Y Área, https://tinyurl.com/y5s4udhp
 - [[https://www.gaussianos.com/representar-superficies-en-tres-dimensiones/][Representar superficies en tres dimensiones]]
 - [[https://www.superprof.es/apuntes/escolar/matematicas/analitica/recta/ecuaciones-de-la-recta-en-el-espacio.html#tema_ecuacion-continua-de-la-recta][Ecuación de la recta en el espacio]]
-
 - [[https://personales.unican.es/alvareze/CalculoWeb/CalculoII/apuntes/curvasParametricas.pdf][Parametrizacion]]
+- [[https://blog.unitips.mx/dominio-y-rango-de-funciones][Rango de una funcion]]
 
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
