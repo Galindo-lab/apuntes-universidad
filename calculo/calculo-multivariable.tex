@@ -1,4 +1,4 @@
-% Created 2021-12-18 sáb 03:36
+% Created 2021-12-20 lun 12:50
 % Intended LaTeX compiler: pdflatex
 \documentclass{article}
 \usepackage[utf8]{inputenc}
@@ -15,10 +15,6 @@
 \usepackage{capt-of}
 \usepackage{hyperref}
 \usepackage[spanish]{babel}
-\usepackage{pifont}
-\usepackage{cancel}
-\usepackage{pagecolor,lipsum}
-\usepackage{svg}
 \setcounter{secnumdepth}{2}
 \author{Luis Eduardo Galindo Amaya}
 \date{\today}
@@ -35,17 +31,18 @@
 \maketitle
 \tableofcontents
 
+\pagebreak
 
 \section{Preámbulo}
-\label{sec:org99ed7f6}
+\label{sec:orgf98f68b}
 Este es un trabajo en proceso, todavía no ha sido finalizado y todavía no ha sido revisado. Sí tienes alguna idea para alguna corrección puedes mandarme un correo a mi correo \href{mailto:egalindo54@uabc.edu.mx}{egalindo54@uabc.edu.mx}.
 
 \subsection{Sistema Algebraico Computacional}
-\label{sec:org9de3d1b}
+\label{sec:org2ad999c}
 Estos apuntes están hechos para usarse en conjunto con el software CAS de George Weigt, Eigenmath, intentaré pasar los apuntes a Maxima en el futuro por si algo llegara a pasar.
 
 \subsection{Especificaciones}
-\label{sec:org6798358}
+\label{sec:org17e0b9a}
 \begin{itemize}
 \item Todos los ángulos son en radianes.
 \item Utilizaré la notación de subíndices al derivar, por ejemplo \(F_x\) es derivada de la variable 'x' y \(F_{xy}\) es la derivada de 'x' y luego la derivada de 'y'.
@@ -53,18 +50,18 @@ Estos apuntes están hechos para usarse en conjunto con el software CAS de Georg
 \item Los diagramas que aparecen aquí son meramente orientativos, por lo tanto, pueden o pueden no representar los nombres de las variables que empleo para las explicaciones.
 \end{itemize}
 
-\section{Interpretar un plano}
-\label{sec:org4dc51ac}
+\section{Interpretar Un Plano}
+\label{sec:orgc221038}
 \subsection{Eje coordenado}
-\label{sec:org0efaec1}
+\label{sec:orgfd9c803}
 Un eje coordenado es una sección en la que dividimos una región del plano para después numerarla, usualmente los llamamos 'x', 'y' y 'z'.
 
 \subsection{Cuadrante}
-\label{sec:org8500a08}
+\label{sec:orgc6bc241}
 En Geometría euclidiana plana recibe el nombre de cuadrante cada una de las cuatro regiones infinitas en que los ejes del Sistema Cartesiano bidimensional dividen al plano. Estos cuadrantes están numerados de 1 al 4 (empezando en el superior derecho, en sentido anti-reloj) y denotados por números Romanos.
 
 \subsection{Octante}
-\label{sec:orgf8fb58f}
+\label{sec:orge61944d}
 Un octante en geometría del espacio es cada una de las ocho divisiones coordenadas cartesianas tridimensionales dividen al espacio euclidiano definido por los signos de las coordenadas. Es similar al cuadrante bidimensional y al semi eje mono-dimensional.
 
 \begin{figure}[htbp]
@@ -74,11 +71,11 @@ Un octante en geometría del espacio es cada una de las ocho divisiones coordena
 \end{figure}
 
 \section{Representación De Punto En El Plano}
-\label{sec:orgb5f95ed}
+\label{sec:orge441988}
 Cuando trabajamos con planos cartesianos podemos marcar puntos indicando el número de su coordenada en cada respectivo eje, está una forma muy rápida de interpretar un punto en el espacio, sin embargo, no es la única y sobre todo cuando trabajamos con funciones circulares las representaciones rectangulares terminan complicando nuestro trabajo.
 
 \subsection{Rectangular o Cartesianas}
-\label{sec:orgf406b38}
+\label{sec:orgd388065}
 Las coordenadas rectangulares son las coordenadas con las que hemos trabajado todo este tiempo, se representa con un número en cada eje coordenado y para extenderlo simplemente agregamos un número extra para cada valor que deseamos representar. 
 
 \begin{figure}[htbp]
@@ -88,7 +85,7 @@ Las coordenadas rectangulares son las coordenadas con las que hemos trabajado to
 \end{figure}
 
 \subsection{Polar o Cilíndrica}
-\label{sec:orgeb74957}
+\label{sec:orgdfe3f80}
 Una coordenada polar tiene dos partes principales, una longitud o radio (r) y un ángulo (\(\theta\)), como cabe imaginar podemos representar figuras circulares con mucha facilidad, también es la notación más común para vectores en física.
 
 \begin{figure}[htbp]
@@ -100,7 +97,7 @@ Una coordenada polar tiene dos partes principales, una longitud o radio (r) y un
 Podemos extender esta representación en el espacio añadiendo el eje 'z', el cual nos indicara la altura hacia donde apunta el vector.
 
 \subsection{Esférica}
-\label{sec:org57d620f}
+\label{sec:org383f3bb}
 La representación esférica solo existe en el espacio, y como lo indica su nombre solo representa un valor en un volumen esférico, esta representación utiliza un radio que abarca los tres ejes (\(\rho\) \footnote{Esta letra se lee como rho, no confundir con p.}) dos ángulos para indicar la dirección del punto que deseamos representar, uno para los ejes 'x' y 'y' (\(\theta\)) y uno para el eje 'z' (\(\phi\)).
 
 \begin{figure}[htbp]
@@ -109,13 +106,12 @@ La representación esférica solo existe en el espacio, y como lo indica su nomb
 \caption{Coordenadas esféricas.}
 \end{figure}
 
-
 \section{Conversión Entre Sistemas De Coordenadas}
-\label{sec:orgf7da346}
+\label{sec:org507f8c4}
 Ocasionalmente, tenemos que hacer conversiones entre dos o más sistemas de coordenadas, para hacer estas conversiones es necesario tomar en cuenta las propiedades geométricas de cada sistema.
 
 \subsection{Rectangulares A Polares}
-\label{sec:org549a3e0}
+\label{sec:orgfff5148}
 Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, tenemos dos fórmulas para calcular cada uno de los componentes: 
 
 \[\begin{aligned}
@@ -125,7 +121,7 @@ Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, 
 \textbf{Importante:} Estamos despejando un triángulo y dependiendo el cuadrante donde se encuentre el punto tenemos que sumar los ángulos que nos faltan: 
 
 \begin{center}
-\label{tab:org43eadb9}
+\label{tab:org3a6585a}
 \begin{tabular}{|c|c|c|c|}
 \hline
 Cuadrante & Grados & Radianes\\
@@ -139,11 +135,11 @@ IV & 360° & 2\(\pi\)\\
 \end{center}
 
 \subsection{Rectangulares A Cilíndricas}
-\label{sec:org3f7bbad}
+\label{sec:org02bdd97}
 las coordenadas cilíndricas son una extensión al espacio de las coordenadas polares, por lo tanto, solo convertimos las coordenadas de los ejes 'x' y 'y' a polares y añadimos el eje de las 'z' sin hacer ningún cambio.
 
 \subsection{Rectangulares A Esféricas}
-\label{sec:org2015411}
+\label{sec:org32e7a71}
 Las coordenadas cilíndricas son otra forma de representar las coordenadas polares en el espacio, pero a comparación de las coordenadas cilíndricas ahora usamos dos ángulos para representar la dirección hacia la que apunta el vector: 
 
 \[\begin{aligned}
@@ -156,12 +152,12 @@ Las coordenadas cilíndricas son otra forma de representar las coordenadas polar
 \item \textbf{Importante}
 \begin{enumerate}
 \item El ángulo \(\phi\) (phi) \textbf{NO} necesita corrección.
-\item El ángulo \(\theta\) (theta) \textbf{Si} ocupa \hyperref[tab:org43eadb9]{corrección}.
+\item El ángulo \(\theta\) (theta) \textbf{Si} ocupa \hyperref[tab:org3a6585a]{corrección}.
 \end{enumerate}
 \end{itemize}
 
 \subsection{Polares A Rectangulares}
-\label{sec:org8ff2fa4}
+\label{sec:org496c346}
 La conversión de polares a rectangulares se puede hacer directamente con las siguientes fórmulas: 
 
 \[\begin{aligned}
@@ -171,11 +167,11 @@ La conversión de polares a rectangulares se puede hacer directamente con las si
 Cada una corresponde a un eje coordenado, recordemos que las coordenadas polares únicamente sirven para representar puntos en el plano, por lo tanto, si queremos representar puntos en el espacio tendremos que usar coordenadas cilíndricas.
 
 \subsection{Polares A Cilíndricas}
-\label{sec:orga535031}
+\label{sec:org823e834}
 Las coordenadas cilíndricas son la extensión directa de las coordenadas polares en el espacio, por lo tanto, tendremos que tomar el valor rectangular de nuestra coordenada en el eje 'z' y añadirla a nuestra representación polar.
 
 \subsection{Cilíndricas A Rectangulares}
-\label{sec:org0ccc748}
+\label{sec:orgaff7333}
 Para esta conversión simplemente tenemos que hacer las siguientes sustituciones:
 
 \[\begin{aligned}
@@ -183,7 +179,7 @@ Para esta conversión simplemente tenemos que hacer las siguientes sustituciones
 \end{aligned}\] 
 
 \subsection{Cilíndricas A Esféricas}
-\label{sec:orgce0524c}
+\label{sec:org276444c}
 Para hacer esta conversión es necesario extender el radio a tres dimensiones y calcular el ángulo faltante, como ya tenemos el ángulo \(\theta\) (theta) no tenemos que hacer correcciones al ángulo.
 
 \[\begin{aligned}
@@ -193,7 +189,7 @@ Para hacer esta conversión es necesario extender el radio a tres dimensiones y 
 \end{aligned}\] 
 
 \subsection{Esféricas A Rectangulares}
-\label{sec:org4a2fb5b}
+\label{sec:orgb2bafb5}
 Para esta conversión simplemente tenemos que hacer las siguientes sustituciones:
 
 \[\begin{aligned}
@@ -203,7 +199,7 @@ Para esta conversión simplemente tenemos que hacer las siguientes sustituciones
 \end{aligned}\] 
 
 \subsection{Esféricas A Cilíndricas}
-\label{sec:org5084d03}
+\label{sec:org9086861}
 para convertir las coordenadas esféricas a cilíndricas tendremos que convertir el ángulo \(\phi\) (phi) a su coordenada cartesiana 'z':
 
 \[\begin{aligned}
@@ -213,7 +209,7 @@ para convertir las coordenadas esféricas a cilíndricas tendremos que convertir
 \end{aligned}\] 
 
 \section{Vectores}
-\label{sec:org8b5a20f}
+\label{sec:org0f902a3}
 Un vector es la representación matemática y gráfica de una magnitud vectorial. Consiste básicamente en una flecha o segmento rectilíneo orientado, es decir, con una determinada longitud, dirección y sentido, y que contiene toda la información de la magnitud que se está midiendo. Ejemplos de vectores: 
 
 \[\begin{aligned}
@@ -221,15 +217,15 @@ Un vector es la representación matemática y gráfica de una magnitud vectorial
 \end{aligned}\] 
 
 \subsection{Representación}
-\label{sec:org8fc1ebd}
+\label{sec:org00fe877}
 En física usualmente se representan los vectores de forma polar ó cilíndrica, con una magnitud y un ángulo, pero esto no tiene por que ser siempre así, en calculo multivariable con mucha frecuencia se utiliza la la notación cartesiana (tres números dentro de un paréntesis representando cada eje coordenado) ó también la compleja (donde cada uno componentes es una variable 'i' es x 'j' es 'y' y 'z' es 'k'), ejemplo el vector (1,3,4) se puede representar de manera compleja como el punto 'i + 3j + 4k'. 
 
 \subsection{Notación}
-\label{sec:org8ecc195}
+\label{sec:orgb2d433f}
 Para identificar que un valor es un vector hay dos formas principales añadiendo una flecha en la parte superior de la variable (\(\vec{A}\)) o resaltando el nombre de la variable con negritas. 
 
 \subsection{Vector Negativo}
-\label{sec:orge101390}
+\label{sec:orgf197938}
 Si un vector tiene el símbolo negativo, todos sus componentes cambian su signo: 
 
 \[
@@ -243,7 +239,7 @@ Si un vector tiene el símbolo negativo, todos sus componentes cambian su signo:
 \end{aligned} \]
 
 \subsection{Suma y Resta de Vectores}
-\label{sec:org5c1516c}
+\label{sec:orga7e0c23}
 Sumar vectores no representa más que la suma de independiente de cada uno de sus componentes.
 
 \[
@@ -257,7 +253,7 @@ Sumar vectores no representa más que la suma de independiente de cada uno de su
 \textbf{Importante:} Esto es solo para coordenadas cartesianas, si tenemos nuestro vector en coordenadas cilíndricas o esféricas tendremos que hacer la conversión correspondiente.
 
 \subsection{Multiplicación Escalar}
-\label{sec:orga7c9deb}
+\label{sec:orgcfbed4c}
 Podemos multiplicar un vector por un valor fijo para aumentar su tamaño, simplemente multiplicamos cada componente por la constante de nuestro interés:
 
 \[
@@ -265,7 +261,7 @@ k \cdot \vec{A} = (k\cdot\vec{A_x},k\cdot\vec{A_y},k\cdot\vec{A_z})
 \]
 
 \subsection{Módulo o magnitud del Vector}
-\label{sec:orgcac66a3}
+\label{sec:org848130e}
 El módulo de un vector es la longitud entre el inicio y el final del vector, podemos calcular la distancia desde el origen con la fórmula de distancia:
 
 \[
@@ -273,7 +269,7 @@ El módulo de un vector es la longitud entre el inicio y el final del vector, po
 \]
 
 \subsubsection*{Módulo del Vector Fuera Del Origen}
-\label{sec:org9f41927}
+\label{sec:orgfbb5dcc}
 Hay ocasiones en las que tenemos un vector que no parte desde el origen de nuestra gráfica, para eso simplemente tenemos que restar al vector el punto de origen, por ejemplo sí tenemos un vector \(\vec{A} = (3,5,6)\) con origen en \(g = (5,6,3)\) simplemente las restamos:
 
 \[ \begin{aligned}
@@ -289,7 +285,7 @@ De este modo podemos calcular la magnitud del vector independientemente de su or
 \end{aligned} \]
 
 \subsection{Producto Punto}
-\label{sec:org6b0d616}
+\label{sec:org94987fd}
 Para representar el producto punto usamos el operador \(\cdot\). Al producto punto también se le llama comúnmente producto escalar, ya que el resultado \uline{siempre es una escalar}. Es producto punto en palabras sencillas es la suma de la multiplicación componente por componente:
 
 \[
@@ -307,7 +303,7 @@ Una propiedad muy importante que debemos tener en cuenta es su relación con los
 \]
 
 \subsection{Producto Cruz}
-\label{sec:orgf7dd08f}
+\label{sec:org5202263}
 El producto cruz al igual que el producto punto representa una operación que raciona dos vectores y sus magnitudes, su operador es \(\times\), a comparación del producto punto el resultado \uline{No es un escalar}, el producto cruz siempre devuelve otro vector:
 
 \[
@@ -332,7 +328,7 @@ Al igual que el producto punto el producto cruz representa la relación geométr
 \]
 
 \subsection{Producto Mixto}
-\label{sec:org8181898}
+\label{sec:org8006b24}
 Se le conoce también como triple producto escalar, es la operación que combina el producto punto y el producto cruz\footnote{El resultado es un escalar.}:
 
 \[
@@ -344,9 +340,9 @@ Se le conoce también como triple producto escalar, es la operación que combina
 \]
 
 \section{Aplicaciones De Vectores}
-\label{sec:orgc5c1c53}
+\label{sec:org10e5434}
 \subsection{Vector Unitario}
-\label{sec:org59444c9}
+\label{sec:orga0eac16}
 La característica fundamental del vector unitario es que su longitud siempre es igual a '1', no importa la dirección o el cuadrante mientras el módulo es igual a '1' entonces es unitario. El vector unitario es muy útil para determinar la dirección de un vector sin tener que tomar en cuenta su magnitud. Para calcularlo simplemente dividimos los valores de nuestro vector entre el módulo.
 
 \[ 
@@ -354,7 +350,7 @@ La característica fundamental del vector unitario es que su longitud siempre es
 \]
 
 \subsection{Ángulos Entre Vectores}
-\label{sec:org8c5f8c9}
+\label{sec:orgdc51d47}
 Si recordamos una de las propiedades del producto punto y el producto cruz es que representan la relación entre el ángulo y las magnitudes de los vectores:
 
 \[ \begin{aligned}
@@ -369,7 +365,7 @@ Entonces si despejamos los vectores obtenemos las siguientes fórmulas:
 \end{aligned} \]
 
 \subsection{Ángulos Directores}
-\label{sec:org4de760d}
+\label{sec:orgef87939}
 Es aquel ángulo entre un vector y uno de los ejes (ya sea 'x', 'y' o 'z'), para calcularlo solo tenemos que medir el ángulo entre nuestro vector y el eje que nos interesa conocer:
 
 \[\begin{aligned}
@@ -386,7 +382,7 @@ Es aquel ángulo entre un vector y uno de los ejes (ya sea 'x', 'y' o 'z'), para
 
 
 \subsubsection*{Despeje Del Los Ángulos Directores:}
-\label{sec:org805188a}
+\label{sec:org29b4849}
 Estas fórmulas se despejan de la fórmula del producto punto, como es un vector unitario el eje los valores que no usamos se anulan automáticamente\footnote{También es posible usar el producto cruz para este procedimiento, pero por simplicidad se prefiere el producto punto.}:
 
 \[\begin{aligned}
@@ -396,7 +392,7 @@ Estas fórmulas se despejan de la fórmula del producto punto, como es un vector
 \end{aligned} \]
 
 \subsection{Área De Un Paralelogramo}
-\label{sec:orgd030e24}
+\label{sec:orgb2ecde2}
 Si tenemos dos vectores podemos calcular el área del paralelogramo que se forma simplemente usando el producto cruz, Esto lo podemos verificar son el siguiente diagrama:
 
 \begin{figure}[htbp]
@@ -418,7 +414,7 @@ Y esto es exactamente al valor del \uline{producto cruz de dos vectores}:
 \]
 
 \subsection{Área Del Triángulo}
-\label{sec:org85fac74}
+\label{sec:orgac6f827}
 Sabemos que el área del triángulo es igual al área de un rectángulo entre '2' también sabemos que el área del paralelogramo es su producto cruz, entonces para encontrar el área solo basta con divir el producto cruz entre '2':
 
 \begin{center}
@@ -430,7 +426,7 @@ A = \frac{1}{2}|\vec{u}\times\vec{v}|
 \]
 
 \subsection{Volumen De Un Paralelepípedo}
-\label{sec:orgb253e33}
+\label{sec:orga681ca6}
 Si queremos extender el paralelogramo a R\(^{\text{3}}\) obtendremos un paralelepípedo que, al igual que el paralelogramo, podemos formarlo simplemente con vectores y como conocemos sus propiedades es fácil determinar su volumen aplicando el producto mixto:
 
 \begin{center}
@@ -446,7 +442,7 @@ V = \vec{a}\cdot(\vec{b}\times\vec{c}) = \det\begin{pmatrix}
 \]
 
 \subsection{Volumen De Un Tetraedro}
-\label{sec:org0e7effc}
+\label{sec:org15a3930}
 Al igual que con el paralelepípedo el tetraedro es una forma de extender una figura del plano al espacio, en este caso el triángulo, el volumen del tetraedro es igual a una sexta parte del producto mixto:
 
 \[
@@ -454,7 +450,7 @@ V = \frac{1}{6} \left( \vec{a}\cdot\left[\vec{b}\times\vec{c}\right] \right)
 \]
 
 \subsection{Determinar Sí Dos Vectores Son Ortogonales}
-\label{sec:orgf9e193f}
+\label{sec:org13d5313}
 Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale a cero.
 
 \[
@@ -462,11 +458,11 @@ Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale 
 \]
 
 \section{Parametrización De Curvas Planas}
-\label{sec:orgd73f704}
+\label{sec:org098f0b0}
 La parametrización es una forma que tenemos en matemáticas de representar una función en con una tercera variable 't' de la cual dependen 'x' y 'y'.
 
 \subsection{Parametrización De Una Recta}
-\label{sec:org945282e}
+\label{sec:org75c4013}
 Una de las ventajas que tenernos con la parametrización es que podemos definir una función si conocemos algunos de los puntos, por ejemplo si queremos parametrizar una recta de la cual desconocemos su función, pero de la cual tenemos dos puntos podemos usar la siguiente fórmula:
 
 \[
@@ -483,10 +479,10 @@ en donde 'P\(_{\text{0}}\)' y 'P\(_{\text{1}}\)' son los puntos que conocemos y 
   y: 2 + 2t \\ 
 \end{cases} \end{aligned} \]
 
-Una de las cosas que tenemos que notar es como tenemos una función para cada eje coordenado\footnote{La fórmula anterior se puede extender a R\(^{\text{3}}\).}, si lo graficamos notaremos que si 't' es igual a '0' el valor que obtendremos es igual a P\(_{\text{0}}\), pero si el valor de 't' es '1' el valor que obtenemos será igual a P\(_{\text{1}}\).
+Una de las cosas que tenemos que notar es como tenemos una función para cada eje coordenado, la fórmula anterior se puede extender a R\(^{\text{3}}\), si lo graficamos notaremos que si 't' es igual a '0' el valor que obtendremos es igual a P\(_{\text{0}}\), pero si el valor de 't' es '1' el valor que obtenemos será igual a P\(_{\text{1}}\).
 
 \subsection{Curvas Planas Más Comunes}
-\label{sec:org800d759}
+\label{sec:org61ff22a}
 \begin{longtable}{|c|c|c|c|}
 \hline
 Nombre & Parametrizacion & Ecuación & Rango\\
@@ -528,8 +524,8 @@ Hipérbola & \((^x_y)=(^{x_1}_{y_1})+\left(^{a\cosh t}_{b\sinh t}\right)\) & ---
 \hline
 \end{longtable}
 
-\section{Funciones y funciones De Dos Ó Mas Variables}
-\label{sec:org2f441ff}
+\section{Funciones y Ecuaciones De Dos O Mas Variables}
+\label{sec:orgc5f135f}
 Anterior mente solo hemos trabajado con funciones de una sola variable, las cuales tiene una variable de entrada y otra de salida, las funciones multivariable son similares, pero ahora \uline{toman dos números y retornan solo uno}. 
 
 \[
@@ -537,13 +533,13 @@ f(x,y) = x^2 + y^2 - 1
 \]
 
 \subsection{Ecuación Del Plano}
-\label{sec:orgc12e69b}
+\label{sec:org65200a2}
 Un plano es un objeto ideal que únicamente posee dos dimensiones, y contiene infinitos puntos y rectas; es un concepto fundamental de la geometría junto con el punto y la recta. Cuando se habla de un plano, se está hablando del objeto geométrico que no posee volumen, es decir bidimensional, y que contiene un número infinito de rectas y puntos. 
 
 \[ax+by+cz+d=0\]
 
 \subsection{Recta En El Espacio}
-\label{sec:org0a826f9}
+\label{sec:org592652f}
 Para representar una recta es necesario hacer una ecuación que represente los ejes de nuestro espacio coordenado:
 
 \[
@@ -551,7 +547,7 @@ Para representar una recta es necesario hacer una ecuación que represente los e
 \]
 
 \subsection{Dominio De Una Función}
-\label{sec:org70a1dcd}
+\label{sec:orgbddb764}
 El dominio de la función es el conjunto de valores que se le puede dar a las variables independientes en una función, por ejemplo:
 
 \[
@@ -588,7 +584,7 @@ quizá ver el dominio así es un poco intimidante, así que la voy a explicar pa
 Es recomendable conocer las funciones discontinuas y en donde son discontinuas para encontrar el rango de manera más rápida.
 
 \subsection{Rango De Una Función}
-\label{sec:org9543c6c}
+\label{sec:orgad6405c}
 El Rango ó imagen es el conjunto de números que dependen de la sustitución (tabulación) de los valores que puede tomar 'x' y 'y' en el dominio, en palabras más sencillas es todos los valores que puede retornar la función:
 
 \[
@@ -610,7 +606,7 @@ Ahora para el \uline{valor mínimo} no hay mucho misterio, la función es raíz 
 \]
 
 \subsection{Planos Más Comunes}
-\label{sec:org6d151a6}
+\label{sec:org9ba12b3}
 \begin{longtable}{|p{6cm}|p{5.2cm}|}
 \hline
 Nombre & Ecuación\\
@@ -665,10 +661,149 @@ Cono & \(z^2 = x^2 + y^2\)\\
 \hline
 \end{longtable}
 
+\section{Derivadas Multivariables}
+\label{sec:org3cb5181}
+\subsection{Derivadas Parciales}
+\label{sec:orga27782f}
+Una derivada parcial (\(\partial\)) es igual que la derivada normal, solamente que si tiene otra variable diferente la tomaremos como si fuera una constante, esta operación se puede realizar para cada variable ejemplo \(f(x,y)=2xy\) tiene dos derivadas parciales: 
+
+\[ \begin{aligned}
+\frac{\partial f}{\partial x} &= \frac{\partial}{\partial x} 2xy = \underbrace{2y}_{f_x} \\
+\frac{\partial f}{\partial y} &=  \frac{\partial}{\partial y} 2xy = \underbrace{2x}_{f_y}
+\end{aligned} \]
+
+\subsection{Regla De La Cadena}
+\label{sec:org12ac4b8}
+La regla de la cadena es una formula que nos permite obtener la derivada de funciones compuestas de dos funciones, esta es muy común de usarla en problemas de derivación básicos pero también se puede extender a problemas de múltiples variables:
+
+\[
+\frac{d}{dt} f(x(t),y(t)) = \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t}
+\]
+
+\subsubsection*{Ejercicio Con Explicación}
+\label{sec:org50564b6}
+Para resolver este tipo de ejercicio primero tenemos que conocer la función, la variable respecto a la que queremos derivar, y los valores de nuestras variables:
+
+\[ \begin{aligned}
+u = x^2 && v=x\sin y && w=x+y \\
+\end{aligned} \]
+\[
+f(u,v,w) = u^2v^4w
+\]
+
+Ahora ya que conocemos nuestras variables y la función, es recomendable armar la expresión correspondiente a la cadena, esto nos permitirá realizar las sustituciones con mayor facilidad:
+
+\[
+\frac{\partial f}{\partial x} = 
+  \frac{\partial f}{\partial u}\frac{\partial u}{\partial x} + 
+  \frac{\partial f}{\partial v}\frac{\partial v}{\partial x} + 
+  \frac{\partial f}{\partial w}\frac{\partial w}{\partial x}
+\]
+
+Ahora viendo la expresión resultante es solo cuestión de sustituir con las derivadas que pide la expresión:
+
+\[
+\frac{\partial f}{\partial x} = 
+  \underbrace{(2uv^4w)}_{f_u}\underbrace{(2x)}_{u_x} + 
+  \underbrace{(4u^2v^3w)}_{f_v}\underbrace{(\sin y)}_{v_x} + 
+  \underbrace{(u^2v^4)}_{f_w}\underbrace{(1)}_{w_x}
+\]
+
+Por ultimo solo queda hacer la sustituciones de u,v,w y tratar de hacer las simplificaciones correspondientes:
+
+\[ \begin{aligned}
+\frac{\partial f}{\partial x} &= 
+  \underbrace{ 4x^7 \sin^4 y }_{f_u u_x} + 
+  \underbrace{ 4x^8\sin^4y + 4x^7y\sin^4y }_{f_v v_x} + 
+  \underbrace{ x^8\sin^4 y }_{f_w w_x} \\
+&=
+  5x^8\sin^4 y + 4x^7 y \sin^4 y + 4x^7 \sin^4 y \\
+&= 
+\boxed{ \sin^4y(5x^8+4x^7) + 4x^7 y \sin^4 y }
+\end{aligned} \]
+
+\subsection{Gradiente}
+\label{sec:org09d009e}
+El gradiente ( \(\nabla\) ) de una funcion es simplemente un vector que contiene todas las derivadas parciales de una funcion:
+
+\[ \nabla f(x,y,z) = \begin{bmatrix}
+f_x \\
+f_y \\
+f_z
+\end{bmatrix} \]
+
+\subsection{Matriz Jacobiana}
+\label{sec:org7b5c879}
+Si en vez de tener una única función tenemos un vector con múltiples funciones podemos extender el gradiente a cada una de sus funciones con la matriz jacobiana:
+
+\[ \bold{J}\begin{bmatrix}
+  f_1 & \ldots & f_n \\
+\end{bmatrix} = \begin{bmatrix}
+  f_{1x} & \ldots & f_{nz} \\
+  \vdots & \ddots & \vdots \\
+  f_{1x} & \ldots & f_{nz} \\
+\end{bmatrix}  \]
+
+\subsection{Matriz Hessiana}
+\label{sec:org4884f63}
+Se le llama matriz Hessiana a la matriz Jacobiana de el gradiente de una función:
+
+\[
+\bold{H} f(x_n) = \bold{J}(\nabla f(x_n))
+\]
+
+\subsection{Calcular Divergencia}
+\label{sec:org95125ec}
+El gradiente se define como la diagonal de la matriz jacobiana de un vector de funciones:
+
+\[
+\nabla \cdot f = diag(\bold{J} f) 
+\]
+
+\subsubsection*{Ejercicio Con Explicación}
+\label{sec:orge0c9b75}
+Para encontrar la divergencia (\(\nabla \cdot f\)) basta calcular la matriz Jacobiana de nuestro vector y extraer la diagonal: 
+
+\[ \begin{aligned}
+f(x,y,z) &= \begin{bmatrix}
+  x^2z^2 \\
+  -2y^2z^2 \\
+  xy^2z
+\end{bmatrix} \\ ~ \\ \bold{J} f &= \begin{bmatrix}
+  2xz^2    &    0     &  2x^2z  \\
+     0     &  -4yz^2  &  -4y^2z \\
+   y^2z    &   2xyz   &  xy^2   
+\end{bmatrix} \] 
+
+Ahora que tenemos la matriz jacobiana extrameos la diagonal, y la expresión resultante es el valor de la divergente:
+
+\[ \begin{aligned} 
+diag(\bold{J} f) &= \begin{bmatrix}
+  2xz^2    &     ~    & ~ \\
+    ~      &  -4yz^2  & ~ \\
+    ~      &     ~    & xy^2 \\
+\end{bmatrix} \\ ~ \\ \nabla \cdot f &= \boxed{2xz^2-4yz^2 + xy^2}
+\end{aligned} \]
+
+\subsection{Calcular El Rotacional}
+\label{sec:org9f8c82d}
+
+\[ \begin{aligned} \nabla \times F &= \det\begin{pmatrix}
+       i    &      j    &     k    \\
+  \frac{\partial }{\partial x} & \frac{\partial }{\partial y} & \frac{\partial }{\partial z} \\
+  P(a) & Q(a) & R(a) \\
+\end{pmatrix} \\ &= 
+\left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right)i + 
+\left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right)j + 
+\left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)k
+\end{aligned}\]
+
+
+
 \section{Páginas De Consulta Y Recursos Útiles}
-\label{sec:org4b821b5}
+\label{sec:org4fd7630}
 \subsection{Calculadoras}
-\label{sec:org271de3c}
+\label{sec:org2e15bb6}
 \begin{itemize}
 \item Calculadora De Cartesianas A Cilíndricas, \url{https://tinyurl.com/y2ljx8fp}
 \item Calculadora De Cilíndricas A Esféricas, \url{https://tinyurl.com/y5dzufw9}
@@ -677,7 +812,7 @@ Cono & \(z^2 = x^2 + y^2\)\\
 \end{itemize}
 
 \subsection{Páginas}
-\label{sec:org510e6ed}
+\label{sec:orgf9d5e83}
 \begin{itemize}
 \item Coordenadas Cilíndricas A Cartesianas, \url{https://tinyurl.com/y3s49cv3}
 \item Coordenadas Cilíndricas Y Esféricas, \url{https://tinyurl.com/y3kdl2jc}
@@ -690,11 +825,14 @@ Cono & \(z^2 = x^2 + y^2\)\\
 \item Ecuación de la recta en el espacio, \url{https://tinyurl.com/y68tsc7w}
 \item Parametrización, \url{https://tinyurl.com/y24nhnmv}
 \item Rango de una función, \url{https://tinyurl.com/yf9cnh26}
+\item \href{http://www.mate.unlp.edu.ar/practicas/54\_6\_15102013091531.pdf}{Regla de la cadena}
+\item \href{https://www.ugr.es/\~rpaya/documentos/Teleco/Fund-Mat02.pdf}{Gradiente, Divergencia y Rotacional}
 \end{itemize}
 
 \subsection{Videos}
-\label{sec:orgf4e871f}
+\label{sec:orge1d67a4}
 \begin{itemize}
 \item Producto Punto Por Zach Star, \url{https://tinyurl.com/y2x8dj88}
+\item \href{https://www.youtube.com/watch?v=DFn9wUEBnbU\&t=134s}{Regla de la cadena}
 \end{itemize}
 \end{document}

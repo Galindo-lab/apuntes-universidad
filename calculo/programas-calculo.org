@@ -1,4 +1,3 @@
-
 #+TITLE:    Programas Cálculo
 #+Author:   Luis Eduardo Galindo Amaya
 #+email:    egalindo54@uabc.edu.mx
@@ -17,8 +16,6 @@
 #+DATE: \today
 
 # #+OPTIONS: \n:nil num:nil toc:nil
-
-\newpage 
 
 * Conversión Entre Sistemas De Coordenadas
 ** Rectangulares a Cilíndxricas (o Polares)
