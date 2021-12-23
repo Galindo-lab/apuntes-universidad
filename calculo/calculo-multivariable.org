@@ -6,6 +6,7 @@
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS:
 #+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage{svg}
 
 #+DESCRIPTION:
 #+KEYWORDS: 
@@ -43,21 +44,21 @@ Un octante en geometría del espacio es cada una de las ocho divisiones coordena
 [[file:img/cuadrante-y-octante-2.png]]
 
 * Representación De Punto En El Plano
-Cuando trabajamos con planos cartesianos podemos marcar puntos indicando el número de su coordenada en cada respectivo eje, está una forma muy rápida de interpretar un punto en el espacio más no es la única y sobre todo cuando trabajamos con funciones circulares las representaciones rectangulares terminan complicando nuestro trabajo.
+Cuando trabajamos con planos cartesianos podemos marcar puntos indicando el número de su coordenada en cada respectivo eje, esTá una forma muy rápida de interpretar un punto en el espacio más no es la única y sobre todo cuando trabajamos con funciones circulares las representaciones rectangulares terminan complicando nuestro trabajo.
 
 ** Rectangular o Cartesianas
 Las coordenadas rectangulares son las coordenadas con las que hemos trabajado todo este tiempo, se representa con un número en cada eje coordenado y para extenderlo simplemente agregamos un número extra para cada valor que deseamos representar. 
 
 #+attr_latex: :width 4cm
 #+caption: Coordenadas Rectangulares.
-[[file:img/coordenadas-cartesianas.png]]
+[[file:img/coordenadas-cartesianas.svg]]
 
 ** Polar o Cilíndrica
 Una coordenada polar tiene dos partes principales, una longitud o radio (r) y un ángulo (\theta), como cabe imaginar podemos representar figuras circulares con mucha facilidad, también es la notación más común para vectores en física.
 
 #+attr_latex: :width 4cm
 #+caption: Coordenadas Cilíndricas.
-[[file:img/coordenadas-cilindricas.png]]
+[[file:img/coordenadas-cilindricas.svg]]
 
 Podemos extender esta representación en el espacio añadiendo el eje 'z', el cual nos indicara la altura hacia donde apunta el vector.
 
@@ -66,7 +67,7 @@ La representación esférica solo existe en el espacio, y como lo indica su nomb
 
 #+attr_latex: :width 4cm
 #+caption: Coordenadas esféricas.
-[[file:img/coordenadas-esfericas.png]]
+[[file:img/coordenadas-esfericas.svg]]
 
 [fn:rho-no-pe] Esta letra se lee como rho, no confundir con p.
 
@@ -311,7 +312,7 @@ Es aquel ángulo entre un vector y uno de los ejes (ya sea 'x', 'y' o 'z'), para
 
 #+attr_latex: :width 4cm
 #+caption: Ángulos directores de \(\vec{a}\).
-[[file:img/angulos-directores.png]]
+[[file:img/angulos-directores.svg]]
 
 
 *** Despeje Del Los Ángulos Directores:
@@ -330,7 +331,7 @@ Si tenemos dos vectores podemos calcular el área del paralelogramo que se forma
 
 #+attr_latex: :width 4cm
 #+caption: Paralelogramo.
-[[file:img/producto-cruz.png]]
+[[file:img/producto-cruz.svg]]
 
 En primaria aprendimos que el área del paralelogramo es base por altura, sin embargo, la altura del paralelogramo no se puede obtener midiendo sus lados, ya que está inclinado, si aplicamos trigonometría podemos saber que el valor del cateto opuesto (la altura) es igual al seno del ángulo, entonces la fórmula quedaría:
 
@@ -348,7 +349,7 @@ Y esto es exactamente al valor del _producto cruz de dos vectores_:
 Sabemos que el área del triángulo es igual al área de un rectángulo entre '2' también sabemos que el área del paralelogramo es su producto cruz, entonces para encontrar el área solo basta con divir el producto cruz entre '2':
 
 #+attr_latex: :width 3cm
-[[file:img/area-triangulo.png]]
+[[file:img/area-triangulo.svg]]
 
 \[
 A = \frac{1}{2}|\vec{u}\times\vec{v}|
@@ -358,7 +359,7 @@ A = \frac{1}{2}|\vec{u}\times\vec{v}|
 Si queremos extender el paralelogramo a R^3 obtendremos un paralelepípedo que, al igual que el paralelogramo, podemos formarlo simplemente con vectores y como conocemos sus propiedades es fácil determinar su volumen aplicando el producto mixto:
 
 #+attr_latex: :width 4cm
-[[file:img/paralelipedo.png]]
+[[file:img/paralelipedo.svg]]
 
 \[
 V = \vec{a}\cdot(\vec{b}\times\vec{c}) = \det\begin{pmatrix}
@@ -382,26 +383,55 @@ Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale 
 \vec{A} \cdot \vec{B} = 0
 \]
 
-* Ecuacion de la recta
+* Representacion De La Recta Plana
+La recta es una entidad matematica fundamental, junto al punto y al plano, la recta o la línea recta es una línea que se extiende en una misma dirección y existen diversas maneras de representarla
+
 ** Ecuacion De La Recta
-
-** Ecuacion Explicita
-
-
-** Ecuacion Vectorial
-
-
-** Ecuacion Simetrica
-
-
-** Parametrización De Una Recta
-Una de las ventajas que tenernos con la parametrización es que podemos definir una función si conocemos algunos de los puntos, por ejemplo si queremos parametrizar una recta de la cual desconocemos su función, pero de la cual tenemos dos puntos podemos usar la siguiente fórmula:
+En el pasado ya hemos trabajado con la ecuacion de la recta, donde la recta es representada como la relacion de igualdad entre dos o mas variables: 
 
 \[
-P_0 + t(p_1 - p_0)
+\frac{x-x_0}{a} = \frac{y-y_0}{b}
 \]
 
-en donde 'P_0' y 'P_1' son los puntos que conocemos y 't' es una variable continua, Ejemplo si tenemos los puntos \(P_0 = <1,2>\) y \(P_1 = <3,4>\) sustituimos en la fórmula:
+** Ecuacion Escalar De La Recta
+La forma mas común de representar la recta es como una igualdad de sus variables con '0':
+
+\[
+a(x-x_0) + b(y-y_0) + c = 0
+\]
+
+** Ecuacion Simetrica De La Recta
+La ecuacion simetrica o canonica es muy parecida a la ecuacion escalar, en el sentido de que ambas son el resultado de una igualdad, la cosa que las hace fundamentalmente diferentes es que a comparación de la ecuacion escalar, la ecuacion simetrica es igual a '1':
+
+\[
+\frac{(x-x_0)}{a} + \frac{(y-y_0)}{b} = 1
+\]
+
+** Ecuacion Vectorial De La Recta
+Un vector tiene varios compoenentes los cuales en conjunto forman una direccion, entonces si contamos con un vector que indique exactamente a la direccion de la funcion podemos usarlo para representarla:
+
+\[
+(x,y)=P_0 + t \vec{V}
+\]
+
+*** Ejemplo De Ecuacion Vectorial
+Una recta pasa por el punto \(P_0=(1,2)\) y tiene un vector director \(\vec{V} = (2,2)\). El vector tiene su origen en el centro.
+
+#+attr_latex: :width 4cm
+#+caption: \( (x,y) = (1,2) + t(2,2) \)
+[[file:svg/ecuacion-vectorial.svg]]
+
+Es importante notar que el valor de 't' es un rango entre [0,1], donde '0' es el valor de el punto 'P_0', y '1' es el extremo de \(\vec{V}\).
+
+** Parametrizacion De Una Recta
+Ahora bien si conocemos dos puntos pertenecientes a la regla podemos calcular la pendiente y con ello la direccion de la recta:
+
+\[
+(x,y) = P_0 + t(P_1 - P_0)
+\]
+
+*** Ejemplo De Parametrizacion De Una Recta
+Tenemos los punto \(P_0 = (1,2)\) y \(P_1 = (3,4)\).
 
 \[ \begin{aligned} f(t) &= \begin{cases}
   x: 1 + t (3-1) \\
@@ -411,7 +441,6 @@ en donde 'P_0' y 'P_1' son los puntos que conocemos y 't' es una variable contin
   y: 2 + 2t \\ 
 \end{cases} \end{aligned} \]
 
-Una de las cosas que tenemos que notar es como tenemos una función para cada eje coordenado, la fórmula anterior se puede extender a R^3, si lo graficamos notaremos que si 't' es igual a '0' el valor que obtendremos es igual a P_0, pero si el valor de 't' es '1' el valor que obtenemos será igual a P_1.
 
 ** Curvas Planas Más Comunes
 #+ATTR_LATEX: :environment longtable :align |c|c|c|c|
@@ -588,11 +617,12 @@ Para resolver este tipo de ejercicio primero tenemos que conocer la función, la
 \[ \begin{aligned}
 u = x^2 && v=x\sin y && w=x+y \\
 \end{aligned} \]
+
 \[
 f(u,v,w) = u^2v^4w
 \]
 
-Ahora ya que conocemos nuestras variables y la función, es recomendable armar la expresión correspondiente a la cadena, esto nos permitirá realizar las sustituciones con mayor facilidad, para armar nuestra ecuacion tenemos que derivar parcialemente con respecto a cada variable y multiplicar el valor :
+Ahora ya que conocemos nuestras variables y la función, es recomendable armar la expresión correspondiente a la cadena, esto nos permitirá realizar las sustituciones con mayor facilidad. Para armar nuestra ecuacion tenemos que derivar parcialemente con respecto a cada variable y multiplicar el valor de la derivada:
 
 \[
 \frac{\partial f}{\partial x} = 
@@ -693,8 +723,6 @@ diag(\bold{J} f) &= \begin{bmatrix}
 \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)k
 \end{aligned}\]
 
-
-
 * Páginas De Consulta Y Recursos Útiles
 ** Calculadoras
 - Calculadora De Cartesianas A Cilíndricas, https://tinyurl.com/y2ljx8fp
@@ -716,6 +744,7 @@ diag(\bold{J} f) &= \begin{bmatrix}
 - Rango de una función, https://tinyurl.com/yf9cnh26
 - [[http://www.mate.unlp.edu.ar/practicas/54_6_15102013091531.pdf][Regla de la cadena]]
 - [[https://www.ugr.es/~rpaya/documentos/Teleco/Fund-Mat02.pdf][Gradiente, Divergencia y Rotacional]]
+- [[https://www.superprof.es/apuntes/escolar/matematicas/analitica/recta/ecuacion-vectorial-de-la-recta.html#tema_que-es-la-ecuacion-vectorial-de-la-recta][Ecuación vectorial de la recta]]
 
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
