@@ -419,7 +419,7 @@ Una recta pasa por el punto \(P_0=(1,2)\) y tiene un vector director \(\vec{V} =
 
 #+attr_latex: :width 4cm
 #+caption: \( (x,y) = (1,2) + t(2,2) \)
-[[file:svg/ecuacion-vectorial.svg]]
+[[file:img/ecuacion-vectorial.svg]]
 
 Es importante notar que el valor de 't' es un rango entre [0,1], donde '0' es el valor de el punto 'P_0', y '1' es el extremo de \(\vec{V}\).
 
@@ -440,6 +440,10 @@ Tenemos los punto \(P_0 = (1,2)\) y \(P_1 = (3,4)\).
   x: 1 + 2t \\
   y: 2 + 2t \\ 
 \end{cases} \end{aligned} \]
+
+#+attr_latex: :width 4cm
+#+caption: \( (x,y) = (1,2) + t(2,2) \)
+[[file:img/parametrizacion.svg]]
 
 
 ** Curvas Planas Más Comunes

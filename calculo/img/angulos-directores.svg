@@ -138,9 +138,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="100.2762"
-     inkscape:cy="54.801218"
+     inkscape:zoom="3.959798"
+     inkscape:cx="33.291525"
+     inkscape:cy="43.15936"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -195,7 +195,7 @@
        id="path4091"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.26895693;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.1516555, 2.1516555;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:0.269;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.152,2.152;stroke-dashoffset:0;stroke-opacity:1"
        d="M 74.253419,140.10208 V 115.49583"
        id="path4151"
        inkscape:connector-curvature="0" />
@@ -288,7 +288,7 @@
          id="tspan990">y</tspan></text>
     <g
        id="g1041"
-       transform="translate(69.312495,98.968286)">
+       transform="matrix(1.3056684,0,0,1.3056684,62.696745,92.17202)">
       <g
          word-spacing="normal"
          letter-spacing="normal"
@@ -308,7 +308,7 @@
            style="fill:#000000;stroke-width:0" /></g>    </g>
     <g
        id="g1100"
-       transform="translate(79.563987,105.26637)">
+       transform="matrix(1.0956871,0,0,1.0956871,77.543568,102.67757)">
       <g
          word-spacing="normal"
          letter-spacing="normal"
@@ -328,7 +328,7 @@
            style="fill:#000000;stroke-width:0" /></g>    </g>
     <g
        id="g1160"
-       transform="translate(68.656065,111.84459)">
+       transform="matrix(1.316978,0,0,1.316978,59.253018,104.515)">
       <g
          word-spacing="normal"
          letter-spacing="normal"
@@ -348,7 +348,7 @@
            style="fill:#000000;stroke-width:0" /></g>    </g>
     <g
        id="g1223"
-       transform="translate(77.562709,99.145761)">
+       transform="matrix(1.15834,0,0,1.15834,72.564006,95.919004)">
       <g
          word-spacing="normal"
          letter-spacing="normal"
