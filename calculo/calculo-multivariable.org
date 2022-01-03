@@ -390,38 +390,38 @@ La recta es una entidad matematica fundamental, junto al punto y al plano, la re
 En el pasado ya hemos trabajado con la ecuacion de la recta, donde la recta es representada como la relacion de igualdad entre dos o mas variables: 
 
 \[
-\frac{x-x_0}{a} = \frac{y-y_0}{b}
+\frac{x}{A} = \frac{y}{B}
 \]
 
 ** Ecuacion Escalar De La Recta
-La forma mas común de representar la recta es como una igualdad de sus variables con '0':
+Tambien conocida como implícita o general es la forma mas común de representar la recta, es una igualdad de sus variables con '0':
 
 \[
-a(x-x_0) + b(y-y_0) + c = 0
+Ax + By + C = 0
 \]
 
 ** Ecuacion Simetrica De La Recta
 La ecuacion simetrica o canonica es muy parecida a la ecuacion escalar, en el sentido de que ambas son el resultado de una igualdad, la cosa que las hace fundamentalmente diferentes es que a comparación de la ecuacion escalar, la ecuacion simetrica es igual a '1':
 
 \[
-\frac{(x-x_0)}{a} + \frac{(y-y_0)}{b} = 1
+\frac{x}{A} + \frac{y}{B} = 1
 \]
 
 ** Ecuacion Vectorial De La Recta
 Un vector tiene varios compoenentes los cuales en conjunto forman una direccion, entonces si contamos con un vector que indique exactamente a la direccion de la funcion podemos usarlo para representarla:
 
 \[
-(x,y)=P_0 + t \vec{V}
+(x,y)=P_0 + \lambda \vec{V}
 \]
 
 *** Ejemplo De Ecuacion Vectorial
 Una recta pasa por el punto \(P_0=(1,2)\) y tiene un vector director \(\vec{V} = (2,2)\). El vector tiene su origen en el centro.
 
 #+attr_latex: :width 4cm
-#+caption: \( (x,y) = (1,2) + t(2,2) \)
+#+caption: \( (x,y) = (1,2) + \lambda(2,2) \)
 [[file:img/ecuacion-vectorial.svg]]
 
-Es importante notar que el valor de 't' es un rango entre [0,1], donde '0' es el valor de el punto 'P_0', y '1' es el extremo de \(\vec{V}\).
+Es importante notar que el valor de '\lambda' es un rango entre [0,1], donde '0' es el valor de el punto 'P_0', y '1' es el extremo de \(\vec{V}\).
 
 ** Parametrizacion De Una Recta
 Ahora bien si conocemos dos puntos pertenecientes a la regla podemos calcular la pendiente y con ello la direccion de la recta:
@@ -442,9 +442,20 @@ Tenemos los punto \(P_0 = (1,2)\) y \(P_1 = (3,4)\).
 \end{cases} \end{aligned} \]
 
 #+attr_latex: :width 4cm
-#+caption: \( (x,y) = (1,2) + t(2,2) \)
 [[file:img/parametrizacion.svg]]
 
+Es importante notar que el resultado son dos ecuaciones, una para cada eje. El valor 't' se puede entender como un porcentaje, donde '0' es el valor 'P_0' y '1' es el valor de 'P_1' si por ejemplo queremos conocer exactamente el punto intermedio entre 'P_0' y 'P_1' solo evaluamos el punto '0.5':
+
+\[ \begin{aligned} f(t) &= \begin{cases}
+  x: 1 + 2(0.5) \\
+  y: 2 + 2(0.5) \\ 
+\end{cases} \\ &= \begin{cases}
+  x: 2  \\
+  y: 3  \\ 
+\end{cases} \end{aligned} \]
+
+#+attr_latex: :width 4cm
+[[file:img/parametrizacion-2.svg]]
 
 ** Curvas Planas Más Comunes
 #+ATTR_LATEX: :environment longtable :align |c|c|c|c|
@@ -487,7 +498,15 @@ f(x,y) = x^2 + y^2 - 1
 ** Ecuación Del Plano
 Un plano es un objeto ideal que únicamente posee dos dimensiones, y contiene infinitos puntos y rectas; es un concepto fundamental de la geometría junto con el punto y la recta. Cuando se habla de un plano, se está hablando del objeto geométrico que no posee volumen, es decir bidimensional, y que contiene un número infinito de rectas y puntos. 
 
-\[ax+by+cz+d=0\]
+*** Implícita O General Del Plano
+\[
+Ax+By+Cz+d=0
+\]
+
+*** Ecuación Vectorial Del Plano
+\[
+(x,y,z) = P + \lambda\vec{u} + \mu\vec{v}
+\]
 
 ** Recta En El Espacio
 Para representar una recta es necesario hacer una ecuación que represente los ejes de nuestro espacio coordenado:
@@ -615,7 +634,7 @@ La regla de la cadena es una formula que nos permite obtener la derivada de func
 \frac{d}{dt} f(x(t),y(t)) = \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t}
 \]
 
-*** Ejercicio Con Explicación
+*** Ejercicio De Regla De La Cadena
 Para resolver este tipo de ejercicio primero tenemos que conocer la función, la variable respecto a la que queremos derivar, y los valores de nuestras variables:
 
 \[ \begin{aligned}
@@ -666,8 +685,16 @@ f_y \\
 f_z
 \end{bmatrix} \]
 
+*** Ejercicio Gradiente
+Encontrar el gradiente de \(3x^4 - y^3 + x^2y^2+5 \):
+
+\[ \nabla f (x,y) = \boxed{ \begin{bmatrix}
+    12x^3 + 2xy^2 \\
+    2x^2y - 3y^2 \\ 
+\end{bmatrix} } \]
+
 ** Matriz Jacobiana
-Si en vez de tener una única función tenemos un vector con múltiples funciones podemos extender el gradiente a cada una de sus funciones con la matriz jacobiana:
+La matriz Jacobiana de una función vectorial de varias variables es la matriz cuyos elementos son las derivadas parciales de primer orden de dicha función. 
 
 \[ \bold{J}\begin{bmatrix}
   f_1 & \ldots & f_n \\
@@ -675,23 +702,42 @@ Si en vez de tener una única función tenemos un vector con múltiples funcione
   f_{1x} & \ldots & f_{nz} \\
   \vdots & \ddots & \vdots \\
   f_{1x} & \ldots & f_{nz} \\
-\end{bmatrix}  \]
+\end{bmatrix} \]
+
+*** Ejercicio Matriz Jacobiana
+Encontrar la matriz jacobiana de f:
+
+\[ f (x,y) = \begin{bmatrix}
+   a: & 12x^3 + 2xy^2 \\
+   b: & 2x^2y - 3y^2 \\ 
+\end{bmatrix} \]
+
+
+\[ \begin{aligned}
+\bold{J} f &= \begin{bmatrix}
+   a_x & a_y \\
+   b_x & b_y \\
+\end{bmatrix} \\ &= \boxed{ \begin{bmatrix}
+   36x^2 + 2y^2 & 4xy       \\
+   4xy          & 2x^2 - 6y \\
+\end{bmatrix} }
+\end{aligned} \]
 
 ** Matriz Hessiana
-Se le llama matriz Hessiana a la matriz Jacobiana de el gradiente de una función:
+Es la matriz cuadrada de tamaño n \times n, de las segundas derivadas parciales. 
 
 \[
 \bold{H} f(x_n) = \bold{J}(\nabla f(x_n))
 \]
 
 ** Calcular Divergencia
-El gradiente se define como la diagonal de la matriz jacobiana de un vector de funciones:
+La divergencia mide la diferencia entre el flujo saliente y el flujo entrante de un campo vectorial sobre la superficie que rodea a un volumen de control:
 
 \[
 \nabla \cdot f = diag(\bold{J} f) 
 \]
 
-*** Ejercicio Con Explicación
+*** Ejercicio Divergencia
 Para encontrar la divergencia (\(\nabla \cdot f\)) basta calcular la matriz Jacobiana de nuestro vector y extraer la diagonal: 
 
 \[ \begin{aligned}
@@ -699,11 +745,12 @@ f(x,y,z) &= \begin{bmatrix}
   x^2z^2 \\
   -2y^2z^2 \\
   xy^2z
-\end{bmatrix} \\ ~ \\ \bold{J} f &= \begin{bmatrix}
+\end{bmatrix} \\ \bold{J} f &= \begin{bmatrix}
   2xz^2    &    0     &  2x^2z  \\
      0     &  -4yz^2  &  -4y^2z \\
    y^2z    &   2xyz   &  xy^2   
-\end{bmatrix} \] 
+\end{bmatrix}  
+\end{aligned}\] 
 
 Ahora que tenemos la matriz jacobiana extrameos la diagonal, y la expresión resultante es el valor de la divergente:
 
@@ -712,10 +759,11 @@ diag(\bold{J} f) &= \begin{bmatrix}
   2xz^2    &     ~    & ~ \\
     ~      &  -4yz^2  & ~ \\
     ~      &     ~    & xy^2 \\
-\end{bmatrix} \\ ~ \\ \nabla \cdot f &= \boxed{2xz^2-4yz^2 + xy^2}
+\end{bmatrix} \\ \nabla \cdot f &= \boxed{2xz^2-4yz^2 + xy^2}
 \end{aligned} \]
 
 ** Calcular El Rotacional
+el rotacional o rotor es un operador vectorial sobre campos vectoriales definidos en un abierto de \mathbb{R}^{3} que muestra la tendencia de un campo vectorial a inducir rotación alrededor de un punto. 
 
 \[ \begin{aligned} \nabla \times F &= \det\begin{pmatrix}
        i    &      j    &     k    \\
@@ -727,6 +775,83 @@ diag(\bold{J} f) &= \begin{bmatrix}
 \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)k
 \end{aligned}\]
 
+*** Ejercicio De Rotacional
+Calcular el rotacional de F:
+
+\[ F = \begin{bmatrix}
+  y^3 - 9y \\
+  x^3 - 9z \\
+  0 \\
+\end{bmatrix} \]
+
+\[\begin{aligned} 
+  \nabla \times F &= \left(0-(-9)\right)i + (0-0) j + \left(3x^2-(3y^2-9)\right)k \\
+                  &= \boxed{ 9i + \left(3x^2-3y^2+9\right)k }\\
+\end{aligned}\]
+
+** Derivada Direccional
+La derivada direccional de una función multivariable, representa la tasa de cambio de la función en la dirección de dicho vector[fn:formulas]:
+
+#+NAME: eqn:derivable
+\begin{equation}
+D_{\vec{v}}f(\vec{x}) = \nabla f(\vec{x}) \cdot \vec{v}
+\end{equation}
+
+#+NAME: eqn:no_derivable
+\begin{equation}
+D_{\vec{v}}f(\vec{x}) = \frac{d}{dt} f(\vec{x}+t\vec{u})|_{t=0}
+\end{equation}
+
+En el curso de calculo diferencial aprendimos que la derivada puede representar la pendiente de la función, ahora la derivada direccional nos permite conocer la pendiente en funciones multivariables como ahora estamos trabajando sobre tres ejes es necesario saer la direccion hacia la que estamos midiendo la pendiente.
+
+[fn:formulas] La formula [[eqn:derivable]] solo funciona para funciones diferenciable en el punto, mientras que [[eqn:no_derivable]] es valida para cualquier punto.
+
+*** Razón De Cambio Derivada Direccional (Formula 1)
+Razón de cambio de la funcion \(f=x^2y^3-4y\), en el punto \(x=(1,2)\) sobre el vector \(\vec{v}=(2,5)\)[fn:vector_unitario].
+
+\[ \begin{aligned}
+\nabla f \cdot \vec{v} &= \begin{bmatrix}
+2xy^3 \\ -4 + 3x^2y^2
+\end{bmatrix} \cdot \begin{bmatrix}
+2 \\ 5
+\end{bmatrix} \\ &= 15x^2y^2 + 4xy^3-20 \\
+&= 15(1)^2(2)^2 + 4(1)(2)^3-20 \\
+&= \boxed{72}
+\end{aligned} \]
+
+*** Razón De Cambio Derivada Direccional (Formula 2)
+Razón de cambio de la funcion \(f=x^2y^3-4y\), en el punto \(x=(1,2)\) sobre el vector \(\vec{v}=(2,5)\)[fn:vector_unitario].
+
+Primero tenemos que parametrizar la direccion de la que vamos a calcular: 
+
+\[ \begin{aligned} x + t \vec{v} &= \begin{pmatrix}
+1 \\ 2 
+\end{pmatrix} + t\begin{pmatrix}
+2 \\ 5 
+\end{pmatrix} \\ &= \begin{pmatrix}
+x: 1 + 2t \\
+y: 2 + 5t
+\end{pmatrix} \end{aligned} \]
+
+ahora que las variables 'x' y 'y' se pueden representar con una variable común evaluamos la funcion sustituyedo 'x' y 'y' por su correspondiente parametrizacion
+
+\[ \begin{aligned}
+f &= x^2y^3-4y \\
+  &= (1 + 2t)^2 (2 + 5t)^3 - 4(2 + 5t) \\
+  &= 500t^5 + 1100t^4 + 965t^3 + 422 t^2 + 72t
+\end{aligned} \]
+
+el resultado que obtuvimos es, por decirlo de algún modo, la parametrizacion de 'f', y como ahora ya tenemos una función de una sola variable podemos derivar sin ningun problema:
+
+\[ \begin{aligned}
+& \frac{d}{dt} \left( 500t^5 + 1100t^4 + 965t^3 + 422 t^2 + 72t \right)|_{t=0} \\
+& (2500 t^4 + 4400 + t^3 + 2895 t^2 + 844 t + 72)|_{t=0} \\
+&= \boxed{72} \\
+\end{aligned} \]
+
+[fn:vector_unitario] Podemos simplificar los calculos utilizando el vector unitario.
+
+\pagebreak
 * Páginas De Consulta Y Recursos Útiles
 ** Calculadoras
 - Calculadora De Cartesianas A Cilíndricas, https://tinyurl.com/y2ljx8fp

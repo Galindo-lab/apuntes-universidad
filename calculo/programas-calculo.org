@@ -373,3 +373,87 @@ C = (-4,3,2)
 "Volumen paralelepípedo"
 float( 1/6 * dot(A,cross(B,C)))
 #+END_SRC
+* * Derivadas Multivariables
+** Derivadas Parciales
+#+BEGIN_SRC 
+# cambia f por tu funcion
+f = 2*x*y
+
+
+d(f,x)
+d(f,y)
+#+END_SRC
+
+** Gradiente
+#+BEGIN_SRC 
+# cambia f por tu funcion
+f = 3x^4-y^3+x^2*y^2+5
+
+
+# puedes añadir mas variables
+d(f,(x,y))
+#+END_SRC
+
+** Matriz Jacobiana
+#+BEGIN_SRC 
+# cambia f por tus funciones
+f = (
+  12x^3 + 2x*y^2,
+  2x^2y - 3y^2
+)
+
+
+d(f,(x,y))
+#+END_SRC
+
+** Matriz Hessiana
+#+BEGIN_SRC 
+# cambia f por tu funcion
+f = 12x^3 + 2x*y^2
+
+"gradiente"
+d(f,(x,y))
+
+"Hessiano"
+d(last,(x,y))
+
+#+END_SRC
+
+** Divergencia
+#+BEGIN_SRC 
+F = (
+  x^2*z^2, 
+  -2*y^2*z^2, 
+  x*y^2*z
+)
+
+b = d(F,(x,y,z))
+c = b * unit(3)
+contract(c)
+#+END_SRC
+
+** Razón De Cambio Derivada Direccional (Formula 1)
+#+BEGIN_SRC 
+f  = x^2*y^3-4*y
+v  = (2,5)
+x0 = (1,2)
+
+
+dot( d(f,(x,y)), v)
+eval(last,x,x0[1],y,x0[2])
+float
+#+END_SRC
+
+** Razón De Cambio Derivada Direccional (Formula 2)
+#+BEGIN_SRC 
+f  = x^2*y^3-4*y
+v  = (2,5)
+x0 = (1,2)
+
+
+a = x0 + t*v
+eval(f,x,a[1],y,a[2])
+d(last,t)
+eval(last,t,0)
+float
+#+END_SRC
