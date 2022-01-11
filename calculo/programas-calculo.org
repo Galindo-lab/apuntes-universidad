@@ -18,7 +18,7 @@
 # #+OPTIONS: \n:nil num:nil toc:nil
 
 * Conversión Entre Sistemas De Coordenadas
-** Rectangulares a Cilíndxricas (o Polares)
+** Rectangulares a Cilíndricas (o Polares)
 #+BEGIN_SRC
 # Sustituye el valor de 'x', 'y' y 'z'.
 
@@ -457,3 +457,4 @@ d(last,t)
 eval(last,t,0)
 float
 #+END_SRC
+

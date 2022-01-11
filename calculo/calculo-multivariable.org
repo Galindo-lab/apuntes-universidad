@@ -1,6 +1,6 @@
-#+TITLE:    Cálculo Multivariable
-#+Author:   Luis Eduardo Galindo Amaya
-#+email:    egalindo54@uabc.edu.mx
+#+TITLE: Cálculo Multivariable
+#+Author: Luis Eduardo Galindo Amaya
+#+email: egalindo54@uabc.edu.mx
 
 #+LATEX_COMPILER: pdflatex
 #+LATEX_CLASS: article
@@ -13,7 +13,7 @@
 #+LANGUAGE: es
 #+DATE: \today
 
-#+OPTIONS: \n:nil num:2
+#+OPTIONS: \n:nil num:2 
 
 \pagebreak
 
@@ -627,6 +627,33 @@ Una derivada parcial (\partial) es igual que la derivada normal, solamente que s
 \frac{\partial f}{\partial y} &=  \frac{\partial}{\partial y} 2xy = \underbrace{2x}_{f_y}
 \end{aligned} \]
 
+** Derivadas Parciales De Orden Superior
+Cuando derivamos parcialmente obtenemos otra funcion, que igualmente podemos derivar respecto a otra variable, por ejemplo si tenemos la funcion \(f(x,y)=x^2y^3\) podemos derivarla respecto a 'x' o 'y':
+
+\[
+\frac{\partial}{\partial x} x^2y^3 = 2xy^3
+\]
+
+\[
+\frac{\partial}{\partial y} x^2y^3 = 3xy^2
+\]
+
+Ahora si tambien deseamos conocer la segunda derivada tambien podemos derivar con respecto a ambas variables[fn:representacion]:
+
+\[
+\left( \frac{\partial^2}{\partial x^2} \right) x^2y^3 = 2y^3
+\]
+
+\[
+\left( \frac{\partial^2}{\partial xy} \right) x^2y^3 = 6xy^2
+\]
+
+[fn:representacion] Cuando trabajamos derivadas parciales es mas común usar la notación de sufijo para representar la derivada f_{xy} f_{xx}.
+
+*** Árbol De Derivadas Parciales
+#+attr_latex: :width 8cm
+[[file:img/arbol.svg]]
+
 ** Regla De La Cadena
 La regla de la cadena es una formula que nos permite obtener la derivada de funciones compuestas de dos funciones, esta es muy común de usarla en problemas de derivación básicos pero también se puede extender a problemas de múltiples variables:
 
@@ -851,7 +878,72 @@ el resultado que obtuvimos es, por decirlo de algún modo, la parametrizacion de
 
 [fn:vector_unitario] Podemos simplificar los calculos utilizando el vector unitario.
 
-\pagebreak
+* Integrales De Multiples Variables
+** Integrales Dobles
+Las integrales dobles son una manera de integrar sobre una región bidimensional. Entre otras cosas, nos permiten calcular el volumen bajo una superficie.\\
+
+Las integrales multiples se realzan exactamente igual que si solo tuviera una variable pero si al momento de integrar hay otra variable simplemente la tomamos como una constante, es muy importante tomar en cuenta el orden de las derivadas al final de la exprecion primero resolveremos la integral mas cercana a la funcion.
+
+\[
+\underbrace{ \int \overbrace{ \int f(x,y) \,dx }^\text{Primera Integral} \,dy}_\text{Segunda Integral}
+\]
+
+*** Ejemplo De Integral Doble
+Una integral doble definida, el resultado es el volumen sobre el area que va del cero al uno en el eje 'x' y 'y'.
+
+\[ \begin{aligned}
+& \int^1_0 \int^1_0 x+y \,dx \,dy \\
+& \int^1_0 \left( xy + \frac{1}{2} x^2\right) \biggr\rvert_{0}^{1} \,dy \\
+& \int^1_0 (1)y+\frac{1}{2}(1)^2 \,dy \\
+& \int^1_0 y+\frac{1}{2} \,dy \\
+& \left(y^2+\frac{1}{2}y \right) \biggr\rvert_{0}^{1} = \boxed{1u^3} \\
+\end{aligned} \]
+
+** Área De Inetgracion
+Integrar algunas funciones nos permiten determinar algunas de las caracteristicas del area, por ejemplo la si integramos '1' podemos determinar el area de la region de integración.
+
+*** Ejemplo de integración de un área
+Área de un rectangulo de 2 de altura y 5 de anchura.
+
+#+attr_latex: :width 4cm
+[[file:img/integracion-area.svg]]
+
+\[ \begin{aligned}
+& \int^2_0 \int^5_0 1 \,dx \,dy = \boxed{10u^2}
+\end{aligned} \]
+
+Podemos verificar que la integral es correcta calculando el area de un rectangulo:
+
+\[
+5 \times 2 = 10 u^2
+\]
+
+** Funciones En Los Limites
+Algunas veces tenemos funciones que son dependientes de otras, resolverlas no es un problema ya que la integral definida nos permite utiliar valores variables. Es imprtante ordenar correctamente cual variable vamos a integrar primero, la interal definida es la ultima que integraremos:
+
+\[
+f(x) > f(x,y) > f(x,y,z)
+\]
+
+*** Integral Con Una Funcion Dependiente De X
+
+#+attr_latex: :width 4cm
+[[file:img/funciones-limites-integral.svg]]
+
+\[ \begin{aligned}
+& \int_0^5 \int_0^x 1 \,dy \,dx = \boxed{12.5 u^2} \\
+\end{aligned} \]
+
+aqui tenemos una integral donde 'y' es igual a 'x' y 'x' va del 0 hasta el 5, entonces la primera integral sera la integral de 'y'.
+
+*** Integral Con Una Funcion Dependiente De Y
+
+\[ \begin{aligned}
+& \int_0^2 \int_0^{y^2} 1 \,dx \,dy = \boxed{\frac{8}{3} u^2} \\
+\end{aligned} \]
+
+** Integral Circular
+
 * Páginas De Consulta Y Recursos Útiles
 ** Calculadoras
 - Calculadora De Cartesianas A Cilíndricas, https://tinyurl.com/y2ljx8fp
