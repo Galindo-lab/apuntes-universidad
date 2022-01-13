@@ -882,14 +882,14 @@ el resultado que obtuvimos es, por decirlo de algún modo, la parametrizacion de
 ** Integrales Dobles
 Las integrales dobles son una manera de integrar sobre una región bidimensional. Entre otras cosas, nos permiten calcular el volumen bajo una superficie.\\
 
-Las integrales multiples se realzan exactamente igual que si solo tuviera una variable pero si al momento de integrar hay otra variable simplemente la tomamos como una constante, es muy importante tomar en cuenta el orden de las derivadas al final de la exprecion primero resolveremos la integral mas cercana a la funcion.
+Las integrales múltiples se realzan exactamente igual que si solo tuviera una variable, pero si al momento de integrar hay otra variable simplemente la tomamos como una constante, es muy importante tomar en cuenta el orden de las derivadas al final de la expresión primero resolveremos la integral más cercana a la función.
 
 \[
 \underbrace{ \int \overbrace{ \int f(x,y) \,dy }^\text{Primera Integral} \,dx}_\text{Segunda Integral}
 \]
 
 *** Ejemplo De Integral Doble
-Una integral doble definida, el resultado es el volumen sobre el area que va del cero al uno en el eje 'x' y 'y'.
+Una integral doble definida, el resultado es el volumen sobre el área que va del cero al uno en el eje 'x' y 'y'.
 
 \[ \begin{aligned}
 & \int^1_0 \int^1_0 x+y \,dx \,dy \\
@@ -899,11 +899,11 @@ Una integral doble definida, el resultado es el volumen sobre el area que va del
 & \left(y^2+\frac{1}{2}y \right) \biggr\rvert_{0}^{1} = \boxed{1u^3} \\
 \end{aligned} \]
 
-** Área De Inetgracion Rectangular
-Integrar algunas funciones nos permiten determinar algunas de las caracteristicas del area, por ejemplo la si integramos '1' podemos determinar el area de la region de integración.
+** Área De Integración Rectangular
+Integrar algunas funciones nos permiten determinar algunas de las características del rango de integración, por ejemplo la si integramos '1' podemos determinar el área de la región de integración.
 
 *** Ejemplo de integración de un área
-Área de un rectangulo de 2 de altura y 5 de anchura.
+Área de un rectángulo de 2 de altura y 5 de anchura.
 
 #+attr_latex: :width 4cm
 [[file:img/integracion-area.svg]]
@@ -912,30 +912,29 @@ Integrar algunas funciones nos permiten determinar algunas de las caracteristica
 & \int^2_0 \int^5_0 1 \,dx \,dy = \boxed{10u^2}
 \end{aligned} \]
 
-Podemos verificar que la integral es correcta calculando el area de un rectangulo:
+Podemos verificar que la integral es correcta calculando el área de un rectángulo:
 
 \[
 5 \times 2 = 10 u^2
 \]
 
 ** Integrales Triples
-Las itegrales triples son iguales a las integrales dobles pero añadimos una variable extra 'z', y al ser el triple nos sirve para calcular volumenes en regiones el espacio.
+Las integrales triples son iguales a las integrales dobles, pero añadimos una variable extra 'z', y al ser el triple nos sirve para calcular volúmenes en regiones el espacio.
 
-** Volumen De Integracion Rectangular
-Si recorremos cada derivada ya podemos imaginar cual es la aplicacion de la integral triple, intgracion en un volumen, el procedimiento es exactamente igual que las derivadas dobles. 
+** Volumen De Integración Rectangular
+Si recorremos cada derivada ya podemos imaginar cuál es la aplicación de la integral triple, integración en un volumen, el procedimiento es exactamente igual que las derivadas dobles. 
 
 \[
 \int \int \int 1~\,dz \,dy \,dx 
 \]
-
 ** Variables En Los Limites
-Algunas veces tenemos funciones que son dependientes de otras, resolverlas no es un problema ya que la integral definida nos permite utiliar valores variables. Es imprtante ordenar correctamente cual variable vamos a integrar primero, la interal definida es la ultima que integraremos:
+Algunas veces tenemos funciones que son dependientes de otras, resolverlas no es un problema, ya que la integral definida nos permite utilizar valores variables. Es importante ordenar correctamente cuál variable vamos a integrar primero, la integral definida es la última que integraremos:
 
 \[
 f(x) > f(x,y) > f(x,y,z)
 \]
 
-*** Integral Con Una Funcion Dependiente De X
+*** Integral Con Una Función Dependiente De X
 
 #+attr_latex: :width 4cm
 [[file:img/funciones-limites-integral.svg]]
@@ -948,30 +947,29 @@ f(x) > f(x,y) > f(x,y,z)
 \int_0^5 x \,dx = \boxed{12.5 u^2}
 \]
 
-aqui tenemos una integral donde 'y' es igual a 'x' y 'x' va del 0 hasta el 5, entonces la primera integral sera la integral de 'y'.
+Aquí tenemos una integral donde 'y' es igual a 'x' y 'x' va del 0 hasta el 5, entonces la primera integral será la integral de 'y'.
 
-*** Integral Con Una Funcion Dependiente De Y
+*** Integral Con Una Función Dependiente De Y
 
 \[ \begin{aligned}
 & \int_0^2 \int_0^{y^2} 1 \,dx \,dy = \boxed{\frac{8}{3} u^2} \\
 \end{aligned} \]
-
-** Integrales Polares y cilindricas
-Muchas veces el tema de integrales con otros sistemas de coordenadas es un poco de einteder intuitivamente, asi que primero me gustaria explicar por que son utiles ya que usualmente tendremos que identificar por nuestra cuenta cuando tenemos que usarlas y una vez entendidas sus propiedades es muy facil empearlas a aplicarlas.
+** Integrales Polares y cilíndricas
+Muchas veces el tema de integrales con otros sistemas de coordenadas es un poco de entender intuitivamente, así que primero me gustaría explicar por qué son útiles, ya que usualmente tendremos que identificar por nuestra cuenta cuando tenemos que usarlas y una vez entendidas sus propiedades es muy fácil emplearlas a aplicarlas.
  
 *** Simplificar funciones
-La primera cosa que nos facilitan las integrales circulares es reducir algunas expreciones, sobre todo las que estan relacionadas con los circulos, por ejemplo:
+La primera cosa que nos facilitan las integrales circulares es reducir algunas expresiones, sobre todo las que están relacionadas con los círculos, por ejemplo:
 
 \[
 \int_0^1 \int_0^1 \sqrt{x^2+y^2} \,\,dy\,dx
 \]
 
-la funcion que estamos integrando tiene como grafica un circulo, integrar esta funcion seria bastante complicado en coordenadas rectangulares pero si revisamos las sustituciones podremos notar rapidamente que podemos sustitur \(x^2+y^2\) por 'r':
+la función que estamos integrando tiene como grafica un círculo, integrar esta función sería bastante complicado en coordenadas rectangulares, pero si revisamos las sustituciones podremos notar rápidamente que podemos sustituir \(x^2+y^2\) por 'r':
 
 
 #+ATTR_LATEX: :environment longtable :align |p{2.5cm}|p{2.5cm}|p{2.5cm}|
 |---+---------------+-------------------+----------------------|
-|   | Rectangulares | Polares           | Esfericas            |
+|   | Rectangulares | Polares           | Esféricas            |
 | / | <>            | <>                | <>                   |
 |   |               |                   | <20>                 |
 |---+---------------+-------------------+----------------------|
@@ -986,21 +984,21 @@ la funcion que estamos integrando tiene como grafica un circulo, integrar esta f
 |   |               |                   |                      |
 |---+---------------+-------------------+----------------------|
 
-ahora que tenemos la funcion en polares tenemos que multiplicar por la variable de radio:
+ahora que tenemos la función en polares tenemos que multiplicar por la variable de radio:
 
 \[
 \int_0^{2\pi} \int_0^1 \sqrt{r^2} \cdot r \,\,dr\,d\theta
 \]
 
-ahora la integral resultante es muy sencilla de resolver, no aplica para todas las funciones pero es ejemplo muy sencillo.
+Ahora la integral resultante es muy sencilla de resolver, no aplica para todas las funciones, pero es ejemplo muy sencillo.
 
 *** Rango
-Las funciones rectangulares tienen cuentan con tres componentes para representar los ejes coordenados 'x', 'y' y 'z' ,  las coordenadas polares tambien tienen tres componentes '\theta', 'r' y 'z', 'z' es igual para ambas:
+Las funciones rectangulares tienen cuentan con tres componentes para representar los ejes coordenados 'x', 'y' y 'z' ,  las coordenadas polares también tienen tres componentes '\theta', 'r' y 'z', 'z' es igual para ambas:
 
-- \theta es el ángulo la eje 'x'.
+- \theta es el ángulo el eje 'x'.
 - r es el radio o distancia de un punto al centro.
 
-el valor que tiene propiedades más interesantes es sin duda \theta ya que al ser en grados podemos saber que su valor va del '0' hasta '2\pi', y para limitar el area de integracion solo basta con conocer el cuadrante de nuestro interes.
+El valor que tiene propiedades más interesantes es sin duda \theta, ya que al ser en grados podemos saber que su valor va del '0' hasta '2\pi', y para limitar el área de integración solo basta con conocer el cuadrante de nuestro interés.
 
 *** Ejemplo de integral en coordenadas polares
 
@@ -1024,13 +1022,13 @@ el valor que tiene propiedades más interesantes es sin duda \theta ya que al se
 \,d\theta = \boxed{\frac{119\pi}{4} u^2}
 \]
 
-** Volumen en integrales Cilindricas
+** Volumen en integrales Cilíndricas
 
 \[
 \int_0^{2\pi} \int^5_0 \int_0^8 r ~ \,dz \,dr \,d\theta
 \]
 
-Ya conocemos como integrar multiples variables, en este caso mejor me limitare a dar una interpretacion de la integral.
+Ya conocemos como integrar múltiples variables, en este caso mejor me limitaré a dar una interpretación de la integral.
 
 \[
 \int_0^{2\pi} \int^5_0 
@@ -1038,7 +1036,7 @@ Ya conocemos como integrar multiples variables, en este caso mejor me limitare a
 \,dr \,d\theta
 \]
 
-Anteriormente calculamos el volumen de integracion de una integral rectangular para esto usamos la funcion \(f(x,y,z) = 1\) podemos entender esta funcion como 'medir el volumen de integracion en segmentos de 1 \times 1 \times 1', bien entonces si estamos midiendo nuestro espacio en angulos en forma de radianes vamos a 'medir' el volumen de integracion 'radian a radian'
+Anteriormente, calculamos el volumen de integración de una integral rectangular para esto usamos la función \(f(x,y,z) = 1\) podemos entender esta función como 'medir el volumen de integración en segmentos de 1 \times 1 \times 1', bien entonces si estamos midiendo nuestro espacio en ángulos en forma de radianes vamos a 'medir' el volumen de integración 'radián a radián'.
 
 ** TODO Integracion Esferica
 ** TODO Integrales en linea
