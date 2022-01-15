@@ -1,6 +1,7 @@
-#+TITLE: Cálculo Multivariable
+
+#+TITLE:  Cálculo Multivariable
 #+Author: Luis Eduardo Galindo Amaya
-#+email: egalindo54@uabc.edu.mx
+#+email:  egalindo54@uabc.edu.mx
 
 #+LATEX_COMPILER: pdflatex
 #+LATEX_CLASS: article
@@ -618,6 +619,12 @@ Ahora para el _valor mínimo_ no hay mucho misterio, la función es raíz y en l
 |   |                         |                      |
 |---+-------------------------+----------------------|
 
+** TODO Plano Entre Tres Puntos
+** TODO Angulos Entre Planos
+** TODO Distancia De Un Punto A Una Recta
+** TODO Distancia De Un Punto A Un Plano
+** TODO Distancia De Una Recta A Otra Recta
+** TODO Distancia Entre Dos Rectras No Paralelas (Oblicuas)
 * Derivadas Multivariables
 ** Derivadas Parciales
 Una derivada parcial (\partial) es igual que la derivada normal, solamente que si tiene otra variable diferente la tomaremos como si fuera una constante, esta operación se puede realizar para cada variable ejemplo \(f(x,y)=2xy\) tiene dos derivadas parciales: 
@@ -878,6 +885,12 @@ el resultado que obtuvimos es, por decirlo de algún modo, la parametrizacion de
 
 [fn:vector_unitario] Podemos simplificar los calculos utilizando el vector unitario.
 
+** TODO Movimiento de una particula (Velocidad, Rapidez, Aceleracion)
+*** TODO Velocidad
+*** TODO Rapidez
+*** TODO Aceleracion
+*** TODO Sobreaceleracion
+
 * Integrales De Multiples Variables O Iteradas 
 ** Integrales Dobles
 Las integrales dobles son una manera de integrar sobre una región bidimensional. Entre otras cosas, nos permiten calcular el volumen bajo una superficie.\\
@@ -955,6 +968,12 @@ Aquí tenemos una integral donde 'y' es igual a 'x' y 'x' va del 0 hasta el 5, e
 & \int_0^2 \int_0^{y^2} 1 \,dx \,dy = \boxed{\frac{8}{3} u^2} \\
 \end{aligned} \]
 ** Integrales Polares y cilíndricas
+*Importante:* Al cambiar la integral de rectangular a Polar es necesario multiplicar la función por el radio, esto se tiene que hacer siempre que integramos en coordenadas polares.
+
+\[
+\iiint f(r,\theta,z)~\underline{~r~}~\,dV 
+\]
+
 Muchas veces el tema de integrales con otros sistemas de coordenadas es un poco de entender intuitivamente, así que primero me gustaría explicar por qué son útiles, ya que usualmente tendremos que identificar por nuestra cuenta cuando tenemos que usarlas y una vez entendidas sus propiedades es muy fácil emplearlas a aplicarlas.
  
 *** Simplificar funciones
@@ -1038,11 +1057,105 @@ Ya conocemos como integrar múltiples variables, en este caso mejor me limitaré
 
 Anteriormente, calculamos el volumen de integración de una integral rectangular para esto usamos la función \(f(x,y,z) = 1\) podemos entender esta función como 'medir el volumen de integración en segmentos de 1 \times 1 \times 1', bien entonces si estamos midiendo nuestro espacio en ángulos en forma de radianes vamos a 'medir' el volumen de integración 'radián a radián'.
 
-** TODO Integracion Esferica
-** TODO Integrales en linea
+** Integracion Esferica
+*Importante:* Al cambiar la integral de rectangular a Esferica es necesario multiplicar la función por \(\rho^2 \sen(\phi)\), esto se tiene que hacer siempre que integramos en coordenadas esfericas.
 
-* TODO Resumen de integrales multiples
+\[
+\iiint f(\rho,\theta,\varphi)~\underline{~\rho^2\sen(\varphi)~}~\,dV
+\]
 
+Otro sistema que podemos utilizar para calcular integrales es el sistema de coordenadas esfericas, que tiene como ventaja que cuenta con dos angulos
+
+- \( \rho \) es la longitud radial. 
+- \theta es el angulo entre los ejes 'x' y 'y'.
+- \varphi es el angulo que se forma con el eje 'z'.
+
+#+ATTR_LATEX: :environment longtable :align |p{2.5cm}|p{2.5cm}|p{2.5cm}|
+|---+---------------+-------------------+----------------------|
+|   | Rectangulares | Polares           | Esféricas            |
+| / | <>            | <>                | <>                   |
+|   |               |                   | <20>                 |
+|---+---------------+-------------------+----------------------|
+|   |               |                   |                      |
+|   | x             | \(r\cos(\theta)\) | \(\rho\sen(\varphi)\cos(\theta)\) |
+|   | y             | \(r\sen(\theta)\) | \(\rho\sen(\varphi)\cos(\theta)\) |
+|   | z             | \(z\)             | \(\rho\cos(\varphi)\) |
+|   | x^2 + y^2     | \(r^2\)           | ---                  |
+|   | y / x         | \(\tan(\theta)\)  | \( \tan(\theta)  \)  |
+|   | ---           | \(r\)             | \(\rho\sen(\varphi)\) |
+|   | ---           | \(\theta\)        | \(\theta\)           |
+|   |               |                   |                      |
+|---+---------------+-------------------+----------------------|
+
+** Momentos y Centros De Masa
+El centro de masas de un sistema discreto o continuo es el punto geométrico que dinámicamente se comporta como si en él estuviera aplicada la resultante de las fuerzas externas al sistema.
+
+*** Volumen O Masa De La Figura
+
+\[
+  m = \iint_D \rho(x,y) \,dA
+\]
+
+*** Primeros Momentos De Inercia
+
+\[ \begin{aligned}
+  M_x = \iint_D y~\rho(x,y) \,dA && 
+  ~ &&
+  M_y = \iint_D x~\rho(x,y) \,dA \\
+\end{aligned} \]
+
+*** Centros de masa
+
+\[ \begin{aligned}
+  \bar{x} = \frac{M_y}{m} = \frac{1}{m} \iint_D y~\rho(x,y) \,dA &&
+  ~ &&
+  \bar{y} = \frac{M_x}{m} = \frac{1}{m} \iint_D x~\rho(x,y) \,dA \\
+\end{aligned} \]
+
+*** Segundos Momentos De Inercia
+
+\[ \begin{aligned}
+  I_x = \iint y^2 f(x,y) \,dA && ~ && I_y = \iint x^2 f(x,y) \,dA
+\end{aligned} \]
+
+*** Momento De Inercia Con Respecto Al Origen
+
+\[
+  I_0 = I_x + I_y = \iint_R (x^2 + y^2)~f(x,y) \,dA
+\]
+
+*** Radios De Giro
+
+\[ \begin{aligned}
+  \bar{\bar{x}} = \sqrt{ \frac{I_y}{m} } && ~ &&
+  \bar{\bar{y}} = \sqrt{ \frac{I_x}{m} } && ~ &&
+  \bar{\bar{r}} = \sqrt{ \frac{I_0}{m} } 
+\end{aligned} \]
+
+** Momentos Y Centros De Masa Con Integrales Triples
+*** Volumen O Masa
+
+\[
+  m = \iiint_R f(x,y,z) \,dV
+\]
+
+*** Momentosde Masa
+
+\[
+  M_{yz} = \iiint_R x~f(x,y,z) \,dV
+\]
+
+
+\[ \begin{aligned}
+  M_{xz} = \iiint_R y~f(x,y,z) \,dV && 
+  ~ &&
+  M_{xy} = \iiint_R z~f(x,y,z) \,dV \\
+\end{aligned} \]
+
+
+# ** TODO Integrales en linea
+# ** TODO Integral de una funcion vectorial
+\pagebreak
 * Páginas De Consulta Y Recursos Útiles
 ** Calculadoras
 - Calculadora De Cartesianas A Cilíndricas, https://tinyurl.com/y2ljx8fp
@@ -1062,9 +1175,10 @@ Anteriormente, calculamos el volumen de integración de una integral rectangular
 - Ecuación de la recta en el espacio, https://tinyurl.com/y68tsc7w
 - Parametrización, https://tinyurl.com/y24nhnmv
 - Rango de una función, https://tinyurl.com/yf9cnh26
-- [[http://www.mate.unlp.edu.ar/practicas/54_6_15102013091531.pdf][Regla de la cadena]]
-- [[https://www.ugr.es/~rpaya/documentos/Teleco/Fund-Mat02.pdf][Gradiente, Divergencia y Rotacional]]
-- [[https://www.superprof.es/apuntes/escolar/matematicas/analitica/recta/ecuacion-vectorial-de-la-recta.html#tema_que-es-la-ecuacion-vectorial-de-la-recta][Ecuación vectorial de la recta]]
+- Regla de la cadena, http://www.mate.unlp.edu.ar/practicas/54_6_15102013091531.pdf
+- Gradiente, Divergencia y Rotacional, https://www.ugr.es/~rpaya/documentos/Teleco/Fund-Mat02.pdf
+- Ecuación vectorial de la recta, https://www.superprof.es/apuntes/escolar/matematicas/analitica/recta/ecuacion-vectorial-de-la-recta.html#tema_que-es-la-ecuacion-vectorial-de-la-recta
+- Integrales esfericas, https://es.khanacademy.org/math/multivariable-calculus/integrating-multivariable-functions/x786f2022:polar-spherical-cylindrical-coordinates/a/triple-integrals-in-spherical-coordinates
 
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
