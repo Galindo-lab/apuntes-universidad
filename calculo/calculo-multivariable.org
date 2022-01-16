@@ -171,7 +171,7 @@ En física usualmente se representan los vectores de forma polar ó cilíndrica,
 ** Notación
 Para identificar que un valor es un vector hay dos formas principales añadiendo una flecha en la parte superior de la variable (\(\vec{A}\)) o resaltando el nombre de la variable con negritas. 
 
-** Vector Negativo 
+** Vector Negativo
 Si un vector tiene el símbolo negativo, todos sus componentes cambian su signo: 
 
 \[
@@ -184,7 +184,7 @@ _Esto si el vector está en coordenadas rectangulares_, cuando el vector está e
 \vec{A} = (3,75^\circ) && -\vec{A} = (3,-75^\circ) = (3,255^\circ)
 \end{aligned} \]
 
-** Suma y Resta de Vectores
+** Suma y Resta de Vectores Rectangulares
 Sumar vectores no representa más que la suma de independiente de cada uno de sus componentes.
 
 \[
@@ -204,7 +204,7 @@ Podemos multiplicar un vector por un valor fijo para aumentar su tamaño, simple
 k \cdot \vec{A} = (k\cdot\vec{A_x},k\cdot\vec{A_y},k\cdot\vec{A_z})
 \]
 
-** Módulo o magnitud del Vector
+** Módulo O Magnitud del Vector
 El módulo de un vector es la longitud entre el inicio y el final del vector, podemos calcular la distancia desde el origen con la fórmula de distancia:
 
 \[
@@ -458,6 +458,7 @@ Es importante notar que el resultado son dos ecuaciones, una para cada eje. El v
 #+attr_latex: :width 4cm
 [[file:img/parametrizacion-2.svg]]
 
+** TODO Función De Onda
 ** Curvas Planas Más Comunes
 #+ATTR_LATEX: :environment longtable :align |c|c|c|c|
 |---+------------+------------+------------+------------|
@@ -619,6 +620,9 @@ Ahora para el _valor mínimo_ no hay mucho misterio, la función es raíz y en l
 |   |                         |                      |
 |---+-------------------------+----------------------|
 
+** TODO Maximos Y Minimos De Una Funcion 
+** TODO Multiplicadores de Lagrange. Máximos y Mínimos Restringidos
+** TODO Ecuación Del Plano Que Pasa Por Un Punto Y Es Perpendicular Otro Plano
 ** TODO Plano Entre Tres Puntos
 ** TODO Angulos Entre Planos
 ** TODO Distancia De Un Punto A Una Recta
@@ -885,13 +889,7 @@ el resultado que obtuvimos es, por decirlo de algún modo, la parametrizacion de
 
 [fn:vector_unitario] Podemos simplificar los calculos utilizando el vector unitario.
 
-** TODO Movimiento de una particula (Velocidad, Rapidez, Aceleracion)
-*** TODO Velocidad
-*** TODO Rapidez
-*** TODO Aceleracion
-*** TODO Sobreaceleracion
-
-* Integrales De Multiples Variables O Iteradas 
+* Integrales De Multiples Variables O Iteradas
 ** Integrales Dobles
 Las integrales dobles son una manera de integrar sobre una región bidimensional. Entre otras cosas, nos permiten calcular el volumen bajo una superficie.\\
 
@@ -940,6 +938,7 @@ Si recorremos cada derivada ya podemos imaginar cuál es la aplicación de la in
 \[
 \int \int \int 1~\,dz \,dy \,dx 
 \]
+
 ** Variables En Los Limites
 Algunas veces tenemos funciones que son dependientes de otras, resolverlas no es un problema, ya que la integral definida nos permite utilizar valores variables. Es importante ordenar correctamente cuál variable vamos a integrar primero, la integral definida es la última que integraremos:
 
@@ -1055,7 +1054,7 @@ Ya conocemos como integrar múltiples variables, en este caso mejor me limitaré
 \,dr \,d\theta
 \]
 
-Anteriormente, calculamos el volumen de integración de una integral rectangular para esto usamos la función \(f(x,y,z) = 1\) podemos entender esta función como 'medir el volumen de integración en segmentos de 1 \times 1 \times 1', bien entonces si estamos midiendo nuestro espacio en ángulos en forma de radianes vamos a 'medir' el volumen de integración 'radián a radián'.
+Anteriormente, calculamos el volumen de integración de una integral rectangular para esto utilizamos la función \(f(x,y,z) = 1\) podemos entender esta función como 'medir el volumen de integración en segmentos de 1 \times 1 \times 1', bien entonces si estamos midiendo nuestro espacio en ángulos en forma de radianes vamos a 'medir' el volumen de integración 'radián a radián'.
 
 ** Integracion Esferica
 *Importante:* Al cambiar la integral de rectangular a Esferica es necesario multiplicar la función por \(\rho^2 \sen(\phi)\), esto se tiene que hacer siempre que integramos en coordenadas esfericas.
@@ -1064,7 +1063,7 @@ Anteriormente, calculamos el volumen de integración de una integral rectangular
 \iiint f(\rho,\theta,\varphi)~\underline{~\rho^2\sen(\varphi)~}~\,dV
 \]
 
-Otro sistema que podemos utilizar para calcular integrales es el sistema de coordenadas esfericas, que tiene como ventaja que cuenta con dos angulos
+Otro sistema que podemos utilizar para calcular integrales es el sistema de coordenadas esféricas, que tiene como ventaja que cuenta con dos ángulos
 
 - \( \rho \) es la longitud radial. 
 - \theta es el angulo entre los ejes 'x' y 'y'.
@@ -1155,7 +1154,79 @@ El centro de masas de un sistema discreto o continuo es el punto geométrico que
 
 # ** TODO Integrales en linea
 # ** TODO Integral de una funcion vectorial
+
+* Funciones Vectoriales
+** TODO Aplicaciones de funciones vectoriales
+** TODO Graficar Una Funcion Vectorial
+** Movimiento De Una Particula (Velocidad, Rapidez, Aceleracion)
+Una de las aplicaciones mas conocidas de las derivadas es describir los componentes de su movimiento, en calculo multivariable no es muy diferente, es posible describir el movimento de una particula en R^3 simplememnte conociendo las funciones de su movimiento:
+
+|---+------------------+----------------------|
+|   | Componente       | Descripción          |
+| / | <>               | <>                   |
+|   |                  | <20>                 |
+|---+------------------+----------------------|
+|   |                  |                      |
+|   | Velocidad        | Es la derivada de la posicion \(v = \frac{d\bold{r}}{dt}\). |
+|   | Rapidez          | Es el valor absoluto de la Velocidad \(\vert v\vert\). |
+|   | Aceleracion      | Es la segunda derivada de la velocidad \(a=\frac{d^2\bold{r}}{dt^2}\). |
+|   | Sobreaceleracion | La tercera derivada de la velocidad \(J = \frac{d^3\bold{r}}{dt^3}\). |
+|   | Direccion        | Del movimiento en el tiempo es el vector unitario \(\hat{r}\). |
+|   |                  |                      |
+|---+------------------+----------------------|
+
+*** Ejemplo De Movimento De Una Particula
+Calcular Velocidad, Rapidez, Aceleracion y Sobreaceleracion de r(t):
+
+\[
+r(t) = \begin{pmatrix}
+  40t^2 + 8t \\
+  2cos(3t) \\
+  2sen(3t) \\
+\end{pmatrix}
+\]
+
+**** Velocidad 
+
+\[
+r'(t) = \begin{pmatrix}
+  80t+8 \\
+  -6sen(3t) \\
+  6cos(3t) \\
+\end{pmatrix}
+\]
+
+**** Rapidez
+
+\[ \begin{aligned}
+\vertr'(t)\vert &= \sqrt{
+  (80t+8)^2 + (-6sen(3t))^2 + (6cos(3t))^2
+} \\
+&= \sqrt{1600t^2+1280t+100}
+\end{aligned} \]
+
+**** Aceleracion
+
+\[
+r''(t) = \begin{pmatrix}
+  80 \\
+  -18cos(3t) \\
+  -18sen(3t) \\
+\end{pmatrix}
+\]
+
+**** Sobreaceleración
+
+\[
+r'''(t) = \begin{pmatrix}
+  0 \\
+  54sin(3t) \\
+  -54cos(3t) \\
+\end{pmatrix}
+\]
+
 \pagebreak
+
 * Páginas De Consulta Y Recursos Útiles
 ** Calculadoras
 - Calculadora De Cartesianas A Cilíndricas, https://tinyurl.com/y2ljx8fp
@@ -1179,6 +1250,7 @@ El centro de masas de un sistema discreto o continuo es el punto geométrico que
 - Gradiente, Divergencia y Rotacional, https://www.ugr.es/~rpaya/documentos/Teleco/Fund-Mat02.pdf
 - Ecuación vectorial de la recta, https://www.superprof.es/apuntes/escolar/matematicas/analitica/recta/ecuacion-vectorial-de-la-recta.html#tema_que-es-la-ecuacion-vectorial-de-la-recta
 - Integrales esfericas, https://es.khanacademy.org/math/multivariable-calculus/integrating-multivariable-functions/x786f2022:polar-spherical-cylindrical-coordinates/a/triple-integrals-in-spherical-coordinates
+- Funciones vectoriales de una variable real, https://sites.google.com/site/calvectorial123/home/unidad-3-funciones-vectoriales-de-una-variable-real
 
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
