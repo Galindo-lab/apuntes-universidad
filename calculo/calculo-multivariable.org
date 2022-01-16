@@ -576,6 +576,47 @@ Ahora para el _valor mínimo_ no hay mucho misterio, la función es raíz y en l
 
 [fn:cuadrados] Al ser cuadrados los valores que obtenemos siempre son positivos.
 
+** Plano Entre Tres Puntos
+Anteriormente parametrizamos una funcion gracias a que conociamos dos puntos que tertenecian a la funcion, en R^3 es posible aplicar este mismo metodo pero ahora son necesarios tres punto.
+
+\[ 
+Det \begin{pmatrix}
+   x-a_x   & y-a_y   & z-a_z   \\
+   b_x-a_x & b_y-a_y & b_z-a_z \\
+   c_x-a_x & c_y-a_y & c_z-a_z \\
+\end{pmatrix}
+\]
+
+*** Ejemplo De Plano Entre Tres Puntos
+Enontrar el plano entre los puntos \(A(3,2,1)\), \(B(-4,-1,1)\) y \(C(-5,-3,-1)\).
+
+\[ Det \begin{pmatrix}
+    x-3 &  y-2 & z-1  \\
+   -4-3 & -1-2 & 1-1  \\
+   -5-3 & -3-2 & -1-1 \\
+\end{pmatrix} = Det \begin{pmatrix}
+    x-3 &  y-2 & z-1  \\
+     -7 &   -3 &   0  \\
+     -8 &   -5 &  -2  \\
+\end{pmatrix} \]
+
+*Determinate*
+
+\[ \begin{aligned}
+  & (x-3)(-3\cdot(-2) - (0)\cdot-5) + \\
+  & (y-2)(-7\cdot(-2) - (0)\cdot-8) + \\
+  & (z-1)(-7\cdot(-5) - (-3)\cdot-8) = 0 
+\end{aligned} \]
+
+
+\[
+  (6)(x-3) + (-14)(y-2) + 11(z-1) = 0
+\]
+
+\[
+  \boxed{6x - 14y + 11 - 1 = 0} 
+\]
+
 ** Planos Más Comunes
 #+ATTR_LATEX: :environment longtable :align |p{6cm}|p{5.2cm}|
 |---+-------------------------+----------------------|
@@ -620,10 +661,10 @@ Ahora para el _valor mínimo_ no hay mucho misterio, la función es raíz y en l
 |   |                         |                      |
 |---+-------------------------+----------------------|
 
+
 ** TODO Maximos Y Minimos De Una Funcion 
 ** TODO Multiplicadores de Lagrange. Máximos y Mínimos Restringidos
 ** TODO Ecuación Del Plano Que Pasa Por Un Punto Y Es Perpendicular Otro Plano
-** TODO Plano Entre Tres Puntos
 ** TODO Angulos Entre Planos
 ** TODO Distancia De Un Punto A Una Recta
 ** TODO Distancia De Un Punto A Un Plano
