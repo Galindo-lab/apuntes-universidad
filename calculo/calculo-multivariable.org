@@ -459,6 +459,26 @@ Es importante notar que el resultado son dos ecuaciones, una para cada eje. El v
 [[file:img/parametrizacion-2.svg]]
 
 ** TODO Función De Onda
+** Distancia De Un Punto A Una Recta En El Plano
+
+La distancia de un punto a una recta es la longitud de un segmento que, partiendo del punto del plano, sea perpendicular a la recta. Para que la longitud de ese segmento sea la mínima, el segmento y la recta deben de ser perpendiculares.
+
+#+attr_latex: :width 4cm
+[[file:img/distacia-punto-recta-plano.svg]]
+
+\[
+d = \frac{|Ax_1+By_2+C|}{\sqrt{A^2+B^2}}
+\]
+
+*** Ejemplo De La Distancia
+Calcular la distacia entre la funcion de \(\frac{-12}{5}x+-4=0\) y el punto \(M:(2,1)\):
+
+\[ \begin{aligned}
+& \frac{|-12/5 \cdot 2+1 \cdot 1+(-4)|}{\sqrt{(-12/5)^2+1^2}} \\
+& \frac{|-24/5 + 1-4|}{\sqrt{144/25+1}} \\
+& \frac{39/5}{\sqrt{169/25}} = \boxed{3}\
+\end{aligned} \]
+
 ** Curvas Planas Más Comunes
 #+ATTR_LATEX: :environment longtable :align |c|c|c|c|
 |---+------------+------------+------------+------------|
@@ -661,12 +681,11 @@ Enontrar el plano entre los puntos \(A(3,2,1)\), \(B(-4,-1,1)\) y \(C(-5,-3,-1)\
 |   |                         |                      |
 |---+-------------------------+----------------------|
 
-
 ** TODO Maximos Y Minimos De Una Funcion 
 ** TODO Multiplicadores de Lagrange. Máximos y Mínimos Restringidos
 ** TODO Ecuación Del Plano Que Pasa Por Un Punto Y Es Perpendicular Otro Plano
 ** TODO Angulos Entre Planos
-** TODO Distancia De Un Punto A Una Recta
+** TODO Distancia De Un Punto A Una Recta En El Espacio
 ** TODO Distancia De Un Punto A Un Plano
 ** TODO Distancia De Una Recta A Otra Recta
 ** TODO Distancia Entre Dos Rectras No Paralelas (Oblicuas)
@@ -1292,6 +1311,7 @@ r'''(t) = \begin{pmatrix}
 - Ecuación vectorial de la recta, https://www.superprof.es/apuntes/escolar/matematicas/analitica/recta/ecuacion-vectorial-de-la-recta.html#tema_que-es-la-ecuacion-vectorial-de-la-recta
 - Integrales esfericas, https://es.khanacademy.org/math/multivariable-calculus/integrating-multivariable-functions/x786f2022:polar-spherical-cylindrical-coordinates/a/triple-integrals-in-spherical-coordinates
 - Funciones vectoriales de una variable real, https://sites.google.com/site/calvectorial123/home/unidad-3-funciones-vectoriales-de-una-variable-real
+- Ecuación del plano que pasa por tres puntos, https://www.aulafacil.com/cursos/matematicas/planos-en-el-espacio/ecuacion-del-plano-que-pasa-por-tres-puntos-l10895
 
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
