@@ -683,7 +683,44 @@ Enontrar el plano entre los puntos \(A(3,2,1)\), \(B(-4,-1,1)\) y \(C(-5,-3,-1)\
 ** TODO Maximos Y Minimos De Una Funcion 
 ** TODO Multiplicadores de Lagrange. Máximos y Mínimos Restringidos
 ** TODO Ecuación Del Plano Que Pasa Por Un Punto Y Es Perpendicular Otro Plano
-** TODO Angulos Entre Planos
+** Ángulos Entre Planos
+Encontrar el angulo entre dos planos es una tarea bastante trivial que se puede resolver con una simple formula:
+
+\[
+\cos \alpha = \frac{|\vec{A}\cdot \vec{B}|}{|\vec{A}| \cdot |\vec{B}|}
+\] 
+
+*** Ejemplo de Ángulo Entre Planos
+Calcular el angulo entre los planos A y B:
+
+\[ \begin{aligned}
+A &: 2x-y+z-1=0 \\
+B &: x+z+3=0\\
+\end{aligned} \]
+
+Separamos la ecuacion en sus partes y calculamos los componentes: 
+
+\[ \begin{aligned}
+  {}|\vec{A}\cdot \vec{B}| &= |2 \cdot 1 + (-1)\cdot 0 + 1\cdot1| = 3 \\
+  {}|\ver{A}| &= |\sqrt{ 2^2+(-1)^2+1^2}| = \sqrt{6} \\
+  {}|\ver{B}| &= |\sqrt{ 1^2+0^2+1^2}| = \sqrt{2} 
+\end{aligned} \]
+
+sustituimos la formula:
+
+\[ \begin{aligned}
+\cos \alpha &= \frac{3}{\sqrt{6}~\sqrt{2}} \\
+            &= \frac{\sqrt{3}}{2}
+\end{aligned} \]
+
+y por ultimo despejamos el coseno:
+
+\[ \begin{aligned}
+\cos \alpha &= \frac{\sqrt{3}}{2} \\
+     \alpha &= \arccos \frac{\sqrt{3}}{2} \\
+            &= \boxed{30^\circ}
+\end{aligned} \]
+
 ** Distancia De Un Punto A Una Recta En El Espacio
 La distancia de un punto a una recta es la longitud del segmento perpendicular a la recta, trazada desde el punto.
 
