@@ -460,7 +460,6 @@ Es importante notar que el resultado son dos ecuaciones, una para cada eje. El v
 
 ** TODO Función De Onda
 ** Distancia De Un Punto A Una Recta En El Plano
-
 La distancia de un punto a una recta es la longitud de un segmento que, partiendo del punto del plano, sea perpendicular a la recta. Para que la longitud de ese segmento sea la mínima, el segmento y la recta deben de ser perpendiculares.
 
 #+attr_latex: :width 4cm
@@ -685,7 +684,79 @@ Enontrar el plano entre los puntos \(A(3,2,1)\), \(B(-4,-1,1)\) y \(C(-5,-3,-1)\
 ** TODO Multiplicadores de Lagrange. Máximos y Mínimos Restringidos
 ** TODO Ecuación Del Plano Que Pasa Por Un Punto Y Es Perpendicular Otro Plano
 ** TODO Angulos Entre Planos
-** TODO Distancia De Un Punto A Una Recta En El Espacio
+** Distancia De Un Punto A Una Recta En El Espacio
+La distancia de un punto a una recta es la longitud del segmento perpendicular a la recta, trazada desde el punto.
+
+\[
+d = \dfrac{|\overrightarrow{QP}\times\vec{v}|}{|\vec{v}|}
+= \dfrac{|(\vec{Q}-\vec{P})\times\vec{v}|}{|\vec{v}|}
+\]
+
+*** Ejercicio de Distancia
+La formula se compone de tres partes principales, el vector director de la recta ( \(\vec{v}\) ), un punto que esta en la recta (Q) y el punto respecto al cual podemos medir (P). \\
+Podemos extraer estos valores facilmente de las representaciones de la recta:
+
+*** Ecuación Canónica
+
+\[
+\pi(t): \frac{x-7}{2} = \frac{y-4}{3} = \frac{z-3}{1}
+\]
+
+\[
+  \vec{Q} = (7,4,3)  ~~~~  \vec{v} = (2,3,1) 
+\]
+
+-----
+
+*** Ecuación Parimétrica
+
+\[
+\pi(t): \left\{ \begin{matrix}
+  x= & 2t + 7 \\
+  y= & 3t + 4 \\
+  z= & t + 3 \\
+\end{matrix}
+\]
+
+\[
+  \vec{Q} = (7,4,3)  ~~~~  \vec{v} = (2,3,1) 
+\]
+
+-----
+
+*** Aplicación De La Fórmula
+Encontrar la distancia Aplicando la formula:
+
+\[ \begin{aligned}
+  P=(1,5,3) && \vec{Q} = (7,4,3) && \vec{v} = (2,3,1) 
+\end{aligned} \]
+
+Con los vectores obtenidos calculamos los valores faltantes:
+
+\[
+  \overrightarrow{QP} = (7-1,4-5,3-3) = (6,-1,0)
+\]
+
+\[ 
+\overrightarrow{QP}\times\vec{v} = \begin{pmatrix}
+  i &  j & k \\
+  6 & -1 & 0 \\
+  2 &  3 & 1 \\
+\end{pmatrix}
+\]
+
+\[ \begin{align}
+i(-1\cdot1 - 0\cdot 3) + j(6\cdot 1 - 0 \cdot 2) + k(6\cdot 3 - (-1)\cdot2) & \\
+i(-1) + j(-6) + k(20) &= (-1,-6,20)
+\end{align} \]
+
+y sustituimos en la formula:
+
+\[ \begin{align}
+d &= \frac{ \sqrt{ (-1)^2 + (-6)^2 + 20^2 } }{ \sqrt{2^2 + 3^2 + 1^2} } \\
+  &= \sqrt{ \frac{437}{14} } = \boxed{5.5869...} \\
+\end{align} \]
+
 ** TODO Distancia De Un Punto A Un Plano
 ** TODO Distancia De Una Recta A Otra Recta
 ** TODO Distancia Entre Dos Rectras No Paralelas (Oblicuas)
@@ -1312,6 +1383,7 @@ r'''(t) = \begin{pmatrix}
 - Integrales esfericas, https://es.khanacademy.org/math/multivariable-calculus/integrating-multivariable-functions/x786f2022:polar-spherical-cylindrical-coordinates/a/triple-integrals-in-spherical-coordinates
 - Funciones vectoriales de una variable real, https://sites.google.com/site/calvectorial123/home/unidad-3-funciones-vectoriales-de-una-variable-real
 - Ecuación del plano que pasa por tres puntos, https://www.aulafacil.com/cursos/matematicas/planos-en-el-espacio/ecuacion-del-plano-que-pasa-por-tres-puntos-l10895
+- Distancia de un punto a una recta, https://www.universoformulas.com/matematicas/geometria/distancia-punto-recta/
 
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
