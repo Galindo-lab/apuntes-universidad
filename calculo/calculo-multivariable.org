@@ -466,16 +466,16 @@ La distancia de un punto a una recta es la longitud de un segmento que, partiend
 [[file:img/distacia-punto-recta-plano.svg]]
 
 \[
-d = \frac{|Ax_1+By_2+C|}{\sqrt{A^2+B^2}}
+d = \frac{|\pi(P)|}{|\vec{\pi}|} = \frac{|A \cdot x_0+B \cdot y_0+C|}{\sqrt{A^2+B^2}}
 \]
 
 *** Ejemplo De La Distancia
-Calcular la distacia entre la funcion de \(\frac{-12}{5}x+-4=0\) y el punto \(M:(2,1)\):
+Calcular la distacia entre la funcion de \(\frac{-12}{5}x+y-4=0\) y el punto \(M:(2,1)\):
 
 \[ \begin{aligned}
-& \frac{|-12/5 \cdot 2+1 \cdot 1+(-4)|}{\sqrt{(-12/5)^2+1^2}} \\
+& \frac{|(-12/5)(2) + 1(1) - 4|}{\sqrt{(-12/5)^2+1^2}} \\
 & \frac{|-24/5 + 1-4|}{\sqrt{144/25+1}} \\
-& \frac{39/5}{\sqrt{169/25}} = \boxed{3}\
+& \frac{39/5}{13/5} = \boxed{3} \\
 \end{aligned} \]
 
 ** Curvas Planas Más Comunes
@@ -595,47 +595,6 @@ Ahora para el _valor mínimo_ no hay mucho misterio, la función es raíz y en l
 
 [fn:cuadrados] Al ser cuadrados los valores que obtenemos siempre son positivos.
 
-** Plano Entre Tres Puntos
-Anteriormente parametrizamos una funcion gracias a que conociamos dos puntos que tertenecian a la funcion, en R^3 es posible aplicar este mismo metodo pero ahora son necesarios tres punto.
-
-\[ 
-Det \begin{pmatrix}
-   x-a_x   & y-a_y   & z-a_z   \\
-   b_x-a_x & b_y-a_y & b_z-a_z \\
-   c_x-a_x & c_y-a_y & c_z-a_z \\
-\end{pmatrix}
-\]
-
-*** Ejemplo De Plano Entre Tres Puntos
-Enontrar el plano entre los puntos \(A(3,2,1)\), \(B(-4,-1,1)\) y \(C(-5,-3,-1)\).
-
-\[ Det \begin{pmatrix}
-    x-3 &  y-2 & z-1  \\
-   -4-3 & -1-2 & 1-1  \\
-   -5-3 & -3-2 & -1-1 \\
-\end{pmatrix} = Det \begin{pmatrix}
-    x-3 &  y-2 & z-1  \\
-     -7 &   -3 &   0  \\
-     -8 &   -5 &  -2  \\
-\end{pmatrix} \]
-
-*Determinate*
-
-\[ \begin{aligned}
-  & (x-3)(-3\cdot(-2) - (0)\cdot-5) + \\
-  & (y-2)(-7\cdot(-2) - (0)\cdot-8) + \\
-  & (z-1)(-7\cdot(-5) - (-3)\cdot-8) = 0 
-\end{aligned} \]
-
-
-\[
-  (6)(x-3) + (-14)(y-2) + 11(z-1) = 0
-\]
-
-\[
-  \boxed{6x - 14y + 11 - 1 = 0} 
-\]
-
 ** Planos Más Comunes
 #+ATTR_LATEX: :environment longtable :align |p{6cm}|p{5.2cm}|
 |---+-------------------------+----------------------|
@@ -682,6 +641,46 @@ Enontrar el plano entre los puntos \(A(3,2,1)\), \(B(-4,-1,1)\) y \(C(-5,-3,-1)\
 
 ** TODO Maximos Y Minimos De Una Funcion 
 ** TODO Multiplicadores de Lagrange. Máximos y Mínimos Restringidos
+** Plano Entre Tres Puntos
+Anteriormente parametrizamos una funcion gracias a que conociamos dos puntos que tertenecian a la funcion, en R^3 es posible aplicar este mismo metodo pero ahora son necesarios tres punto.
+
+\[ 
+Det \begin{pmatrix}
+   x-a_x   & y-a_y   & z-a_z   \\
+   b_x-a_x & b_y-a_y & b_z-a_z \\
+   c_x-a_x & c_y-a_y & c_z-a_z \\
+\end{pmatrix}
+\]
+
+*** Ejemplo De Plano Entre Tres Puntos
+Enontrar el plano entre los puntos \(A(3,2,1)\), \(B(-4,-1,1)\) y \(C(-5,-3,-1)\).
+
+\[ Det \begin{pmatrix}
+    x-3 &  y-2 & z-1  \\
+   -4-3 & -1-2 & 1-1  \\
+   -5-3 & -3-2 & -1-1 \\
+\end{pmatrix} = Det \begin{pmatrix}
+    x-3 &  y-2 & z-1  \\
+     -7 &   -3 &   0  \\
+     -8 &   -5 &  -2  \\
+\end{pmatrix} \]
+
+*Determinate*
+
+\[ \begin{aligned}
+  & (x-3)(-3\cdot(-2) - (0)\cdot-5) + \\
+  & (y-2)(-7\cdot(-2) - (0)\cdot-8) + \\
+  & (z-1)(-7\cdot(-5) - (-3)\cdot-8) = 0 
+\end{aligned} \]
+
+
+\[
+  (6)(x-3) + (-14)(y-2) + 11(z-1) = 0
+\]
+
+\[
+  \boxed{6x - 14y + 11 - 1 = 0} 
+\]
 ** TODO Ecuación Del Plano Que Pasa Por Un Punto Y Es Perpendicular Otro Plano
 ** Ángulos Entre Planos
 Encontrar el angulo entre dos planos es una tarea bastante trivial que se puede resolver con una simple formula:
@@ -794,9 +793,164 @@ d &= \frac{ \sqrt{ (-1)^2 + (-6)^2 + 20^2 } }{ \sqrt{2^2 + 3^2 + 1^2} } \\
   &= \sqrt{ \frac{437}{14} } = \boxed{5.5869...} \\
 \end{align} \]
 
-** TODO Distancia De Un Punto A Un Plano
-** TODO Distancia De Una Recta A Otra Recta
-** TODO Distancia Entre Dos Rectras No Paralelas (Oblicuas)
+** Distancia De Un Punto A Un Plano
+Podemos extender la formula de 'Distancia De Un Punto A Una Recta En El Plano' a R^3 facilemente:
+
+\[
+d = \frac{|\pi(P)|}{|\vec{\pi}|} = \frac{|A \cdot x_0 + B \cdot y_0 + C \cdot z_0 + D |}
+{\sqrt{A^2+B^2+C^2}}
+\]
+
+*** Ejemplo De Distancia
+Encontrar la distancia entre:
+
+\[ \begin{aligned}
+P(1,3,-2) && \pi: 2x+5y - 4z + 7 = 0\\
+\end{aligned} \]
+
+\[ \begin{aligned}
+d &= \frac{|2(1) + 5(3) - 4(-2) + 7|}{\sqrt{2^2+5^2+(-4)^2}} \\ 
+  &= \frac{|2+15+8+7|}{\sqrt{4+25+16}} \\
+  &= \boxed{\frac{32}{\sqrt{45}}}
+\end{aligned} \]
+
+** Distancia Entre Rectas 
+La primera cosa que debemos tomar en cuenta cuando deseamos encontrar la distancia es que tipo de funcion estamos midiendo, hay cuatro tipos principales de rectas
+
+*** Concidentes
+Si dos rectas se encunetrar una encima de la otra entonces se dicen que las rectas son 'Concidentes' y su distancia minima es 0.
+
+*** Secantes
+Cuando Las rectas se tocan en algun punto comun con otra recta, son lo poesto a las paralelas, al igual que las concidentes su distancia minima es 0.
+
+*** Distancia Entre Rectas Paralelas
+Las rectas paralelas no se tocan en ningun punto, para dentificar si una recta es paralela a otra tenemos que obtener el vector de direccion si con iguales y no se encuentran la una sobre la otra podemos decir que son paralelas.
+
+\[
+d = \dfrac{|\overrightarrow{QP}\times\vec{v}|}{|\vec{v}|}
+= \dfrac{|(\vec{Q}-\vec{P})\times\vec{v}|}{|\vec{v}|}
+\]
+
+*Ejemplo de distancia con Rectas paralelas*\\
+Encontrar la distancia entre las rectas:
+
+\[ \begin{aligned}
+\pi:    \frac{x-4}{1} = \frac{y+2}{3} = \frac{z}{1} && 
+\alpha: \frac{x+2}{1} = \frac{y-1}{3} = \frac{z+4}{1} \\
+\end{aligned} \]
+
+Identificamos el vector de direccion, de ambas rectas:
+
+\[ \begin{aligned}
+\vec{\pi}: (1,3,1) && \vec{\alpha}: (1,3,1)\\
+\end{aligned} \]
+
+Por lo tanto:
+
+\[
+\vec{v} = (1,3,1)
+\]
+
+Como son iguales podemos determinar que ambas funciones son paralelas entonces vamos a aplicar la fomula de distancia al punto, el valor de los puntos se obtumo igualando a '0' el denominador de la divicion en la ecuacion:
+
+\[ \begin{aligned}
+\vec{P} = (1,-2,0) && Q= (-2,1,-4)
+\end{aligned} \]
+
+obtenemos los componentes:
+
+\[
+\overrightarrow{QP} = (-2-1,1-(-2),-4-0) = (-3,3,-4)
+\]
+
+\[
+{}|\vec{v}| = \sqrt{1^2+3^2+1^2} = \sqrt{11}
+\]
+
+Formamos la matriz para el producto punto:
+
+\[ \begin{aligned}
+(\vec{Q}-\vec{P})\times\vec{v} &= \begin{pmatrix}
+   i & j &  k \\
+  -3 & 3 & -4 \\
+   1 & 3 &  1 \\
+\end{pmatrix} \\ &= (15,-1,-12)
+\end{aligned} \]
+
+y calculamos el valor absoluto:
+
+\[ \begin{aligned}
+{}|(\vec{Q}-\vec{P})\times\vec{v}| &= \sqrt{15^2+(-1)^2+(-12)^2} \\ 
+                                   &= \sqrt{370}
+\end{aligned} \]
+
+Ahora sustituimos:
+
+\[
+\frac{|\overrightarrow{QP}\times\vec{v}|}{|\vec{v}|} =  \boxed{\sqrt{\frac{370}{11}} u}
+\]
+
+*** Distancia Entre Rectras No Paralelas (Oblicuas)
+Por ultimo Las Rectas Oblicuas, La formula es parecida pero ahora tenemos dos vectores por lo que debemos relacionarlos con el producto punto:
+
+\[
+d 
+= \frac{| (\vec{B}-\vec{A}) \cdot(\vec{u}\times\vec{v})|}{|\vec{u}\times\vec{v}|}
+= \frac{|\overrightarrow{AB}\cdot(\vec{u}\times\vec{v})|}{|\vec{u}\times\vec{v}|}
+\]
+
+*Ejmplo De Ditancia Con Rectas Oblicuas*\\
+Encontrar la distancia entre las rectas:
+
+\[ \begin{aligned}
+r: \frac{x-1}{2} = \frac{y-2}{4} = \frac{z+2}{-1} &&
+s: \frac{x-3}{1} = \frac{y+1}{3} = \frac{z-1}{-2} \\
+\end{aligned} \]
+
+Primero tenemos que extraer los vectores de direccion y sus puntos:
+
+\[ \begin{aligned} r: \begin{cases}
+  \vec{u} = (2,4,-1) \\
+  A(1,2,-2) \\ 
+\end{cases} && s: \begin{cases}
+  \vec{v} = (1,3,-2) \\
+  B(3,-1,1) \\ 
+\end{cases}
+\end{aligned} \]
+
+
+\[
+\overrightarrow{AB} = \vec{B} - \vec{A} = (3-1,-2-1,1-2) = (2,-3,3)
+\]
+
+Aplicamos el punto mixto:
+
+\[ \begin{aligned}
+{}|\overrightarrow{AB}\cdot(\vec{u}\times\vec{v})| &= det \begin{pmatrix} 
+  2 &  4 & -1 \\
+  1 &  3 & -2 \\
+  2 & -3 &  3 \\
+\end{pmatrix} \\ &= |-13| \\
+&= 13
+\end{aligned} \]
+
+Producto cruz: 
+
+\[ \begin{aligned}
+{}|\vec{u}\times\vec{v}| &= |-5i + 3j + 2k| \\
+ &= \sqrt{(-5)^2+(3)^2+(2)^2} \\
+ &= \sqrt{25 + 9 + 4} \\
+ &= \sqrt{38}
+\end{aligned}\]
+
+y sustituimos:
+
+\[ \begin{aligned}
+ d &= \frac{|\overrightarrow{AB}\cdot(\vec{u}\times\vec{v})|}{|\vec{u}\times\vec{v}|}\\
+   &= \frac{13}{\sqrt{38}} \\
+   &= \boxed{2.11u}
+\end{aligned} \]
+
 * Derivadas Multivariables
 ** Derivadas Parciales
 Una derivada parcial (\partial) es igual que la derivada normal, solamente que si tiene otra variable diferente la tomaremos como si fuera una constante, esta operación se puede realizar para cada variable ejemplo \(f(x,y)=2xy\) tiene dos derivadas parciales: 
@@ -1401,6 +1555,8 @@ r'''(t) = \begin{pmatrix}
 - Calculadora De Cilíndricas A Esféricas, https://tinyurl.com/y5dzufw9
 - Máximos y mínimos, https://tinyurl.com/y3lku7y8
 - Rango de una función, https://tinyurl.com/yf9cnh26
+- Ángulo entre planos, http://es.onlinemschool.com/math/assistance/cartesian_coordinate/plane_angl/
+- Ángulo entre planos, http://es.onlinemschool.com/math/assistance/cartesian_coordinate/plane_angl/
 
 ** Páginas
 - Coordenadas Cilíndricas A Cartesianas, https://tinyurl.com/y3s49cv3
@@ -1421,7 +1577,9 @@ r'''(t) = \begin{pmatrix}
 - Funciones vectoriales de una variable real, https://sites.google.com/site/calvectorial123/home/unidad-3-funciones-vectoriales-de-una-variable-real
 - Ecuación del plano que pasa por tres puntos, https://www.aulafacil.com/cursos/matematicas/planos-en-el-espacio/ecuacion-del-plano-que-pasa-por-tres-puntos-l10895
 - Distancia de un punto a una recta, https://www.universoformulas.com/matematicas/geometria/distancia-punto-recta/
+- Ángulo de dos planos, https://www.superprof.es/apuntes/escolar/matematicas/analitica/distancias/angulo-de-dos-planos.html
 
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
 - [[https://www.youtube.com/watch?v=DFn9wUEBnbU&t=134s][Regla de la cadena]]
+- DISTANCIA entre DOS RECTAS PARALELAS, https://youtu.be/zu2-Hrn-qUK
