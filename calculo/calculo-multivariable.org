@@ -1319,7 +1319,7 @@ Aquí tenemos una integral donde 'y' es igual a 'x' y 'x' va del 0 hasta el 5, e
 \[ \begin{aligned}
 & \int_0^2 \int_0^{y^2} 1 \,dx \,dy = \boxed{\frac{8}{3} u^2} \\
 \end{aligned} \]
-** Integrales Polares y cilíndricas
+** Integrales Polares Y Cilíndricas
 *Importante:* Al cambiar la integral de rectangular a Polar es necesario multiplicar la función por el radio, esto se tiene que hacer siempre que integramos en coordenadas polares.
 
 \[
@@ -1393,7 +1393,7 @@ El valor que tiene propiedades más interesantes es sin duda \theta, ya que al s
 \,d\theta = \boxed{\frac{119\pi}{4} u^2}
 \]
 
-** Volumen en integrales Cilíndricas
+** Volumen En Integrales Cilíndricas
 
 \[
 \int_0^{2\pi} \int^5_0 \int_0^8 r ~ \,dz \,dr \,d\theta
@@ -1505,12 +1505,51 @@ El centro de masas de un sistema discreto o continuo es el punto geométrico que
 \end{aligned} \]
 
 
+** Teorema De Fubini Para Integrales Dobles
+\[
+\iint_B f(x,y) \,dA = 
+\int_a^b \int^d_c f(x,y) \,dy \,dx = 
+\int_c^d \int^b_a f(x,y) \,dx \,dy
+\]
+
+** Teorema De Fubini Para Integrales Triples
+\[
+\iiint_B f(x,y,z) \,dV = \int_r^s \int^d_c \int^b_a f(x,y,z) \,dx \,dy \,dz
+\]
+
+\[
+\iiint_B f(x,y,z) \,dV = \int_a^b \int^s_r \int^d_c f(x,y,z) \,dy \,dz \,dx
+\]
+
 # ** TODO Integrales en linea
 # ** TODO Integral de una funcion vectorial
 
 * Funciones Vectoriales
-** TODO Aplicaciones de funciones vectoriales
-** TODO Graficar Una Funcion Vectorial
+** Aplicaciones de funciones vectoriales
+Una función vectorial es una funcion que trnaforma un numero real a un vector \(F: \mathbb{R} \to \mathbb{R}^3\), definida como \(F(t) = (x(t),y(t),z(t))\), las funciones vectoriales son muy utiles para describir movimientos en el espacio o para parametrizar algunas figuras.
+
+** Graficar Una Funcion Vectorial
+Una funcion vectorial graficada se suele ver como un conjunto de flechas que apuntan en alguna direccion, por lo general es muy complicado graficar la funcion de manera continua por lo que normalente se evalua a intervalos regulares. 
+
+#+attr_latex: :width 7cm
+#+caption: Ejemplo de una función vectorial.
+[[file:img/funcion-vectorial.svg]]
+
+#+BEGIN_SRC python :exports none
+import numpy as np
+import matplotlib.pyplot as plt
+
+x,y = np.meshgrid(np.linspace(-5,5,10),np.linspace(-5,5,10))
+
+u = -y/np.sqrt(x**2 + y**2)
+v = x/np.sqrt(x**2 + y**2)
+
+plt.quiver(x,y,u,v)
+#plt.show()
+
+plt.savefig("test.svg", format="svg")
+#+END_SRC
+
 ** Movimiento De Una Particula (Velocidad, Rapidez, Aceleracion)
 Una de las aplicaciones mas conocidas de las derivadas es describir los componentes de su movimiento, en calculo multivariable no es muy diferente, es posible describir el movimento de una particula en R^3 simplememnte conociendo las funciones de su movimiento:
 
@@ -1539,7 +1578,7 @@ r(t) = \begin{pmatrix}
 \end{pmatrix}
 \]
 
-**** Velocidad 
+*Velocidad* \\
 
 \[
 r'(t) = \begin{pmatrix}
@@ -1549,7 +1588,7 @@ r'(t) = \begin{pmatrix}
 \end{pmatrix}
 \]
 
-**** Rapidez
+*Rapidez* \\
 
 \[ \begin{aligned}
 \vertr'(t)\vert &= \sqrt{
@@ -1558,7 +1597,7 @@ r'(t) = \begin{pmatrix}
 &= \sqrt{1600t^2+1280t+100}
 \end{aligned} \]
 
-**** Aceleracion
+*Aceleracion* \\
 
 \[
 r''(t) = \begin{pmatrix}
@@ -1568,7 +1607,7 @@ r''(t) = \begin{pmatrix}
 \end{pmatrix}
 \]
 
-**** Sobreaceleración
+*Sobreaceleración* \\
 
 \[
 r'''(t) = \begin{pmatrix}
@@ -1611,7 +1650,9 @@ r'''(t) = \begin{pmatrix}
 - Ángulo de dos planos, https://www.superprof.es/apuntes/escolar/matematicas/analitica/distancias/angulo-de-dos-planos.html
 - Distancia entre dos rectas en el espacio, https://www.geometriaanalitica.info/distancia-entre-dos-rectas-en-el-espacio-en-r3/
 
+- Teorema de Fubini, https://sites.google.com/site/grupomineriacvv/semana-6/3-cambio-en-el-orden-de-integracion-de-integrales-triples
 ** Videos
 - Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
 - [[https://www.youtube.com/watch?v=DFn9wUEBnbU&t=134s][Regla de la cadena]]
 - DISTANCIA entre DOS RECTAS PARALELAS, https://youtu.be/zu2-Hrn-qUK
+- Ecuación del plano que pasa por un punto y es perpendicular otro plano, https://youtu.be/KrPYYW_504U
