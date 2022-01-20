@@ -1,6 +1,6 @@
 
 #+TITLE:  Cálculo Multivariable
-#+Author: Luis Eduardo Galindo Amaya
+#+Author: Luis E. Galindo A.
 #+email:  egalindo54@uabc.edu.mx
 
 #+LATEX_COMPILER: pdflatex
@@ -9,14 +9,49 @@
 #+LATEX_HEADER: \usepackage[spanish]{babel}
 #+LATEX_HEADER: \usepackage{svg}
 
+# C-c C-e #
+
 #+DESCRIPTION:
 #+KEYWORDS: 
 #+LANGUAGE: es
 #+DATE: \today
 
-#+OPTIONS: \n:nil num:2 
+#+OPTIONS: \n:nil num:2 toc:nil title:nil
+# title:nil toc:nil  
 
-\pagebreak
+#+MACRO: pagebreak @@latex: \pagebreak@@ 
+#+MACRO: vfill @@latex: \vfill@@ 
+
+#+BEGIN_EXPORT latex
+\begin{titlepage}
+\centering
+{\bfseries\LARGE Universidad Autonoma \par de Baja California \par}
+\vspace{1cm}
+{\scshape\Large Ingeniería en computación \par}
+\vspace{2cm}
+{\scshape\Huge Cálculo Multivariable \par}
+\vspace{2cm}
+{\itshape\Large Ayudantias Cálculo \par}
+\vfill
+\begin{center}
+\includesvg[width=4cm]{img/eigen}
+\end{center}
+\vfill
+{\Large Autor: \par}
+{\Large Luis E. Galindo Amaya \par}
+\vfill
+{\Large \today \par}
+\end{titlepage}
+#+END_EXPORT
+
+
+#+TOC: headlines 2
+
+#+BEGIN_CENTER
+{{{vfill}}}
+https://galindosoft.neocities.org/eigen/
+{{{pagebreak}}}
+#+END_CENTER
 
 * Preámbulo
 Este es un trabajo en proceso, todavía no ha sido finalizado y todavía no ha sido revisado. Sí tienes alguna idea para alguna corrección puedes mandarme un correo a mi correo [[mailto:egalindo54@uabc.edu.mx][{{{email}}}]].
@@ -458,7 +493,6 @@ Es importante notar que el resultado son dos ecuaciones, una para cada eje. El v
 #+attr_latex: :width 4cm
 [[file:img/parametrizacion-2.svg]]
 
-** TODO Función De Onda
 ** Distancia De Un Punto A Una Recta En El Plano
 La distancia de un punto a una recta es la longitud de un segmento que, partiendo del punto del plano, sea perpendicular a la recta. Para que la longitud de ese segmento sea la mínima, el segmento y la recta deben de ser perpendiculares.
 
@@ -639,8 +673,106 @@ Ahora para el _valor mínimo_ no hay mucho misterio, la función es raíz y en l
 |   |                         |                      |
 |---+-------------------------+----------------------|
 
-** TODO Maximos Y Minimos De Una Funcion 
-** TODO Multiplicadores de Lagrange. Máximos y Mínimos Restringidos
+** Puntos Críticos De Una Función
+Para encontrar los puntos críticos de la función tendremos que calcular la derivada parcial de cada variable y resolverla como un sistema de ecuaciones:
+
+\[ f = 9-2x+4y-x^2-4y^2 \]
+
+\[ \begin{aligned}
+     f_x = -2-2x & & f_y = 4y-8y \\
+\end{aligned} \]
+
+\[ \begin{aligned}
+\boxed{x = \frac{2}{-2}} & & \boxed{ y = \frac{-4}{-8} }\\
+\end{aligned} \]
+
+** Clasificar Puntos Críticos (máximos, mínimos y sillas)
+Evaluamos los puntos críticos de la función en el discriminante, el valor que obtendremos será la variación de la función, entonces solo aplicamos la lógica para encontrar el tipo de punto que tenemos.
+
+\[ D =f_{xx}(a,b) f_{yy}(a,b) - \left[ f_{xy}(a,b)  \right]^2 \]
+
+|--------------------+---------------------|
+| Condiciones        | Significado         |
+|--------------------+---------------------|
+| \(D > 0;f_{xx}>0\) | Es un mínimo        |
+| \(D > 0;f_{xx}<0\) | Es un máximo        |
+| \(D < 0\)          | Es un punto silla   |
+| \(D = 0\)          | Intentar otro punto |
+|--------------------+---------------------|
+
+clasificar los puntos criticos en la función
+\[f = 9-2x+4y-x^2-4y^2 \]
+
+Sus derivadas parciales
+
+\[
+f_{xx} = -2 ~ ; ~ f_{yy} = -8 ~ ; ~ f_{xy} = 0
+\]
+
+puntos críticos
+\[ x=-1 ~ ; ~ y = \frac{1}{2} \]
+
+sustituimos los valores de la formula de el diferencial:
+
+\[ \begin{aligned}
+D = (-2)(-8) - [0]^2 = 16 \\
+\end{aligned} \]
+
+Entonces D es mayor a 0 y f_{xx} es menor a 0, por lo tanto el valor _es un maximo_.
+
+
+** Multiplicadores de Lagrange. Máximos y Mínimos Restringidos
+Los multiplicadores de lagrange nos permiten encontrar valores maximos y minimos de f(x,y) sujeta a una restriccion g(x,y,z) = k, suponiendo que \(\triangledown g \not = 0\) se encuentre en la superficie g(x,y,z) = k,
+
+\[
+\triangledown f(x_0,y_0,z_0) = \lambda \triangledown g (x_0, y_0, z_0)
+\]
+
+Determianr los extremos de la funcion \(f(x,y) = x^3 + 3xy^2\) restringida por la circunferencia \(g: x^2 + y^2 = 4\)
+
+\[
+\triangledown f = \begin{bmatrix}
+  3x^2 + 3y^2 \\
+  6xy  \\
+\end{bmatrix}
+\]
+
+\[
+\triangledown g = \begin{bmatrix}
+  2x \\
+  2y \\
+\end{bmatrix}
+\]
+
+\[ \begin{bmatrix}
+  3x^2  + 3y^2\\
+  6xy  \\
+\end{bmatrix} = \lambda \begin{bmatrix}
+  2x \\
+  2y \\
+\end{bmatrix} \]
+
+Para completar el sistema de ecuaciones usamos las restricciones como las ecuaciones que nos faltan, (en mas información esta el vídeo donde de explica este ejercicio).
+
+\[
+\begin{bmatrix}
+    3x^2- 2\lambda x = 0 \\
+    6xy - 2 \lambda y = 0 \\
+    x^2 + y^2 = 4 \\
+\end{bmatrix} = P\left(\pm \sqrt{2}, \pm \sqrt{2}\right)
+\]
+
+Por ultimo evaluamos los puntos en la función inicial
+
+\[ \begin{aligned}
+p_1 &: f\left( \sqrt{2}, \sqrt{2} \right) = 8 \sqrt{2} \\
+p_2 &: f\left( \sqrt{2}, -\sqrt{2} \right) = 8 \sqrt{2} \\
+p_3 &: f\left( -\sqrt{2}, \sqrt{2} \right) = -8 \sqrt{2} \\
+p_4 &: f\left( -\sqrt{2}, -\sqrt{2} \right) = -8 \sqrt{2} \\
+\end{aligned} \]
+
+Entonces podemos concluir que _p_1 y p_2 son máximos absolutos y p_3 y p_4 son mínimos absolutos_.
+
 ** Plano Entre Tres Puntos
 Anteriormente parametrizamos una funcion gracias a que conociamos dos puntos que tertenecian a la funcion, en R^3 es posible aplicar este mismo metodo pero ahora son necesarios tres punto.
 
@@ -1504,7 +1636,6 @@ El centro de masas de un sistema discreto o continuo es el punto geométrico que
   M_{xy} = \iiint_R z~f(x,y,z) \,dV \\
 \end{aligned} \]
 
-
 ** Teorema De Fubini Para Integrales Dobles
 \[
 \iint_B f(x,y) \,dA = 
@@ -1524,6 +1655,7 @@ El centro de masas de un sistema discreto o continuo es el punto geométrico que
 # ** TODO Integrales en linea
 # ** TODO Integral de una funcion vectorial
 
+{{{pagebreak}}}
 * Funciones Vectoriales
 ** Aplicaciones de funciones vectoriales
 Una función vectorial es una funcion que trnaforma un numero real a un vector \(F: \mathbb{R} \to \mathbb{R}^3\), definida como \(F(t) = (x(t),y(t),z(t))\), las funciones vectoriales son muy utiles para describir movimientos en el espacio o para parametrizar algunas figuras.
@@ -1619,14 +1751,14 @@ r'''(t) = \begin{pmatrix}
 
 \pagebreak
 
-* Páginas De Consulta Y Recursos Útiles
+* Recursos Útiles
 ** Calculadoras
 - Calculadora De Cartesianas A Cilíndricas, https://tinyurl.com/y2ljx8fp
 - Calculadora De Cilíndricas A Esféricas, https://tinyurl.com/y5dzufw9
-- Máximos y mínimos, https://tinyurl.com/y3lku7y8
-- Rango de una función, https://tinyurl.com/yf9cnh26
-- Ángulo entre planos, http://es.onlinemschool.com/math/assistance/cartesian_coordinate/plane_angl/
-- Ángulo entre planos, http://es.onlinemschool.com/math/assistance/cartesian_coordinate/plane_angl/
+- Máximos Y Mínimos, https://tinyurl.com/y3lku7y8
+- Rango De Una Función, https://tinyurl.com/yf9cnh26
+- Ángulo Entre Planos, https://tinyurl.com/ybraww5h
+- Ángulo Entre Planos, https://tinyurl.com/ybraww5h
 
 ** Páginas
 - Coordenadas Cilíndricas A Cartesianas, https://tinyurl.com/y3s49cv3
@@ -1636,23 +1768,23 @@ r'''(t) = \begin{pmatrix}
 - Producto Mixto, https://tinyurl.com/y5jzwdy2
 - Ángulos Directores, https://tinyurl.com/yxvvlh7f
 - Volúmenes Y Área, https://tinyurl.com/y5s4udhp
-- Representar superficies en tres dimensiones, https://tinyurl.com/y6owjzp
-- Ecuación de la recta en el espacio, https://tinyurl.com/y68tsc7w
+- Representar Superficies En Tres Dimensiones, https://tinyurl.com/y6owjzp
+- Ecuación De La Recta En El Espacio, https://tinyurl.com/y68tsc7w
 - Parametrización, https://tinyurl.com/y24nhnmv
-- Rango de una función, https://tinyurl.com/yf9cnh26
-- Regla de la cadena, http://www.mate.unlp.edu.ar/practicas/54_6_15102013091531.pdf
-- Gradiente, Divergencia y Rotacional, https://www.ugr.es/~rpaya/documentos/Teleco/Fund-Mat02.pdf
-- Ecuación vectorial de la recta, https://www.superprof.es/apuntes/escolar/matematicas/analitica/recta/ecuacion-vectorial-de-la-recta.html#tema_que-es-la-ecuacion-vectorial-de-la-recta
-- Integrales esfericas, https://es.khanacademy.org/math/multivariable-calculus/integrating-multivariable-functions/x786f2022:polar-spherical-cylindrical-coordinates/a/triple-integrals-in-spherical-coordinates
-- Funciones vectoriales de una variable real, https://sites.google.com/site/calvectorial123/home/unidad-3-funciones-vectoriales-de-una-variable-real
-- Ecuación del plano que pasa por tres puntos, https://www.aulafacil.com/cursos/matematicas/planos-en-el-espacio/ecuacion-del-plano-que-pasa-por-tres-puntos-l10895
-- Distancia de un punto a una recta, https://www.universoformulas.com/matematicas/geometria/distancia-punto-recta/
-- Ángulo de dos planos, https://www.superprof.es/apuntes/escolar/matematicas/analitica/distancias/angulo-de-dos-planos.html
-- Distancia entre dos rectas en el espacio, https://www.geometriaanalitica.info/distancia-entre-dos-rectas-en-el-espacio-en-r3/
+- Rango De Una Función, https://tinyurl.com/yf9cnh26
+- Regla De La Cadena, https://tinyurl.com/yb3ewrno
+- Gradiente, Divergencia Y Rotacional, https://tinyurl.com/yaz9vknn
+- Ecuación Vectorial De La Recta, https://tinyurl.com/y9fxz2su
+- Integrales Esféricas, https://tinyurl.com/y9buex8u
+- Funciones Vectoriales De Una Variable Real, https://tinyurl.com/y8osgges
+- Plano Que Pasa Por Tres Puntos, https://tinyurl.com/yazp3ay3
+- Distancia De Un Punto A Una Recta, https://tinyurl.com/y8a4l3yn
+- Ángulo De Dos Planos, https://tinyurl.com/y8skgoas
+- Distancia Entre Dos Rectas En El Espacio, https://tinyurl.com/yd7x7o2h
+- Teorema De Fubini, https://tinyurl.com/yc8dpltq
 
-- Teorema de Fubini, https://sites.google.com/site/grupomineriacvv/semana-6/3-cambio-en-el-orden-de-integracion-de-integrales-triples
 ** Videos
-- Producto Punto Por Zach Star, https://tinyurl.com/y2x8dj88
-- [[https://www.youtube.com/watch?v=DFn9wUEBnbU&t=134s][Regla de la cadena]]
-- DISTANCIA entre DOS RECTAS PARALELAS, https://youtu.be/zu2-Hrn-qUK
-- Ecuación del plano que pasa por un punto y es perpendicular otro plano, https://youtu.be/KrPYYW_504U
+- Producto Punto Por Zach Star, https://youtu.be/TBpDMLCC2uY
+- Regla De La Cadena, https://youtu.be/DFn9wUEBnbU
+- Distancia Entre Dos Rectas Paralelas, https://youtu.be/zu2-Hrn-qKU
+- Plano Perpendicular En Un Punto, https://youtu.be/KrPYYW_504U
