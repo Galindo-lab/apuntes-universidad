@@ -214,8 +214,8 @@ float((r,theta,z))
 
 \newpage
 
-* Modulo del Vector
-** Modulo 
+* Vectores
+** Modulo
 #+BEGIN_SRC 
 # Sustituye los valores por los de tu vector (x,y,z).
 
@@ -373,6 +373,61 @@ C = (-4,3,2)
 "Volumen paralelepípedo"
 float( 1/6 * dot(A,cross(B,C)))
 #+END_SRC
+* Ecuaciones De una O Mas Variables
+** Plano Entre Tres Puntos
+#+BEGIN_SRC 
+a = (3,2,1)
+b = (-4,-1,1)
+c = (-5,-3,-1)
+
+
+det(((x,y,z)-a,b-a,c-a))
+#+END_SRC
+
+** Plano Que Pasa Por Un Punto Y Es Perpendicular Otro
+#+BEGIN_SRC 
+p = (1,2,2)
+r = (-1,1,-1)
+
+
+q = cross(p,r)
+
+dot( q, (x,y,z) - p  ) 
+ "= 0"
+#+END_SRC
+
+** Ángulos Entre Planos
+#+BEGIN_SRC 
+A = (2,-1,1)
+B = (1,0,1)
+
+
+abs(dot(A,B))/(abs(A) * abs(B))
+
+"radianes: "
+float(arccos(last))
+#+END_SRC
+
+** Distancia De Un Punto A Un Plano
+#+BEGIN_SRC 
+# punto
+
+p = (1,3,-2)
+
+# Ax^2 + By + Cz + D = 0
+
+A = 2
+B = 5
+C = -4
+D = 7
+
+
+pi = (A,B,C)
+abs(dot(p,pi)+D)/abs(pi)
+float
+
+#+END_SRC
+
 * * Derivadas Multivariables
 ** Derivadas Parciales
 #+BEGIN_SRC 
@@ -457,4 +512,16 @@ d(last,t)
 eval(last,t,0)
 float
 #+END_SRC
+
+* Integrales De Multiples Variables O Iteradas
+** Integrales Dobles
+#+BEGIN_SRC 
+
+defint( x + y,    # funcion
+        x,0,1,    # primera integral, limite inferior, limite superior
+        y,0,1     # segunda integral, limite inferior, limite superior
+)
+
+#+END_SRC
+
 

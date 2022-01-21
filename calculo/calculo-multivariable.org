@@ -44,7 +44,6 @@
 \end{titlepage}
 #+END_EXPORT
 
-
 #+TOC: headlines 2
 
 #+BEGIN_CENTER
@@ -512,6 +511,7 @@ Calcular la distacia entre la funcion de \(\frac{-12}{5}x+y-4=0\) y el punto \(M
 & \frac{39/5}{13/5} = \boxed{3} \\
 \end{aligned} \]
 
+{{{pagebreak}}}
 ** Curvas Planas Más Comunes
 #+ATTR_LATEX: :environment longtable :align |c|c|c|c|
 |---+------------+------------+------------+------------|
@@ -542,6 +542,7 @@ Calcular la distacia entre la funcion de \(\frac{-12}{5}x+y-4=0\) y el punto \(M
 |   | (una hoja) |            |            |            |
 |   |            |            |            |            |
 |---+------------+------------+------------+------------|
+{{{pagebreak}}}
 
 * Ecuaciones De Dos O Mas Variables
 Anterior mente solo hemos trabajado con funciones de una sola variable, las cuales tiene una variable de entrada y otra de salida, las funciones multivariable son similares, pero ahora _toman dos números y retornan solo uno_. 
@@ -629,50 +630,6 @@ Ahora para el _valor mínimo_ no hay mucho misterio, la función es raíz y en l
 
 [fn:cuadrados] Al ser cuadrados los valores que obtenemos siempre son positivos.
 
-** Planos Más Comunes
-#+ATTR_LATEX: :environment longtable :align |p{6cm}|p{5.2cm}|
-|---+-------------------------+----------------------|
-|   | Nombre                  | Ecuación             |
-| / | <>                      | <>                   |
-|   |                         | <20>                 |
-|---+-------------------------+----------------------|
-|   |                         |                      |
-|   | Plano                   | \(ax+by+cz+d=0\)     |
-|   |                         |                      |
-|---+-------------------------+----------------------|
-|   |                         |                      |
-|   | Cilindro elíptico       | \(x^2+y^2=1\)        |
-|   |                         |                      |
-|---+-------------------------+----------------------|
-|   |                         |                      |
-|   | Cilindro hiperbólico    | \(x^2-y^2=1\)        |
-|   |                         |                      |
-|---+-------------------------+----------------------|
-|   |                         |                      |
-|   | Elipse                  | \(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1\) |
-|   |                         |                      |
-|---+-------------------------+----------------------|
-|   |                         |                      |
-|   | Paraboloide elíptico    | \(z=\frac{x^2}{a^2}+\frac{y^2}{b^2}\) |
-|   |                         |                      |
-|---+-------------------------+----------------------|
-|   |                         |                      |
-|   | Paraboloide hiperbólico | \(z=\frac{x^2}{a^2}-\frac{y^2}{b^2}\) |
-|   |                         |                      |
-|---+-------------------------+----------------------|
-|   |                         |                      |
-|   | Hipérbole de una hoja   | \( x^2 + y^2 - z^2 = 1 \) |
-|   |                         |                      |
-|---+-------------------------+----------------------|
-|   |                         |                      |
-|   | Hipérbole de dos hojas  | \( x^2 - y^2 - z^2 = 1 \) |
-|   |                         |                      |
-|---+-------------------------+----------------------|
-|   |                         |                      |
-|   | Cono                    | \( z^2 = x^2 + y^2 \) |
-|   |                         |                      |
-|---+-------------------------+----------------------|
-
 ** Puntos Críticos De Una Función
 Para encontrar los puntos críticos de la función tendremos que calcular la derivada parcial de cada variable y resolverla como un sistema de ecuaciones:
 
@@ -719,7 +676,6 @@ D = (-2)(-8) - [0]^2 = 16 \\
 \end{aligned} \]
 
 Entonces D es mayor a 0 y f_{xx} es menor a 0, por lo tanto el valor _es un maximo_.
-
 
 ** Multiplicadores de Lagrange. Máximos y Mínimos Restringidos
 Los multiplicadores de lagrange nos permiten encontrar valores maximos y minimos de f(x,y) sujeta a una restriccion g(x,y,z) = k, suponiendo que \(\triangledown g \not = 0\) se encuentre en la superficie g(x,y,z) = k,
@@ -813,13 +769,14 @@ Enontrar el plano entre los puntos \(A(3,2,1)\), \(B(-4,-1,1)\) y \(C(-5,-3,-1)\
 \[
   \boxed{6x - 14y + 11 - 1 = 0} 
 \]
+
 ** Plano Que Pasa Por Un Punto Y Es Perpendicular Otro
 Hallar la ecuación del plano que pasa por el punto P=(1,2,2) y es perpendicular al plano de \(r:x-y+z=1\)
 
 encontramos el producto cruz: 
 
 \[ \begin{aligned}
-\vc{r} \times P &= (-2-2)i + (1-2)j + (2+1)k \\
+\vec{r} \times \vec{P} &= (-2-2)i + (1-2)j + (2+1)k \\
                &=  -4i - j + 3k\\
 \end{aligned} \]
 
@@ -1113,6 +1070,53 @@ y sustituimos:
    &= \frac{13}{\sqrt{38}} \\
    &= \boxed{2.11u}
 \end{aligned} \]
+
+{{{pagebreak}}}
+
+** Planos Más Comunes
+#+ATTR_LATEX: :environment longtable :align |p{6cm}|p{5.2cm}|
+|---+-------------------------+----------------------|
+|   | Nombre                  | Ecuación             |
+| / | <>                      | <>                   |
+|   |                         | <20>                 |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Plano                   | \(ax+by+cz+d=0\)     |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Cilindro elíptico       | \(x^2+y^2=1\)        |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Cilindro hiperbólico    | \(x^2-y^2=1\)        |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Elipse                  | \(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1\) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Paraboloide elíptico    | \(z=\frac{x^2}{a^2}+\frac{y^2}{b^2}\) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Paraboloide hiperbólico | \(z=\frac{x^2}{a^2}-\frac{y^2}{b^2}\) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Hipérbole de una hoja   | \( x^2 + y^2 - z^2 = 1 \) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Hipérbole de dos hojas  | \( x^2 - y^2 - z^2 = 1 \) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+|   |                         |                      |
+|   | Cono                    | \( z^2 = x^2 + y^2 \) |
+|   |                         |                      |
+|---+-------------------------+----------------------|
+{{{pagebreak}}}
 
 * Derivadas Multivariables
 ** Derivadas Parciales
@@ -1723,7 +1727,7 @@ r'(t) = \begin{pmatrix}
 *Rapidez* \\
 
 \[ \begin{aligned}
-\vertr'(t)\vert &= \sqrt{
+{}| r'(t) | &= \sqrt{
   (80t+8)^2 + (-6sen(3t))^2 + (6cos(3t))^2
 } \\
 &= \sqrt{1600t^2+1280t+100}
