@@ -214,6 +214,16 @@ float((r,theta,z))
 
 \newpage
 
+
+
+
+
+
+
+
+
+
+
 * Vectores
 ** Modulo
 #+BEGIN_SRC 
@@ -278,6 +288,16 @@ C = (-4,3,2)
 dot(A,cross(B,C)))
 float
 #+END_SRC
+
+
+
+
+
+
+
+
+
+
 
 * Aplicaciones De Vectores
 ** Vector Unitario
@@ -373,6 +393,9 @@ C = (-4,3,2)
 "Volumen paralelepípedo"
 float( 1/6 * dot(A,cross(B,C)))
 #+END_SRC
+
+
+
 * Ecuaciones De una O Mas Variables
 ** Plano Entre Tres Puntos
 #+BEGIN_SRC 
@@ -428,7 +451,9 @@ float
 
 #+END_SRC
 
-* * Derivadas Multivariables
+
+
+* Derivadas Multivariables
 ** Derivadas Parciales
 #+BEGIN_SRC 
 # cambia f por tu funcion
@@ -512,6 +537,10 @@ d(last,t)
 eval(last,t,0)
 float
 #+END_SRC
+
+
+
+
 
 * Integrales De Multiples Variables O Iteradas
 ** Integrales Dobles
