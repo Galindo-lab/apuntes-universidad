@@ -1,0 +1,279 @@
+
+#+TITLE:    Ecuaciones Diferenciales
+#+SUBTITLE: Apuntes
+#+DATE:     [2021-08-19 jue]
+
+TODO list:
+- [ ] Propiedades de transformada de laplace
+
+#+OPTIONS: num:1  
+#+TOC: headlines 1
+
+* Definicion
+Una ecuacion diferencial, es una ecuacion donde la incognita es una funcion y que contiene una derivada de una o mas variables dependientes con respecto a dos o mas variables independientementes.
+
+* Variables dependientes e independientes 
+- Variable dependiente :: Es aquella cuyos valores dependen de los que tomen otra variable. Usualmente se suele representar como *y* en el eje de las ordenadas.
+
+- Variable independiente :: Un símbolo que representa una entrada de datos arbitraria se denomina variable independiente,
+
+#+BEGIN_DEMONSTRATION
+En esta ecuacion diferencial podemos saber cual es la variable independiente con solo mirar el denominador, en este caso \(x\), entonces como \(x\) es independiente \(y\) es la variable independiente[fn:nota-notacion].
+
+\[\frac{dy}{dx} = 0.2 \cdot x \cdot y\]
+
+#+END_DEMONSTRATION
+
+[[https://es.wikipedia.org/wiki/Variables_dependientes_e_independientes][Más informacion]]
+
+[fn:nota-notacion] recuerda que \( \frac{dy}{dx} = y' \).
+
+* Orden de una ecuacion
+Se dice que una ecuacion es del grado de su derivada mas alta[fn:nota-exp]
+
+#+BEGIN_DEMONSTRATION
+Ecuaciones de primer orden: 
+
+\[\frac{dy}{dx} = \frac{1}{2} xy \]
+
+\[(y')^2 + xy'-y = 0 \]
+
+#+END_DEMONSTRATION
+
+Mientras mas comillas tiene una derivada eso significa que es de mayor grado:
+
+#+BEGIN_DEMONSTRATION
+
+Ecuaciones de segundo orden:
+
+\[y'' + a(x)y' + b(x)y = f(x)  \]
+
+\[y'' + \frac{a(x)}{a_0(x)}) y' + \frac{b(y)}{a_0(x)}y = 0  \]
+
+#+END_DEMONSTRATION
+
+[fn:nota-exp] Ojo, el exponente en la ecuacion no afecta el grado de la derivada.
+
+* Campos de pendientes o direcciones
+Un campo de pendientes es un tipo de grafico que funciona como una solucion grafica para ecuaciones diferenciales de primer orden. \\
+Para dibujar un campo de pendientes solo tenemos que evaluar la funcion en cada punto, Sí el numero resultante es positivo dibujamos una linea en diagonal hacia abajo ⟍ pero sí la linea es negativa dibujamos una lina diagonal hacia arriba ⟋.
+
+[[https://youtu.be/xu_HLUShvws][Video]] | [[https://www.geogebra.org/m/R36YDrma][Graficador]]
+
+* Transformada de Laplace
+En matemáticas, la transformada de Laplace es una transformada integral que convierte una función de variable real 't' (normalmente el tiempo) a una función de variable compleja 's'. Tiene muchas aplicaciones en ciencia e ingeniería porque es una herramienta para resolver ecuaciones diferenciales. En particular, transforma ecuaciones diferenciales en ecuaciones algebraicas.
+
+Para resolver una transformada de laplace susituimos \(f(t)\) con nuestra funcion en base a t:
+
+\[ 
+L \{f(t)\} = \int_0^\infty e^{-s~t} f(t)~dt
+\] 
+
+[[https://es.wikipedia.org/wiki/Transformada_de_Laplace][Fuente]] | [[https://www.mediafire.com/file/p332e66d6vmdic8/laplace.pdf/file][Formulario]] | [[https://www.mediafire.com/file/8sdh1iioan8pafk/formulario-laplace-completo.pdf/file][formulario completo]]
+
+* Propiedades de laplace
+https://www.uv.mx/personal/aherrera/files/2014/04/18.-PROPIEDADES-DE-LA-TRANSFORMADA-DE-LAPLACE1.pdf
+
+* Aplicaciones de transformada de laplace
+Raramente te van a pedir que desarolloes las integrales para llegar a una transformada, por lo general simplemente usamos sus aplicaciones, las aplicaciones de tranformada de Laplace simplemente son sustituciones de funciones comunes, En el [[https://www.mediafire.com/file/p332e66d6vmdic8/laplace.pdf/file][formulario]] puedes encontrar la mayoria de sustituciones.
+
+#+BEGIN_DEMONSTRATION
+
+\[ \begin{aligned}
+                 f(t) &= 2t^4 \\
+\mathcal{L}\{ f(t) \} &= 2\mathcal{L}\{ t^4 \}\\
+                      &= 2 \frac{4!}{s^{4+1}}\\
+                      &= \frac{48}{s^{5}}
+\end{aligned} \]
+
+\[ 
+\boxed{\mathcal{L}\{ f(t) \} = \frac{24}{s^{5}}}
+\]
+#+END_DEMONSTRATION
+
+Como se ve en el ejemplo, simplemente tenemos que desarollar la exprecion y aplicar la [[https://www.mediafire.com/file/p332e66d6vmdic8/laplace.pdf/file][formula]] que se nos indica.
+
+* Tranformada de Derivadas de Laplace
+#+BEGIN_DEMONSTRATION
+
+\[
+\frac{dy}{dx} - 3y = e^{2t}; y(0) = 1
+\]
+
+Calculamos la tranformada de Laplace para cada uno de sus elementos y factorizamos[fn:laplace-y]:
+
+\[ \begin{aligned}
+\mathcal{L}\Big\{ \frac{dy}{dx} \Big\} - 3 \mathcal{L}\{y\} &= \mathcal{L}\big\{ e^{t2}\big\} \\
+                                          Sy(S) - 1 - 3y(S) &= \frac{1}{S-2}                  \\
+                                                  y(s)(s-3) &= \frac{1}{s-2} + 1              \\
+                                                  y(s)(s-3) &= \frac{s-1}{s-2}                \\
+                                                       y(s) &= \frac{s-1}{s-2}(s-3)           \\
+                                                       y(s) &= \frac{s-1}{(s-2)(s-3)}
+\end{aligned} \]
+
+Ahora calculamos la inversa de laplace de \(y(s)\), pero para eso tendremos que Resolvemos las fracciones parciales de nuestro resutado +Asumire que ya sabes resolver fracciones parciales así que ire directo al resultado+. 
+
+\[ \begin{aligned}
+\frac{s-1}{(s-2)(s-3)} & \Rightarrow + \\
+                       & = -\frac{1}{s-2} + \frac{2}{s-3}
+\end{aligned} \]
+
+ahora calculamos la inversa de la transformada de laplace:
+
+\[ \begin{aligned}
+\mathcal{L}^{-1}\Big\{ \frac{s-1}{(s-2)(s-3)} \Big\} &= -\mathcal{L}^{-1} \Big\{ \frac{1}{s-2} \Big\} + \mathcal{L}^{-1} \Big\{ \frac{2}{s-3} \Big\}
+\end{aligned} \]
+
+y el resultado final sería:
+
+\[
+\boxed{-e^{2t} + 2e^{3t}}
+\]
+
+
+
+#+END_DEMONSTRATION
+
+
+[fn:laplace-y] La tranformada de laplace de \( y \) es siempre \( y(s) \)
+
+
+# \[ \begin{aligned}
+# \mathcal{L} \{ f'(t) \} &= S \mathcal{L}\{ f \} - f(0) \\
+# \mathcal{L} \{ f''(t) \} &= S^2 \mathcal{L}\{ f \} - Sf(0) } - f'(0) \\
+# \mathcal{L} \{ f''(t) \} &= S^3 \mathcal{L}\{ f \} - S^2f(0) } - Sf'(0) - f''(0) \\
+# \end{aligned} \]
+
+* Ecuaciones diferenciales homogeneas
+1.Escribir la Ecuacion diferencial en forma:
+\[
+M(x,y) \,dx + N(x,y) \,dy = 0
+\]
+
+2.Comprobar que sea [[https://es.wikipedia.org/wiki/Ecuaci%C3%B3n_diferencial_homog%C3%A9nea][homogenea]], nota: \(\lambda^n\) tiene que ser igual en ambas:
+#+BEGIN_CENTER
+\(M(\lambda x,\lambda y) = \lambda^n M(x,y) \) y \(N(\lambda x,\lambda y) = \lambda^n N(x,y) \)
+#+END_CENTER
+
+3.Hacer el cambio \(y = ux\) y \(x = uy\).
+#+BEGIN_DEMONSTRATION
+para elegir la variable a sustituir recomiendo tomar en cuenta la derivada, por ejemplo si tomamos \(y = ux\) entonces la derivada sera \(dy = u\,dx + x\,dy \), la derivada tiene más términos por lo que es mas recomendable sustituir el termino menos complicado de la ecuación, ejemplo:
+
+\[
+(x-y) \,dx + x\,dy = 0
+\]
+
+En este caso es mas conveniente sustituir \(y\) ya que si hacemos la substitución obtenemos:
+
+\[
+(x-ux) \,dx + x (u\,dx + x\,dy) = 0
+\]
+
+y es mas fácil multiplicar \(x\) que \(x-ux\), ojo: se supone que ambas sustituciones son correctas, pero es mas conveniente usar un termino que nos simplifique la ecuación.
+#+END_DEMONSTRATION
+
+4.ahora con la sustituciones realizadas, resolvemos por el metodo de variables separables.
+
+[[https://ecuaciondiferencialejerciciosresueltos.com/ecuacion-diferencial-homogenea-1er-orden][Más informacion]]
+
+* Ecuacion Diferencial Homogenea Con Coeficientes Constantes
+La forma de este tipo de ecuaciones es la siguiente.
+
+\[
+an_{n} y^n + an_{n-1} y^{n-1} + ... + a_1 y' + a_0 y = 0 
+\]
+
+se propone una solucion particular de la siguiente forma: \(y = e^{mx}\). Entonces encontramos su derivadas: 
+
+#+BEGIN_CENTER
+\( y = e^{mx} \)  \\
+\( y' = me^{mx} \) ; \( y'' = m^2e^{mx} \)
+#+END_CENTER
+
+sustitumos cada respectiva derivada con la solucion prpuesta:
+
+\[
+a \cdot m^2e^{mx} + b \cdot me^{mx} + c \cdot e^{mx} = 0 
+\]
+
+ahora podemos simplificar la expresión:
+
+\[
+e^{mx}(am^2 + bm + c) = 0
+\]
+
+ahora para encontrar nuestras soluciones generales tenemos que factorizar la ecuacion que nos queda, hay tres posibles casos para la factoricion de los polinomios:
+
+#+BEGIN_DEMONSTRATION
+- Caso I, factores diferentes: 
+\[ y_g = c_1 e^{ax} + c_2 e^{bx} \]
+- Caso II, factores repetidos: 
+\[ y_g = c_1 e^{ax} + c_2x e^{ax}\]
+- Caso III, raices imaginarias \alpha + \beta i:
+\[y_g = c_1 e^{\alpha x} \left[ \cos(\beta x) + c_2\sin(\beta x) \right] \]
+#+END_DEMONSTRATION
+
+[[https://sites.google.com/site/ecuacionesdiferenciales2015/parcial-3/3--ecuaciones-diferenciales-homogeneas-con-coeficientes-constantes][Más informacion]]
+
+* Ecuacion Diferencial *NO* Homogenea Con Coeficientes Constantes
+La forma de este tipo de ecuaciones es la siguiente.
+
+\[
+an_{n} y^n + an_{n-1} y^{n-1} + ... + a_1 y' + a_0 y = Q(x)
+\]
+
+#+BEGIN_DEMONSTRATION
+\[-y''-8y'+20y = 100x^2 - 26e^x\]
+#+END_DEMONSTRATION
+
+Es muy parecida a la anterior sin embargo ahora la funcion no esta igualada a 0, si no que el resultado es otra funcion, el resultado es la suma de dos partes:
+
+\[
+y = y_g + y_p
+\]
+
+donde \(y_g\) es la solucion general de la ecuacion homogenea y \(y_p\) es la solucion de la ecuacion \(Q(x)\). 
+
+#+BEGIN_DEMONSTRATION
+\[
+y_g = c_1 e^{2x} + c_2 e^{-10x}
+\]
+#+END_DEMONSTRATION
+
+para encontrar \(y_g\) simplemente aplicamos el metodo de Ecuacion Diferencial Homogenea Con Coeficientes Constantes y lo expresamos en su forma general. Ahora para encontrar \(y_p\) es mas complicado, primero tenemos que identificar el tipo de funcion que tenemos:
+
+#+BEGIN_CENTER
+[[file:img/27.png]]
+#+END_CENTER
+
+#+BEGIN_DEMONSTRATION
+Ejemplo, si tenemos \(100x^2-26e^{x}\) entonces primero tomamos \(Ax^2+Bx+C\), pero como tambien tenemos un exponente tambien debemos tomar \(Ae^{x}\) cada termino tiene que tener variables diferentes aunque en la tabla anteior se repitan debemos cambiarlas, en este caso como ya hay una variable A cambie la A del exponente por una D, y asi es como se obtiene la forma que tendra nuestra \(y_p\):
+
+\[y_p =  Ax^2 + Bx + C + De^{x} \]
+#+END_DEMONSTRATION
+
+ahora tomamos \(yp\) y obtenermos las derivadas de \(y_g\), sustituimos las derivadas y resolvemos el sistema de ecuaciones restante
+
+#+BEGIN_DEMONSTRATION
+Ejemplo, si tenemos \(y_g = -y''-8y'+20y\) tenemos que encontrar sus derivadas \(y;y';y''\), en el ejemplo anterior determinamos que \(y_p =  Ax^2 + Bx + C + De^{x}\) entonces derivamos \(y_p\) para encontrar las derivadas que nos faltan:
+
+- \(y  = Ax^2 + Bx + C + De^{x}\)
+- \(p' = 2Ax + B + De^{x} + Dxe^{x}\)
+- \(p'' = 2A + De^x + De^x + Dxe^{x}\)
+
+ahora sustituimos nuestros valores en \(y_g\) y resolvemos nuestras incognitas en \( y_g = Q(x) \) (no voy a resolver toda la ecuacion debido a la logitud), los resultados de las incognitas son: \( A=5; B = 4; C=\frac{21}{10}; D=-\frac{26}{10} \).
+Ahora sustituimos en \( y_p \):
+
+\[
+y_p = 5x^2 + 4x + \frac{21}{10} - \frac{26}{10} e^{x}
+\]
+
+#+END_DEMONSTRATION
+
+y para obtener el resultado final simplemente sumamos \(y_g\) con \(y_p\) 
+
+#+BEGIN_DEMONSTRATION
+\[
+y = c_1 e^{2x} + c_2 e^{-10x} + 5x^2 + 4x + \frac{21}{10} - \frac{26}{10} e^{x}
+\]
+#+END_DEMONSTRATION

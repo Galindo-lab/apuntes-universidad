@@ -1,0 +1,309 @@
+
+#+TITLE:    Matemáticas Discretas
+#+SUBTITLE: Apuntes
+#+DATE:     [2021-08-10 mar]
+
+#+OPTIONS: num:1
+#+TOC: headlines 1
+
+* Lenguaje formal
+El lenguaje formal es un lenguaje artificial, convencional, elegido de manera consciente y cuidadosa para expresarse precisa,
+sistemática, rigurosa y unívocamente, por lo común dentro de
+un cierto campo del saber y con determinados fines.
+
+* Lenguaje natural
+El lenguaje natural es aquel que utilizamos cotidianamente. Surge históricamente dentro de la sociedad y es aprendido sin que
+exista necesariamente en el individuo un acto reflexivo.
+
+* Variables proposiciones 
+conjunto de _enunciados declarativos_ que formalizan la expresión, usualmente se les denota con las letras (p, q, r, s...).
+
++ Enunciado declarativo :: es aquella proposición de lenguaje objeto de la caal podemos predicar su verdad o su falsedad.
+
+#+BEGIN_DEMONSTRATION
+#+BEGIN_CENTER
+/"Hay un automóvil blanco en el aparcamento"/.
+#+END_CENTER
+#+END_DEMONSTRATION
+
++ Enunciado NO declarativo :: es un enunciado que no puede ser convertido a lenguaje formal.
+
+#+BEGIN_DEMONSTRATION
+#+BEGIN_CENTER
+/"¿Dónde esta mi automóvil?"/. \\
+/"¡Guarda silencio!"/. \\
+#+END_CENTER
+#+END_DEMONSTRATION
+
++ Enunciado atómico :: es aquél enunciado único, que en su expresión no incluye ningún conectivo lógico, es decir, no une dos o más enunciados.
+     
+#+BEGIN_DEMONSTRATION
+#+BEGIN_CENTER
+/"Hoy es miércoles."/ \\
+/"Vivo en el distrito Federeal."/ \\
+/"Pablo es matematico"/ \\
+#+END_CENTER
+#+END_DEMONSTRATION 
+
+[[http://objetos.unam.mx/logica/formasLogicas/pdf/forma.logica.de.enunciados.pdf][Extraido]] 
+
+* Conectivas proposicionales
+** resumen
+son los simbolos que formalizan los elementos del lenguaje que sirven para su funcion argumentativa.
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :align center :rules all :border 1  :mode inline-math
+| <10>       | <15>            | <10>       |
+| Relacion   | Notación        | Lectura    |
+|------------+-----------------+------------|
+| Negacion   | \(\lnot\)       | no         |
+| Conjunción | \(\lor\)        | o          |
+| Disyunción | \(\land\)       | y          |
+| Implicación | \(\rightarrow\) | entonces   |
+| Equivalencia | \(\equiv  \)    | equivalente a |
+| Por lo tanto | \(\vdash\)      | deduce que, conclusion |
+| Doble implicación | \(\leftrightarrow\) | Sí y solo sí |
+| Tautología | \(\top ~ T\)    | Verdadero  |
+| Contradicción | \(\bot ~ F\)    | Falso      |
+| pertenece  | \(\in\)         | sí x pertenece a un conjunto |
+| Cuantificador universal | \(\forall\)     | para todo x hay y |
+| Cuantificador existencial | \(\exists\)     | existe;hay por lo menos un |
+#+END_CENTER
+
+conjuncion diyuncion negacion
+
+[[https://es.wikipedia.org/wiki/Anexo:S%C3%ADmbolos_l%C3%B3gicos][Lista de simbolos]] | [[https://es.wikipedia.org/wiki/Anexo:S%C3%ADmbolos_matem%C3%A1ticos][Lista de Simbolos completa]] 
+
+** Conjucion 
+Solo una de las variables preposicionales tiene que ser verdadera para que el predicado sea verdadero
+
+** Disyunción
+Lo opuesto a la conjunción, ambas tienen que ser verdaderas para que la expresión sea verdadera.
+
+** Implicación
+Sí un enunciado es verdadero el otro tambien es verdadero
+
+#+BEGIN_DEMONSTRATION
+
+
+P \equiv /"Hace frio"/ 
+q \equiv /"Usare sueter"/ 
+
+
+\[
+p \rightarrow q
+\]
+
+#+END_DEMONSTRATION
+
+** Por lo tanto
+Se usa para denotar la conclusion de un argumento, si es verdadero entonces el argumento es valido; sí es falso entonces no es valido.
+#+BEGIN_DEMONSTRATION
+/"Juan es francés si nació el 23 de febrero. Si es bretón, entonces es más bien bajo. Ahora bien, nació el 23 de febrero o es bretón. Por consiguiente, es francés o es más bien bajo."/ \\
+
+Convenciones simbólicas:
+ - p \equiv Juan es francés
+ - q \equiv Juan nació el 23 de febrero
+ - r \equiv Juan es bretón
+ - s \equiv Juan es más bien bajo
+
+Formalización:
+\[q \rightarrow p, r \rightarrow s, q \lor r \vdash p \lor s\]
+
+#+END_DEMONSTRATION
+
+** Doble implicación
+Se lee como "sí y solo sí", eso significa que para que sea verdadera ambos valores tienen que ser iguales (ambos verdaderos o ambos falsos).
+
+** Tautología
+es un forma de enunciado que siempre es verdadera, independientemente de los valores de verdad de los enunciados individuales sustituidos por sus enunciados variables. Un enunciado cuya forma es una tautología es un *enunciado tautológico*.
+
+** Contradicción
+es una forma de enunciado que siempre es falso, independientemente de los valors de verdad de los enunciados individuales de los enunciados sustituidos. Un enunciado cuya forma es una contradicción es un *enunciado contradictorio*.
+
+** Cuantificador universal
+para todos los elementos de un dominio siempre se cumple una funcion proposicional.
+
+** Cuantificador existencial
+De todos los elementos del dominio existe por lo menos un elemento que cumple la funcion propocional.
+
+** Ejemplo de cuantificador universal y existencial
+#+BEGIN_DEMONSTRATION
+
+/"Todos los artistas son ricos. Algunos políticos son corruptos. En conclusión no todos los artistas y no todos los políticos son ricos y corruptos"/
+
+Convenciones simbólicas:
+
++ A = { a | a es un politico } \\
++ B = { b | b es un artista } \\
++ p(a): Los políticos que son ricos
++ p(b): Los artistas que son ricos
++ q(a): Los políticos que son corruptos
++ q(b): Los artisas que son corruptos
+
+Formalización:
+
+\[ [(\forall b \in B) p(b), (\exists a \in A) q(a)] \vdash (\exists a \in A) p(a) \land (\exists a \in A) q(a) \land  (\exists b \in B) p(b) \land (\exists b \in B) q(b) \]
+
+#+END_DEMONSTRATION
+
+* Tablas de verdad
+Son tablas que nos sirven para conocer los valores de verdad de las proposiciones compuestas.
+
+#+BEGIN_DEMONSTRATION
+
+/"No salió electo Presidente de la República o el crecimiento anual no fue del 7%"/ \\
+
+Convenciones simbólicas: \\
+ - p \equiv /"salió electo Presidente de la República"/ 
+ - q \equiv /"el crecimiento anual fue del 7%"/  
+
+Tabla de verdad: 
+#+BEGIN_CENTER
+#+ATTR_HTML: :align center :rules all :border 1 :frame 1 :mode inline-math
+|---+---+----+----+-----+------+------+-------|
+| p | q | ¬p | ¬q | p∧q | ¬p∧q | p∧¬q | ¬p∧¬q |
+|---+---+----+----+-----+------+------+-------|
+| F | F | V  | V  | F   | V    | V    | V     |
+|---+---+----+----+-----+------+------+-------|
+#+END_CENTER
+#+END_DEMONSTRATION
+
+[[https://calculadorasonline.com/generador-de-tablas-de-verdad-logica-proposicional-algebra-booleana/][Generador de tablas de verdad]] 
+
+
+* Equivalencia lógica
+Dos formas de enunciado se llaman lógicamente equivalents si y sólo si, tienen los mismos valores de verdad para cada posible sustitución de enunciados por sus enunciados de variables. La equivalencia lógica de las formas de enunciado P y Q se denota escribiendo P ≡ Q.
+
+* Leyes commutativas
+Establecen que el orden en el cual sume o multiplique dos números reales no afecta el resultado.
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+ p \land q &\equiv q \land p &
+ p \lor q &\equiv q \lor p
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+* Leyes asociativas 
+Establecen que cuando suma o multiplica cualesquiera tres números reales, el grupo (o asociación) de los números no afecta el resultado.
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+ (p \land q) \land r &\equiv p \land (q \land r) \\
+ (p \lor q) \lor r &\equiv p \lor (q \lor r)
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+* Leyes distributivas
+Expresa que se obtiene la misma respuesta cuando multiplicas un conjunto de números por otro número que cuando se hace cada multiplicación por separado
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+ p \land (q \lor r) &\equiv (p \land q) \lor (p \land r) \\
+ p \lor (q \land r) &\equiv (p \lor q) \land (p \lor r)
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+* Leyes de la identidad
+Es la constatación de que dos objetos que matemáticamente se escriben diferente, son de hecho el mismo objeto.
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+ p \land t &\equiv p &
+ p \lor c &\equiv p
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+* Leyes de negacion
+Dada una proposición p su contraria no p es verdadera.
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+p \land \lnot p &\equiv t & p \lor \lnot p &\equiv c
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+* Ley de la doble negacion
+se produce cuando se combina el adverbio no con la presencia de otros elementos que tienen también sentido negativo.
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+\lnot(\lnot p) \equiv p
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+* Leyes de idempotencia
+es la propiedad para realizar una acción determinada varias veces y aun así conseguir el mismo resultado que se obtendría si se realizase una sola vez.
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+p \land p &\equiv p & p \lor p &\equiv p 
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+* Leyes universales acortadas
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+p \lor t &\equiv t & p \land c &\equiv c
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+* Leyes de morgan
+son un par de reglas de transformación que son ambas reglas de inferencia válidas. Las normas permiten la expresión de las conjunciones y disyunciones puramente en términos de vía negación.
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+\lnot ( p \land q ) &\equiv \lnot p \lor \lnot q & 
+\lnot ( p \lor q ) &\equiv \lnot p \land \lnot q
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+* Leyes de absorción
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+p \lor (p \land q) &\equiv p & p \land (p \lor q) &\equiv p
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+* Negaciones de *t* y *c*
+El negativo de una tautología es una contradicción y el opuesto de una contradicción es una tautología.
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+\lnot t &\equiv c & \lnot c &\equiv t
+\end{aligned} \]
+#+END_DEMONSTRATION
+* Implicación
+La implicación logica se emplea para representar una afirmacion no hipotetica, es decir: A es verdadero por lo tanto B es verdadero.
+
+#+BEGIN_DEMONSTRATION
+#+BEGIN_CENTER
+
+"Sí llueve, el suelo esta mojado" \\
+"llueve. por tanto, el suelo esta mojado"\\
+
+#+END_CENTER
+#+END_DEMONSTRATION
+
+* Validación de argumentos (Demostración)
+Un argumento es valido (lógico) sí la conclusion  es verdadera siempre y cuando todas las premisas sean verdaderas
+
+#+BEGIN_DEMONSTRATION
+Un argumento valido seria algo como: \\
+
+\[ ((\lnot p \implies q) \land (p \implies (\lnot r \lor s))) \implies ( \lnot s \land \lnot q \land \lnot r ) \implies p\]
+
+#+END_DEMONSTRATION
+
+* Ejercicios
+[[https://www.um.es/docencia/jcleon/logica1/logica1_ejercicios_resueltos1.pdf][ejercicios resueltos 1]] 
+[[https://www.um.es/docencia/jcleon/logica1/logica1_ejercicios_resueltos2.pdf][ejercicios resueltos 2]]
+[[https://www.um.es/docencia/jcleon/logica1/logica1_ejercicios_resueltos3.pdf][ejercicios resueltos 3]] 
+[[https://www.um.es/docencia/jcleon/logica1/logica1_ejercicios_resueltos4.pdf][ejercicios resueltos 4]] 
+[[https://www.um.es/docencia/jcleon/logica1/logica1_ejercicios_resueltos5.pdf][ejercicios resueltos 5]] 
+[[https://www.um.es/docencia/jcleon/logica1/logica1_ejercicios_resueltos6.pdf][ejercicios resueltos 6]] 
+[[https://www.um.es/docencia/jcleon/logica1/logica1_ejercicios_resueltos7.pdf][ejercicios resueltos 7]]
+

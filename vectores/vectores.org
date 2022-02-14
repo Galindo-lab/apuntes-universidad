@@ -1,0 +1,226 @@
+
+#+SETUPFILE: ~/.emacs.d/templates/html-level-1.org
+#+EXPORT_FILE_NAME: ../publish/apuntes/vectores.html
+#+OPTIONS: num:t
+
+#+TITLE:    Vectores
+#+SUBTITLE: Apuntes
+#+DATE:     2021-08-11 mié
+
+#+TOC: headlines 1
+
+* Definicion de magnitud
+Atributo de un fenómeno, cuerpo o sustancia que puede ser distinguido cualitativamente y determinado cuantitativamente. También se entiende como cantidad física formada por un número y la unidad de medida respectiva.
+
+* Definicion de valor escalar
+Cantidad física que solo tiene magnitud. Son ejemplo de escalares: distancia, masa, tiempo, rapidez, temperatura, área, volumen, densidad, trabajo, energía, potencia y frecuencia. Los escalares pueden ser manipulados por las reglas del álgebra ordinaria. Ejemplos de estas serían: 4 m, 5 kg, 60 s, 20 m/s, 37°C.
+
+* Definicion de vector
+Cantidad física que tiene magnitud, dirección y sentido. Son ejemplo de vectores: la velocidad, la aceleración, la fuerza, el peso, la cantidad de movimiento, el desplazamiento, campo eléctrico y el campo magnético.(la palabra vector  significa portador en latín). Ejemplos: 4 m/s, +9.8 m/s^2, 500 N 30°. \\
+
+[[https://tecdigital.tec.ac.cr/revista-fisica/Archivo/N8/Materiales/Esc-Vec/teoria/vector1.htm][Origen]] | [[http://depa.fquim.unam.mx/amyd/archivero/Repaso-vectores_22618.pdf][Más información]]
+
+* Representación de un vector
+Para representar un vector usamos la notación \(\vec{A}\) o también podemos usar negritas *A*.
+
+* Magnitud de un vector
+Es como se le llama a la *longitud* del vector, para representar la magnitud del vector usamos dos líneas paralelas \(|\vec{A}|\), posee unidades y siempre es positiva. Cuando dos vectores tienen la misma magnitud y la misma longitud se dice que son iguales independientemente si el punto de origen es otro.
+
+\[
+V_{r} = \sqrt{x^2+y^2+z^2}
+\]
+
+* Sistema de coordenadas rectangulares
+Es el sistema de coordenadas con el que estamos más familiarizados, donde un punto en el espacio se representa con un número en su respectivo eje, por ejemplo \( (1,43,5) \) corresponde a un punto ubicado en X:1, Y:43 y Z:5. Esta representación es muy fácil de operar debido a que sus componentes se pueden manipular individualmente.
+
+* Sistema de coordenadas polares
+La representación que más se asemeja a la definición matemática de vector, ya que cuenta con un valor escalar que representa su magnitud o longitud y con un ángulo que representa su inclinación, ejemplo \( (10, 160°) \) corresponde a una línea de radio 10 a 160° grados respecto al origen. Una característica muy importante de esta representación es que *NO* se pueden sumar directamente, requiere algún tipo de manipulación algebraica.
+
+* Convercion de sistemas de cordenadas
+** Polares a rectangulares
+No hay mucho misterio para la conversión de polares a rectangulares, simplemente sustituimos nuestros valores en las fórmulas [fn:calc-note-0].
+
+\[ \begin{aligned}
+V_{x} &= r \sin{(\theta)} & V_{y} &= r \cos{(\theta)} \\
+\end{aligned} \]
+
+** Rectangulares a Polares
+Primero para obtener el radio de nuestra coordenada:
+
+\[
+V_{r} = \sqrt{x^2+y^2+z^2}
+\]
+
+La segunda parte es más complicada, ya que debemos encontrar el ángulo que forma el eje x y nuestro radio la función para determinarla es la siguiente:
+
+\[
+tan^{-1}\left(\frac{y}{x}\right)
+\]
+
+Pero esta función solo funciona para números mayores a 0 en el primer cuadrante del plano, sin embargo podemos manipular la ecuación para ajustarla a nuestro cuadrante adecuado. Otra cosa importante es que la función es discontinua eso significa que sí \(x = 0\) no podemos realizar la evolución de la función, sin embargo en estos casos podemos utilizar la lógica para encontrar el ángulo [fn:calc-note-0].
+
+#+BEGIN_DEMONSTRATION
+\[ \begin{matrix}
+ Condición   & Grados                       & Radianes                      \\ \\
+ x>0 \land y\geq0  & tan^{-1}(\frac{y}{x})        & tan^{-1}(\frac{y}{x})         \\
+ x=0 \land y>0     & 90°                          & \frac{\pi}{2}                 \\
+ x<0        & tan^{-1}(\frac{y}{x}) + 180° & tan^{-1}(\frac{y}{x}) + \pi   \\
+ x=0 \land y<0     & 270°                         & 3 \frac{\pi}{2}               \\
+ x>0 \land y<0     & tan^{-1}(\frac{y}{x}) + 360  & tan^{-1}(\frac{y}{x}) + 2\pi  \\
+\end{matrix} \]
+#+END_DEMONSTRATION
+
+# #+BEGIN_CENTER
+# #+ATTR_HTML: :align center :rules all :border 1 :frame 1
+# | Condición  | Grados     | Radianes   |
+# | <10>       | <10>       | <10>       |
+# |------------+------------+------------|
+# | \(x>0,y\geq0\) | \(tan^{-1}(\frac{y}{x})\) | \(tan^{-1}(\frac{y}{x})\) |
+# | \(x=0,y>0\) | \(90°\)    | \(\frac{\pi}{2}\) |
+# | \(x<0\)    | \(tan^{-1}(\frac{y}{x}) + 180°\) | \(tan^{-1}(\frac{y}{x}) + \pi\) |
+# | \(x=0,y<0\) | \(270°\)   | \(3 \frac{\pi}{2}\) |
+# | \(x>0,y<0\) | \(tan^{-1}(\frac{y}{x}) + 360\) | \(tan^{-1}(\frac{y}{x}) + 2\pi\) |
+# #+END_CENTER
+
+Sí \(x=0\) y \(Y>0\) eso nos indica que el radio se encuentra exactamente sobre el eje Y apuntando hacia arriba (90°); Sí X=0 y Y<0 eso significa que el radio se encuentra exactamente sobre el eje Y pero apuntando hacia abajo (270°). \\
+
+[[https://www.superprof.es/apuntes/escolar/matematicas/aritmetica/complejos/coordenadas-cartesianas-a-polares.html#tema_conversion-de-coordenadas-cartesianas-a-polares][Más Información]]
+
+[fn:calc-note-0] Para convertir polares a rectangulares con la fx-82MS puedes utilizar la función "rec" así "rec( 10, 10 ):f" y de polares a rectangulares "pol( 10, 10 ):f".
+
+* Vector unitario
+Es un vector cuya magnitud es igual a uno, pero con la misma dirección que un vector dado, se denota frecuentemente con un acento circunflejo \(\hat{r}\). Para determinar el vector tenemos que dividir nuestro vector entre el valor de su módulo[fn:vuno] (o magnitud). Ejemplo:
+
+#+BEGIN_DEMONSTRATION
+
+\[ A = (32, 43, 32) \]
+\[|A| = 62.43 \]
+\[\left(\frac{32}{62.43}, \frac{43}{62.43}, \frac{32}{62.43}\right)\]
+
+\[
+\boxed{ \hat{A} = ( 0.51, 0.68, 0.51) }
+\]
+
+#+END_DEMONSTRATION
+
+[fn:vuno] Ninguno de los valores es mayor a 1, así podemos verificar que sea un vector unitario.
+
+* Vectores deslizantes
+Son aquellos vectores que pueden moverse sobre su línea de acción sin cambiar su magnitud y dirección.
+
+* Negativo de un vector
+Se define el negativo de un vector como aquel que sumado con el vector original, da como resultante cero. El negativo de un vector posee la misma magnitud que el vector original, pero apunta en dirección opuesta (+180°).
+
+\[ A = (10, 50°) \]
+\[ -A = (10, 180°) \]
+
+* Producto punto
+También conocido como producto escalar o producto interno, es una operación que convierte dos vectores de igual dimensión y retorna un solo número:
+
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 5cm
+#+ATTR_HTML: :width 256px
+[[file:./img/0.png]]
+#+END_CENTER
+
+\[ \begin{aligned}
+    \boldsymbol{a} \cdot \boldsymbol{b} &= a_1 b_1 + a_2 b_2 + a_3 b_3 \\
+    \boldsymbol{a} \cdot \boldsymbol{b} &= \big|a\big| \big|b\big| \cos (\theta)
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+[[https://es.wikipedia.org/wiki/Producto_escalar#cite_note-1][Más Información]]
+
+** Propiedades
+#+BEGIN_DEMONSTRATION
+\[ \begin{aligned}
+ a \cdot a &= |a|^2 \\
+ a \cdot b &= b \cdot a \\
+ a \cdot (b \cdot c) &= a \cdot b + a \cdot c \\
+ (\mathbf{c}a) \cdot b &= \mathbf{c}(a \cdot b) = a \cdot (\mathbf{c}b) \\
+ 0 \cdot a &= 0
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+** Aplicaciones
+Una de las propiedades del producto punto es ayudarnos a calcular los ángulos directores; Los cosenos directores son aquellos ángulos que forma el vector con los ejes coordenados. Partiendo de que \( \boldsymbol{a} \cdot \boldsymbol{b} = \big|a\big| \big|b\big| \cos (\theta) \) eso significa que podemos despejar el ángulo entre dos vectores:
+
+\[
+cos(\alpha) = \frac{a \cdot i}{|a| |i|}
+\]
+
+Sí sustituimos \(i\) con un vector unitario sobre uno de los ejes coordenados podemos determinar los ángulos con respecto a cada uno de los ejes (Ángulos directores del vector):
+
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 5cm
+#+ATTR_HTML: :width 256px
+[[file:./img/1.png]]
+#+END_CENTER
+
+\[ \begin{aligned}
+ cos(\alpha) &= \frac{a_x}{|a|} & cos(\beta)  &= \frac{a_y}{|a|}
+\end{aligned} \]
+
+\[
+ cos(\gamma) = \frac{a_z}{|a|}
+\]
+#+END_DEMONSTRATION
+
+[[https://www.superprof.es/diccionario/matematicas/analitica/cosenos-directores.html][Más información]]
+
+* Producto cruz
+Producto vectorial o producto vectorial de Gibbs, Es una operación entre dos vectores y da como resultado un vector perpendicular a los vectores que se multiplican:
+
+#+BEGIN_DEMONSTRATION
+\[ \boldsymbol{a} \times \boldsymbol{b} = \Bigg\{ \begin{aligned}
+     a_{2}b_{3}-a_{3}b_{2} \\
+     a_{3}b_{1}-a_{1}b_{3} \\
+     a_{1}b_{2}-a_{2}b_{1}
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+[[https://es.wikipedia.org/wiki/Producto_vectorial][Más información]]
+
+** Aplicaciones
+*Área de un paralelogramo*: La extensión del producto cruz es igual al área del paralelogramo determinado por *a* y *b*.
+
+
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 5cm
+#+ATTR_HTML: :width 256px
+[[file:./img/2.png]]
+#+END_CENTER
+
+\[
+\vert a \vert(\vert b \vert sen(\theta)) = \vert a \times b \vert
+\]
+#+END_DEMONSTRATION
+
+*Volumen de un paralelepípedo*: Se puede determinar el volumen de un paralelepípedo calculando la magnitud de su triple producto escalar:
+
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 5cm
+#+ATTR_HTML: :width 256px
+[[file:./img/3.png]]
+#+END_CENTER
+
+\[
+V = \vert a \cdot ( b \times c ) \vert
+\]
+#+END_DEMONSTRATION
+
+* Suma de vectores
+La forma más sencilla de sumar vectores es sin duda aprovecharnos de las propiedades del sistema de coordenadas rectangulares, hay que recordar que las coordenadas polares *NO* se pueden sumar directamente pero las rectangulares si.
+
+[[https://matematicasmodernas.com/suma-de-vectores-por-componentes/][Más información]]
+
+* Resta de vectores
+La resta de vectores es simplemente la suma de un vector más otro vector opuesto \(A+(-B)\).

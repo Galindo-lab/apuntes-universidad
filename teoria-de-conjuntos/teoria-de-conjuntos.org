@@ -1,0 +1,254 @@
+
+#+OPTIONS: num:t
+
+#+TITLE:    Teoria de conjuntos
+#+SUBTITLE: Apuntes
+#+DATE:     [2021-10-05 mar]
+
+#+TOC: headlines 1
+
+
+* Conjuntos
+Un conjunto es una Colección bien definida de objetos, que se denominan elementos o miembros del conjunto. Usualmente las letras mayúsculas denotan a los conjuntos y las letras minúsculas denotan a los elementos del conjunto.
+
++ \(a \in S\) denota que el elemento a pertenece al conjunto S.
++ \(a \not \in S \) denota que el elemento *NO* pertenece al conjunto S.
+
+* Subconjunto
+Se dice que A es un subconjunto de B si A está contenido en B o en otras palabras que B contiene a A. \( A \subseteq B \) o \( B \supseteq A \). Dos conjuntos son iguales si ambos tienen los mismos elementos o, equivalentemente, si cada
+uno está contenido en el otro.
+
+#+BEGIN_CENTER
+A = B si y solo si \( A \subseteq B \) y \( B \subseteq A \)
+#+END_CENTER
+
+* Simbolos especiales
+Los conjuntos numéricos usuales en matemáticas son: 
++ el conjunto de los números naturales \(\mathbb{N}\).
++ números racionales \(\mathbb{Q}\).
++ números enteros \(\mathbb{Z}\).
++ números reales \(\mathbb{R}\).
++ números complejos \(\mathbb{C}\).
+
+La relacion entre estos grupos es la siguiente:
+
+\[
+\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}
+\]
+
+* Conjuntos especiales 
+Algunos conjuntos tienen un nombre:
++ Conjunto vacío o nulo \(\Phi\).
++ Conjunto unitaio, es un conjunto con un solo elemento[fn:unit].
++ Conjunto Universal \(U\), es aquel conjunto fijo del cual se toma otros conjuntos, es decir, contiene todos los conjuntos que podemos mencionar en una materia.
+
+[fn:unit] \( B={1,1} es unitario, se repite pero es uno \)
+
+* Relaciones entre conjuntos
+** Iguales
+Se dice que dos conjuntos son iguales si tienen exactamente los mismos elementos.  Una forma práctica de establecer si dos conjuntos son iguales es determinar si se contienen el uno al otro
+
+** Equivalentes \equiv
+Dos conjuntos A y B son equivalentes o cordinales
+
+* Operacion es de conjuntos
+Existen unas operaciones básicas que permiten manipular los conjuntos y sus elementos, similares a las operaciones aritméticas, constituyendo el álgebra de conjuntos:
+
+** Union
+La unión de dos conjuntos A y B, es el conjunto de todos los elementos que pertenecen a A o a B, es decir:
+
+#+BEGIN_CENTER
+#+attr_latex: :width 7cm
+#+ATTR_HTML: :width 256px
+#+caption: \(A \cup B = \{x|x \in A~o~x \in B \}\)
+[[file:img/12.png]]
+#+END_CENTER
+
+** Intersección
+La intesección de dos conjuntos A y B, es el conjunto de todos los elementos que pertenecen tanto a A como a B, es decir:
+
+#+BEGIN_CENTER
+#+attr_latex: :width 7cm
+#+ATTR_HTML: :width 256px
+#+caption: \( A \cap B \{x|x \in A~y~x \in B \} \)
+[[file:img/13.png]]
+#+END_CENTER
+
+** Complemento (Complemento Absoluto)
+El complemento absoluto o simplemente complemento de un conjunto A es el conjunto de elementos que pertenecen a U pero no pertenencen a A:
+
+#+BEGIN_QUOTE
+Dado un conjunto A, su complementario es el conjunto formado por los elementos que no pertenecen a A.
+#+END_QUOTE
+
+#+BEGIN_CENTER
+#+attr_latex: :width 7cm
+#+ATTR_HTML: :width 256px
+#+caption: \(A^C = \{ x |  x \in U, x \not \in A \} \)
+[[file:img/14.png]]
+#+END_CENTER
+
+** Diferencia de conjuntos (Complemento relativo)
+La diferencia entre A y B también se denomina complemento relativo de B en A, y se denota \(C_AB\), cuando el segundo es un subconjunto del primero. 
+
+#+BEGIN_QUOTE
+El complemento relativo de un conjunto B respecto de un un conjunto B o la diferencia de A y B, es el conjunto de elementos que pertenecen a A pero no pertenecen a B:
+#+END_QUOTE
+
+#+BEGIN_CENTER
+#+attr_latex: :width 7cm
+#+ATTR_HTML: :width 256px
+#+caption: \(A \backslash B = \{ x |  x \in A, x \not\in B \} \)
+[[file:img/15.png]]
+#+END_CENTER
+
+
+** Diferencias simétrica
+Dados dos conjuntos A y B, su diferencia simétrica, A Δ B, es un conjunto que contiene los elementos de A y los de B, excepto los que son comunes a ambos.
+
+#+BEGIN_QUOTE
+La diferencia simétrica de los conjuntos A y B consta de los elementos que pertenecen a A o a B pero no a ambos:
+#+END_QUOTE
+
+#+BEGIN_CENTER
+#+attr_latex: :width 7cm
+#+ATTR_HTML: :width 256px
+[[file:img/16.png]]
+
+\(A \bigoplus B = (A \cup B) \backslash (A \cap B) \) \\
+o \\
+\(A \bigoplus B = (A \backslash B) \cup (B \backslash A) \)
+
+
+#+END_CENTER
+
+[[https://es.wikipedia.org/wiki/Teor%25C3%25ADa_de_conjuntos#%25C3%2581lgebra_de_conjuntos][Mas informacion]]
+
+* Productos fundamentales
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+[[file:img/17.png]]
+#+END_CENTER
+
+\[ \begin{matrix}
+P_1 = A \cap B \cap C       & ~ & P_2 = A \cap B \cap C^C \\
+P_3 = A \cap B^C \cap C     & ~ & P_4 = A \cap B^C \cap C^C \\
+P_5 = A^C \cap B \cap C     & ~ & P_6 = A^C \cap B \cap C^C \\
+P_7 = A^C \cap B^C \cap C^C & ~ & P_8 = A^C \cap B^C \cap C^C \\
+\end{matrix} \]
+#+END_DEMONSTRATION
+
+
+* Grafo dirigido 
+Para representar una relación R sobre un solo conjunto A.
+
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 7cm
+#+ATTR_HTML: :width 256px
+[[file:img/18.png]]
+#+END_CENTER
+
+\[
+A = {1,2,3,4}
+\]
+
+\[ \begin{aligned}
+R &= \{(1,2),(2,2), (2,4),(3,2),(3,4),(4,1),(4,3)\}
+\end{aligned} \]
+
+
+#+END_DEMONSTRATION
+
+
+
+* Diagrama sagital
+
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 7cm
+#+ATTR_HTML: :width 256px
+[[file:img/19.png]]
+#+END_CENTER
+
+\[ \begin{aligned}
+A &= \{1,2,3\} \\
+B &= \{x,y,z\} \\
+R &= \{(1,y),(1,z),(3,y)\}
+\end{aligned} \]
+#+end_demonstration
+
+
+* Matriz de relación
+#+BEGIN_CENTER
+#+attr_latex: :width 7cm
+#+ATTR_HTML: :width 256px
+[[file:img/20.png]]
+#+END_CENTER
+
+
+* Composición de relaciones y matrices
+
+Hay otra forma para encontrar la composición de las relaciones R y S, y consiste en efectuar la multiplicación de sus respectivas matrices de relación
+
+#+BEGIN_DEMONSTRATION
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 100%
+[[file:img/25.png]]
+#+END_CENTER
+
+#+END_DEMONSTRATION
+
+* Funciones uno a uno, sobre e invertibles
+
++ Función uno a uno (inyectiva): Si elementos diferentes del dominio A tienen imágenes distintas.
++ Función sobre (suprayectiva): Si cada elemento de B es la imagen de algún elemento de A.
++ Función invertible (biyectiva): Si y solo sí la función es uno a uno y sobre.
+
+#+BEGIN_DEMONSTRATION
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 100%
+[[./img/26.png]]
+#+END_CENTER
+
+f_1, es uno a uno, pero no es sobre. \\
+f_2, es uno a uno y sobre, por lo tanto es invertible. \\
+f_3, no es uno a uno pero sí es sobre. \\
+f_4, no es uno a uno y tampoco es sobre. \\
+
+
+#+END_DEMONSTRATION
+
+* Relaciones sobre conjuntos
+
+** La relación L (menor qué)
+para números reales define una relación de R a R como sigue: Para todos los números reales x y y:
+
+\[xLy \leftrightarrow x < y\]
+
+** La relación E (de congruencia de modulo 2) 
+define una relación de 𝒁 a 𝒁 como sigue: Para todo \((m,n) \in Z \times Z\):
+
+\[mEn \leftrightarrow m-n~es~par\]
+
+** La inversa de una relación de A a B
+Entonces una relación R −1 de B a A puede definirse intercambiando los elementos de todos los pares ordenados de R.
+
+\[R^{-1} = \{ (y,x) \in B \times A \vert (x,y) \in R \} \]
+                                                            
+
+
+* Relacion reflexiva
+\(R\) es reflexiva si y sólo si para toda \(x \in A, x R x\) o en otras palabras: sí Cada elemento está relacionado consigo mismo.
+
+* Relacion simétrica
+\(R\) es imetrica si y sólo si, para toda \(x, y \in A\) si \(xRy\) entonces \(yRx\), Si cualquier elemento está relacionado con cualquier otro elemento entonces, el segundo elemento está relacionado con el primero.
+
+* Transitiva 
+\(R\) es transitiva si y solo si, para toda \( x, y,z \in A  \) si \(xRy\) y \(yRz\) entonces \(xRz\).
+Si cualquier elemento está relacionado con el segundo y el segundo elemento está relacionado con el tercero entonces, el primer elemento está relacionado con el tercero.
+
+

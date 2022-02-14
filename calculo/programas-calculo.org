@@ -17,6 +17,8 @@
 
 # #+OPTIONS: \n:nil num:nil toc:nil
 
+ \pagebreak
+
 * Conversión Entre Sistemas De Coordenadas
 ** Rectangulares a Cilíndricas (o Polares)
 #+BEGIN_SRC
@@ -51,9 +53,8 @@ float((x,y,z))
 
 "Cilindrica (r,theta,z):"
 float((r,theta,z))
-#+END_SRC
-
------
+#+END_SRC 
+\pagebreak
 
 #+BEGIN_SRC 
 x = -1
@@ -68,9 +69,8 @@ float((x,y))
 
 "Cilindrica"
 float((r,theta))
-#+END_SRC
-
-\newpage 
+#+END_SRC 
+\pagebreak
 
 ** Rectangulares a Esféricas
 #+BEGIN_SRC
@@ -107,11 +107,8 @@ float((x,y,z))
 
 "Esféricas (rho,theta,phi):"
 float((rho,theta,phi))
-#+END_SRC
-
------
-
-\newpage 
+#+END_SRC 
+\pagebreak
 
 ** Cilíndricas a Rectangulares
 #+BEGIN_SRC 
@@ -131,11 +128,8 @@ float((r,theta,z))
 
 "Rectangular (x,y,z):"
 float((x,y,z))
-#+END_SRC
-
------
-
-\newpage 
+#+END_SRC 
+\pagebreak
 
 ** Cilíndricas a Esféricas
 #+BEGIN_SRC 
@@ -156,11 +150,8 @@ float((r,theta,z))
 
 "Esferica (rho,theta,phi):"
 float((rho,theta,phi))
-#+END_SRC
-
------
-
-\newpage
+#+END_SRC 
+\pagebreak
 
 ** Esfericas a Rectangulares
 #+BEGIN_SRC 
@@ -183,10 +174,7 @@ float((rho,theta,phi))
 "Rectangular (x,y,z):"
 float((x,y,z))
 #+END_SRC
-
------
-
-\newpage 
+\pagebreak
 
 ** Esfericas a Cilidnricas
 #+BEGIN_SRC 
@@ -208,21 +196,8 @@ float((rho,theta,phi))
 
 "Cilindrica (r,theta,z):"
 float((r,theta,z))
-#+END_SRC
-
------
-
-\newpage
-
-
-
-
-
-
-
-
-
-
+#+END_SRC 
+\pagebreak
 
 * Vectores
 ** Modulo
@@ -234,8 +209,7 @@ v = (1,3,5)
 
 abs(v)
 #+END_SRC
-
------
+\pagebreak
 
 ** Modulo del Vector Fuera Del Origen
 #+BEGIN_SRC 
@@ -248,8 +222,7 @@ g = (0,0,0) # Origen
 
 abs(v-g)
 #+END_SRC
-
------
+\pagebreak
 
 ** Producto Punto
 #+BEGIN_SRC 
@@ -261,8 +234,7 @@ B = (1,2,3)
 
 dot(A,B)
 #+END_SRC
-
------
+\pagebreak
 
 ** Producto Cruz
 #+BEGIN_SRC 
@@ -274,8 +246,7 @@ B = (1,2,3)
 
 cross(A,B)
 #+END_SRC
-
------
+\pagebreak
 
 ** Producto Mixto
 #+BEGIN_SRC 
@@ -288,16 +259,7 @@ C = (-4,3,2)
 dot(A,cross(B,C)))
 float
 #+END_SRC
-
-
-
-
-
-
-
-
-
-
+\pagebreak
 
 * Aplicaciones De Vectores
 ** Vector Unitario
@@ -312,8 +274,9 @@ vu = v/abs(v)
 "Vector unitario:"
 float(vu)
 #+END_SRC
+\pagebreak
 
------
+
 
 ** Angulo Entre Vectores
 #+BEGIN_SRC 
@@ -323,9 +286,10 @@ A = (1,2,3)
 B = (1,2,3)
 
 arccos(dot(A,B)/(abs(A)*abs(B)))
-#+END_SRC
+#+END_SRC 
+\pagebreak
 
------
+
 
 ** Angulos Directores
 #+BEGIN_SRC 
@@ -341,9 +305,10 @@ gamma = float(arccos(A[3]/abs(A)))
 alpha
 beta
 gamma
-#+END_SRC
+#+END_SRC 
+\pagebreak
 
------
+
 ** Área De Un Paralelogramo
 #+BEGIN_SRC 
 # Reemplaza 'A' y 'B' con tus vectores
@@ -354,7 +319,8 @@ B = (2,3,4)
 
 "Area Paralelogramo"
 float( abs(cross(A,B)) )
-#+END_SRC
+#+END_SRC 
+\pagebreak
 
 ** Área Del Triangulo
 #+BEGIN_SRC 
@@ -366,7 +332,8 @@ B = (2,3,4)
 
 "Area Paralelogramo"
 float( 1/2 * abs(cross(A,B)) )
-#+END_SRC
+#+END_SRC 
+\pagebreak
 
 ** Volumen De Un Paralelepípedo
 #+BEGIN_SRC 
@@ -380,6 +347,7 @@ C = (-4,3,2)
 "Volumen paralelepípedo"
 float(dot(A,cross(B,C)))
 #+END_SRC
+\pagebreak
 
 ** Volumen De Un Tetraedro
 #+BEGIN_SRC 
@@ -392,7 +360,8 @@ C = (-4,3,2)
 
 "Volumen paralelepípedo"
 float( 1/6 * dot(A,cross(B,C)))
-#+END_SRC
+#+END_SRC 
+\pagebreak
 
 
 
@@ -405,7 +374,8 @@ c = (-5,-3,-1)
 
 
 det(((x,y,z)-a,b-a,c-a))
-#+END_SRC
+#+END_SRC 
+\pagebreak
 
 ** Plano Que Pasa Por Un Punto Y Es Perpendicular Otro
 #+BEGIN_SRC 
@@ -418,6 +388,7 @@ q = cross(p,r)
 dot( q, (x,y,z) - p  ) 
  "= 0"
 #+END_SRC
+\pagebreak
 
 ** Ángulos Entre Planos
 #+BEGIN_SRC 
@@ -429,7 +400,8 @@ abs(dot(A,B))/(abs(A) * abs(B))
 
 "radianes: "
 float(arccos(last))
-#+END_SRC
+#+END_SRC 
+\pagebreak
 
 ** Distancia De Un Punto A Un Plano
 #+BEGIN_SRC 
@@ -450,6 +422,7 @@ abs(dot(p,pi)+D)/abs(pi)
 float
 
 #+END_SRC
+\pagebreak
 
 
 
@@ -463,6 +436,7 @@ f = 2*x*y
 d(f,x)
 d(f,y)
 #+END_SRC
+\pagebreak
 
 ** Gradiente
 #+BEGIN_SRC 
@@ -473,6 +447,7 @@ f = 3x^4-y^3+x^2*y^2+5
 # puedes añadir mas variables
 d(f,(x,y))
 #+END_SRC
+\pagebreak
 
 ** Matriz Jacobiana
 #+BEGIN_SRC 
@@ -484,7 +459,8 @@ f = (
 
 
 d(f,(x,y))
-#+END_SRC
+#+END_SRC 
+\pagebreak
 
 ** Matriz Hessiana
 #+BEGIN_SRC 
@@ -497,7 +473,8 @@ d(f,(x,y))
 "Hessiano"
 d(last,(x,y))
 
-#+END_SRC
+#+END_SRC 
+\pagebreak
 
 ** Divergencia
 #+BEGIN_SRC 
@@ -511,6 +488,7 @@ b = d(F,(x,y,z))
 c = b * unit(3)
 contract(c)
 #+END_SRC
+\pagebreak
 
 ** Razón De Cambio Derivada Direccional (Formula 1)
 #+BEGIN_SRC 
@@ -523,6 +501,7 @@ dot( d(f,(x,y)), v)
 eval(last,x,x0[1],y,x0[2])
 float
 #+END_SRC
+\pagebreak
 
 ** Razón De Cambio Derivada Direccional (Formula 2)
 #+BEGIN_SRC 
@@ -537,10 +516,7 @@ d(last,t)
 eval(last,t,0)
 float
 #+END_SRC
-
-
-
-
+\pagebreak
 
 * Integrales De Multiples Variables O Iteradas
 ** Integrales Dobles
@@ -551,6 +527,7 @@ defint( x + y,    # funcion
         y,0,1     # segunda integral, limite inferior, limite superior
 )
 
-#+END_SRC
+#+END_SRC 
+\pagebreak
 
 

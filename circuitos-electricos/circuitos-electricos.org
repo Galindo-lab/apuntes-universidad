@@ -1,0 +1,305 @@
+
+
+#+TITLE:    Circuitos Eléctricos
+#+SUBTITLE: Apuntes
+#+DATE:     2021-08-16 lun
+
+#+OPTIONS: num:1
+#+TOC: headlines 1
+
+* Definiciones
+** Circuitos
+Son un modelo para el estudio de sistemas de energía
+en general. Un *Circuito eléctrico simple*, consta de tres elementos básicos: una batería, una lámpara y alambres de conexión.
+
+** Circuito eléctrico
+Es un modelo matemático que simula el comportamiento de un sistema eléctrico real. También se define como la interconexión de dispositivos eléctricos.
+
+* Carga electrica (coulombs)
+Es el principio fundamental para explicar todos los fenómenos eléctricos. Asimismo, la cantidad básica en un circuito es la carga eléctrica. De la física básica sabemos que hay dos tipos de carga: positiva (protón[fn:proton]) y negativa (electrón[fn:electron]).
+
+La unidad de medida de la carga es Coulomb[fn:coulomb] (C), que se define en términos del ampere al contar la carga total que pasa por una sección transversal arbitraria de un alambre durante un segundo.
+
+* Tensión ó voltage
+Para mover el electrón en un conductor en una dirección particular es necesario realizar algo de trabajo o transferir energía. Este trabajo lo lleva a cabo una fuerza electromotriz externa (fem) también conocida como tensión, diferencia de potencial o voltage[fn:voltage].
+
+[fn:voltage]  \( Volt = \frac{Joule}{Coulomb}\)
+
+* Potencia (watts)
+es la variación respecto del tiempo de gasto o absorción de energía, medida en watts (W). Si un Joule de energía se gasta en transferir un Coulomb de carga a través del dispositivo en un segundo, la tasa de transferencia de energía es un watt.
+
+La potencia absorbida o suministrada por un elemento es el producto de la tensión entre los extremos del elemento y la corriente a través de él. _Si la potencia tiene signo +, se está suministrando o la está absorbiendo el elemento. Si, por el contrarió, tiene signo -, está suministrada por el elemento_.
+
+#+BEGIN_DEMONSTRATION
+\[
+p = vi
+\]
+#+END_DEMONSTRATION
+
+La ley de conservación de la energía debe cumplirse en cualquier circuito. Por esta razón, la suma algebraica de la potencia en un circuito, en cualquier instante, debe ser cero.
+
+#+BEGIN_DEMONSTRATION
+\[
+\sum p = 0
+\]
+#+END_DEMONSTRATION
+
+* Corriente (Amperes)
+flujo de partículas cargadas, como electrones o iones, que se mueven a través de un conductor eléctrico o un espacio. Se mide como la tasa neta de flujo de carga eléctrica a través de una superficie o en un volumen de control[fn:definicion-real]
+
+[fn:definicion-real]  \( Amperio = \frac{Coulombs}{segundos}  \)
+
+* polarisacion de resistencia
+cuando estamos calculando valores la potencia en un circuito tenemos que identificar la polaridad de la resistencias, tenemos dos casos:
+- Corriente entra por polaridad negativa :: La potencia tiene el signo negativo, entonces suministra energía.
+- Corriente entra por polaridad positiva :: La potencia tiene el signo positivo, entonces absorbe energía.
+
+* Resistencia, Tensión y Corriente en Paralelo
+- Tensión o Voltaje :: Es igual para todos los elementos en paralelo.
+- Corriente :: En un circuito paralelo la corriente se reparte entre los elementos. los componentes con mas resistencia resiven menos coriente y los elementos con menos resistencia mas corriente \(\frac{A}{\Omega} = V\).
+- Resistencia :: Para encontrar la resistencia total de un circuito en paralelos solamente tenemos que usar la siguiente formula: 
+\[
+R_T = \frac{1}{\sum_{0}^{n} \frac{1}{R_n} } \Omega 
+\]
+
+* Resistencia, Tensión y Corriente en Serie
+- Corriente :: Es igual para todos los elementos en serie.
+- Tensión o voltaje :: el voltaje es diferente para cada uno de los elementos \(V = \frac{A}{R}\).
+- Resistencia :: La resistencia tota de un circuito en serie es simplemente la suma de las resistencias 
+\[
+R_T = \sum_0^{n} R_n \Omega 
+\]
+
+* Relacion entre carga, tensión, corriente y potencia
+Usualmente a este [[https://es.wikipedia.org/wiki/C%C3%B3digo_mnemot%C3%A9cnico][mnemotécnico]] se le conoce como ley de ohm, pero es siemplemente formula de resistencia. La ley de 
+
+#+BEGIN_CENTER
+#+attr_latex: :width 7cm
+#+ATTR_HTML: :width 384px :align center
+[[file:./img/4.png]]
+#+END_CENTER
+
+* Corriente directa 
+Si la corriente no cambia con el tiempo, sino que permanece constante, se conoce como corriente directa (cd). Por convención, el símbolo I se usa para representar la corriente constante.
+* Corriente alterna
+Una corriente que varia con el tiempo se representa con el símbolo i. Una forma común de corriente que varía con el tiempo es la corriente senoidal o corriente alterna (ca).
+
+[fn:electron] la carga del electrón es -1.602\times10^{-19}.
+[fn:proton] La carga de un protón es +1.602\times10^{-19}.
+[fn:coulomb] 1C de carga hay 1/(1.602\times 10^{−19})=6.24\times10^{18} electrones.
+
+* Elementos de un circuito
+Un circuito eléctrico es simplemente una interconexión de los elementos. El análisis de circuitos es el proceso de determinar las tensiones (o las corrientes) a través de los elementos del circuito. Hay dos tipos de elementos en los circuitos eléctricos:
+
+- Pasivos :: Es *incapaz* de generar energía, ejemplos de estos son resistores, capacitores y los inductores.
+
+- Activos :: Es capaz de generar energía, ejemplos de estos son generadores, baterias y amplificadores operacionales.
+
+
+
+
+* Fuentes dependientes
+La fuente dependiente o controlada, donde la cantidad de la fuente esta
+determinada por una tensión o por una corriente existente en algún otro lugar
+del sistema que se analiza.
+
+#+BEGIN_CENTER
+#+attr_latex: :width 6cm
+#+ATTR_HTML: :width 256px :align center
+[[file:./img/5.png]]
+#+END_CENTER
+
+- a) fuente de corriente (amp) determinada por corriente (amp)
+- b) fuente de corriente (amp) determinada por tensión (volts)
+- c) fuente de tensión (volts) determinada por tensión (volts)
+- d) fuente de tensión (volts) determinada por corriente (amps)
+
+Las fuentes de voltajes tiene polaridad +/- mientras que las de corrientes son flechas.
+
+* Código colores para resistencias
+La tolerancia de una resistencia es un dato que nos dice que tanto (en porcentaje) puede variar el valor de la resistencia (hacia arriba o hacia abajo) de su valor indicado.
+
+
+#+ATTR_HTML: :width 100%
+[[./img/6.png]]
+
+
+#+BEGIN_DEMONSTRATION
+
+Ejemplos de lectura de resistencias: \\
+
+#+BEGIN_CENTER
+#+attr_latex: :width 3cm
+#+ATTR_HTML: :width 140px :align center
+[[file:img/8.png]]
+#+END_CENTER
+
+De izquierda a derecha:
+
+Marrón es 1 y violeta es 7 entonces el valor es 17.\\
+
+La tercera banda es naranja, entonces el multiplicador es 1000.\\
+
+La última banda es dorada lo que indica que su tolerancia es de \pm5%.\\
+
+Ya con estos datos deducimos que el valor de la resistencia es de 17k\Omega \pm5%\\
+
+#+END_DEMONSTRATION
+
+Algunas resistencias pueden tener una línea extra, para leer estas resistencias simplemente añadimos un dígito mas al valor: 
+
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 3cm
+#+ATTR_HTML: :width 140px :align center
+[[./img/7.png]]
+#+END_CENTER
+
+De izquierda a derecha:
+
+1. marrón es 1, verde es 5 y amarillo 4, entonces el valor es 154. 
+
+2. la cuarta linea es naranja, entonces multiplicamos por 1000.
+
+3. y la última banda es roja por lo tanto tiene una tolerancia de 2%.
+
+Entonces esta resistencia es de 154k\Omega con tolerancia de \pm2%.
+#+END_DEMONSTRATION
+
+[[https://unicrom.com/tolerancia-valores-normalizados-de-resistores-resistencias/][Más información]] 
+* Convertir estrella a delta
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 7cm
+#+ATTR_HTML: :width 256px :align center
+[[file:img/11.png]]
+#+END_CENTER
+
+\[ \begin{aligned}
+R_A &= \frac{R_1R_2 + R_2R_3 + R_3R_1}{R_1} \\
+R_B &= \frac{R_1R_2 + R_2R_3 + R_3R_1}{R_2} \\
+R_C &= \frac{R_1R_2 + R_2R_3 + R_3R_1}{R_3} \\
+\end{aligned} \]
+#+END_DEMONSTRATION
+
+#+BEGIN_SRC python :exports none
+  def estrella_delta(r1,r2,r3):
+      a = r1*r2 + r2*r3 + r3*r1
+      return ((" a", a),
+              ("RA", a/r1),
+              ("RB", a/r2),
+              ("RC", a/r3))
+
+  return estrella_delta(2,4,5.8841)
+#+END_SRC
+
+* Convertir delta a estrella
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 7cm
+#+ATTR_HTML: :width 256px :align center
+[[file:img/11.png]]
+#+END_CENTER
+
+\[ \begin{aligned}
+R_1 &= \frac{R_CR_B}{R_a+R_b+R_c} & R_2 &= \frac{R_CR_A}{R_a+R_b+R_c} \\
+\end{aligned} \]
+
+\[
+R_3 = \frac{R_AR_B}{R_a+R_b+R_c}
+\]
+#+END_DEMONSTRATION
+
+#+BEGIN_SRC python :exports none
+
+  def delta_estrella(ra,rb,rc):
+      a = ra + rb + rc
+      print(" a", a)
+              ("R1", (rc*rb)/a ),
+              ("R2", (rc*ra)/a ),
+              ("R3", (ra*rb)/a ))
+
+  return delta_estrella(20,20,10)
+
+#+END_SRC
+
+* Ley de corrientes de Kirchhoff (LCK)
+Esta ley también es llamada ley de nodos o primera ley de Kirchhoff. La ley de corrientes de Kirchhoff nos dice que:
+
+#+BEGIN_QUOTE
+En cualquier nodo, la suma de la corriente que entra en ese nodo es igual a la suma de la corriente que sale. De igual forma, La suma algebraica de todas las corrientes que pasan por el nodo es igual a cero.
+#+END_QUOTE
+
+* Ley de tensiones ó ley de voltajes de Kirchhoff (LVK)
+Esta ley es llamada también Segunda ley de Kirchhoff, ley de lazos de Kirchhoff
+
+#+BEGIN_QUOTE
+En toda malla la suma de todas las caídas de tensión es igual a la tensión total suministrada. De forma equivalente, En toda malla la suma algebraica de las diferencias de potencial eléctrico es igual a cero.
+#+END_QUOTE
+* Divisor De Corriente
+** Explicación
+El divisor de corriente se aprovecha de las propiedades de la corriente en circuitos paralelos, en un circuito paralelo el voltaje se mantiene constante y la corriente se divide entre la resistencia, en palabras mas sencillas las terminales con mayor resistencia les corresponde mayor corriente y la suma de las corrientes en las terminales debe ser igual a la corriente de entrada.
+
+[[https://www.areatecnologia.com/electronica/divisor-de-corriente.html][Más información]]
+
+** Dos resistencias
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 6cm
+#+ATTR_HTML: :width 256px :align center
+[[file:img/24.png]]
+#+END_CENTER
+
+\[ \begin{aligned}
+I_1 = \frac{R_2 I_t}{R_1 + R_2} & ~ & I_2 = \frac{R_1 I_t}{R_1 + R_2} \\
+\end{aligned} \]
+
+#+END_DEMONSTRATION
+
+
+** N numero de resistencias
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 6cm
+#+ATTR_HTML: :width 350px :align center
+[[file:img/23.png]]
+#+END_CENTER
+
+
+\[ \begin{aligned}
+I_t = \sum_{n}{ \frac{R_t I_t}{ R_n} } & ~ & I_1 = \frac{R_t I_t}{R_1} \\
+\end{aligned} \]
+
+# + I_n, intensidad en el nodo n
+# + T_t, intensidad total del circuito.
+# + R_t, resistencia total.
+# + R_n, resistencia en el nodo n.
+
+#+END_DEMONSTRATION
+
+* Divisor de tension (voltaje)
+** Explicación
+El voltaje se divide entre las resistencia en serie. En un circuito en serie las resistencias de mayor valor absorben más voltaje.
+
+** Ecuaciones
+#+BEGIN_DEMONSTRATION
+
+#+BEGIN_CENTER
+#+attr_latex: :width 6cm
+#+ATTR_HTML: :width 256px :align center
+[[file:img/21.png]]
+#+END_CENTER
+
+\[ \begin{aligned}
+V_{sal} =  V_{ent} \left( \frac{ R_2 }{ R_1 + R_2 } \right) & ~ & 
+\end{aligned} \]
+
+
+#+END_DEMONSTRATION
+
+[[https://es.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-resistor-circuits/a/ee-voltage-divider][Más información]] | [[https://www.areatecnologia.com/electronica/divisor-de-tension.html][areatecnologia]]
