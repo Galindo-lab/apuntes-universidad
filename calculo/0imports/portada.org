@@ -1,0 +1,38 @@
+
+#+LANGUAGE: es
+
+#+OPTIONS: \n:nil num:nil toc:nil title:nil
+
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage{svg}
+#+LATEX_HEADER: \makeatletter
+#+latex_header: \usepackage{fancyhdr} 
+#+latex_header: \usepackage{fancyvrb}
+#+latex_header: \usepackage{tcolorbox}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Luis Eduardo Galindo Amaya}
+\rhead{Cálculo Multivariable}
+\cfoot{\thepage}
+
+#+BEGIN_EXPORT latex 
+
+\begin{titlepage}
+\centering
+{\bfseries\LARGE Universidad Autonoma \par de Baja California \par}
+\vfill
+{\scshape\Huge \@title \par}
+\vfill
+\begin{center}
+\includesvg[width=4cm]{./0imports/img/eigen}
+\end{center}
+\vfill
+{\Large Autor: \par}
+{\Large \@author \par}
+1274895
+\vfill
+{\Large \today \par}
+\end{titlepage}
+
+#+END_EXPORT

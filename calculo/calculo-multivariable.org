@@ -1,50 +1,17 @@
 
 #+TITLE:  Cálculo Multivariable
-#+Author: Luis E. Galindo A.
+#+SUBTITLE: Ayudantias
+
+#+Author: Luis Eduardo Galindo Amaya
 #+email:  egalindo54@uabc.edu.mx
+#+DATE:   [2022-03-19 sáb]
 
-#+LATEX_COMPILER: pdflatex
-#+LATEX_CLASS: article
-#+LATEX_CLASS_OPTIONS:
-#+LATEX_HEADER: \usepackage[spanish]{babel}
-#+LATEX_HEADER: \usepackage{svg}
-
-# C-c C-e #
-
-#+DESCRIPTION:
-#+KEYWORDS: 
-#+LANGUAGE: es
-#+DATE: \today
-
-#+OPTIONS: \n:nil num:2 toc:nil title:nil
-# title:nil toc:nil  
+#+INCLUDE: "./0imports/portada.org" 
+#+OPTIONS: num:2
+#+TOC: headlines 2
 
 #+MACRO: pagebreak @@latex: \pagebreak@@ 
 #+MACRO: vfill @@latex: \vfill@@ 
-
-#+BEGIN_EXPORT latex
-\begin{titlepage}
-\centering
-{\bfseries\LARGE Universidad Autonoma \par de Baja California \par}
-\vspace{1cm}
-{\scshape\Large Ingeniería en computación \par}
-\vspace{2cm}
-{\scshape\Huge Cálculo Multivariable \par}
-\vspace{2cm}
-{\itshape\Large Ayudantias Cálculo \par}
-\vfill
-\begin{center}
-\includesvg[width=4cm]{img/eigen}
-\end{center}
-\vfill
-{\Large Autor: \par}
-{\Large Luis E. Galindo Amaya \par}
-\vfill
-{\Large \today \par}
-\end{titlepage}
-#+END_EXPORT
-
-#+TOC: headlines 2
 
 #+BEGIN_CENTER
 {{{vfill}}}
