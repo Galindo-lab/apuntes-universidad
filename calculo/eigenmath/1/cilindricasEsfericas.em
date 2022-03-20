@@ -5,7 +5,6 @@ r = 1
 theta = 1
 z = 1
 
-
 rho = sqrt(r^2+z^2)
 theta = theta
 phi = arccos(z/rho)
@@ -15,3 +14,4 @@ float((r,theta,z))
 
 "Esferica (rho,theta,phi):"
 float((rho,theta,phi))
+
