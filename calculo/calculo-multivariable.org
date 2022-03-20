@@ -10,26 +10,42 @@
 #+OPTIONS: num:2
 #+TOC: headlines 2
 
+# Latex
 #+MACRO: pagebreak @@latex: \pagebreak@@ 
 #+MACRO: vfill @@latex: \vfill@@ 
 
-#+BEGIN_CENTER
-{{{vfill}}}
-https://galindosoft.neocities.org/eigen/
+# Información
+#+MACRO: repo https://github.com/Galindo-lab 
+#+MACRO: eigen https://galindosoft.neocities.org/eigen/
+#+MACRO: georgeweigt
+
+# #+BEGIN_CENTER
+# {{{vfill}}}
+# https://galindosoft.neocities.org/eigen/
 {{{pagebreak}}}
-#+END_CENTER
+# #+END_CENTER
 
 * Preámbulo
-Este es un trabajo en proceso, todavía no ha sido finalizado y todavía no ha sido revisado. Sí tienes alguna idea para alguna corrección puedes mandarme un correo a mi correo [[mailto:egalindo54@uabc.edu.mx][{{{email}}}]].
+Este es un trabajo en proceso, todavía no ha sido finalizado y todavía no ha sido revisado. Sí tienes alguna idea para alguna corrección puedes mandarme un correo a mi correo [[mailto:egalindo54@uabc.edu.mx][{{{email}}}]], Tambien puedes encontrar todas mis apuntes en mi repositorio: 
+
+- {{{repo}}}
 
 ** Sistema Algebraico Computacional
-Estos apuntes están hechos para usarse en conjunto con el software CAS de George Weigt, Eigenmath, intentaré pasar los apuntes a Maxima en el futuro por si algo llegara a pasar.
+Estos apuntes están hechos para usarse en conjunto con el software CAS de George Weigt, Eigenmath. Puedes acceder a la version web del programa en los siguientes enlaces:
 
-** Especificaciones
-- Todos los ángulos son en radianes.
-- Utilizaré la notación de subíndices al derivar, por ejemplo \(F_x\) es derivada de la variable 'x' y \(F_{xy}\) es la derivada de 'x' y luego la derivada de 'y'.
-- Cuando escriba un vector emplearé la notación \vec{A}, prefiero emplear las negritas a modo de énfasis.
-- Los diagramas que aparecen aquí son meramente orientativos, por lo tanto, pueden o pueden no representar los nombres de las variables que empleo para las explicaciones.
+- {{{eigen}}}
+- https://georgeweigt.github.io/eigenmath-demo.html
+
+** Documentacion De Eigenamth
+El código de ambos esta disponible bajo licencias libres, por lo que puedes modificar el software de la manera que veas conveniente. La documentacion de eigenamth la puedes encontrar en las siguientes paginas:
+
+- https://galindosoft.neocities.org/eigen/
+- https://georgeweigt.github.io/help.html
+
+** Códigos De Ejemplo
+En algunas unidades encontraras programas que te ayudara a resolver los problemas, recomiendo *NO* depender de estos para resolver los problemas, *NO* me hago responsable si los resultados obtenidos son incorrectos, igual todos los programas aquí pueden ser modificados y redistribuidos libremente si encuentras algun error o dejasen de funcionar en un futuro recomeindo hacermelos llegar por medio de mi github {{{repo}}} o por medio de mi correo institucional {{{email}}}
+
+{{{pagebreak}}}
 
 * Interpretar Un Plano
 ** Eje coordenado

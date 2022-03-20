@@ -58,7 +58,7 @@ labelfont=bf
 
 
 # decoraciones en la parte superior
-#+BEGIN_EXPORT latex :export none
+#+BEGIN_EXPORT latex 
  \pagestyle{fancy}
  \fancyhf{}
  \lhead{Luis Eduardo Galindo Amaya}
