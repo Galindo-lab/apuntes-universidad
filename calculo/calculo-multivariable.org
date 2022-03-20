@@ -241,6 +241,8 @@ El módulo de un vector es la longitud entre el inicio y el final del vector, po
 \vert\vec{A}\vert = \sqrt{ x^2 + y^2 + z^2 }
 \]
 
+\lstinputlisting[caption=Módulo del vector]{./eigenmath/2/modulo.em}
+
 *** Módulo del Vector Fuera Del Origen
 Hay ocasiones en las que tenemos un vector que no parte desde el origen de nuestra gráfica, para eso simplemente tenemos que restar al vector el punto de origen, por ejemplo sí tenemos un vector \(\vec{A} = (3,5,6)\) con origen en \(g = (5,6,3)\) simplemente las restamos:
 
@@ -255,6 +257,8 @@ De este modo podemos calcular la magnitud del vector independientemente de su or
 \vec{A} &= (-2,-1,3) \\
 \vert\vec{A}\vert &= \sqrt{14} \\
 \end{aligned} \]
+
+\lstinputlisting[caption=Módulo fuera el origen]{./eigenmath/2/moduloFueraOrigen.em}
 
 ** Producto Punto
 Para representar el producto punto usamos el operador \( \cdot \). Al producto punto también se le llama comúnmente producto escalar, ya que el resultado _siempre es una escalar_. Es producto punto en palabras sencillas es la suma de la multiplicación componente por componente:
@@ -272,6 +276,8 @@ Una propiedad muy importante que debemos tener en cuenta es su relación con los
 \[
  \vec{A}\cdot\vec{B} = \vert\vec{A}\vert\vert\vec{B}\vert \cos(\theta)
 \]
+
+\lstinputlisting[caption=Producto Punto]{./eigenmath/2/productoPunto.em}
 
 ** Producto Cruz
 El producto cruz al igual que el producto punto representa una operación que raciona dos vectores y sus magnitudes, su operador es \(\times\), a comparación del producto punto el resultado _No es un escalar_, el producto cruz siempre devuelve otro vector:
@@ -297,6 +303,8 @@ Al igual que el producto punto el producto cruz representa la relación geométr
 \vert \vec{A}\times\vec{B}\vert = \vert\vec{A}\vert\vert\vec{B}\vert \sin(\theta)
 \]
 
+\lstinputlisting[caption=Producto Cruz]{./eigenmath/2/productoCruz.em}
+
 ** Producto Mixto
 Se le conoce también como triple producto escalar, es la operación que combina el producto punto y el producto cruz[fn:resultado]:
 
@@ -307,6 +315,8 @@ Se le conoce también como triple producto escalar, es la operación que combina
   \vec{C_x} & \vec{C_y} & \vec{C_z}\\
 \end{pmatrix}
 \]
+
+\lstinputlisting[caption=Producto Mixto]{./eigenmath/2/productoMixto.em}
 
 [fn:resultado]El resultado es un escalar.
 
