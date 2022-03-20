@@ -1436,6 +1436,8 @@ Una integral doble definida, el resultado es el volumen sobre el área que va de
 & \left(y^2+\frac{1}{2}y \right) \biggr\rvert_{0}^{1} = \boxed{1u^3} \\
 \end{aligned} \]
 
+\lstinputlisting[caption=Integrales Dobles]{./eigenmath/6/integralesDobles.em}
+
 ** Área De Integración Rectangular
 Integrar algunas funciones nos permiten determinar algunas de las características del rango de integración, por ejemplo la si integramos '1' podemos determinar el área de la región de integración.
 
