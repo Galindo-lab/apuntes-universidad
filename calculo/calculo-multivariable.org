@@ -1150,6 +1150,8 @@ Una derivada parcial (\partial) es igual que la derivada normal, solamente que s
 \frac{\partial f}{\partial y} &=  \frac{\partial}{\partial y} 2xy = \underbrace{2x}_{f_y}
 \end{aligned} \]
 
+\lstinputlisting[caption=Derivadas Parciales]{./eigenmath/5/derivadasParciales.em}
+
 ** Derivadas Parciales De Orden Superior
 Cuando derivamos parcialmente obtenemos otra funcion, que igualmente podemos derivar respecto a otra variable, por ejemplo si tenemos la funcion \(f(x,y)=x^2y^3\) podemos derivarla respecto a 'x' o 'y':
 
@@ -1243,6 +1245,8 @@ Encontrar el gradiente de \(3x^4 - y^3 + x^2y^2+5 \):
     2x^2y - 3y^2 \\ 
 \end{bmatrix} } \]
 
+\lstinputlisting[caption=Gradiente]{./eigenmath/5/gradiente.em}
+
 ** Matriz Jacobiana
 La matriz Jacobiana de una función vectorial de varias variables es la matriz cuyos elementos son las derivadas parciales de primer orden de dicha función. 
 
@@ -1273,12 +1277,16 @@ Encontrar la matriz jacobiana de f:
 \end{bmatrix} }
 \end{aligned} \]
 
+\lstinputlisting[caption=Matriz Jacobiana]{./eigenmath/5/matrizJacobiana.em}
+
 ** Matriz Hessiana
 Es la matriz cuadrada de tamaño n \times n, de las segundas derivadas parciales. 
 
 \[
 \bold{H} f(x_n) = \bold{J}(\nabla f(x_n))
 \]
+
+\lstinputlisting[caption=Matriz Hessiana]{./eigenmath/5/matrizHessiana.em}
 
 ** Calcular Divergencia
 La divergencia mide la diferencia entre el flujo saliente y el flujo entrante de un campo vectorial sobre la superficie que rodea a un volumen de control:
@@ -1311,6 +1319,8 @@ diag(\bold{J} f) &= \begin{bmatrix}
     ~      &     ~    & xy^2 \\
 \end{bmatrix} \\ \nabla \cdot f &= \boxed{2xz^2-4yz^2 + xy^2}
 \end{aligned} \]
+
+\lstinputlisting[caption=Divergencia]{./eigenmath/5/divergencia.em}
 
 ** Calcular El Rotacional
 el rotacional o rotor es un operador vectorial sobre campos vectoriales definidos en un abierto de \mathbb{R}^{3} que muestra la tendencia de un campo vectorial a inducir rotación alrededor de un punto. 
@@ -1369,6 +1379,8 @@ Razón de cambio de la funcion \(f=x^2y^3-4y\), en el punto \(x=(1,2)\) sobre el
 &= \boxed{72}
 \end{aligned} \]
 
+\lstinputlisting[caption=Razón De Cambio Derivada Direccional (Formula 1)]{./eigenmath/5/razonCambioDerivadaDireccional1.em}
+
 *** Razón De Cambio Derivada Direccional (Formula 2)
 Razón de cambio de la funcion \(f=x^2y^3-4y\), en el punto \(x=(1,2)\) sobre el vector \(\vec{v}=(2,5)\)[fn:vector_unitario].
 
@@ -1398,6 +1410,8 @@ el resultado que obtuvimos es, por decirlo de algún modo, la parametrizacion de
 & (2500 t^4 + 4400 + t^3 + 2895 t^2 + 844 t + 72)|_{t=0} \\
 &= \boxed{72} \\
 \end{aligned} \]
+
+\lstinputlisting[caption=Razón De Cambio Derivada Direccional (Formula 2)]{./eigenmath/5/razonCambioDerivadaDireccional2.em}
 
 [fn:vector_unitario] Podemos simplificar los calculos utilizando el vector unitario.
 
