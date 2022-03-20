@@ -100,6 +100,9 @@ Las Coordenadas polares están compuestas de dos partes, un radio y un ángulo, 
 ** Rectangulares A Cilíndricas
 las coordenadas cilíndricas son una extensión al espacio de las coordenadas polares, por lo tanto, solo convertimos las coordenadas de los ejes 'x' y 'y' a polares y añadimos el eje de las 'z' sin hacer ningún cambio.
 
+\lstinputlisting[caption=Rectangulares A Cilíndricas R^3 ]{./eigenmath/1/rectangularesCilindricas1.em}
+\lstinputlisting[caption=Rectangulares A Polares ]{./eigenmath/1/rectangularesCilindricas2.em}
+
 ** Rectangulares A Esféricas
 Las coordenadas cilíndricas son otra forma de representar las coordenadas polares en el espacio, pero a comparación de las coordenadas cilíndricas ahora usamos dos ángulos para representar la dirección hacia la que apunta el vector: 
 
@@ -112,6 +115,8 @@ Las coordenadas cilíndricas son otra forma de representar las coordenadas polar
 - *Importante*
   1. El ángulo \phi (phi) *NO* necesita corrección.
   2. El ángulo \theta (theta) *Si* ocupa [[correcciones-theta][corrección]].
+
+\lstinputlisting[caption=Rectangulares A Esféricas]{./eigenmath/1/rectangularesEsfericas.em}
 
 ** Polares A Rectangulares
 La conversión de polares a rectangulares se puede hacer directamente con las siguientes fórmulas: 
@@ -132,6 +137,8 @@ Para esta conversión simplemente tenemos que hacer las siguientes sustituciones
  x = r \cos(\theta) && y = r \sin(\theta) && z = z \\
 \end{aligned}\] 
 
+\lstinputlisting[caption=Cilíndricas A Rectangulares]{./eigenmath/1/cilindricasRectangulares.em}
+
 ** Cilíndricas A Esféricas
 Para hacer esta conversión es necesario extender el radio a tres dimensiones y calcular el ángulo faltante, como ya tenemos el ángulo \theta (theta) no tenemos que hacer correcciones al ángulo.
 
@@ -140,6 +147,8 @@ Para hacer esta conversión es necesario extender el radio a tres dimensiones y 
  \theta = \theta  &&
  \phi = arccos\left( z/\rho \right) \\
 \end{aligned}\] 
+
+\lstinputlisting[caption=Cilindricas a esfericas]{./eigenmath/1/cilindricasEsfericas.em}
 
 ** Esféricas A Rectangulares
 Para esta conversión simplemente tenemos que hacer las siguientes sustituciones:
@@ -150,6 +159,8 @@ Para esta conversión simplemente tenemos que hacer las siguientes sustituciones
  z = \rho \cos(\phi) \\
 \end{aligned}\] 
 
+\lstinputlisting[caption=Esféricas A Rectangulares]{./eigenmath/1/esfericasRectangulares.em}
+
 ** Esféricas A Cilíndricas
 para convertir las coordenadas esféricas a cilíndricas tendremos que convertir el ángulo \phi (phi) a su coordenada cartesiana 'z':
 
@@ -158,6 +169,8 @@ para convertir las coordenadas esféricas a cilíndricas tendremos que convertir
  \theta = \theta &&
  z = \rho \cos(\phi) \\
 \end{aligned}\] 
+
+\lstinputlisting[caption=Esféricas A Cilíndricas]{./eigenmath/1/esfericasCilindricas.em}
 
 * Vectores
 Un vector es la representación matemática y gráfica de una magnitud vectorial. Consiste básicamente en una flecha o segmento rectilíneo orientado, es decir, con una determinada longitud, dirección y sentido, y que contiene toda la información de la magnitud que se está midiendo. Ejemplos de vectores: 
