@@ -10,12 +10,64 @@
 #+latex_header: \usepackage{fancyvrb}
 #+latex_header: \usepackage{tcolorbox}
 
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{Luis Eduardo Galindo Amaya}
-\rhead{Cálculo Multivariable}
-\cfoot{\thepage}
+# código
+# https://www.quora.com/What-is-the-best-way-to-embed-syntax-highlighted-code-snippets-in-LaTeX
+# https://es.overleaf.com/learn/latex/Code_listing
+# https://tex.stackexchange.com/questions/117531/styling-a-lstlisting-caption-using-caption-package
 
+#+latex_header: \usepackage{listings, caption, xcolor}
+
+#+BEGIN_EXPORT latex
+
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstset{    
+  backgroundcolor=\color{backcolour},   
+  frame=top,
+  frame=bottom,
+  numbers=left,
+  basicstyle=\ttfamily,
+  stepnumber=1,                           
+  numbersep=10pt,                         
+  tabsize=2,                              
+  extendedchars=true,                     
+  breaklines=true,
+  captionpos=t,   
+  mathescape=true,
+  stringstyle=\color{white}\ttfamily, 
+  showspaces=false,     
+  showtabs=false,       
+  xleftmargin=17pt,
+  framexleftmargin=17pt,
+%  framexrightmargin=17pt,
+  framexbottommargin=5pt,
+  framextopmargin=5pt,
+  showstringspaces=false,
+  numberstyle=\tiny\ttfamily
+ }
+
+\captionsetup[lstlisting]{
+format=listing,
+singlelinecheck=false, 
+margin=0pt,
+labelfont=bf
+}
+
+\renewcommand{\lstlistingname}{Programa}% Listing -> Algorithm
+#+END_EXPORT
+
+
+# decoraciones en la parte superior
+#+BEGIN_EXPORT latex :export none
+ \pagestyle{fancy}
+ \fancyhf{}
+ \lhead{Luis Eduardo Galindo Amaya}
+ \rhead{Cálculo Multivariable}
+ \cfoot{\thepage}
+#+END_EXPORT
+
+
+# Portada
 #+BEGIN_EXPORT latex 
 
 \begin{titlepage}
