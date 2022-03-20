@@ -785,6 +785,8 @@ Enontrar el plano entre los puntos \(A(3,2,1)\), \(B(-4,-1,1)\) y \(C(-5,-3,-1)\
   \boxed{6x - 14y + 11 - 1 = 0} 
 \]
 
+\lstinputlisting[caption=Plano Entre Tres Puntos]{./eigenmath/4/planoTresPuntos.em}
+
 ** Plano Que Pasa Por Un Punto Y Es Perpendicular Otro
 Hallar la ecuación del plano que pasa por el punto P=(1,2,2) y es perpendicular al plano de \(r:x-y+z=1\)
 
@@ -806,7 +808,7 @@ y formamos la ecuación de la recta con los valore obtenidos:
 \[ \begin{aligned}
 P&=(x_0,y_0,z_0) \\
 r \times P &= (x_1,y_1,z_1)
-\end{aligned}\]
+\end{aligned} \]
 
 sustituimos:
 
@@ -816,6 +818,8 @@ sustituimos:
 & -4x+4-y+2+3z-6 = 0 \\
 & \boxed{-4x-y+3z = 0}
 \end{aligned} \]
+
+\lstinputlisting[caption=Plano Que Pasa Por Un Punto Y Es Perpendicular Otro]{./eigenmath/4/planoPuntoPerpendicularOtro.em}
 
 ** Ángulos Entre Planos
 Encontrar el angulo entre dos planos es una tarea bastante trivial que se puede resolver con una simple formula:
@@ -854,6 +858,8 @@ y por ultimo despejamos el coseno:
      \alpha &= \arccos \frac{\sqrt{3}}{2} \\
             &= \boxed{30^\circ}
 \end{aligned} \]
+
+\lstinputlisting[caption=Ángulos Entre Planos]{./eigenmath/4/angulosEntrePlanos.em}
 
 ** Distancia De Un Punto A Una Recta En El Espacio
 La distancia de un punto a una recta es la longitud del segmento perpendicular a la recta, trazada desde el punto.
@@ -948,6 +954,8 @@ d &= \frac{|2(1) + 5(3) - 4(-2) + 7|}{\sqrt{2^2+5^2+(-4)^2}} \\
   &= \frac{|2+15+8+7|}{\sqrt{4+25+16}} \\
   &= \boxed{\frac{32}{\sqrt{45}}}
 \end{aligned} \]
+
+\lstinputlisting[caption=Distancia De Un Punto A Un Plano]{./eigenmath/4/distanciaPuntoPlano.em}
 
 ** Distancia Entre Rectas
 La primera cosa que debemos tomar en cuenta cuando deseamos encontrar la distancia es que tipo de funcion estamos midiendo, hay cuatro tipos principales de rectas
