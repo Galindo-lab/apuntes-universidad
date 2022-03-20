@@ -45,8 +45,6 @@ El código de ambos esta disponible bajo licencias libres, por lo que puedes mod
 ** Códigos De Ejemplo
 En algunas unidades encontraras programas que te ayudara a resolver los problemas, recomiendo *NO* depender de estos para resolver los problemas, *NO* me hago responsable si los resultados obtenidos son incorrectos, igual todos los programas aquí pueden ser modificados y redistribuidos libremente si encuentras algun error o dejasen de funcionar en un futuro recomeindo hacermelos llegar por medio de mi github {{{repo}}} o por medio de mi correo institucional {{{email}}}
 
-{{{pagebreak}}}
-
 * Interpretar Un Plano
 ** Eje coordenado
 Un eje coordenado es una sección en la que dividimos una región del plano para después numerarla, usualmente los llamamos 'x', 'y' y 'z'.
@@ -306,7 +304,7 @@ Al igual que el producto punto el producto cruz representa la relación geométr
 \lstinputlisting[caption=Producto Cruz]{./eigenmath/2/productoCruz.em}
 
 ** Producto Mixto
-Se le conoce también como triple producto escalar, es la operación que combina el producto punto y el producto cruz[fn:resultado]:
+Se le conoce también como triple producto escalar, es la operación que combina el producto punto y el producto cruz, el resultado es un escalar:
 
 \[
 \vec{A}\cdot(\vec{B}\times\vec{C}) = \det\begin{pmatrix}
@@ -318,8 +316,6 @@ Se le conoce también como triple producto escalar, es la operación que combina
 
 \lstinputlisting[caption=Producto Mixto]{./eigenmath/2/productoMixto.em}
 
-[fn:resultado]El resultado es un escalar.
-
 * Aplicaciones De Vectores
 ** Vector Unitario
 La característica fundamental del vector unitario es que su longitud siempre es igual a '1', no importa la dirección o el cuadrante mientras el módulo es igual a '1' entonces es unitario. El vector unitario es muy útil para determinar la dirección de un vector sin tener que tomar en cuenta su magnitud. Para calcularlo simplemente dividimos los valores de nuestro vector entre el módulo.
@@ -327,6 +323,8 @@ La característica fundamental del vector unitario es que su longitud siempre es
 \[ 
 \hat{A} = \frac{\vec{A}}{\vert\vec{A}\vert} 
 \]
+
+\lstinputlisting[caption=Vector Unitario]{./eigenmath/3/vectorUnitario.em}
 
 ** Ángulos Entre Vectores
 Si recordamos una de las propiedades del producto punto y el producto cruz es que representan la relación entre el ángulo y las magnitudes de los vectores:
@@ -342,6 +340,8 @@ Entonces si despejamos los vectores obtenemos las siguientes fórmulas:
 \sin(\theta) = \frac{|\vec{A}\times\vec{B}|}{|\vec{A}||\vec{B}|} \\
 \end{aligned} \]
 
+\lstinputlisting[caption=Ángulos Entre Vectores]{./eigenmath/3/anguloEntreVectores.em}
+
 ** Ángulos Directores
 Es aquel ángulo entre un vector y uno de los ejes (ya sea 'x', 'y' o 'z'), para calcularlo solo tenemos que medir el ángulo entre nuestro vector y el eje que nos interesa conocer:
 
@@ -355,7 +355,6 @@ Es aquel ángulo entre un vector y uno de los ejes (ya sea 'x', 'y' o 'z'), para
 #+caption: Ángulos directores de \(\vec{a}\).
 [[file:img/angulos-directores.svg]]
 
-
 *** Despeje Del Los Ángulos Directores:
 Estas fórmulas se despejan de la fórmula del producto punto, como es un vector unitario el eje los valores que no usamos se anulan automáticamente[fn:ad-pp]:
 
@@ -364,6 +363,8 @@ Estas fórmulas se despejan de la fórmula del producto punto, como es un vector
   cos(\alpha) &= \frac{a_x \cdot 1}{|\vec{a}| \cdot 1} \\
   cos(\alpha) &= \frac{a_x}{|\vec{a}|} \\
 \end{aligned} \]
+
+\lstinputlisting[caption=Ángulos Directores]{./eigenmath/3/angulosDirectores.em}
 
 [fn:ad-pp] También es posible usar el producto cruz para este procedimiento, pero por simplicidad se prefiere el producto punto.
 
@@ -386,6 +387,8 @@ Y esto es exactamente al valor del _producto cruz de dos vectores_:
   {|a \times b|=|a||b|\sin(\theta)}
 \]
 
+\lstinputlisting[caption=Área De Un Paralelogramo]{./eigenmath/3/areaParalelogramo.em}
+
 ** Área Del Triángulo
 Sabemos que el área del triángulo es igual al área de un rectángulo entre '2' también sabemos que el área del paralelogramo es su producto cruz, entonces para encontrar el área solo basta con divir el producto cruz entre '2':
 
@@ -395,6 +398,8 @@ Sabemos que el área del triángulo es igual al área de un rectángulo entre '2
 \[
 A = \frac{1}{2}|\vec{u}\times\vec{v}|
 \]
+
+\lstinputlisting[caption=Área Del Triángulo]{./eigenmath/3/areaTriangulo.em}
 
 ** Volumen De Un Paralelepípedo
 Si queremos extender el paralelogramo a R^3 obtendremos un paralelepípedo que, al igual que el paralelogramo, podemos formarlo simplemente con vectores y como conocemos sus propiedades es fácil determinar su volumen aplicando el producto mixto:
@@ -410,12 +415,16 @@ V = \vec{a}\cdot(\vec{b}\times\vec{c}) = \det\begin{pmatrix}
 \end{pmatrix}
 \]
 
+\lstinputlisting[caption=Volumen De Un Paralelepípedo]{./eigenmath/3/volumenParalelipedo.em}
+
 ** Volumen De Un Tetraedro
 Al igual que con el paralelepípedo el tetraedro es una forma de extender una figura del plano al espacio, en este caso el triángulo, el volumen del tetraedro es igual a una sexta parte del producto mixto:
 
 \[
 V = \frac{1}{6} \left( \vec{a}\cdot\left[\vec{b}\times\vec{c}\right] \right)
 \]
+
+\lstinputlisting[caption=Volumen De Un Tetraedro]{./eigenmath/3/volumenTetaedro.em}
 
 ** Determinar Sí Dos Vectores Son Ortogonales
 Dos vectores son ortogonales (perpendiculares), si su producto escalar equivale a cero.
