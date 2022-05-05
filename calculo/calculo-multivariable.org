@@ -25,6 +25,8 @@
 {{{pagebreak}}}
 # #+END_CENTER
 
+A lo largo de esta semana se añadieron más temas cubrir para el documento y se separaron los temas en unidades más concisas: 
+
 * Preámbulo
 Este es un trabajo en proceso, todavía no ha sido finalizado y todavía no ha sido revisado. Sí tienes alguna idea para alguna corrección puedes mandarme un correo a mi correo [[mailto:egalindo54@uabc.edu.mx][{{{email}}}]], Tambien puedes encontrar todas mis apuntes en mi repositorio: 
 
@@ -1415,6 +1417,94 @@ el resultado que obtuvimos es, por decirlo de algún modo, la parametrizacion de
 
 [fn:vector_unitario] Podemos simplificar los calculos utilizando el vector unitario.
 
+* Integrales Definidas Como Sumas De Riemman
+** De Una Sola Variable
+Cuando estudiamos calculo por primera vez aprendemos que la integral definida puede representar el area bajo la curva, con esta definicion en mente podemos hacer una aproximacion muy buena al area de una integral:
+
+\[
+\int_a^b f(x) \,dx ~ = ~ \lim\limits_{n \to +\infty } \sum_{i=1}^{n} f(x_i^*) \Delta x
+\]
+
+visto a simplemente se ve muy complicado pero realmente no lo es, estamos calculando la suma de multiples areas:
+
+La variable 'n' es la cantidad de sectores en lo que cortaremos nuestra funcion, si el valor fuera infinito el valor de nuestra funcion deberia ser exactamente igual al valor de la intergal pero por obvias razones no podemos evaluar infinito, podemos utilizar la 'formula de sumatoria' o un valor grande tambien nos puede servir.
+
+El velor '\(\Delta x\)' es la relacion de la pendiente con los sectores, podemos obtener el valor simplemente con la siguiente formula:
+
+\[
+\Delta x = \frac{b-a}{n}
+\]
+
+donde 'b' es el valor del limite superior de la integral, 'a' el limite inferior y 'n' el numero de itineraciones.
+
+Por ultimo '\(x_i^*\)' es el punto intermedio del valor a evaluar, dicho asi no es muy claro pero recordemos que lo unico que estamos haciendo es calcular el are de muchos rectangulos, asi que para obtener su altura medimos el valor en medio de los valores podemos medir los lados pero para mayor presicion se prefiere los valores centrales:
+
+\[
+x_i^* = a + \Delta x i
+\]
+
+igualmente 'a' es el limite inferior de la integral y 'i' es el itereador de la sumatoria.
+
+*** Ejemplo
+Explicado individualmente es bastante complicado, asi que haremos un ejemplo rapido:
+
+\[
+\int^2_1 3x+3 \,dx = 7.5
+\]
+
+lo primero seria elegir un numero arbitrario para el valor de iteraciones que haremos, yo usare 100, mientras mas grande el numero mas cercana nuestra aproximacion, igualmente podemos usar la formula de sumatoria. Ahora calculamos el valor de '\(\Delta x\)' y de '\(x_i^*\)' para poder continuar:
+
+\[ \begin{aligned}
+\Delta x &= \frac{2-1}{100} = \frac{1}{100}  \\
+x_i^* &= 1 + i\left( \frac{1}{100} \right) = 1 + \frac{i}{100}
+\end{aligned} \]
+
+ahora formamos nuestra sumatoria:
+
+\[
+\sum_{i=1}^{100} f\left( 1 + \frac{i}{100} \right)\left( \frac{1}{100} \right)
+\]
+
+y sustituimos f por nuetra funcion:
+
+\[ \begin{aligned}
+\sum_{i=1}^{100} \left( 3\left(1 + \frac{i}{100}\right) + 3 \right)\left( \frac{1}{100} \right) = \frac{1}{100}\sum_{i=1}^{100} \frac{3}{100}i+6 
+\end{aligned} \]
+
+y ahora si evaluamos nuestra funcion, podemos usar la formula de sumatoria o evaluar uno a uno, yo lo hice evaluando uno a uno y sumando:
+
+\[
+\frac{1}{100}\sum_{i=1}^{100} \frac{3}{100}i+6 = 7.515
+\]
+
+100 iteraciones son muy pocas realmente, pero sin duda es un muy buen aproximado al verdadero resultado de '7.5', si aumentamos el valor de 'n' podemos notar que el valor se aproxima todavia mas:
+
+\[
+\frac{1}{1000}\sum_{i=1}^{1000} \frac{3}{1000}i+6 = 7.5015
+\]
+
+** Con Dos Variabels
+Extender la suma de Riemman a partir de aquí no es mas complicado que añadir la cantidad de integrales necesarias:
+
+\[ \begin{aligned}
+\Delta x = \frac{b-a}{m} & ~  &  \Delta y = \frac{c-d}{n} \\
+\end{aligned} \]
+
+\[
+\int_c^d \int_a^b f(x,y) \,dx\,dy ~ = ~ \lim\limits_{(m,n) \to (\infty, \infty) } \sum_{j=1}^{n} \sum_{i=1}^{m} f(x_i^*, y_j^*) \Delta x \Delta y
+\]
+
+el resultado de la multiplicación de \(\Delta x \Delta y\) es una contante, por lo que una notacion mas comun para esta expresion es:
+
+\[
+\Delta A = \Delta x \Delta y
+\]
+
+\[
+\lim\limits_{(m,n) \to (\infty, \infty) } \sum_{j=1}^{n} \sum_{i=1}^{m} f(x_i^*, y_j^*) \Delta A
+\]
+
+
 * Integrales De Multiples Variables O Iteradas
 ** Integrales Dobles
 Las integrales dobles son una manera de integrar sobre una región bidimensional. Entre otras cosas, nos permiten calcular el volumen bajo una superficie.\\
@@ -1699,6 +1789,52 @@ El centro de masas de un sistema discreto o continuo es el punto geométrico que
 # ** TODO Integral de una funcion vectorial
 
 {{{pagebreak}}}
+* Estrategias Para Limites De Integrales
+Anteriormente en calculo integral aprendimos que podemos usar la grafica para determinar el area de nuestro interes, sin embargo cuando usamos integrales dobles requrimos un analisis previo para simplificar nuestros limites
+
+** Integrales Cilindricas y Esfericas
+La primera parte del analisis que debemos considerar es sin duda la propia funcion, en calculo es muy normal tratar de calcular el area de funciones curvas, por ejemplo:
+
+\[
+\iint x^2 + y^2 \,dx \,dy \rightarrow \iint (r)r \,dr \,d\theta
+\]
+
+la conversion es sencilla ya que la identidad esta allí simplemente sustituimos, pero en algunas situciones la curva no se encuentra directanemente en la funcion, si no en sus limites.
+
+\[
+\int_0^1 \int_0^1 \int_0^{\sqrt{1-x^2}} 1 \,dy\,dx\,dz
+\]
+
+a simple vista no podemos intepretar la region de integracion, si leemos con detenimiento podemos notar que el limite superior de 'y' esta compuesto de todos los numeros del '0' hasta \(\sqrt{1-x^2}\) por lo tanto si graficamos su limite superior podemos obtener que se trata de un area circular de radio '1':
+
+\[
+y= \sqrt{1-x^2} ~ \rightarrow ~ y^2 + x^2 = 1
+\]
+
+el valor minimo de 'y' es 0 por lo que la region es la mitad de un circulo unitario, si continuamos con los limites de 'x' podemos notar que van de '0' hasta el '1' por lo que solo es necesaria la parte en el primer cuadrante y ahora que conocemos nuestros limites en forma de radianes y angulos podemos reescribir:
+
+\[
+\int_0^1 \int_0^{\pi/2} \int_0^1 (1)r \,dr\,d\theta\,dz
+\]
+
+en este caso en particular la función que elegi es muy sencilla, pero este proceso lo podemos repetir independientemente de la complejidad de nuestra función ya que lo unico que estamos haciendo es obtener unos limites equivalentes en otro sistema de cordenadas.
+
+
+** Girando funciones
+Otro caso particular de limites es cuando tenemos funciones como la siguiente:
+
+\[
+\int_e^f \int_c^d \int_a^b \sqrt{x^2 + z^2} \,dx\,dy\,dz
+\]
+
+podríamos intentar pasar la función a coordenadas polares pero, no hay ninguna sustitución posible o bueno al menos a primera vista, si sustituimos la variable 'z' con 'y', tambien tenemos que reacomodar las varaibles en la integral, podemos susituir por la variable 'r':
+
+\[
+\int_c^d \int_e^f \int_a^b \sqrt{x^2 + y^2} \,dx\,dz\,dy 
+\]
+
+graficamente lo que estamos haciendo es rotar sobre el eje 'z', ambas integrales son equivalentes, solo se encuentran en ejes diferentes.
+
 * Funciones Vectoriales
 ** Aplicaciones de funciones vectoriales
 Una función vectorial es una funcion que trnaforma un numero real a un vector \(F: \mathbb{R} \to \mathbb{R}^3\), definida como \(F(t) = (x(t),y(t),z(t))\), las funciones vectoriales son muy utiles para describir movimientos en el espacio o para parametrizar algunas figuras.
