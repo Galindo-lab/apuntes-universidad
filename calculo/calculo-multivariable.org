@@ -1483,7 +1483,7 @@ y ahora si evaluamos nuestra funcion, podemos usar la formula de sumatoria o eva
 \frac{1}{1000}\sum_{i=1}^{1000} \frac{3}{1000}i+6 = 7.5015
 \]
 
-** Con Dos Variabels
+** Con Dos Variables
 Extender la suma de Riemman a partir de aquí no es mas complicado que añadir la cantidad de integrales necesarias:
 
 \[ \begin{aligned}
