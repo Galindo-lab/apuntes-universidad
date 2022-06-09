@@ -1,0 +1,29 @@
+\documentclass[10pt,a5paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+% https://texblog.org/2011/04/04/make-page-margins-visible/
+% \usepackage[showframe,margin=1cm]{geometry}
+\usepackage[margin=.9cm]{geometry}
+\usepackage{blindtext}
+\usepackage{import}
+\usepackage{amsmath}
+\pagenumbering{gobble} 
+
+\documentclass[tikz]{standalone}
+\usepackage{karnaugh-map}
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\bfseries\filcenter}{}{1em}{}
+
+\title{A5 paper size}
+\author{kostas}
+
+\begin{document}
+\import{sections/}{teoremas-de-multiples-variables.tex}
+\import{sections/}{numeros-binarios.tex}
+\import{sections/}{construccion-del-mapa-k.tex}
+
+  % \maketitle
+  % \blinddocument
+\end{document}
