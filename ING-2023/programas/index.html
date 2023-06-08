@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora de equivalencia económica</title>
+
+    <style>
+      body {
+          width: min(100% - 2rem, 520px);
+          margin-inline: auto;
+          margin-block: 7rem;
+          font-family: monospace;
+          line-height: 1.5em;g
+      }
+
+      input {
+          margin: 0.25em;
+      }
+
+      h2 {
+          margin-top: 3.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Calculadora de equivalencia</h2>
+
+    <br />
+    <br />
+
+    La equivalencia en el periodo de interes coresponde a: <br />
+    $<input type="number" id="resultado" readonly/>
+
+    <br />
+    <br />
+    <br />
+
+    <form>
+      <fieldset>
+        <legend>Parametros</legend> 
+
+        <label for="minimo">Periodo de inicio:</label>
+        <br />
+        <input type="number" id="minimo" name="minimo" placeholder="Inicio del flujo" />
+        <br />
+
+        <label for="maximo">Periodo final:</label>
+        <br />
+        <input type="number" id="maximo" name="maximo" placeholder="Final del flujo"/>
+        <br />
+        
+        <label for="Interes">Interes:</label>
+        <br />
+        <input type="number" id="interes" name="interes" placeholder="Tasa de interes"/>%
+        <br />
+
+        <label for="periodo">Periodo de interes:</label>
+        <br />
+        <input type="number" id="periodo" name="periodo" placeholder="Presente" />
+
+        <br />
+        <br />
+
+        <button type="button" onclick="generarEntradas()">Generar</button>
+        <button type="button" onclick="calculadoradeequivalencia()">
+          Calcular
+        </button>
+        <button type="button" onclick="limpiarFormulario()">
+          Eliminar Entradas
+        </button>
+        
+      </fieldset>
+
+    </form>
+
+    <!-- -->
+
+    <h2>Flujo ($)</h2>
+    <div id="entradas"></div>
+
+    <a href="https://github.com/Galindo-lab/calculadora-de-equivalencia">Código</a>
+
+    <script src="script.js"></script>
+    <script src="eco.js"></script>
+  </body>
+</html>

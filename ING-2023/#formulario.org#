@@ -1,0 +1,66 @@
+
+#+TITLE:  Formulario
+#+AUTHOR: Luis Eduardo Galindo Amaya
+#+DATE:   2023-03-03
+# --
+
+#+latex_header: \usepackage[margin=10mm,papersize={8.5in,11in}]{geometry}
+
+#+OPTIONS: toc:nil title:nil num:nil
+# Y si Dios es un michi grandote?
+
+* Formulario ingenierÃ­a econÃ³mica
+| / | <10>                         | <10>                       | <10>                             |
+|   | \(P\) = Cantidad inicial     | \(n\) = Numero de periodos | \(CB\) = cantidad Base           |
+|   | \(I\) = InterÃ©s             | \(A\) = Anualidad          | \(n\) = cantidad en el periodo n |
+|   | \(G\) = Gradiente aritmetico |                            |                                  |
+
+* COMMENT Variables
+- \(P\) = Cantidad inicial 
+- \(F\) = Cantidad final 
+- \(n\) = Numero de periodos
+- \(I\) = InterÃ©s
+- \(A\) = Anualidad
+- \(G\) = Gradiente aritmetico
+- \(C_n\) = Es la cantidad en el periodo n
+- \(CB\) = cantidad Base
+
+* Interes basico
+- \(F-P\) = Interes (I)
+- \(I / P\) = Tasa de interes (i)
+- \(100 \cdot i\) = Tasa de interes porcentual (i%)
+- \(F / (i+1)\) = Cantidad inicial (P)
+- \(P\cdot (i+ 1)\) = Cantidad final (F)
+
+* InterÃ©s simple
+- \(P\cdot(1+i\cdot n)\) = Futuro dado un presente (F)
+- \(F / (1+i\cdot n)\) = Presente dado un futuro (P)
+
+* InterÃ©s compuesto
+- \(P\cdot (1+i)^n\) = Futuro dado un presente (F/P)
+- \(F / (1+i)^n \) = Presente dado un futuro (P/F)
+
+* Anualidad
+- \(A~\frac{(1+i)^n-1}{i}\) = Futuro dado una anualidad (F/A)
+- \(A~\frac{(1+i)^n-1}{(1+i)^n\cdot i}\) = Presente dado una anualidad (P/A)
+- \(F~\frac{i}{(1+i)^n-1}\) = Anualidad dada un futuro (A/F)
+- \(P~\frac{(1+i)^n\cdot i}{(1+i)^n-1}\) = Anualidad dado un presente (A/P)
+
+* Gradiente aritmetico
+- \(\frac{C_n - CB}{n-1}\) = Gradiente (G)
+- \(G\left[\frac{(1+i)^n-i\cdot n-1}{i^2(1+i)^n}\right]\) = Presente dado un gradiente (P_G) (P/G)
+- \(G\left[\frac{1}{i}-\frac{n}{(1+i)^n-1}\right]\) = Anualidad dado un gradiente (A_G) (A/G)
+- \( G\left[ \frac{1}{i} \left( \frac{(1+i)^n-1}{i} - n \right) \right] \) = Futuro dado un gradiente (F_G) (F/G)
+
+* Convertir interÃ©s de un periodo a otro[fn:a]
+- \(i_a = (1+i)^k - 1 \)
+- \(i=(1+i_a)^{\frac{1}{k}}-1 \)  
+
+[fn:a] \(i_a\) con un periodo grande, \(i\) con periodo pequeÃ±o, \(k\) es la frecuencia entre los periodos
+
+* Evaluacion economica
+\[
+P = \frac{A}{i}
+\]
+
+A = anualidad que se repite por siempre

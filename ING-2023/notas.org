@@ -1,0 +1,9 @@
+
+#+TITLE:  *scratch*
+#+AUTHOR: 
+#+DATE:   2023-03-28
+# --
+
+#+OPTIONS: toc:nil ^:nil title:nil
+
+Usar clase abstracta en vez de interfaz

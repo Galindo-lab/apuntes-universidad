@@ -1,0 +1,859 @@
+                      ____________________________
+
+                          INGENIERÍA ECONÓMICA
+
+                       Luis Eduardo Galindo Amaya
+                      ____________________________
+
+
+                               2023-02-07
+
+
+Table of Contents
+_________________
+
+Toma de decisiones
+.. Ingeniería económica
+.. Principios de la ingeniera económica
+.. Aplicaciones de la ingeniera económica
+.. Proceso para la toma de decisiones en ingeniería económica
+Interés y equivalencia
+.. Interes
+.. Formulas para un periodo de interes
+.. Diferencia entre tasa de interes
+.. Equivalencia
+.. Interés simple e interés compuesto
+.. Diagramas de flujo de efectivo
+.. Desarrollo de la formula de interes compuesto
+.. Anualidad
+.. Gradiente aritmetico
+.. Combinacion de factores
+.. Equivalencias entre tasas de interes con diferentes periodos
+Evaluación económica
+.. Las alternativas se clasifican como
+.. Clasificacion de alternativas considerando el flujo de efectivo
+
+
+
+
+
+Toma de decisiones
+==================
+
+Ingeniería económica
+~~~~~~~~~~~~~~~~~~~~
+
+  se usa para evaluar proyectos, los antecedentes de la ingeniera
+  económica se remontan a los años 60, cuando los viejos conceptos
+  financieros y bancarios fueron aplicados en un ambiente industrial y
+  en el área productiva de las empresas. A este conjunto de técnicas
+  para la toma de decisiones monetarias se le llamo ingeniera económica.
+
+
+Principios de la ingeniera económica
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  + un dolar en el presente vale mas que un dolar en el futuro
+  + lo único que cuenta son la diferencia entre las alternativas
+  + no se toma un riesgo adicional si no existe una ganancia adicional
+
+  en el ambito de los negocios la ingeniería económica es necesaria por
+  que proporciona herramientas analíticas para tomar mejores decisiones
+  económicas
+
+  esto se logra al comprobar ciertas cantidades de dinero, que están en
+  distintos periodos de tiempo, a su valor equivalente en un solo
+  instante del tiempo, a su valor equivalente en un solo instante del
+  tiempo, debido a que toda la teoría se basa en la consideración que el
+  valor del dinero cambia atravez del tiempo.
+
+
+Aplicaciones de la ingeniera económica
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  + análisis de casos en el área productiva
+  + reemplazar equipos
+  + creación de plantas
+  + análisis de inflación
+  + toma de decisiones bajo riesgo
+
+
+Proceso para la toma de decisiones en ingeniería económica
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  + comprender el problema y definir el objetivo
+  + definir los posibles soluciones alternativas y realizar estimaciones
+    realistas.
+  + identificar los criterios de evaluación para la toma de decisiones
+  + evaluar cada alternativa aplicando un análisis de sensibilidad para
+    reforzar la evaluación
+  + elegir la mejor alternativa
+  + implementar la mejor solución
+  + vigilar los resultados
+
+
+Interés y equivalencia
+======================
+
+Interes
+~~~~~~~
+
+  es la manifestacion del valor del dinero en el
+  tiempo. Aritmeticamente, el interes que se paga se calcula como la
+  diferencia entre la cantidad final de dinero y la cantidad original.
+
+  \[ \text{Interés} = \text{Cantidad Final} - \text{Cantidad Original}
+  \]
+
+  Cuando el interés se expresa como porcentaje de la cantidad prestada
+  se conoce como *tasa de interés*
+
+  \[ \text{\text{tasa de interes}} =
+  \frac{\text{Interés}}{\text{Cantidad Original}} \cdot 100 \]
+
+
+Formulas para un periodo de interes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  \[ F = P*(i+1) \] \[ P = F/(i+1) \]
+
+  P = cantidad inicial F = cantidad final i = interes
+
+
+Diferencia entre tasa de interes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  la diferencia entre los conceptos de tasa de interes y tasa de
+  rendimiento es cuestion de perspectivas. Desde el prestatario se
+  emplea el termino *tasa de interes* mientras que para un inversionista
+  o ahorrador es mas adecuado *tasa de rendimiento*, en esta sitiacion
+  el termino *tasa de interes* tambien es correcto.
+
+
+Ejercicio 1
+-----------
+
+  Una persona solicita un préstamo de $20,000, para pagarlo por la
+  cantidad de $21,400 un año despues. Calcular la tasa de interes y la
+  tasa de interes anual que se debe pagar.
+
+  I = $1400
+
+  ,----
+  | CI = 20_000
+  | CF = 21_400
+  | I = CF - CI
+  | i = (I / CI) * 100
+  | 
+  | return [I, i]
+  `----
+
+
+Ejercicio 2
+-----------
+
+  Una empresa desea soliciar un préstamo por 40,000 a una taza de
+  interes de 9% anual, para adquirir un nuevo equipo. Calcular el
+  interes y la cantidad total a pagar despues de un año.
+
+  ,----
+  | CI = 40_000
+  | i = 9
+  | I = i * CI 
+  | 
+  | return [I, CI+I]
+  `----
+
+
+Ejercicio 3
+-----------
+
+  con una tasa de interes anual del 5%, calcular la cantidad que se
+  invirtio hace un año y el interes general, si despues del año se tiene
+  un monto de $2000
+
+
+Equivalencia
+~~~~~~~~~~~~
+
+  Al considerar el valor del dinero en el tiempo y la tasa de interés se
+  formula el concepto de equivalencia económica el cual implica que dos
+  cantidades diferentes de dinero en tiempos distintos tienen un mismo
+  valor económico
+
+
+Ejercicio 1
+-----------
+
+  Con una tasa de interes de un 10% anual:
+
+
+* una cantidad de $100 hoy, ¿a cuanto equivale dentro de un año?
+
+  $100 de hoy equivalen a $110 dentro de un año
+
+
+* una cantidad de $100 hoy, ¿a cuanto equivale hace un año?
+
+  $100 de hoy equivalian a $90.90 de hace un año
+
+
+Interés simple e interés compuesto
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Se habla de interés simple y compuesto en el momento en el que se
+  considera mas de un periodo de interés
+
+  Interes simple
+        se calcula sobre la cantidad original e ignora cualquier interes
+        generado en periodos anteriores.
+
+  Interes compuesto
+        es un interes sobre el interes. Es decir, se calcula sobre la
+        cantidad original y la cantidad de interes acumulada en periodos
+        anteriores.
+
+  el monto del interés simple crece de forma aritmética puesto que su
+  función es lineal, sus incrementos son constantes y el interes del
+  primer año es igual al del ultimo año. El monto del interés compuesto
+  crece en forma geometrica, dado que su funcion es exponenecial.  Cada
+  periodo representa un incremento mayor al aumento del año pasado su
+  ecuacion es una linea curva que aciende a velocidades cada vez
+  mayores.
+
+
+Ejercicio 1
+-----------
+
+  Un ingeniero solicita un prestamo por $20,000 a la cooperativa de
+  credito de la empresa, con una taza de interes anual del 5%. Calcular
+  el interes simple y compuesto que se genera durante 3 años.
+
+   Año  Capital Solicitado ($)  Interes Generado ($)  Adeudo Total ($) 
+  ---------------------------------------------------------------------
+     0                  20,000  0                     0                
+     1                       0  1,000                 21,000           
+     2                       0  1,000                 22,000           
+     3                       0  1,000                 23,000           
+  ---------------------------------------------------------------------
+                                Interes Total         *3,000*          
+  Table 1: Interes simple
+
+   Año  Capital Solicitado ($)  Interes Generado ($)  Adeudo Total ($) 
+  ---------------------------------------------------------------------
+     0                  20,000  0                     0                
+     1                       0  1,000                 21,000           
+     2                       0  1,050                 22,050           
+     3                       0  1,102.5               23,152.5         
+  ---------------------------------------------------------------------
+                                Interes Total         *3,152.5*        
+  Table 2: Interes compuesto
+
+  \pagebreak
+
+
+Ejercicio 2
+-----------
+
+  Hoy se realiza un deposito de $100,000 para retirarlos dentro de 5
+  años, con una tasa de interes del 20% anual. Calcula el interes simle
+  y compuesto:
+
+   Año  Capital Depositado ($)  Interes Generado ($)  Total ($)  
+  ---------------------------------------------------------------
+     0                 100,000  0                     0          
+     1                       0  20,000                120,000    
+     2                       0  20,000                140,000    
+     3                       0  20,000                160,000    
+     4                       0  20,000                180,000    
+     5                       0  20,000                200,000    
+  ---------------------------------------------------------------
+                                Interes total         *100,000*  
+  Table 3: Interes simple que se obtendra dentro de 5 años
+
+
+   Año  Capital Depositado ($)  Interes Generado ($)  Total ($)  
+  ---------------------------------------------------------------
+     0                 100,000  0                     0          
+     1                       0  20,000                120,000    
+     2                       0  24,000                144,000    
+     3                       0  28,800                172,800    
+     4                       0  34,560                207,360    
+     5                       0  41,472                *248,832*  
+  ---------------------------------------------------------------
+                                Interes Total         148,832    
+  Table 4: Interes compuesto dentro de 5 años:
+
+
+Diagramas de flujo de efectivo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  son una herramienta visual que describe el flujo de efectivo en un
+  periodo determinado. Los flujos estan determinados por las entradas y
+  salidas de efectivo. Las entradas de efectivo se representan por medio
+  de un signo positivo y con un signo negativo se señalan las
+  salidas[1]. Por lo tanto el flujo neto de efectivo en el tiempo \(t\)
+  queda determinado por:
+
+  \[FNE_t = Entradas_t - Salidas_t\]
+
+  Ocasionalmente los flujos de efectivo ocurren en puntos variables del
+  tiempo dentro de un periodo de interés para simplificar el análisis se
+  adopta un supuesto, convención final de periodo de interés, este
+  supuesto implica que todos los flujos de efectivo ocurren al final del
+  periodo de interes de tal manera que si varias entradas o salidas de
+  efectivo se realizan dentro de un periodo de interes determinado, se
+  supone que el flujo neto de efectivo ocurre al final del periodo[2].
+
+  <file:.png>
+
+
+Ejercicios
+----------
+
+  Realice los diagramas de flujo de efectivo correspondientes para las
+  siguientes situaciones:
+
+  - a) Una persona solicita un prestamo de $15,000 que pagara dentro de
+    5 años con una taza de interes con una taza de interes de %10 anual.
+
+  <file:./img/incisoa.png>
+
+
+  - b) La compañia ha decidido, hoy y en los proximos 4 años siguientes
+    gastar $50,000 en sistemas de seguridad se desea conocer la cantidad
+    equivalente de estos gastos al final del cuarto año considerando una
+    tasa del 12% anual.
+
+  <file:./img/incisob.png>
+
+
+  - c) Un padre desea depositar una cantidad dentro de dos
+    años. suficiente para retirar dentro de tres años 4000 anuales pos 5
+    años. Conciderando una tasa de interes del %15.
+
+  <file:img/incisoc.png>
+
+
+  - d) Una empresa de alquiler de equipos gasto $25,000 en una
+    compresora hace 7 años. Por alquiler de la compresora, se obtiene un
+    ingreso anual de $7,500 los gastos de mantenimiento durante el
+    primer año fueron de $1,000 y aumentaron en $250 cada año. La
+    empresa desea vender la compresora por $1,500 al final del proximo
+    año.
+
+  <file:img/incisod.png>
+
+
+Desarrollo de la formula de interes compuesto
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  \[ \begin{aligned} F_1 &= P(1+i) \\ F_2 &= F_1(1+i) = P(1+i)(1+i) =
+  P(1+i)^2 \\ F_3 &= F_2(1+i) = P(1+i)(1+i)(1+i) = P(1+i)^3
+  \end{aligned} \]
+
+   Futuro dado un presente            Presente dado un futuro                          
+   \(F = P(1+i)^n = P(F/P, i\%, n)\)  \(P = F \left[1/(1+i)^n\right] = F(p/f, i\%,n)\) 
+
+
+Ejercicios
+----------
+
+  - a) Una persona espera recibir una herencia dentro de 5 años por un
+    total de $50,000 si la tasa de interés es del 12% cada año calcular
+    la cantidad equivalente al día de hoy.
+
+  <file:img/ejerccio1.png>
+
+  una herencia de $50,000 en 5 años equivale actualmente a $28,371.34
+  con una tasa del %12.
+
+  - b) Un ingeniero resivio un bono de $12,000 que desea invertir
+    ahora. quiere calcular un valor equivalente despues de 24 años,
+    cuando planea usar todo el dinero resultante como enganche para una
+    casa. Suponga una tasa de retorno de 8% durante los 24 años,
+    calcular el monto que podra usar de enganche por la inversion.
+
+  <file:wdqweewq.png>
+
+  Un inversion de $12,000 hoy, generaria un monto de $76,094.17 a 24
+  años considerando una tasa de rendimiento de 8% en el futuro que podra
+  utilizar en el enganche de la casa
+
+
+Anualidad
+~~~~~~~~~
+
+  Es un *conjunto de pagos iguales realizados en intervalos iguales de
+  tiempo*[3]. También se le conoce como serie uniforme, flujo constante,
+  renta, mensualidad etc... Ejemplos:
+
+  - Pagos mensuales por renta
+  - Abonos a crédito
+  - Pagos de sueldos
+
+
+Ejercicio
+---------
+
+  ¿Cuanto dinero se debe invertir hoy?, para que en cada año se retiren
+  cada año $600 durante los proximos 9 años, el inicio de los retiros
+  comienza el proximo año suponer una tasa de rendimiento del 16%
+
+  <file:img/anualidad_1.png>
+
+  se debe invertir hoy 2763.9263 para cada año podamos retirar 600 cada
+  año por los proximos 9 años a una tasa de 16%
+
+
+TODO Formula de la anualidad
+----------------------------
+
+  \[ P = A\left[ \frac{1}{1+i} \right] + A\left[ \frac{1}{(1+i)^2}
+   \right] + ... + A\left[ \frac{1}{(1+i)^{n-1}} \right] + A\left[
+   \frac{1}{(1+i)^{n}} \right] \]
+
+  \[ P = A\left[ \frac{1}{1+i} + \frac{1}{(1+i)^2} + ... +
+   \frac{1}{(1+i)^{n-1}} + \frac{1}{(1+i)^{n}} \right] \]
+
+  \[ \frac{1}{1+i} P = A\left[ \frac{1}{(1+i)^2} + \frac{1}{(1+i)^3} +
+  ... + \frac{1}{(1+i)^{n-1}} + \frac{1}{(1+i)^{n}} \right] \]
+
+
+  Presente dado una anualidad: \[ xP = A\frac{(1+i)^n-1}{i(1+i)^n} =
+  A(P/A, i\%, n) \]
+
+
+  Anualidad dada un presente: \[ A = P\frac{i(1+i)^n}{(1+i)^n-1} =
+  P(A/P, i\%, n) \]
+
+
+TODO Ejericio 2
+---------------
+
+  Una empresa requiere de un equipo para producir que cuesta
+  $3,400,000. La empresa espera tener una tasa de rendimiento del 20% y
+  recuperar su inversion dentro de 8 años. ¿Cual debe ser la ganacia
+  total neta?
+
+  <file:fgabvcvn.png>
+
+
+  por 8 años se esperan ganacias de $886,072.04 para recupera la
+  inversion para la compra del equipo de produccion
+
+
+TODO Futuro dado una anualidad
+------------------------------
+
+  \[ F=A\left[\frac{(1+i)^n-1}{i}\right] = A(F/A, i\%, n) \]
+
+
+TODO Anualidad dado un futuro
+-----------------------------
+
+
+Ejercicio
+---------
+
+  - el presidente de una compañia desea saber el valor futuro
+    equivalente de una inversion por un millon por cada año por 8 años
+    emepzando el proximo año, la inversion gana una tasa de 14% al año
+
+  por una inversion de 1 millon anual por 8 años es equivalente a
+  $13,232760.16 en el octavo año con una tasa de %14
+
+  - ¿cuanto dinero se encesita depositar cada año?, para que se pueda
+    acumular 6000 en 7 años con una tasa de interes de 5.5% por año y
+    los depositos inician el proximo año
+
+  cada año necesia depocitar 725.79 cada año por 7 años para acumular
+  cantidad de $6000 en 7 años considerando una tasa de 5.5%
+
+
+Gradiente aritmetico
+~~~~~~~~~~~~~~~~~~~~
+
+  Es el cambio aritmetico de margnitud constante, ya sea por ingresos o
+  desembolsos, de un periodo al siguiente el gradiente aritmetico se
+  calcula:
+
+  \[ G = \frac{C_n - CB}{n-1} \]
+
+  C_n
+        es la cantidad en el periodo n
+  CB
+        cantidad Base
+
+
+Presente dado un gradiente
+--------------------------
+
+  \[ P_G = G\left[ \frac{ (1+i)^n - in-1 }{ i^2 (1+i)^n } \right] =
+  G(p/g, i\%, n) \]
+
+
+Anualidad dado un gradiente
+---------------------------
+
+  \[ P =A\left[ \frac{(1+i)^n - 1}{i(1+i)^n} \right] \]
+
+  \[ A_G = \left[ \frac{(1+i)^n-1}{i(1+i)^n} \right]= G \left[
+  \frac{(1+i)^n-i\cdot n-1}{i^2 (1+i)^n} \right] \]
+
+  \[ A_G\left[ (1+i)^n-1 \right] = G\left[ \frac{(1+i)^n -
+  in-1}{i^2(1+i)^n} \right] (i(1+i)^n) \]
+
+  \[ A_G\left[(1+i)^n-1\right] = G\left[ \frac{(1+i)^n - in - 1}{i}
+  \right] \]
+
+
+  \[ A_G = \frac{G}{i} [ \frac{ (1+i)^n - 1 - in }{ (1+i)^n - 1} ] \]
+
+  \[ A_G= \frac{G}{i} [ 1 - \frac{in}{ (1+i)^n - 1} ] \]
+
+  \[ A_G = G \left[ \frac{1}{i} - \frac{n}{(1+i)^n-1}\right] =
+  G(A/G,i\%,n) \]
+
+
+Futuro dado un gradiente
+------------------------
+
+  \[ F_G = \left[ \frac{1}{(1+i)^n} \right] = G\left[
+  \frac{(1+i)^n-in-1}{i^2(1+i)^n} \right] \]
+
+  \[ F_G = G\left[ \frac{(1+n)^n - in - 1}{i^2(1+i)^n} \right] (1+i)^n
+  \]
+
+  \[ F_G = G \left[ \frac{(1+i)^n - in - 1}{i^2} \right] \]
+
+  \[ F_G = G \left[ (\frac{1}{i}) (\frac{(1+i)^n-1}{i} - n) \right] =
+  G(F/G,i\%, n) \]
+
+
+  presentes
+
+  P = P_A + P_G : gradiente cresiente P = P_A - P_G: gradiente
+  decresiente
+
+  futuros
+
+  F = F_A + F_G : gradiente cresiente F = F_A - F_G : gradiente
+  decresiente
+
+  Anualidad del gradiente
+
+  A = CB + A_G
+
+
+  para determinar el valor presente total (P) para una serie de
+  gradiente se debe considerar tanto el valor presente de la anualidad
+  de la serie de gradiente como el valor presente del valor del
+  gradiente.
+
+
+Ejercicio 1
+-----------
+
+  Se ha acordado ahorrar recursos para mantenimiento de
+  infraestructura. En el primer año se depositara $500,000 que
+  aumentarán en $100,000 para los siguentes 9 años, calcule el valor
+  presente con una tasa de interes del 5%:
+
+  <file:fsdfds.png>
+
+
+
+  Presente dado un gradiente
+
+  \[ P_G = 100,000 [ ((1+0.05)^{10} - 0.05*10 - 1) / ((0.05)^2
+  (1+0.05)^{10} ) ] = \$3165204.79 \]
+
+  \[ P_A =500,000 [ ((1+0.05)^{10} - 1) / ((0.05)(1+0.05)^{10}) ] =
+  \$3860867.47 \]
+
+  \[ \$3165204.79 + \$3860867.47 = \$7,026,072.25 \]
+
+  el valor presente de todos los depositos que se van a hacer durante
+  los proximos 10 años es de $7,026,072.25.
+
+
+Ejercicio 2
+-----------
+
+  Con la implementacion de una nueva maquinaria de produccion, se espera
+  ingresos en el primer año por $280,000. Tambien se piensa que estos
+  ingresos disminuiran deacuerdo con un gradiente arimetico de $50,000
+  por año. Cual es el valor anual uniforme de estos ingresos en 5 años
+  con una tasa anual de 12%.
+
+  $280 ^ $230
+   ^    $180 
+              ^    $130 
+                         ^    $80 
+                                   ^ 
+  --+-----+-----+-----+-----+--
+
+  anualidad dado un gradiente (gradiente decreciente):
+
+  50,000 * ( 1/0.12 - 5/((1+0.12)^5 - 1) ) = $88729.72512
+
+  A = 280,000 - 88729.72512 = 191270.2749
+
+  A = CB - A_G
+
+  el valor anual de estos ingresos a 5 años es de $191,270.2749 con una
+  tasa de interes del 12%
+
+
+tasa de interes y periodos desconocidos
+---------------------------------------
+
+  en algunos casos, para encontrar i o n desconocidos sera necesario
+  interpolar utilizando las tablas de factores.
+
+
+TODO ejercicio 1
+----------------
+
+  encuanto tiempo se triplicara 1000, si la tasa de interés es de 10%
+  anual
+
+
+ejercicio 2
+-----------
+
+  Comenzando el próximo año, se colocan 500 cada año en una cuenta de
+  amortización para cubrir reparaciones inesperadas en 15 años los
+  depósitos podrán cumplir reparaciones con un costo de $10,000. cual es
+  la tasa de rendimiento de esta cuenta
+
+  F = A(f/A, i%, n) 10,000 = 500 (F/A, i%, n) 10,000/500 = 20 = (F/A,
+  i%, n)
+
+  f_ma = (F/A, 4%, 15) = 20.0236 f_me = (F/A, 4%, 15) = 18.5989
+
+  V_ma = 4% V_me = 3%
+
+  i = 0.03 + [(20-18.5989)/(20.0236-18.5989)] (0.04-0.03) = 0.0398 =
+  3.98%
+
+  la tasa de rendimiento del 3.98% permitira que los depositos de 500
+  cada año por 15 años acumulen 10,000 en el año 15.
+
+
+Combinacion de factores
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Ejercicio 1
+-----------
+
+  Un consulto observó los registros de gastos de oficina de ahce 10
+  años, encontradno que ue se gosto 600 hace 10 años; hace 8 años se
+  gasto 300; y se gasto 400 hace 5 años. Se decea conocer el monto total
+  de estos gastos al dia de hoy, suponiendo una tasa de interes anual
+  del 5%.
+
+  F_600 = 600 * (F/P, 5%, 10) = 600(1.6289) = 977.34 F_300 = 300 * (F/P,
+  5%, 8) = 300(1.4775) = 443.25 F_400 = 400 * (F/P, 5%, 5) = 400(1.4775)
+  = 510.53
+
+  977.34 + 443.25 + 510.53 = $1931.11
+
+  el valor equivalente de los gastos de hace 10, 8 y 5 años en el
+  presente es de $1931.11
+
+
+Ejercicio 2
+-----------
+
+  un individuo quiere depositar desea depositar hoy una cantidad de
+  dinero. De tal modo que pueda retirar 2,000 cada año durante los
+  primeros 5 años del deposito. Despues del ultimo retiro de 2,000 se
+  contempla retirar una cantidad de 3000 anual en los 3 años
+  siguientes. determine la cantidad a depositar si la tasa de interes es
+  del 8.5% anual.
+
+  - P_2000 = A/F n:5 = 7881.28
+  - P_3000 =A/F n:3 = 7662.07
+  - P_5 = P/F = 7662.07(1/(1+0.085)^5) = 5095.6245
+  - P_2000 + P_5 = 7881.28 + 5095.6245 = 12,976.90
+
+  se necesita depositar 12,976.90 para retirar 2000 en los primeros 5
+  años y 3000 en los posteriores 3
+
+  - P = 2000 ( (1+0.085)^8-1 )/ (0.085*(1+0.085)^8) + 1000(
+    ((1+0.085)^3-1)/(0.085*(1+0.085)^5)) * 1/(1+0.085)^5 = 12,976.90
+
+
+Ejercicio 3
+-----------
+
+  se estimo el costo medio de una linea de ensamble por 8 años. Se
+  establecio que los costos anuales son de $100 en los primeros 4 años;
+  pero aumentaran gradualmente en $50 para cada año de los ultimos 4
+  años. ¿Cual es el valor actual de estos costos segun la tasa del 10%
+  anual?
+
+  contar la anualidad como 8 periodos nos hace tomar la anualidad en el
+  5
+
+                                           v P = 100 * (P/A. 10%, 8)+ 50
+  * (P/G, 10%, 5) * (P/F, 10%, 3) ^
+
+  presente dado un futuro, como la anualidad comienza en el 5 el
+  presente se encuentra en el 4 y el dinero se tiene que depostar en el
+  3
+
+
+  P = 791.25
+
+  el valor presente de todos los costos durante los proximos 8 años
+  equivale a 791.25
+
+
+Ejercicio 4
+-----------
+
+  Hoy se compra un equipo que presenta costos de mantenimiento anuales
+  por 8,000 durante 6 años, estos costos ocurriran 3 años despues de
+  hoy. Calcule el costo anual uniforme de mantenimiento para los 8 años
+  siguientes despues de aber adquirido el equipo considere una tasa del
+  16%
+
+  A = 8000 (P/A,16%,6) (P/F,16%,2) (A/P,16%,8) A = 8000 (F/A,16%,6)
+  (A/F,16%,8)
+
+  el costo anual de mantenimiento para los siguientes 8 años equivale a
+  $5043.60
+
+
+Ejercicio 5
+-----------
+
+  Hoy se solicita un financiamiento que consiste en pagar 20,000
+  anualmente durante 20 años iniciando el proximo año. adicionalmente se
+  pagan 10,000 dentro de 6 años y 15,000 dentro de 16 años si la tasa de
+  interes es de 16%, que cantidad de financiamiento se solicita
+
+  P = 20,000 (P/A,16%,20) + 10,000 (P/F,16%,6) + 15,000(P/F,16%,16)
+
+  P = $124,075
+
+  el valor inicial del financiamiento solicitado es de $124,075 el cual
+  se pagara en los proximos 20 años
+
+
+Ejercicio 6
+-----------
+
+  Encuentra el valor equivalente que tendria hoy, un flujo de efectivo
+  que reporta una anualidad de 1000 en los años 3, 4 y 5 ademas de otra
+  anualidad de 1500 en los años 9,10,11,12 y 13 con una tasa de interes
+  del 15%
+
+  P = 1000(P/A,15%,3) * (P/F, 15%, 2) + 1500(P/A,15%,5) * (F/P,15%,8) P
+  = 3370.08
+
+  ----------------------------------------------------------------------
+  el valor equivalente de todas las cantidades en el presente es
+  equivalente a 3370.08
+  ----------------------------------------------------------------------
+
+
+Ejercicio 7
+-----------
+
+  Cual es la cantidad anual que se deposita en los años 2,3,4,7,8 y 9,
+  que genera 60,000 en el noveno año, si la tasa de interes es de 8% al
+  año.
+
+  60000 = A(F/A,8%,3)(F/P,8%,5) + A(F/A,8%,3) 60000 =
+  A(F/A,8%,3)(F/P,8%,5) + A(F/A,8%,3)
+
+  60000 = a(8.0163) 60000/8.0163 = A = $7484.75
+
+  ----------------------------------------------------------------------
+  se ocupan depositar $7484.75 en los años 2,3,4,7,8 y 9 para tener
+  60,000 en el noveno año
+  ----------------------------------------------------------------------
+
+
+Equivalencias entre tasas de interes con diferentes periodos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  \(i_a = (1+i)^k - 1\) \(i = (1+i_a)^{\frac{1}{k}}-1 \)
+
+  i_a con un periodo grande y i sola la tasa de interes con un periodo
+  pequeño y k es la frecuencia entre los periodos de las tasas, es decir
+  es la cantidad de veces que el periodo pequeño se presente dentro del
+  periodo grande
+
+
+ejercicio
+---------
+
+  que cantidad equivalente debe pagarse en un año para saldar una deduda
+  de 6 prestamos bimestrales de 1500 con una tasa de interes del 13%
+  anual
+
+  1500 1500 1500 1500 ^ ^ ^ ^
+      
+  --+---+---+--...--+---+-- 0 1 2 5 6
+
+  v F
+
+  i=13% <- anual
+
+  i = (1+0.13)^(1/(12/2))-1 i = (1+0.13)^(1/6)-1 = 0.0205
+
+  2.05% <- bimestral
+
+  1500 * (F/A, 2.05%, 6) = $9474.05
+
+  ----------------------------------------------------------------------
+  Se debe pagar $9474.05 para saldar una deuda de 6 pagos bimestrales de
+  1500
+  ----------------------------------------------------------------------
+
+
+Evaluación económica
+====================
+
+Las alternativas se clasifican como
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Mutuamente excluyentes
+        compiten entre si durante el proceso de evaluación, solo una de
+        estas alternativas se puede seleccionar atraves del análisis
+        económico.
+
+  Independiente
+        son aquellas que no compiten entre si durante la evaluación,
+        pero cada una se compara con la opción de `no hacer nada', en
+        donde mas de una alternativa se puede elegir.
+
+
+Clasificacion de alternativas considerando el flujo de efectivo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  De ganancia
+        son alternativas qu contemplan costos, ingresos y hasta posibles
+        ahorros en sus flujos de efectivo.
+
+  De servicio
+        solo tienen costos en sus flujos de efectivo
+
+
+
+Footnotes
+_________
+
+[1] costos: cualquier desembolso de dinero.
+
+[2] si tu tasa de interes tiene una unidad diferente a la de tus
+periodos no puede realizarlos calculos con la formulas
+
+[3] estrictamente el concepto de anualidad proviene de años, pero en
+este caso llamaremos anualidad a todos los pagos realizados en
+intervalos iguales de tiempo.

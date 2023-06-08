@@ -1,0 +1,90 @@
+% Created 2023-03-14 mar 15:24
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[margin=10mm,papersize={8.5in,11in}]{geometry}
+\author{Luis Eduardo Galindo Amaya}
+\date{2023-03-03}
+\title{Formulario}
+\hypersetup{
+ pdfauthor={Luis Eduardo Galindo Amaya},
+ pdftitle={Formulario},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
+ pdflang={English}}
+\begin{document}
+
+
+\section*{Formulario ingeniería económica}
+\label{sec:org067f403}
+\begin{center}
+\begin{tabular}{lll}
+\(P\) = Cantidad inicial & \(n\) = Numero de periodos & \(CB\) = cantidad Base\\
+\(I\) = Interés & \(A\) = Anualidad & \(n\) = cantidad en el periodo n\\
+\(G\) = Gradiente aritmetico &  & \\
+\end{tabular}
+
+\end{center}
+
+\section*{Interes basico}
+\label{sec:orgb678703}
+\begin{itemize}
+\item \(F-P\) = Interes (I)
+\item \(I / P\) = Tasa de interes (i)
+\item \(100 \cdot i\) = Tasa de interes porcentual (i\%)
+\item \(F / (i+1)\) = Cantidad inicial (P)
+\item \(P\cdot (i+ 1)\) = Cantidad final (F)
+\end{itemize}
+
+\section*{Interés simple}
+\label{sec:org3a643ed}
+\begin{itemize}
+\item \(P\cdot(1+i\cdot n)\) = Futuro dado un presente (F)
+\item \(F / (1+i\cdot n)\) = Presente dado un futuro (P)
+\end{itemize}
+
+\section*{Interés compuesto}
+\label{sec:org631030c}
+\begin{itemize}
+\item \(P\cdot (1+i)^n\) = Futuro dado un presente (F/P)
+\item \(F / (1+i)^n\) = Presente dado un futuro (P/F)
+\end{itemize}
+
+\section*{Anualidad}
+\label{sec:org6c0f422}
+\begin{itemize}
+\item \(A~\frac{(1+i)^n-1}{i}\) = Futuro dado una anualidad (F/A)
+\item \(A~\frac{(1+i)^n-1}{(1+i)^n\cdot i}\) = Presente dado una anualidad (P/A)
+\item \(F~\frac{i}{(1+i)^n-1}\) = Anualidad dada un futuro (A/F)
+\item \(P~\frac{(1+i)^n\cdot i}{(1+i)^n-1}\) = Anualidad dado un presente (A/P)
+\end{itemize}
+
+\section*{Gradiente aritmetico}
+\label{sec:orgd0404ac}
+\begin{itemize}
+\item \(\frac{C_n - CB}{n-1}\) = Gradiente (G)
+\item \(G\left[\frac{(1+i)^n-i\cdot n-1}{i^2(1+i)^n}\right]\) = Presente dado un gradiente (P\textsubscript{G}) (P/G)
+\item \(G\left[\frac{1}{i}-\frac{n}{(1+i)^n-1}\right]\) = Anualidad dado un gradiente (A\textsubscript{G}) (A/G)
+\item \(G\left[ \frac{1}{i} \left( \frac{(1+i)^n-1}{i} - n \right) \right]\) = Futuro dado un gradiente (F\textsubscript{G}) (F/G)
+\end{itemize}
+
+\section*{Convertir interés de un periodo a otro\footnote{\(i_a\) con un periodo grande, \(i\) con periodo pequeño, \(k\) es la frecuencia entre los periodos}}
+\label{sec:org9b3a25f}
+\begin{itemize}
+\item \(i_a = (1+i)^k - 1\)
+\item \(i=(1+i_a)^{\frac{1}{k}}-1\)
+\end{itemize}
+\end{document}

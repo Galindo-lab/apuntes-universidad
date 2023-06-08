@@ -1,0 +1,2196 @@
+
+#+TITLE: Ingenieria Economica
+#+AUTHOR: Luis Eduardo Galindo Amaya
+#+DATE: 2023-02-07
+# -----
+
+#+OPTIONS: toc:2 ^:nil title:t num:nil
+#+PROPERTY: header-args :eval no
+
+
+* Toma de decisiones
+** Ingenieria Economica
+se usa para evaluar proyectos, los antecedentes de la ingeniera Economica se remontan a los periodos 60, cuando los viejos conceptos financieros y bancarios fueron aplicados en un ambiente industrial y en el area productiva de las empresas. A este conjunto de tأƒآ©cnicas para la toma de decisiones monetarias se le llamo ingeniera Economica.
+
+** Principios de la ingeniera Economica
++ Un dolar en el presente vale mas que un dolar en el futuro
++ Lo unico que cuenta son la diferencia entre las alternativas 
++ No se toma un riesgo adicional si no existe una ganancia adicional 
+
+en el ambito de los negocios la Ingenieria Economica es necesaria por que proporciona herramientas analأƒآ­ticas para tomar mejores decisiones Economicas
+
+esto se logra al comprobar ciertas cantidades de dinero, que estأƒآ،n en distintos periodos de tiempo, a su valor equivalente en un solo instante del tiempo, a su valor equivalente en un solo instante del tiempo, debido a que toda la teorأƒآ­a se basa en la consideraciأƒآ³n que el valor del dinero cambia atravez del tiempo.
+
+** Aplicaciones de la ingeniera Economica 
++ analisis de casos en el area productiva
++ reemplazar equipos
++ creaciأƒآ³n de plantas 
++ analisis de inflacion 
++ toma de decisiones bajo riesgo
+
+** Proceso para la toma de decisiones en Ingenieria Economica
++ comprender el problema y definir el objetivo
++ definir los posibles soluciones alternativas y realizar estimaciones realistas.
++ identificar los criterios de evaluaciأƒآ³n para la toma de decisiones
++ evaluar cada alternativa aplicando un analisis de sensibilidad para reforzar la evaluaciأƒآ³n 
++ elegir la mejor alternativa
++ implementar la mejor soluciأƒآ³n
++ vigilar los resultados
+
+* interes y equivalencia
+** Interes
+es la manifestacion del valor del dinero en el tiempo. Aritmeticamente, el interes que se paga se calcula como la diferencia entre la cantidad final de dinero y la cantidad original.
+
+\[
+\text{interes} = \text{Cantidad Final} - \text{Cantidad Original}
+\]
+
+Cuando el interes se expresa como porcentaje de la cantidad prestada se conoce como *tasa de interes* 
+
+\[
+\text{\text{tasa de interes}} = \frac{\text{interes}}{\text{Cantidad Original}} \cdot 100
+\]
+
+** Formulas para un periodo de interes
+#+BEGIN_mdframed
+\[ F = P*(i+1) \]
+\[ P = F/(i+1) \]
+
+P = cantidad inicial
+F = cantidad final 
+i = interes
+#+END_mdframed
+
+** Diferencia entre tasa de interes
+la diferencia entre los conceptos de tasa de interes y tasa de rendimiento es cuestion de perspectivas. Desde el prestatario se emplea el termino *tasa de interes* mientras que para un inversionista o ahorrador es mas adecuado *tasa de rendimiento*, en esta sitiacion el termino *tasa de interes* tambien es correcto.
+
+[fn:a] El termino tasa de interes se puede usar para perdidas o ganancias, pero el termino tasa de rendimiento es solo cuando ganas. 
+
+
+*** Ejercicio 1
+Una persona solicita un prأƒآ©stamo de $20,000, para pagarlo por la cantidad de $21,400 un periodo despues. Calcular la tasa de interes y la tasa de interes anual que se debe pagar. 
+
+I = $1400
+
+#+begin_src 
+CI = 20_000
+CF = 21_400
+I = CF - CI
+i = (I / CI) * 100
+
+return [I, i]
+#+end_src
+
+
+*** Ejercicio 2
+Una empresa desea soliciar un prأƒآ©stamo por 40,000 a una taza de interes de 9% anual, para adquirir un nuevo equipo. Calcular el interes y la cantidad total a pagar despues de un periodo.
+
+#+begin_src 
+CI = 40_000
+i = 9
+I = i * CI 
+
+return [I, CI+I]
+#+end_src
+
+*** Ejercicio 3
+con una tasa de interes anual del 5%, calcular la cantidad que se invirtio hace un periodo y el interes general, si despues del periodo se tiene un monto de $2000
+
+** Equivalencia
+Al considerar el valor del dinero en el tiempo y la tasa de interes se formula el concepto de equivalencia Economica el cual implica que dos cantidades diferentes de dinero en tiempos distintos tienen un mismo valor econأƒآ³mico
+
+*** Ejercicio 1
+    Con una tasa de interes de un 10% anual:
+
+**** una cantidad de $100 hoy, ¿a cuanto equivale dentro de un periodo?
+     $100 de hoy equivalen a $110 dentro de un periodo
+
+**** una cantidad de $100 hoy, ¿a cuanto equivale hace un periodo?
+     $100 de hoy equivalian a $90.90 de hace un periodo
+
+** interes simple e interes compuesto
+Se habla de interes simple y compuesto en el momento en el que se considera mas de un periodo de interes
+
+- Interes simple :: se calcula sobre la cantidad original e ignora cualquier interes generado en periodos anteriores.
+
+- Interes compuesto :: es un interes sobre el interes. Es decir, se calcula sobre la cantidad original y la cantidad de interes acumulada en periodos anteriores. 
+
+el monto del interes simple crece de forma aritmetica puesto que su funcion es lineal, sus incrementos son constantes y el interes del primer periodo es igual al del ultimo periodo. El monto del interes compuesto crece en forma geometrica, dado que su funcion es exponenecial.  Cada periodo representa un incremento mayor al aumento del periodo pasado su ecuacion es una linea curva que aciende a velocidades cada vez mayores.
+
+*** Ejercicio 1
+Un ingeniero solicita un prestamo por $20,000 a la cooperativa de credito de la empresa, con una taza de interes anual del 5%. Calcular el interes simple y compuesto que se genera durante 3 periodos. 
+
+#+caption: Interes simple
+|   | periodo | Capital Solicitado ($) | Interes Generado ($) | Adeudo Total ($) |
+| / | <3> |                   <10> | <10>                 | <10>             |
+|---+-----+------------------------+----------------------+------------------|
+|   |   0 |                 20,000 | 0                    | 0                |
+|   |   1 |                      0 | 1,000                | 21,000           |
+|   |   2 |                      0 | 1,000                | 22,000           |
+|   |   3 |                      0 | 1,000                | 23,000           |
+|---+-----+------------------------+----------------------+------------------|
+|   |     |                        | Interes Total        | *3,000*          |
+
+#+caption: Interes compuesto
+|   | periodo | Capital Solicitado ($) | Interes Generado ($) | Adeudo Total ($) |
+| / | <3> |                   <10> | <10>                 | <10>             |
+|---+-----+------------------------+----------------------+------------------|
+|   |   0 |                 20,000 | 0                    | 0                |
+|   |   1 |                      0 | 1,000                | 21,000           |
+|   |   2 |                      0 | 1,050                | 22,050           |
+|   |   3 |                      0 | 1,102.5              | 23,152.5         |
+|---+-----+------------------------+----------------------+------------------|
+|   |     |                        | Interes Total        | *3,152.5*        |
+
+\pagebreak
+
+*** Ejercicio 2
+    Hoy se realiza un deposito de $100,000 para retirarlos dentro de 5 periodos, con una tasa de interes del 20% anual. Calcula el interes simle y compuesto:
+
+#+caption: Interes simple que se obtendra dentro de 5 periodos
+|   | periodo | Capital Depositado ($) | Interes Generado ($) | Total ($) |
+| / | <3> |                   <10> | <10>                 | <10>      |
+|---+-----+------------------------+----------------------+-----------|
+|   |   0 |                100,000 | 0                    | 0         |
+|   |   1 |                      0 | 20,000               | 120,000   |
+|   |   2 |                      0 | 20,000               | 140,000   |
+|   |   3 |                      0 | 20,000               | 160,000   |
+|   |   4 |                      0 | 20,000               | 180,000   |
+|   |   5 |                      0 | 20,000               | 200,000   |
+|---+-----+------------------------+----------------------+-----------|
+|   |     |                        | Interes total        | *100,000* |
+
+
+#+caption: Interes compuesto dentro de 5 periodos:
+|   | periodo | Capital Depositado ($) | Interes Generado ($) | Total ($) |
+| / | <3> |                   <10> | <10>                 | <10>      |
+|---+-----+------------------------+----------------------+-----------|
+|   |   0 |                100,000 | 0                    | 0         |
+|   |   1 |                      0 | 20,000               | 120,000   |
+|   |   2 |                      0 | 24,000               | 144,000   |
+|   |   3 |                      0 | 28,800               | 172,800   |
+|   |   4 |                      0 | 34,560               | 207,360   |
+|   |   5 |                      0 | 41,472               | *248,832* |
+|---+-----+------------------------+----------------------+-----------|
+|   |     |                        | Interes Total        | 148,832   |
+
+** Diagramas de flujo de efectivo
+son una herramienta visual que describe el flujo de efectivo en un periodo determinado. Los flujos estan determinados por las entradas y salidas de efectivo. Las entradas de efectivo se representan por medio de un signo positivo y con un signo negativo se seأƒآ±alan las salidas[fn:aa]. Por lo tanto el flujo neto de efectivo en el tiempo \(t\) queda determinado por:
+
+\[FNE_t = Entradas_t - Salidas_t\]
+
+Ocasionalmente los flujos de efectivo ocurren en puntos variables del tiempo dentro de un periodo de interes para simplificar el analisis se adopta un supuesto, convenciأƒآ³n final de periodo de interes, este supuesto implica que todos los flujos de efectivo ocurren al final del periodo de interes de tal manera que si varias entradas o salidas de efectivo se realizan dentro de un periodo de interes determinado, se supone que el flujo neto de efectivo ocurre al final del periodo[fn:bb].
+
+#+begin_src plantuml :file my-diagram.png
+ditaa(--no-shadows, scale=1)
+                        20k
+                         ^
+                         |
+                         |
+ +---+---+---+---+---+---+---+---+---+---+   periodos
+-5  -4  -3  -2  -1   0   1   2   3   4   5
+             |   |
+             | 3k|
+             v   |
+                 | 5k
+                 v 
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: 
+#+RESULTS:
+[[file:.png]]
+
+
+*** Ejercicios
+Realice los diagramas de flujo de efectivo correspondientes para las siguientes situaciones:
+
+- a) Una persona solicita un prestamo de $15,000 que pagara dentro de 5 periodos con una taza de interes con una taza de interes de %10 anual.
+
+#+name: incisoa
+#+begin_src plantuml :file ./img/incisoa.png
+ditaa(--no-shadows,--no-separation, scale=1)
+  ^       
+  |       
+ 15000                         
+  |                             
+  |                             
+--+-----+-----+-----+-----+-----+-- periodos
+  0     1     2     3     4     5   
+                                |
+                                |
+                                |
+                                v
+                                F
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: i = 10% anual
+#+RESULTS: incisoa
+[[file:./img/incisoa.png]]
+
+
+- b) La compañia ha decidido, hoy y en los proximos 4 periodos siguientes gastar $50,000 en sistemas de seguridad se desea conocer la cantidad equivalente de estos gastos al final del cuarto periodo considerando una tasa del 12% anual.
+
+#+name: incisob.png
+#+begin_src plantuml :file ./img/incisob.png
+ditaa(--no-shadows,--no-separation, scale=1)
+                          F
+                          ^
+                          |
+                          |
+                          |   
+                          |   
+--o-----+-----+-----+-----+--  periodos
+  0     1     2     3     4  
+  |     |     |     |     |      
+  |     |     |     |     |
+  v     v     v     v     v
+ 50k   50k   50k   50k   50k
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: i = 12% anual
+#+RESULTS: incisob.png
+[[file:./img/incisob.png]]
+
+
+- c) Un padre desea depositar una cantidad dentro de dos periodos. suficiente para retirar dentro de tres periodos 4000 anuales pos 5 periodos. Conciderando una tasa de interes del %15.
+
+#+name: incisoc
+#+begin_src plantuml :file img/incisoc.png
+ditaa(--no-shadows,--no-separation, scale=1)
+                   4000  4000  4000  4000  4000
+                    ^     ^     ^     ^     ^
+                    |     |     |     |     |
+                    |     |     |     |     |
+--+-----+-----+-----+-----+-----+-----+-----+--  periodos
+  0     1     2     3     4     5     6     7
+              |
+              |
+              v
+              P
+#+end_src
+
+#+RESULTS: incisoc
+[[file:img/incisoc.png]]
+
+
+- d) Una empresa de alquiler de equipos gasto $25,000 en una compresora hace 7 periodos. Por alquiler de la compresora, se obtiene un ingreso anual de $7,500 los gastos de mantenimiento durante el primer periodo fueron de $1,000 y aumentaron en $250 cada periodo. La empresa desea vender la compresora por $1,500 al final del proximo periodo.
+
+#+name: incisod
+#+begin_src plantuml :file img/incisod.png
+ditaa(--no-shadows,--no-separation, scale=1)
+                                                 6250
+       6500  6250  6250  5750  5500  5250         ^
+        ^     ^     ^     ^     ^     ^    5000   |
+        |     |     |     |     |     |     ^     |
+        |     |     |     |     |     |     |     |
+--+-----+-----+-----+-----+-----+-----+-----+-----+--  periodos
+ -7    -6    -5    -4    -3    -2    -1     0     1
+  |
+  |
+  | 25k
+  v
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: insiso d
+#+RESULTS: incisod
+[[file:img/incisod.png]]
+
+
+[fn:aa] costos: cualquier desembolso de dinero.
+
+[fn:bb] si tu tasa de interes tiene una unidad diferente a la de tus periodos no puede realizarlos calculos con la formulas
+
+** Desarrollo de la formula de interes compuesto
+#+BEGIN_mdframed
+\[ \begin{aligned}
+F_1 &= P(1+i) \\
+F_2 &= F_1(1+i) = P(1+i)(1+i) = P(1+i)^2 \\
+F_3 &= F_2(1+i) = P(1+i)(1+i)(1+i) = P(1+i)^3 
+\end{aligned} \]
+
+|   | Futuro dado un presente           | Presente dado un futuro                          |
+| / | <20>                              | <20>                                             |
+|   | \(F = P(1+i)^n = P(F/P, i\%, n)\) | \(P = F \left[1/(1+i)^n\right] = F(p/f, i\%,n)\) |
+#+END_mdframed
+
+*** Ejercicios
+- a) Una persona espera recibir una herencia dentro de 5 periodos por un total de $50,000 si la tasa de interes es del 12% cada periodo calcular la cantidad equivalente al dأƒآ­a de hoy.
+
+#+name: img/ejerccio1
+#+begin_src plantuml :file img/ejerccio1.png
+ditaa(--no-shadows,--no-separation, scale=1)
+                                 $50,000
+                                   ^
+                                   |
+                                   |
+                                   |
+-----+-----+-----+-----+-----+-----+-----
+     0     1     2     3     4     5
+     |
+     |
+     v
+     P
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX:
+#+CAPTION: el valor P es igual a $28,371.34
+#+RESULTS: img/ejerccio1
+[[file:img/ejerccio1.png]]
+
+una herencia de $50,000 en 5 periodos equivale actualmente a $28,371.34 con una tasa del %12.
+
+- b) Un ingeniero resivio un bono de $12,000 que desea invertir ahora. quiere calcular un valor equivalente despues de 24 periodos, cuando planea usar todo el dinero resultante como enganche para una casa. Suponga una tasa de retorno de 8% durante los 24 periodos, calcular el monto que podra usar de enganche por la inversion.
+
+#+begin_src plantuml :file wdqweewq.png
+ditaa(--no-shadows,--no-separation, scale=1)
+                                    F
+                                    ^
+                                    |
+                                    |
+                                    |
+-----+-----+-----+----...-----+-----+--
+     0     1     2           23    24
+     |
+     |
+     v
+   $12,000
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX:
+#+CAPTION: F es igual a $76,094.17
+#+RESULTS:
+[[file:wdqweewq.png]]
+
+Un inversion de $12,000 hoy, generaria un monto de $76,094.17 a 24 periodos considerando una tasa de rendimiento de 8% en el futuro que podra utilizar en el enganche de la casa
+
+** Anualidad
+Es un *conjunto de pagos iguales realizados en intervalos iguales de tiempo*[fn:anualidad]. Tambiأƒآ©n se le conoce como serie uniforme, flujo constante, renta, mensualidad etc... Ejemplos:
+
+- Pagos mensuales por renta
+- Abonos a crأƒآ©dito
+- Pagos de sueldos
+
+[fn:anualidad] estrictamente el concepto de anualidad proviene de periodos, pero en este caso llamaremos anualidad a todos los pagos realizados en intervalos iguales de tiempo.
+
+*** Ejercicio
+¿Cuanto dinero se debe invertir hoy?, para que en cada periodo se retiren cada periodo $600 durante los proximos 9 periodos, el inicio de los retiros comienza el proximo periodo suponer una tasa de rendimiento del 16%
+
+#+name: img/anualidad_1
+#+begin_src plantuml :file img/anualidad_1.png
+ditaa(--no-shadows,--no-separation, scale=1)
+       600   600     600   600   600   600
+        ^     ^       ^     ^     ^     ^
+        |     |       |     |     |     |
+--+-----+-----+--...--+-----+-----+-----+
+  0     1     2       6     7     8     9
+  |
+  |
+  |
+  V
+  P
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: 
+#+CAPTION: Presente dado una anualidad ($2763.9263)
+#+RESULTS: img/anualidad_1
+[[file:img/anualidad_1.png]]
+
+se debe invertir hoy 2763.9263 para cada periodo podamos retirar 600 cada periodo por los proximos 9 periodos a una tasa de 16%
+
+*** TODO Formula de la anualidad
+\[
+ P = A\left[ \frac{1}{1+i} \right] + 
+     A\left[ \frac{1}{(1+i)^2} \right] + 
+     ... +
+     A\left[ \frac{1}{(1+i)^{n-1}} \right] + 
+     A\left[ \frac{1}{(1+i)^{n}} \right]  
+\]
+
+\[
+ P = A\left[ \frac{1}{1+i} + \frac{1}{(1+i)^2} + 
+     ... + \frac{1}{(1+i)^{n-1}} + \frac{1}{(1+i)^{n}} 
+    \right]  
+  \]
+
+ \[
+\frac{1}{1+i} P = A\left[ \frac{1}{(1+i)^2} + \frac{1}{(1+i)^3} + 
+     ... + \frac{1}{(1+i)^{n-1}} + \frac{1}{(1+i)^{n}} 
+    \right]  
+\]
+
+
+Presente dado una anualidad:
+\[
+xP = A\frac{(1+i)^n-1}{i(1+i)^n} = A(P/A, i\%, n)
+\]
+
+
+Anualidad dada un presente:
+\[
+A = P\frac{i(1+i)^n}{(1+i)^n-1} = P(A/P, i\%, n)
+\]
+
+*** TODO Ejericio 2
+Una empresa requiere de un equipo para producir que cuesta $3,400,000. La empresa espera tener una tasa de rendimiento del 20% y recuperar su inversion dentro de 8 periodos. ¿Cual debe ser la ganacia total neta?
+
+#+name: fgabvcvn
+#+begin_src plantuml :file fgabvcvn.png
+ditaa(--no-shadows,--no-separation, scale=1)
+           A     A     A       A     A
+           ^     ^     ^       ^     ^
+           |     |     |       |     |
+           |     |     |       |     |
+-----0-----1-----2-----3--...--7-----8--
+     |
+     |
+     |
+     v
+ $3,400,000 
+#+end_src
+
+
+por 8 periodos se esperan ganacias de $886,072.04 para recupera la inversion para la compra del equipo de produccion  
+
+# anualidad dada un presente
+
+*** TODO Futuro dado una anualidad
+\[ F=A\left[\frac{(1+i)^n-1}{i}\right] = A(F/A, i\%, n) \]
+
+*** TODO Anualidad dado un futuro
+*** Ejercicio
+- el presidente de una compañia desea saber el valor futuro equivalente de una inversion por un millon por cada periodo por 8 periodos emepzando el proximo periodo, la inversion gana una tasa de 14% al periodo
+
+#+BEGIN_mdframed
+por una inversion de 1 millon anual por 8 periodos es equivalente a $13,232760.16 en el octavo periodo con una tasa de 14%
+#+END_mdframed
+
+- ¿cuanto dinero se encesita depositar cada periodo?, para que se pueda acumular 6000 en 7 periodos con una tasa de interes de 5.5% por periodo y los depositos inician el proximo periodo
+
+#+BEGIN_mdframed
+cada periodo necesia depocitar 725.79 cada periodo por 7 periodos para acumular cantidad de $6000 en 7 periodos considerando una tasa de 5.5%
+#+END_mdframed
+
+** Gradiente aritmetico
+Es el cambio aritmetico de margnitud constante, ya sea por ingresos o desembolsos, de un periodo al siguiente el gradiente aritmetico se calcula:
+
+\[
+G = \frac{C_n - CB}{n-1}
+\]
+
+- C_n :: es la cantidad en el periodo n
+- CB :: cantidad Base
+
+*** Presente dado un gradiente
+
+\[
+P_G = G\left[ \frac{ (1+i)^n - in-1 }{ i^2 (1+i)^n } \right] = G(p/g, i\%, n)
+\]
+
+*** Anualidad dado un gradiente 
+\[
+P =A\left[ \frac{(1+i)^n - 1}{i(1+i)^n} \right]
+\]
+
+\[
+A_G = \left[ \frac{(1+i)^n-1}{i(1+i)^n} \right]= G \left[ \frac{(1+i)^n-i\cdot n-1}{i^2 (1+i)^n} \right]
+\]
+
+\[
+A_G\left[ (1+i)^n-1 \right] = G\left[ \frac{(1+i)^n - in-1}{i^2(1+i)^n} \right] (i(1+i)^n)
+\]
+
+\[
+A_G\left[(1+i)^n-1\right] = G\left[ \frac{(1+i)^n - in - 1}{i} \right]
+\]
+
+
+\[
+A_G = \frac{G}{i} [ \frac{ (1+i)^n - 1 - in }{ (1+i)^n - 1} ]
+\]
+
+\[
+A_G= \frac{G}{i} [ 1 - \frac{in}{ (1+i)^n - 1} ]
+\]
+
+\[
+A_G = G \left[ \frac{1}{i} - \frac{n}{(1+i)^n-1}\right] = G(A/G,i\%,n) 
+\]
+
+*** Futuro dado un gradiente
+
+\[
+F_G = \left[ \frac{1}{(1+i)^n} \right] = G\left[ \frac{(1+i)^n-in-1}{i^2(1+i)^n} \right]
+\]
+
+\[
+F_G = G\left[ \frac{(1+n)^n - in - 1}{i^2(1+i)^n} \right] (1+i)^n
+\]
+
+\[
+F_G = G \left[ \frac{(1+i)^n - in - 1}{i^2} \right]
+\]
+
+\[
+F_G = G \left[ (\frac{1}{i}) (\frac{(1+i)^n-1}{i} - n) \right] = G(F/G,i\%, n)
+\]
+
+
+#+name: 
+#+begin_src plantuml :file .png
+ditaa(--no-shadows,--no-separation, scale=1)
+
+                   ^ ^ ^ 
+      ^            | | | 
+   ^  |         ---------
+^  |  |          |
+|  |  |          v
+--------    =   P_A
+
+                       ^
+                     ^ |
+                   ^ | |
+                   | | |
+                ---------
+                 |
+                 v
+                P_G
+#+end_src
+
+presentes
+
+P = P_A + P_G : gradiente cresiente
+P = P_A - P_G: gradiente decresiente
+
+futuros
+
+F = F_A + F_G : gradiente cresiente
+F = F_A - F_G : gradiente decresiente
+
+Anualidad del gradiente
+
+A = CB + A_G 
+
+
+para determinar el valor presente total (P) para una serie de gradiente se debe considerar tanto el valor presente de la anualidad de la serie de gradiente como el valor presente del valor del gradiente.
+
+*** Ejercicio 1
+Se ha acordado ahorrar recursos para mantenimiento de infraestructura. En el primer periodo se depositara $500,000 que aumentaran en $100,000 para los siguentes 9 periodos, calcule el valor presente con una tasa de interes del 5%:
+
+#+name: fsdfds
+#+begin_src plantuml :file fsdfds.png
+ditaa(--no-shadows,--no-separation, scale=1)
+^ P
+|
+|
++-+-------+-------+--...--+-------+-------
+  1       2       3       9       10       
+  |       |       |       |       |
+  |       |       |       |       |
+  v       |       |       |       |
+ $500 ----+-------+-------+-------+---
+          v       |       |       |
+         $600     v       |       |
+                 $700     |       |
+                          |       |
+                          v $1,300,000
+                                  |
+                                  |
+                                  v $1,400,000
+#+end_src
+
+#+RESULTS: fsdfds
+[[file:fsdfds.png]]
+
+
+
+Presente dado un gradiente
+
+\[
+P_G = 100,000 [ ((1+0.05)^{10} - 0.05*10 - 1) / ((0.05)^2 (1+0.05)^{10} ) ] = \$3165204.79
+\]
+
+\[
+P_A =500,000 [ ((1+0.05)^{10} - 1) / ((0.05)(1+0.05)^{10}) ] = \$3860867.47
+\]
+
+\[
+\$3165204.79 + \$3860867.47 = \$7,026,072.25
+\]
+
+el valor presente de todos los depositos que se van a hacer durante los proximos 10 periodos es de $7,026,072.25.
+
+*** Ejercicio 2
+Con la implementacion de una nueva maquinaria de produccion, se espera ingresos en el primer periodo por $280,000. Tambien se piensa que estos ingresos disminuiran deacuerdo con un gradiente arimetico de $50,000 por periodo. Cual es el valor anual uniforme de estos ingresos en 5 periodos con una tasa anual de 12%.
+
+ $280   
+  ^    $230 
+  |     ^    $180
+  |     |     ^    $130
+  |     |     |     ^    $80
+  |     |     |     |     ^
+  |     |     |     |     |
+--+-----+-----+-----+-----+--
+
+anualidad dado un gradiente (gradiente decreciente):
+
+50,000 * ( 1/0.12 - 5/((1+0.12)^5 - 1) ) = $88729.72512
+
+A = 280,000 - 88729.72512 = 191270.2749
+
+A = CB - A_G
+
+el valor anual de estos ingresos a 5 periodos es de $191,270.2749 con una tasa de interes del 12%
+
+*** tasa de interes y periodos desconocidos
+en algunos casos, para encontrar i o n desconocidos sera necesario interpolar utilizando las tablas de factores.
+
+*** TODO ejercicio 1
+encuanto tiempo se triplicara 1000, si la tasa de interes es de 10% anual
+
+*** ejercicio 2
+Comenzando el proximo periodo, se colocan 500 cada periodo en una cuenta de amortizacion para cubrir reparaciones inesperadas en 15 periodos los depositos podrían cumplir reparaciones con un costo de $10,000. cual es la tasa de rendimiento de esta cuenta
+
+F = A(f/A, i%, n)
+10,000 = 500 (F/A, i%, n)
+10,000/500 = 20 = (F/A, i%, n)
+
+f_ma = (F/A, 4%, 15) = 20.0236
+f_me = (F/A, 4%, 15) = 18.5989
+
+V_ma = 4%
+V_me = 3%
+
+i = 0.03 + [(20-18.5989)/(20.0236-18.5989)] (0.04-0.03)  = 0.0398 = 3.98%
+
+la tasa de rendimiento del 3.98% permitira que los depositos de 500 cada periodo por 15 periodos acumulen 10,000 en el periodo 15.
+
+** Combinacion de factores
+*** Ejercicio 1
+Un consulto observأƒآ³ los registros de gastos de oficina de ahce 10 periodos, encontradno que ue se gosto 600 hace 10 periodos; hace 8 periodos se gasto 300; y se gasto 400 hace 5 periodos. Se decea conocer el monto total de estos gastos al dia de hoy, suponiendo una tasa de interes anual del 5%. 
+
+F_600 = 600 * (F/P, 5%, 10) = 600(1.6289) = 977.34
+F_300 = 300 * (F/P, 5%, 8) = 300(1.4775) = 443.25
+F_400 = 400 * (F/P, 5%, 5) = 400(1.4775) = 510.53
+
+977.34 + 443.25 + 510.53 = $1931.11
+
+el valor equivalente de los gastos de hace 10, 8 y 5 periodos en el presente es de $1931.11
+
+*** Ejercicio 2
+un individuo quiere depositar desea depositar hoy una cantidad de dinero. De tal modo que pueda retirar 2,000 cada periodo durante los primeros 5 periodos del deposito. Despues del ultimo retiro de 2,000 se contempla retirar una cantidad de 3000 anual en los 3 periodos siguientes. determine la cantidad a depositar si la tasa de interes es del 8.5% anual.
+
+- P_2000 = A/F n:5 = 7881.28
+- P_3000  =A/F n:3 = 7662.07
+- P_5 = P/F = 7662.07(1/(1+0.085)^5) = 5095.6245
+- P_2000 + P_5 = 7881.28 + 5095.6245 = 12,976.90
+
+se necesita depositar 12,976.90 para retirar 2000 en los primeros 5 periodos y 3000 en los posteriores 3
+
+- P = 2000 ( (1+0.085)^8-1 )/ (0.085*(1+0.085)^8) + 1000( ((1+0.085)^3-1)/(0.085*(1+0.085)^5)) * 1/(1+0.085)^5 = 12,976.90
+
+*** Ejercicio 3
+se estimo el costo medio de una linea de ensamble por 8 periodos. Se establecio que los costos anuales son de $100 en los primeros 4 periodos; pero aumentaran gradualmente en $50 para cada periodo de los ultimos 4 periodos. ¿Cual es el valor actual de estos costos segun la tasa del 10% anual?
+
+   contar la anualidad como 8 periodos nos hace tomar la anualidad en el 5
+                                         |
+                                         v
+P = 100 * (P/A. 10%, 8)+ 50 * (P/G, 10%, 5) * (P/F, 10%, 3)
+                                                         ^
+                                                         |
+presente dado un futuro, como la anualidad comienza en el 5  el presente se encuentra en el 4 y el dinero se tiene que depostar en el 3
+
+
+P = 791.25
+
+el valor presente de todos los costos durante los proximos 8 periodos equivale a 791.25
+
+*** Ejercicio 4
+Hoy se compra un equipo que presenta costos de mantenimiento anuales por 8,000 durante 6 periodos, estos costos ocurriran 3 periodos despues de hoy. Calcule el costo anual uniforme de mantenimiento para los 8 periodos siguientes despues de aber adquirido el equipo considere una tasa del 16%
+
+A = 8000 (P/A,16%,6) (P/F,16%,2) (A/P,16%,8)
+A = 8000 (F/A,16%,6) (A/F,16%,8)
+
+el costo anual de mantenimiento para los siguientes 8 periodos equivale a $5043.60
+
+*** Ejercicio 5
+Hoy se solicita un financiamiento que consiste en pagar 20,000 anualmente durante 20 periodos iniciando el proximo periodo. adicionalmente se pagan 10,000 dentro de 6 periodos y 15,000 dentro de 16 periodos si la tasa de interes es de 16%, que cantidad de financiamiento se solicita
+
+P = 20,000 (P/A,16%,20) + 10,000 (P/F,16%,6) + 15,000(P/F,16%,16)
+
+P = $124,075
+
+el valor inicial del financiamiento solicitado es de $124,075 el cual se pagara en los proximos 20 periodos 
+
+*** Ejercicio 6
+Encuentra el valor equivalente que tendria hoy, un flujo de efectivo que reporta una anualidad de 1000 en los periodos 3, 4 y 5 ademas de otra anualidad de 1500 en los periodos 9,10,11,12 y 13 con una tasa de interes del 15%
+
+P = 1000(P/A,15%,3) * (P/F, 15%, 2) + 1500(P/A,15%,5) * (F/P,15%,8)
+P = 3370.08
+
+-----
+el valor equivalente de todas las cantidades en el presente es equivalente a 3370.08
+-----
+
+*** Ejercicio 7
+Cual es la cantidad anual que se deposita en los periodos 2,3,4,7,8 y 9, que genera 60,000 en el noveno periodo, si la tasa de interes es de 8% al periodo.
+
+60000 = A(F/A,8%,3)(F/P,8%,5) + A(F/A,8%,3)
+60000 = A(F/A,8%,3)(F/P,8%,5) + A(F/A,8%,3)
+
+60000 = a(8.0163)
+60000/8.0163 = A = $7484.75
+
+-----
+se ocupan depositar $7484.75 en los periodos 2,3,4,7,8 y 9 para tener 60,000 en el noveno periodo
+-----
+
+** Equivalencias entre tasas de interes con diferentes periodos
+\(i_a = (1+i)^k - 1\)
+\(i = (1+i_a)^{\frac{1}{k}}-1 \)
+
+i_a con un periodo grande y i sola la tasa de interes con un periodo pequeños y k es la frecuencia entre los periodos de las tasas, es decir es la cantidad de veces que el periodo pequeños se presente dentro del periodo grande
+
+*** ejercicio
+que cantidad equivalente debe pagarse en un periodo para saldar una deduda de 6 prestamos bimestrales de 1500 con una tasa de interes del 13% anual
+ 
+    1500 1500   1500 1500
+      ^   ^       ^   ^
+      |   |       |   |
+--+---+---+--...--+---+--
+  0   1   2       5   6  
+                      |
+                      |
+                      v
+                      F
+
+i=13% <- anual
+
+i = (1+0.13)^(1/(12/2))-1
+i = (1+0.13)^(1/6)-1 = 0.0205 
+
+2.05% <- bimestral
+
+1500 * (F/A, 2.05%, 6) = $9474.05
+
+-----
+Se debe pagar $9474.05 para saldar una deuda de 6 pagos bimestrales de 1500
+-----
+
+* Evaluacion Economica
+** Las alternativas se clasifican como
+- Mutuamente excluyentes :: compiten entre si durante el proceso de evaluaciأƒآ³n, solo una de estas alternativas se puede seleccionar atraves del analisis econأƒآ³mico.
+
+- Independiente :: son aquellas que no compiten entre si durante la evaluaciأƒآ³n, pero cada una se compara con la opciأƒآ³n de =no hacer nada=, en donde mas de una alternativa se puede elegir.
+
+** Clasificacion de alternativas considerando el flujo de efectivo
+- De ganancia :: son alternativas qu contemplan costos, ingresos y hasta posibles ahorros en sus flujos de efectivo. 
+
+- De servicio :: solo tienen costos en sus flujos de efectivo.
+
+** Tasa minima atractiva de rendimiento (TMAR)
+La =TMAR= es la base de la comparacion en el calculo de las evaluaciones Economicas, es decir es aquella tasa razonable que el inversionista esta dispuesto a aceptar. En caso de no obtener dicha tasa se rechaza la inversion, en este sentido la tasa de rendimiento de un proyecto viable debera ser igual o superior al =TMAR=. El calculo de la =TMAR= dependera، principalmente del riesgo, de tal forma que a mayor riesgo se proporciona una =TMAR= mas alta. para evaluar el riesgo de una inversion se realizan *estudios de mercado* o bien se utiliza informacion sobre la tasa de rendimiento en la bolsa de valores. Por lo tanto, la =TMAR= de una inversion tendra que ser mayor a la tasa de rendimiento de una inversion segura. 
+
+Otro factor para tomar en cuenta en el calculo de la =TMAR= es la inflacion ya considerando el riesgo de la inversion, al menos se espera una ganacia adicional sobre la inflacion para determinar la inflacion en la =TEMAR= 
+
+** Valor presete neto (VPN)
+Consiste en traer las cantidades del futuro a su equivalente en el presente. Criterios de seleccion:
+
+- En alternativas mutuamente excluyentes :: seleccionar la alternativa cuyo valor presente neto es mayor que el resto.
+
+- En alternativa independientes :: aceptar aquellas que preseten un valor presente neto igual o mayor a cero.
+
+*** Ejercicio 1
+Se planea hacer una inversion en la industria metalurgica. Se calculo que la inversion inicial sera de $1000, y se obtendran ingresos de $260, $310, $330, $400 y $505 en los periodos 1,2,3,4 y 5 respectivamente. ¿es recomendable invertir?, si la =TMAR= es de 20% anual.
+
+                               505
+                         400    |
+                   330    |     |
+             310    |     |     |
+       260    |     |     |     |
+        |     |     |     |     |
+--+-----+-----+-----+-----+-----+--
+  |
+  |
+  P
+
+vpn = + 260 (p/f,20%,1) 
+      + 310 (p/f,20%,2) 
+      + 330 (p/f,20%,3) 
+      + 400 (p/f,20%,4) 
+      + 505 (p/f,20%,5)
+      - 1000
+               
+vmp = 18.77
+
+-----
+se recommienda invertir
+-----
+
+*** Ejercicio 2
+Se necesia comprar una maquina, para la cual se tienen 3 altenativas, la informacion se presenta a continuacion, la =TMAR= es 10%, encontrar la mejor alternativa[fn:vds]:
+
+|---+----------------------------+------------+------+-------|
+|   |                            | Elأƒآ©ctrica |  Gas | Solar |
+| / | <>                         |         <> |   <> |    <> |
+|---+----------------------------+------------+------+-------|
+|   | Costo inicial, $           |       2500 | 3500 |  6000 |
+|   | Costo de operacion, $/periodo |        900 |  700 |    50 |
+|   | Valor Salvamento, $        |        200 |  350 |   100 |
+|   | Vida, periodos                |          5 |    5 |     5 |
+|---+----------------------------+------------+------+-------|
+
+
+**** Electricidad
+                               200
+                                |
+                                |
+-----------------------------------
+  |     |     |     |     |     |
+  |     |     |     |     |     |
+  |    900   900   900   900   900  
+ 2500
+
+
+
+VPN_E = -2500 - 900(P/A,10%,5) + 200(p/f,10%,5)
+      = $-5787.54
+
+**** Gas
+                               350
+                                |
+                                |
+-----------------------------------
+  |     |     |     |     |     |
+  |     |     |     |     |     |
+  |    700   700   700   700   700  
+ 3500
+
+VPN_E = -3500 - 700(P/A,10%,5) + 350(p/f,10%,5)
+      = -5936.24
+
+**** Solar
+                               100
+                                |
+                                |
+-----------------------------------
+  |     |     |     |     |     |
+  |     |     |     |     |     |
+  |     50    50    50    50    50  
+ 6000
+
+VPN_E = -6127.45
+
+
+[fn:vds] Valor de salvamento, valor que se recupera al final de la vida de la alternativa
+
+** Clase en linea
+*** Ejercicio 
+una empresa requiere realizar un proyecto en otra ciudad. Para ello se manejan dos opciones de arrendamiento. Concidere una TMAR del 15% anual.
+
+|                                  | Ubicacion A | Ubicacion B |
+|----------------------------------+-------------+-------------|
+| Costo inicial                    |       15000 |       18000 |
+| Costo anual de larenta           |        3500 |        3100 |
+| Redimineto del deposito          |        1000 |        2000 |
+| Contrato de arrendamiento (periodos) |           6 |           9 |
+
+**** a) Determina la mejor opcion usando el criterio del vpn
+
+MCM(6,9) = 18
+
+--+---+---+---+---+---+---+--
+
+**** b) La empresa ha determinado que el proyecto no durara mأƒآ،s de 5 periodos ¿Cual es la hubicacion que deberia seleccionarse?
+
+** VPN de alternativas cuya vida es perpetua
+*** formula
+el valor presente de una alternativa cuyas anualidades se repiten por siempre:
+
+\[
+P = \frac{A}{i}
+\]
+
+A = anualidad que se repite por siempre
+
+*** Flujos de efectivo en alternativas con vida infirnita
+flujos de efectivos recurrentes o periodicos son series de cantidades, que se repiten a lo largo de la vida de la vida de la alternativa.
+
+*** Flujos de efectivos no recurrentes
+son cantidades que solo sucenden una vez durante la vida de la alternativa.
+
+*** Procedimiento para calcular el valor presente de alternativas perpetuas
+- 1. Elaborar un diagrama de flujo que muestre los flujos de efectivo no recurrentes y al menos dos ciclos de todos los flujos recurrentes.
+
+- 2. Encontrar el valor presente de las cantidades no recurrentes.
+
+- 3. Calcular el valor anual de las cantidades recurrentes, que se sumaran con las anualidades que aparecen durante toda la vida de la alternativa para obtener nuevas anualidades.
+
+- 4. Calcular el valor presente de las nuevas anualidades que se repiten por siempre.
+
+- 5. sumar todos los valores presentes obtenidos en el proceso.
+
+*** Ejercicio 1
+se ha realizado un contrato de tiempo indefinido por utilizar un nuevo software. El software presenta un costo de instalaciأƒآ³n por $150,000 y tambiأƒآ©n tiene un cargo de $50,000 que sucederأƒآ، dentro de 10 periodos. El costo anual de mantenimiento es de $5,000 en los primeros 4 periodos y $8000 despuأƒآ©s de estos. Ademأƒآ،s se tiene un costo de actualizaciأƒآ³n de $15,000 que ocurre cada 13 periodos utilizar una tasa de interes del 5% anual y encontrar el valor presente equivalente de todos los costos del contrato.
+
+  P
+  ^
+  |
+  | 
+  0    1    2    3    4   5     9   10   11   12   13   14         25   26   27
+--+----+----+----+----+----+ ... +----+----+----+----+----+ ... +----+----+----+
+  |    |    |    |    |    |     |    |    |    |    |    |          |    |    |
+  |    v    v    v    v    |     |    |    |    |    |    |          |    |    |
+  |    5k   5k   5k   5k   v     v    v    v    v    v    v          v    v    v
+  |                        8k    8k   8k   8k   8k   8k   8k         8k   8k   8k
+  |                                   |              |                    |
+  |                                   |              v                    v
+  |                                   |             15k                  15k
+  |                                   v
+  |                                  50k
+  v
+150k
+
+
+-*- Paso 2 -*-
+Pnr = $150k + $50k*(P/F, 5%, 10)
+    = $180,695
+
+-*- Paso 3 -*-
+Ar = $15k * (A/F, 5%, 13)
+   = $846.84
+
+NA = $5k + $846.83 = $5846.83
+
+-*- Paso 4 -*-
+P_na = A/i 
+
+P_na = ($5,846.83)/(0.05) = $116,936.60
+
+P_3000 = ($3,000)/(0.05) = $60,000
+P_4 = $60k (P/F,5%,4)
+    = $49,362
+
+-----
+P = P_nr + P_na + P_4
+
+P = $49,362 
+    $180,695 
+    $116,936.60 
+   -------------
+    $346993.60
+-----
+
+*** TODO Ejercicio 2
+Para hacer un puente se consideran 2 sitios, norte y sur. Sأƒآ­ es el norte se realizarأƒآ­a un puente por $52,000,000, costos anuales de $35,000 por inspecciأƒآ³n y mantenimiento y renovaciأƒآ³n de concreto cada 10 periodos por $100,000. En el sur se contruiria con caminos que conecten con el puente lo que constaria $40,000,000 y costos anuales de $20,000 adicionalmente se genera costos de $40,000 cada 3 periodos y 190,000 cada 10 periodos. con una tasa de 6% anual elija una de las 2 alternativas con base en le valor presente neto que el puente durara por siempre.
+
+
+-*- Norte -*-
+
+    0     1     2     9    10    19    20    21
+-----+-----+-----+ ... +-----+ ... +-----+-----+
+     |     |     |     |     |     |     |     |
+     |     v     v     v     v     v     v     v
+     |    35k   35k   35k   35k   35k   35k   35k
+     v                       |           |
+ 52,000k                     |           |
+                             v           v
+                           100k        100k
+
+VPN_N = -52,000,000 - 35,000(1/0.06) - 100,000(A/F,6%,10)(1/0.06)
+      = $-52,709,783.33
+
+-----
+
+-*- Sur -*-
+
+    0   1   2   3   4   5   6   7     9  10  11        19
+-----+---+---+---+---+---+---+---+ ... +---+---+ ... +---+---+
+     |   |   |   |   |   |   |   |     |   |   |     |
+     |   v   v   v   v   v   v   v     v   v   v     v
+     |  20k 20k 20k 20k 20k 20k 20k   20k 20k 20k   
+     v               |                             
+40,000k              v                             
+                    40k                           
+                              
+
+       = $-40,782,995
+
+** Comparacion de una alternativa con vida finita contra una de vida perpetua
+*** Explicacion
+Cuando se compara una alternativa finita con otra perpetua, se extiende la vida de la alternativa finita, repitiendose el mismo ciclo de vida por siempre. 
+
+*** ejercicio
+con una TMAR del 15%, una empresa necesita adquirir 10 maquinas hoy mismo para esto se manejan dos alternativas, sabiendo que se necesitaran mas maquinas en el futuro la primer opcion consiste en establecer un contrato sin tiempo limite, en donde un contratista provee a las maquinas por 8 millones, incluyendo un costo de mantenimiento anual de $25,000 por todas las maquinas. la segunda alternativa, la empresa compra sus propias maquinas por $275,000 cada una y costo anual de mantenimiento de 12,000 por cada maquina. La vida util de cada maquina es de 5 periodo.
+
+
+*Alternativa 1* = -$8,166,666.66
+
+*Alternativa 2*
+VPN_E = [-$2,750,000(A/P,15%,5)-$120,000]*(1/0.15) = -$6,269,118.46
+
+** Valor futuro neto (VFN)
+es una extencion del valor futuro neto, se utiliza cuando un activo se vende o cambia tiempo despues de haberlo adquirirlo, antes de de alcanzar su vida experada. Criterios de seleccion:
+
+- en alternativa mutuamente excluyentes :: seleccionar aquella con el mayor VFN. si se considera la TMAR en alternativas independiente elegir aquellas que presentan un valor futuro neto mayor o igual a cero.
+
+
+*** Ejercicio
+hace 3 periodos se aquirio una empresa por 75 millones. Despues de haberla adquirido en el primer periodo se obtuvieron perdidas por 10 millones, aunque disminuyeron en 5 millones en cada uno de los periodos siguientes y se espera que continue esta tendencia en el futuro actualmente se estudia una propuesta de compra por 159.5 millones. si se establece una tasa minima de rendimiento del 25%.
+
+- a) ¿se deberia aceptar la oferta?
+
+#+begin_export ascii
+                 159.5M
+                    ^
+                    |
+-3    -2    -1     0|     
+--+-----+-----+-----+--
+  |     |     |
+  |     |     v
+  |     v     5
+  v    10M
+ 75M
+#+end_export
+
+ -75*(F/P, 25%, 3) - 10*(F/P, 25%, 2) - 5 * (F/P, 25%,1) = -168359375.00 + 159500000
+                                                         = -8859375.00
+ 
+ -----
+ No es redituable
+ -----
+
+ - b) ¿cual es la minima cantida de venta, que le deberan proponer despues de haber sido dueأƒآ±a del negocio por 5 periodos?
+
+#+begin_export ascii
+                               10M
+                         5M     ^
+                          ^     |
+-3    -2    -1     0     1|    2|
+--+-----+-----+-----|-----+-----+
+  |     |     |
+  |     |     v
+  |     v     5M
+  v    10M
+ 75M
+#+end_export
+
+ 
+-75M*(F/G, 25%, 5) - 10M*(F/A,25%,5) + 5M*(F/G,25%,5) = -$246,814,500
+
+-----
+Se calculo con la =TMAR= y el valor minimo que se debe de ofreser es $246,814,500 
+-----
+
+** Valor anual equivalente (VAE)
+Es un criterio de evaluacion, consiste en convertir todos los ingresos y egresos estimados durante el ciclo de vida de la aternativa en un valor anual uniforme. Ventajas del VAE sobre el VPN:
+
+cuando se tienen dos alternativa con distintas vidas, el valor anual se calcula con tan solo emplear un ciclo de vida de la alternativa, a diferencia del valor presente neto que require emplear el minimo valor multiplo. Condicion para el valor anual equivalente
+
+1. La alternativa se repite, de la misma forma en cada ciclo de vida
+2. Los flujos de efectivo tendran los mismos valores calculados en cada ciclo de vida
+
+Criterios para =VAE= usando la tasa minima equivalente de rendimiento:
+
+- En alternativas independientes :: se eligen aquellas con el =VAE= mayor o igual a 0
+- Con alternativas mutuamente expluyentes :: se elige aquella con el mayor =VAE=
+
+*** ejercicio 1
+Se manejan dos opciones para la compra de una maquina, la cual se requiere trabajar por 15 periodos. usando una =TMAR= del 8% anual, determine la mejor alternativa implementando el =VAE=
+
+|   |                   | MAQ A  | MAQ B  |
+| / |                   |        |        |
+|---+-------------------+--------+--------|
+|   | Costo inicial ($) | 10,000 | 20,000 |
+|   | Costo anual ($)   | 7,000  | 5,000  |
+|   | Salvamento        | 2,000  | 3,000  |
+|   | Vida, periodos        | 3      | 5      |
+ 
+
+*MAQUINA A*
+#+begin_export ascii
+
+                   2K
+                    ^
+ 0     1     2     3|
+--+-----+-----+-----+
+  |     |     |     |
+  |     v     v     v
+  v    7K    7K    7K
+ 10K
+
+#+end_export
+
+# convertimos todo a una anualidad
+VAE = -10K * (A/P,8%,3) + 2k * (A/F, 8%, 3) - 7000
+    = -10K * (0.38803)  + 2k * (0.30803)  - 7000
+    = -$10264.24
+    
+*MAQUINA B*
+    
+#+begin_export ascii
+
+                               3k
+                                |
+                                |
+--+-----+-----+-----+-----+-----+
+  |     |     |     |     |     |
+  |    5k    5k    5k    5k    5k
+ 20k
+ 
+#+end_export
+    
+VAE = -20K * (A/P, 8%, 5) - 5k + 3k*(A/F,8%,5)
+    = -$9497.82
+
+*** Ejercicio 2
+Una compaأ±ia compara 5 sistemas, cada uno cuesta $4,600 pero tienen un valore de salvamente de $300 y una vida util de 5 aأ±os, el costo de operacion de cada sistema en el primer aأ±os es de $130 y se incrementa anualmente en $10 durante los siguientes 10 aأ±os, no obstante cada sistema reportaria ingresos anuales de $1700. utilice una TMAR del 10% para evaluar por el criterio del valor anual equivalente, si es conveniente comprar los sistemas.
+
+#+begin_export ascii
+
+                                1500
+                                  |
+        7850  7800  7750  7700  7650
+          |     |     |     |     |
+   0     1|    2|    3|    4|    5|     
+   -+-----+-----+-----+-----+-----+-----+-----+--+-
+    |     
+    |    
+    |
+ 23,000
+#+end_export
+
+ VAE = -23,000(A/P, 10%, 5)  + 7850 - 50(A/G, 10%, 5) + 1500(A/F, 10%,5)
+     = -23,000(0.2638) + 7850 - 50(0.8101) + 1500(0.1638)
+     = $1937.80
+
+ Es recomendable porque el valor anual equivalente es mayor a 0
+
+** Valor anual equivalente con vida perpetua
+el valor anual de la inversion inicial de una alternativa permante esta dada por:
+
+A = i*p
+
+cuando se presentan flujos periodicos se conviertene en cantidades uniformes equivalentes para un ciclo se anualizan automaticamente para el ciclo siguiente.
+
+*** Ejercicio
+Hoy se deposita un ahorro por $10,000 a una tasa de interes del 8%. Cuantos años deben de pasar antes de que se puedan retirar 2,000 anuales por siempre.
+
+                         2000  2000
+                          |     |
+ 0     1     2     n   n+2|  n+3|
+ -+-----+-----+ ... +-----+-----+ ... 
+  |      
+  |
+  |
+10,000
+
+
+2000 = 0.08 * (10,000 * (F/P, 8%, n) )
+
+-----
+11.9 años
+-----
+
+Nececitan haber pasado 11.9 antes para de poder depositar 2000 anuales por siempre 
+
+*** Ejercicio
+La opcion A requiere un gasto inicial por $650,000, tiene una vida de 10 años, su valor de salvamento es de $17,000 y costos anuales por operaciones por $50,000 y $120,000 por mantenimiento.
+
+                               17k
+                                |
+ 0      1     2       4      10 |
+ -+-----+-----+  ...  +---------+-
+  |     |     |       |         |
+ 650k  170k  170k    170k      170k
+
+VAE_A = -650k(A/P,5%,10) - 170k + 17k (A/F, 5%, 10) = $-252823.50
+
+ 
+La opcion B tiene un costo inicial de 4 millones pero durara por siempre, sus costos anuales son de 5,000 y el mantemiento sera cada 5 años por $30,000.
+
+0   1   2   3   4   5    6     9 10  11
+-+---+---+---+---+---+---+ ... +---+---+---
+ |   |   |   |   |   |   |     |   |   |
+ |   5k  5k  5k  5k  5k  5k    5k  5k  5k
+ |                   |             |
+ |                  30k           30k
+4M
+
+VAE_A = 4M (0.05) - 5000 - 30k (A/F, 5%, 5)
+VEA_A = $-210429.10
+
+La opcion C requiere una inverision inicial de 5 millones costos anuales de $3,000 y su vida util es de 50 años.
+0   1   2     49  50
+-+---+---+ ... +---+
+ |   |   |     |   |
+ |  3k  3k    3k  3k
+ |
+650,000k
+
+utiliza una tasa de interes del 5% utiliza el valor anual equivalente.
+
+** Tasa interna de rendimiento (TIR)
+Es la tasa que permite a la suma de flujos de costos ser igual a la suma de flujos de ingresos, es decir esta tasa proporciona que la adicion entre costos e ingresos sea 0. El procedimiento de la tasa interna de rendimiento consiste en encontrar la tasa de equilibrio (i*) que permite la igualdad entre ingresos y costos. Ecuaciones de equilibrio:
+
+- VP_I = VP_C
+- VP_I - VP_C = 0
+- VA_I = VA_C
+- VA_I - VA_C = 0
+
+- VP_I = valor presente de ingresos
+- VP_C = valor presente de costos
+- VA_I = valor anual costos
+- VA_C = valoa anual costos
+
+*** Criterios de selecion de la tasa interna de rendimiento
+para una sola alternativa :: Si i* >= TMAR, la altenartiva es economicamete viable. Cosideraciones para usar la tasa interna de rendimiento:
+
+- 1. es posible obtener multiples tasas de equilibrio 
+- 2. la re-inversion es igual a la tasa de equilibrio y no a la TMAR 
+- 3. el procedimiento para la tasa interna de rendimiento en alternativas mutuamente excluyentes es distinto a las independientes.
+
+*** Multiples TIR
+Una flujo neto de efectivo convencional o simple ocurre en el momento que la serie tiene cuando mucho un cambio de signo, mientras que las series que presentan mas de un cambio de signo se conocen como flujos no convencionales o complejos. Los flujos convencionales tienen una tasa de equilibrio a diferencia de los flujos no convencionales que tendran mas de una tasa de equilibrio.
+
+Hay dos pruebas para determinar si existen varias tasas de equilibrio:
+
+- Regla de los signos :: La cantidad de tasas de equilibrio nunca sera mayor al numero al numero de cambios de signo del flujo neto de efectivo.
+
+- Signos del flujo neto acumulado :: Si la serie acumulada inicia con un valor negativo y durante la serie acumuladad solo cambia una vez de signo, hay un valor unico positivo de tasa de equilibrio 
+
+*NOTA:*
+Los flujos netos de efectivo en 0 no se contabilisan como cambio de signo. 
+
+*** Ejercicios
+Hoy se planea realizar una inversion por 500,000 para conseguir un ingreso de 10,000 anualmente por 10 años y en el año 10 obtener $700,000. Si la TMAR es del 9% , calcular la tasa de equlibrio y por medio de la TIR estudie si la inversion es economicamente rentable 
+
+#+begin_export ascii
+                      700k 
+                       |
+                       |
+      10k  10k   10k  10k
+       |    |     |    |
+ 0    1|   2|    9|  10|   
+--+----+----+ ... +----+----
+  |
+  |
+ 500k
+#+end_export
+ 
+| Periodo | FNE   |
+|---------+-------|
+|       0 | -500k |
+|       1 | 10k   |
+|       2 | 10k   |
+|     ... | ...   |
+|       9 | 10k   |
+|      10 | 710k  |
+
+solo hay un cambio solo hay una tasa de equilibrio (solo hay un cambio de signo)
+
+#+begin_export ascii
+-500k (A/P, i*, 10) + 10k + 700k (A/F, i*, 10) = 0
+
+i = 0.05156958
+#+end_export
+
+TMAR > i*
+
+Se rechaza la oferta
+
+*** TODO ejericio 2
+/Falta el enunciado/
+
+#+begin_export ascii
+              200
+      50       |
+  0   1|  2   3|  4
+ --+---+---+---+---+
+   |               |
+   |              50
+ -100
+#+end_export
+
+| Periodo (4 años) | FNE($,Miles) | FNE_Acumulado |
+|------------------+--------------+---------------|
+|                0 |         -100 |          -100 |
+|                1 |           50 |           -50 |
+|                2 |            0 |           -50 |
+|                3 |          200 |           150 |
+|                4 |          -50 |           100 |
+
+- FNE :: hay 2 cambios de signo, hay dos 2 tasas de equilibrio
+- FNE_Acumulado :: hay 1 cambio de signo, solo hay una tasa de equilibrio positiva
+
+#+begin_export ascii
+-100 + 50(P/F,i*,1) + 200(P/F,i*,3) - 50(P/F,i*,4)
+#+end_export
+
+i* = %37.053
+
+** Tasa interna de rendimiento en la alternativas mutuamente expluyentes
+Cuando se trabaja la tasa interena de rendimiento interna de rendiemiento en alternativas mutuamente excluyentes, es necesario aplicar el metodo de flujo de efectivo incremental.
+
+*NOTE*: tenemos varias inversiones que compiten entre si.
+
+El flujo incremental, la altenativa de mayor inversion inicial se define como 'B'
+
+\Delta FNE_t = FNEB_t - FNEA_t
+
+Creterio de seleccion:
+- \Delta i* > TMAR, se elige B
+- \Delta i* < TMAR, se elige A
+- \Delta i* = TMAR, elegimos cualquiera de las dos
+
+*** Procedimiento
+- Especificar las alternativas deacuerdo a su inversion inicial, de tal forma que la mas baja sea 'A' y la mas alta sea 'B'.
+
+- Elaborar un cuadro que contega los flujos de efectivo de las alternativa en cada periodo, si tienen distintos ciclos de vida, utilizar el minimo menor multiplo.
+
+- Calcular el flujo de efectivo incremental, determinar si en este flujo existe multiples tasa de equilibrio.
+
+- Elaborar el diagrama de flujo de efectivo incermental y calcular la tasa de equilibrio incremental por medio de la ecuacion de equilibrio incremental aplicando valor presente o valor anual
+
+- Seleccionar la mejor alternativa.
+
+*** ejercicio
+Se requiere de una maquina que tiene dos provedores. Si la TMAR es del 25% anual seleccionar la mejor alternativa por medio de la tasa interna de rendimiento aplicando el valor presente
+
+|                  | Nacional (A) | Extranjera (B) |
+|------------------+--------------+----------------|
+| Costo Inicial, $ | 15,000       | 25,000         |
+| Costo Anual, $   | 1,600        | 400            |
+| Salvamanto, $    | 3,000        | 4,000          |
+| Vida, años       | 2            | 4              |
+
+#+caption: Cuadro de flujos de efectivo
+| Periodo | FNE_EXT | FNE_NAC | \Delta FNE |
+|---------+---------+---------+------------|
+|       0 | -25,000 | -15,000 | -10,000    | <- solo hay una i*
+|       1 |    -400 | -1,600  | 1,200      |
+|       2 |    -400 | -13,600 | 13,200     |
+|       3 |    -400 | -1,600  | 1,200      |
+|       4 |   3,600 | 1,400   | 2,200      |
+
+#+caption: Diagrama de flujo
+#+begin_export ascii
+          13,200
+             |        2,200
+      1,200  |  1,200  |    
+        |    |    |    |
+ --+----+----+----+----+---
+   |
+ -10k
+#+end_export
+
+-10k + 1200(P/A, \Delta i*, 4) + 12k*(P/F, \Delta i*, 2) + 1000(P/F, \Delta i*, 4)
+\delta i* = %30.31
+
+-----
+comprar la maquina extranjera
+-----
+
+*** Ejercicio
+se nececita invertir en uno de dos proyectos si la tmar es del 16% anual evaluar la mejor alternativa con el criterio de la tasa interna de rendimiento con la tasa de valior anual
+
+
+|               | x   | y   |
+| Costo inicial | 82k | 60k |
+| Costo, $/Años | 17k | 13k |
+| Salvamento    | 12k | 20k |
+| vida, años    | 9   | 9   |
+|               |     |     |
+
+| Periodo | FNE_y | FNE_x |        |
+|       0 | -82k  | -60k  | -22000 |
+|       1 | -13k  | -17k  |   4000 |
+|       2 | -13k  | -17k  |   4000 |
+|     ... | ...   | ...   |    ... |
+|       8 | -13k  | 13k   |   4000 |
+|       9 | 7k    | -5k   |  12000 |
+|         |       |       |        |
+
+                      12k
+      4k   4k    4k    |
+       |    |     |    |
+ 0   1 |  2 |     |    |
+--+----+----+ ... +----+
+  |
+  |
+  | 
+  |
+ 22k
+
+ -22k(A/P, Delta i*, 9) + 4000 + 8000(A/P, Delta i*, 9)
+ Delta I = 14.2710%
+
+ invertir en el proyecto X
+
+** Analisis beneficio costo
+este criterio de evaluacion economica es util para valorar proyectos del valor publico, su proposito es asignar mayor objetividad economica en este sector.
+
+- costo (C) :: estimacion de gastos y costos por la entidad gumernamental para la contruccion operacion y mantenimiento del proyecto
+
+- beneficio (B) :: ventajas u utilidad economica de los individuos externos al gobierno 
+
+- contrabeneficios (CB) :: desventajas economicas de agentes ajenos al proyecto
+
+la razon convencional beneficio costo requiere convertir los costos, beneficios y contrabeneficios a valor presente , valor anual o valor futuro antes de usar la siguiente formula
+
+B/C = (B - CB)/C
+
+*** Criterios de selecion en alternativas indepentes
+
+- B/C >= 1 :: es economicamente viable
+- B/C < 1 :: es economicamente inviable
+
+en alternativas mutuamente excluyentes se utiliza el analisis incremental y se selecciona la alternatica con el mayor costo si la razon beneficio costo incremental es mayor a 1 si es menor a uno se elige la opcion de menor costo y si llegara a ser igual a 1, ambas opciones son iguales 
+
+\Delta (B/C) = (\Delta B - \Delta CB)/ \Delta C
+
+*** Procedimiento
+1. Determinar los costos equivalentes de las alternativas
+2. Ordenar del mayor al menor costo equivalente total y calcular los costos incrementales
+3. determinar los beneficios y contrabeneficios equivalentes para ambas alternativas y calcular los beneficios incrementales
+4. Calcular la razón costo beneficio incremental y determinar la mejor opcion
+
+*** ejercicio
+
+Considerando una tasa anual del 6%. Una fundacion contempla asignar una inversion de 15,000,000 en becas, estas se otorgaran por un periodo de 10 años y generaran un ahorro anual de 1.5 millones a estudiantes. El costo anual de operacion para este programa es de 500,000 al año, así mismo otros programas complementarios deben destinar 200,000 anualmente. Evalue el analisis Beneficio-Costos para determinar la viabilidad economica del programa.
+
+- Costos
+  + $15,000,000 en el presente
+  + $500,000/año
+    
+- Beneficio
+  + $1,500,000/año 
+
+- Contrabeneficios
+  + $200,000/Año
+
+
+15,000K * (A/P, 6%, 10) = 2,038,005/Año
+
+(1500K - 200K)/(2,038,005+500,000) = 0.5122
+
+-----
+NO es economicamente viable
+-----
+
+*** ejercicio
+con base en el analisis Costo-Beneficio, determine la viabilidad de la siguientes dos propuestas publicas, que son independientes una de otra.
+
+- Propuesta A :: Requiere una inversion inicial de 40M, costos anuales por 1.5M, otorgan beneficios al publico por 6.5 millones al año, tiene una vida estimada de 20 años y una tasa de descuento de 8%/Año.
+
+  + costos
+    - 40M en el Presente
+    - 1.5M/Año
+      
+  + Beneficios
+    - 6.5M/Año
+
+  40M (A/P, 8%, 20) = $4,074,000/Año
+
+  B/C = (6.5M - 0)/(1.5M + 4074000) = 1.16 *Viable* 
+
+-----
+
+- Propuesta B :: Requiere una inversion inicial de 4M, costos anuales de 150K, genera beneficios anuales al publico por 650K, tiene una vida de 12 años y una tasa de descuento del 4%.
+
+  + Costos
+    - 4M en el Presente
+    - 150k / año
+
+  + Beneficios
+    - 650K / año
+
+  4M ( A/P, 4%,12) = $426,200/año
+
+  B/C = (650,000 - 0)/(150,000 + 426,200) = 1.12 *Viable*
+
+-----
+
+*** ejercicio
+se desea construir una clinica para ello se contemplan dos diseños en general ambas opciones presentan beneficios similares pero el siguiente cuadro muestra informacion exclusiva de cada diseño. (tasa = 5%)
+
+| Diseños                                           | A           | B           |
+|---------------------------------------------------+-------------+-------------|
+| (costo) Gastos de contruccion                     | $10,000,000 | $15,000,000 |
+| (CB) Gastos a pacientes $/año                     | $450,000    | $200,000    |
+| (costo) Costo Mantenimiento $/año                 | $35,000     | $55,000     |
+| (CB) Quejas de agentes externos al proyecto $/año | $600,000    | $450,000    |
+| Vida, Años                                        | 30          | 30          |
+
+#+begin_export ascii
+Gasto A:                          
+- $10,000,000 En el presente   (A/P,5%,30) = $650,500/Año
+- $35,000 / Año
+
+C_A = $685,500 
+
+Gasto B:
+- $15,000,000 En el presente   (A/P,5%,30) = $975,759/Año
+- $55,000 / Año
+
+C_B = $1,030,750
+
+\Delta C = C_B - C_A = $1,030,750 - $685,500 = $345,250
+#+end_export
+
+
+#+begin_export ascii
+Contrabeneficios A:
+- $450,000 / Año
+- $600,000 / Año
+
+CB_A = $1,050,000 / Año
+
+Contrabeneficios B:
+- $200,000 / Año
+- $450,000 / Año
+
+CB_B = $650,000 / Año
+
+\Delta CB = CB_B - CB_A = 650,000 - 1,050,000 = $-400,000
+#+end_export
+
+El incremental de los beneficios es 0
+\Delta = 0
+
+\Delta (B/C) = (\Delta B - \Delta CB)/(\Delta C)
+             = (0 - (-400,000)) / (345,250)
+             = 1.15858
+
+Se debe contruir el diseño B, porque es economicamente mejor que diseño A
+
+* Analisis de sensibilidad y otros estudios economicos
+** Punto de equilibrio
+/nota: Que los ingresos sean igual a los costos/
+
+Consiste en dereminar cuando una alternativa es igualmente aceptable a otra. Es decir, se intenta definir el valor de un parametro (tasa de interes, costo inicial, costos anuales, costos anuales u otros) que permite a ambas alternativas ser equivalentes en terminos economicos.
+
+*** Procedimiento
+1. Definir el parametro comun y sus unidades de medicion
+2. Aplicar un analisis de valor anual equivalente o valor presente neto para expresar los flujos totales de cada alternativa en funcion del parametro comun
+3. Igualar ambas ecuaciones y despejar el parametro comun para ecncontrar el punto de equilibrio
+
+   
+*** Ejercicio
+con una TMAR del 10% anual
+
+|   |                         |    A |    B |
+|---+-------------------------+------+------|
+|   | Costo inicial, $        | 9000 | 9000 |
+|   | Flujo efectivo, $/anual |    ? | 3000 |
+|   | Salvamento, $           |  200 |  300 |
+|   | Vida años               |    4 |    6 |
+|   |                         |      |      |
+
+**** A) Determinar cual es el flujo anual que permite a la opcion A ser economicamente igual a la opcio B
+#+begin_export ascii
+                        200
+                         |
+          A    A    A    A
+          |    |    |    |    
+      0   |1   |2   |3   |4
+ ----+----+----+----+----+----
+     |    
+     |
+     |
+    9k
+#+end_export
+
+VAE_A = -9000(A/P, 10%, 4) + A + 200(A/F, 10%, 4)
+VAE_A = A - 2796.14
+
+#+begin_export ascii
+                                  300
+                                   |
+         3k   3k   3k   3k   3k   3k
+          |    |    |    |    |    |
+          |    |    |    |    |    |
+      0   |1   |2   |3   |4   |5   |6
+ ----+----+----+----+----+----+----+
+     |    
+     |
+     |
+    9k
+#+end_export
+
+VAE_B = 9000(A/P,10%,6) + 3000 + 300(A/F,10%,6)
+VAE_B = 972.40
+
+A - 2796.14 = 972.40
+A = 972.40 + 2796.14
+A = $3768.54 /Anuales
+
+-----
+Para que ambas alternativas sean equivalentes puedan ser equivalentes el flujo de efectivo de A debe ser $3768.54 /Anuales 
+-----
+
+**** B) Suponga que el costo inicial de A se desconoce y su flujo anual es de 3000, encuentre el costo inicial de A que permite el equilibrio entre A y B
+#+begin_export ascii
+                        3200
+                         |
+         3K   3K   3K    |
+          |    |    |    |    
+      0   |1   |2   |3   |4
+ ----+----+----+----+----+----
+     |    
+     |
+     |
+     P
+#+end_export
+
+VAE_A = -P(A/P, 10%, 4) + 3000(A/P, 10%, 4) + 200(A/F, 10%, 4)
+      = -P(0.31547) + 3000 + 200(0.21547)
+      = 3043.09 - P(0.31547)
+
+VAE_B = $972.4
+
+
+972.4 - 3043.09 = -P(0.31547) 
+
+P = (- 972.4 + 3043.09) / (0.31547) 
+P = 6563.82
+
+-----
+El costo inicial de A debe ser 6563.82 para que ambas alternativas sean equivalentes equivalentes
+-----
+
+
+*** Ejericicio
+Se evaluan dos maquinas, una maquina autimatica que tiene un costo inicial de 23,000, un valor de salvamento de 4,000 y una vida de 10 años, esta maquina sera operada por un trabajador con un salario de $12/Hora, se espera que su produccion sea de 8 unidades por hora. La maquina manual produce 6 unidades x hora y presenta un costo inicial de 8,000 sin valor de salvamento despues de 5 años de vida, esta maquina requiere de 3 trabajadores y cada uno cobrara $8/Hora, ambas maquinas requieren mantenimiento independientemente del nivel de produccion, los costos de mantenimiento anual de la maquina autimatica y manual son de 3500 y 1500 respectivamente. La tasa de rendimiento es del 10% anual. cual es la cantidad de produccion anual en el que ambas maquinas son indiferentes en terminos economicos.
+
+ $1 trabajador
+ $8 unidades / hora
+$12 hora trabajada
+
+q = unidades / año
+
+(1 trabajador) * (1 hora)/(8 unidades) * ($12)/(horas trabajador) * (9 unidades)/(Año) = 1.5q/año
+
+#+begin_export ascii
+                            4000
+                             |
+  0   1    2          9    10|
+---------------- ... -------------
+ |    |     |         |      |
+ |    3500  3500      3500   3500
+23k    +1.5q  +1.5q    +1.5q  +1.5q
+#+end_export
+
+VAE_A = -2300(A/P, 10%,10) - 3500 - 1.5q + 4000(A/F, 10%, 10)
+      = -1.5q - $6992.25
+
+
+#+begin_export ascii
+  0     1     2        4     5
+---------------- ... -------------
+ |     |     |        |     |
+ |     |     |        |     |
+8000  1500  1500     1500  1500
+       +4q   +4q      +4q   +4q
+#+end_export
+ 
+(3 trabajador) * (1 hora)/(6 unidades) * ($8)/(horas trabajador) * (9 unidades)/(Año) = 4q/año
+
+VAE_M = -8000(A/P, 10%, 5) - 1500 - 4q
+      = -4q - 3610.4
+
+-1.5q - 6992.25 = -4q - 3610.4
+(2.5)q = 3381.85
+     q = 1352.74 unidades/años
+
+-----
+se requiere producir 1352.74 unidades para que sean equivalentes economicamente
+----- 
+** TODO Analisis de sensibilidad
+...Costos de operacion entre otros
+
+*** Procedimiento
+1. determinar los parametros que puede variar respecto al valor estimado mas probable
+2. Seleccionar el rango probable de variacion y su incremento para cada parametro
+3. Elegir un crietero de evaluacion (VPN, VAE)
+4. Calcular los resultados de cada evaluacion para cada uno de los valores del parametro
+5. Determinar la sencibilidad del parametro
+   
+*** ejercicios
+se requiere comprar un nuevo sistema productivo, las estimaciones mas confiables acerca del sistema son el costo inicial de $80,000; el valor de salvamento de $0; y a partir del primer año, el flujo de efectivo en el año 't' esta dado por '27,000 - 2000t'. Por otra parte la TMAR varia entre el 10% y 25%, y la vida util del sistema se encuentra entre 8 y 12 años. Aplciando el VPN, evaluar al sencibilidad de la tasa minima efectiva de rentimiento en 10%,15%,20%,25% suponiendo que la vida util es de 10 años.
+
+
+#+begin_export ascii
+
+      25k  23k  22k 20k   11k  9k  7k   
+        |   |   |   |      |   |   |
+ t -0---1---2---3---4-...--8---9--10
+    |
+    |
+    | 
+   80k
+   
+#+end_export
+
+-80000 + 25000(P/A,10%,10) - 2000(P/G,10%,10)
+
+
+10%: -8000 + 25k*6.14457 - 2k*22.8913 = $27832.40
+15%: $11,511
+20%: $-959.70
+25%: $-10,711
+
+con la tasa del 10% la tasa es rentable
+con la tasa del 15% es rentable
+con la tasa del 20% no es rentable
+con la tasa del 25% no es rentable
+
+-----
+hay sencibilidad en la tmar
+-----
+
+B) Evalue la sencibilidad de la vida util en los años 8, 10, 12, suponiendo que la tmar es del 15%   
+
+#+begin_export ascii
+
+    25k 23k 21k         13k 11k
+     |   |   |           |   |        
+     |   |   |           |   |
+-0---1---2---3--- ... ---7---8-
+ |
+ |
+ v
+8000
+#+end_export
+
+ VPN_8 = -80k + 25k*(p/a, 15%,8)-2000(p/g, 15%, 8) 
+       = $7221.1
+
+ Es rentable 
+       
+ n = 10 <- son los periodos 
+VPN_10 = 11,511 (resuelto en el ejercicio anterior)
+
+Es rentable 
+
+VPN_12 = -80k + 25k*(p/a, 15%, 12)-2000(p/g, 15%, 12) 
+       = $13145.20 
+
+Es rentable 
+
+-----
+Conclusion no hay sensibilidad con la vida del sistema productivo
+-----
+
+*** Notas
+Para simplificar el analisis, usualmente se toman 3 valores para determinar la variabilidad del parametro. del rango de variacion, se utilizan como referencia el valor menor mayor y medio o mas probable para estudiar la sencibilidad. asi mismo cuando una alternava tiene varios parametros que presentan variaciones el analisis de sensibilidad se efectua utilizando las estimaciones mas probables de los otros parametros.
+
+** analisis de sencibilidad para varias alternativas
+se evaluan 3 alternativas que tienen 3 estimaciones de vida, salvamento y costos anuales de operacion como se muestra en el siguiente cuadro, realice el analisis de sencibilidad y eliga la mejor opcion utilizando el VAE y una tmar minima del 12%
+
+| Alternativas | Estimacion | Costo inicial | Costo operacion | salvamento | vida, años |
+|--------------+------------+---------------+-----------------+------------+------------|
+| A            | Pesismista |         20000 |           11000 |          0 |          3 |
+|              | Normal     |         20000 |            9000 |          0 |          5 |
+|              | optimista  |         20000 |            5000 |          0 |          8 |
+|--------------+------------+---------------+-----------------+------------+------------|
+| B            | Pesismista |         15000 |            4000 |        500 |          2 |
+|              | Normal     |         15000 |            3500 |       1000 |          4 |
+|              | Optimista  |         15000 |            2000 |       2000 |          7 |
+|--------------+------------+---------------+-----------------+------------+------------|
+| C            | Pesismista |         30000 |            8000 |       3000 |          3 |
+|              | Normal     |         30000 |            7000 |       3000 |          7 |
+|              | Optimista  |         30000 |            3500 |       3000 |          9 |
+|--------------+------------+---------------+-----------------+------------+------------|
+
+Casos pesimistas
+-----
+-20,000 * ap(12%,3) - 11,000 
+-15,000 * ap(12%,2) - 4,000 + 500*AF(12%,2)
+-30,000 * ap(12%,3) - 8,000 + 3,000*AF(12%,3)
+
+Casos Normales 
+-----
+-20k*(a/p,12%,5) - 9k = $-14548.19
+-15k*(a/p,12%,4) - 3,500 + 1000*(a/f,12%,4) =-8229.2
+-30k*(a/p,12%,7) - 7k + 3k*(a/f,12%,7) = -13,276.17
+
+Casos Optimistas
+-----
+-20k * (a/p, 12%, 8) - 5k = -9026
+-15k * (a/p, 12%, 7) - 2k + 2000*(a/f, 12%,7) = -5088.53
+-30k * (a/p, 12%, 9) - 3500 + 3000*(A/F, 12%, 9) = -8927.36 
+
+  
+|     | elegir |
+|-----+--------|
+| opt | B      |
+| nor | B      |
+| pes | B      |
+
+-----
+No hay sencibilidad en B
+-----
+
+
+si hay otra opcion entonces hay sencibilidad
+
+** Depreciacion
+- Activos :: bienes y derechos propiedad de la empresa
+
+La depreciacion es la reduccion de valor de un activo conforme pasa el tiempo la importancia de la depresiacion radica en el hecho de que es deducible de impuestos, lo cual genera cambios significativos en el flujo neto de efectivo. Por lo tanto, la depreciacion en libros se realiza para fines contables y la depreciacion impositiva por dispociciones gubernamentales.
+
+*** metodo de depreciacion en linea recta
+Este tipo de depreciacion ocurre cuando el valor del activo cuando se reduce linealmente con el tiempo
+
+#+begin_export ascii
+              P - S
+D = d(P-S) = -------
+                n
+     1
+d = ---
+     n
+
+VL_t = P - tD
+#+end_export
+
+-  P :: costo inicial
+-  n :: es año de salvamento
+- VL :: valor en libros
+-  S :: valor de salvamento
+-  t :: es el valor que va del 1 a n
+-  D :: cargo de depreciacion
+-  d :: tasa de depreciacion
+
+*** ejercicio
+un activo tiene un costo inicial del 50k y un valor de salvamanto estimado de 10,000 dentro de 5 años. Utilice el metodo de linea recta, para calcular
+
+- a) la depreciacion anual y la tasa de depreciacion
+
+#+begin_export ascii
+d = 1/5 = 0.2 -> 20% anual
+D = 0.2 (50k - 10k) = $8k
+#+end_export
+  
+
+- b) el valor en libros del activo despues de cada año y graficar el valor del libro con respecto al año
+
+  | Periodo | VL  |
+  |---------+-----|
+  |       0 | 50k |
+  |       1 | 42k |
+  |       2 | 34k |
+  |       3 | 26k |
+  |       4 | 18k |
+  |       5 | 10k |
+  |         |     |
+  
+*** Depreciciacion acelerada: metodo del saldo decreciente y metodo de saldo decreciente doble
+la depreciacion es acelerada en comparacion al metodo de linea recta ya que durante los primeros años el valor del activo disminuye significativamente. La depreciacion y el valor en libros para cada años en los metodos de depreciacion acelerada es:
+
+d_{implicita} = 1-(S/P)^(1/t)
+
+D_t = d(VL_{t-1}) = d P(1-d)^{t-1}
+
+VL_t = P(1-d)^t = VL_{t-1} - D_t
+
+
+en el metodo de saldo decreciente doble, su tasa de depreciacion es el doble que la tasa de depreciacion que en el metodo de linea recta.
+
+esta es solo la tasa
+ds_{DD} = 2/n
+
+- ds_{DD} :: Saldo decreciente doble
+  
+El metodo de saldo decreciente doble, es posible calcular un valor de salvamento implicito diferente al valor de salvamento estimado:
+
+
+VL_n = P(1- d_{SDD})^n
+
+*** ejercicio
+de depreciara un dispositivo mecanico, por el metodo de saldo decreciente doble, el cual tiene un coste inicial de 25k y un coste de salvamento estimado de 2500 despues de 12 años.
+
+a) calcular la depreciacion y su valor en libros para el año 1 y 4 calcular el valor de salvamento implicito despues de 12 años
+
+- d_SDD = 2/12 -> 1/6 = 0.1667 = 16.67%
+
+- D_1 = 0.1667 * 25,000 * (1-0.1667)^(1-1) = $4167.5
+- VL_1 = 25000(1-0.1667)^1 = $20832.5
+
+- D_4 = 0.1667 (25000)(1-0.1667)^{4-1} = $2411.45
+- VL_4 = 25000 (1-0.1667)^4 = $12054.49
+
+-----
+La depreciacion en el año 1 es de $4167 y en el año 4 $2411.45 y el valor en libros es de $20832.5 en el primer año y $12,054.49
+-----
+
+b) Calcule el valor implicito del dispositivo despues de 12 años 
+
+- S_implicito = 25,000(1-0.1667)^12 = *$2802.57* aunque su valor de salvamento es de $2500
+
+  
+- D_12 = 0.1667(25,000)(1-0.1667)^12 = $560.54 
+- VL_11 = 25000(1-0.1667)^11 = $3363.21
+
+$2802.57 - $560.54 = $302.57
+
+$560.54 + $302.57 = $863.21 <- valor correcto
+
+*** ejercicio
+se compro un sistema por 80,000 que tiene un valor de rescate de $10,000 y una vida de 10 años. Compare la depreciacion anual y el valor en libros para cada años del sistema aplicando el metodo de SD y SDD. 
+
+d_{implicita} = 1-(S/P)^(1/t)
+
+** Inflacion
+Es el incremento en los precios de los productos y de los servicios, ocacionado por una disminucion en el valor del dinero o moneda, lo que provoca una perdida del poder adqusitivo.
+
+- tasa de inflacion :: Es el cambio porcentual del valor de la inflacion
+
+#+begin_export ascii
+
+       n ______________
+  f =   /   valor_t    | 
+       /  -----------    - 1
+     \/     valor_o
+
+#+end_export
+  
+- f :: inflacion p
+- n :: es el numero de periodo 0 y el periodo t, donde t > 0 siempre
+
+#+begin_export ascii
+  
+      _________
+  15 /   22    |
+    /   ----     - 1   ->   0.10382 = 10.382%
+  \/     5
+
+#+end_export
+
+*** Tasa de interes real o deflactada
+esta tasa representa una ganacia real en el poder de compra.
+
+- deflactada :: que no incluye inflacion
+
+#+begin_export ascii
+
+        i_f - f
+i_r = ----------- 
+         1 + f
+         
+#+end_export
+
+- i   :: tasa de interes real o deflactada
+- f   :: tasa de inflacion
+- i_f :: es una tasa de inflacion inflada o ajustada a la inflacion 
+ 
+*** Tasa de interes inflada o ajustada
+es una tasa que considera el efecto inflacionario 
+
+i_f = i_r + f + f(i_r)
+
+*** Relacion de la tasa de inflacion con la tmar
+
+TMAR_f = r + f + r(f)
+
+- r :: riesgo de la inversion
+- f :: inflacion
+
+*** Valores corrientes
+son cifras monetarias expresadas al valor del tiempo que pertenecen, considera los efectos inflacionarios.
+ 
+*** Valores constantes
+son cantidades monetarias de tiempos distintos expresadas a su valor en un tiempo determinado, es decir, no se toma en cuenta la inflacion.
+
+#+begin_export ascii
+                              Valor corriente_t 
+Valor.Constante_{t base o} = -------------------
+                                  (1+f)^n
+#+end_export                    
+
+*nota* t debe ser mayor a 0 siempre
+
+**** ejemplo
+hace un año un trabajador resivia una salario de 4000 al mes. Actualmente resive por trabajar 4150 al mes. Durante este año, la inflacion anual fue del 4%.
+
+- ¿se ha incrementado el poder adquisitivo del salario de este trbajador?
+
+4150 / (1 + 0.04)^1 = 3990.38
+
+*NO* no se incremento el poder adquisitivo, al contrario se redujo
+
+*** Importante
+al momento de considerar la inflacion en un estudio de ingenieria economica se debe tener en cuenta si se trabajan con cantidades corrientes o constantes en los flujos de efectivo  
+
+1. si se utilizan cantidades corrientes, manejar una tasa de interes ajustada a la inflacion
+2. si se emplean cantidades cantidades constantes, implementar una tasa de interes real
+*** ejemplo
+un bien cuesta hoy 5000 se espera que la inflacion sea del 4% anual en los siguientes 4 años.
+
+- a) Calcular el prescio corriente del bien, para cada año
+- b) En cada año, calcular el valor presente del bien utilizando las cantidades del insiso a y una tasa de interes real del 10%
+- c) Calcule el precio constante del bien con base en el tiempo 0 para cada año. 
+- d) En cada año calcular el valor presente utilizando las cantidades del insiso c con una tasa real del 10%  
+
+| periodo | P.Coerriente (a) |  VP (b) | P. Constante (c) |  VP (d) |
+|---------+------------------+---------+------------------+---------|
+|       0 |          5000.00 | 5000.00 |             5000 | 5000.00 |
+|       1 |          5200.00 | 4545.45 |             5000 | 4545.45 |
+|       2 |          5408.00 | 4132.23 |             5000 | 4132.23 |
+|       3 |          5624.32 | 3756.57 |             5000 | 3756.57 |
+|       4 |          5849.29 | 3415.06 |             5000 | 3415.06 |
+|         |                  |         |                  |         |
+|         |                  |         |                  |         |
+|---------+------------------+---------+------------------+---------|
+
+-----
+a) 
+V.corriente = V.Constante (1+f)^n  
+-----
+b)
+convertir el interes a un interes que si contiene la inflacion
+i_f = i_r + f + f(i_r) 
+0.1 + 0.04 + 0.04(0.1) -> 0.144 -> 14.4%
+
+P = F(p/f, 14.4%, n)
+-----
+d)
+al ser constante no consideran la inflacion
+P = F(p/f, 10%, n)
+
+y deberia ser igual al b
+
+*** ejercicio
+una campañia quiere saber si es combeniente comprar ahora o mas tarde un equipo, si la compañia compra hoy mismo el equipo le cuesta 200,000, pero si compra dentor de 3 años se espera que cueste 340,000. Si la compañia maneja una TMAR real de 12% anual la tasa de inflacion promedio anual es del 6.75%.
+
+aplciando el valor futuro, determine si la compañia debe comprar hoy o dentro de 3 años,
+
+- a) si no se considera la inflacion
+
+
+VFN = -200,000 * (f/p, 12%, 3) + 340,000
+    = 59,020
+
+comprar HOY
+
+-----
+
+- b) si se considera la inflacion 
+
+if = 0.12 + 0.0675 + 0.12(0.0675) -> 0.1956
+VFN = -200,000 * (f/p, 19.56%,3) + 340,000
+    = $-1812.32
+
+comprar 3 años
+
+*** ejercicio
+que cantidad anual se encesita depositar, iniciando el proximo año para que en 5 años se acumule una cantidad con el mismo poder adquisitivo que hoy tiene $680.58 si la tasa de interes ajustada a la inflacion es del 10% y la tasa de inflacion es del 8% anual.
+
+#+begin_export ascii
+
+               $680.58 <- valor constante
+                 |
+                 |
+                 |
+--0--1--2--3--4--5--
+     |  |  |  |  |
+     A  A  A  A  A <- valores corrientes
+
+#+end_export
+
+
+--- convertir unidad constante a corriente ---
+V_corriente = 680.58(1+0.08)^5 -> 1000
+
+
+--- rersutado ---
+A = 1000 * (a/f, 10%, 5) <- el 10% ya esta ajustado a la inflacion
+A = 1000(0.1638) = $163.8
+
+*conclusion*
+se nececita depocitar $163.8 durante 5 años
+
+** Periodo de recuperacion
+es el tiempo estimado que le tomara a los ingresos recuperar la inversion inicial. El periodo de recuperacion nunca debe usarse como criterio de evaluacion, se utiliza para ofrecer informacion complementaria junto con otros analisis. La recuperacion puede ser de dos formas, simple o descontada
+
+--- simple ---
+cuando es simple la tasa de interes es igual a 0 y la ecuacion es la siguiente:
+
+0 = -P + \Sum_{t=1}^{n_p} FNE_t
+
+
+--- descontado ---
+cuando es descontado la tasa es mayor a 0% y la ecuacion es la siguiente:
+
+0 = -P + \Sum_{t=1}^{n_p} FNE_t (factores de interes compuesto)
+
+
+- n_p :: periodo de recuperacion
+- FNE_t :: flujo neto de efectivo
+  
+*** ejercicio
+se requiere adquirir una nueva maquina de produccion que genera un ingreso neto anual 
+
+|                  | Maquina A | Maquina B           |
+|------------------+-----------+---------------------|
+| Costo inicial, $ | 12,000    | 8,000               |
+| Ingreso, $/anual | 3,000     | 1,000 (Años 1 a 5)  |
+|                  |           | 3,000 (Años 6 a 14) |
+| Vida, años       | 7         | 14                  |
+
+determine el periodo de recuperacion simple y descontado para cada maquina de un 15% anual
+
+--- simple ---
+|         |  MAQ A |                 |
+| Periodo |  FNE_t | FNE_t Acumulado |
+|---------+--------+-----------------+
+|       0 | -12000 |          -12000 |
+|       1 |   3000 |           -9000 |
+|       2 |   3000 |           -6000 |
+|       3 |   3000 |           -3000 |
+|       4 |   3000 |               0 |
+
+Periodo de recuperacion de la maquina A = 4 años 
+
+|         | MAQ B |                 |
+| Periodo | FNE_t | FNE_t Acumulado |
+|---------+-------+-----------------|
+|       0 | -8000 |           -8000 |
+|       1 |  1000 |           -7000 |
+|       2 |  1000 |           -6000 |
+|       3 |  1000 |           -5000 |
+|       4 |  1000 |           -4000 |
+|       5 |  1000 |           -3000 |
+|       6 |  3000 |               0 |
+
+Periodo de recuperacion de la maquina B = 6 años
+
+
+--- compuesto ---: tiene un periodo de recuperacion mayor al simple
+MAQ A
+-12,000 + 3000*(p/a,15%,np) = 0
+(p/a,15%,n/p) = 12000/3000 -> 4
+
+np= 6 + ( (4-3.7845) / (4.1604 - 3.7845) ) (7-6) = 6.57 años
+
+
+MAQ B
+-8000 + 1000*(p/a,15%,5) + 3000(p/a,15%,n)(p/f,15%,5) = 0
+-8000 + 1000(3.3522) + 3000(P/A,15%,n)(0.4972)
+
+
+(P/A,15%,n) = 4647.8
+n = 4.52 año
+
+n + 5 años (años que toma la recuperacion simple) -> 9.52 años
+
