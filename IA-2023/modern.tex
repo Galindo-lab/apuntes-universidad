@@ -1,0 +1,297 @@
+% Created 2023-09-17 dom 13:16
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Galindo}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Galindo},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\% ----------------------------------------------------------------------
+\%                              Setup
+\% ----------------------------------------------------------------------
+
+\documentclass{article}
+\%\% \usepackage{fancyhdr}
+\usepackage{graphicx}
+
+\% hoja tamaño carta americana
+\usepackage[
+    \%\% left=.75in,
+    \%\% right=.75in,
+    top=1in,
+    bottom=1in,
+    papersize=\{8.5in,11in\}
+]\{geometry\}
+
+\% idioma de babel
+\usepackage[spanish, mexico]{babel}
+
+\usepackage{tabularx}
+\usepackage{makecell}
+
+\%\% \usepackage{etoolbox}
+\%\% \preto\CD{\deactivatequoting}
+
+\% helvetica
+\usepackage[scaled]{helvet}
+\% bordes
+\%\% \usepackage{mdframed}
+\usepackage[framemethod=TikZ]{mdframed}
+
+\%\usepackage{biblatex}
+\usepackage{csquotes}
+
+\usepackage[backend=biber, style=apa]{biblatex}
+
+
+
+\usepackage{listings}
+\%\% \lstdefinestyle{mystyle}\{
+\%\%    basicstyle=\ttfamily,
+\%\%    numbers=left,
+\%\%    showspaces=false,
+\%\%    frame=single,
+\%\%    showspaces=false,
+\%\%    showstringspaces=false, 
+\%\%    showtabs=false, 
+\%\%    numberstyle=\tiny,
+\%\%    aboveskip=12pt,
+\%\%    belowskip=12pt,
+\%\%    \%\% aboveskip=\parskip
+\%\% \}
+
+\lstdefinestyle{mystyle}\{
+   basicstyle=\ttfamily,
+   \%\% numbers=left,
+   showspaces=false,
+   \%\% frame=single,
+   showspaces=false,
+   showstringspaces=false, 
+   showtabs=false, 
+   numberstyle=\tiny,
+   aboveskip=\parskip,
+   belowskip=\parskip,
+   \%\% aboveskip=\parskip
+\}
+
+\lstset\{
+  style=mystyle,
+  literate=\{á\}\{\{$\backslash$'a\}\}1
+  \{é\}\{\{$\backslash$'e\}\}1
+  \{í\}\{\{$\backslash$'\{\i\}\}\}1
+  \{ó\}\{\{$\backslash$'o\}\}1
+  \{ú\}\{\{$\backslash$'u\}\}1
+  \{Á\}\{\{$\backslash$'A\}\}1
+  \{É\}\{\{$\backslash$'E\}\}1
+  \{Í\}\{\{$\backslash$'I\}\}1
+  \{Ó\}\{\{$\backslash$'O\}\}1
+  \{Ú\}\{\{$\backslash$'U\}\}1
+  \{ü\}\{\{$\backslash$"u\}\}1
+  \{Ü\}\{\{$\backslash$"U\}\}1
+  \{ñ\}\{\{$\backslash$~n\}\}1
+  \{Ñ\}\{\{$\backslash$~N\}\}1
+  \{¿\}\{\{?``\}\}1
+  \{¡\}\{\{!``\}\}1
+\}
+
+\%\% renombra verbatim a listing
+\let\verbatim\someundefinedcommand
+\lstnewenvironment{verbatim}
+\{\}\{\}
+
+
+\% cambiar el tamaño de la tipografia
+\setlength{\headheight}{12.5pt}
+
+\%cambiar el tamaño a helvetica
+\renewcommand\familydefault{\sfdefault} 
+
+\%\% sangria
+\setlength{\parindent}{0pt}
+
+
+\% ----------------------------------------------------------------------
+\%                            Variables
+\% ----------------------------------------------------------------------
+
+\newcommand{\university}{Universidad Autónoma de Baja California}
+\newcommand{\facultad}{Facultad de ciencias químicas e ingeniería}
+\newcommand{\program}{Ingeniero en software y tecnologías emergentes}
+\newcommand{\subject}{Inteligencia Artificial}
+\newcommand{\group}{351}
+\newcommand{\period}{2023-2}
+\newcommand{\docente}{Mauricio Alonso Sanchez Herrera}
+
+\% ----------------------------------------------------------------------
+\%                             Metodos 
+\% ----------------------------------------------------------------------
+
+
+
+\newcommand{\datasection}[1]\{
+  \universitytitle
+  \pugacurso
+  \%\% \vspace{12.5pt}
+  \pugaactividad{#1}
+  \%\% \begin{center}
+  \%\%   \{\large\bfseries Reporte de actividades\}
+  \%\% \end{center}
+\}
+
+
+\newcommand{\universitytitle}\{
+\begin{center}
+    \Large
+    \textbf{\university \\ 
+    \facultad} \\
+    \vspace{0.25in}
+    \large
+    \program
+    \vspace*{.25in}
+\end{center}
+\}
+
+\newcommand{\pugacurso}\{
+\begin{center}
+  {\large\bfseries Información de la materia}
+  \begin{mdframed}
+    \textbf{Nombre de la materia y clave}: \subject \\
+    \textbf{Grupo y periodo}: \group ~ (\period) \\
+    \textbf{Profesor}: \docente.
+  \end{mdframed}
+\end{center}
+\}
+
+\newcommand{\pugaactividad}[1]\{
+\begin{center}
+  {\large\bfseries Información de la actividad}
+  \begin{mdframed}
+    \textbf{Nombre de la actividad}: \@title \\  
+    \textbf{Lugar y fecha}: \@date \\
+    \textbf{Carácter de la actividad}: #1.
+    %% \\ \textbf{Participante(es)}: \@author
+  \end{mdframed}
+\end{center}
+\}
+
+\%\% \newcommand{\pugacurso}\{
+\%\%     \begin{center}
+\%\%         \renewcommand{\arraystretch}{1.75}
+\%\%         \begin{tabularx}{\textwidth}\{|p\{1.5in\}|X|\}
+\%\%         \hline
+\%\%         \multicolumn{2}{|c|}{ INFORMACIÓN DEL CURSO} \\
+\%\%         \hline
+\%\%         \multicolumn{2}{|c|}\{\makecell\{ $\backslash$\ \large{\subject} $\backslash$\ \textasciitilde{} \}\}\\
+\%\%         \hline
+\%\%         Grupo y periodo \& \group \textasciitilde{} (\period) \\
+\%\%         \hline
+\%\%         Profesor \& \docente \\
+\%\%         \hline
+\%\%         \end{tabularx}
+\%\%     \end{center}
+\%\% \}
+
+\%\% \newcommand{\pugaactividad}[1]\{
+\%\%     \begin{center}
+\%\%         \renewcommand{\arraystretch}{1.75}
+\%\%         \begin{tabularx}{\textwidth}\{|p\{1.5in\}|X|\}
+\%\%         \hline
+\%\%         \multicolumn{2}{|c|}{INFORMACIÓN DE LA ACTIVIDAD} \\
+\%\%         \hline
+\%\%         \multicolumn{2}{|c|}\{\makecell\{ $\backslash$\ \large{\@title} $\backslash$\ \textasciitilde{} \}\}\\
+\%\%         \hline
+\%\%         Lugar y fecha \& $\backslash$@date \\
+\%\%         \hline
+\%\%         Carácter de la actividad \& \#1 \\
+\%\%         \hline
+\%\%         \end{tabularx}
+\%\%     \end{center}
+\%\% \}
+
+
+\newcommand{\modentitlepage}[1]\{
+\begin{titlepage} 
+    %% \thispagestyle{empty}
+    \newgeometry{margin=0.5in}
+    \noindent
+
+    % universidad
+    % -----------
+    \noindent\begin{minipage}{0.2\textwidth}
+        % escudo de la universidad
+        \includegraphics[width=2.5cm]{#1} 
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}{0.8\textwidth} %\raggedleft
+        % Nombre de la universidad y programa
+        \scshape
+        \textbf{\university } \vspace*{2mm} \\ 
+        \facultad~ programa de \\ \program
+    \end{minipage}
+
+
+    \vspace*{3cm}
+    \hfill
+    \begin{minipage}{0.8\textwidth}
+        \bfseries
+        \Large
+        \subject 
+        \vspace*{1cm} \\
+
+        % titulo
+        % ------
+        \begin{minipage}{0.9\textwidth}
+          \Huge
+          \@title
+        \end{minipage}
+
+        \vspace*{4cm} 
+
+        % fecha
+        % -----
+        \Large
+        \@date
+
+        % linea horizontal
+        \vspace*{3cm}
+        \hrulefill \par
+        \vspace*{1cm}
+
+        % nombre
+        % ------
+        \large
+        \mdseries	
+        \textbf{Docente:} \\
+        \docente
+
+        \vspace*{1cm}
+
+        \textbf{Participante(es):} \\ 
+        \@author
+    \end{minipage}
+\end{titlepage}
+    \restoregeometry
+\}
+\end{document}

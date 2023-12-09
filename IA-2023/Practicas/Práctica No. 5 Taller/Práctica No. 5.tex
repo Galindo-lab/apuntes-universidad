@@ -1,0 +1,118 @@
+% Created 2023-11-20 lun 15:21
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{../../modern}
+\bibliography{./fuentes.bib}
+\raggedbottom
+\setcounter{secnumdepth}{2}
+\author{Luis Eduardo Galindo Amaya}
+\date{lunes, 20 noviembre 2023}
+\title{Práctica No. 5}
+\hypersetup{
+ pdfauthor={Luis Eduardo Galindo Amaya},
+ pdftitle={Práctica No. 5},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.1 (Org mode 9.5.2)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\modentitlepage{../../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+\tableofcontents
+\pagebreak
+
+
+\section{Introducción}
+\label{sec:org0c1492b}
+\autocite{wiki:Aprendizaje_supervisado} El aprendizaje supervisado
+es una técnica en aprendizaje automático (AA) y minería de datos que
+se utiliza para deducir una función a partir de datos de formación.
+Los datos de formación consisten de pares de objetos 
+(normalmente vectores): una componente del par son los datos de entrada
+y el otro, los resultados deseados.
+
+
+\section{Regresión}
+\label{sec:orgb2dfab7}
+La problematicas seleccionada para el problema de regresion fue la
+prediccion de ingresos semanales de una empresa (Walmart), el dataset
+que se utilizará es '\href{https://www.kaggle.com/datasets/yasserh/walmart-dataset}{Walmart dataset}' de kaggle, los datos que
+contiene son:
+
+\begin{center}
+\begin{tabularx}{0.8\textwidth}{l|l}
+Atributo & Descripción\\
+\hline
+Store\_Number & Número de la tienda\\
+Date & Fecha\\
+Week\_of\_Sales & Semana de ventas\\
+Weekly\_Sales & Ventas semanales para la tienda dada\\
+Holiday\_Flag & Indica si la semana es especial por festividad\\
+Temperature & Temperatura el día de la venta\\
+Fuel\_Price & Costo del combustible en la región\\
+CPI & Índice de precios al consumidor predominante\\
+Unemployment & Tasa de desempleo predominante\\
+\end{tabularx}
+
+\end{center}
+
+El dataset seleccionado tiene columnas que muestran la cantidad de
+factores que participan en los ingresos que se perciben, una regresion
+lineal no permite tomar en cuenta los factores que pueden influir.
+
+
+\section{Clasificación}
+\label{sec:org3a0b7f0}
+El problema seleccionado para utilizar clasificación es: Detección de
+riesgo de ataque cardiaco. el dataset que se va a utilizar es '\href{https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset?select=heart.css}{Heart Attack
+Analysis \& Prediction Dataset}' de kaggle, el dataset contiene
+los siguientes datos sobre los pacientes:
+
+\begin{center}
+\begin{tabularx}{0.8\textwidth}{l|l}
+Atributo & Descripción\\
+\hline
+Age & Edad del paciente\\
+Sex & Género del paciente\\
+exang & Angina inducida por ejercicio\\
+ca & Número de vasos principales\\
+cp & Tipo de Dolor de Pecho\\
+trtbps & Presión arterial en reposo\\
+chol & Colesterol en mg/dl\\
+fbs & Azúcar en sangre en ayunas\\
+rest\_ecg & Resultados electrocardiográficos en reposo\\
+thalach & Frecuencia cardíaca máxima alcanzada\\
+target & Riesgo de ataque cardíaco\\
+\end{tabularx}
+
+\end{center}
+
+La compleja relación entre los datos complica la utilización de otros
+métodos de análisis de datos, por lo que utilizar aprendizaje
+supervisado es la opción mas prometedora.
+
+
+\section{Conclusión}
+\label{sec:org26aadf7}
+Durante esta practica aprendí que es aprendizaje supervisado, como
+identificar un problema que se puede resolver mediante esta técnica y
+como podemos utilizarla en los problemas que no se pueden resolver
+mediante otras técnicas. 
+
+
+\section{Referencias}
+\label{sec:orgb4831cf}
+\printbibliography[heading=none]
+\end{document}

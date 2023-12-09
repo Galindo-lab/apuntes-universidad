@@ -1,0 +1,278 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{expert_systems}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeldatesource}{nodate}
+      \field{journaltitle}{Expert systems and Applied Artificial Intelligence}
+      \verb{urlraw}
+      \verb https://www.umsl.edu/~joshik/msis480/chapt11.htm
+      \endverb
+      \verb{url}
+      \verb https://www.umsl.edu/~joshik/msis480/chapt11.htm
+      \endverb
+    \endentry
+    \entry{Hernandez_Karelin_Tarasenko_2014}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5c1d9ae2078df00fa422c3aa8295cd9e}{%
+           family={Hernandez},
+           familyi={H\bibinitperiod},
+           given={Manuel\bibnamedelima Gonzalez},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88c812907c9345ad7cf998a6e4674e9f}{%
+           family={Karelin},
+           familyi={K\bibinitperiod},
+           given={Oleksandr},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6458441f707d1e8021f6ee7df217047}{%
+           family={Tarasenko},
+           familyi={T\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2a6b429e8846349cbd7dea5873494191}
+      \strng{fullhash}{e6dbb517e008f7bf57349e6baaa900b9}
+      \strng{bibnamehash}{e6dbb517e008f7bf57349e6baaa900b9}
+      \strng{authorbibnamehash}{e6dbb517e008f7bf57349e6baaa900b9}
+      \strng{authornamehash}{2a6b429e8846349cbd7dea5873494191}
+      \strng{authorfullhash}{e6dbb517e008f7bf57349e6baaa900b9}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Journal of Educational Sciences}
+      \field{number}{03}
+      \field{title}{Mathematical modeling using Semantic Networks for teaching}
+      \field{volume}{01}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.19044/ejes.v1no3a6
+      \endverb
+      \verb{urlraw}
+      \verb https://files.eric.ed.gov/fulltext/EJ1236644.pdf
+      \endverb
+      \verb{url}
+      \verb https://files.eric.ed.gov/fulltext/EJ1236644.pdf
+      \endverb
+    \endentry
+    \entry{Minsky_1974}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2fe335dc52e059141e41e4fada160d64}{%
+           family={Minsky},
+           familyi={M\bibinitperiod},
+           given={Marvin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2fe335dc52e059141e41e4fada160d64}
+      \strng{fullhash}{2fe335dc52e059141e41e4fada160d64}
+      \strng{bibnamehash}{2fe335dc52e059141e41e4fada160d64}
+      \strng{authorbibnamehash}{2fe335dc52e059141e41e4fada160d64}
+      \strng{authornamehash}{2fe335dc52e059141e41e4fada160d64}
+      \strng{authorfullhash}{2fe335dc52e059141e41e4fada160d64}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Massachusetts Institute of Technology}
+      \field{month}{6}
+      \field{title}{A framework for representing knowledge}
+      \field{year}{1974}
+      \verb{urlraw}
+      \verb https://dspace.mit.edu/bitstream/handle/1721.1/6089/AIM-306.pdf?sequence=2
+      \endverb
+      \verb{url}
+      \verb https://dspace.mit.edu/bitstream/handle/1721.1/6089/AIM-306.pdf?sequence=2
+      \endverb
+    \endentry
+    \entry{prasad2012hybrid}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=526f8f8e882dd4caf576660b861439a1}{%
+           family={Prasad},
+           familyi={P\bibinitperiod},
+           given={TV},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ce916ff73e76de3981932b7b2201ca7c}
+      \strng{fullhash}{ce916ff73e76de3981932b7b2201ca7c}
+      \strng{bibnamehash}{ce916ff73e76de3981932b7b2201ca7c}
+      \strng{authorbibnamehash}{ce916ff73e76de3981932b7b2201ca7c}
+      \strng{authornamehash}{ce916ff73e76de3981932b7b2201ca7c}
+      \strng{authorfullhash}{ce916ff73e76de3981932b7b2201ca7c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1211.2736}
+      \field{title}{Hybrid systems for knowledge representation in artificial intelligence}
+      \field{year}{2012}
+    \endentry
+    \entry{Raghavavaiah}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=62f7a5846b575c2065986e614098fcbd}{%
+           family={Raghavavaiah},
+           familyi={R\bibinitperiod},
+           given={Gurram.\bibnamedelimi Veera},
+           giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{62f7a5846b575c2065986e614098fcbd}
+      \strng{fullhash}{62f7a5846b575c2065986e614098fcbd}
+      \strng{bibnamehash}{62f7a5846b575c2065986e614098fcbd}
+      \strng{authorbibnamehash}{62f7a5846b575c2065986e614098fcbd}
+      \strng{authornamehash}{62f7a5846b575c2065986e614098fcbd}
+      \strng{authorfullhash}{62f7a5846b575c2065986e614098fcbd}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Conceptual Dependency (CD).}
+      \field{title}{Conceptual dependency (CD).}
+      \verb{urlraw}
+      \verb https://artificialintelligence-notes.blogspot.com/2010/07/conceptual-dependency-cd.html
+      \endverb
+      \verb{url}
+      \verb https://artificialintelligence-notes.blogspot.com/2010/07/conceptual-dependency-cd.html
+      \endverb
+    \endentry
+    \entry{Schank1975ScriptsPA}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a17889b861043d079797d25914037711}{%
+           family={Schank},
+           familyi={S\bibinitperiod},
+           given={Roger\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6b91a1569c45453fd6121061e946b45}{%
+           family={Abelson},
+           familyi={A\bibinitperiod},
+           given={Robert\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6d27bb680dfdab022eee34fb9dd3b6cf}
+      \strng{fullhash}{6d27bb680dfdab022eee34fb9dd3b6cf}
+      \strng{bibnamehash}{6d27bb680dfdab022eee34fb9dd3b6cf}
+      \strng{authorbibnamehash}{6d27bb680dfdab022eee34fb9dd3b6cf}
+      \strng{authornamehash}{6d27bb680dfdab022eee34fb9dd3b6cf}
+      \strng{authorfullhash}{6d27bb680dfdab022eee34fb9dd3b6cf}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Joint Conference on Artificial Intelligence}
+      \field{title}{Scripts, Plans and Knowledge}
+      \field{year}{1975}
+      \verb{urlraw}
+      \verb https://www.ijcai.org/Proceedings/75/Papers/021.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ijcai.org/Proceedings/75/Papers/021.pdf
+      \endverb
+    \endentry
+    \entry{Sowa_1993}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7c38547679bea3d19c9506584dcb0ec8}{%
+           family={Sowa},
+           familyi={S\bibinitperiod},
+           given={John\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7c38547679bea3d19c9506584dcb0ec8}
+      \strng{fullhash}{7c38547679bea3d19c9506584dcb0ec8}
+      \strng{bibnamehash}{7c38547679bea3d19c9506584dcb0ec8}
+      \strng{authorbibnamehash}{7c38547679bea3d19c9506584dcb0ec8}
+      \strng{authornamehash}{7c38547679bea3d19c9506584dcb0ec8}
+      \strng{authorfullhash}{7c38547679bea3d19c9506584dcb0ec8}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{KNOWLEDGE ORGANIZATION}
+      \field{number}{1}
+      \field{title}{Sowa, J. F. (ed.): Principles of semantic networks – explorations in the representation of knowledge (O. Sechser)}
+      \field{volume}{20}
+      \field{year}{1993}
+      \field{pages}{60\bibrangedash 61}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.5771/0943-7444-1993-1-60
+      \endverb
+    \endentry
+    \entry{Sucar}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ffdf7cd4c362ecc72a00927f9ef398c5}{%
+           family={Sucar},
+           familyi={S\bibinitperiod},
+           given={Luis\bibnamedelima Enrique},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ffdf7cd4c362ecc72a00927f9ef398c5}
+      \strng{fullhash}{ffdf7cd4c362ecc72a00927f9ef398c5}
+      \strng{bibnamehash}{ffdf7cd4c362ecc72a00927f9ef398c5}
+      \strng{authorbibnamehash}{ffdf7cd4c362ecc72a00927f9ef398c5}
+      \strng{authornamehash}{ffdf7cd4c362ecc72a00927f9ef398c5}
+      \strng{authorfullhash}{ffdf7cd4c362ecc72a00927f9ef398c5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{https://ccc.inaoep.mx/}
+      \field{title}{Redes Bayesianas}
+      \verb{urlraw}
+      \verb https://ccc.inaoep.mx/~esucar/Clases-mgp/caprb.pdf
+      \endverb
+      \verb{url}
+      \verb https://ccc.inaoep.mx/~esucar/Clases-mgp/caprb.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

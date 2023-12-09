@@ -1,0 +1,51 @@
+
+Title "Lenguajes y Paradigmas"
+!theme plain
+scale 3
+
+rectangle "Prolog"
+rectangle "Programación Lógica"
+rectangle "Lógica Formal"
+rectangle "Paradigma"
+rectangle "Lenguaje de Programación"
+rectangle "C"
+rectangle "Programación Orientada a Objetos"
+rectangle "Programación Procedular"
+rectangle "Java"
+rectangle "Programación Funcional"
+rectangle "Haskell"
+rectangle "Tipado Estático"
+rectangle "Débilmente Tipado"
+
+"Prolog" -u->"Lenguaje de Programación" :es
+"Prolog" -l->"Programación Lógica": basada 
+"Prolog" -d->"Tipado Estático":es de
+"Programación Lógica" -u->"Paradigma":es un
+"Programación Lógica" -d->"Lógica Formal":basada
+"Paradigma" -d->"Lenguaje de Programación": para
+"Programación Orientada a Objetos" -u->"Paradigma":es un
+"Java" -u->"Programación Orientada a Objetos":implementa
+"Java" -l->"Programación Procedular":implementa
+"Java" -u->"Lenguaje de Programación":es un
+"Java" -l->"Tipado Estático":es de
+"C" -d->"Lenguaje de Programación":es
+"C" -d->"Programación Procedular":implementa
+"C" -l->"Débilmente Tipado":es
+"Programación Funcional" -u->"Paradigma":es un
+"Haskell" -u->"Lenguaje de Programación":es un
+"Haskell" -u->"Programación Funcional": implementa
+"Haskell" -r->"Tipado Estático":es de
+
+
+/'
+ ' rectangle Arrows
+ ' rectangle Up
+ ' rectangle Down
+ ' rectangle Left
+ ' rectangle Right
+ ' 
+ ' Arrows -u-> Up :a
+ ' Arrows -d-> Down
+ ' Arrows -l-> Left
+ ' Arrows -r-> Right
+ '/

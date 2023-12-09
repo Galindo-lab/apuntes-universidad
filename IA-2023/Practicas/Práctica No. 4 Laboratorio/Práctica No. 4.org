@@ -1,0 +1,131 @@
+
+#+TITLE:  Práctica No. 4 Laboratorio
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   martes, 07 noviembre 2023
+
+
+# -----
+#+SUBTITLE: 
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+# -----
+
+#+latex_header: \usepackage{../../modern}
+#+latex_header: \bibliography{./fuentes.bib}
+#+latex_header: \raggedbottom
+
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+
+# Informacion extra
+# -----------------
+#+latex: \modentitlepage{../../images/escudo-uabc-2022-1-tinta-pos.png}
+#+latex: \datasection{Individual}
+#+latex: \tableofcontents
+#+latex: \pagebreak
+
+* Introducción
+A lo largo de esta practica utizaré la Lógica de primer orden para
+implementar la red semántica de la practica pasada. Acorde a wikipedia
+la logica de primer orden: \\
+
+...Es un sistema formal diseñado para estudiar la inferencia en los
+lenguajes de primer orden. Los lenguajes de primer orden son, a su
+vez, lenguajes formales con cuantificadores que alcanzan solo a
+variables de individuo, y con predicados y funciones cuyos argumentos
+son solo constantes o variables de individuo{{{autocite(Wikipedia_2023)}}}.
+
+* Red Semantica de conocimiento personal
+La red semántica de la practica anterior, en esta red podemos
+identificar las relaciones entre los diversos conceptos
+
+#+begin_src plantuml :file ./img/test.png :exports results
+  !theme plain
+  scale 3
+
+  rectangle "Prolog"
+  rectangle "Programación Lógica"
+  rectangle "Lógica Formal"
+  rectangle "Paradigma"
+  rectangle "Lenguaje de Programación"
+  rectangle "C"
+  rectangle "Programación Orientada a Objetos"
+  rectangle "Programación Estructurada"
+  rectangle "Java"
+  rectangle "Programación Funcional"
+  rectangle "Haskell"
+  rectangle "Tipado Estático"
+  rectangle "Débilmente Tipado"
+
+  "Prolog" -u->"Lenguaje de Programación" :es
+  "Prolog" -l->"Programación Lógica": basada 
+  "Prolog" -d->"Tipado Estático":es de
+  "Programación Lógica" -u->"Paradigma":es un
+  "Programación Lógica" -d->"Lógica Formal":basada
+  "Paradigma" -d->"Lenguaje de Programación": para
+  "Programación Orientada a Objetos" -u->"Paradigma":es un
+  "Java" -u->"Programación Orientada a Objetos":implementa
+  "Java" -l->"Programación Estructurada":implementa
+  "Java" -u->"Lenguaje de Programación":es un
+  "Java" -l->"Tipado Estático":es de
+  "C" -d->"Lenguaje de Programación":es
+  "C" -d->"Programación Estructurada":implementa
+  "C" -l->"Débilmente Tipado":es
+  "Programación Funcional" -u->"Paradigma":es un
+  "Haskell" -u->"Lenguaje de Programación":es un
+  "Haskell" -u->"Programación Funcional": implementa
+  "Haskell" -r->"Tipado Estático":es de
+#+end_src
+
+#+caption: Red semántica de 'Lenguajes y Paradigmas' de la pagina anterior.
+#+RESULTS:
+[[file:./img/test.png]]
+
+* Formalizar la representación
+\[\begin{align*}
+\text{Variables} & & \text{Hechos} \\
+P &= \text{Paradigma} & P(PF) \\
+L &= \text{Lenguaje de programación} & P(PL) \\
+TT &= \text{Tipo de Tipado} & P(PE) \\
+B &= \text{Basada} & P(POO) \\
+I &= \text{Implementa} & L(PG) \\
+TE &= \text{Tipado Estatico} & L(HS) \\
+LF &= \text{Lógica formal} & L(J)\\
+PF &= \text{Programacion funcional} & L(C) \\
+PL &= \text{Programacion logica} & I(J,POO) \\
+PE &= \text{Programacion estructurada} & I(J,PE) \\
+POO &= \text{Programacion Oriendad a Objetos} & B(PL,LF) \\
+PG &= \text{Prolog} & I(PG,PL) \\
+HS &= \text{Haskell} & I(C,PE) \\
+J &= \text{Java} & TD(C) \\
+C &= \text{C} & TE(HS) \\
+TD &= \text{Tipado Debil} & TE(PG) \\
+& & I(HS,PF) 
+\end{align*}\]
+
+- \(T(E) \land P(PF) \implies HS\) :: Sí es de tipado estatico y de
+  paradigma funcional entonces el lenguaje es Haskell.
+
+- \( I(L, POO) \land I(L, PE) \implies J \) :: Sí el lenguaje
+  implementa el paradigma orientado a objetos y el prardigma
+  estructurado entonces el lenguaje es Java.
+
+- \( I(L, PE) \land TD(L) \implies C \) :: Si el lenguaje implementa
+  el paradigma procedular y de tipado debil entonces el lenguaje es C.
+
+- \(T(E) \land P(PL) \implies PG \) :: Sí es de tipado estatico y de
+  paradigma Logico entonces el lenguaje es Prolog.
+
+* Conclusión
+En esta práctica, hemos utilizado la lógica de primer orden para
+formalizar la representación de una red semántica de conocimiento
+personal. A través de esta formalización, hemos establecido una
+serie de reglas lógicas que nos permiten inferir información sobre los
+lenguajes de programación en función de sus características y
+relaciones con los paradigmas de programación. 
+
+* Referencias
+\printbibliography[heading=none]
+

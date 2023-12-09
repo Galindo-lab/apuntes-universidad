@@ -1,0 +1,109 @@
+/'
+ ' Competencia:
+ ' Analizar los conceptos básicos de la inteligencia artificial, mediante la
+ ' investigación del estado del arte, para sintetizar sus objetivos, alcances,
+ ' aplicaciones e implicaciones éticas, con actitud crítica y reflexiva.
+ ' 
+ ' Descripción:
+ ' Revisa la literatura recomendada e investigar del contexto actual de la
+ ' inteligencia artificial. Analiza los conceptos básicos de la inteligencia
+ ' artificial para elaborar y entregar un mapa conceptual de las subáreas
+ ' contenidas en esta.
+ ' 
+ ' Procedimiento:
+ ' De manera individual.
+ ' 1. A partir de lo visto en clase, elaborar un mapa conceptual dónde 
+ ' relacionen la mayor cantidad de áreas y subáreas que se relacionan 
+ ' directamente con la Inteligencia Artificial. Esto con la finalidad de 
+ ' conocer su alcance real.
+ ' 
+ ' En la siguiente sesión se presentarán sus trabajos y se discutirán en
+ ' clase.
+'/
+
+@startmindmap
+!theme plain
+scale 5
+skinparam classattributeiconsize 0
+
+title Inteligencia Artificial
+
+* Áreas de aplicación
+
+** Industria
+
+*** Automatización
+****_ Líneas de ensamblaje robóticas
+****_ Automatización de almacenes
+
+*** Manufactura
+****_ Análisis de eficiencia
+****_ Control automático
+****_ Producción basada en la demanda
+****_ Mantenimiento 
+****_ Robótica industrial
+
+*** Transporte
+****_ Conducción autónoma
+****_ Análisis y diseño de rutas
+****_ Drones autónomos
+
+
+** Diseño
+*** Herramientas
+****_ Diseño asistido por IA
+****_ Generadores
+****_ Herramientas de optimización
+
+
+** Médica
+
+*** Bioquímica
+****_ Diseño de moléculas
+****_ Diseño de ensayos clínicos
+
+*** Tratamientos
+****_ Diagnóstico
+****_ Medicina de precisión
+****_ Terapia personalizada
+
+*** Prevención
+****_ Previsión de enfermedades
+****_ Análisis de signos vitales
+
+
+
+** Marketing
+
+*** Recomendación
+****_ Sistemas de recomendación
+****_ Personalización de ofertas
+****_ Filtros de contenido
+
+*** Publicidad
+****_ Análisis de sentimiento
+****_ Publicidad programática
+****_ Personalización de anuncios
+
+
+
+/'
+ ' * Áreas de aplicación
+ ' ** Industria
+ ' *** Manofactura
+ ' ****_ Análisis de eficiencia
+ ' ****_ Control automático
+ ' ****_ Producción basada en la demanda
+ ' ** Médica
+ ' ***_ Desarrollo de fármacos
+ ' ** Marketing
+ ' ** Robótica
+ ' ** Militar
+ ' ** Videojuegos
+ ' ** Lingüística
+ ' ** Biotecnología
+ ' ** Ingeniería
+ '/
+
+@endmindmap
+

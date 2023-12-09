@@ -1,0 +1,49 @@
+
+#+latex_header: \usepackage[top=1in,bottom=1in,papersize={8.5in,11in}]{geometry}
+#+latex_header: \usepackage[spanish, mexico]{babel}
+#+latex_header: \usepackage[backend=biber, style=apa]{biblatex}
+#+latex_header: \bibliography{./fuentes.bib}
+#+latex_header: \usepackage{listings}
+
+#+macro: code @@latex:\lstinputlisting{}@@
+#+macro: cite @@latex:\cite{}@@
+#+macro: autocite @@latex:\autocite{}@@
+
+#+begin_export latex
+\lstdefinestyle{mystyle}{
+   basicstyle=\ttfamily,
+   numbers=left,
+   showspaces=false,
+   frame=single,
+   showspaces=false,
+   showstringspaces=false, 
+   showtabs=false, 
+   numberstyle=\tiny,
+   aboveskip=25pt
+   %% aboveskip=\parskip
+}
+
+\lstset{
+  style=mystyle,
+  literate={á}{{\'a}}1
+  {é}{{\'e}}1
+  {í}{{\'{\i}}}1
+  {ó}{{\'o}}1
+  {ú}{{\'u}}1
+  {Á}{{\'A}}1
+  {É}{{\'E}}1
+  {Í}{{\'I}}1
+  {Ó}{{\'O}}1
+  {Ú}{{\'U}}1
+  {ü}{{\"u}}1
+  {Ü}{{\"U}}1
+  {ñ}{{\~n}}1
+  {Ñ}{{\~N}}1
+  {¿}{{?``}}1
+  {¡}{{!``}}1
+}
+#+end_export
+#+begin_src elisp :exports none
+  (setq org-latex-listings t)
+#+end_src
+

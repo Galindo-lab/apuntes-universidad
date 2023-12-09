@@ -1,0 +1,231 @@
+
+#+TITLE:  Proyecto
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   viernes, 17 noviembre 2023
+
+# -----
+#+SUBTITLE: 
+#+OPTIONS: toc:nil ^:nil title:nil num:3
+#+LANGUAGE: es
+# -----
+
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./fuentes.bib}
+#+latex_header: \raggedbottom
+
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+#+latex: \modentitlepage{../images/escudo-uabc-2022-color-cont.png}
+#+latex: \datasection{Individual}
+#+latex: \tableofcontents
+#+latex: \pagebreak
+
+* Apoyo para programadores
+** Aseguramiento de calidad de software
+Ayudar a los desarrolladores a identificar y corregir problemas en el
+código antes de que se integre en el repositorio principal o antes de
+realizar una implementación mediante técnicas de clean code. \\
+
+Utilizar un analizador como Sonarlint permite enseñar buenas
+técnicas de programación sin interferir con el desarrollo del proyecto,
+se necesitaría invertir tiempo de capacitación en clean code además de
+supervisión constante para evitar problemas de calidad en la rama
+principal de trabajo.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Plugin de Sonarlint
+[[file:img/Captura de pantalla de 2023-11-17 20-43-45.png]]
+
+- Sonarlint :: https://www.sonarsource.com/solutions/our-unique-approach/
+
+\pagebreak
+  
+** Generación de código
+GitHub Copilot es una herramienta desarrollada por GitHub en
+colaboración con OpenAI que utiliza inteligencia artificial para
+generar sugerencias de código mientras escribes. \\
+
+Copilot permite a un desarrollador codificar de manera más ágil, esto
+reduciendo la cantidad de tiempo que se pasa analizando la
+documentación y nombrando cosas. Copilot en el futuro podría
+reemplazar a algunos miembros del equipo, pero en el presente es una
+herramienta de autocompletado muy útil ya que busca patrones comunes
+en el código para hacer sus recomendaciones.  
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Copilot recomendando código.
+[[file:img/copilot.png]]
+
+** Generación de pruebas unitarias
+Las pruebas unitarias son una parte fundamental para el desarrollo de
+aplicaciones modernas ya que nos permite verificar si el código cumple
+con los requerimientos solicitados, la inteligencia artificial se
+puede considerar en estos casos ya que, al no requerir de lógica,
+solo requiere crear los casos de prueba. \\
+
+Hacer pruebas unitarias requiere el tiempo del equipo además de
+conocimientos de unit testing, utilizar IA podría permitir a equipos
+menos experimentados utilizar el unit testing para mejorar la calidad
+de sus productos de software.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 8cm
+#+CAPTION: Diffblue generando pruebas unitarias en el panel inferior
+[[file:img/diffblue.png]]
+
+# - Machinet :: https://www.machinet.net/
+- Diffblue :: https://www.diffblue.com/
+# - Copilot  :: https://github.com/features/copilot
+
+\pagebreak
+
+* Apoyo para diseñadores
+** Análisis de diseño
+Autify es una herramienta de inteligencia artificial que permite a los
+diseñadores crear pruebas de uso en aplicaciones en múltiples
+plataformas, probar si el contenido del correo electrónico es válido
+para confirmar acciones. Acuerdo a los creadores de Autify el tiempo
+de pruebas de usuarios es lo más tardado del desarrollo, Autify puede
+reducir el número de personas requeridas para asegurar la
+accesibilidad del mismo.  
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 9cm
+#+CAPTION: Resultados de Autify
+[[file:img/auty.png]]
+
+- Autify :: https://autify.com/
+
+** Generación de interfaces y prototipado
+Framer permite a los diseñadores crear diseños de interfaz de usuario
+avanzados con animaciones complejas, transiciones y comportamientos
+interactivos. Esto es esencial para diseñar experiencias de usuario
+atractivas y efectivas. Framer utiliza IA para generar prototipos
+rápidos de páginas web, un prototipo rápido de una página permite a
+los desarrolladores centrarse únicamente en la implementación de la
+funcionalidad de esta. 
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Framer pidiendo un prompt para generar el sitio.
+[[file:img/framer.png]]
+
+- Framer :: https://framer.com/ 
+
+** Generación de paletas de colores
+Huemint es una herramienta en línea que utiliza inteligencia
+artificial (IA) para generar paletas de colores únicas, se basa en el
+aprendizaje automático para determinar una paleta que se vea bien y
+que no interfiera con la usabilidad. \\
+
+Para elegir los colores se requeriría un equipo de diseñadores que
+tengan conocimientos de UI.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Huemint generando una paleta de colores
+[[file:img/Huemint.png]]
+
+- Huemint :: https://huemint.com/bootstrap-plus/
+- Picular :: https://picular.co/haskell%20programing%20lenguage
+
+\pagebreak
+
+* Apoyo para el manejo de equipos
+** Gestión de calendarios
+Motion es una herramienta que permite gestionar calendarios y
+planificar acciones a futuro, utiliza inteligencia artificial para
+ajustar las tareas de manera más sencilla. \\
+
+Reajustar los calendarios es una tarea que requiere de constante
+supervisión y no puede descuidarse, herramientas como motion permiten
+despejar el tiempo del equipo que requiere esta actividad y utilizarlo
+en continuar con el proyecto.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Intefaz de calendar
+[[file:img/motion.png]]
+
+- Motion :: https://www.usemotion.com/calendar
+
+\pagebreak
+  
+** Generación de tareas
+Asana es el software de gestión de proyectos que te ayuda a planificar
+y gestionar de manera más fácil y eficiente el trabajo, una de las
+nuevas funciones de Asana es utilizar inteligencia artificial para
+poder planificar tareas en base al rendimiento histórico.
+
+Analizar los pasos para cumplir una tarea es una de las partes más
+importantes de la planificación y para eso conocer al equipo es
+indispensable. 
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Gestor de proyectos de Asana
+[[file:img/asana.png]]
+
+- Asana AI :: https://asana.com/es/product/ai
+
+** Generación de reportes
+Stepsize permite a los encargados de los equipos centralizar todos los
+recursos del proyecto y generar reportes sobre el estado del
+proyecto.
+
+Reportar el estado del proyecto es una de las principales funciones
+del responsable de un proyecto, tener conocimiento a detalle del
+trabajo individual de cada uno de los miembros del puede reducir el
+tiempo que se invierte en reuniones.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Panel de control de Stepsize
+[[file:img/step-0.png]]
+
+- Stepsize :: https://stepsize.com/ 
+
+
+
+
+
+* Conclusión
+A lo largo de esta practica aprendí como las herramientas de
+Inteligencia artificial ayudan a las personas a ser mas productivas y
+a hacer mas cosas rápidamente, la mayoría de las herramientas que pude
+investigar, por lo general, no reemplazan lo que una persona capacitada
+puede hacer pero la pueden ayudar a crear mas rápidamente las cosas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* COMMENT Práctica 5
+** Clasificacion
+- Precios de telefonos :: Determinar el precio de los telefonos
+  https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification/data?select=test.csv
+
+- Analisis de ataques al corazon y prediccion ::
+  https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset?select=heart.csv
+  
+- Heart Failure Prediction Dataset ::
+  https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction?select=heart.csv
+
+** Regrecion
+- Ventas en Walmart :: Probabilidad de  ventas 
+  https://www.kaggle.com/datasets/yasserh/walmart-dataset
+  

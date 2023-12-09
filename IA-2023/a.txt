@@ -1,0 +1,59 @@
+
+% variables
+% -----
+P = Paradigma
+L = Lenguaje
+TT = Tipo de Tipado
+B = Basada
+I = Implementa
+T = Tipado
+
+LF = Lógica formal
+PF = Programacion funcional
+PL = Programacion logica
+PE = Programacion estructurada
+POO = Programacion Orientada a Objetos
+
+PG = Prolog
+HS = Haskell
+J = Java
+C = C
+
+D = Debil
+E = Estatico
+
+% hechos
+% -----
+P(PF)
+P(PL)
+P(PE)
+P(POO)
+
+L(PG)
+L(HS)
+L(J)
+L(C)
+
+TT(D)
+TT(E)
+
+B(PL,LF)
+I(PG,PL)
+I(HS,PF)
+I(C,PE)
+
+T(C,D)
+T(HS,E)
+T(PG,E)
+
+% lenguajes multiparadigma 
+I(J,POO)
+I(J,PE)
+
+
+% predicados
+% -----
+P(L) :- I(L, P)
+tiapdo_estatico(Lenguaje) :- Tipado(Lenguaje, E)
+tipado_dinamico(Lenguaje) :- Tipado(Lenguaje, D)
+formal(Lenguaje) :- B(Lenguaje, LF)

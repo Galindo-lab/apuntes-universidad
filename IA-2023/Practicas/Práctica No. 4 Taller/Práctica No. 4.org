@@ -1,0 +1,162 @@
+
+#+TITLE:  Práctica No. 4 Taller
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   jueves, 02 noviembre 2023
+
+# -----
+#+SUBTITLE: 
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+# -----
+
+#+latex_header: \usepackage{../../modern}
+#+latex_header: \bibliography{./fuentes.bib}
+#+latex_header: \raggedbottom
+
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+
+
+
+# Informacion extra
+# -----------------
+\modentitlepage{../../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+\tableofcontents
+\pagebreak
+
+* Modelos de representación de conocimiento
+Deacuerdo a {{{autocite(prasad2012hybrid)}}} algunos de los metodos
+mas coumnes para representar conocimiento son:
+
+** Red Bayesiana
+{{{autocite(Sucar)}}} Las redes bayesianas modelan un fenómeno
+mediante un conjunto de variables y las relaciones de dependencia
+entre ellas. Dado este modelo, se puede hacer inferencia bayesiana; es
+decir, estimar la probabilidad posterior de las variables no
+conocidas, en base a las variables conocidas.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 12cm
+#+CAPTION: Ejemplo de una red bayesiana simple.
+[[file:img/Red_Bayesiana_Simple.png]]
+
+** Facts and Production Rules
+{{{autocite(expert_systems)}}} Una regla de producción, o simplemente
+una regla, consta de una parte SI (una condición o premisa) y una
+parte ENTONCES (una acción o conclusión). SI condición ENTONCES acción 
+(conclusión). La facilidad de explicación explica cómo el sistema
+llegó a la recomendación. Dependiendo de la herramienta utilizada para 
+implementar el sistema experto, la explicación puede estar en lenguaje
+natural o simplemente ser una lista de números de reglas.
+
+** Redes semánticas 
+{{{autocite(Sowa_1993)}}} Una red semántica es una estructura de grafo
+para representar conocimiento en patrones de nodos interconectados y
+arcos. 
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Ejemplo de una red semántica 
+[[file:img/Semantic_Net.png]]
+
+** Dependencia Conceptual
+{{{autocite(Raghavavaiah)}}} Esta representación se utiliza en el
+procesamiento de lenguaje natural con el fin de representar el
+significado de las oraciones de tal manera que se puedan realizar
+inferencias a partir de ellas. Es independiente del idioma en el que
+originalmente se expresaron las oraciones. Las representaciones de CD
+(Conceptual Dependency) de una oración se construyen a partir de
+primitivas que no son palabras del idioma, sino conceptuales. Estas
+primitivas se combinan para formar los significados de las palabras. 
+
+** Frames
+{{{autocite(Minsky_1974)}}} Un 'frame' es una estructura de datos para
+representar una situación estereotipada, como estar en un cierto tipo
+de sala de estar o asistir a una fiesta infantil. A cada marco se le
+adjuntan varios tipos de información. Alguna de esta información trata
+sobre cómo usar el marco. Otra parte se refiere a lo que se puede
+esperar que suceda a continuación. También se incluye información
+sobre qué hacer si las expectativas no se confirman. 
+
+** Guiones
+{{{autocite(Schank1975ScriptsPA)}}} Un guion es una secuencia
+predefinida y estereotipada de acciones que define una situación muy
+conocida. En efecto, un guion es una historia bastante aburrida. Los
+guiones permiten hacer referencia a objetos dentro de ellos como si
+estos objetos hubieran sido mencionados previamente. 
+
+** Sistemas hibridos
+{{{autocite(prasad2012hybrid)}}} Un sistema de conocimiento híbrido es
+una implementación de un formalismo de conocimiento híbrido que consta
+de dos o más subformalismos diferentes. 
+
+
+* Definición matemática de redes semánticas
+{{{autocite(Hernandez_Karelin_Tarasenko_2014)}}} Dado un fragmento de
+la realidad y un fenómeno físico de ingeniería u otro tipo de problema
+que se deba modelar, podemos proponer lo siguiente: si *P* es un
+conjunto de oraciones en lenguaje natural que describe dicho fenómeno
+y si el conjunto correspondiente *K* de fórmulas bien formadas derivadas
+de *P*, como resultado de la transcripción del lenguaje natural,
+utilizando un lenguaje formal intermedio como el cálculo de predicados
+de primer orden, entonces existe una red semántica de *P* que
+corresponde al problema en cuestión.  
+
+* Red Semantica de conocimiento personal 
+#+begin_src plantuml :file ./img/test.png :exports results
+  !theme plain
+  scale 3
+
+  rectangle "Prolog"
+  rectangle "Programación Lógica"
+  rectangle "Lógica Formal"
+  rectangle "Paradigma"
+  rectangle "Lenguaje de Programación"
+  rectangle "C"
+  rectangle "Programación Orientada a Objetos"
+  rectangle "Programación Procedular"
+  rectangle "Java"
+  rectangle "Programación Funcional"
+  rectangle "Haskell"
+  rectangle "Tipado Estático"
+  rectangle "Débilmente Tipado"
+
+  "Prolog" -u->"Lenguaje de Programación" :es
+  "Prolog" -l->"Programación Lógica": basada 
+  "Prolog" -d->"Tipado Estático":es de
+  "Programación Lógica" -u->"Paradigma":es un
+  "Programación Lógica" -d->"Lógica Formal":basada
+  "Paradigma" -d->"Lenguaje de Programación": para
+  "Programación Orientada a Objetos" -u->"Paradigma":es un
+  "Java" -u->"Programación Orientada a Objetos":implementa
+  "Java" -l->"Programación Procedular":implementa
+  "Java" -u->"Lenguaje de Programación":es un
+  "Java" -l->"Tipado Estático":es de
+  "C" -d->"Lenguaje de Programación":es
+  "C" -d->"Programación Procedular":implementa
+  "C" -l->"Débilmente Tipado":es
+  "Programación Funcional" -u->"Paradigma":es un
+  "Haskell" -u->"Lenguaje de Programación":es un
+  "Haskell" -u->"Programación Funcional": implementa
+  "Haskell" -r->"Tipado Estático":es de
+#+end_src
+
+#+caption: Red semántica de 'Lenguajes y Paradigmas'.
+#+RESULTS:
+[[file:./img/test.png]]
+
+* Conclusión
+A lo largo de la practica aprendí como diversos tipos de
+representaciones permiten que las computadoras puedan aprender sobre
+conceptos o ideas de maneras similares a como las entendemos los
+humanos, la representación del conocimiento puede ser utilizada de
+manera mas eficiente si la representación permite analizar el dominio
+del problema de manera mas eficiente.
+
+* Referencias
+\printbibliography[heading=none]
+

@@ -1,0 +1,99 @@
+#+TITLE:  Práctica No. 1 Laboratorio
+#+AUTHOR: Luis Eduardo Galidno Amaya 
+#+DATE:   22 de Agosto del 2023
+
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{../sample.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+* COMMENT Procedimiento
+De manera individual.
+
+Elaborar un reporte técnico que contenga un análisis en palabras propias de los
+siguientes puntos:
+
+a. Estado actual de la Inteligencia Artificial respecto la evolución de esta a
+   través de su historia.
+
+b. Discusión en palabras propias de los objetivos ideales de la Inteligencia
+   Artificial y contrastar contra la realidad.
+
+c. Discusión en palabras propias de las implicaciones éticas alrededor de la 
+   existencia de la Inteligencia Artificial.
+
+d. Describir brevemente tres aplicaciones de la Inteligencia Artificial en los 
+   siguientes contextos:
+     i. Hogar
+     ii.Industria
+     iii. Contexto de elección libr
+
+* Estado Actual
+La inteligencia artificial es bastante moderna, como la mayoría del áreas de 
+computación, pero sus orígenes se pueden remontar a los inicios de la 
+computación moderna tomando diversas formas, ajustándose a las necesidades y a 
+la disponibilidad técnica de su tiempo. La mayoría de sistemas de IA que han 
+existido se han enfocado en sistemas en sistemas para inferir o buscar 
+resultados de manera eficiente por otro lado los sistemas modernos de 
+inteligencia artificial utilizan redes neuronales para resolver los problemas 
+haciéndolos mas costosos computacional mente pero aumentando su versatilidad 
+y capacidades más allá de lo que se había visto hasta ahora.
+
+
+* Objetivos Ideales Y La Relidad De La IA
+El área de inteligencia artificial busca construir maquinas capaces de imitar 
+el pensamiento animal o humano. Hasta el momento *NO* existe una inteligencia
+artificial imitar el pensamiento por lo tanto los objetivos del área no se han 
+cumplido, sin embargo los avances en años recientes han probado el valor de 
+aplicación en sistemas específicos, las IAs de dominio especifico pueden
+asistir a los operadores humanos en tarea complicadas.
+
+
+* Implicaciones Éticas 
+Los últimos años han sido bastante importantes para el desarrollo de la IA el
+fácil accesos a potentes modelos ha permitido encontrar nuevos usos pero 
+también nuevos problemas, diversos tipos de IAs dan diferentes varios tipos de 
+problemas algunos de los mas importantes son la incapacidad de diferenciar 
+la realidad de lo falso o inventar cosas, utilización de información extraída de 
+maneras poco éticas, un ejemplo de esto seria los modelos como Midjourney y 
+dall-e que utilizan imágenes o dibujos sin permiso de los autores.
+
+
+* Aplicaciones
+** Hogar
+Actualmente se utiliza la inteligencia en sistemas de reconocimiento de voz en
+dispositivos como Amazon Alexa o Google Home, pero en el futuro se podrán 
+sistemas incluso mas avanzados que podrán gestionar todas las tareas domesticas.
+
+** Industria
+En manofactura la IA pude optimizar diseños creados por operadores humanos o
+crear diseños completamente nuevos dados una lista de requerimientos. 
+
+** Ingenieria de software
+Al igual que en la manofactura el uso de inteligencia artificial en la 
+ingeniería de software podría optimizar la creación de prototipos funcionales en
+base a los datos proporcionados por los usuarios, optimizar interfaces para 
+lectores de pantalla par personas invidentes además y pruebas de usabilidad 
+automatizadas.
+
+ 
+* Conclusión 
+#+BEGIN_mdframed
+A lo largo de esta practica pude identificar los posibles usos que puede tener 
+la inteligencia artificial en las actividades humanas y como todavía, a pesar
+de los avances en el campo, tiene muchos retos por solucionar.
+#+END_mdframed
