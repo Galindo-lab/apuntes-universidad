@@ -1,0 +1,114 @@
+
+#+TITLE:    Taller 7. DNS
+#+AUTHOR:   Luis Eduardo Galindo Amaya 
+#+DATE:     jueves, 09 noviembre 2023
+#+OPTIONS:  toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./fuentea.bib}
+#+latex_header: \raggedbottom
+
+#+macro: code @@latex:\lstinputlisting{}@@
+#+macro: cite @@latex:\cite{}@@
+#+macro: autocite @@latex:\autocite{}@@
+
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+* Cuestionario
+- ¿Qué es un nombre de dominio? :: Un nombre de dominio es una cadena
+  de texto que se asigna a una dirección IP numérica, que se utiliza
+  para acceder a un sitio web.
+  
+- ¿Cuáles son las reglas para elegir un nombre de dominio? :: ~ 
+
++ Los únicos caracteres permitidos para un nombre de dominio son:
+   - Los pertenecientes al alfabeto inglés: de la a a la z.
+   - Los dígitos del 0 al 9 (No es aconsejable un nombre con sólo dígitos).
+   - El guión: - (No puede ser ni el primero ni el último caràcter del nombre).
+   - No se admiten: acentos, diéresis, la ñ, la ç, espacios en
+       blanco, el punto, etc. No hay distinción entre minúsculas y mayúsculas.
+
++ Las longitudes màximas y mínimas de un nombre de dominio son:
+   - Para los gTLD .com, .org, .net, hay un máximo de 64 y un mínimo de 2.
+   - Para el TLD ISO-3166 .es: como máximo 63 y como mínimo 3.
+   - Para los restantes TLD ISO-3166 depende del registro.
+  
+- ¿Cómo se registra un nombre de dominio? :: ~
+  + Los nombres de dominio pueden registrarse a través de diversas
+    empresas conocidas como "registradores" que compiten entre sí.
+    
+  + Puedes encontrar una lista de estas empresas en el Directorio de
+    Registradores en este sitio.
+    
+  + El registrador que elijas te solicitará proporcionar datos de
+    contacto y técnicos para completar el registro.
+    
+  + El registrador mantendrá registros de la información de contacto y
+    enviará la información técnica a un directorio central llamado
+    "registro".
+    
+  + El registro facilita a otras computadoras en Internet la
+    información necesaria para enviarte correos electrónicos o
+    encontrar tu sitio web.
+    
+  + Además, se te requerirá firmar un contrato de registro con el
+    registrador que establecerá los términos bajo los cuales se acepta
+    y mantendrá tu registro.
+    
+
+- ¿Cuál es el costo de un dominio web? :: entre 10 y 15 dólares al
+  año aproximadamente.
+  
+- ¿Cómo funciona un DNS? :: Los servidores DNS convierten las
+  solicitudes de nombres en direcciones IP, con lo que se controla a
+  qué servidor se dirigirá un usuario final cuando escriba un nombre
+  de dominio en su navegador web. Estas solicitudes se denominan
+  consultas.
+
+- ¿Qué es un DNS resolver o solucionador de DNS? :: Un DNS resolver es
+  un servicio que proporciona una dirección IP cuando se solicita un
+  nombre de dominio. Se habla de resolver un dominio obteniendo su
+  dirección IP; “resolver” en inglés se define en el documento de
+  especificación de Internet RFC 1034.
+
+- ¿Qué es un DNS root name server o servidor de nombres de raíz de DNS? ::   
+  Un servidor raíz es un servidor de nombres para la zona raíz del
+  Sistema de nombres de dominio de Internet.  
+  
+- ¿Qué es un TLD o top-level domain? :: Un dominio del nivel superior
+  o TLD es la más alta categoría de los FQDN que es traducida a
+  direcciones IP por los DNS oficiales de Internet. Los nombres
+  servidos por los DNS oficiales son administrados por la Internet
+  Corporation for Assigned Names and Numbers. 
+  
+- ¿Qué es la ICANN? :: ICANN es una organización que opera a nivel
+  multinacional/internacional y es la responsable de asignar las
+  direcciones del protocolo IP, de los identificadores de protocolo,
+  de las funciones de gestión del sistema de dominio y de la
+  administración del sistema de servidores raíz. 
+
+- ¿Cuáles son los ataques más comunes a un DNS? :: ~
+  + Suplantación de DNS/envenenamiento de caché.
+  + Túnel de DNS.
+  + Secuestro de DNS.
+  + Ataque NXDOMAIN.
+  + Ataque de dominio fantasma.
+  + Ataque de subdominio aleatorio.
+  + Ataque de bloqueo de dominio.
+  + Ataque CPE basado en red de robots (botnet).
+
+* Conclusión
+Durante esta practica aprendí que es un nombre de dominio y para que
+se utiliza, que es la ICANN y en que se relaciona con el internet
+ademas del costo de estos, 
+
+* Fuentes
+- https://www.icann.org/resources/pages/faqs-84-2012-02-25-en#2
+- https://www.hostinger.mx/tutoriales/cuanto-cuesta-un-dominio-web
+- https://aws.amazon.com/es/route53/what-is-dns/#:~:text=Los%20servidores%20DNS%20convierten%20las,Estas%20solicitudes%20se%20denominan%20consultas
+- https://www.ionos.mx/digitalguide/servidores/know-how/dns-resolver/#:~:text=Los%20DNS%20resolvers%20son%20un,y%20los%20servidores%20de%20nombres.
+- https://es.wikipedia.org/wiki/Corporaci%C3%B3n_de_Internet_para_la_Asignaci%C3%B3n_de_Nombres_y_N%C3%BAmeros
+- https://www.cloudflare.com/es-es/learning/dns/dns-security/#:~:text=Estas%20limitaciones%2C%20combinadas%20con%20los,interceptaci%C3%B3n%20de%20informaci%C3%B3n%20personal%20privada.
+  

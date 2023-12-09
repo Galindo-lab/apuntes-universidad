@@ -1,0 +1,216 @@
+
+
+* Informacion del servidor
+Servidor de encuestas UABC ssh para
+las practicas 
+
+-----
+- direccion :: 148.231.130.237
+- puerto    :: 22
+- user      :: galindo
+- pasword   :: soporte123 -> 1274895
+-----
+
+filtros /home/sist20232/lety/filtros
+
+* Semana 1
+** Software
+- de sistema :: sistema operativo de múltiples programas  
+- de aplicaciones :: todo lo que se ejecuta en sistema operativo  
+
+** Objetivo del sistema
+- facilitar el uso 
+- maximizar el uso del sistema
+
+** Manejo de archivos
+Un archivo es una colección de bytes que contienen información relacionada, 
+pueden ser imágenes, canciones datos etc. El manejo de archivos permite la 
+creación manipulación y borrado de datos archivos y directorios, almacenamiento 
+de medios secundarios, elaboración de respaldos, etc.
+
+** Manejo de procesos
+Un proceso es un programa en ejecución, las aplicaciones tienen uno o mas 
+procesos asociados que están en ejecución y este componente es un procedimiento 
+para administrar los procesos que están corriendo simultáneamente en el sistema 
+operativo. Las funciones del manejador procesos  
+
+* Semana 2
+** Manejo de procesos (Obligatorio)
+un proceso es un programa en ejecución, las aplicaciones tienen uno o mas 
+procesos asociados cuando están en ejecución y este componente es un 
+procedimiento para administrar los procesos que están corriendo simultáneamente
+en el sistema operativo. Las funciones de el manejador de procesos son las
+siguientes:
+
++ Crear y eliminar procesos
++ Suspender o continuar procesos 
++ Sincronización de procesos y comunicación entre procesos.
+
+#+begin_verse
+- daemon :: procesos que corren por el sistema sin intervención del usuario
+- proceso zombie :: proceso que no hace nada
+#+end_verse
+
+** Manejo de dispositivos de entrada/salida (Opcional)
+Este componente se encarga de ocultar las variaciones de los dispositivos de 
+hardware para facilitar su instalación y uso. Provee acceso a los dispositivos 
+mediante el uso de drivers particulares, proporcionan un sistema de caché y 
+facilita información sobre las características y estado de un dispositivo 
+específico.
+
+** TODO Manejo de Red 
+** Manje de seguridad
+Los proceosos en un sistema operativo nececitan protegerse de las actividades 
+de otros proceosos, por ejemplo, el manejo de seguridad previene que un proceso
+en el espacio de otro, que un proceso no se aprodere del proceso y que se 
+mantenga la integridad de los perifericos.
+
+*Soporte de Hardware que necesita el sistema operativo* 
+- Interrupciones 
+- Llamadas al sistema 
+- Timer
+- Modo bit
+w
+* Semana 3
+** TODO 
+# Dia en la sala de maestros 
+** TODO Convección con servidores
+- http :: 
+- https :: 
+- telnet :: 
+- ssh ::
+ 
+* Semana 4
+** TODO directorios
+- \      :: raíz
+  + \etc :: configuraciones 
+  + \var 
+  + \users
+  + \dev
+  + \opt
+** Comandos
+*** passwd
+cambiar contraseña de usuario 
+
+*** ls
+listar archivos
+- -R :: Tree
+- -F :: mostrar el tipo de archivo
+- -a :: mostrar archivos ocultos
+
+*** mkdir
+crear directorio
+
+*** mv
+mover archivos y renombrar archivos 
+
+*** cat
+redireccionar texto a un archivo
+
+- -n :: numera las lineas del archivo
+*** touch
+crea un archivo vacio 
+
+**** cambiar la fecha 
+touch --date "2002-08-30 23:00:00" <nombre del archivo>
+*** rm
+eliminar un archivo o directorio
+- -r :: eliminar directorios de manera recursiva
+
+** Commodines
+- * :: rellena el espacio con cualquier valor
+- ? :: sustituye un caracter en un nombre
+
+* Semana 5
+** TODO Tarea
+*** sistema para investigar
+MANDRAKE 
+*** TAREA 
+Investigar
+
+microkernel, monolítico, híbrido
+
+1. microkernel
+2. monolítico  
+3. híbrido
+A mano
+** permisos de archivos y directorios
+*** Leer perisos
+#+begin_src 
+               drwx r-x r-x
+                |    |   |
+ dueño ---------+    |   |
+ grupo --------------+   |
+ otros usuarios ---------+
+#+end_src
+
+*** metodo absoluto
+#+begin_src 
+|   dueño   |   grupo   |   otros   |
+|-----------|-----------|-----------|
+| r | w | x | r | w | x | r | w | x |
+| * | * | * | * | - | * | - | - | - |
+|   |   | 7 |   |   | 5 |   |   | 0 |
+#+end_src
+
+*** TODO metodo simboico
+https://www.pluralsight.com/blog/it-ops/linux-file-permissions
+
+** Comandos
+*** diferencia cat y more
+| cat                     | more                              |
+|-------------------------+-----------------------------------|
+| muestra todo el archivo | muestra un porcentaje del archivo |
+|                         |                                   |
+
+*** ps
+- -fea :: muestra procesos de cada usario con detalles
+
+*** entubamiento o pipe (|)
+- cat -n procesos | more :: muestra el contenido del archivo con numeros  
+
+*** redireccionamiento directo (>)
+- ps -fea >procesos :: crea el archivo 'procesos' con la informacion de ps
+
+*** wc
+Word count, contar palabras
+
+- -c :: contar caracteres
+
+*** head
+obtiene las primeras 10 lineas del archivo
+
+*** tail
+obtiene las ultimas 10 lineas del archivo
+
+*** sort
+sirve para ordenar el cotenido de un archvo
+- nada :: ordena por peso  ascii 
+-   -f :: ordena sin importar si son mayuculas o minusculas 
+-   -r :: lo mismo que nada pero al reves
+-   -M :: toma los primeros 3 valores como el nombre del mes
+-   -n :: los que no tienen numero se mandan al inicio (acendente)
+-   +1 :: ordena por columna
+
+*** grep
+global regular expresion and print
+- grep <string> <archivo> :: buscar el string en el archivo
+
+*** cut
+cotes verticales, sirve para separ columnas
+- -f<numero de columna> :: corta el numero de columna
+- -d"<string delimitador>" :: se usa para cambiar el caracter separador
+
+* Semana 6
+** TODO redireccionamiento de entrada
+** TODO shifting
+** tr
+- tr "a" "A"<[nombre del archivo]         :: remplaza "a" con "A"
+- tr "[a-z]" "[A-Z]"<[nombre del archivo] :: remplaza el rango de letras "a-z" a "A-Z"  
+- tr "[:digit:]" "w" <[nombre del archivo] :: remplaza cualquier numero con "w"
+
+*** rangos invalidos
+- tr "[a-z]" "[A-P]" <[nombre archivo] :: se reemplaza los valores indefinidos con "["
+
+ =tr "[[:alpha:]]" "[[:upper:]]" < nombres_who.txt=
+* TODO Semana 7: Procesos 

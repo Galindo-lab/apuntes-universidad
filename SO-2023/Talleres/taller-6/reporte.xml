@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<office:document-content xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" office:version="1.2">
+  <office:font-face-decls>
+    <style:font-face style:name="Courier New" style:font-family-generic="modern" style:font-pitch="fixed" svg:font-family="'Courier New'" />
+  </office:font-face-decls>
+  <office:automatic-styles>
+    <text:list-style style:name="L1">
+      <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.75in" fo:text-indent="-0.25in" fo:margin-left="0.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.0in" fo:text-indent="-0.25in" fo:margin-left="1.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.25in" fo:text-indent="-0.25in" fo:margin-left="1.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.5in" fo:text-indent="-0.25in" fo:margin-left="1.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.75in" fo:text-indent="-0.25in" fo:margin-left="1.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.0in" fo:text-indent="-0.25in" fo:margin-left="2.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.25in" fo:text-indent="-0.25in" fo:margin-left="2.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.5in" fo:text-indent="-0.25in" fo:margin-left="2.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.75in" fo:text-indent="-0.25in" fo:margin-left="2.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <text:list-style style:name="L2">
+      <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.75in" fo:text-indent="-0.25in" fo:margin-left="0.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.0in" fo:text-indent="-0.25in" fo:margin-left="1.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.25in" fo:text-indent="-0.25in" fo:margin-left="1.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.5in" fo:text-indent="-0.25in" fo:margin-left="1.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.75in" fo:text-indent="-0.25in" fo:margin-left="1.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.0in" fo:text-indent="-0.25in" fo:margin-left="2.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.25in" fo:text-indent="-0.25in" fo:margin-left="2.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.5in" fo:text-indent="-0.25in" fo:margin-left="2.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.75in" fo:text-indent="-0.25in" fo:margin-left="2.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <text:list-style style:name="L3">
+      <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.75in" fo:text-indent="-0.25in" fo:margin-left="0.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.0in" fo:text-indent="-0.25in" fo:margin-left="1.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.25in" fo:text-indent="-0.25in" fo:margin-left="1.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.5in" fo:text-indent="-0.25in" fo:margin-left="1.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.75in" fo:text-indent="-0.25in" fo:margin-left="1.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.0in" fo:text-indent="-0.25in" fo:margin-left="2.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.25in" fo:text-indent="-0.25in" fo:margin-left="2.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.5in" fo:text-indent="-0.25in" fo:margin-left="2.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.75in" fo:text-indent="-0.25in" fo:margin-left="2.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <text:list-style style:name="L4">
+      <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.75in" fo:text-indent="-0.25in" fo:margin-left="0.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.0in" fo:text-indent="-0.25in" fo:margin-left="1.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.25in" fo:text-indent="-0.25in" fo:margin-left="1.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.5in" fo:text-indent="-0.25in" fo:margin-left="1.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.75in" fo:text-indent="-0.25in" fo:margin-left="1.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.0in" fo:text-indent="-0.25in" fo:margin-left="2.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.25in" fo:text-indent="-0.25in" fo:margin-left="2.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.5in" fo:text-indent="-0.25in" fo:margin-left="2.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.75in" fo:text-indent="-0.25in" fo:margin-left="2.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <text:list-style style:name="L5">
+      <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.75in" fo:text-indent="-0.25in" fo:margin-left="0.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.0in" fo:text-indent="-0.25in" fo:margin-left="1.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.25in" fo:text-indent="-0.25in" fo:margin-left="1.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.5in" fo:text-indent="-0.25in" fo:margin-left="1.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.75in" fo:text-indent="-0.25in" fo:margin-left="1.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.0in" fo:text-indent="-0.25in" fo:margin-left="2.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.25in" fo:text-indent="-0.25in" fo:margin-left="2.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.5in" fo:text-indent="-0.25in" fo:margin-left="2.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.75in" fo:text-indent="-0.25in" fo:margin-left="2.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <text:list-style style:name="L6">
+      <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.75in" fo:text-indent="-0.25in" fo:margin-left="0.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.0in" fo:text-indent="-0.25in" fo:margin-left="1.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.25in" fo:text-indent="-0.25in" fo:margin-left="1.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.5in" fo:text-indent="-0.25in" fo:margin-left="1.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.75in" fo:text-indent="-0.25in" fo:margin-left="1.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.0in" fo:text-indent="-0.25in" fo:margin-left="2.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.25in" fo:text-indent="-0.25in" fo:margin-left="2.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.5in" fo:text-indent="-0.25in" fo:margin-left="2.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.75in" fo:text-indent="-0.25in" fo:margin-left="2.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <text:list-style style:name="L7">
+      <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.75in" fo:text-indent="-0.25in" fo:margin-left="0.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.0in" fo:text-indent="-0.25in" fo:margin-left="1.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.25in" fo:text-indent="-0.25in" fo:margin-left="1.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.5in" fo:text-indent="-0.25in" fo:margin-left="1.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.75in" fo:text-indent="-0.25in" fo:margin-left="1.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.0in" fo:text-indent="-0.25in" fo:margin-left="2.0in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="◦">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.25in" fo:text-indent="-0.25in" fo:margin-left="2.25in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="▪">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.5in" fo:text-indent="-0.25in" fo:margin-left="2.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" style:num-suffix="." text:bullet-char="•">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.75in" fo:text-indent="-0.25in" fo:margin-left="2.75in" />
+        </style:list-level-properties>
+      </text:list-level-style-bullet>
+    </text:list-style>
+    <style:style style:name="T1" style:family="text"><style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold" /></style:style>
+    <style:style style:name="fr2" style:family="graphic" style:parent-style-name="Formula"><style:graphic-properties style:vertical-pos="middle" style:vertical-rel="paragraph-content" style:horizontal-pos="center" style:horizontal-rel="paragraph-content" style:wrap="none" /></style:style>
+    <style:style style:name="fr1" style:family="graphic" style:parent-style-name="Formula"><style:graphic-properties style:vertical-pos="middle" style:vertical-rel="text" /></style:style>
+    <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+      <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" />
+    </style:style>
+    <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+      <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" />
+    </style:style>
+    <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L3">
+      <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" />
+    </style:style>
+    <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L4">
+      <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" />
+    </style:style>
+    <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L5">
+      <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" />
+    </style:style>
+    <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L6">
+      <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" />
+    </style:style>
+    <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L7">
+      <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" />
+    </style:style>
+    <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+    <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+    </style:style>
+  </office:automatic-styles>
+  
+  
+  
+<office:body>
+<office:text>
+<text:p text:style-name="Author">Luis Eduardo Galindo Amaya
+(1274895)</text:p>
+<text:p text:style-name="Date">16 de Octubre 2023</text:p>
+<text:p text:style-name="Text_20_body"> </text:p>
+<text:h text:style-name="Heading_20_1" text:outline-level="1"><text:bookmark-start text:name="introduccion" />Introduccion<text:bookmark-end text:name="introduccion" /></text:h>
+<text:p text:style-name="First_20_paragraph">Aliquam erat volutpat. Nunc
+eleifend leo vitae magna. In id erat non orci commodo lobortis. Proin
+neque massa, cursus ut, gravida ut, lobortis eget, lacus. Sed diam.
+Praesent fermentum tempor tellus. Nullxam tempus. Mauris ac felis vel
+velit tristique imperdiet. Donec at pede. Etiam vel neque nec dui
+dignissim bibendum. Vivamus id enim. Phasellus neque orci, porta a,
+aliquet quis, semper a, massa. Phasellus purus. Pellentesque tristique
+imperdiet tortor. Nam euismod tellus id erat.</text:p>
+<text:p text:style-name="Text_20_body"></text:p>
+<text:h text:style-name="Heading_20_1" text:outline-level="1"><text:bookmark-start text:name="desarollo" />Desarollo<text:bookmark-end text:name="desarollo" /></text:h>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="genere-un-listado-completo-de-todos-los-procesos-que-están-en-el-sistema-y-muestre-la-información-completa-de-todos-los-que-se-empezaron-a-ejecutar-el-7-de-septiembre-en-una-sola-línea." />Genere
+un listado completo de todos los procesos que están en el sistema y
+muestre la información completa de todos los que se empezaron a ejecutar
+el 7 de septiembre en una sola
+línea.<text:bookmark-end text:name="genere-un-listado-completo-de-todos-los-procesos-que-están-en-el-sistema-y-muestre-la-información-completa-de-todos-los-que-se-empezaron-a-ejecutar-el-7-de-septiembre-en-una-sola-línea." /></text:h>
+<text:p text:style-name="P1">ps -ef | grep &quot;Sep 7&quot;</text:p>
+<text:p text:style-name="FigureWithCaption"><draw:frame draw:name="img1"><draw:image xlink:href="img/1.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="FigureCaption">Procesos iniciados el 7 de
+Septiembre</text:p>
+<text:list text:style-name="L1">
+  <text:list-item>
+    <text:p text:style-name="P2"><text:span text:style-name="T1">ps</text:span>
+    Para mostrar los procesos del
+    usuario:</text:p><text:list text:style-name="L2">
+      <text:list-item>
+        <text:p text:style-name="P3"><text:span text:style-name="T1">-e</text:span>
+        Lista información sobre cada proceso del sistema</text:p>
+      </text:list-item>
+      <text:list-item>
+        <text:p text:style-name="P3"><text:span text:style-name="T1">-f</text:span>
+        muestra los detalle de los procesos</text:p>
+      </text:list-item>
+    </text:list>
+  </text:list-item>
+  <text:list-item>
+    <text:p text:style-name="P2"><text:span text:style-name="T1">grep</text:span>
+    para buscar el string de la fecha</text:p>
+  </text:list-item>
+</text:list>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="qué-están-haciendo-los-procesos-que-actualmente-esta-ejecutando-maestro.-comando" />Qué
+están haciendo los procesos que actualmente esta ejecutando maestro.
+(Comando)<text:bookmark-end text:name="qué-están-haciendo-los-procesos-que-actualmente-esta-ejecutando-maestro.-comando" /></text:h>
+<text:p text:style-name="Figure"><draw:frame draw:name="img2"><draw:image xlink:href="img/2.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="P4">ps -fu lety</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="genere-un-listado-con-el-número-de-proceso-número-del-proceso-padre-comando-en-ejecución-y-prioridad-de-tres-de-sus-compañeros." />Genere
+un listado con el número de proceso, número del proceso padre, comando
+en ejecución y prioridad de tres de sus
+compañeros.<text:bookmark-end text:name="genere-un-listado-con-el-número-de-proceso-número-del-proceso-padre-comando-en-ejecución-y-prioridad-de-tres-de-sus-compañeros." /></text:h>
+<text:p text:style-name="P5">ps -feao user,group,pid,ppid,cmd,nice | grep &quot;admi*&quot;</text:p>
+<text:p text:style-name="Definition_20_Term_20_Tight">f</text:p>
+<text:p text:style-name="Definition_20_Definition_20_Tight">Muestra una
+lista completa de procesos con detalles y usuario.</text:p>
+<text:p text:style-name="Definition_20_Term_20_Tight">e</text:p>
+<text:p text:style-name="Definition_20_Definition_20_Tight">Lista
+información sobre cada proceso en ejecución ahora.</text:p>
+<text:p text:style-name="Definition_20_Term_20_Tight">a</text:p>
+<text:p text:style-name="Definition_20_Definition_20_Tight">Muestra los
+procesos de otros usuarios.</text:p>
+<text:p text:style-name="Definition_20_Term_20_Tight">o</text:p>
+<text:p text:style-name="Definition_20_Definition_20_Tight">Muestra la
+información de acuerdo a un formato especificado.</text:p>
+<text:p text:style-name="FigureWithCaption"><draw:frame draw:name="img3"><draw:image xlink:href="img/3.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="FigureCaption">Solo estoy yo en el
+servidor</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="explique-la-diferencia-entre-las-opciones-de-ps-efl-y-j" />Explique
+la diferencia entre las opciones de ps e,f,l y
+j<text:bookmark-end text:name="explique-la-diferencia-entre-las-opciones-de-ps-efl-y-j" /></text:h>
+<text:p text:style-name="Definition_20_Term_20_Tight">e</text:p>
+<text:p text:style-name="Definition_20_Definition_20_Tight">Lista
+información sobre cada proceso en ejecución ahora.</text:p>
+<text:p text:style-name="Definition_20_Term_20_Tight">f</text:p>
+<text:p text:style-name="Definition_20_Definition_20_Tight">Muestra una
+lista completa de procesos con detalles y usuario.</text:p>
+<text:p text:style-name="Definition_20_Term_20_Tight">l</text:p>
+<text:p text:style-name="Definition_20_Definition_20_Tight">Genera una
+lista con información detallada de los procesos.</text:p>
+<text:p text:style-name="Definition_20_Term_20_Tight">j</text:p>
+<text:p text:style-name="Definition_20_Definition_20_Tight">La
+información se presenta empezando por el PID</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="explique-la-diferencia-entre-las-opciones-de-ps-a-y-u" />Explique
+la diferencia entre las opciones de ps a y
+u<text:bookmark-end text:name="explique-la-diferencia-entre-las-opciones-de-ps-a-y-u" /></text:h>
+<text:p text:style-name="Definition_20_Term_20_Tight">a</text:p>
+<text:p text:style-name="Definition_20_Definition_20_Tight">muestra los
+procesos de todos los usuarios.</text:p>
+<text:p text:style-name="Definition_20_Term_20_Tight">u</text:p>
+<text:p text:style-name="Definition_20_Definition_20_Tight">muestra
+procesos de un usuario específico.</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="explique-qué-es-lo-que-hace-la-opción-de-ps-t-y-u-si-tiene-dos-sesiones-de-ssh-abiertas-con-el-mismo-user-name" />Explique
+qué es lo que hace la opción de ps t y u Si tiene dos sesiones de ssh
+abiertas con el mismo user
+name<text:bookmark-end text:name="explique-qué-es-lo-que-hace-la-opción-de-ps-t-y-u-si-tiene-dos-sesiones-de-ssh-abiertas-con-el-mismo-user-name" /></text:h>
+<text:h text:style-name="Heading_20_3" text:outline-level="3"><text:bookmark-start text:name="flag--t" />Flag
+-t<text:bookmark-end text:name="flag--t" /></text:h>
+<text:p text:style-name="First_20_paragraph">Lista los procesos
+asociados con la terminal. Por ejemplo, term/a, o pts/0, si tenemos mas
+de una terminal y solo usamos
+<text:span text:style-name="T1">-t</text:span> mostrara los procesos de
+esa terminal.</text:p>
+<text:p text:style-name="FigureWithCaption"><draw:frame draw:name="img4"><draw:image xlink:href="img/mt.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="FigureCaption">salida de ps -t</text:p>
+<text:h text:style-name="Heading_20_3" text:outline-level="3"><text:bookmark-start text:name="flag--u" />Flag
+-u<text:bookmark-end text:name="flag--u" /></text:h>
+<text:p text:style-name="First_20_paragraph">el usuario visualiza los
+procesos del usuario independientemente de la terminal que use.</text:p>
+<text:p text:style-name="FigureWithCaption"><draw:frame draw:name="img5"><draw:image xlink:href="img/mu.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="FigureCaption">Salida de ps -u</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="qué-procesos-muestra-al-ejecutar-ps" />¿qué
+procesos muestra al ejecutar
+ps?<text:bookmark-end text:name="qué-procesos-muestra-al-ejecutar-ps" /></text:h>
+<text:p text:style-name="First_20_paragraph">El comando ps reporta el
+estado de los procesos activos</text:p>
+<text:p text:style-name="FigureWithCaption"><draw:frame draw:name="img6"><draw:image xlink:href="img/ps.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="FigureCaption">Procesos activos en mi
+usuario</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="qué-opción-de-ps-debería-de-usar-para-ver-todos-los-procesos-de-un-usuario" />¿Qué
+opción de ps debería de usar para ver todos los procesos de un
+usuario?<text:bookmark-end text:name="qué-opción-de-ps-debería-de-usar-para-ver-todos-los-procesos-de-un-usuario" /></text:h>
+<text:p text:style-name="P6">ps -U &lt;nombre del usuario&gt;</text:p>
+<text:p text:style-name="FigureWithCaption"><draw:frame draw:name="img7"><draw:image xlink:href="img/psmu.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="FigureCaption">Procesos activos en mi
+usuario</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="cómo-identifico-a-los-procesos-que-el-usuario-está-ejecutando-en-cada-terminal" />¿Cómo
+identifico a los procesos que el usuario está ejecutando en cada
+terminal?<text:bookmark-end text:name="cómo-identifico-a-los-procesos-que-el-usuario-está-ejecutando-en-cada-terminal" /></text:h>
+<text:list text:style-name="L3">
+  <text:list-item>
+    <text:p text:style-name="P7">Utilizando la columna TTY en
+    <text:span text:style-name="Source_Text">ps -f</text:span> o tambien
+    utilizando
+    <text:span text:style-name="Source_Text">ps -o tty,cmd</text:span></text:p>
+  </text:list-item>
+</text:list>
+<text:p text:style-name="Figure"><draw:frame draw:name="img8"><draw:image xlink:href="img/tty.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="cuál-es-significado-de-todas-las-columnas-de-formato-que-maneja-ps-o-sólo-las-que-no-están-explicadas-en-este-material." />TODO
+¿Cuál es significado de TODAS las columnas de formato que maneja ps –o?
+(Sólo las que no están explicadas en este
+material).<text:bookmark-end text:name="cuál-es-significado-de-todas-las-columnas-de-formato-que-maneja-ps-o-sólo-las-que-no-están-explicadas-en-este-material." /></text:h>
+<text:p text:style-name="Definition_20_Term">user</text:p>
+<text:p text:style-name="Definition_20_Term">ruser</text:p>
+<text:p text:style-name="Definition_20_Term">group</text:p>
+<text:p text:style-name="Definition_20_Term">rgroup</text:p>
+<text:p text:style-name="Definition_20_Term">uid</text:p>
+<text:p text:style-name="Definition_20_Term">ruid</text:p>
+<text:p text:style-name="Definition_20_Term">gid</text:p>
+<text:p text:style-name="Definition_20_Term">rgid</text:p>
+<text:p text:style-name="Definition_20_Term">pid</text:p>
+<text:p text:style-name="Definition_20_Term">ppid</text:p>
+<text:p text:style-name="Definition_20_Term">pgid</text:p>
+<text:p text:style-name="Definition_20_Term">sid</text:p>
+<text:p text:style-name="Definition_20_Term">taskid</text:p>
+<text:p text:style-name="Definition_20_Term">pri</text:p>
+<text:p text:style-name="Definition_20_Term">opri</text:p>
+<text:p text:style-name="Definition_20_Term">pcpu</text:p>
+<text:p text:style-name="Definition_20_Term">pmem</text:p>
+<text:p text:style-name="Definition_20_Term">vsz</text:p>
+<text:p text:style-name="Definition_20_Term">rss</text:p>
+<text:p text:style-name="Definition_20_Term">osz</text:p>
+<text:p text:style-name="Definition_20_Term">nice</text:p>
+<text:p text:style-name="Definition_20_Term">class</text:p>
+<text:p text:style-name="Definition_20_Term">time</text:p>
+<text:p text:style-name="Definition_20_Term">etime</text:p>
+<text:p text:style-name="Definition_20_Term">stime</text:p>
+<text:p text:style-name="Definition_20_Term">f</text:p>
+<text:p text:style-name="Definition_20_Term">s</text:p>
+<text:p text:style-name="Definition_20_Term">c</text:p>
+<text:p text:style-name="Definition_20_Term">lwp</text:p>
+<text:p text:style-name="Definition_20_Term">nlwp</text:p>
+<text:p text:style-name="Definition_20_Term">psr</text:p>
+<text:p text:style-name="Definition_20_Term">tty</text:p>
+<text:p text:style-name="Definition_20_Term">addr</text:p>
+<text:p text:style-name="Definition_20_Term">wchan</text:p>
+<text:p text:style-name="Definition_20_Term">fname</text:p>
+<text:p text:style-name="Definition_20_Term">comm</text:p>
+<text:p text:style-name="Definition_20_Term">args</text:p>
+<text:p text:style-name="Definition_20_Term">projid</text:p>
+<text:p text:style-name="Definition_20_Term">project</text:p>
+<text:p text:style-name="Definition_20_Term">pset</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="ejecute-dos-comandos-en-background-los-que-quiera." />Ejecute
+dos comandos en background (los que
+quiera).<text:bookmark-end text:name="ejecute-dos-comandos-en-background-los-que-quiera." /></text:h>
+<text:p text:style-name="P8">nano&amp;</text:p>
+<text:p text:style-name="P9">vi&amp;</text:p>
+<text:p text:style-name="FigureWithCaption"><draw:frame draw:name="img9"><draw:image xlink:href="img/nanovi.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="FigureCaption">Nano y Vi corriendo en el
+fondo</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="ejecute-el-comando-cat-lista-qué-prioridad-tiene-asignada" />Ejecute
+el comando cat &gt;lista, ¿Qué prioridad tiene
+asignada?<text:bookmark-end text:name="ejecute-el-comando-cat-lista-qué-prioridad-tiene-asignada" /></text:h>
+<text:list text:style-name="L4">
+  <text:list-item>
+    <text:p text:style-name="P10">Tiene la prioridad 19</text:p>
+  </text:list-item>
+</text:list>
+<text:p text:style-name="FigureWithCaption"><draw:frame draw:name="img10"><draw:image xlink:href="img/psprimi.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="FigureCaption">use ps desde otra terminal para
+ve la prioridad</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="mate-el-proceso-anterior." />Mate
+el proceso
+anterior.<text:bookmark-end text:name="mate-el-proceso-anterior." /></text:h>
+<text:p text:style-name="P11">kill -9 130985</text:p>
+<text:p text:style-name="FigureWithCaption"><draw:frame draw:name="img11"><draw:image xlink:href="img/kill.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="FigureCaption">Matar el proceso</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="vuelva-a-ejecutar-catlista-pero-con-menor-prioridad." />Vuelva
+a ejecutar cat&gt;lista pero con menor
+prioridad.<text:bookmark-end text:name="vuelva-a-ejecutar-catlista-pero-con-menor-prioridad." /></text:h>
+<text:p text:style-name="P12">nice -n 10 cat&gt;lista</text:p>
+<text:p text:style-name="FigureWithCaption"><draw:frame draw:name="img12"><draw:image xlink:href="img/psprimi.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="FigureCaption">Nice ahora es mayor y la
+prioridad es mas baja</text:p>
+<text:h text:style-name="Heading_20_3" text:outline-level="3"><text:bookmark-start text:name="qué-prioridad-le-fue-asignada" />¿Qué
+prioridad le fue
+asignada?<text:bookmark-end text:name="qué-prioridad-le-fue-asignada" /></text:h>
+<text:list text:style-name="L5">
+  <text:list-item>
+    <text:p text:style-name="P13">9</text:p>
+  </text:list-item>
+</text:list>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="una-vez-más-ejecute-catlista-pero-ahora-en-el-background-." />Una
+vez más ejecute cat&gt;lista, pero ahora en el background
+.<text:bookmark-end text:name="una-vez-más-ejecute-catlista-pero-ahora-en-el-background-." /></text:h>
+<text:p text:style-name="P14">cat&gt;list&amp;</text:p>
+<text:p text:style-name="FigureWithCaption"><draw:frame draw:name="img13"><draw:image xlink:href="img/prioridad1.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" /></draw:frame></text:p>
+<text:p text:style-name="FigureCaption">salida de ps -u</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="cuál-es-su-prioridad-ahora" />¿Cuál
+es su prioridad
+ahora?<text:bookmark-end text:name="cuál-es-su-prioridad-ahora" /></text:h>
+<text:list text:style-name="L6">
+  <text:list-item>
+    <text:p text:style-name="P15">El valor de prioridad es '19' y el
+    valor de nice es '0'</text:p>
+  </text:list-item>
+</text:list>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="verifique-que-el-comando-en-background-este-en-la-lista-de-procesos." />Verifique
+que el comando en background este en la lista de
+procesos.<text:bookmark-end text:name="verifique-que-el-comando-en-background-este-en-la-lista-de-procesos." /></text:h>
+<text:p text:style-name="P16">ps -l</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="verifique-que-el-comando-en-background-este-en-la-lista-de-tareas-jobs." />Verifique
+que el comando en background este en la lista de tareas
+(jobs).<text:bookmark-end text:name="verifique-que-el-comando-en-background-este-en-la-lista-de-tareas-jobs." /></text:h>
+<text:p text:style-name="P17">jobs</text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="pase-una-de-las-tareas-al-foreground-use-el-número-de-tarea" />Pase
+una de las tareas al foreground (use el número de
+tarea)<text:bookmark-end text:name="pase-una-de-las-tareas-al-foreground-use-el-número-de-tarea" /></text:h>
+<text:p text:style-name="P18">fg %1 </text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="pase-la-otra-tarea-al-foreground-pero-ahora-use-el-número-de-pid." />Pase
+la otra tarea al foreground, pero ahora use el número de
+PID.<text:bookmark-end text:name="pase-la-otra-tarea-al-foreground-pero-ahora-use-el-número-de-pid." /></text:h>
+<text:list text:style-name="L7">
+  <text:list-item>
+    <text:p text:style-name="P19">en este comando no se puede ejecutar
+    en esta distribución</text:p>
+  </text:list-item>
+</text:list>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="envíe-otro-comando-al-background." />TODO
+Envíe otro comando al
+background.<text:bookmark-end text:name="envíe-otro-comando-al-background." /></text:h>
+<text:p text:style-name="P20"></text:p>
+<text:h text:style-name="Heading_20_2" text:outline-level="2"><text:bookmark-start text:name="finalice-este-proceso." />TODO
+Finalice este
+proceso.<text:bookmark-end text:name="finalice-este-proceso." /></text:h>
+<text:p text:style-name="P21"></text:p>
+<text:h text:style-name="Heading_20_1" text:outline-level="1"><text:bookmark-start text:name="conclusión" />Conclusión<text:bookmark-end text:name="conclusión" /></text:h>
+<text:h text:style-name="Heading_20_1" text:outline-level="1"><text:bookmark-start text:name="fuentes" />Fuentes<text:bookmark-end text:name="fuentes" /></text:h>
+<text:p text:style-name="First_20_paragraph"></text:p>
+</office:text>
+</office:body>
+</office:document-content>

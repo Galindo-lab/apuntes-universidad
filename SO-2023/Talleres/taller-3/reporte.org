@@ -1,0 +1,376 @@
+
+#+TITLE:  Taller 3 Filtros
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   19 de Septiembre 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./fuentes.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-color-cont.png}
+\tableofcontents\pagebreak
+\datasection{Individual}
+
+
+* Introducción
+Al contar con tantas utilidades para manipular texto en unix se puede dar la
+ocacion en la que sea necesario buscar texto dentro de una salida o extraer 
+secciones espesificas para pasarlos a otro comando, unix ofrece varias 
+maneras para completar estas tareas de manera sencilla mediante algunos 
+comandos.
+
+* Actividades
+** Crear un directorio llamado 'filtros' en tu directorio de inicio
+#+BEGIN_SRC shell
+  mkdir filtros
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Directorio creado
+[[file:img/a1.png]]
+
+** Eliminar todos los permisos de este directorio, dejando solo permisos para ti
+#+BEGIN_SRC shell
+  chmod 700 filtros
+#+END_SRC
+
+#+begin_twoc
+[[file:img/a2a.png]]
+#+end_twoc
+#+begin_twoc
+[[file:img/a2b.png]]
+#+end_twoc
+
+ Permisos cambiados
+
+** Copiar el archivo 'nombres' desde 'maestro/filtros' a tu directorio 'filtros'
+#+BEGIN_SRC shell
+  cp ../alma/nombres ./filtros
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Archivo copiado 
+[[file:img/a3.png]]
+
+\pagebreak
+
+** Mostrar el archivo 'nombres' ordenado alfabéticamente ascendente por apellido materno
+#+BEGIN_SRC shell
+  sort -t' ' -k2 filtros/nombres
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Archivo ordenado alfabéticamente
+[[file:img/a4.png]]
+
+\cite{sort}
+
+** Copiar el archivo 'matriculas' desde 'maestro' a tu directorio 'filtros'
+#+BEGIN_SRC shell
+  cp ../../sist20232/lety/filtros/matriculas filtros/matriculas
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Archivo copia do desde matriculas a filtros 
+[[file:img/a5.png]]
+
+\pagebreak
+
+** Ordenar el archivo 'matriculas' por el apellido materno
+#+BEGIN_SRC shell
+  sort -t' ' -k4 filtros/matriculas
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Salida de sort sobre matriculas 
+[[file:img/a6.png]]
+
+\cite{sort}
+
+** Ordenar el archivo 'nombresfixed' por matrícula
+#+BEGIN_SRC shell
+  sort -t' ' -k4 filtros/nombresfixed
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Ordenado por matricula
+[[file:img/a7.png]]
+
+\cite{sort}
+
+** ¿Qué hace el comando =sort -f <archivo>=? (Lea el manual en línea
+#+BEGIN_mdframed
+ - Ordena el contenido del archivo sin importar si son mayusculas o minusculas
+#+END_mdframed
+
+\cite{sort}
+
+** Ordenar el archivo 'matriculas' en forma descendente por apellido paterno
+#+BEGIN_SRC shell
+  sort -t' ' -k1r filtros/nombresfixed
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: La columna 1 representa el apellido paterno =-r= cambia al orden inverso
+[[file:img/a9.png]]
+
+** Copiar el archivo 'delim' a tu directorio 'filtros'
+#+BEGIN_SRC shell
+  cp ../alma/delim filtros/
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Achivo delim copiado desde el directorio =../alma=
+[[file:img/a10.png]]
+
+** Copiar el archivo 'lista' desde 'maestro/filtros' a tu directorio 'filtros'
+#+BEGIN_SRC shell
+  cp ../alma/lista ~/filtros/
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Archivo lsita copiado
+[[file:img/a11.png]]
+
+** Ordenar el archivo 'matriculas' en forma numérica descendente
+#+BEGIN_SRC shell
+  sort -t' ' -k4r filtros/nombresfixed
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Ordenamiento por matriculas 
+[[file:img/a13.png]]
+
+\pagebreak
+
+** Ordenar el archivo 'nombres' por nombre en forma descendente
+#+BEGIN_SRC shell
+  sort -t' ' -k3r filtros/nombres
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm 
+#+CAPTION: Ordenado por nombres de manera descendiente
+[[file:img/a14.png]]
+
+** Mostrar la primera y última columna del archivo 'asteriscos'
+#+BEGIN_SRC shell
+  cut -d'*' -f1,3 asteriscos
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Separador reemplazado por '*'
+[[file:img/a14b.png]]
+
+** *Contar cuántos alumnos se llaman Jesús en los archivos 'lista' y 'nombres' y compara los números
+** Mostrar a todos los alumnos cuya matrícula empiece con '12' en el archivo 'nombres'
+#+BEGIN_SRC shell
+  grep "^12" filtros/matriculas
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: se reemplazó '55' por '12' para que mostrara resultados
+[[file:img/a16.png]]
+
+** Contar las líneas en el archivo 'hormigas'
+- el archivo tiene 37 lineas 
+
+#+BEGIN_SRC shell
+wc -l ../alma/hormigas
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Salida de =wc=
+[[file:img/a17.png]]
+
+\pagebreak
+
+** Buscar la frase 'las hormigas' en el archivo 'hormigas' y mostrar las líneas donde aparece
+#+BEGIN_SRC shell
+  grep -n "las hormigas" ../alma/hormigas
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: 'as hormigas' aparecen varias veces en el texto
+[[file:img/a18.png]]
+
+** Mostrar solo las líneas que comienzan con 'La' en el archivo 'hormigas'
+#+BEGIN_SRC shell
+  grep -n "^La" ../alma/hormigas
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =grep= nos ayuda a encontrar las veces que aparece
+[[file:img/a19.png]]
+
+\pagebreak
+
+** *Mostrar a los alumnos que tienen un nombre o apellido de cuatro letras en el archivo 'lista'
+** Mostrar a los alumnos que no se apellidan "Perez" en el archivo 'lista'
+#+BEGIN_SRC shell
+  grep -v "Perez" lista
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =-v= muestra las lineas que no contienen el string 
+[[file:img/21.png]]
+
+** Mostrar solo el nombre y apellido del archivo 'delim'
+#+BEGIN_SRC shell
+  cut -d':' -f2,3 ../alma/delim
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =-d= cambia el separado y =-f2,3= nos muestra las columnas 2 y 3
+[[file:img/a22.png]]
+
+** Mostrar solo las matrículas del archivo 'delim'
+#+BEGIN_SRC shell
+  cut -d':' -f4 ../alma/delim
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Cortamos la columna 4 del archivo
+[[file:img/a23.png]]
+
+** Mostrar solo la primera columna de caracteres del archivo 'lista'
+#+BEGIN_SRC shell
+  cut -c1 ../alma/lista
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =-c= extrae la primer columna de caracteres
+[[file:img/a24.png]]
+
+\pagebreak
+
+** Mostrar los caracteres 18 al 25 del archivo 'hormigas'
+#+BEGIN_SRC shell
+  cut -c18-25 ../alma/hormigas
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =-c= extrae caracteres =-c18-25= limita el rango
+[[file:img/a25.png]]
+
+\pagebreak
+
+** Mostrar el campo número 3 del archivo 'delim'
+#+BEGIN_SRC shell
+  cut -d':' -f3 ../alma/delim
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =-d= cambia el delimitador y =-f3= selecciona la columna
+[[file:img/a26.png]]
+
+** Mostrar las líneas del archivo 'lista' donde el apellido paterno sea 'Perez'
+#+BEGIN_SRC shell
+  grep -n "PEREZ" ../alma/lista
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: el flag =-n= en =grep= agrega el numero de linea en el archivo
+[[file:img/a27.png]]
+
+
+\pagebreak
+
+** Mostrar las líneas del archivo 'delim' cuyo nombre sea 'luis'
+#+BEGIN_SRC shell
+  grep "luis" ../alma/delim
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Salida de =grep= ''luis''
+[[file:img/a28.png]]
+   
+** Mostrar las líneas del archivo 'hormigas' que contienen la palabra 'Utopia' y mostrar sus números de línea
+#+BEGIN_SRC shell
+  grep -n "Utopia" ../alma/hormigas
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: salida de =grep= -n ''Utopia''
+[[file:img/a29.png]]
+
+\pagebreak
+
+** Mostrar la línea del archivo 'lista' que contiene el nombre 'Noemi' al final
+#+BEGIN_SRC shell
+  grep " Noemi" lista
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: salida de =grep= '' Noemi'' lista
+[[file:img/a30.png]]
+
+** Mostrar las líneas del archivo 'hormigas' que contienen las palabras 'hormigos' o 'hormigas'
+#+begin_src 
+grep -E "hormigos|hormigas" ../alma/hormigas
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: 
+[[file:img/a31.png]]
+
+\cite{man7}
+
+\pagebreak
+
+** Mostrar las líneas en el archivo 'asteriscos' que no empiezan con 'F', 'G' o 'H'
+#+BEGIN_SRC shell
+  grep -v "^[FGH]" asteriscos
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: 
+[[file:img/a32.png]]
+
+
+* Conclusión
+A lo largo de esta practica aprendí a como buscar información dentro de ficheros
+separar por columnas, compara archivos y buscar texto dentro de ellos, pienso que 
+conocer estas cosas sera de muchas importancia ya que al no contar con una 
+interfaz gráfica esto se permitiría simplificar el proceso.
+
+* Referencias
+\printbibliography[heading=none]

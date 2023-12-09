@@ -1,0 +1,107 @@
+galindo@galindo-IdeaPad-5-14ALC05:~/Escritorio/SO-2023$ 
+galindo@galindo-IdeaPad-5-14ALC05:~/Escritorio/SO-2023$ 
+galindo@galindo-IdeaPad-5-14ALC05:~/Escritorio/SO-2023$ 
+galindo@galindo-IdeaPad-5-14ALC05:~/Escritorio/SO-2023$ ssh 148.231.130.237
+galindo@148.231.130.237's password: 
+Welcome to Limesurvey, TurnKey GNU/Linux 17.1 (Debian 11/Bullseye)
+
+  System information for Wed Sep 13 19:51:46 2023 (UTC+0000)
+  
+    System load:  0.00               Memory usage:  2.3%
+    Processes:    130                Swap usage:    0.0%
+    Usage of /:   2.6% of 212.43GB   IP address for eth0: 148.231.130.237
+  
+  TKLBAM (Backup and Migration):  NOT INITIALIZED
+  
+    To initialize TKLBAM, run the "tklbam-init" command to link this
+    system to your TurnKey Hub account. For details see the man page or
+    go to:
+  
+        https://www.turnkeylinux.org/tklbam
+  
+
+    For Advanced commandline config run:    confconsole
+
+  For more info see: https://www.turnkeylinux.org/docs/confconsole
+
+Linux limesurvey 5.10.0-25-amd64 #1 SMP Debian 5.10.191-1 (2023-08-16) x86_64
+Last login: Fri Sep  8 18:41:37 2023 from 10.32.213.157
+$ 
+$ who
+emmanuel pts/0        Sep 13 19:39 (10.32.213.87)
+pelayo   pts/1        Sep 13 19:43 (10.32.212.166)
+richelle pts/2        Sep 13 19:44 (10.32.221.160)
+arriaga  pts/3        Sep 13 19:45 (10.32.220.173)
+luis99   pts/4        Sep 13 19:45 (10.32.174.227)
+galindo  pts/5        Sep 13 19:51 (10.32.213.157)
+roger    pts/6        Sep 13 19:54 (10.32.113.176)
+$ 
+$ 
+$ 
+$ who
+emmanuel pts/0        Sep 13 19:39 (10.32.213.87)
+pelayo   pts/1        Sep 13 19:43 (10.32.212.166)
+richelle pts/2        Sep 13 19:44 (10.32.221.160)
+arriaga  pts/3        Sep 13 19:45 (10.32.220.173)
+luis99   pts/4        Sep 13 19:45 (10.32.174.227)
+galindo  pts/5        Sep 13 19:51 (10.32.213.157)
+roger    pts/6        Sep 13 19:54 (10.32.113.176)
+$ ls
+archivos  clm  linux  nombres  paragrep  procesos  test2  texto
+$ 
+$ 
+$ ls -l
+total 52
+drwxr-xr-x 2 galindo administracion  4096 Sep  7 19:04 archivos
+-rw-r--r-- 1 galindo administracion    71 Sep  8 19:56 clm
+drwxr-xr-x 4 galindo administracion  4096 Sep  1 19:36 linux
+-rw-r--r-- 1 galindo administracion   917 Sep  8 19:11 nombres
+-rw-r--r-- 1 galindo administracion 16319 Sep  8 19:14 paragrep
+-rwx-w-rwx 1 galindo administracion 13475 Sep  7 18:53 procesos
+-rw-r--r-- 1 galindo administracion    11 Sep  7 19:22 test2
+-rw-r--r-- 1 galindo administracion     0 Sep  1 20:20 texto
+$ ls
+archivos  clm  linux  nombres  paragrep  procesos  test2  texto
+$ ls-l  
+-sh: 23: ls-l: not found
+$ ls -l
+total 52
+drwxr-xr-x 2 galindo administracion  4096 Sep  7 19:04 archivos
+-rw-r--r-- 1 galindo administracion    71 Sep  8 19:56 clm
+drwxr-xr-x 4 galindo administracion  4096 Sep  1 19:36 linux
+-rw-r--r-- 1 galindo administracion   917 Sep  8 19:11 nombres
+-rw-r--r-- 1 galindo administracion 16319 Sep  8 19:14 paragrep
+-rwx-w-rwx 1 galindo administracion 13475 Sep  7 18:53 procesos
+-rw-r--r-- 1 galindo administracion    11 Sep  7 19:22 test2
+-rw-r--r-- 1 galindo administracion     0 Sep  1 20:20 texto
+$ 
+$ 
+$ ls -l
+total 52
+drwxr-xr-x 2 galindo administracion  4096 Sep  7 19:04 archivos
+-rw-r--r-- 1 galindo administracion    71 Sep  8 19:56 clm
+drwxr-xr-x 4 galindo administracion  4096 Sep  1 19:36 linux
+-rw-r--r-- 1 galindo administracion   917 Sep  8 19:11 nombres
+-rw-r--r-- 1 galindo administracion 16319 Sep  8 19:14 paragrep
+-rwx-w-rwx 1 galindo administracion 13475 Sep  7 18:53 procesos
+-rw-r--r-- 1 galindo administracion    11 Sep  7 19:22 test2
+-rw-r--r-- 1 galindo administracion     0 Sep  1 20:20 texto
+$ ls -l>>archivos
+-sh: 28: cannot create archivos: Is a directory
+$ ls -l>>archivos.txt
+$ more archivos.txt
+total 52
+drwxr-xr-x 2 galindo administracion  4096 Sep  7 19:04 archivos
+-rw-r--r-- 1 galindo administracion     0 Sep 13 20:09 archivos.txt
+-rw-r--r-- 1 galindo administracion    71 Sep  8 19:56 clm
+drwxr-xr-x 4 galindo administracion  4096 Sep  1 19:36 linux
+-rw-r--r-- 1 galindo administracion   917 Sep  8 19:11 nombres
+-rw-r--r-- 1 galindo administracion 16319 Sep  8 19:14 paragrep
+-rwx-w-rwx 1 galindo administracion 13475 Sep  7 18:53 procesos
+-rw-r--r-- 1 galindo administracion    11 Sep  7 19:22 test2
+-rw-r--r-- 1 galindo administracion     0 Sep  1 20:20 texto
+$ 
+$ 
+$ more -n archivos.txt
+more: argument error: 'archivos.txt'
+$ 

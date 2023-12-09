@@ -1,0 +1,71 @@
+
+#+TITLE:  reporte
+#+AUTHOR: Luis Eduardo Galindo Amaya
+#+DATE:   2023-10-15
+
+#+OPTIONS: toc:t ^:nil title:t num:2
+
+#+LANGUAGE: es
+
+
+* Parte 1
+** ¿Qué es Active Directory?
+Active direcotry es un programa proporcionado por microsoft para la gestion de 
+recursos dentro de una red. permite crear reglas, consultar datos y establecer
+servicios de replicacion 
+
+https://learn.microsoft.com/es-es/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview
+
+** TODO ¿Para qué sirve?
+** TODO ¿Cuánto cuesta?
+
+
+** ¿En qué versiones de Windows está disponible?
+Los Servicios de Directorio en los que se basa Active Directory se han incluido
+en cada versión de *Windows Server* desde Windows 2000. Antes de eso, el concepto
+de un dominio existía en Windows NT Server, pero Active Directory en sí mismo
+se introdujo con Windows 2000 Server
+
+https://www.itprotoday.com/active-directory/active-directory-what-it-and-how-does-it-work
+
+** ¿Cuál es la diferencia entre las políticas para configuración de computadora y Configuración de Usuario?
+
+- Configuración de la computadora :: Estas políticas se aplican a la computadora local y no cambian por usuario.
+
+- Configuración de usuario :: Estas políticas se aplican a los usuarios en la máquina local y se aplicarán a cualquier usuario nuevo en el futuro en esta computadora local.
+
+https://www.varonis.com/blog/group-policy-editor#:~:text=Computer%20Configuration%3A%20These%20policies%20apply,future%2C%20on%20this%20local%20computer.
+
+** ¿Cómo se llama el antivirus de Microsoft?
+Windows Defender Antivirus 
+
+https://web.archive.org/web/20180210104819/https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10
+
+** ¿Cómo se acceder al editor de políticas de grupo?
+- Con las teclas =windows + R= se abre el menu 'Ejecutar' de windows
+- Se escribe 'gpedit.msc' y se pulsa enter
+
+https://www.xataka.com/basics/como-usar-el-editor-de-directivas-de-grupo-local-gpedit-msc-si-tu-windows-no-lo-trae#:~:text=La%20forma%20m%C3%A1s%20f%C3%A1cil%20de,msc%20y%20pulsa%20Aceptar.
+
+** ¿Qué es el Power Shell?
+PowerShell es una solución de automatización de tareas multiplataforma formada 
+por un shell de línea de comandos, un lenguaje de scripting y un marco de 
+administración de configuración. PowerShell funciona en Windows 10, Linux y 
+macOS.
+
+
+PowerShell es un shell de comandos moderno que incluye las mejores 
+características de otros shells populares. A diferencia de la mayoría de los 
+shells que solo aceptan y devuelven texto, PowerShell acepta y devuelve objetos.
+
+https://learn.microsoft.com/es-es/powershell/scripting/overview?view=powershell-7.3
+
+
+** ¿Qué es un punto de restauración?
+Los puntos de restauración se crean para permitir que los usuarios seleccionen 
+un estado del sistema anterior. Cada punto de restauración contiene la 
+información necesaria para restaurar el sistema al estado seleccionado. Los 
+puntos de restauración se crean antes de que se realicen cambios clave en el 
+sistema.
+
+https://learn.microsoft.com/es-es/windows/win32/sr/restore-points

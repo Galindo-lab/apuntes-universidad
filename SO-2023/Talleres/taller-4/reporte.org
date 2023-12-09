@@ -1,0 +1,225 @@
+
+#+TITLE:  Taller 4. Redireccionamiento
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   4 de Octubre 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./fuentes.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-color-cont.png}
+\tableofcontents \pagebreak
+\datasection{Individual}
+
+* Introducción
+Durante esta practica aprenderemos como utilizar el redireccionamiento en Unix, El redireccionamiento consiste en una capacidad que permite mover datos fácilmente hacia dentro/fuera de los archivos. Usualmente los programas en unix redireccionan su flujo a stdout pero a lo largo de este taller aprenderemos como cambiarlo y utilizarlo para extender las capacidades del sistema.
+
+\pagebreak
+
+* Actividades
+** Muestre el archivo billboard con las líneas numeradas
+#+begin_src 
+cat -n billboard
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: salida de =cat -n billboard=
+[[file:img/1.png]]
+
+** Muestre solamente a los artistas que pertenecen a RCA Records
+#+begin_src 
+grep "RCA Records" billboard
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =grep= sin argumentos nos permite encontrar un texto en un flujo 
+[[file:img/2.png]]
+
+\pagebreak
+
+** Repita el paso anterior pero ahora redireccione la salida para generar un archivo llamado RCA
+
+#+begin_src 
+grep "RCA Records" billboard > RCA
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: el caracter =>= permite redirigir el flujo a otra salida
+[[file:img/3.png]]
+
+
+** Muestre y genere un archivo con los artistas que graban con Warner
+#+begin_src 
+grep "Warner Records" billboard > Warner
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: salida de =grep "Warner Records" billboard > Warner=  
+[[file:img/4.png]]
+
+\pagebreak
+
+** Repita el paso anterior pero ahora debe verse en pantalla el resultado al mismo tiempo que se genera el archivo
+
+#+begin_src 
+grep "Warner Records" billboard | tee Warner
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: El comando =tee= nos permite ver la salida del comando y escribir en el archivo
+[[file:img/5.png]]
+
+** Genere un archivo con las últimas tres líneas del archivo billboard
+#+begin_src 
+tail -n 3 billboard > tres_lineas.txt
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: salida de =tail -n 3 billboard=
+[[file:img/6.png]]
+
+\pagebreak
+
+** Genere un archivo nuevo con el contenido billboard debe estar escrito todo en mayúsculas
+#+begin_src 
+tr '[:lower:]' '[:upper:]' < billboard > bmayusculas.txt
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Reemplazar minúsculas con mayúsculas
+[[file:img/7.png]]
+
+** Cree el archivo nombres con solo el primer nombre de las personas aprobadas en lista2023
+#+begin_src 
+grep -v "ORDINARIO" lista2023 | cut -d':' -f3 | tee nombresap.txt
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: nombresap.txt
+[[file:img/a8.png]]
+
+
+- grep -v 'ORDINARIO' lista2023 :: Se busca todos los elementos que no tengan 'ORDINARIO' 
+- cut -d':' -f3 :: Se obtiene la tercera columna 
+- tee nombresap.txt :: se muestra en STDOUT y se guarda en un archivo
+
+\pagebreak
+
+** En el archivo de lista2023 sustituya todos los ':' por espacios
+#+begin_src 
+cat lista2023 | tr ':' ' '
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: salida de =cat lista2023 | tr ':' ' '=
+[[file:img/8.png]]
+
+** Genere un archivo que contenga solamente las matriculas de los alumnos aprobados en el archivo lista2023
+#+begin_src 
+grep -v "ORDINARIO" lista2023 > aprobados.txt
+cat aprobados.txt
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: mostrar el contenido de aprobados.txt
+[[file:img/9.png]]
+
+\pagebreak
+
+** En el archivo lista sustituya todas las matriculas por algun otro carácter
+
+#+begin_src 
+tr "[0-9]" "A" < lista2023
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =tr '[0-9]' 'A'= Indica todos los caracteres del 0-9 se reemplazaran por 'A' 
+[[file:img/10.png]]
+
+** Sustituya todos los simbolos de puntuacion en diario por otro carácter
+
+#+begin_src 
+tr '[:punct:]' 'X' < patria
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: se reemplazan los puntos y comas por 'X'
+[[file:img/11.png]]
+
+\pagebreak
+
+** Genere un archivo solo con las IPs de las personas que están trabajando en el sistema actualmente, pero la salida debe de verse en pantalla al mismo tiempo que se genera el archivo
+#+begin_src 
+who | tr -s ' ' | cut -d' ' -f6 | tee ips.txt
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: IPs obtenidas
+[[file:img/13.png]] 
+
+- who           :: Muetra quien esta conectado al servidor.
+- tr -s ' '     :: Elimina todos los espacio blancos consecutivos[fn:1aa].
+- cut -d' ' -f6 :: Extrae la 6ta. columns de =who= (el ip).
+- tee ips.txt   :: manda el resultado a stdout y a ips.txt.
+
+\pagebreak
+
+[fn:1aa] {{{cite(StackExchange)}}}
+
+** Genere un archivo que contenga las lista de usuarios del sistema que pertenecen al mismo grupo que usted,  esten o no actualmente en el sistema
+#+begin_src 
+cat /etc/passwd | grep "admin20232"
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Miembros de admin20232
+[[file:img/14.png]]
+
+
+{{{cite(A2022)}}}
+  
+** Genere un archivo que contenga el user name y grupo de los usuarios cuyo login name empieza con al
+#+begin_src 
+cat /etc/passwd | grep "admin20232" | grep "^al"
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =grep '^al'= usa una expresión regular que busca strings que comienzan con al
+[[file:img/15.png]]
+
+
+* Conclusión
+A lo largo de esta practica aprendí como direccionar flujos de salida con la 
+terminal en Linux, anteriormente ya habíamos usado un poco de direccionamiento
+por ejemplo al usar el comando =more= pero en esta practica lo utilizamos ya no 
+solamente para mostrar resultados, si no que también como un paso intermedio para
+lograr un resultado.
+
+* Referencias
+\printbibliography[heading=none]

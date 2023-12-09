@@ -1,0 +1,266 @@
+
+#+TITLE:  Taller 1 Sistema de Archivos  
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   12 de Septiembre 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./fuentes.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-color-cont.png}
+\tableofcontents\pagebreak
+\datasection{Individual}
+
+
+* Introducción
+Los sistemas Unix o Unix-Like siempre se han caracterizado por tener una 
+cantidad de software amplia la cual permite contruir utilidades muy poderosas,
+durante el taller se estudiara como crear, modificar, eliminar y ver los detalles
+de archivos del sistema.   
+
+* Actividades
+** Despliegue el nombre del directorio de trabajo actual
+#+begin_src 
+pwd
+#+end_src
+
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Salida del comando =pwd= 
+[[file:img/1.png]]
+
+** Lista en forma de columnas (sin detalles) el contenido del directorio padre de su home directory
+#+begin_src 
+ls -1
+#+end_src
+
+#+ATTR_LATEX: :width 10cm
+#+caption: El flag -1 muestra los archivos como columna
+[[file:img/2.png]]
+
+{{{cite(AskUbuntu_2017)}}}
+
+** Lista en orden alfabético inverso todos los archivos (incluyendo los ocultos) de su home directory.
+#+begin_src 
+ls -r -A ~
+#+end_src
+
+#+ATTR_LATEX: :width 10cm
+#+ATTR_HTML:
+#+CAPTION: =-r= invierte el orden y =-A= muetra todos los archivos
+[[file:img/3.png]]
+
+\pagebreak
+
+** Lista en orden alfabético el contenido de su home directory mostrando información detallada. 
+#+begin_src 
+ls -l
+#+end_src
+
+#+ATTR_LATEX: :width 10cm
+#+ATTR_HTML:
+#+CAPTION: =-l= agrega todos los detalles sobre un archivo, creador y fecha
+[[file:img/4.png]]
+
+*** ¿En qué consiste esa información?
+#+BEGIN_mdframed
+La información mostrada contiene los permisos, el creador, el peso del archivo, ultima modificación y nombre de los archivos
+#+END_mdframed
+
+*** ¿Qué significa el primer carácter que se muestra en la lista?
+#+BEGIN_mdframed
+Si el archivo es un directorio, si el carácter es 'd' es directorio si no entonces es un archivo
+#+END_mdframed
+
+** Desarrolle la estructura de directorios que se indique en el pizarrón.
+
+#+begin_src plantuml :file ./img/tree.png
+  ,@startmindmap
+  ,!theme plain
+  ,scale 1.5
+  ,* Linux 
+  ,**_ Debian
+  ,***_ Ubuntu
+  ,***_ LinuxMX
+  ,**_ RedHat
+  ,***_ CentOS
+  ,***_ Fedora
+  ,**_ ArchLinux
+  ,***_ ArcoLinux
+  ,***_ Manjaro
+  ,**_ SUSE
+  ,***_ openSUSE
+  ,**_ Slackware
+  ,**_ Gentoo
+  ,@endmindmap
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 6cm
+#+caption: Árbol de directorios
+#+RESULTS: 
+[[file:./img/tree.png]]
+
+#+begin_src 
+mkdir Linux
+cd Linux
+mkdir -p Debian/Ubuntu Debian/LinuxMX
+mkdir -p Redhat/CentOS Redhat/Fedora
+mkdir -p ArchLinux/ArcoLinux ArchLinux/Manjaro
+mkdir -p SUSE/openSUSE
+mkdir Slackware Gentoo
+#+end_src
+
+{{{autocite(TecAdmin_2023)}}}
+
+** Verifique que la estructura haya sido creada correctamente.
+#+begin_src 
+ls -R
+#+end_src
+ 
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+caption: =-R= muestra el arbol de directorios creados
+[[file:img/6b.png]]
+
+** Borre el último nivel del árbol de directorios.
+#+begin_src
+rm -r Debian/Ubuntu Debian/LinuxMX
+rm -r Redhat/CentOS Redhat/Fedora
+rm -r ArchLinux/ArcoLinux ArchLinux/Manjaro
+rm -r SUSE/openSUSE
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 9.5cm
+#+caption: Eliminado uno a uno los últimos nodos del árbol
+[[file:img/7.png]]
+
+#+begin_src plantuml :file ./img/tree2.png
+  ,@startmindmap
+  ,!theme plain
+  ,scale 1.5
+  ,* Linux 
+  ,**_ Debian
+  ,**_ RedHat
+  ,**_ ArchLinux
+  ,**_ SUSE
+  ,**_ Slackware
+  ,**_ Gentoo
+  ,@endmindmap
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 5cm
+#+caption: Árbol de directorios resultante
+#+RESULTS:
+[[file:./img/tree2.png]]
+
+\pagebreak
+
+** Lista el contenido de su directorio, mostrando de forma simbólica el tipo de archivos que contiene.
+#+begin_src 
+ls -F
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =-F= muestra el tipo simbólico '/' si es directorio y vació si es archivo
+[[file:img/8.png]]
+
+\pagebreak
+
+** ¿Para qué sirve el comando =whoami=?
+#+BEGIN_mdframed
+Mostrar el nombre de usuario efectivo
+#+END_mdframed  
+{{{cite(linux_whoami)}}} 
+
+** ¿Qué información nos proporciona =uname=?
+#+BEGIN_mdframed
+Imprime el nombre del sistema operativo
+#+END_mdframed
+{{{cite(OpenBSD_uname)}}}
+
+** Dentro de un directorio llamado alumnos, cree un directorio para cada alumno del salón, asignándole como nombre el user name de cada persona (verifique la lista de usuarios mediante el comando =who=)
+#+begin_src
+mkdir alumnos
+cd alumnos 
+ 
+mkdir richelle brenda galindo axl pelayo luis99 gerardo\
+      arriaga pepeam roger emmanuel hector ruben nicole\
+      alan
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Directorios creados
+[[file:img/11.png]]
+
+** Renombre todos los directorios del directorio alumnos con los nombre reales de sus compañeros.
+#+begin_src 
+mv richelle/ RICHELLE_NADINE_REYES_UDASCO/
+mv brenda/ BERNARDO_MORALES_RAMOS/
+mv galindo/ LUIS_EDUARDO_GALINDO_AMAYA/
+mv axl/ AXEL_GOMEZ_BETANCOURT/
+mv pelayo/ ALAN_ALEXANDER_PELAYO_FRIAS/
+mv luis99/ LUIS_FELIPE_RODRIGUEZ_RODRIGUEZ/
+mv gerardo/ GERARDO_ANTONIO_ABDALA_LOPEZ/
+mv arriaga/ RENE_SEBASTIÁN_ARRIAGA_ALONSO/
+mv pepeam/ JOSÉ_ANTONIO_ARCE_MONTOYA/
+mv roger/ ALAN_ROGELIO_MARTINEZ_SIFUENTES/
+mv emmanuel/ EMANUEL_CASTRO_VEGA/
+mv hector/ HÉCTOR_MIGUEL_MACÍAS_BALTAZAR/
+mv ruben/ RUBEN_STELLIOS_RUIZ_ALONSO/
+mv nicole/ NICOLE_SOFÍA_ORTIZ_LOPEZ/
+mv alan/ ALAN_FERNANDO_LEÓN_CORTEZ/
+#+end_src
+
+ 
+#+ATTR_LATEX: :width 10cm
+#+ATTR_HTML:
+#+CAPTION: =mv= permite mover archivos o renombrarlos 
+[[file:img/12.png]]
+
+** Liste los directorios en forma alfabética
+*** ¿Quién es el dueño de los directorios creados? ¿Cúal es la fecha de creación?
+#+BEGIN_mdframed
+Para conocer la información del dueño y la fecha de creación se puede usar el
+comando =ls -l= y examinar las columnas de dueño y fecha de creación 
+#+END_mdframed
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+caption: =ls= con detalles de los archivos  
+[[file:img/13a.png]]
+
+** Borre en un solo paso la estructura anterior. Auxiliese del manual de ayuda
+#+begin_src 
+rm -r alumnos
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =-r= Elimina recursivamente los directorios la interior 
+[[file:img/14.png]]
+
+* Conclusión
+A lo largo de esta practica pude entender como crear directorios, listarlos
+modificarlos pude crear secuencias que hacen muchas cosas, pienso yo que 
+al combinar estos comandos entre si seria posible crear aplicaciones completas 
+que me pueden ayudar a cumplir tareas de administración. 
+
+\pagebreak
+
+* Referencias
+\printbibliography[heading=none]

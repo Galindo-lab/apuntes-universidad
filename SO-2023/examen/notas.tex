@@ -1,0 +1,246 @@
+% Created 2023-11-04 sáb 20:03
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[top=1in,bottom=1in,papersize={8.5in,11in}]{geometry}
+\usepackage[spanish, mexico]{babel}
+\usepackage[backend=biber, style=apa]{biblatex}
+\bibliography{./fuentes.bib}
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+basicstyle=\ttfamily,
+numbers=left,
+showspaces=false,
+frame=single,
+showspaces=false,
+showstringspaces=false,
+showtabs=false,
+numberstyle=\tiny,
+aboveskip=25pt
+%% aboveskip=\parskip
+}
+\lstset{
+style=mystyle,
+literate={á}{{\'a}}1
+{é}{{\'e}}1
+{í}{{\'{\i}}}1
+{ó}{{\'o}}1
+{ú}{{\'u}}1
+{Á}{{\'A}}1
+{É}{{\'E}}1
+{Í}{{\'I}}1
+{Ó}{{\'O}}1
+{Ú}{{\'U}}1
+{ü}{{\"u}}1
+{Ü}{{\"U}}1
+{ñ}{{\~n}}1
+{Ñ}{{\~N}}1
+{¿}{{?``}}1
+{¡}{{!``}}1
+}
+\documentclass[14pt]{article}
+\usepackage{setspace}
+\usepackage[scaled]{helvet}
+\usepackage[skip=10pt plus1pt, indent=40pt]{parskip}
+\doublespacing
+\setlength{\headheight}{12.5pt}
+\renewcommand\familydefault{\sfdefault}
+\setcounter{secnumdepth}{2}
+\author{Luis Eduardo Galindo Amaya}
+\date{jueves, 02 noviembre 2023}
+\title{Notas\\\medskip
+\large Administracion de sistemas operativos}
+\hypersetup{
+ pdfauthor={Luis Eduardo Galindo Amaya},
+ pdftitle={Notas},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.1 (Org mode 9.5.2)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\maketitle
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+
+\section{Redireccionamientos}
+\label{sec:orgfb8f067}
+\subsection{Redireccionar salida sin concadenar (>)}
+\label{sec:org17c35cf}
+Redirecciona la salida a un archivo o dispositivo \texttt{>}, creando el archivo
+si no existe y sobreescribiéndolo si ya existe.
+
+\subsection{Redireccionar salida concadenando (>>)}
+\label{sec:org18da9ea}
+Redirecciona la salida estándar a un archivo o dispositivo \texttt{>>}, añadiendo
+la salida al final del archivo.
+
+\subsection{Redireccionar entrada (<)}
+\label{sec:org0889e7f}
+El simbolo \texttt{<} (entrada) Redirecciona stdin desde un archivo. El
+contenido de un archivo es la entrada o input del comando. 
+
+\subsection{Pasar salida como entrada Piping (|)}
+\label{sec:orga7e941d}
+El símbolo \texttt{|} (pipe) es un tipo de redireccionamiento ya que la salida
+(stdout) de un comando es la entrada (stdin) de otro. Ejemplo:
+
+\lstset{language=shell,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
+grep -v "ORDINARIO" lista2023 | cut -d ':' -f3 
+\end{lstlisting}
+
+\begin{description}
+\item[{grep -v ’ORDINARIO’ lista2023}] Se busca todos los elementos que \textbf{NO}
+tengan ’ORDINARIO’
+
+\item[{cut -d’:’ -f3}] Se obtiene la tercera columna
+\end{description}
+
+\subsection{Pasar salida a archivo y terminal (tee)}
+\label{sec:org5982569}
+El comando tee redirecciona la salida (stdout) a ambos, un archivo y a
+la terminal. Se puede usar para supervisar la salida del comando
+
+\subsection{Repaso de la practica}
+\label{sec:org297c265}
+\begin{description}
+\item[{cat -n archivo.txt}] Manda el contenido de un archivo a la terminal
+con las lineas numeradas (-n)
+
+\item[{grep "substring" archivo.txt}] Busca el 'substring' en un flujo de
+entrada, en este caso el archivo.txt
+
+\item[{grep "RCA Records" billboard > RCA}] Busca el substring 'RCA
+Records' en el archivo billboard y redirige la salida al archivo
+'RCA'.
+
+\item[{grep "Warner Records" billboard | tee Warner}] Busca el substring
+'Warner Records' en el archivo billboard, guarda la salida en un
+archivo llamado Warner y al mismo tiempo lo imprime en la terminal.
+\end{description}
+
+\section{{\bfseries\sffamily TODO} Repaso de commando de la unidad}
+\label{sec:orgbce3516}
+\subsection{Ordenar (sort)}
+\label{sec:org0ba603b}
+\begin{description}
+\item[{sort -f <archivo>}] Ordena considerando de igual valor mayúsculas y minúsculas.
+
+\item[{sort -M <archivo>}] Compara considerando los tres primeros caracteres de la línea como
+el nombre de un mes en inglés.
+
+\item[{sort -n <archivo>}] Ordena en forma numérica ascendente.
+
+\item[{sort +1 <archivo>}] Ordena por la segunda columna. (+2 por la tercera, etc), considera
+como delimitador el espacio y el tabulador.
+
+\item[{sort –r <archivo>}] Invierte el orden.
+\end{description}
+
+\subsection{Buscar (grep)}
+\label{sec:org3f134ba}
+\begin{description}
+\item[{grep <cadena> <archivo>}] Muestra la línea(s) donde encuentra la cadena.
+
+\item[{grep -n <cadena> <archivo>}] Muestra la línea y el número de línea en donde encuentra la cadena.
+
+\item[{grep -c <cadena> <archivo>}] Muestra cuántas líneas contienen el patrón especificado.
+
+\item[{grep -v <cadena> <archivo>}] Muestra las líneas que no cumplen con el patrón de búsqueda.
+
+\item[{grep -w <cadena> <archivo>}] Muestra las líneas que contienen la cadena como palabra completa.
+
+\item[{grep –w <'frase'> <archivo>}] Muestra la línea donde se encuentra la frase completa.
+
+\item[{grep -i <cadena><archivo>}] Evita la distinción entre mayúsculas y minúsculas.
+\end{description}
+
+\subsection{{\bfseries\sffamily TODO} Reemplazar (tr)}
+\label{sec:orgb11d119}
+\subsection{{\bfseries\sffamily TODO} Final (tail)}
+\label{sec:org326cf52}
+\subsection{{\bfseries\sffamily TODO} Inicio (cabeza)}
+\label{sec:org9c5bf16}
+
+
+\section{{\bfseries\sffamily TODO} Variables de Ambiente}
+\label{sec:orgf1f57ca}
+\subsection{Comandos para variables}
+\label{sec:orge1f071d}
+\begin{description}
+\item[{crear una variable}] \texttt{variable=valor}
+
+\item[{asignacion de valores}] \texttt{Variable=nuevovalor}
+
+\item[{Exportación de variables del shell al ambiente}] \texttt{export Variable}
+
+\item[{crear variable de ambiente con valor}] \texttt{export variable=valor}
+\end{description}
+
+\section{{\bfseries\sffamily TODO} Procesos}
+\label{sec:org8cb6c4b}
+Proceso es un concepto fundamental para todo sistema operativo. Es una
+entidad dinámica que consiste en un programa en ejecución, sus valores
+actuales, su estado y los recursos utilizados para manejar su
+ejecución (memoria, CPU, dispositivos de E/S, etc). Pueden coexistir
+varias instancias de un mismo programa en ejecución en forma
+simultánea. ya que cada una de ellas es un proceso diferente. 
+
+\pagebreak
+\section{Hola mundo}
+\label{sec:org321833c}
+Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non
+orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut,
+lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.
+Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec
+at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id
+enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.
+Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam
+euismod tellus id erat. 
+
+Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec
+facilisis facilisis, est dui fermentum leo, quis tempor ligula erat
+quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.
+Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing
+interdum, lacus tellus malesuada massa, quis varius mi purus non odio.
+Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue
+ornare nulla, non luctus diam neque sit amet urna.  Curabitur
+vulputate vestibulum lorem.  Fusce sagittis, libero non molestie
+mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia
+eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia
+pulvinar nibh.  Nam a sapien. 
+
+Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non
+orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut,
+lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.
+Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec
+at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id
+enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.
+Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam
+euismod tellus id erat. 
+
+
+Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec
+facilisis facilisis, est dui fermentum leo, quis tempor ligula erat
+quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.
+Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing
+interdum, lacus tellus malesuada massa, quis varius mi purus non odio.
+Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue
+ornare nulla, non luctus diam neque sit amet urna.  Curabitur
+vulputate vestibulum lorem.  Fusce sagittis, libero non molestie
+mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia
+eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia
+pulvinar nibh.  Nam a sapien. 
+\end{document}

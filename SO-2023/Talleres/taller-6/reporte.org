@@ -1,0 +1,310 @@
+
+#+TITLE:  Taller 6. Procesos
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   16 de Octubre 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./fuentes.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+#+macro: pagebreak @@latex:\pagebreak@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\tableofcontents\pagebreak
+\datasection{Individual}
+
+* Introduccion
+A lo largo de esta practica aprenderemos que son los procesos dentro del los 
+sistemas operativos, como funcionan para que sirven y como podemos utilizarlos 
+de manera efectiva para lograr diversos tipos de tareas. 
+{{{pagebreak}}}
+
+* Desarollo
+** Genere un listado completo de todos los procesos que están en el sistema y muestre la información completa de todos los que se empezaron a ejecutar el 7 de septiembre en una sola línea.
+
+#+begin_src sh
+ps -ef | grep "Sep 7"
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Procesos iniciados el 7 de Septiembre
+[[file:img/1.png]]
+
+- *ps* Para mostrar los procesos del usuario:
+  + *-e* Lista información sobre cada proceso del sistema
+  + *-f* muestra los detalle de los procesos
+
+- *grep* para buscar el string de la fecha 
+
+{{{pagebreak}}}
+
+**  Qué están haciendo los procesos que actualmente esta ejecutando maestro. (Comando)
+#+begin_src sh
+ps -fu lety
+#+end_src 
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 9cm
+#+CAPTION: Nada solo aparecen que tiene sh abierto
+[[file:img/2.png]]
+
+** Genere un listado con el número de proceso, número del proceso padre, comando en ejecución y prioridad de tres de sus compañeros.
+#+begin_src sh
+  ps -feao user,group,pid,ppid,cmd,nice | grep "admi*"
+#+end_src
+
+- f :: Muestra una lista completa de procesos con detalles y usuario.
+- e :: Lista información sobre cada proceso en ejecución ahora.
+- a :: Muestra los procesos de otros usuarios.
+- o :: Muestra la información de acuerdo a un formato especificado.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Solo estoy yo en el servidor
+[[file:img/3.png]]
+
+** Explique la diferencia entre las opciones de ps e,f,l y j
+
+- e :: Lista información sobre cada proceso en ejecución ahora.
+- f :: Muestra una lista completa de procesos con detalles y usuario.
+- l :: Genera una lista con información detallada de los procesos.
+- j :: La información se presenta empezando por el PID
+
+** Explique la diferencia entre las opciones de ps a y u
+- a :: muestra los procesos de todos los usuarios.
+- u :: muestra procesos de un usuario específico.
+
+{{{pagebreak}}}
+
+** Explique qué es lo que hace la opción de ps t y u Si tiene dos sesiones de ssh abiertas con el mismo user name
+*** Flag -t 
+Lista los procesos asociados con la terminal. Por ejemplo, term/a, o pts/0, si
+tenemos mas de una terminal y solo usamos *-t* mostrara los procesos de esa 
+terminal.  
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: salida de ps -t
+[[file:img/mt.png]]
+
+*** Flag -u 
+el usuario visualiza los procesos del usuario independientemente de la terminal
+que use.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Salida de ps -u
+[[file:img/mu.png]]
+
+** ¿qué procesos muestra al ejecutar ps?
+El comando ps reporta el estado de los procesos activos
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Procesos activos en mi usuario 
+[[file:img/ps.png]]
+
+** ¿Qué opción de ps debería de usar par
+a ver todos los procesos de un usuario?
+#+begin_src sh
+ps -U <nombre del usuario>
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Procesos activos en mi usuario
+[[file:img/psmu.png]]
+{{{pagebreak}}}
+
+** ¿Cómo identifico a los procesos que el usuario está ejecutando en cada terminal?
+- Utilizando la columna TTY en =ps -f= o tambien utilizando =ps -o tty,cmd=
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: 
+[[file:img/tty.png]]
+
+** ¿Cuál es significado de TODAS las columnas de formato que maneja ps –o? (Sólo las que no están explicadas en este material).
+{{{autocite(ibm)}}}
+- ruser :: Indica el ID de usuario real del proceso. Se muestra el ID de usuario en formato de texto. Si no se puede obtener el ID de usuario en formato de texto, se utiliza una representación decimal. El encabezado predeterminado para este campo es RUSER.
+
+- rgroup :: Indica el ID de grupo real del proceso. Se muestra el ID de grupo en formato de texto. Si no se puede obtener el ID de grupo en formato de texto, se utiliza una representación decimal. El encabezado predeterminado para este campo es RGROUP.
+
+- ruid :: Indica el número de ID de usuario real del proceso en formato decimal. El encabezado predeterminado para este campo es RUID.
+
+- gid :: Indica el número de ID de grupo efectivo del proceso en formato decimal. El nombre de inicio de sesión se imprime bajo la opción -f.
+
+- rgid :: Indica el número de ID de grupo real del proceso en formato decimal. El encabezado predeterminado para este campo es RGID.
+
+- pid :: Indica el valor decimal del ID de proceso. El encabezado predeterminado para este campo es PID.
+
+- ppid :: Indica el valor decimal del ID de proceso principal (padre). El encabezado predeterminado para este campo es PPID.
+
+- pgid :: Indica el valor decimal del ID de grupo de procesos. El encabezado predeterminado para este campo es PGID.
+
+- sid :: Indica el ID de proceso del líder de sesión. El encabezado predeterminado para este campo es SID.
+
+- pcpu :: Indica la proporción de tiempo de CPU utilizado en relación al tiempo de CPU disponible, expresada como porcentaje. El encabezado predeterminado para este campo es %CPU.
+
+- pmem :: Indica el porcentaje de memoria real utilizada por este proceso. El encabezado predeterminado para este campo es %MEM.
+
+- vsz :: Indica, en formato decimal, el tamaño en kilobytes de la imagen base del núcleo del proceso. El encabezado predeterminado para este campo es VSZ.
+
+- rss :: (bandera v) El tamaño de memoria real (conjunto residente) del proceso (en unidades de 1 KB).
+
+- nice :: Indica el valor decimal del valor "nice" del proceso. El encabezado predeterminado para este campo es NI.
+
+- class :: Indica la política de programación para un hilo de kernel. Las políticas son sched_other, sched_fifo y sched_rr. El encabezado predeterminado para este campo es CLS.
+
+- time :: Indica el tiempo acumulado de CPU desde que el proceso se inició. El tiempo se muestra en el mismo formato que en etime. El encabezado predeterminado para este campo es TIME.
+
+- etime :: Indica el tiempo transcurrido desde que el proceso se inició.
+
+- stime :: La hora de inicio del proceso. Las variables de entorno LANG controlan la apariencia de este campo.
+
+- lwp :: El tiempo de ejecución de un hilo de ejecución ligero individual.
+
+- nlwp :: Indica el número de hilos de kernel propiedad del proceso. El encabezado predeterminado para este campo es THCNT.
+
+- psr :: El número de procesador lógico al que está vinculado el hilo de kernel (si lo tiene). Para un proceso, este campo se muestra si todos sus hilos están vinculados al mismo procesador.
+
+- tty :: La terminal de control para el proceso.
+
+- addr :: Contiene el número de segmento de la pila del proceso, si es normal; si es un proceso de kernel, la dirección del área de datos previos al procesamiento.
+
+- wchan :: Indica el evento por el que el proceso o hilo de kernel está esperando o durmiendo. Para un hilo de kernel, este campo está en blanco si el hilo de kernel está en ejecución.
+
+- fname :: Indica los primeros 8 bytes del nombre base del archivo ejecutable del proceso. El encabezado predeterminado para este campo es COMMAND.
+
+- args :: Indica el nombre completo del comando que se está ejecutando. Se incluyen todos los argumentos de línea de comandos, aunque puede producirse truncamiento. El encabezado predeterminado para este campo es COMMAND.
+
+- project :: Nombre del proyecto asignado al proceso. En el entorno operativo actual, los campos PROJECT y USER no se traducen a nombres para los procesos que se ejecutan dentro de una partición de trabajo.
+
+** Ejecute dos comandos en background (los que quiera).
+#+begin_src sh
+nano&
+vi&
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Nano y Vi corriendo en el fondo
+[[file:img/nanovi.png]]
+
+** Ejecute el comando cat >lista, ¿Qué prioridad tiene asignada?
+- Tiene la prioridad 19
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: use ps desde otra terminal para ve la prioridad 
+[[file:img/psprimi.png]]
+
+{{{pagebreak}}}
+
+** Mate el proceso anterior.
+#+begin_src sh
+kill -9 130985
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Matar el proceso
+[[file:img/kill.png]]
+
+** Vuelva a ejecutar cat>lista pero con menor prioridad.
+#+begin_src sh
+nice -n 10 cat>lista
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Nice ahora es mayor y la prioridad es mas baja
+[[file:img/psprimi.png]]
+
+*** ¿Qué prioridad le fue asignada?
+- Prioridad marca 9
+
+{{{pagebreak}}}
+
+** Una vez más ejecute cat>lista, pero ahora en el background .
+#+begin_src sh
+cat>list&
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: salida de ps -u
+[[file:img/prioridad1.png]]
+
+** ¿Cuál es su prioridad ahora?
+- El valor de prioridad es '19' y el valor de nice es '0'
+
+** Verifique que el comando en background este en la lista de procesos.
+#+begin_src sh
+  ps -l
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: lista de procesos
+[[file:img/psml.png]]
+
+{{{pagebreak}}}
+
+** Verifique que el comando en background este en la lista de tareas (jobs).
+#+begin_src sh
+  jobs
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Lista de tareas
+[[file:img/jobs.png]]
+
+** Pase una de las tareas al foreground (use el número de tarea)
+#+begin_src sh
+  fg %1 
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: traer el proceso '1' al foreground
+[[file:img/random.png]]
+
+** Pase la otra tarea al foreground, pero ahora use el número de PID. 
+- en este comando no se puede ejecutar en esta distribución
+
+** Envíe otro comando al background.
+#+begin_src sh
+vi&
+#+end_src
+
+** Finalice este proceso.
+#+begin_src shell
+kill -9 134242
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Proceso vi creado en el fondo y detenido
+[[file:img/vi.png]]
+
+* Conclusión
+Durante esta practica aprendi como crear procesos, como leer procesos y como usar 
+comandos para mandar al fondo y trer de vuelta, siento que estos comandos me 
+seran muy utiles para poder trabajar y no tener que estar haciendo scripts para
+todo.
+ 
+* Fuentes
+\printbibliography[heading=none]

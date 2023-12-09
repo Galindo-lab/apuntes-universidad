@@ -1,0 +1,201 @@
+
+#+TITLE:    Notas
+#+SUBTITLE: Administracion de sistemas operativos 
+#+AUTHOR:   Luis Eduardo Galindo Amaya
+#+DATE:     jueves, 02 noviembre 2023
+
+# -----
+#+LANGUAGE: es
+#+SETUPFILE: ~/.emacs.d/templates/notas.org
+#+OPTIONS:  toc:2 ^:nil title:t num:2
+# -----
+
+* COMMENT Latex config
+#+latex_header: \documentclass[14pt]{article}
+#+latex_header: \usepackage{setspace}
+#+latex_header: \usepackage[scaled]{helvet}
+
+#+latex_header: \usepackage[skip=10pt plus1pt, indent=40pt]{parskip} 
+#+latex_header: \doublespacing
+#+latex_header: \setlength{\headheight}{12.5pt}
+#+latex_header: \renewcommand\familydefault{\sfdefault} 
+# #+latex_header: \setlength{\parindent}{0pt}
+
+# {{{test}}}
+
+* Redireccionamientos
+** Redireccionar salida sin concadenar (>)
+Redirecciona la salida a un archivo o dispositivo =>=, creando el archivo
+si no existe y sobreescribiéndolo si ya existe.
+
+** Redireccionar salida concadenando (>>)
+Redirecciona la salida estándar a un archivo o dispositivo =>>=, añadiendo
+la salida al final del archivo.
+
+** Redireccionar entrada (<)
+El simbolo =<= (entrada) Redirecciona stdin desde un archivo. El
+contenido de un archivo es la entrada o input del comando. 
+
+** Pasar salida como entrada Piping (||)
+El símbolo =|= (pipe) es un tipo de redireccionamiento ya que la salida
+(stdout) de un comando es la entrada (stdin) de otro. Ejemplo:
+
+#+begin_src shell 
+  grep -v "ORDINARIO" lista2023 | cut -d ':' -f3 
+#+end_src
+
+- grep -v ’ORDINARIO’ lista2023 :: Se busca todos los elementos que *NO*
+  tengan ’ORDINARIO’ 
+
+- cut -d’:’ -f3 :: Se obtiene la tercera columna
+
+** Pasar salida a archivo y terminal (tee)
+El comando tee redirecciona la salida (stdout) a ambos, un archivo y a
+la terminal. Se puede usar para supervisar la salida del comando
+
+** Repaso de la practica
+- cat -n archivo.txt :: Manda el contenido de un archivo a la terminal
+  con las lineas numeradas (-n)
+
+- grep "substring" archivo.txt :: Busca el 'substring' en un flujo de
+  entrada, en este caso el archivo.txt
+
+- grep "RCA Records" billboard > RCA :: Busca el substring 'RCA
+  Records' en el archivo billboard y redirige la salida al archivo
+  'RCA'.
+
+- grep "Warner Records" billboard | tee Warner :: Busca el substring
+  'Warner Records' en el archivo billboard, guarda la salida en un
+  archivo llamado Warner y al mismo tiempo lo imprime en la terminal.
+
+* TODO Repaso de commando de la unidad
+** Ordenar (sort)
+- sort -f <archivo> :: 
+  Ordena considerando de igual valor mayúsculas y minúsculas. 
+
+- sort -M <archivo> :: 
+  Compara considerando los tres primeros caracteres de la línea como
+  el nombre de un mes en inglés. 
+
+- sort -n <archivo> :: 
+  Ordena en forma numérica ascendente.
+
+- sort +1 <archivo> :: 
+  Ordena por la segunda columna. (+2 por la tercera, etc), considera
+  como delimitador el espacio y el tabulador. 
+
+- sort –r <archivo> :: 
+  Invierte el orden.
+
+** Buscar (grep)
+- grep <cadena> <archivo> ::
+  Muestra la línea(s) donde encuentra la cadena. 
+
+- grep -n <cadena> <archivo> :: 
+  Muestra la línea y el número de línea en donde encuentra la cadena. 
+
+- grep -c <cadena> <archivo> :: 
+  Muestra cuántas líneas contienen el patrón especificado. 
+
+- grep -v <cadena> <archivo> :: 
+  Muestra las líneas que no cumplen con el patrón de búsqueda. 
+ 
+- grep -w <cadena> <archivo> :: 
+  Muestra las líneas que contienen la cadena como palabra completa. 
+
+- grep –w <'frase'> <archivo> :: 
+  Muestra la línea donde se encuentra la frase completa.
+
+- grep -i <cadena><archivo> :: 
+  Evita la distinción entre mayúsculas y minúsculas.
+
+** TODO Reemplazar (tr)
+** TODO Final (tail)
+** TODO Inicio (cabeza)
+* Variables de Ambiente
+** Mostrar variables
+- mostrar variables de entorno :: =printenv=
+- mostrar variables del shell :: =set=
+
+** Comandos para variables
+- crear una variable :: =variable=valor=
+  
+- asignacion de valores :: =Variable=nuevovalor=
+
+- Exportación de variables del shell al ambiente :: =export Variable=
+
+- crear variable de ambiente con valor :: =export variable=valor=
+
+- Eliminación de variables (shell) :: =unset nueva=
+
+** Variables built-in
+| HOME    | Home directory del usuario |
+| LOGNAME | Nombre del usuario         |
+| USER    | Nombre del usuario         |
+| TZ      | uso horario                |
+  
+* Procesos
+** Diferencia de un proceso con un programa
+Un *Proceso* es una entidad dinámica que consiste de un programa en
+ejecución con sus valores actuales, su estado y los recursos
+utilizados para su ejecución. 
+
+Un *Programa* es una entidad inactiva y estática, que consta de un
+conjunto de instrucciones y datos pero no esta en ejecución
+
+** Tipos de procesos
+*** Del sistema
+Son procesos que actuan si que el usuario los solicite. Tambien se les
+conoce como deamons. Pueden ser de dos tipos:
+
+- Procesos Permanentes o de larga duracion :: se cran al arrancar elp
+  sistema y permanecen activos hasta que se termina la
+  conexion. sufuncion es realizar actividades del sistema. 
+  
+- Procesos trancitorios :: nace y mueren cuando el sistema efectua
+  tareas propias, independientes de los usuarios.  
+
+*** Proceos de usuario
+Son procesos creados cuando el usuario ejecuta comandos
+
+** Atributos de un proceso
+- Identificador unico (PID) :: Garantiza que el proceso sea unico
+  dentro del sistema.
+- Segmentos :: Código, Datos y Stack
+- Identificadores :: de usuario y grupo
+- Identificadeores de otros procesos :: relacionados a este proceso
+- tamaño del proceso
+- datos de su planificacion 
+- terminal original
+
+** TODO Prioridades de los procesos 
+Linux es un sistema multiproceso de tiempo compartido, lo que
+significa que puede ejecutar varios programas al mismo tiempo
+
+- Conmutacion rapida :: es el proceso por el cual el sistema operativo
+  cambia rapidamente entre programas para dar la apariencia de
+  ejecucion concurrente.
+
+** Estados de procesos
+- Activo en ejecucion :: EL proceso tiene asignado un tiempo
+  de CPU y las intrucciones se estan ejecutando
+
+- Activo ejecutable :: El procesos puede ser ejecutado, pero no tiene
+  tiempo de ejecucion
+
+- Suspendido :: Recibió una señal para detenerse. Cuntinua hasta que
+  reciba SIGCONT
+
+- Durmiendo :: Se encuentra en espera de un evento, como una entrada
+  de teclado, o que otros procesos terminen.
+
+- Osioco (idle) :: Fue creado pero aun no es ejecutable.
+
+- Zombie :: El proceso terminó pero su padre no ha sido notificado.
+
+  Activo en ejecucion
+  Activo ejecutable
+  Suspendido
+  Durmiendo
+  Osioco
+  Zombie

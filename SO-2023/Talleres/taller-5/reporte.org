@@ -1,0 +1,165 @@
+
+#+TITLE:  Taller 5. Variables de Ambiente
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   5 de Octubre 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./fuentes.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+#+macro: pagebreak @@latex:\pagebreak@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-color-cont.png}
+\tableofcontents\pagebreak
+\datasection{Individual}
+
+
+* Introducción
+Los Sistemas operativos Unix-Like permiten configurar variables de manera que
+se puede configurar como funciona la manera en la que se ejecutan los programas 
+a lo largo de esta practica aprenderemos como crear, modificar, mostrar y 
+eliminar variables de shell. 
+
+\pagebreak
+
+* Actividades
+** Muestre todas las variables que hay en su sesión de trabajo
+- {{{autocite(0001_P)}}} El comando =set= escribirá los nombres y valores de todas las variables de shell en la secuencia de ordenación de la configuración regional actual. 
+
+#+begin_src 
+set
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Salida del comando =set=
+[[file:img/1.png]]
+
+** Muestre solamente las variables de ambiente
+- {{{autocite(0002_P)}}} Imprime los valores de la(s) VARIABLE(s) de entorno especificada(s). Si no se especifica ninguna VARIABLE, imprime los pares de nombre y valor de todas ellas.
+
+#+begin_src 
+printenv
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Salidad del comando =printenv=
+[[file:img/2.png]]
+
+** Modifique el valor de una de las variables de ambiente
+- {{{autocite(Rainville_2020)}}} Para modificar el valor de una variable en linux utilizarmos =exoprt=, en el siguiente ejemplo modifico la variable =USER= del entorno. 
+
+#+begin_src 
+export USER=Test
+#+end_src
+
+#+begin_twoc
+[[file:img/3a.png]]
+#+end_twoc
+#+begin_twoc
+[[file:img/3b.png]]
+#+end_twoc
+
+** ¿Se puede modificar nuestro user name? Si/No ¿por qué?
+- {{{autocite(Pablinux_2019)}}} Si, es posible cambiar el user name pero debemos cambiar tambien el UID =usermod -l nuevo-nombre viejo-nombre= y =usermod -u UID username=
+\pagebreak
+
+** ¿Cual es la diferencia entre las líneas de comando $echo PATH y $echo $PATH?
+- =echo PATH= imprime el string 'PATH' en la terminal
+- =echo $PATH= imprimer el valor de la varible 'PATH'
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Salida de los comandos 
+[[file:img/4.png]]
+
+** Cree una variable de shell con su nombre y asignele su matricula como valor
+#+begin_src 
+mi_nombre="Luis Eduardo Galindo Amaya"
+matricula="1274895"
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Valor de =mi_nombre= y de =matricula=
+[[file:img/5.png]]
+
+\pagebreak
+
+** Cree una variable de ambiente con su nombre y asignele su matricula como valor
+#+begin_src 
+export MI_NOMBRE="Luis Eduardo Galindo Amaya"
+export MATRICULA="1274895"
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =printenv= con variables
+[[file:img/6.png]]
+
+** Modifique el prompt primario
+#+begin_src 
+PS1="PS1>"
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: El prompt primario es el que siempre aparece en la terminal
+[[file:img/7.png]]
+
+\pagebreak
+
+** Modifique el prompt secundario
+#+begin_src 
+PS2="PS2>"
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Cambiando el valor del prompt secundario
+[[file:img/8a.png]]
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: El prompt secundario aparece con comandos incompletos {{{autocite(0003_P)}}}
+[[file:img/8.png]]
+\pagebreak
+
+** Elimine la variable de ambiente que creó en el punto 7.
+#+begin_src 
+unset MATRICULA
+unset MI_NOMBRE
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Eliminado las variables
+[[file:img/9.png]]
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: las variables ya no aparecen
+[[file:img/9b.png]]
+
+* Conclusión
+A lo largo de esta practica aprendí como crear variables de entorno y como 
+modificar algunas de las características del sistema operativo, me pareció 
+muy interesante como en Unix es posible cambiar como el sistema ejecuta los
+programas en ejecución o como cada programa puede cambiar las cosas de un 
+proceso a otro. 
+
+{{{pagebreak}}}
+
+* Referencias
+\printbibliography[heading=none]

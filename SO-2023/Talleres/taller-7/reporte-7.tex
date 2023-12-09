@@ -1,0 +1,146 @@
+% Created 2023-11-09 jue 22:34
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{../modern}
+\bibliography{./fuentea.bib}
+\raggedbottom
+\setcounter{secnumdepth}{2}
+\author{Luis Eduardo Galindo Amaya}
+\date{jueves, 09 noviembre 2023}
+\title{Taller 7. DNS}
+\hypersetup{
+ pdfauthor={Luis Eduardo Galindo Amaya},
+ pdftitle={Taller 7. DNS},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.1 (Org mode 9.5.2)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+\section{Cuestionario}
+\label{sec:org4910d09}
+\begin{description}
+\item[{¿Qué es un nombre de dominio?}] Un nombre de dominio es una cadena
+de texto que se asigna a una dirección IP numérica, que se utiliza
+para acceder a un sitio web.
+
+\item[{¿Cuáles son las reglas para elegir un nombre de dominio?}] \textasciitilde{}
+
+\item Los únicos caracteres permitidos para un nombre de dominio son:
+\begin{itemize}
+\item Los pertenecientes al alfabeto inglés: de la a a la z.
+\item Los dígitos del 0 al 9 (No es aconsejable un nombre con sólo dígitos).
+\item El guión: - (No puede ser ni el primero ni el último caràcter del nombre).
+\item No se admiten: acentos, diéresis, la ñ, la ç, espacios en
+blanco, el punto, etc. No hay distinción entre minúsculas y mayúsculas.
+\end{itemize}
+
+\item Las longitudes màximas y mínimas de un nombre de dominio son:
+\begin{itemize}
+\item Para los gTLD .com, .org, .net, hay un máximo de 64 y un mínimo de 2.
+\item Para el TLD ISO-3166 .es: como máximo 63 y como mínimo 3.
+\item Para los restantes TLD ISO-3166 depende del registro.
+\end{itemize}
+
+\item[{¿Cómo se registra un nombre de dominio?}] \textasciitilde{}
+\begin{itemize}
+\item Los nombres de dominio pueden registrarse a través de diversas
+empresas conocidas como "registradores" que compiten entre sí.
+
+\item Puedes encontrar una lista de estas empresas en el Directorio de
+Registradores en este sitio.
+
+\item El registrador que elijas te solicitará proporcionar datos de
+contacto y técnicos para completar el registro.
+
+\item El registrador mantendrá registros de la información de contacto y
+enviará la información técnica a un directorio central llamado
+"registro".
+
+\item El registro facilita a otras computadoras en Internet la
+información necesaria para enviarte correos electrónicos o
+encontrar tu sitio web.
+
+\item Además, se te requerirá firmar un contrato de registro con el
+registrador que establecerá los términos bajo los cuales se acepta
+y mantendrá tu registro.
+\end{itemize}
+\end{description}
+
+
+\begin{description}
+\item[{¿Cuál es el costo de un dominio web?}] entre 10 y 15 dólares al
+año aproximadamente.
+
+\item[{¿Cómo funciona un DNS?}] Los servidores DNS convierten las
+solicitudes de nombres en direcciones IP, con lo que se controla a
+qué servidor se dirigirá un usuario final cuando escriba un nombre
+de dominio en su navegador web. Estas solicitudes se denominan
+consultas.
+
+\item[{¿Qué es un DNS resolver o solucionador de DNS?}] Un DNS resolver es
+un servicio que proporciona una dirección IP cuando se solicita un
+nombre de dominio. Se habla de resolver un dominio obteniendo su
+dirección IP; “resolver” en inglés se define en el documento de
+especificación de Internet RFC 1034.
+
+\item[{¿Qué es un DNS root name server o servidor de nombres de raíz de DNS?}] Un servidor raíz es un servidor de nombres para la zona raíz del
+Sistema de nombres de dominio de Internet.
+
+\item[{¿Qué es un TLD o top-level domain?}] Un dominio del nivel superior
+o TLD es la más alta categoría de los FQDN que es traducida a
+direcciones IP por los DNS oficiales de Internet. Los nombres
+servidos por los DNS oficiales son administrados por la Internet
+Corporation for Assigned Names and Numbers.
+
+\item[{¿Qué es la ICANN?}] ICANN es una organización que opera a nivel
+multinacional/internacional y es la responsable de asignar las
+direcciones del protocolo IP, de los identificadores de protocolo,
+de las funciones de gestión del sistema de dominio y de la
+administración del sistema de servidores raíz.
+
+\item[{¿Cuáles son los ataques más comunes a un DNS?}] \textasciitilde{}
+\begin{itemize}
+\item Suplantación de DNS/envenenamiento de caché.
+\item Túnel de DNS.
+\item Secuestro de DNS.
+\item Ataque NXDOMAIN.
+\item Ataque de dominio fantasma.
+\item Ataque de subdominio aleatorio.
+\item Ataque de bloqueo de dominio.
+\item Ataque CPE basado en red de robots (botnet).
+\end{itemize}
+\end{description}
+
+\section{Conclusión}
+\label{sec:org939a19d}
+Durante esta practica aprendí que es un nombre de dominio y para que
+se utiliza, que es la ICANN y en que se relaciona con el internet
+ademas del costo de estos. Los dominios nos permiten nombrar de manera
+mas facil nuestras direcciones 
+
+\section{Fuentes}
+\label{sec:orgd53522f}
+\begin{itemize}
+\item \url{https://www.icann.org/resources/pages/faqs-84-2012-02-25-en\#2}
+\item \url{https://www.hostinger.mx/tutoriales/cuanto-cuesta-un-dominio-web}
+\item \url{https://aws.amazon.com/es/route53/what-is-dns/\#:\~:text=Los\%20servidores\%20DNS\%20convierten\%20las,Estas\%20solicitudes\%20se\%20denominan\%20consultas}
+\item \url{https://www.ionos.mx/digitalguide/servidores/know-how/dns-resolver/\#:\~:text=Los\%20DNS\%20resolvers\%20son\%20un,y\%20los\%20servidores\%20de\%20nombres}.
+\item \url{https://es.wikipedia.org/wiki/Corporaci\%C3\%B3n\_de\_Internet\_para\_la\_Asignaci\%C3\%B3n\_de\_Nombres\_y\_N\%C3\%BAmeros}
+\item \url{https://www.cloudflare.com/es-es/learning/dns/dns-security/\#:\~:text=Estas\%20limitaciones\%2C\%20combinadas\%20con\%20los,interceptaci\%C3\%B3n\%20de\%20informaci\%C3\%B3n\%20personal\%20privada}.
+\end{itemize}
+\end{document}

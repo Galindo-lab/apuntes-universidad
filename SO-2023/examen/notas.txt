@@ -1,0 +1,281 @@
+                _______________________________________
+
+                                 NOTAS
+                 Administracion de sistemas operativos
+
+                       Luis Eduardo Galindo Amaya
+                _______________________________________
+
+
+                       jueves, 02 noviembre 2023
+
+
+Indice
+______
+
+1. Redireccionamientos
+.. 1. Redireccionar salida sin concadenar (>)
+.. 2. Redireccionar salida concadenando (>>)
+.. 3. Redireccionar entrada (<)
+.. 4. Pasar salida como entrada Piping (|)
+.. 5. Pasar salida a archivo y terminal (tee)
+.. 6. Repaso de la practica
+2. TODO Repaso de commando de la unidad
+.. 1. Ordenar (sort)
+.. 2. Buscar (grep)
+.. 3. TODO Reemplazar (tr)
+.. 4. TODO Final (tail)
+.. 5. TODO Inicio (cabeza)
+3. TODO Variables de Ambiente
+.. 1. Comandos para variables
+4. Procesos
+.. 1. Diferencia de un proceso con un programa
+.. 2. Tipos de procesos
+.. 3. Atributos de un proceso
+.. 4. TODO Prioridades de los procesos
+.. 5. Estados de procesos
+
+
+
+
+
+1 Redireccionamientos
+=====================
+
+1.1 Redireccionar salida sin concadenar (>)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Redirecciona la salida a un archivo o dispositivo `>', creando el
+  archivo si no existe y sobreescribiéndolo si ya existe.
+
+
+1.2 Redireccionar salida concadenando (>>)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Redirecciona la salida estándar a un archivo o dispositivo `>>',
+  añadiendo la salida al final del archivo.
+
+
+1.3 Redireccionar entrada (<)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  El simbolo `<' (entrada) Redirecciona stdin desde un archivo. El
+  contenido de un archivo es la entrada o input del comando.
+
+
+1.4 Pasar salida como entrada Piping (|)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  El símbolo `|' (pipe) es un tipo de redireccionamiento ya que la
+  salida (stdout) de un comando es la entrada (stdin) de otro. Ejemplo:
+
+  ,----
+  | grep -v "ORDINARIO" lista2023 | cut -d ':' -f3 
+  `----
+
+  grep -v ’ORDINARIO’ lista2023
+        Se busca todos los elementos que *NO* tengan ’ORDINARIO’
+
+  cut -d’:’ -f3
+        Se obtiene la tercera columna
+
+
+1.5 Pasar salida a archivo y terminal (tee)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  El comando tee redirecciona la salida (stdout) a ambos, un archivo y a
+  la terminal. Se puede usar para supervisar la salida del comando
+
+
+1.6 Repaso de la practica
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  cat -n archivo.txt
+        Manda el contenido de un archivo a la terminal con las lineas
+        numeradas (-n)
+
+  grep "substring" archivo.txt
+        Busca el 'substring' en un flujo de entrada, en este caso el
+        archivo.txt
+
+  grep "RCA Records" billboard > RCA
+        Busca el substring 'RCA Records' en el archivo billboard y
+        redirige la salida al archivo 'RCA'.
+
+  grep "Warner Records" billboard | tee Warner
+        Busca el substring 'Warner Records' en el archivo billboard,
+        guarda la salida en un archivo llamado Warner y al mismo tiempo
+        lo imprime en la terminal.
+
+
+2 TODO Repaso de commando de la unidad
+======================================
+
+2.1 Ordenar (sort)
+~~~~~~~~~~~~~~~~~~
+
+  sort -f <archivo>
+        Ordena considerando de igual valor mayúsculas y minúsculas.
+
+  sort -M <archivo>
+        Compara considerando los tres primeros caracteres de la línea
+        como el nombre de un mes en inglés.
+
+  sort -n <archivo>
+        Ordena en forma numérica ascendente.
+
+  sort +1 <archivo>
+        Ordena por la segunda columna. (+2 por la tercera, etc),
+        considera como delimitador el espacio y el tabulador.
+
+  sort –r <archivo>
+        Invierte el orden.
+
+
+2.2 Buscar (grep)
+~~~~~~~~~~~~~~~~~
+
+  grep <cadena> <archivo>
+        Muestra la línea(s) donde encuentra la cadena.
+
+  grep -n <cadena> <archivo>
+        Muestra la línea y el número de línea en donde encuentra la
+        cadena.
+
+  grep -c <cadena> <archivo>
+        Muestra cuántas líneas contienen el patrón especificado.
+
+  grep -v <cadena> <archivo>
+        Muestra las líneas que no cumplen con el patrón de búsqueda.
+
+  grep -w <cadena> <archivo>
+        Muestra las líneas que contienen la cadena como palabra
+        completa.
+
+  grep –w <'frase'> <archivo>
+        Muestra la línea donde se encuentra la frase completa.
+
+  grep -i <cadena><archivo>
+        Evita la distinción entre mayúsculas y minúsculas.
+
+
+2.3 TODO Reemplazar (tr)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+2.4 TODO Final (tail)
+~~~~~~~~~~~~~~~~~~~~~
+
+
+2.5 TODO Inicio (cabeza)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+3 TODO Variables de Ambiente
+============================
+
+3.1 Comandos para variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  crear una variable
+        `variable=valor'
+
+  asignacion de valores
+        `Variable=nuevovalor'
+
+  Exportación de variables del shell al ambiente
+        `export Variable'
+
+  crear variable de ambiente con valor
+        `export variable=valor'
+
+  Eliminación de variables (shell)
+        `unset nueva'
+
+
+4 Procesos
+==========
+
+4.1 Diferencia de un proceso con un programa
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Un *Proceso* es una entidad dinámica que consiste de un programa en
+  ejecución con sus valores actuales, su estado y los recursos
+  utilizados para su ejecución.
+
+  Un *Programa* es una entidad inactiva y estática, que consta de un
+  conjunto de instrucciones y datos pero no esta en ejecución
+
+
+4.2 Tipos de procesos
+~~~~~~~~~~~~~~~~~~~~~
+
+Del sistema
+-----------
+
+  Son procesos que actuan si que el usuario los solicite. Tambien se les
+  conoce como deamons. Pueden ser de dos tipos:
+
+  Procesos Permanentes o de larga duracion
+        se cran al arrancar el sistema y permanecen activos hasta que se
+        termina la conexion. sufuncion es realizar actividades del
+        sistema.
+
+  2. Procesos trancitorios
+        nace y mueren cuando el sistema efectua tareas propias,
+        independientes de los usuarios.
+
+
+Proceos de usuario
+------------------
+
+  Son procesos creados cuando el usuario ejecuta comandos
+
+
+4.3 Atributos de un proceso
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Identificador unico (PID)
+        Garantiza que el proceso sea unico dentro del sistema.
+  Segmentos
+        Código, Datos y Stack
+  Identificadores
+        de usuario y grupo
+  Identificadeores de otros procesos
+        relacionados a este proceso
+
+        tamaño del proceso
+
+        datos de su planificacion
+
+        terminal original
+
+
+4.4 TODO Prioridades de los procesos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+4.5 Estados de procesos
+~~~~~~~~~~~~~~~~~~~~~~~
+
+  Activo en ejecucion
+        EL proceso tiene asignado un tiempo de CPU y las intrucciones se
+        estan ejecutando
+
+  Activo ejecutable
+        El procesos puede ser ejecutado, pero no tiene tiempo de
+        ejecucion
+
+  Suspendido
+        Recibió una señal para detenerse. Cuntinua hasta que reciba
+        SIGCONT
+
+  Durmiendo
+        Se encuentra en espera de un evento, como una entrada de
+        teclado, o que otros procesos terminen.
+
+  Osioco (idle)
+        Fue creado pero aun no es ejecutable.
+
+  Zombie
+        El proceso terminó pero su padre no ha sido notificado.

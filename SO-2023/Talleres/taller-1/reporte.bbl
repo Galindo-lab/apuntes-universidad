@@ -1,0 +1,87 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{TecAdmin_2023}{misc}{}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{TecAdmin}
+      \field{month}{3}
+      \field{title}{How to Create a Directory If It Does Not Exist in Linux}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://tecadmin.net/create-directory-if-not-exist-in-linux/#:~:text=Using%20the%20’mkdir’%20Command%20with,necessary%20parent%20directories%20as%20well.
+      \endverb
+      \verb{url}
+      \verb https://tecadmin.net/create-directory-if-not-exist-in-linux/#:~:text=Using%20the%20%E2%80%99mkdir%E2%80%99%20Command%20with,necessary%20parent%20directories%20as%20well.
+      \endverb
+    \endentry
+    \entry{AskUbuntu_2017}{misc}{}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ask Ubuntu}
+      \field{month}{9}
+      \field{title}{Listing files in directory in one column}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://askubuntu.com/questions/954924/listing-files-in-directory-in-one-column
+      \endverb
+      \verb{url}
+      \verb https://askubuntu.com/questions/954924/listing-files-in-directory-in-one-column
+      \endverb
+    \endentry
+    \entry{OpenBSD_uname}{misc}{}
+      \field{sortinit}{u}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{uname(1) - OpenBSD manual pages}
+      \field{title}{uname(1) - OpenBSD manual pages}
+      \verb{urlraw}
+      \verb https://man.openbsd.org/uname
+      \endverb
+      \verb{url}
+      \verb https://man.openbsd.org/uname
+      \endverb
+    \endentry
+    \entry{linux_whoami}{misc}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Whoami(1) - linux manual page}
+      \field{title}{Whoami(1) - linux manual page}
+      \verb{urlraw}
+      \verb https://man7.org/linux/man-pages/man1/whoami.1.html
+      \endverb
+      \verb{url}
+      \verb https://man7.org/linux/man-pages/man1/whoami.1.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

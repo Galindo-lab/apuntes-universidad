@@ -1,0 +1,62 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{A2022}{misc}{}
+      \list{publisher}{1}{%
+        {Ubunlog}%
+      }
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ubunlog}
+      \field{month}{2}
+      \field{title}{/etc/passwd, ¿Qué es este archivo y para que sirve?}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://ubunlog.com/etc-passwd/#:~:text=En%20el%20archivo%20%2Fetc%2Fpasswd,sesi%C3%B3n%20correspondiente%20de%20forma%20correcta.
+      \endverb
+      \verb{url}
+      \verb https://ubunlog.com/etc-passwd/#:~:text=En%20el%20archivo%20%2Fetc%2Fpasswd,sesi%C3%B3n%20correspondiente%20de%20forma%20correcta.
+      \endverb
+    \endentry
+    \entry{StackExchange}{misc}{}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Unix &amp; Linux Stack Exchange}
+      \field{month}{5}
+      \field{title}{How do I use cut to separate by multiple whitespace?}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://unix.stackexchange.com/a/340069
+      \endverb
+      \verb{url}
+      \verb https://unix.stackexchange.com/a/340069
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

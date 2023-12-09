@@ -1,0 +1,352 @@
+
+#+TITLE:  Taller 2 Administración de archivos
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   17 de Septiembre 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./fuentes.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-color-cont.png}
+\tableofcontents\pagebreak
+\datasection{Individual}
+
+
+* Introducción
+En los sistemas operativos unix es esencial conocer como administrar archivos 
+ya que esto nos permitirá aprovechar al máximo el sistema operativo, algunas 
+de las acciones mas comunes son: copiar archivos, crear archivos, moverlos a 
+los directorios y listar su contenido, a lo largo de este taller utilizaremos 
+algunos commandos que nos proporciona el sistema operativo para lograr estos 
+objetivos.
+
+\pagebreak
+
+* Actividades
+** Copie el archivo primero que está dentro de maestro/poesía a su home directory
+#+BEGIN_SRC sh
+  cd ..
+  cp alma/filtros/amorosos galindo/
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Archivo copiado en el directorio home
+[[file:img/a1.png]]
+
+** Copie el archivo segundo (está en el mismo directorio) a su home directory
+#+BEGIN_SRC sh
+  cd .. 
+  cp alma/filtros/segundo galindo/
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: copiar segundo a mi directorio 
+[[file:img/a2.png]]
+
+\pagebreak
+
+** Copie el archivo intermedio de maestro/poesia a su home directory
+#+BEGIN_SRC sh
+  cp ../alma/filtros/intermedio ./
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: copiar intermedio a mi directorio
+[[file:img/a3.png]]
+
+** Verifique el contenido de los tres archivos
+#+BEGIN_SRC sh
+  cat amorosos
+  cat segundo
+  cat intermedio
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: salida de =cat amorosos= 
+[[file:img/amorosos.png]]
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: salida de =cat segundo=
+[[file:img/segundo.png]]
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: salida de =cat intermedio=
+[[file:img/intermedio.png]]
+
+\cite{linux_cat}
+
+\pagebreak
+
+** Borre los tres archivos copiados en los pasos 2, 3 y 4
+#+BEGIN_SRC sh
+  rm ~/primero ~/segundo ~/intermedio
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Archivo eliminados
+[[file:img/a5.png]]
+
+** Copie los tres archivos (primero, segundo e intermedio) utilizando una sola instrucción
+#+BEGIN_SRC sh
+  cp ../alma/filtros/primero\
+     ../alma/filtros/segundo\
+     ../alma/filtros/intermedio\
+     ./poesia/
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Listar los archivos en poesía
+[[file:img/a6.png]]
+
+** Muestre en pantalla el contenido de segundo e intermedio usando una sola línea
+#+BEGIN_SRC sh
+  cat poesia/segundo poesia/intermedio
+#+END_SRC
+
+#+begin_twoc
+[[file:img/1.png]]
+#+end_twoc
+#+begin_twoc
+[[file:img/2.png]]
+#+end_twoc
+
+\cite{linux_cat}
+
+** Muestre en pantalla el contenido de Enpaz.txt, numerando cada línea
+#+BEGIN_SRC sh
+  cat -n ../alma/filtros/Enpaz.txt
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Salida de =cat -n ../alma/filtros/Enpaz.txt=
+[[file:img/a8.png]]
+
+\cite{linux_cat}
+
+\pagebreak
+
+** Copie el archivo SuavePatria.txt de maestro/poesia a su directorio de inicio y renómbralo como 'patria'
+#+BEGIN_SRC sh
+  cp ../alma/filtros/suavePatria.txt ./patria
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Archivo copiado y renombrado 
+[[file:img/a9.png]]
+
+** Muestre en pantalla el contenido del archivo amorosos.txt en el monitor
+#+BEGIN_SRC sh
+  cat maestro/poesia/amorosos.txt
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Contenido de amorosos.txt
+[[file:img/a10.png]]
+
+\cite{linux_cat}
+
+** Vuelva a mostrar el archivo amorosos.txt, pero por páginas
+#+BEGIN_SRC sh
+  more amorosos
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Presionar espacio en el teclado pasa la pagina
+[[file:img/a11.png]]
+
+** Muestre las últimas diez líneas de este archivo
+#+BEGIN_SRC sh
+  tail -n 10 amorosos
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Ultimas 10 lineas numeradas
+[[file:img/a12.png]]
+
+\pagebreak
+
+** El archivo SuavePatria.txt ahora se llamara 'patria'
+#+BEGIN_SRC sh
+  mv ~/SuavePatria.txt ~/patria
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: archivo renombrado
+[[file:img/a13.png]]
+
+** Muestre las últimas ocho líneas del archivo amorosos.txt
+#+BEGIN_SRC sh
+  tail -n 8 amorosos 
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: 
+[[file:img/a14.png]]
+
+\pagebreak
+
+** ¿Cuántas palabras en total contiene el archivo amorosos.txt?
+- el archivo contiene 367 palabras 
+
+#+BEGIN_SRC sh
+  wc -w amorosos        
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: 
+[[file:img/a15.png]]
+
+\cite{linux_wc}
+
+** ¿Cuántos caracteres en total contiene el archivo Enpaz.txt?
+
+- el archivo tiene 696 caracteres
+
+#+BEGIN_SRC sh
+  wc -c ../alma/filtros/Enpaz.txt
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: 
+[[file:img/a16.png]]
+
+\cite{linux_wc}
+
+** Mostrar los permisos de todos los directorios que están en el directorio home
+#+BEGIN_SRC sh
+  cd ..
+  ls -l
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: 
+[[file:img/a17.png]]
+
+\cite{linux_ls}
+
+** Otorgue permiso a su grupo para leer y escribir en su directorio
+#+BEGIN_SRC sh
+  cd ..
+  chmod g+rw galindo
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: 
+[[file:img/a18.png]]
+
+\cite{linux_chmod}
+
+** Seleccione a uno de sus compañeros, escriba un archivo en su directorio llamado 'películas' (use el comando cat). Escriba un párrafo sobre la última película que haya visto en el cine, puede ser una sinopsis o su opinión personal
+- Elegí a mi compañero Héctor, por lo que para entrar a su directorio tuve que usar el siguiente comando:
+
+#+begin_src sh
+cd ../hector/
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =pwd= para mostrar la ubicacion del directorio
+[[file:img/pwd.png]]
+
+Por ultimo utilice el editor nano para escribir una opinión sobre la ultima 
+película que vi:
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: =nano= con la reseña abierta
+[[file:img/nano.png]]
+
+\pagebreak
+
+** Otorgar permiso de lectura al grupo para este archivo
+#+BEGIN_SRC sh
+  chmod g+r galindoresena
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm 
+#+CAPTION: Permisos ajustados
+[[file:img/asd.png]]
+
+\pagebreak
+
+** Copia la historia de tres de tus compañeros a un directorio llamado 'sinopsis'
+Primero se crea el directorio con =mkdir sinopsis=
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: directorio creado
+[[file:img/bsd.png]]
+ 
+despues de copian los archivos en el directorio 
+
+#+begin_src shell
+  cp ../hector/galindoresena\
+  ArceResenia\
+  peliculas\
+  sinopsis
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Archivos copiados
+[[file:img/csd.png]]
+
+\pagebreak
+
+** Restringir los permisos de lectura y escritura de su directorio al grupo
+#+BEGIN_SRC sh
+  cd ..
+  chmod go-rw galindo
+#+END_SRC
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Lectura y escritura esta activa
+[[file:img/b1.png]]
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Lectura y escritura desactivada
+[[file:img/b2.png]]
+
+
+* Conclusión
+A lo largo de esta practica aprendí como gestionar archivos y manipular los 
+accesos que pueden tener los diferentes usuarios, pienso que conocer los 
+detalles del sistema nos permitirán ser mas eficaces al momento de administrar
+e interactuar con el sistema operativo y como usar las herramientas que este 
+nos proporciona.
+
+* Referencias
+\printbibliography[heading=none]
