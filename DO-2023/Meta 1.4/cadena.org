@@ -1,0 +1,44 @@
+
+#+TITLE:  Meta 1.4 - Cadena de Valor
+#+AUTHOR: Luis Eduardo Galidno Amaya 
+#+DATE:   31 de Agosto del 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \raggedbottom
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+* Cadena de Valor
+Durante la presentación aprendí a identificar que es la cadena de valor y como
+esto permite a las empresas y organizaciones obtener una ventaja competitiva 
+sobre sus competidores directos, como ingenieros en software esto es muy 
+importante ya que el mercado laboral del software es extremadamente competitivo
+entender que cosas pueden brindarnos una ventaja es indispensable para la 
+viabilidad a largo plazo de cualquier negocio. 
+
+* Creación de una cadena de valor 
+No hay una formula para crear una cadena de valor, es nuestra responsabilidad
+encontrar como esta formado nuestro negocio y como podemos agregar valor
+a nuestros producto, identificar las sub-actividades de la actividad primaria
+nos permitirá identificar los vínculos entre ellas y afinar el proceso
+para que los clientes inviertan mas de su dinero dentro de la empresa, para
+el cliente no sera necesario buscar a otro grupo si el primer grupo puede 
+cumplir con todos los servicios que el cliente ocupa.
+
+* Pasos para una cadena de valor 
++ Identificar sub-actividades para cada actividad primaria
++ Identificar sub-actividades para cada actividad de apoyo
++ Analizar el valor y los costos de las actividades identificadas
++ Identificar vínculos
++ Buscar oportunidades para aumentar el valor
+
+* Conclusión
+A lo largo de esta meta he aprendido a identificar que es una cadena de valor,
+como identificarla y como integrarlas en mis proyectos para poder hacer 
+una propuesta de valor mas interesante.

@@ -1,0 +1,109 @@
+
+#+TITLE:  Meta 5
+#+AUTHOR: Galindo
+#+DATE:   miércoles, 15 noviembre 2023
+
+# -----
+#+SUBTITLE: Funciones, Procedimientos Almacenados y Triggers
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+# -----
+
+#+latex_header: \usepackage{../modern}
+#+latex_header: \raggedbottom
+
+# Información extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+* COMMENT Info
+** Acreditación 
+La acreditación demuestra que una persona ha completado una serie de
+cursos y ha satisfecho las normas establecidas por una organización
+externa. 
+
+Se obtiene al cumplir requisitos específicos y al satisfacer las
+normas de la organización que otorga la acreditación. 
+
+en el ámbito empresarial, la acreditación puede ser proporcionada por
+organizaciones como Google para demostrar habilidades analíticas, como
+en el caso de la certificación gratuita de Google Analytics. 
+
+** Certificación
+Una certificación indica que una persona posee un conjunto específico
+de habilidades e información en un área particular. 
+
+Se obtiene al pasar un examen o pruebas establecidas por una
+organización externa. 
+
+Certificaciones pueden ser otorgadas en campos como
+informática/ingeniería (administradores de redes, programadores),
+salud (técnicos de laboratorio clínico), gestión (gerentes de recursos
+humanos), y comercio (mecánicos de automóviles). 
+
+** Licenciamiento
+Las licencias son otorgadas por entidades gubernamentales y otorgan la
+autoridad legal para trabajar en una ocupación específica.
+
+Para obtener una licencia, se deben cumplir criterios predeterminados,
+como la obtención de un título y la superación de un examen
+administrado por el estado.
+
+Trabajos en servicios sociales y comunitarios (guardias de seguridad,
+trabajadores sociales), educación (profesores universitarios), salud
+(enfermeras, fisioterapeutas), legal (abogados), y finanzas
+(contables, asesores financieros). 
+
+
+* Diferencias entre
+|------------------+--------------------------------------------------------------|
+| Característica   | Acreditación                                                 |
+|------------------+--------------------------------------------------------------|
+| Definición       | Validación de estándares por una entidad externa.            |
+| Proceso          | Cumplir con requisitos y normas establecidos.                |
+| Objetivo         | Validar cumplimiento de estándares de calidad.               |
+| Aplicación Común | Acreditación de instituciones educativas o empresas.         |
+| Emisor           | Entidades externas, a menudo organizaciones de acreditación. |
+|------------------+--------------------------------------------------------------|
+| Característica   | Certificación                                                |
+|------------------+--------------------------------------------------------------|
+| Definición       | Validación de habilidades y conocimientos.                   |
+| Proceso          | Superar un examen o pruebas establecidas.                    |
+| Objetivo         | Validar habilidades y competencias específicas.              |
+| Aplicación Común | Certificación en tecnologías, habilidades específicas.       |
+| Emisor           | Organizaciones especializadas, empresas.                     |
+|------------------+--------------------------------------------------------------|
+| Característica   | Licencia                                                     |
+|------------------+--------------------------------------------------------------|
+| Definición       | Autorización legal para ejercer una ocupación.               |
+| Proceso          | Cumplir con criterios predeterminados.                       |
+| Objetivo         | Garantizar autorización legal para ejercer.                  |
+| Aplicación Común | Licencia profesional en medicina, derecho, etc.              |
+| Emisor           | Autoridades gubernamentales locales o estatales.             |
+|------------------+--------------------------------------------------------------|
+
+* Ensayo 
+En el área de software, las acreditaciones, certificaciones y
+licencias desempeñan un papel indispensable para las habilidades y
+competencias de los profesionales, garantizar la calidad de los
+productos y servicios, y cumplir con estándares éticos y legales.
+
+Las acerditaciones en el mundo del software suelen ser bastante
+comunes una se las acreditaciones mas comunes en el area de software
+es 'AWS Certified Solutions Architect' la cual proporciona Amazon para
+su plataforma en la nube.
+
+* Noticia
+[[https://www.eleconomista.com.mx/empresas/Amazon-capacitara-a-130000-mexicanos-en-computacion-en-la-nube-20231106-0052.html][Amazon ha lanzado un programa en colaboración con el Gobierno federal
+de México]], llamado "Impulsando el Talento Mexicano a la Nube", con el 
+objetivo de capacitar a 130,000 personas en habilidades relacionadas
+con los servicios de computación en la nube para satisfacer la
+creciente demanda de talento en este campo. La iniciativa tiene
+previsto llevarse a cabo entre finales de 2023 y durante 2024. 
+
+* Conclusiones
+Durante esta practica aprendi a diferenciar entre acreditación,
+certificaciones y licencias. Conocer las diferencias entre estas
+permite identificar los tipos de profecionales que nececitamos en
+nuestros equipos.

@@ -1,0 +1,37 @@
+
+#+TITLE:  Meta 2.1 - Evaluación del desempeño, trabajo en equipo, capacitación
+#+AUTHOR: Luis Eduardo Galidno Amaya 
+#+DATE:   13 de Septiembre 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \raggedbottom
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+* Ensayo 
+El trabajo es siempre un trabajo en equipo y como tal debemos contemplar
+que el resultado obtenido siempre sera en función de como integremos 
+miembros, favorecer las buenas relaciones y eliminar las fricciones entre los
+miembros en el equipo es fundamental para maximizar las probabilidades de 
+cumplir con el objetivo con éxito.
+
+Utilizando las teorías de motivación que  vimos en clase la Teoría de Maslow de
+las Necesidades y Teoría de la Motivación-Higiene podemos entender que para que
+el equipos se mantenga con el objetivo claro es necesario abastecer de todo lo
+posible a los miembros del equipo un a remuneración justa es siempre necesaria
+para mantener unido al equipo
+
+* Propuesta
+No pude encontrar información sombre como calimax incentiva a los empleados
+a trabajar, pero mi propuesta es fomentar una cultura de responsabilidad dentro 
+de la empresa, los empleados que cumplan con su trabajo en el menor tiempo 
+podrán recibir las horas extras que trabajen en efectivo o en forma de mercancía
+entonces los miembros del equipo podrán cumplir con sus necesidades basicas 
+ademas de su paga correspondiente esto fomenta la leltad con la empresa ya 
+que el interes del trabador  

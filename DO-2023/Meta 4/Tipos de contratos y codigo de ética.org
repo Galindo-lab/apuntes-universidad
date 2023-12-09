@@ -1,0 +1,87 @@
+
+
+
+#+TITLE:  Meta 4
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   miércoles, 01 noviembre 2023
+
+# -----
+#+SUBTITLE: Tipos de contratos y codigo de ética
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+# -----
+
+#+latex_header: \usepackage{../modern}
+#+latex_header: \raggedbottom
+
+# Información extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+* Ensayo 
+En ingeniería en software tener un trato claro sobre las cosas que se
+van a hacer permite mantener un control durante el desarrollo, si los
+integrantes del equipo conocen hasta donde llegan sus funciones esto
+ayuda a evitar que los miembros del equipo se no se sientan
+remunerados de manera justa.
+
+- Partes con capacidad jurídica suficiente para suscribir el acuerdo
+  de licencia de software. 
+- Definiciones de términos contractuales donde puede tener especial
+  incidencia, entre otras, la definición de cliente. 
+- Objeto del contrato de software, debiendo prestar especial atención
+  a si el uso del software es interno o se autoriza para dar servicios
+  a terceros. 
+- Duración.
+- Tratamiento de propiedad intelectual (marcas, know how, etc.).
+- Cláusula de confidencialidad.
+- Cláusula de auditoría de licenciamiento de software.
+- Entrega e instalación.
+- Garantía.
+- Gastos e Impuestos.
+
+Así mismo, el formato de contrato de software puede contener anexos en
+los que pueden detallarse los productos adquiridos, el precio, el modo
+de pago, el contrato de soporte y mantenimiento del software, las
+políticas de licenciamiento de software, etc. \\
+
+En base al tipo de proyecto se debe elegir el contrato que mas se
+ajuste, por ejemplo sí el proyecto tiene un final claro no es
+necesario tener un contrato *indefinido* esto también beneficia al
+cliente ya que no tendrá que comprometerse por mas tiempo del que sea
+necesario. 
+
+
+
+* COMMENT Tipos de contratos
+** Extinción del contrato de trabajo
+- Despido disciplinario Extinción causada por incumplimiento grave y
+  culpable del trabajador, como la falta de puntualidad o faltas de
+  respeto. Decisión unilateral del empleador. 
+
+- Despido objetivo Extinción unilateral del contrato por motivos
+  tasados en la ley laboral relacionados con el funcionamiento de la
+  empresa o carencias profesionales del trabajador. 
+
+** Contrato por capacitación
+- Contrato para adquirir habilidades y conocimientos antes de
+  considerar un puesto permanente en la empresa. 
+
+- Debe incluir información sobre periodo de contratación, descripción
+  del puesto, horarios, salario y condiciones específicas. 
+
+** Contrato Colectivo de Trabajo
+- Convenio entre sindicatos de trabajadores y patrones para establecer
+  condiciones laborales en una o varias empresas. 
+
+- Debe contener información como nombres, duración, jornada de
+  trabajo, salarios, capacitación y disposiciones sobre comisiones
+  laborales. 
+
+** Causas de terminación del contrato colectivo de trabajo
+- Terminación por mutuo consentimiento con aprobación de la mayoría de
+  los trabajadores. 
+
+- Terminación de la obra o cierre de la empresa o establecimiento, si
+  el contrato se aplica exclusivamente en ese establecimiento. 

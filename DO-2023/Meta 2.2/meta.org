@@ -1,0 +1,65 @@
+
+#+TITLE:  Meta 2.1 - Evaluación del desempeño, trabajo en equipo, capacitación
+#+AUTHOR: Luis Eduardo Galidno Amaya 
+#+DATE:   21 de Septiembre 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \raggedbottom
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+* Ensayo 
+Diferentes tipos de trabajos requieren diferentes tipos de organizaciones entre sus miembros, en el texto conocí algunas de las principales formas de organizar como se integra un equipo: autocrático, burocrático, coaching, democrático, laissez-faire,  pacesetter y visionario, y como diferentes maneras de organizarse pueden fomentar que el trabajo se distribuya de manera mas eficiente entre los integrantes permitiendo así incrementar su eficiencia.\\
+
+Investigando un poco mas sobre los estilos de organización pude notar como mientras la metas son mas definidas los estilos que permiten una mayor eficiencia son los mas autoritarios mientras que los estilos mas horizontales eran mas efectivos. \\
+
+La elección de el estilo de liderazgo dependerá de la situación y las necesidades, un líder efectivo sabrá cuando aplicar diferentes estilos de liderazgo según la situación, la flexibilidad es un clave para el exito. \\
+
+Como ingenieros en software estamos en un entorno en constante cambio donde en objetivo puede variar, una organización que permita flexibilidad con los miembros del equipo y el fomento a nuevas ideas permitirá ofrecer un software de mayor valor para el stackeholder.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Estilos de Liderazgo en el Entorno Laboral: Exploración y Comparación
+
+# A lo largo de una carrera profesional, es probable que en algún momento se asuma un rol de liderazgo, ya sea liderando reuniones, proyectos, equipos o departamentos enteros. En ese momento, la elección de un estilo de liderazgo puede ser crucial para el éxito. Los estilos de liderazgo se desarrollan a menudo en función de la experiencia, la personalidad y las necesidades específicas de una organización. A continuación, se presentan ocho estilos de liderazgo comunes en el entorno laboral, cada uno con sus beneficios y desafíos.
+
+# 1. Estilo de Liderazgo Autocrático: Este estilo se caracteriza por la toma de decisiones centralizada, donde el líder espera que los empleados sigan sus órdenes de manera estricta. Los líderes autocráticos valoran la eficiencia y la estructura, lo que puede aumentar la productividad pero generar estrés en el equipo debido a la falta de flexibilidad y participación en la toma de decisiones.
+
+# 2. Estilo de Liderazgo Burocrático: En este enfoque, se siguen reglas y procedimientos rigurosos, ideal para entornos altamente regulados. Sin embargo, puede limitar la creatividad y adaptabilidad, lo que no lo hace adecuado para ambientes que requieren flexibilidad.
+
+# 3. Estilo de Liderazgo de Coaching: Los líderes de coaching se enfocan en el desarrollo individual de los miembros del equipo, estableciendo metas inteligentes y proporcionando retroalimentación continua. Este estilo fomenta la mejora personal y la cultura positiva, pero puede ser intensivo en tiempo.
+
+# 4. Estilo de Liderazgo Democrático: Este enfoque combina la toma de decisiones participativa con la consideración de las opiniones del equipo. Puede mejorar la moral y el compromiso, pero puede ser lento y generar presión social en los que no les gusta compartir sus ideas en grupos.
+
+# 5. Estilo de Liderazgo Laissez-Faire: Aquí, el líder delega muchas responsabilidades y supervisa mínimamente. Este enfoque fomenta la autonomía y la creatividad, pero puede ser ineficiente para empleados nuevos o aquellos que necesitan más dirección.
+
+# 6. Estilo de Liderazgo Pacesetter: Los líderes pacesetter establecen altos estándares de rendimiento y esperan que el equipo los alcance. Puede ser efectivo para lograr resultados rápidos, pero también puede generar estrés y malentendidos.
+
+# 7. Estilo de Liderazgo de Servidor: Los líderes de servidor priorizan el bienestar de su equipo y fomentan la colaboración. Esto puede mejorar la lealtad y la productividad, pero a veces puede ser agotador para el líder y puede dificultar la toma de decisiones firmes.
+
+# 8. Estilo de Liderazgo Visionario: Los líderes visionarios inspiran a sus equipos con ideas innovadoras y objetivos ambiciosos. Puede impulsar el crecimiento y el cambio, pero a veces puede perder detalles importantes y oportunidades.
+
+# En resumen, la elección del estilo de liderazgo depende de la situación y las necesidades del equipo y la organización. Un líder efectivo sabe cuándo y cómo aplicar diferentes estilos de liderazgo según las circunstancias. La flexibilidad es clave para el liderazgo exitoso. Cada estilo tiene sus ventajas y desafíos, y no hay un enfoque único que funcione en todas las situaciones. La comprensión de estos estilos de liderazgo permite a los líderes adaptarse y tomar decisiones informadas para alcanzar los mejores resultados en el entorno laboral.

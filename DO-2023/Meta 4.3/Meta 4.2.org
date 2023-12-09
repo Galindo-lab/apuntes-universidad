@@ -1,0 +1,38 @@
+
+#+TITLE:    Meta 4.3
+#+AUTHOR:   Luis Eduardo Galindo Amaya
+#+DATE:     miércoles, 22 noviembre 2023
+
+#+OPTIONS:  toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+
+#+latex_header: \usepackage{../modern}
+#+latex_header: \raggedbottom
+#+latex: \modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+#+latex: \datasection{Individual}
+
+
+* Ensayo
+El proceso de evaluación se ha convertido en una face muy importante
+del proceso de desarrollo de software. La evaluación de software
+permite verificar la calidad, estabilidad y la eficacia de una
+aplicación de software un software que cumple las especificaciones
+requeridas es una aplicación que el usuario va a poder usar. Otra de
+las cosas que nos permite la evaluación es garantizar la calidad u la
+satisfacción del usuario, si el usuario puede probar el software antes
+de terminarlo puede dar retroalimentación de manera más valiosa. \\
+
+La evaluación constente del software permite la mejora continua del
+software, futuras versiones se pueden beneficiar de las cosas que
+hemos aprendido. \\
+
+La evaluación de software abarca varios aspectos, desde la revisión
+del diseño y la funcionalidad hasta la evaluación de la documentación
+asociada. Este proceso puede ser llevado a cabo por desarrolladores
+internos, probadores especializados o evaluadores externos. La
+inversión de tiempo y recursos en este proceso se justifica por
+múltiples razones, siendo la garantía de calidad una de las más
+destacadas. \\
+
+
+

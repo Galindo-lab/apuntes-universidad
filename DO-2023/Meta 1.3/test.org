@@ -1,0 +1,51 @@
+
+#+TITLE:  Meta 1.3 Herramientas \\ 
+#+TITLE:  tecnologicas para la Mejora
+#+AUTHOR: Luis Eduardo Galidno Amaya 
+#+DATE:   25 de Agosto del 2023
+
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{../sample.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{}@@
+#+macro: cite @@latex:\cite{}@@
+#+macro: autocite @@latex:\autocite{}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+* Introducción 
+En los años recientes hemos presenciado como las tecnologías de la comunicación
+han permitido la agilización de procesos dentro de las empresas como  el rápido
+acceso a los bienes y servicios que proporciona, el marcado beneficia a las 
+empresas que pueden estar disponibles para los clientes en todo momento, algunos
+ejemplos relevantes para este caso es walmart, soriana y bodega aurrera las 
+cuales han implementado diversa herramientas web y de machine lerning para 
+la optimización de los procesos.  
+
+* Desarrollo
+La empresa local que se utilizo fue calimax, calimax ya cuenta con una pagina
+web desde la que se pueden hacer compras en linea con las opciones de recoger 
+en la tienda poniéndola al nivel de empresas como walmart y como soriana, por
+lo que dentro de calimax ya tienen registros de los datos que se compran o se 
+venden, utilizar tecnologías de big data en los almacenes podría permitir a 
+calimax libera espacio de almacenamiento utilizando las tiendas directamente en
+vez de utilizar almacenes,  también podría aprovechar la recolección de los 
+datos para optimizar la cantidad de productos que se distribuyen a cada ubicación
+en la ciudad, reduciendo la cantidad de desperdicio que se produce.
+
+* Conclusión 
+Para una empresa como calimax seria de mucha utilidad usar tecnologías de 
+big data y automatización de cadenas de distribución para reducir los costos de
+operación y de almacenes, al ser una empresa bastante grande a nivel local 
+calimax requiere de tecnologías mas enfocadas a la administración de recursos 
+que otra cosa.

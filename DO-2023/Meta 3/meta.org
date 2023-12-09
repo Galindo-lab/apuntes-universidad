@@ -1,0 +1,34 @@
+
+#+TITLE:  Meta 3 - Tipos de conocimiento de la organización
+#+AUTHOR: Luis Eduardo Galidno Amaya 
+#+DATE:   6 de Octubre del 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \raggedbottom
+
+# Información extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+* Ensayo
+Después de terminar de leer la presentación entendí las principales diferencias
+entre el aprendizaje organizacional y el aprendizaje escolar la diferencia mas
+significativa entre ellos es sin duda que el lugar en el que se obtiene, el
+aprendizaje escolar ocurre en la escuela y el organizacional puede ser en
+cualquier lugar. \\
+
+El aprendizaje constante es indispensable para la formación de individuos que
+son efectivos en su trabajo y competitivos a nivel laboral, formar individuos
+permite resolver problemas y brindar soluciones mucho mas efectivas que dan
+mayor valor a la organización. El conocimiento dentro de una organización 
+se clasifica de tres maneras: tácito, explicito y corporativo. \\
+
+El conocimiento Tácito es el conocimiento de las tareas y como se desenvuelve
+una persona dentro de una organización, es difícil de poner en palabras porque
+depende altamente del individuo. Por otra parte el conocimiento explicito es el
+que se transfiere mediante formulas científicas, procedimientos o principios
+universales y se pude transferir entre organizaciones. \\

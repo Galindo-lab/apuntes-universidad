@@ -1,0 +1,35 @@
+
+#+TITLE:  Matriz de capacidades tecnológicas y multiculturalidad
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   jueves, 26 octubre 2023
+# -----
+
+#+LANGUAGE: es
+#+OPTIONS: toc:nil ^:nil title:t num:nil
+
+# #+latex_header: \usepackage{../modern}
+# #+latex_header: \raggedbottom
+
+# # Información extra
+# # -----------------
+# # \modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+# # \datasection{Individual}
+
+
+* Ensayo
+La multiculturalidad promueve la innovación al fomentar la diversidad de
+pensamiento y la generación de ideas creativas. Equipos multiculturales son más
+propensos a encontrar soluciones originales a los desafíos empresariales.
+
+La diversidad cultural facilita la entrada a mercados internacionales. Empleados
+que comprenden la cultura del mercado objetivo pueden ayudar a la organización
+a establecerse con éxito. Además, la adaptación a las diferencias culturales 
+se vuelve más efectiva con una fuerza laboral diversa.
+
+Tener equipos multiculturales en permite encontrar soluciones creativas y 
+originales a problemas que nos presenta la competitividad en las organizaciones
+mantener una menta abierta es indispensable para poder mantener el funcionamiento
+adecuado en una organización actual, la globalización requiere de la inovacion 
+constante para seguir manentenindo la competitividad en un mercado en constante 
+expancion y esto a seu vez requiere de entender a nuevos mercados que permitan 
+una mayor capacidad de desarollo.
