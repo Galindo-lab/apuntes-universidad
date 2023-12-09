@@ -1,0 +1,90 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{martinez_2007}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ed4604c3028ea9d25153ff91c65c910d}{%
+           family={Teja},
+           familyi={T\bibinitperiod},
+           given={Guillermo\bibnamedelimb Manuel\bibnamedelima Martínez},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={de\bibnamedelima la},
+           prefixi={d\bibinitperiod\bibinitdelim l\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed4604c3028ea9d25153ff91c65c910d}
+      \strng{fullhash}{ed4604c3028ea9d25153ff91c65c910d}
+      \strng{bibnamehash}{ed4604c3028ea9d25153ff91c65c910d}
+      \strng{authorbibnamehash}{ed4604c3028ea9d25153ff91c65c910d}
+      \strng{authornamehash}{ed4604c3028ea9d25153ff91c65c910d}
+      \strng{authorfullhash}{ed4604c3028ea9d25153ff91c65c910d}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Martínez de la Teja, Guillermo Manuel Maestro en Ciencias en Ergonomía Ergoprojects / Sociedad de Ergonomistas de México A.C. gmmt@ergoprojects.com RESUMEN La Interacción Humano-Computadora (HCI), es el estudio de la interacción entre el ser humano, las computadoras y las tareas que se desarrollan; principalmente se enfoca a conocer cómo la gente y las computadoras pueden interactuar para llevar a cabo tareas por medio de sistemas y software. HCI es una materia que se basa en algunos aspectos relevantes de la teoría y métodos de muchas disciplinas, dentro de las cuales se incluye ciencias físicas y sociales, ingeniería y arte. Existen importantes contribuciones a la HCI que se han tomado de las ciencias de la computación, psicología, matemáticas, artes gráficas, sociología, inteligencia artificial, lingüística, filosofía, antropología y ergonomía. HCI incluye partes fundamentales de la ergonomía debido a que se preocupa por entender cómo las computadoras y el ser humano pueden interactuar para desarrollar tareas existentes y nuevas. La ergonomía en HCI se enfoca a buscar los aspectos de diseño en los sistemas computacionales para que tengan un uso más efectivo y eficiente, así como el desarrollo de principios, guías, métodos y herramientas para mejorar el diseño y desarrollo de los sistemas interactivos computacionales. Palabras clave Interacción humano-computadora, diseño centrado en el usuario INTERACCIÓN HUMANO-COMPUTADORARODUCCIÓN Se considera que hay cuatro componentes principales en un sistema hombre-computadora: • El usuario • El sistema de computadora • La tarea • El ambiente}
+      \field{title}{Ergonomía e interfases de interacción humano-computadora}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb http://www.semac.org.mx/archivos/9-6.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.semac.org.mx/archivos/9-6.pdf
+      \endverb
+    \endentry
+    \entry{narciso_valero_2008}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=516feb4c29bbfa24b842543daaecb6fd}{%
+           family={Narciso},
+           familyi={N\bibinitperiod},
+           given={Flor},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf87e9edd7466181bdd66d0043b4dc7a}{%
+           family={Valero},
+           familyi={V\bibinitperiod},
+           given={Gustavo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cf98864cae0e9d0a5f055f092a3c75bf}
+      \strng{fullhash}{cf98864cae0e9d0a5f055f092a3c75bf}
+      \strng{bibnamehash}{cf98864cae0e9d0a5f055f092a3c75bf}
+      \strng{authorbibnamehash}{cf98864cae0e9d0a5f055f092a3c75bf}
+      \strng{authornamehash}{cf98864cae0e9d0a5f055f092a3c75bf}
+      \strng{authorfullhash}{cf98864cae0e9d0a5f055f092a3c75bf}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Formalización del modelo para el diseño de la interacción humano-computadora (modihc)}
+      \field{year}{2008}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

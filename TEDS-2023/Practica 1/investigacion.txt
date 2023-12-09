@@ -1,0 +1,185 @@
+Luis Eduardo Galindo Amaya (1274895)                   16 de Agosto 2023
+
+
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+
+\tableofcontents \pagebreak
+
+\datasection{Individual}
+
+
+1 Introducción
+==============
+
+  Una parte clave del diseño de aplicaciones modernas es la interfaz
+  gráfica.  Esta interfaz hace que sea más fácil para los usuarios
+  utilizar la aplicación, lo que resulta en una mayor aceptación y un
+  tiempo de aprendizaje más corto para usar el software de manera
+  efectiva. En esta práctica, exploraremos algunos conceptos de diseño
+  de interfaces a nivel de diseño y de experiencia de usuario.
+
+
+2 Investigación de usuarios
+===========================
+
+   La investigación de usuarios para videojuegos es un campo
+  interdisciplinario de investigación que se enfoca en garantizar la
+  óptima estabilidad y experiencia (UX) en los videojuegos[1].
+
+  <file:images/iusuario.png>
+
+
+2.1 Objetivos del estudio de usuarios
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Conocer los hábitos, actitudes, opiniones, deseos, necesidades,
+  demandas y grado de satisfacción de los individuos en relación tanto
+  de la información como con los servicios de los centros que se la
+  proporcionan.
+
+
+3 Arquitectura de la información
+================================
+
+   La arquitectura de la información ayuda a nuestros usuarios a
+  entender dónde están, qué han encontrado, qué pueden esperar y qué hay
+  alrededor. Ayudamos a nuestros clientes a entender qué es posible.
+
+  <file:images/ai.png>
+
+
+3.1 Origen de la Arquitectura de la información
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   El término Arquitectura de la Información es un concepto utilizado en
+  su forma más amplia para expresar el diseño, organización y
+  distribución de los sistemas informáticos. Richard Saul Wurman acuñó
+  el término en 1976, y trabajó seriamente en la estructura de la
+  información dentro de sus publicaciones, como Information Anxiety,
+  Information Architects, y Information Design. A partir de esta fecha
+  se ha ido extendiendo su uso dentro de las publicaciones técnicas y de
+  referencia, y hasta se ha creado un perfil laboral que comparte muchas
+  habilidades de varias disciplinas.
+
+
+4 Diseño de Interfaz de Usuario (UI)
+====================================
+
+   Una interfaz de usuario es la presentación visual de la interacción
+  entre un dispositivo con software, producto o servicio, y un
+  usuario. También llamado UI (User Interface) transforma ciertas
+  señales, imágenes, símbolos o acciones de un sistema para hacerlas
+  comprensibles al ser humano. Una simplificación del concepto.
+
+  - La interfaz debe diseñarse con el objetivo de disminuir las
+    necesidades del usuario para recordar acciones, resultados y
+    elementos del pasado.
+  - La visual preestablecida debe de ser coherente con el usuario común
+    ¡reconocible! Además, debe de aparecer un elemento para «reiniciar»
+    (restablecer valores originales).
+  - Crear atajos que sean intuitivos y de fácil acceso.
+  - Crear una interfaz visual donde los elementos más importantes se
+    parezcan al mundo real.
+  - La información debe ser revelada de manera progresiva.
+
+
+4.1 Fases del diseño de UI
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Hablando en términos generales, diseñar interfaces de usuario es un
+  proceso de descubrir cómo representar visualmente los componentes,
+  cambios de estado e interacciones que un usuario enfrentará cuando
+  interactúe con tus diseños en pantalla.
+
+
+4.1.1 1. Sketches
+-----------------
+
+  Esta es la forma más rápida, económica y de menor compromiso para
+  iniciar tus diseños. Permite plasmar las ideas de alto nivel y
+  prioritarias que tienes en mente en el papel o la pantalla. Por lo
+  general, estas son ideas capturadas de manera aproximada y si lucen
+  bastante mal, entonces probablemente vas por el camino correcto.
+
+  <file:images/sketch.png>
+
+
+4.1.2 2. Wireframes o Gray boxing
+---------------------------------
+
+  los wireframes de fidelidad media presentan representaciones más
+  precisas de la disposición. Aunque aún evitan distracciones como
+  imágenes o tipografía, se asigna más detalle a componentes específicos
+  y las características se diferencian claramente entre sí.
+
+  <file:images/wireframe.png>
+
+
+4.1.3 3. User Flows y Task flows
+--------------------------------
+
+  ¿Qué sucede cuando hacen clic en esto o si olvidan agregar cierta
+  información aquí? Se trata de comprender los modelos mentales del
+  usuario y el modelo de tu sistema, así como la coordinación de las
+  vías y respuestas que proporcionará tu interfaz.
+
+  <file:images/userflow.png>
+
+
+4.1.4 4. Diseños de alta fidelidad
+----------------------------------
+
+  Aquí es donde haces cada píxel tan perfecto y medido como puedas, y
+  donde puedes añadir tu estética de marca única y elementos temáticos.
+
+  <file:images/hightfidelity.jpg>
+
+
+4.1.5 5. Prototipo
+------------------
+
+  Esto une todo y muestra cómo se espera que se vea y comporte la
+  aplicación.
+
+
+4.2 Herramientas para diseño de UI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+4.2.1 Whimsical.com
+-------------------
+
+  Whimsical es una herramienta para diseñar wireframes que permite a
+  cualquier persona participar en el diseño de experiencia de usuario y
+  crear esquemas, puede integrarse con otros archivos como diagramas de
+  flujo y mapas conceptuales además de funciones simples para diseñar el
+  flujo de la aplicación.
+
+  <file:images/Captura de pantalla de 2023-08-19 17-35-40.png>
+
+
+5 Conclusión
+============
+
+  Durante esta investigación, he aprendido nuevos conceptos como la
+  investigación de usuarios y la arquitectura de la información. También
+  repasé temas que ya habíamos estudiado en cursos anteriores, como el
+  diseño de interfaces de usuario. Creo que comprender cómo los usuarios
+  interactúan con nuestra aplicación es fundamental para crear un
+  producto de software exitoso. Además, con las herramientas actuales,
+  es posible lograr resultados profesionales en un tiempo mínimo.
+
+
+  \pagebreak
+
+
+6 Referencias
+=============
+
+  \printbibliography[heading=none]
+
+
+
+Nota al pie de pagina
+_____________________
+
+[1] No lo pude encontrar enfocado a UI.

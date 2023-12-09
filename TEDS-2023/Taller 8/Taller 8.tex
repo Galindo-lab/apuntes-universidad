@@ -1,0 +1,149 @@
+% Created 2023-10-25 mié 22:01
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\input{~/.emacs.d/templates/modern.sty}
+\setcounter{secnumdepth}{2}
+\author{Luis Eduardo Galindo Amaya (1274895)}
+\date{miércoles, 25 octubre 2023}
+\title{Taller 8. Descripción del problema}
+\hypersetup{
+ pdfauthor={Luis Eduardo Galindo Amaya (1274895)},
+ pdftitle={Taller 8. Descripción del problema},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\makeatletter
+\makeatletter
+\modentitlepage{~/.emacs.d/templates/img/tinta.png}
+\tableofcontents
+\pagebreak
+\datasection{Individual}
+
+\section{Descripción del Problema}
+\label{sec:orgc831262}
+En la actualidad uno de los mayores desafíos que tienen los hospitales es la 
+organización, gestionar la mayor cantidad de pacientes de la manera mas ordenada 
+posible, además de capturar sus datos de forma sencilla. Integrar los problemas
+que presenta la organización de los consultorios de un hospital permitiría sin
+dudas agilizar los procesos internos reduciendo los tiempos entre consultas.
+
+\section{Descripción de la Solución}
+\label{sec:org20499e3}
+La solución que se plantea consiste en integrar varias partes básicas para la 
+organización de un hospital, integrarlos permitiría pasar información rápidamente 
+entre los sistemas, supervisar las diferentes etapas de los procesos y  :
+
+\subsection{Captura de pacientes}
+\label{sec:org6debec6}
+El sistema captura los datos de los pacientes al llegar a la clínica para 
+agregarlos a la fila de espera.
+
+\subsection{Priorizacion de pacientes}
+\label{sec:org2b9784e}
+Se les asignara una prioridad al llegar las, personas de mayor edad, embarazadas
+y emergencias deben pasar primero.
+
+\subsection{Gestión de consultorios}
+\label{sec:orge1a9264}
+al ser el turno del paciente se le asignara al consultorio disponible. 
+
+\subsection{Captura de historiales médicos}
+\label{sec:org413ff59}
+El sistema captura los historiales médicos de una manera mas sistemática acorde
+a el tipo de hospital que esta utilizando el sistema.
+
+\subsection{Emisión de recetas médicas}
+\label{sec:orgc3770c2}
+Al terminar la consulta el sistema emite una receta al correo del paciente.
+
+\subsection{Análisis de los datos}
+\label{sec:orgde89aa1}
+Una vez con el sistema en linea se puede mantener una supervisión constante de 
+las clínicas y de los pacientes atendidos en ellas mediante un dashboard.
+
+
+\pagebreak
+
+\section{Tecnologías a aplicar}
+\label{sec:org1a083be}
+\subsection{Django y Python}
+\label{sec:orgb9e9f1d}
+Para controlar la base de datos y las vistas se usara django, soluciona 
+principalmente todo lo relacionado al modelo MVC. Django esta hecho con python
+por lo que el desarollo principalmente se hará en python. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{img/python-django.png}
+\caption{Django y Python}
+\end{figure}
+
+\subsection{Docker}
+\label{sec:org24ee138}
+Para el despliegue de la aplicación se usara Docker, docker es una tecnología 
+de Contenderían de aplicaciones la cual nos hace no ser tan dependientes 
+del hardware del usuario lo cual nos permite únicamente enfocarnos en el 
+desarrollo. 
+
+\subsection{Bootsrap}
+\label{sec:org7da8b2f}
+Bootsrap es un framework de css para web que permite crear interfaces web de 
+manera sencilla, una de las ventajas de usar este framework es que no tenemos 
+
+\subsection{MongoDB}
+\label{sec:org5b0ef68}
+MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de código 
+abierto. A comparación de otras bases de datos Mongo almacena sus registros como
+archivos individuales
+
+\section{Aplicaciones futuras}
+\label{sec:org405f85d}
+\subsection{Análisis de datos}
+\label{sec:orgaea0120}
+Una de las posibles aplicaciones secundarias de nuestra solución es analizar
+los diagnósticos de los pacientes y sus recetas para poder predecir que cosas
+se deben solicitar en cada época del años así como detectar epidemias. 
+
+\subsection{Estimación de tiempos}
+\label{sec:org7eaa545}
+Utilizando da cantidad de doctores, los tiempos en los que trabajan el sistema 
+podría hacer estimaciones del tiempo que tomara la consulta desde que se 
+solicita.
+
+\section{Tecnologías con las que se puede complementar}
+\label{sec:orgc7ba471}
+\subsection{Ciencia de datos}
+\label{sec:org4730ad9}
+Al se un sistema que recolecta datos se podría utilizar para capturar datos y 
+crear datasets que pueden permitir hacer ciencia de datos, claramente 
+respetando la ley de protección de datos y viendo por la privacidad del 
+usuario en todo momento.
+
+\subsection{Sistemas expertos}
+\label{sec:org4fabd26}
+La recopilación de datos puede ayudar a la creación de sistemas expertos que 
+puedan asistir a los doctores de manera que puedan hacer preguntas mas 
+precisa para poder hacer diagnósticos mas efectivos.
+
+\section{Conclusión}
+\label{sec:org2f39734}
+Durante esta practica pude reflexionar como las tecnologías que creamos pueden
+ayudar a las personas a poder hacer mas con las tecnología y como identificar 
+los problemas que se pueden solucionar tecnologías que dominamos.  
+\end{document}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://127.0.0.1:8000/clinic/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Creado por Luis Eduardo Galindo Amaya, Julio del 2023 -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./Medical Report_files/bootstrap.css" rel="stylesheet">
+    <script src="./Medical Report_files/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script><script charset="utf-8" src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=54879014030"></script>
+
+
+    
+      <title>Medical Report</title>
+    
+  <style type="text/css">.fc-ab-root { display: none !important } body > div.fc-ab-root { display: none !important } .fbs-auth__container.fbs-auth__adblock { display: none !important } .overlay-34_Kj { display: none !important } .wrapper-3AzfF { display: none !important } .fEy1Z2XT { display: none !important } .nytc---modal-window---windowContainer.nytc---modal-window---isShown.nytc---shared---blackBG { display: none !important } .tp-modal { display: none !important } .tp-backdrop.tp-active { display: none !important } .c-nudge__container.c-gate__container { display: none !important } .c-nudge__container.c-regGate__container { display: none !important } .css-n7r8pg { display: none !important } .css-1bd8bfl { display: none !important } .overlay__59af11e2 { display: none !important } .tp_modal { display: none !important } .tp-backdrop.tp-active { display: none !important } div[class^='sp_message_container'] { display: none !important } div[class^='sp_veil'] { display: none !important } </style></head>
+
+  <body>
+    <nav class="navbar bg-primary navbar-dark">
+      <div class="container-lg">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/clinic/#">
+          <img src="./Medical Report_files/imss_blanco.png" alt="" height="24" class="d-inline-block align-text-top">
+          DMRS
+        </a>
+
+        <div class="my-2 my-lg-0">
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="http://127.0.0.1:8000/logout/" class="nav-link">Cerrar sesión</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+  <div class="container-lg d-flex mt-3">
+    <div class="col-md-6">
+      
+      <div class="accordion" id="doctorAccordion">
+        <div class="accordion-item">
+  <div class="accordion-header">
+    <button class="accordion-button" aria-expanded="true" data-bs-toggle="collapse" data-bs-target="#exploracion">Exploración física</button>
+  </div>
+
+  <div id="exploracion" class="accordion-collapse collapse show" data-bs-parent="#doctorAccordion">
+    <div class="accordion-body">
+      <div class="input-group mb-3">
+        <span class="input-group-text">Peso (kg)</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Temperatura (C)</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Presion (mmHg)</span>
+        <input type="text" class="form-control" aria-label="Server">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Altura (m)</span>
+        <input type="text" class="form-control" aria-label="Server">
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="accordion-item">
+  <div class="accordion-header">
+    <button class="accordion-button collapsed" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#historia">Historia Clinica</button>
+  </div>
+
+  <div id="historia" class="accordion-collapse collapse" data-bs-parent="#doctorAccordion">
+    <div class="accordion-body">
+      <div class="input-group mb-3">
+        <span class="input-group-text">Grupo Sanguineo</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Dirección</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Alergias</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+      </div>
+
+      <div class="">
+        <div class="">Medicamentos Actuales</div>
+
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="accordion-item">
+  <div class="accordion-header">
+    <button class="accordion-button collapsed" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#diagnostico">Diagnostico</button>
+  </div>
+
+  <div id="diagnostico" class="accordion-collapse collapse" data-bs-parent="#doctorAccordion">
+    <div class="accordion-body">
+      <div class="">
+        <div class=""></div>
+
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="accordion-item">
+  <div class="accordion-header">
+    <button class="accordion-button collapsed" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#receta">
+      Receta
+    </button>
+  </div>
+
+  <div id="receta" class="accordion-collapse collapse" data-bs-parent="#doctorAccordion">
+    <div class="accordion-body">
+      <div class="">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="col-md-6 overflow-auto px-5" id="stdout">
+      
+      <label class="h6 mb-3">Informacion del paciente</label>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Nombre(es)</span>
+        <input type="text" class="form-control">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Paterno</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+        <span class="input-group-text">Materno</span>
+        <input type="text" class="form-control" aria-label="Server">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Dia de nacimiento</span>
+        <input type="date" class="form-control" placeholder="Username" aria-label="Username">
+        <span class="input-group-text">Sexo</span>
+        <input type="text" class="form-control" aria-label="Server">
+      </div>
+
+      <label class="h6 my-3">Contacto</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Email</span>
+        <input type="email" class="form-control" placeholder="Username" aria-label="Username">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Telefono</span>
+        <input class="form-control" type="tel" name="telefono" placeholder="(Código de área) Número">
+      </div>
+
+      <button class="btn btn-primary mt-4 float-end">Finalizar Consulta</button>
+    </div>
+  </div>
+
+  
+
+</body></html>

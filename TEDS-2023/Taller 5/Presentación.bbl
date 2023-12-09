@@ -1,0 +1,90 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Biswal_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8fab2af9e88ecfde4086eec861d53ddc}{%
+           family={Biswal},
+           familyi={B\bibinitperiod},
+           given={Avijeet},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Simplilearn}%
+      }
+      \strng{namehash}{8fab2af9e88ecfde4086eec861d53ddc}
+      \strng{fullhash}{8fab2af9e88ecfde4086eec861d53ddc}
+      \strng{bibnamehash}{8fab2af9e88ecfde4086eec861d53ddc}
+      \strng{authorbibnamehash}{8fab2af9e88ecfde4086eec861d53ddc}
+      \strng{authornamehash}{8fab2af9e88ecfde4086eec861d53ddc}
+      \strng{authorfullhash}{8fab2af9e88ecfde4086eec861d53ddc}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Simplilearn.com}
+      \field{month}{8}
+      \field{title}{Top 18 artificial intelligence (AI) applications in 2023: Simplilearn}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/artificial-intelligence-applications#:~:text=Usage%20of%20AI%20in%20everyday,Fraud%20detection%20systems%20in%20banking
+      \endverb
+      \verb{url}
+      \verb https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/artificial-intelligence-applications#:~:text=Usage%20of%20AI%20in%20everyday,Fraud%20detection%20systems%20in%20banking
+      \endverb
+    \endentry
+    \entry{Jones_2009}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c0d7d68766de9a75669b6bb80d7ff3bf}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={M.\bibnamedelimi Tim},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Jones}%
+        {Bartlett}%
+      }
+      \strng{namehash}{c0d7d68766de9a75669b6bb80d7ff3bf}
+      \strng{fullhash}{c0d7d68766de9a75669b6bb80d7ff3bf}
+      \strng{bibnamehash}{c0d7d68766de9a75669b6bb80d7ff3bf}
+      \strng{authorbibnamehash}{c0d7d68766de9a75669b6bb80d7ff3bf}
+      \strng{authornamehash}{c0d7d68766de9a75669b6bb80d7ff3bf}
+      \strng{authorfullhash}{c0d7d68766de9a75669b6bb80d7ff3bf}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Artificial Intelligence: A systems approach}
+      \field{year}{2009}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

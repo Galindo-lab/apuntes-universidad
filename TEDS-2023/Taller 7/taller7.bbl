@@ -1,0 +1,195 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Arute_2019}{misc}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=a0b41f4400dc855d7426a5f72cadaa6c}{%
+           family={Arute},
+           familyi={A\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0a2abe43325e0dd3690ccc47bfa6c6b7}{%
+           family={Arya},
+           familyi={A\bibinitperiod},
+           given={Kunal},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7bb1dcf8a93d1ecc6f9531ece93ef1fa}{%
+           family={Babbush},
+           familyi={B\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ef37e7fe45a9ff23c761910726d5e4b}{%
+           family={Bacon},
+           familyi={B\bibinitperiod},
+           given={Dave},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d831c1d824f8a4e2a69f6495b8fdc91b}{%
+           family={Bardin},
+           familyi={B\bibinitperiod},
+           given={Joseph\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=659b693e073fa93a83924447ea805d77}{%
+           family={Barends},
+           familyi={B\bibinitperiod},
+           given={Rami},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44196321323dfc67fdaa85c495168130}{%
+           family={Biswas},
+           familyi={B\bibinitperiod},
+           given={Rupak},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=915e31fc5958183d06275c3c3e811123}{%
+           family={Boixo},
+           familyi={B\bibinitperiod},
+           given={Sergio},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cfb6bdb1d0b7056322d56e3f4fad93a8}{%
+           family={Brandao},
+           familyi={B\bibinitperiod},
+           given={Fernando\bibnamedelimb G.\bibnamedelimi S.\bibnamedelimi L.},
+           giveni={F\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11aed4b55c11ca1030deddd80f15b620}{%
+           family={Buell},
+           familyi={B\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{b5ee69b81bc21fd247bbaf0f432158b6}
+      \strng{fullhash}{b6398f228feb9abc43c095e8dd99cc19}
+      \strng{bibnamehash}{b6398f228feb9abc43c095e8dd99cc19}
+      \strng{authorbibnamehash}{b6398f228feb9abc43c095e8dd99cc19}
+      \strng{authornamehash}{b5ee69b81bc21fd247bbaf0f432158b6}
+      \strng{authorfullhash}{b6398f228feb9abc43c095e8dd99cc19}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature News}
+      \field{month}{10}
+      \field{title}{Quantum supremacy using a programmable superconducting processor}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41586-019-1666-5
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41586-019-1666-5
+      \endverb
+    \endentry
+    \entry{Lopez_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=13e8f711598a027a8acdd28d1feb1f94}{%
+           family={Lopez},
+           familyi={L\bibinitperiod},
+           given={Sonia},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{13e8f711598a027a8acdd28d1feb1f94}
+      \strng{fullhash}{13e8f711598a027a8acdd28d1feb1f94}
+      \strng{bibnamehash}{13e8f711598a027a8acdd28d1feb1f94}
+      \strng{authorbibnamehash}{13e8f711598a027a8acdd28d1feb1f94}
+      \strng{authornamehash}{13e8f711598a027a8acdd28d1feb1f94}
+      \strng{authorfullhash}{13e8f711598a027a8acdd28d1feb1f94}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Quantum computing history - Azure Quantum | Microsoft Learn}
+      \field{month}{6}
+      \field{title}{Quantum Computing History - Azure Quantum}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/en-us/azure/quantum/concepts-overview
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/en-us/azure/quantum/concepts-overview
+      \endverb
+    \endentry
+    \entry{Marella_Parisa_2020}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d89fdcfa71d0866fbd778a6e179b6f4e}{%
+           family={Marella},
+           familyi={M\bibinitperiod},
+           given={Surya\bibnamedelima Teja},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0681f99daee4c7dae93ee1a68eea13d}{%
+           family={Parisa},
+           familyi={P\bibinitperiod},
+           given={Hemanth\bibnamedelimb Sai\bibnamedelima Kumar},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IntechOpen}%
+      }
+      \strng{namehash}{37f84afc1ab5e3a7298694c30f039667}
+      \strng{fullhash}{37f84afc1ab5e3a7298694c30f039667}
+      \strng{bibnamehash}{37f84afc1ab5e3a7298694c30f039667}
+      \strng{authorbibnamehash}{37f84afc1ab5e3a7298694c30f039667}
+      \strng{authornamehash}{37f84afc1ab5e3a7298694c30f039667}
+      \strng{authorfullhash}{37f84afc1ab5e3a7298694c30f039667}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IntechOpen}
+      \field{month}{10}
+      \field{title}{Introduction to quantum computing}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.intechopen.com/chapters/73811
+      \endverb
+      \verb{url}
+      \verb https://www.intechopen.com/chapters/73811
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

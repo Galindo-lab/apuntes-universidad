@@ -1,0 +1,189 @@
+
+#+TITLE:  Práctica 1: Principios de Diseño de
+#+TITLE:  Tecnologías Emergentes
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895) 
+#+DATE:   16 de Agosto 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:3
+#+latex_class_options: [11pt]
+
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{fuentes.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+
+\tableofcontents
+\pagebreak
+
+\datasection{Individual}
+
+# Marco teórico
+# Realizar una investigación sobre
+# • Investigación de usuarios
+# • Arquitectura de la información
+# • Diseño de Interfaz de Usuario (UI)
+
+* Introducción
+# Una de las partes fundamentales del diseño de aplicacioes moderno es la interfaz
+# grafica, la interfaz grafica facilita el uso para el usuario final permitiendo
+# que tenga una mayor adopcion y requiera un menor tiempo de entrenamiento para
+# poder utilizar el software de manera efectiva, Para esta practica estudiaremos
+# alguno de los conceptos de diseño de interfaces.
+
+Una parte clave del diseño de aplicaciones modernas es la interfaz gráfica. 
+Esta interfaz hace que sea más fácil para los usuarios utilizar la aplicación, 
+lo que resulta en una mayor aceptación y un tiempo de aprendizaje más corto para
+usar el software de manera efectiva. En esta práctica, exploraremos algunos
+conceptos de diseño de interfaces a nivel de diseño y de experiencia de usuario.
+
+* Investigación de usuarios
+{{{autocite(drachen2018games)}}} La investigación de usuarios para videojuegos 
+es un campo interdisciplinario de investigación que se enfoca en garantizar la 
+óptima estabilidad y experiencia (UX) en los videojuegos[fn:pretexto].
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 5cm
+#+CAPTION: Proceso de investigación de usuario.
+[[file:images/iusuario.png]]
+
+[fn:pretexto]  No lo pude encontrar enfocado a UI. 
+
+** Objetivos del estudio de usuarios
+{{{autocite(Yépez_2021)}}} Conocer los hábitos, actitudes, opiniones, deseos, 
+necesidades, demandas y grado de satisfacción de los individuos en relación 
+tanto de la información como con los servicios de los centros que se la 
+proporcionan.
+
+* Arquitectura de la información
+{{{autocite(Rosenfeld_Morville_2002)}}} La arquitectura de la información ayuda 
+a nuestros usuarios a entender dónde están, qué han encontrado, qué pueden 
+esperar y qué hay alrededor. Ayudamos a nuestros clientes a entender qué es 
+posible.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 5cm
+#+CAPTION: Enfoque de la Arquitectura de la información.
+[[file:images/ai.png]]
+
+** Origen de la Arquitectura de la información
+{{{autocite(gonzales_2003)}}} El término Arquitectura de la Información es un 
+concepto utilizado en su forma más amplia para expresar el diseño, organización 
+y distribución de los sistemas informáticos. Richard Saul Wurman acuñó el término
+en 1976, y trabajó seriamente en la estructura de la información dentro de sus
+publicaciones, como Information  Anxiety, Information Architects, y Information 
+Design. A partir de esta fecha se ha ido extendiendo su uso dentro de las
+publicaciones técnicas y de referencia, y hasta se ha creado un perfil 
+laboral que comparte muchas habilidades de varias disciplinas.
+
+* Diseño de Interfaz de Usuario (UI)
+{{{autocite(ovacen_2022)}}} Una interfaz de usuario es la presentación visual de
+la interacción entre un dispositivo con software, producto o servicio, y un
+usuario. También llamado UI (User Interface) transforma ciertas señales, 
+imágenes, símbolos o acciones de un sistema para hacerlas comprensibles al ser
+humano. Una simplificación del concepto.
+
+- La interfaz debe diseñarse con el objetivo de disminuir las necesidades del usuario para recordar acciones, resultados y elementos del pasado.
+- La visual preestablecida debe de ser coherente con el usuario común ¡reconocible! Además, debe de aparecer un elemento para «reiniciar» (restablecer valores originales).
+- Crear atajos que sean intuitivos y de fácil acceso.
+- Crear una interfaz visual donde los elementos más importantes se parezcan al mundo real.
+- La información debe ser revelada de manera progresiva.
+
+** Fases del diseño de UI
+{{{autocite(Alli_2022)}}} Hablando en términos generales, diseñar interfaces de 
+usuario es un proceso de descubrir cómo representar visualmente los 
+componentes, cambios de estado e interacciones que un usuario enfrentará cuando 
+interactúe con tus diseños en pantalla.
+
+*** 1. Sketches
+Esta es la forma más rápida, económica y de menor compromiso para iniciar tus 
+diseños. Permite plasmar las ideas de alto nivel y prioritarias que tienes en 
+mente en el papel o la pantalla. Por lo general, estas son ideas capturadas de 
+manera aproximada y si lucen bastante mal, entonces probablemente vas por el 
+camino correcto.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 9cm
+#+CAPTION: Sketeches o 'low fidelity wireframe'
+[[file:images/sketch.png]]
+
+*** 2. Wireframes o Gray boxing
+los wireframes de fidelidad media presentan representaciones más precisas de la 
+disposición. Aunque aún evitan distracciones como imágenes o tipografía, se 
+asigna más detalle a componentes específicos y las características se 
+diferencian claramente entre sí.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 7cm
+#+CAPTION: Ejemplo de un wireframe
+[[file:images/wireframe.png]]
+
+*** 3. User Flows y Task flows
+¿Qué sucede cuando hacen clic en esto o si olvidan agregar cierta información
+aquí? Se trata de comprender los modelos mentales del usuario y el modelo de tu
+sistema, así como la coordinación de las vías y respuestas que proporcionará tu 
+interfaz.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 9cm
+#+CAPTION: Diagrama de flujo para la aplicación
+[[file:images/userflow.png]]
+
+*** 4. Diseños de alta fidelidad
+Aquí es donde haces cada píxel tan perfecto y medido como puedas, y donde 
+puedes añadir tu estética de marca única y elementos temáticos.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 13cm
+#+CAPTION: Desarrollo de la interfaz
+[[file:images/hightfidelity.jpg]]
+
+*** 5. Prototipo
+Esto une todo y muestra cómo se espera que se vea y comporte la aplicación.
+
+
+** Herramientas para diseño de UI
+*** Whimsical.com
+Whimsical es una herramienta para diseñar wireframes que permite a cualquier persona 
+participar en el diseño de experiencia de usuario y crear esquemas, puede integrarse
+con otros archivos como diagramas de flujo y mapas conceptuales además de funciones
+simples para diseñar el flujo de la aplicación.
+
+#+ATTR_HTML:
+#+ATTR_LATEX:
+#+CAPTION: Pantalla inicial del Whimsical
+[[file:images/Captura de pantalla de 2023-08-19 17-35-40.png]]
+
+* Conclusión
+# A lo largo de esta investigación aprendí conceptos nuevos como investigación
+# de usuarios y arquitectura de la información y revisté otros que ya habíamos 
+# estudiado con anterioridad en otros cursos como diseño de interfaz de usuario, 
+# pienso que  entender como los usuarios se relacionan con nuestra aplicación es 
+# indispensable para realizar un producto de software exitoso y con alas 
+# herramientas actuales es posible lograr un resultado profesional en el menor 
+# tiempo posible. 
+
+Durante esta investigación, he aprendido nuevos conceptos como la investigación
+de usuarios y la arquitectura de la información. También repasé temas que ya 
+habíamos estudiado en cursos anteriores, como el diseño de interfaces de 
+usuario. Creo que comprender cómo los usuarios interactúan con nuestra 
+aplicación es fundamental para crear un producto de software exitoso. Además,
+con las herramientas actuales, es posible lograr resultados profesionales en un
+tiempo mínimo.
+
+
+\pagebreak
+
+* Referencias
+\printbibliography[heading=none]
+

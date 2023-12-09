@@ -1,0 +1,223 @@
+\input texinfo    @c -*- texinfo -*-
+@c %**start of header
+@setfilename investigacion.info
+@settitle Práctica 1: Principios de Diseño de Tecnologías Emergentes
+@documentencoding UTF-8
+@documentlanguage es
+@c %**end of header
+
+@finalout
+@titlepage
+@author Luis Eduardo Galindo Amaya (1274895)
+@end titlepage
+
+@ifnottex
+@node Top
+@top Práctica 1: Principios de Diseño de Tecnologías Emergentes
+@end ifnottex
+
+@menu
+* Introducción::
+* Investigación de usuarios::
+* Arquitectura de la información::
+* Diseño de Interfaz de Usuario (UI)::
+* Conclusión::
+* Referencias::
+
+@detailmenu
+--- The Detailed Node Listing ---
+
+Investigación de usuarios
+
+* Objetivos del estudio de usuarios::
+
+Arquitectura de la información
+
+* ¿Qué es la arquitectura de la información?::
+
+Diseño de Interfaz de Usuario (UI)
+
+* Fases del diseño de UI::
+* Herramientas para diseño de UI::
+
+Fases del diseño de UI
+
+* 1. Sketches: 1 Sketches. 
+* 2. Wireframes or Gray boxing: 2 Wireframes or Gray boxing. 
+* 3. User Flows y Task flows: 3 User Flows y Task flows. 
+* 4. Diseños de alta fidelidad: 4 Diseños de alta fidelidad. 
+* 5. Prototipo: 5 Prototipo. 
+
+@end detailmenu
+@end menu
+
+@node Introducción
+@chapter @strong{TODO} Introducción
+
+Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci
+commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget,
+lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac
+
+@node Investigación de usuarios
+@chapter Investigación de usuarios
+
+La investigacion de usuarios para videojuegos 
+es un campo interdiciplinario de investigación que se enfoca en garantizar la 
+optima usabilidad y experiendia (UX) en los videojuegos@footnote{No lo pude encontrar enfocado a UI@.}.
+
+@float Figura
+@image{images/iusuario,,,,png}
+@caption{Proceso de investigación de usuario.}
+@end float
+
+@menu
+* Objetivos del estudio de usuarios::
+@end menu
+
+@node Objetivos del estudio de usuarios
+@section Objetivos del estudio de usuarios
+
+Conocer los hábitos, actitudes, opiniones, deseos, necesidades, demandas y grado
+de satisfacción de los individuos en relación tanto de la información como con
+los servicios de los centros que se la proporcionan.
+
+@node Arquitectura de la información
+@chapter Arquitectura de la información
+
+El término Arquitectura de la Información es un 
+concepto utilizado en su forma más amplia para expresar el diseño, organización 
+y distribución de los sistemas informáticos. 
+
+Richard Saul Wurman acuñó el término en 1976, y trabajó seriamente en la 
+estructura de la información dentro de sus publicaciones, como Information 
+Anxiety, Information Architects, y Information Design. A partir de esta fecha se
+ha ido extendiendo su uso dentro de las publicaciones técnicas y de referencia, 
+y hasta se ha creado un perfil laboral que comparte muchas habilidades de varias
+disciplinas.
+
+@menu
+* ¿Qué es la arquitectura de la información?::
+@end menu
+
+@node ¿Qué es la arquitectura de la información?
+@section ¿Qué es la arquitectura de la información?
+
+La arquitectura de la información ayuda 
+a nuestros usuarios a entender dónde están, qué han encontrado, qué pueden 
+esperar y qué hay alrededor. Ayudamos a nuestros clientes a entender qué es 
+posible.
+
+@float Figura
+@image{images/ai,,,,png}
+@caption{}
+@end float
+
+@node Diseño de Interfaz de Usuario (UI)
+@chapter Diseño de Interfaz de Usuario (UI)
+
+Una interfaz de usuario es la presentación visual de
+la interacción entre un dispositivo con software, producto o servicio, y un
+usuario. También llamado UI (User Interface) transforma ciertas señales, 
+imágenes, símbolos o acciones de un sistema para hacerlas comprensibles al ser
+humano. Una simplificación del concepto.
+
+@itemize
+@item
+La interfaz debe diseñarse con el objetivo de disminuir las necesidades del usuario para recordar acciones, resultados y elementos del pasado.
+@item
+La visual preestablecida debe de ser coherente con el usuario común ¡reconocible! Además, debe de aparecer un elemento para «reiniciar» (restablecer valores originales).
+@item
+Crear atajos que sean intuitivos y de fácil acceso.
+@item
+Crear una interfaz visual donde los elementos más importantes se parezcan al mundo real.
+@item
+La información debe ser revelada de manera progresiva.
+@end itemize
+
+@menu
+* Fases del diseño de UI::
+* Herramientas para diseño de UI::
+@end menu
+
+@node Fases del diseño de UI
+@section Fases del diseño de UI
+
+Hablando en términos generales, diseñar interfaces de 
+usuario es un proceso de descubrir cómo representar visualmente los 
+componentes, cambios de estado e interacciones que un usuario enfrentará cuando 
+interactúe con tus diseños en pantalla.
+
+@menu
+* 1. Sketches: 1 Sketches. 
+* 2. Wireframes or Gray boxing: 2 Wireframes or Gray boxing. 
+* 3. User Flows y Task flows: 3 User Flows y Task flows. 
+* 4. Diseños de alta fidelidad: 4 Diseños de alta fidelidad. 
+* 5. Prototipo: 5 Prototipo. 
+@end menu
+
+@node 1 Sketches
+@unnumberedsubsec 1. Sketches
+
+Esta es la forma más rápida, económica y de menor compromiso para iniciar tus 
+diseños. Permite plasmar las ideas de alto nivel y prioritarias que tienes en 
+mente en el papel o la pantalla. Por lo general, estas son ideas capturadas de 
+manera aproximada y si lucen bastante mal, entonces probablemente vas por el 
+camino correcto.
+
+@float Figura
+@image{images/sketch,,,,png}
+@caption{Sketeches o 'low fidelity wireframe'}
+@end float
+
+@node 2 Wireframes or Gray boxing
+@unnumberedsubsec 2. Wireframes or Gray boxing
+
+os wireframes de fidelidad media presentan representaciones más precisas de la 
+disposición. Aunque aún evitan distracciones como imágenes o tipografía, se 
+asigna más detalle a componentes específicos y las características se 
+diferencian claramente entre sí.
+
+@float Figura
+@image{images/wireframe,,,,png}
+@caption{}
+@end float
+
+@node 3 User Flows y Task flows
+@unnumberedsubsec 3. User Flows y Task flows
+
+¿Qué sucede cuando hacen clic en esto o si olvidan agregar cierta información
+aquí? Se trata de comprender los modelos mentales del usuario y el modelo de tu
+sistema, así como la coordinación de las vías y respuestas que proporcionará tu 
+interfaz.
+
+@float Figura
+@image{images/userflow,,,,png}
+@caption{}
+@end float
+
+@node 4 Diseños de alta fidelidad
+@unnumberedsubsec 4. Diseños de alta fidelidad
+
+Aquí es donde haces cada píxel tan perfecto y medido como puedas, y donde 
+puedes añadir tu estética de marca única y elementos temáticos.
+
+@float Figura
+@image{images/hightfidelity,,,,jpg}
+@caption{}
+@end float
+
+@node 5 Prototipo
+@unnumberedsubsec 5. Prototipo
+
+Esto une todo y muestra cómo se espera que se vea y comporte la aplicación.
+
+@node Herramientas para diseño de UI
+@section @strong{TODO} Herramientas para diseño de UI
+
+@node Conclusión
+@chapter @strong{TODO} Conclusión
+
+@node Referencias
+@chapter Referencias
+
+@bye

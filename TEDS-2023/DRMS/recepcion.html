@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:8000/reception/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Creado por Luis Eduardo Galindo Amaya, Julio del 2023 -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./recepcion_files/bootstrap.css" rel="stylesheet">
+    <script src="./recepcion_files/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script><script charset="utf-8" src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=32958903257"></script>
+
+
+    
+      <title>Medical Report</title>
+    
+  <style type="text/css">.fc-ab-root { display: none !important } body > div.fc-ab-root { display: none !important } .fbs-auth__container.fbs-auth__adblock { display: none !important } .overlay-34_Kj { display: none !important } .wrapper-3AzfF { display: none !important } .fEy1Z2XT { display: none !important } .nytc---modal-window---windowContainer.nytc---modal-window---isShown.nytc---shared---blackBG { display: none !important } .tp-modal { display: none !important } .tp-backdrop.tp-active { display: none !important } .c-nudge__container.c-gate__container { display: none !important } .c-nudge__container.c-regGate__container { display: none !important } .css-n7r8pg { display: none !important } .css-1bd8bfl { display: none !important } .overlay__59af11e2 { display: none !important } .tp_modal { display: none !important } .tp-backdrop.tp-active { display: none !important } div[class^='sp_message_container'] { display: none !important } div[class^='sp_veil'] { display: none !important } </style></head>
+
+  <body>
+    <nav class="navbar bg-primary navbar-dark">
+      <div class="container-lg">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/reception/#">
+          <img src="./recepcion_files/imss_blanco.png" alt="" height="24" class="d-inline-block align-text-top">
+          DMRS
+        </a>
+
+        <div class="my-2 my-lg-0">
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="http://127.0.0.1:8000/logout/" class="nav-link">Cerrar sesión</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+
+
+  <form method="POST" class="d-flex justify-content-center vh-100 mt-4">
+    <input type="hidden" name="csrfmiddlewaretoken" value="Kl5J9JV1W1QxUCM4RA5VlJI5q8NYHpZsN2lqhBZJ8FIWg9BKan00E0NUcS0tDzAO">
+
+    <div class="col-md-8 overflow-auto px-5" id="stdout">
+      <label class="h6 mb-3">Información del paciente</label>
+
+      
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Nombre(es)</span>
+        <input type="text" name="name" maxlength="250" class="form-control" required="" id="id_name">
+      </div>
+
+      
+      <div class="input-group mb-3">
+        <span class="input-group-text">Paterno</span>
+        <input type="text" name="paterno" maxlength="250" class="form-control" required="" id="id_paterno">
+
+        <span class="input-group-text">Materno</span>
+        <input type="text" name="materno" maxlength="250" class="form-control" required="" id="id_materno">
+      </div>
+
+      
+      <div class="input-group mb-3">
+        <span class="input-group-text">Fecha de nacimiento</span>
+        <input type="date" name="birthdate" class="form-control" required="" id="id_birthdate">
+
+        <span class="input-group-text">Sexo</span>
+        <select name="gender" class="form-control" id="id_gender">
+  <option value="O">Indefinido</option>
+
+  <option value="M">Masculino</option>
+
+  <option value="F">Femenino</option>
+
+</select>
+      </div>
+
+      
+      <div class="input-group mb-3">
+
+        <span class="input-group-text">Unidad medica</span>
+        <input type="text" name="medical_unit" maxlength="250" class="form-select" list="units" required="" id="id_medical_unit">
+
+        <datalist id="units">
+          
+          <option value="test1">
+            test1
+          </option>
+          
+          <option value="rrr">
+            rrr
+          </option>
+          
+          <option value="Unidad 1">
+            Unidad 1
+          </option>
+          
+          <option value="Unidad 2">
+            Unidad 2
+          </option>
+          
+          <option value="Unidad 3">
+            Unidad 3
+          </option>
+          
+        </datalist>
+
+      </div>
+
+      <div class="col d-flex mt-3 gap-2">
+        <button class="w-50 btn btn-outline-primary" type="submit">
+          Cancelar
+        </button>
+        <button class="w-50 btn btn-primary " type="submit">
+          Registrar
+        </button>
+      </div>
+    </div>
+  </form>
+
+  
+
+</body></html>

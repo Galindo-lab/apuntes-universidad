@@ -1,0 +1,194 @@
+
+\documentclass[10pt]{beamer}
+\usepackage[spanish, mexico]{babel}
+
+\usepackage{svg}
+\usepackage[scaled]{helvet}
+\usepackage{tikz}
+
+\usepackage[backend=biber, style=apa]{biblatex}
+
+%% \usetheme{JuanLesPins}
+%% \usetheme{Berlin}
+
+\usepackage{courier}
+
+
+
+\usecolortheme{dove}
+
+\setbeamerfont{title}{series=\bfseries}
+
+%% \setbeamerfont{frametitle}{series=\bfseries,size=\small}
+%% \setbeamerfont{frametitle}{size=\tiny}
+
+\setbeamerfont{frametitle}{series=\bfseries,size=\tiny}
+
+\setbeamercolor{block title alerted}{bg=red!20}
+
+%% \definecolor{myblue}{RGB}{33,157,84}
+%% \setbeamercolor*{structure}{bg=myblue!20,fg=myblue}
+%% \setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
+%% \setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75}
+%% \setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=black}
+%% \setbeamercolor*{palette quaternary}{fg=white,bg=black}
+
+\setbeamerfont{block title}{series=\bfseries,size=\normalsize}
+\setbeamercolor{block title}{bg=none,fg=black}
+
+%% hide simbols
+\setbeamertemplate{bibliography item}{}
+\setbeamertemplate{headline}{}
+
+\usepackage{xpatch}
+
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {%
+    \addtolength{\itemsep}{2ex}%
+    \def\makelabel%
+  }
+  {}
+  {}
+
+\BeforeBeginEnvironment{itemize}{\vskip 2ex}
+
+
+
+%% # #+latex_class_options: [9pt]
+%% # #+latex_header: \usepackage{lmodern}
+%% # # #+latex_header: \usetheme{JuanLesPins}
+%% # # #+latex_header: \usetheme{Berlin}
+%% # #+latex_header: \usecolortheme{dove}
+%% # \setbeamerfont{frametitle}{series=\bfseries,size=\small}
+%% # \definecolor{myblue}{RGB}{33,157,84}
+%% # \setbeamercolor*{structure}{bg=myblue!20,fg=myblue}
+%% # # \setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
+%% # # \setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75}
+%% # # \setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=black}
+%% # # \setbeamercolor*{palette quaternary}{fg=white,bg=black}
+%% # # hide simbols
+%% # \setbeamertemplate{bibliography item}{}
+%% # # #+latex_header: \setbeamercolor{emph}{fg=red}
+%% # # #+latex_header: \renewcommand<>{\emph}[1]{%
+%% # # #+latex_header:   {\usebeamercolor[fg]{emph}\only#2{\itshape}#1}%
+%% # # #+latex_header: }
+%% # # #+latex_header: \setbeamercolor{emph}{fg=red}
+%% # #+latex_header: \setbeamertemplate{headline}{}
+%% # #+latex_header: \usepackage[spanish, mexico]{babel}
+%% # #+latex_header: \usepackage[scaled]{helvet}
+%% # #+latex_header: \usepackage[backend=biber, style=apa]{biblatex}
+%% # #+latex_header: \bibliography{../sample.bib}
+
+\usepackage{xcolor}
+
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+   basicstyle=\ttfamily\small,
+   numbers=left,
+   showspaces=false,
+   frame=simple,
+   showstringspaces=false, 
+   showtabs=false, 
+   numberstyle=\tiny,
+   rulecolor=\color{lightgray}
+   %% aboveskip=\parskip
+}
+
+\lstset{
+  style=mystyle,
+  literate={á}{{\'a}}1
+  {é}{{\'e}}1
+  {í}{{\'{\i}}}1
+  {ó}{{\'o}}1
+  {ú}{{\'u}}1
+  {Á}{{\'A}}1
+  {É}{{\'E}}1
+  {Í}{{\'I}}1
+  {Ó}{{\'O}}1
+  {Ú}{{\'U}}1
+  {ü}{{\"u}}1
+  {Ü}{{\"U}}1
+  {ñ}{{\~n}}1
+  {Ñ}{{\~N}}1
+  {¿}{{?``}}1
+  {¡}{{!``}}1
+}
+
+%% renombra verbatim a listing
+\let\verbatim\someundefinedcommand
+\lstnewenvironment{verbatim}
+{}{}
+
+
+
+
+
+
+% cambiar el tamaño de la tipografia
+\setlength{\headheight}{12.5pt}
+
+%cambiar el tamaño a helvetica
+\renewcommand\familydefault{\sfdefault} 
+
+%% sangria
+\setlength{\parindent}{0pt}
+
+
+\titlegraphic { 
+  \begin{tikzpicture}[overlay,remember picture]
+    \node[right=0.5cm] at (current page.162){
+      \includegraphics[width=2cm]{../images/escudo-uabc-2022-color-cont.png}
+    };
+  \end{tikzpicture}
+}
+
+\addtobeamertemplate{title page}{
+  \begin{center}
+    \textsc{Universidad Autónoma de Baja California} \\
+    \footnotesize
+    \vspace{2mm}
+    Ingeniero en software y tecnologías emergentes
+  \end{center}
+}{
+  \begin{center}
+    \footnotesize
+    Leticia Sarahi Espinoza Barraza
+  \end{center}
+}
+
+\newenvironment{onec}
+               {
+                 \begin{minipage}{0.18\textwidth}
+                   \raggedright
+
+                   \\
+               }
+               { 
+                 \\\\
+                 \end{minipage}
+               }
+
+\newenvironment{twoc}
+               {
+                 \begin{minipage}{0.39\textwidth}
+                   \raggedright
+
+                   \\
+               }
+               { 
+                 \\\\
+                 \end{minipage}
+               }
+
+\newenvironment{threec}
+               {
+                 \begin{minipage}{0.58\textwidth}
+                   \raggedright
+
+                   \\
+               }
+               { 
+                 \\\\
+                 \end{minipage}
+               }

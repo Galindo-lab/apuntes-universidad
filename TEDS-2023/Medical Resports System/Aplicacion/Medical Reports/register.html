@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Fashion Pet</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">MRS</a>
+       
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="register.html">Registro</a>
+                </li>
+            
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <input id="searchPet" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="search();">Search</button>
+            </div>
+        </div>
+    </nav>
+
+      <div class="container">
+        <h1 class="text-center">Registro de paciente</h1>
+
+            <p>
+                <label for="name">Nombre:</label>
+                <input class="register-inputs" type="text" id="petName">
+                
+            </p>
+            <p>
+                <label for="age">Edad:</label>
+                <input class="register-inputs" type="number" name="age" id="petAge"/>
+            </p> 
+            <p>
+                <label for="breed">Nacionalidad:</label>
+                <input class="register-inputs" type="text" name="breed" id="petBreed"/>
+            </p>
+            <p>
+                <label for="gender">Genero:</label>
+                <input class="register-inputs" type="text" name="gender" id="petGender"/>
+            </p>
+            <p>
+                <label for="service">Servicio:</label>
+                <select class="register-inputs" name="service" id="petService">
+                    <option value="Odontologia"> Odontoligia</option>
+                    <option value="General">General</option>
+                    <option value="Psicologia">Psicologia</option>
+                    <option value="Gastrointerologo">Gastrointerologo</option>
+                    <option value="Pediatra">Pediatra</option>
+                    <option value="Nutriologo">Nutriologo</option>
+                </select>
+            </p> 
+            <p>
+                <label for="ownerName">Tipo de emergencia:</label>
+                <input class="register-inputs" type="text" name="ownerName" id="ownerName"/>
+            </p>
+            <p>
+                <label for="phone">Telefono:</label>
+                <input class="register-inputs" type="tel" name="phone" id="contactPhone" />
+            </p> 
+
+
+            <input type="button" value="Register" onclick="register();"/>
+
+            <h2 class="align">Registro de pacientes</h2>
+            <div class="align">
+            <ul id="petList">
+                <!--display the list items (li)-->
+            </ul>
+            
+            <table id="petTable">
+                <tr>
+                    <td>|Nombre|</td>
+                    <td>Edad|</td>
+                    <td>Nacionalidad|</td>
+                    <td>Genero|</td>
+                    <td>Servicio|</td>
+                    <td>Tipo de emergencia|</td>
+                    <td>Telefono|</td>
+                    <td> </td>
+
+                </tr>
+
+            </table>
+        </div>
+        <footer id="footer-info">
+
+        </footer>
+      </div>
+      <footer class="footer-margin">
+        <p>All the copyrights reserved 2020 &copy; Equipo Medical Reports</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src=script.js></script>
+       
+</body>
+</html>

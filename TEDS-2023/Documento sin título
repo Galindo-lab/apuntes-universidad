@@ -1,0 +1,32 @@
+@startmindmap
+Title Tecnologías Web
+!theme plain
+
+scale 3
+
+* Diseño Web
+** Software
+*** Sketch
+*** Figma
+*** Uizard
+** Lenguajes de Web
+*** CSS
+**** Frameworks
+***** Tailwind
+***** Bootstrap
+**** Preprocesadores
+***** SASS
+***** Less
+*** JavaScript
+**** Frameworks
+***** React
+***** Angular
+***** Vue.js
+*** HTML
+** Back-End
+*** Node.js
+*** Python (Django, Flask)
+*** Ruby on Rails
+*** Laravel
+*** Spring Boot
+@endmindmap

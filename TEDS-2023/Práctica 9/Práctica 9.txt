@@ -1,0 +1,152 @@
+                 ______________________________________
+
+                               PRÁCTICA 9
+
+                  Luis Eduardo Galindo Amaya (1274895)
+                 ______________________________________
+
+
+                      miércoles, 01 noviembre 2023
+
+
+
+
+
+1 ¿Como hacer un cuestionario?
+==============================
+
+  Pasar un cuestionario no es en sí mismo una investigación. El
+  cuestionario solamente es un instrumento, una herramienta para
+  recolectar datos con la finalidad de utilizarlos en una investigación.
+  Primero debemos tener claro qué tipo de investigación queremos
+  realizar, para entonces poder determinar si nos puede resultar útil
+  aplicar un cuestionario
+
+  Es conveniente determinar con claridad: (a) qué tipo de información
+  necesitamos y (b) de qué personas queremos su opinión. Esto debe
+  permitir tomar decisiones sobre qué preguntas son necesarias y cuáles
+  no, y sobre el estilo de redacción de las preguntas. Por ejemplo, no
+  se puede utilizar el mismo lenguaje en un cuestionario dirigido a
+  niños, que en uno dirigido a jóvenes, adultos o gente mayor
+
+
+2 Redaccion de preguntas
+========================
+
+  1
+        Las preguntas deben ser claras, sencillas, comprensibles y
+  concretas. Se deben evitar las preguntas ambiguas, imprecisas,
+  confusas o que supongan un conocimiento especializado por parte del
+  participante.
+
+  2
+        No formular preguntas que presuponen una respuesta específica o
+        que
+  inducen al participante a responder de determinada manera, sino las
+  que permiten todo tipo de respuesta.
+
+  1. Colocar al inicio del cuestionario preguntas neutrales o fáciles de
+  contestar para que el encuestado vaya adentrándose en la situación. No
+  se recomienda comenzar con preguntas difíciles o muy directas.
+
+  1. Al elaborar un cuestionario es indispensable determinar cuáles son
+  las preguntas ideales para iniciarlo. Éstas deben lograr que el
+  encuestado se concentre en el cuestionario.
+
+  1. Las preguntas no deben apoyarse en instituciones, ideas respaldadas
+  socialmente ni en evidencia comprobada. Es también una manera de
+  inducir la respuesta.
+
+  1. No redactar preguntas en términos negativos, da problemas en el
+  momento de interpretar las respuestas.
+
+  1. Cuidar el lenguaje, evitar la jerga especializada. Las preguntas
+  deben redactarse pensando en las personas de la muestra con la menor
+  capacidad de comprensión, si éstas las entienden, el resto de la
+  muestra las entenderá también.
+
+  1. Evitar las preguntas indiscretas y ofensivas. Las preguntas no
+     deben
+  incomodar al encuestado.
+
+  1. Colocar las preguntas que son más delicadas de una manera y en un
+  lugar que no afecten el porcentaje global de respuestas (por ejemplo,
+  al final del cuestionario)
+
+  1. Las preguntas deben referirse a un solo aspecto o relación lógica
+  ,no deben ser dobles (dos preguntas en una).
+
+  1. Recuerde que las preguntas sobre acontecimientos o sentimientos
+  del pasado lejano no siempre se responden con exactitud.
+
+  1. Son más útiles dos o tres preguntas simples que una muy compleja.
+
+  2. Recuerde que las preguntas hipotéticas que trascienden la
+  experiencia del entrevistado suscitan respuestas menos precisas.
+
+  1. El lenguaje utilizado en las preguntas debe estar adaptado a las
+  características de quien responde, hay que tomar en cuenta su nivel
+  educativo, socioeconómico, palabras que maneja, etc.
+
+
+3 DONE Cuestionarios para diseñar sistemas
+==========================================
+
+  Los cuestionarios o encuestas permiten a un analista recopilar
+  información de muchas personas en un período relativamente corto de
+  tiempo. Esto es especialmente útil cuando las partes interesadas están
+  dispersas geográficamente o hay docenas o cientos de encuestados cuyas
+  aportaciones serán necesarias para establecer los requisitos del
+  sistema
+
+  Al usar cuestionarios, las preguntas deben estar enfocadas y
+  organizadas por característica u objetivo del proyecto. Los
+  cuestionarios no deben ser demasiado largos para garantizar que los
+  usuarios los completen. Al construir el cuestionario, una guía general
+  para determinar las preguntas sería hacer preguntas como 'cómo, dónde,
+  cuándo, quién, qué y por qué'
+
+
+3.1 Ejemplos de preguntas
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  - ¿Cómo utilizará esta característica?
+  - ¿Cómo podríamos satisfacer esta necesidad empresarial?
+  - ¿Cómo sabremos que está completo?
+
+
+3.2 Para dónde
+~~~~~~~~~~~~~~
+
+  - ¿Dónde comienza el proceso?
+  - ¿Dónde accedería el usuario a esta característica?
+  - ¿Dónde serían visibles los resultados?
+
+
+3.3 Para cuándo
+~~~~~~~~~~~~~~~
+
+  - ¿Cuándo se usará esta característica?
+  - ¿Cuándo fallará la característica?
+  - ¿Cuándo estaremos listos para comenzar?
+
+
+3.4 Para quién
+~~~~~~~~~~~~~~
+
+  - ¿Quién usará esta característica?
+  - ¿Quién proporcionará las entradas para la característica?
+  - ¿Quién entregará las salidas de la característica?
+
+
+3.5 Para qué
+~~~~~~~~~~~~
+
+  - ¿Qué sé acerca de esta característica?
+  - ¿Qué debe hacer esta característica?
+  - ¿Cuál es el resultado final?
+  - ¿Qué debe suceder a continuación?
+
+
+4 DONE Diseño del cuestionario
+==============================

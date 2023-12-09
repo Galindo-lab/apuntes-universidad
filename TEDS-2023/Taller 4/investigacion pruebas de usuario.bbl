@@ -1,0 +1,94 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Abizanda_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e2b5c21494c58019af14ecec9acc5328}{%
+           family={Abizanda},
+           familyi={A\bibinitperiod},
+           given={Veronica},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e2b5c21494c58019af14ecec9acc5328}
+      \strng{fullhash}{e2b5c21494c58019af14ecec9acc5328}
+      \strng{bibnamehash}{e2b5c21494c58019af14ecec9acc5328}
+      \strng{authorbibnamehash}{e2b5c21494c58019af14ecec9acc5328}
+      \strng{authornamehash}{e2b5c21494c58019af14ecec9acc5328}
+      \strng{authorfullhash}{e2b5c21494c58019af14ecec9acc5328}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Blog de Hiberus Tecnología}
+      \field{month}{8}
+      \field{title}{Test de usuarios: Qué es y pasos a llevar a Cabo}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.hiberus.com/crecemos-contigo/test-con-usuarios-que-es-pasos/
+      \endverb
+      \verb{url}
+      \verb https://www.hiberus.com/crecemos-contigo/test-con-usuarios-que-es-pasos/
+      \endverb
+    \endentry
+    \entry{Narvaez_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee1931df882a9b668f655ecce3b7f173}{%
+           family={Narvaez},
+           familyi={N\bibinitperiod},
+           given={Marytere},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {QuestionPro}%
+      }
+      \strng{namehash}{ee1931df882a9b668f655ecce3b7f173}
+      \strng{fullhash}{ee1931df882a9b668f655ecce3b7f173}
+      \strng{bibnamehash}{ee1931df882a9b668f655ecce3b7f173}
+      \strng{authorbibnamehash}{ee1931df882a9b668f655ecce3b7f173}
+      \strng{authornamehash}{ee1931df882a9b668f655ecce3b7f173}
+      \strng{authorfullhash}{ee1931df882a9b668f655ecce3b7f173}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{QuestionPro}
+      \field{month}{2}
+      \field{title}{¿Qué son las pruebas con usuarios O test conusuarios?}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.questionpro.com/blog/es/pruebas-con-usuarios-o-test-con-usuarios/
+      \endverb
+      \verb{url}
+      \verb https://www.questionpro.com/blog/es/pruebas-con-usuarios-o-test-con-usuarios/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

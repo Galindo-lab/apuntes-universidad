@@ -1,0 +1,64 @@
+
+#+TITLE:  Práctica 8. Investigación Diseño Web
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   lunes, 30 octubre 2023
+
+# -----
+#+SUBTITLE: 
+#+OPTIONS: toc:nil ^:nil title:t num:2
+#+LANGUAGE: es
+# -----
+
+#+include: "~/.emacs.d/templates/reporte.org"
+#+latex_header: \bibliography{fuentes.bib}
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+
+\makeatletter
+{{{titlepage(~/.emacs.d/templates/img/tinta.png)}}}
+{{{toc}}}
+{{{pagebreak}}}
+{{{datasection(Individual)}}}
+
+* Introducción 
+Durante esta practica investigaremos que es el diseño web y como se relaciona
+con la ingeniería en software, para que sirve y como hacer buenas interfaces.
+
+* ¿Qué es?
+{{{autocite(sanchez_2022)}}} El diseño web es una disciplina enfocada en la 
+planificación, ideación, creación e implementación de interfaces y plataformas 
+digitales. En otras palabras, el diseño web es el proceso que engloba todos los 
+elementos necesarios para crear páginas web.
+
+* ¿Para qué sirve el diseño web?
+{{{autocite(sanchez_2022)}}} El diseño web agrupa y cohesiona la imagen de
+marca, los valores corporativos y el mensaje de la empresa y los plasma en 
+forma de una página web visual y atrayente
+
+* ¿Qué es responsive design?
+{{{autocite(pallerols_2022)}}} El Responsive Design o diseño adaptativo es la
+técnica que se usa en la actualidad para tener una misma web adaptada a las 
+diferentes plataformas que nos brinda la tecnología: ordenador, tablet, 
+Smartphone, iPad, Kindle y, en resumen, todas las resoluciones de pantalla 
+existentes.
+
+* ¿Qué hace un diseñador web?
+{{{autocite(Dias_Dourado_2021)}}} Los diseñadores web tienen en su trabajo 
+tareas rutinarias relacionadas con la creación de un diseño para medios 
+digitales y la creación de contenido. Por lo tanto, deben analizar tanto las 
+necesidades del cliente como los objetivos para configurar un sitio web a fin 
+de brindar a los visitantes la mejor experiencia. Además, diseñadores web deben
+saber cómo insertar gráficos, usar lenguajes como HTML y actualizar el sitio 
+cuando sea necesario. Ahora que has permanecido con nosotros hasta el final del
+texto, ya sabes qué perfil debe tener un buen profesional de diseño web. 
+
+* Conclusion 
+A lo largo de esta investigación aprendí como el diseño web permite crear 
+productos de software de calidad, los diseñadores web permiten presentar
+un producto de mayor calidad. Las herramientas web modernas nos permiten crear
+aplicaciones de mayor calidad en menor tiempo y para una mayor cantidad de 
+dispositivos.
+
+
+* Referencias
+\printbibliography[heading=none]

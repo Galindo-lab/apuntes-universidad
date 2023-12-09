@@ -1,0 +1,64 @@
+#+TITLE:  Taller 7. Investigar una tecnologia emergente
+#+AUTHOR: Luis Eduardo Galidno Amaya 
+#+DATE:   sábado 14 octubre 2023
+
+#+include: "~/.emacs.d/templates/reporte.org"
+#+latex_header: \bibliography{./fuentes.bib}
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+
+{{{titlepage(~/.emacs.d/templates/img/tinta.png)}}}
+{{{datasection(Individual)}}}
+
+* Computación Cuántica
+
+** ¿Qué es?
+{{{autocite(Marella_Parisa_2020)}}} La computación cuántica es un nuevo tipo 
+de cómputo basado en la mecánica cuántica, que trata con el mundo físico, el 
+cual es probabilístico e impredecible por naturaleza. La mecánica cuántica, al
+ser un modelo más general de la física que la mecánica clásica, da origen a un 
+modelo más general de cómputo: la computación cuántica, que tiene un mayor 
+potencial para resolver problemas que no pueden ser resueltos por medios 
+clásicos.
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Computadora cuantica de IBM 
+[[file:img/q.png]]
+
+** Historia de la computacion cuantica 
+{{{autocite(Lopez_2023)}}} Las computadoras cuánticas fueron propuestas en la 
+década de 1980 por Richard Feynman y Yuri Manin. La intuición detrás de la 
+computación cuántica surgió de lo que a menudo se consideraba una de las 
+mayores vergüenzas de la física: un progreso científico notable enfrentado a la
+incapacidad de modelar incluso sistemas simples.
+
+** Ventajsa
+- {{{autocite(Marella_Parisa_2020)}}} Puede resolver fácilmente problemas de optimización, como encontrar la mejor ruta y programar trenes y vuelos. También sería capaz de calcular 1 billón de movimientos en el ajedrez por segundo.
+
+- {{{autocite(Marella_Parisa_2020)}}} Las computadoras cuánticas serán capaces de romper las técnicas de cifrado más seguras e inquebrantables. No obstante, también serán capaces de construir alternativas a prueba de hackeos.
+
+** Desventajas 
+- {{{autocite(Marella_Parisa_2020)}}} Aún no ha sido inventada por completo, ya que solo se están implementando partes y las personas aún están imaginando cómo sería.
+
+- {{{autocite(Marella_Parisa_2020)}}} Es muy delicada y propensa a errores. Cualquier tipo de vibración afecta a las partículas subatómicas como átomos y electrones. Debido a esto, el ruido, las fallas e incluso los errores son posibles. Esto conduce a la "Descoherencia", que es una pérdida de coherencia en lo cuántico.
+
+* Aplicaciones y Ejemplos
+** Criptografia
+{{{autocite(Marella_Parisa_2020)}}} Muchos elementos importantes de la seguridad informática. Esto se hace recorriendo todos los posibles factores utilizando computadoras convencionales, lo que lleva una cantidad significativa de tiempo. Nuevos algoritmos cuánticos (por ejemplo, el algoritmo de Shor) son capaces de hacerlo, y se desarrollarán algoritmos únicos adicionales. 
+
+** Optimizacion 
+{{{autocite(Marella_Parisa_2020)}}} Las computadoras cuánticas son las mejores para resolver problemas de optimización. Hay muchos algoritmos cuánticos, de los cuales los algoritmos cuánticos de optimización pueden mejorar los problemas de optimización ya existentes que se resuelven actualmente con computadoras convencionales. 
+
+** Inteligencia Artifial
+{{{autocite(Marella_Parisa_2020)}}} La Inteligencia Artificial se basa en el procesamiento de conjuntos de datos grandes y complejos. Es responsable del aprendizaje, la inferencia y la comprensión. Aprende hasta que deja de cometer errores en su tarea. Las computadoras cuánticas pueden entrenar estos modelos en un conjunto de datos masivo sin caer en el tiempo exponencial.
+
+* Datos de interés 
+{{{autocite(Arute_2019)}}} Las computadoras cuánticas pueden resolver cualquier problema computacional que cualquier computadora clásica pueda resolver. De acuerdo con la tesis de Church-Turing, la inversa también es cierta: las computadoras clásicas pueden resolver todos los problemas de las computadoras cuánticas. Sin embargo, las computadoras cuánticas pueden resolver tales problemas en complejidades de tiempo razonable y exponencialmente menores, lo que también se conoce como "Supremacía Cuántica".
+
+* Conclusion
+Las computadoras cuanticas a pesar de encontrarse en una etapa muy temprana de desarollo se muestran como una via hacia el futuro de la computacion y los medios de computacion tradicionales estan llegando a sus limites fisicos y cada vez se vuevlen mas costosos de utilizar para algunas aplicaciones.
+
+* Fuentes
+{{{printbibliography}}}

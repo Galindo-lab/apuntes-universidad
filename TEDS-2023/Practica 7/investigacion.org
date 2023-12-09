@@ -1,0 +1,136 @@
+
+#+TITLE: Interacción Humano Computadora
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895) 
+#+DATE:   15 de Octubre del 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:3
+#+latex_class_options: [11pt]
+
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{fuentes.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+#+macro: pagebreak @@latex:\pagebreak@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\tableofcontents
+\pagebreak
+\datasection{Individual}
+
+
+* Introducción
+La Interacción con los sistemas computaciones es indispensable para su 
+utilizacion un buen diseño permite que el software tenga valor para los 
+usuarios reduciendo la cantidad de aprendizaje y capacitacion necesaria para 
+operarlo.
+
+
+* Definicion
+{{{autocite(martinez_2007)}}} La Interacción Humano-Computadora (HCI), es el 
+estudio de la interacción entre el ser humano, las computadoras y las tareas 
+que se desarrollan; principalmente se enfoca a conocer cómo la gente y las
+computadoras pueden interactuar para llevar a cabo tareas por medio de sistemas
+y software.
+
+{{{pagebreak}}}
+
+* Modelo de diseño de la interaccion
+el Modelo de diseño de la interaccion (MODIHC) permite diseñar todos los 
+aspectos involucrados en la interacción entre un humano y una computadora 
+cuando se están desarrollando productos de software {{{autocite(martinez_2007)}}}. 
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 9cm
+#+CAPTION: Componenter de MODIHC
+[[file:img/Design.png]]
+
+** Componente usuarios
+{{{autocite(narciso_valero_2008)}}} Para la IHC, entender el aspecto físico, 
+intelectual y la personalidad de los diferentes usuarios es un factor 
+fundamental. Conocer quiénes y cómo usarán el producto de software permitirá 
+generar un diseño que posteriormente se traducirá en un sistema en operación 
+eficiente y usable. 
+
+** Objetivos del componente usuario
+{{{autocite(narciso_valero_2008)}}} Los objetivos que el diseñador de software 
+debe alcanzar en este componente son los siguientes: 
+
+- Identificar a todos los usuarios del producto de software.
+- Clasificar a los usuarios según sus características.
+- Conocer para qué y bajo qué condiciones se usará el producto de software. 
+- Crear el perfil de usuarios. Determinar características de la IU basadas en los usuarios. Crear el documento de especificación de requisitos. 
+
+
+** Componente ambiente de trabajo
+{{{autocite(narciso_valero_2008)}}} Para el diseño de la IHC, es necesario 
+realizar un estudio del ambiente en el cual va a operar el sistema 
+computarizado y para ello hay que tomar en cuenta tres aspectos: el 
+organizacional, el físico y el social. 
+
+** Objetivos del componente de ambiente de trabajo
+{{{autocite(narciso_valero_2008)}}} Los objetivos que el diseñador de software
+debe alcanzar en este componente son los siguientes: 
+
+- Estudiar los aspectos organizacionales, físicos y sociales del ambiente de trabajo.
+- Conocer la distribución del espacio físico y del trabajo.
+- Localizar equipos y materiales de oficina. 
+- Crear el *documento de especificación del ambiente de trabajo*. 
+- Determinar características de la IU basadas en el ambiente de trabajo. 
+
+** Componente Funcionalidad del Sistema
+{{{autocite(narciso_valero_2008)}}} El diseñador de software debe estudiar el 
+modelo mental que cada uno de los usuarios tiene sobre el sistema y cómo 
+razonan con respecto a sus funciones. Luego, debe ―mezclar‖ estos diferentes 
+modelos mentales para así determinar, mediante la IU, la funcionalidad correcta 
+del sistema. Además, debe conocer las preferencias de los usuarios para 
+determinar lo que ellos encontrarán aceptable como un sistema usable.
+
+** Objetivos del componente funcionalidad del sistema
+{{{autocite(narciso_valero_2008)}}} Los objetivos que el diseñador de software
+debe alcanzar en este componente son los siguientes: 
+
+- Identificar las necesidades de la organización que debe satisfacer el producto de software. 
+- Identificar las metas y requisitos de los usuarios que deben cumplirse mediante el uso del producto de software.
+- Estudiar el modelo mental que cada usuario tiene del sistema.
+- Estudiar las características de la IU definidas en los componentes anteriores. 
+- Estudiar la información obtenida de la fase de análisis del método o metodología de desarrollo de software que se aplique. 
+- Diseñar una IU que represente de manera apropiada la funcionalidad del sistema. 
+
+
+** Componente Tecnología
+{{{autocite(narciso_valero_2008)}}} Para diseñar la IHC, desde el punto de 
+vista de la tecnología, es necesario determinar en primer lugar los 
+dispositivos de entrada/salida apropiados para la interacción con dicho 
+sistema, tomando en cuenta la disponibilidad o posibilidad de adquisición de 
+los mismos dentro de la organización, y en segundo lugar los diferentes estilos
+de interacción (elementos de software), teniendo siempre en mente a los 
+usuarios, la funcionalidad del sistema y el ambiente de trabajo. 
+
+** Objetivos del componente componente tecnología
+{{{autocite(narciso_valero_2008)}}} Los objetivos que el diseñador de software
+debe alcanzar en este componente son los siguientes:
+
+- Seleccionar los dispositivos de entrada/salida que mejor se adapten al usuario, al ambiente de trabajo y a la disponibilidad de recursos de la organización. 
+- Seleccionar los estilos de interacción apropiados para el producto de software a desarrollar. 
+- Determinar características de la IU basadas en la Tecnología. 
+
+
+* Conclusión
+Durante este taller investigue sobre como diseñar las interacciones entre los 
+usuarios y las computadoras, esto fue bastante interesante porque pensaba que 
+que al referirse a 'interacciona' solamente se refreía a los periférico de la 
+computadora, ahora entiendo que el diseño de interacciones se refiere a diseñar 
+software que los usuarios puedan entender.  
+  
+* Referencias
+\printbibliography[heading=none]
+

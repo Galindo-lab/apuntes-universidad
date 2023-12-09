@@ -1,0 +1,66 @@
+
+#+TITLE:  Práctica 10
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   lunes, 06 noviembre 2023
+
+# -----
+#+SUBTITLE: Organización digital disruptivas
+#+INCLUDE: "~/.emacs.d/templates/reporte.org"
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+# -----
+
+#+latex_header: \bibliography{fuentes.bib}
+
+#+latex: \makeatletter
+{{{titlepage(~/.emacs.d/templates/img/tinta.png)}}}
+# {{{toc}}}
+# {{{pagebreak}}}
+{{{datasection(Individual)}}}
+
+* ¿Qué es una organizacion digital disruptivas?
+{{{autocite(Ruiz_2020)}}} Las organizaciones digitales disruptivas son aquellas empresas que han
+adoptado estrategias y tecnologías innovadoras para cambiar
+radicalmente la forma en que operan y ofrecen sus productos o
+servicios. Estas organizaciones aprovechan las nuevas tecnologías para
+alterar sus modelos de negocio tradicionales y, a menudo, buscan crear
+un impacto significativo en sus respectivas industrias.
+
+
+* Ejemplos de empresas digitales disruptivas
+- Amazon :: Amazon revolucionó el comercio minorista en línea y se
+  convirtió en un gigante del comercio electrónico que cambió la forma
+  en que las personas compran y venden productos. 
+
+#+ATTR_LATEX: :width 5cm
+[[file:img/amazon.png]]
+  
+- Uber :: Uber transformó la industria del transporte al introducir un
+  modelo de negocio de transporte compartido basado en una aplicación
+  móvil. 
+
+#+ATTR_LATEX: :width 4cm
+[[file:img/Uber-Logo.png]]
+  
+- Netflix :: Netflix revolucionó la forma en que consumimos contenido
+  de entretenimiento al ofrecer una plataforma de streaming de video
+  bajo demanda.
+
+#+ATTR_LATEX: :width 5cm
+[[file:img/Netflix-Brand-Logo.png]]  
+  
+- Airbnb :: Airbnb cambió la forma en que las personas encuentran
+  alojamiento al permitir que los propietarios de viviendas alquilen
+  sus espacios a corto plazo. 
+
+#+ATTR_LATEX: :width 5cm
+[[file:img/Airbnb_Logo_Bélo.svg.png]]
+
+
+* Conclusión
+A lo largo de esta practica aprendí que es una empresa disruptiva y
+como estas impulsan las tecnologías a un futuro digital ofreciendo
+servicios de manera innovadora sin temor a confrontar el estatus actual.
+
+* Referencias
+\printbibliography[heading=none]

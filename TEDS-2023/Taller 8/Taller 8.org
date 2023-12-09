@@ -1,0 +1,113 @@
+
+#+TITLE:  Taller 8. Descripción del problema
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   miércoles, 25 octubre 2023
+# -----
+
+#+include: "~/.emacs.d/templates/reporte.org"
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+
+\makeatletter
+{{{titlepage(~/.emacs.d/templates/img/tinta.png)}}}
+{{{toc}}}
+{{{pagebreak}}}
+{{{datasection(Individual)}}}
+
+* Descripción del Problema 
+En la actualidad uno de los mayores desafíos que tienen los hospitales es la 
+organización, gestionar la mayor cantidad de pacientes de la manera mas ordenada 
+posible, además de capturar sus datos de forma sencilla. Integrar los problemas
+que presenta la organización de los consultorios de un hospital permitiría sin
+dudas agilizar los procesos internos reduciendo los tiempos entre consultas.
+
+* Descripción de la Solución
+La solución que se plantea consiste en integrar varias partes básicas para la 
+organización de un hospital, integrarlos permitiría pasar información rápidamente 
+entre los sistemas, supervisar las diferentes etapas de los procesos y  :
+
+** Captura de pacientes
+El sistema captura los datos de los pacientes al llegar a la clínica para 
+agregarlos a la fila de espera.
+
+** Priorizacion de pacientes 
+Se les asignara una prioridad al llegar las, personas de mayor edad, embarazadas
+y emergencias deben pasar primero.
+
+** Gestión de consultorios
+al ser el turno del paciente se le asignara al consultorio disponible. 
+
+** Captura de historiales médicos 
+El sistema captura los historiales médicos de una manera mas sistemática acorde
+a el tipo de hospital que esta utilizando el sistema.
+
+** Emisión de recetas médicas 
+Al terminar la consulta el sistema emite una receta al correo del paciente.
+
+** Análisis de los datos
+Una vez con el sistema en linea se puede mantener una supervisión constante de 
+las clínicas y de los pacientes atendidos en ellas mediante un dashboard.
+
+# sistema médico para un hospital 
+# - Ordena pacientes por prioridad y tiempo de llegada 
+# - Da de alta las citas 
+# - Asigna pacientes a las clínicas adecuadas 
+# - Asiste a los doctores en la captura de historiales médicos
+# - Emite recetas médicas a los pacientes y a la farmacia
+
+
+{{{pagebreak}}}
+
+* Tecnologías a aplicar
+** Django y Python
+Para controlar la base de datos y las vistas se usara django, soluciona 
+principalmente todo lo relacionado al modelo MVC. Django esta hecho con python
+por lo que el desarollo principalmente se hará en python. 
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Django y Python
+[[file:img/python-django.png]]
+
+** Docker
+Para el despliegue de la aplicación se usara Docker, docker es una tecnología 
+de Contenderían de aplicaciones la cual nos hace no ser tan dependientes 
+del hardware del usuario lo cual nos permite únicamente enfocarnos en el 
+desarrollo. 
+
+** Bootsrap
+Bootsrap es un framework de css para web que permite crear interfaces web de 
+manera sencilla, una de las ventajas de usar este framework es que no tenemos 
+
+** MongoDB
+MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de código 
+abierto. A comparación de otras bases de datos Mongo almacena sus registros como
+archivos individuales
+
+* Aplicaciones futuras 
+** Análisis de datos
+Una de las posibles aplicaciones secundarias de nuestra solución es analizar
+los diagnósticos de los pacientes y sus recetas para poder predecir que cosas
+se deben solicitar en cada época del años así como detectar epidemias. 
+   
+** Estimación de tiempos
+Utilizando da cantidad de doctores, los tiempos en los que trabajan el sistema 
+podría hacer estimaciones del tiempo que tomara la consulta desde que se 
+solicita.
+
+* Tecnologías con las que se puede complementar
+** Ciencia de datos
+Al se un sistema que recolecta datos se podría utilizar para capturar datos y 
+crear datasets que pueden permitir hacer ciencia de datos, claramente 
+respetando la ley de protección de datos y viendo por la privacidad del 
+usuario en todo momento.
+
+** Sistemas expertos
+La recopilación de datos puede ayudar a la creación de sistemas expertos que 
+puedan asistir a los doctores de manera que puedan hacer preguntas mas 
+precisa para poder hacer diagnósticos mas efectivos.
+
+* Conclusión
+Durante esta practica pude reflexionar como las tecnologías que creamos pueden
+ayudar a las personas a poder hacer mas con las tecnología y como identificar 
+los problemas que se pueden solucionar tecnologías que dominamos.  

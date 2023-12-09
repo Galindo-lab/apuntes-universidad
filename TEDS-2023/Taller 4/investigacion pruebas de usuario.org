@@ -1,0 +1,78 @@
+#+TITLE:  Investigación pruebas de usuario
+#+AUTHOR: Luis Eduardo Galidno Amaya 
+#+DATE:   10 Septiembre del 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./fuentes.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code     @@latex:\lstinputlisting{$1}@@
+#+macro: cite     @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+#+latex: \modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+#+latex: \tableofcontents\pagebreak
+#+latex: \datasection{Individual}
+
+* Introducción
+En esta taller se ralizara una investigacion de pruebas de usaurio, conocer
+como el software puede ser usado por el usuario es muy importante ya que esto
+puede mostrar fallos que no son faciles de detectar en las primeras fases de 
+desarollo.
+
+* Pruebas de usuario
+{{{autocite(Narvaez_2023)}}} Una prueba con usuarios o test con usuarios es un 
+método para evaluar la funcionalidad y la interfaz de un sitio web, una 
+aplicación, un producto o un servicio haciendo que usuarios reales realicen 
+tareas específicas en él en condiciones realistas. 
+
+* Importancia de las pruebas de usuario 
+{{{autocite(Abizanda_2023)}}} Los tests con usuarios son una prueba que nos
+permite recoger información cualitativa para entender, principalmente, cómo y 
+por qué los usuarios utilizan un producto.
+
+Durante el test se pide a los usuarios realizar una serie de tareas para
+interactuar con el producto, lo que nos permite descubrir:
+
+- Cómo navegan por el producto
+- Por qué llevan a cabo ciertas acciones
+- Con qué problemas se encuentran
+- Qué valoran positivamente
+- Cuántos funcionalidades o aspectos echan en falta
+
+Estos insights, entre otros, nos permiten mejorar el producto para conseguir 
+que la experiencia del usuario al utilizarlo sea la mejor posible, e incluso 
+conseguir que les encante nuestro producto.
+
+* Como realizar pruebas de usuario 
+{{{autocite(Abizanda_2023)}}}
+
+- 1. Definir los objetivos 
+- 2. Decidir el tipo de test 
+- 3. Disponer del producto a testar 
+- 4. Identificar los tipos de perfiles de usuario 
+- 5. Diseñar las tareas y cuestiones 
+- 6. Seleccionar y captar a los usuarios 
+- 7. Preparar el espacio y los materiales 
+- 8. Elaborar una prueba piloto 
+- 9. Llevar a cabo el test 
+- 10. Analizar los resultados y proponer mejoras 
+
+* Conclusión 
+A lo lardo de este taller aprendí que son las pruebas de usuario y su 
+funcionalidad, entender como podemos hace la experiencia del usuario mas cómoda 
+nos permite dar mas valor a los productos de software que creamos, un software
+que permite al usuario hacer las cosas que quiere es mas valioso que un software
+que puede hacer muchas cosas en mi opinión
+
+* Referencias
+\printbibliography[heading=none]
+
+

@@ -1,0 +1,127 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Eid_2015}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dff6409527d19dae456c25b223d6bb7d}{%
+           family={Eid},
+           familyi={E\bibinitperiod},
+           given={Mamoun},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dff6409527d19dae456c25b223d6bb7d}
+      \strng{fullhash}{dff6409527d19dae456c25b223d6bb7d}
+      \strng{bibnamehash}{dff6409527d19dae456c25b223d6bb7d}
+      \strng{authorbibnamehash}{dff6409527d19dae456c25b223d6bb7d}
+      \strng{authornamehash}{dff6409527d19dae456c25b223d6bb7d}
+      \strng{authorfullhash}{dff6409527d19dae456c25b223d6bb7d}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{University of Missouri–St. Louis}
+      \field{month}{11}
+      \field{title}{Requirement Gathering Methods}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://www.umsl.edu/~sauterv/analysis/F2015/Requirement%20Gathering%20Methods.html.htm
+      \endverb
+      \verb{url}
+      \verb https://www.umsl.edu/~sauterv/analysis/F2015/Requirement%20Gathering%20Methods.html.htm
+      \endverb
+    \endentry
+    \entry{Fernandez_2007}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9e939494ff4505d4ff0d6067564f0d49}{%
+           family={Fernández},
+           familyi={F\bibinitperiod},
+           given={Lissette},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9e939494ff4505d4ff0d6067564f0d49}
+      \strng{fullhash}{9e939494ff4505d4ff0d6067564f0d49}
+      \strng{bibnamehash}{9e939494ff4505d4ff0d6067564f0d49}
+      \strng{authorbibnamehash}{9e939494ff4505d4ff0d6067564f0d49}
+      \strng{authornamehash}{9e939494ff4505d4ff0d6067564f0d49}
+      \strng{authorfullhash}{9e939494ff4505d4ff0d6067564f0d49}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{¿Cómo se elabora un cuestionario?}
+      \field{month}{3}
+      \field{title}{Fichas para investigadores - ub.edu}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb https://www.ub.edu/idp/web/sites/default/files/fitxes/ficha8-cast.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ub.edu/idp/web/sites/default/files/fitxes/ficha8-cast.pdf
+      \endverb
+    \endentry
+    \entry{olmo2002cuestionario}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8f25d95a7a6d42c09a350acb97a1c552}{%
+           family={Olmo},
+           familyi={O\bibinitperiod},
+           given={F.M.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Laertes, S.A. de Eciciones}%
+      }
+      \strng{namehash}{8f25d95a7a6d42c09a350acb97a1c552}
+      \strng{fullhash}{8f25d95a7a6d42c09a350acb97a1c552}
+      \strng{bibnamehash}{8f25d95a7a6d42c09a350acb97a1c552}
+      \strng{authorbibnamehash}{8f25d95a7a6d42c09a350acb97a1c552}
+      \strng{authornamehash}{8f25d95a7a6d42c09a350acb97a1c552}
+      \strng{authorfullhash}{8f25d95a7a6d42c09a350acb97a1c552}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9788475844886}
+      \field{series}{Laertes (Serie)}
+      \field{title}{El cuestionario: un instrumento para la investigación en las ciencias sociales}
+      \field{year}{2002}
+      \verb{urlraw}
+      \verb https://books.google.com.mx/books?id=K6j8AAAACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com.mx/books?id=K6j8AAAACAAJ
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

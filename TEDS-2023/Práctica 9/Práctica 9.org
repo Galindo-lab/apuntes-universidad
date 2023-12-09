@@ -1,0 +1,163 @@
+
+#+TITLE:  Práctica 9. Entrevista
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   miércoles, 01 noviembre 2023
+
+# -----
+#+SUBTITLE: 
+#+INCLUDE: "~/.emacs.d/templates/reporte.org"
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+# -----
+
+#+latex_header: \bibliography{fuentes.bib}
+
+#+latex: \makeatletter
+{{{titlepage(~/.emacs.d/templates/img/tinta.png)}}}
+{{{toc}}}
+{{{pagebreak}}}
+{{{datasection(Individual)}}}
+
+* Introducción
+Durante esta practica se investigara como redactar una entrevista para
+desarollar una tecnologia emergente.
+
+* ¿Como hacer un cuestionario?
+{{{autocite(olmo2002cuestionario)}}} Pasar un cuestionario no es en sí
+mismo una investigación. El cuestionario solamente es un instrumento,
+una herramienta para recolectar datos con la finalidad de utilizarlos
+en una investigación. Primero debemos tener claro qué tipo de
+investigación queremos realizar, para entonces poder determinar si nos
+puede resultar útil aplicar un cuestionario. \\
+
+{{{autocite(olmo2002cuestionario)}}} Es conveniente determinar con
+claridad: (a) qué tipo de información necesitamos y (b) de qué
+personas queremos su opinión. Esto debe permitir tomar decisiones
+sobre qué preguntas son necesarias y cuáles  no, y sobre el estilo de
+redacción de las preguntas. Por ejemplo, no  se puede utilizar el
+mismo lenguaje en un cuestionario dirigido a niños, que en uno
+dirigido a jóvenes, adultos o gente mayor.
+
+* Redaccion de preguntas
+Acorde a {{{cite(Fernandez_2007)}}}
+
+- 1. Las preguntas deben ser claras, sencillas, comprensibles y
+  concretas. Se deben evitar las preguntas ambiguas, imprecisas,
+  confusas o que supongan un conocimiento especializado por parte del
+  participante.
+
+- 2. No formular preguntas que presuponen una respuesta específica o que
+  inducen al participante a responder de determinada manera, sino las
+  que permiten todo tipo de respuesta. 
+
+- 3. Colocar al inicio del cuestionario preguntas neutrales o fáciles de
+  contestar para que el encuestado vaya adentrándose en la
+  situación. No se recomienda comenzar con preguntas difíciles o muy directas.
+
+- 4. Al elaborar un cuestionario es indispensable determinar cuáles son
+  las preguntas ideales para iniciarlo. Éstas deben lograr que el
+  encuestado se concentre en el cuestionario. 
+
+- 5. Las preguntas no deben apoyarse en instituciones, ideas respaldadas
+  socialmente ni en evidencia comprobada. Es también una manera de
+  inducir la respuesta.
+
+- 6. No redactar preguntas en términos negativos, da problemas en el
+  momento de interpretar las respuestas.
+
+- 7. Cuidar el lenguaje, evitar la jerga especializada. Las preguntas
+  deben redactarse pensando en las personas de la muestra con la menor
+  capacidad de comprensión, si éstas las entienden, el resto de la
+  muestra las entenderá también.
+
+- 8. Evitar las preguntas indiscretas y ofensivas. Las preguntas no
+  deben incomodar al encuestado. 
+
+- 9. Colocar las preguntas que son más delicadas de una manera y en un
+  lugar que no afecten el porcentaje global de respuestas (por
+  ejemplo, al final del cuestionario) 
+
+- 10. Las preguntas deben referirse a un solo aspecto o relación lógica,no
+  deben ser dobles (dos preguntas en una).
+
+- 11. Recuerde que las preguntas sobre acontecimientos o sentimientos
+  del pasado lejano no siempre se responden con exactitud. 
+
+- 12. Son más útiles dos o tres preguntas simples que una muy compleja.
+
+- 13. Recuerde que las preguntas hipotéticas que trascienden la
+  experiencia del entrevistado suscitan respuestas menos precisas. 
+
+- 14. El lenguaje utilizado en las preguntas debe estar adaptado a las
+  características de quien responde, hay que tomar en cuenta su nivel
+  educativo, socioeconómico, palabras que maneja, etc. 
+
+* Cuestionarios para diseñar sistemas
+{{{autocite(Eid_2015)}}} Los cuestionarios o encuestas permiten a un
+analista recopilar información de muchas personas en un período
+relativamente corto de tiempo. Esto es especialmente útil cuando las
+partes interesadas están dispersas geográficamente o hay docenas o
+cientos de encuestados cuyas aportaciones serán necesarias para
+establecer los requisitos del sistema. \\
+
+{{{autocite(Eid_2015)}}} Al usar cuestionarios, las preguntas deben
+estar enfocadas y organizadas por característica u objetivo del
+proyecto. Los cuestionarios no deben ser demasiado largos para
+garantizar que los usuarios los completen. Al construir el
+cuestionario, una guía general para determinar las preguntas sería
+hacer preguntas como 'cómo, dónde, cuándo, quién, qué y por qué'.
+
+# ** Ejemplos de preguntas
+# - ¿Cómo utilizará esta característica?
+# - ¿Cómo podríamos satisfacer esta necesidad empresarial? 
+# - ¿Cómo sabremos que está completo? 
+
+# ** Para dónde
+# - ¿Dónde comienza el proceso? 
+# - ¿Dónde accedería el usuario a esta característica? 
+# - ¿Dónde serían visibles los resultados? 
+
+# ** Para cuándo
+# - ¿Cuándo se usará esta característica? 
+# - ¿Cuándo fallará la característica?
+# - ¿Cuándo estaremos listos para comenzar?
+
+# ** Para quién
+# - ¿Quién usará esta característica?
+# - ¿Quién proporcionará las entradas para la característica?
+# - ¿Quién entregará las salidas de la característica?
+
+# ** Para qué
+# - ¿Qué sé acerca de esta característica?
+# - ¿Qué debe hacer esta característica?
+# - ¿Cuál es el resultado final?
+# - ¿Qué debe suceder a continuación?
+
+* Diseño del cuestionario
+En base a la investigación anterior se desarollo el siguiente formulario sobre
+una tecnologia emergente: 
+
+- 1. ¿A que grupo o industria podría interésale la tecnología?
+- 2. ¿Qué necesidades o problemas específicos podría resolver para estos
+  grupos?
+- 3. ¿Qué soluciona esta tecnología?
+- 4. ¿Qué beneficios se espera con la adopción de esta tecnología?
+- 5. ¿Qué desafíos se espera con la adopción de esta tecnología?
+- 6. ¿A qué desafíos se enfrenta la tecnología emergente? 
+- 7. ¿Se esperan mejoras en la eficiencia o calidad del proceso?
+- 8. ¿Cuáles son las barreras para la adopción en el mercado?
+- 9. ¿Los beneficios se esperan a corto, mediano o largo plazo?
+- 10. ¿Qué impacto se espera en la sociedad, la economía o la industria?
+- 11. ¿La tecnología puede ser peligrosa para los usuarios?
+- 12. ¿Ya hay un análisis económico de los costos de la tecnología?
+- 13. ¿Seguiría siendo beneficioso a largo plazo?
+
+* Conclusión
+Durante esta practica aprendí como diseñar buenas entrevistas que
+proporcionen información útil al desarrollo del proyecto, entender como
+dejar claras el objetivo del producto ayuda a completar el proceso de
+manera mas eficiente y se puede usar para tomar en cuenta en los
+requerimientos del programa. 
+
+* Referencias
+\printbibliography[heading=none]
