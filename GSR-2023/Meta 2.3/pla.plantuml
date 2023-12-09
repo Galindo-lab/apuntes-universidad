@@ -1,0 +1,60 @@
+@startmindmap
+!theme plain
+skinparam classattributeiconsize 0
+
+- Seguridad en redes
+
+' Windows
+-- Windows
+--- Centro de actividades
+---- Firewall, Antimalware, Actualizaciones
+
+--- Windows Defender
+---- Protección contra malware
+
+--- Windows SmartScreen
+---- Advertencia para aplicaciones no reconocidas
+
+--- Control de cuentas de usuario (UAC)
+---- Permiso antes de instalar software
+
+--- Historial de archivos
+---- Copias de seguridad automáticas
+
+--- Windows Update
+---- Actualizaciones automáticas
+
+--- Firewall de Windows
+---- Protección contra hackers
+
+' Linux
+++ Linux
++++ Deshabilitar SSH
+++++ Eliminar servicios innecesarios
+++++ Deshabilitar acceso raíz, Cambiar puerto, Autenticación
+
++++ Definir reglas de firewall
+++++ Usar Nftables o Iptables, Políticas restrictivas
+
++++ Proteger el BIOS
+++++ Mantener actualizado el BIOS
+
++++ Cifrar almacenamiento
+++++ Cifrado de disco
+
++++ Mantener sistema actualizado
+++++ Actualizaciones regulares
+
++++ Habilitar VPN
+++++ Privacidad en línea
+
++++ Implementar Honeypots y Honeynets
+++++ Registro de actividad de atacantes
+
++++ Análisis de vulnerabilidades
+++++ Escaneo de vulnerabilidades
+
++++ Prácticas comunes
+++++ Evitar uso de root, Contraseñas seguras, No software no utilizado, Cambio de nombres de usuario
+
+@endmindmap

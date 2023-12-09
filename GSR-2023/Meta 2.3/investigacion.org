@@ -1,0 +1,77 @@
+
+#+TITLE:  ¿Como fortalecer un servidor Linux y Windows?
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895) 
+#+DATE:   25 de Septiembre 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./sources.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\tableofcontents
+\pagebreak
+\datasection{Individual}
+
+* Lista de verificación de refuerzo Linux
+{{{cite(lista_linux)}}}
+
+0. Deshabilitar SSH
+1. Deshabilitar acceso raíz SSH
+2. Cambiar puerto predeterminado de SSH
+3. Deshabilitar la autenticación de contraseña SSH
+4. Definir las reglas adecuadas de Nftables o Iptables
+5. Implementar IDS (Sistema de detección de intrusos)
+6. Asegurar el BIOS
+7. Cifrar dispositivos de almacenamiento y particiones
+8. Proteja el sistema contra rootkits
+9. Mantenga el sistema actualizado
+10. VPN (red privada virtual)
+11. Habilitar SELinux (Linux con seguridad mejorada)
+12. Implementar Honeypots y Honeynets
+13. Análisis externo de su dispositivo en busca de vulnerabilidades
+
+* Lista de verificación de refuerzo Windows
+{{{cite(Alex_2021)}}}
+
+0. Nunca conecte un servidor IIS a Internet hasta que esté completamente protegido.
+1. Coloque el servidor en un lugar físicamente seguro.
+2. Utilice dos interfaces de red en el servidor: una para el administrador y otra para la red.
+3. Instale service packs, parches y hotfix.
+4. Ejecute el kit de herramientas de cumplimiento de seguridad de Microsoft.
+5. Ejecute IIS Lockdown en el servidor
+6. Deshabilite los servicios de Windows innecesarios.
+7. Asegúrese de que los servicios se ejecuten con los privilegios mínimos cuentas.
+8. Desactive el servicio Telnet.
+9. Desactive el servicio de estado ASP.NET si no lo utilizan sus aplicaciones.
+10. Desactive la creación y el control de versiones distribuidos en la web si la aplicación no lo utiliza, o asegúrelo si es necesario.
+11. No instale Microsoft Data Access Components (MDAC) a menos que sea específicamente necesario.
+12. No instale la versión HTML de Internet Services Manager.
+13. No instale Microsoft Index Server a menos que sea necesario.
+14. No instale Microsoft FrontPage Server Extensions (FPSE) a menos que sea necesario.
+15. Fortalezca la pila de TCP / IP.
+16. Desactive NetBIOS y el bloque de mensajes del servidor: cierre los puertos 137, 138, 139 y 445.
+17. Reconfigure las políticas de datos del sistema de archivos de páginas y papelera de reciclaje.
+18. Configuración segura de CMOS (semiconductor complementario de óxido de metal).
+19. Medios físicos seguros: unidad de CD-ROM, etc.
+
+* Diagrma
+[[file:a.png]]
+
+* Conclusión
+A lo largo de esta practica aprendi que cosas se deben tomar en cuenta para mantener un sistema
+operativo de manera segura, con la simplicidad de intara un sistema operativo hoy en dia se puede
+dar espacio no configurar adecuadamente los acesso al sistema.
+
+* Referencias
+\printbibliography[heading=none]

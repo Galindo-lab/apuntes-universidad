@@ -1,0 +1,80 @@
+
+#+TITLE:  Instalación, configuración y administración de un servidor Linux
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895) 
+#+DATE:   18 de Septiembre 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{../sample.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\tableofcontents
+\pagebreak
+\datasection{Individual}
+
+* Introduccion
+La noticia que encontre en linux fue la siguiente: \\
+Habla de un error encontrado en el kernel de Linux se refiere a una 
+vulnerabilidad de seguridad identificada como CVE-2023-32233 que permite a 
+usuarios autenticados localmente obtener derechos adicionales en el sistema, 
+incluidos privilegios de root. Piotr Krysiuk fue le responsable de eonctrar 
+esta vulnerabilidad, probablemente será parcehada en unos dias.
+
+* Instaslacion de Linux
+** Creacion de la maquina virtual 
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 9cm
+#+CAPTION: Utilizando VirtualBox
+[[file:img/Captura de pantalla de 2023-09-17 21-52-24.png]]
+
+\pagebreak
+
+** Arrancado el ISO
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Pantalla de boot
+[[file:img/Captura de pantalla de 2023-09-17 21-54-09.png]]
+
+** Instalando los programas y actualizaciones
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Instalación de linuxLite
+[[file:img/Captura de pantalla de 2023-09-17 21-58-10.png]]
+
+\pagebreak
+
+** Lista de usuarios 
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 9cm
+#+CAPTION: Usarios hasta el momento
+[[file:img/usuarios.png]]
+
+** Creando usuarios
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 9cm
+#+CAPTION: Utilizando comandos para crear Usuarios
+[[file:img/Captura de pantalla de 2023-09-17 23-32-10.png]]
+
+\pagebreak
+
+** Listar usuarios 
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Lista de suaurios 
+[[file:img/Captura de pantalla de 2023-09-17 23-32-29.png]]
+
+* Conclusión
+A lo largo de la practica aprendi como crear usuarios y como 
+instalar uan distribusion linux. Como ingenierios en software pienso que debemos 
+aprender a trabajar con diversos sistemas operativos.

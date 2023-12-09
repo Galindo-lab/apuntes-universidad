@@ -1,0 +1,31 @@
+
+#+TITLE:  Meta 3.3. Conocer los sistemas criptográficos y sus diferentes características
+#+AUTHOR: Luis Eduardo Galidno Amaya 
+#+DATE:   25 de Agosto del 2023
+
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{fuentes.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+\pagebreak
+
+
+* Conclusión 
+Durante esta practica aprendí como identificar los diferentes sistemas de 
+encriptacion desde los clásicos a los modernos y como los sistemas modernos 
+se aprovechan de las matemáticas para encriptar los datos de manera mas segura

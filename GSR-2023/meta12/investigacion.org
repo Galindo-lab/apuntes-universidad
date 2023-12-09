@@ -1,0 +1,81 @@
+
+#+TITLE:  Conocer que es la Seguridad en \\
+#+TITLE:  redes de cómputo y los diferentes elementos que la integran
+#+AUTHOR: Luis Eduardo Galidno Amaya 
+#+DATE:   25 de Agosto del 2023
+
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{fuentes.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+
+* Definiciones seguridad en red 
+** Definición 1
+{{{autocite(barney_lutkevich_2022)}}}  La seguridad de red abarca todos los pasos tomados para proteger la integridad de una red de computadoras y los datos dentro de ella. La seguridad de red es importante porque mantiene los datos sensibles a salvo de los ciberataques y asegura que la red sea utilizable y confiable. Las estrategias exitosas de seguridad de red emplean múltiples soluciones de seguridad para proteger a los usuarios y las organizaciones del malware y los ciberataques, como el ataque distribuido de denegación de servicio (DDoS).
+
+** Definición 2
+{{{autocite(Prabhu_24_2021)}}} La seguridad de red se define como el proceso de crear un enfoque defensivo estratégico que asegura los datos de una empresa y sus recursos en toda su red. Protege a la organización contra cualquier forma de amenaza potencial o acceso no autorizado. Independientemente del tamaño de la organización, la industria o la infraestructura, las soluciones de seguridad de red la protegen contra la amenaza en constante evolución de los ciberataques.
+
+** Definición 3
+{{{autocite(Naz_2023)}}} La definición aceptada a nivel global es que la seguridad de red es un sistema que protege múltiples aspectos como la tecnología, los dispositivos y los procesos. Protege los datos confidenciales tanto de las tecnologías de hardware como de software. Las empresas, independientemente de su tamaño, están utilizando la seguridad de red.
+
+* Mapa mental
+#+begin_src plantuml :file ./images/diagram.png
+  ,@startmindmap
+  ,!theme plain
+  ,scale 5
+  ,* Fundamentos de Seguridad de Red
+  ,** Enfoque Multicapa
+  ,*** Aborda ataques en cualquier capa de la configuración de la red
+  ,*** Hardware, software y políticas de red para cada capa
+  ,** Control de Acceso
+  ,*** Restringe el acceso a los datos
+  ,** Identificación
+  ,*** Nombres de usuario y números de identidad
+  ,*** Confirma la identidad del usuario, procesos o dispositivos
+  ,** Autenticación
+  ,*** Verifica credenciales durante el inicio de sesión en una red
+  ,** Autorización
+  ,*** Proporciona acceso a datos específicos después de verificar credenciales
+  ,** Contabilidad
+  ,*** Rastrea las acciones del usuario en la red
+  ,*** Identifica acciones autorizadas y no autorizadas
+  ,** Seguridad Física de la Red
+  ,*** Evita el acceso físico no autorizado
+  ,*** Cerraduras, autenticación biométrica y otros dispositivos
+  ,** Seguridad Técnica de la Red
+  ,*** Protege todos los datos de la red
+  ,*** Datos entrantes, salientes o en tránsito
+  ,*** Protege contra personal no autorizado y actividades maliciosas
+  ,** Seguridad Administrativa de la Red
+  ,*** Controla el comportamiento del usuario
+  ,*** Políticas y procesos de seguridad
+  ,*** Autenticación de usuarios, niveles de acceso, cambios de infraestructura por personal de TI
+  @endmindmap
+#+end_src
+
+#+ATTR_HTML:
+#+ATTR_LATEX:
+#+CAPTION: Fuentes {{{cite(Naz_2023)}}}
+#+RESULTS:
+[[file:./images/diagram.png]]
+
+
+* Referencias
+\printbibliography[heading=none]
+

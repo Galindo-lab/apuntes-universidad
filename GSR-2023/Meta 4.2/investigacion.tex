@@ -1,0 +1,103 @@
+% Created 2023-11-11 sáb 15:29
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{../modern}
+\bibliography{./sources.bib}
+\raggedbottom
+\setcounter{secnumdepth}{2}
+\author{Luis Eduardo Galindo Amaya}
+\date{sábado, 11 noviembre 2023}
+\title{Meta 4.2 Instrucciones\\\medskip
+\large Conocer que son los servicios de redes}
+\hypersetup{
+ pdfauthor={Luis Eduardo Galindo Amaya},
+ pdftitle={Meta 4.2 Instrucciones},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.1 (Org mode 9.5.2)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\tableofcontents
+\pagebreak
+\datasection{Individual}
+
+\section{¿Qué es un servicio de red?}
+\label{sec:org45a1d55}
+\autocite{Wikipedia_2023} Un servicio de red es la creación de
+una red de trabajo en un ordenador. Generalmente los servicios de red
+son instalados en uno o más firewalls del servidor seleccionado. Eso
+facilita el uso y el fallo de muchos usuarios.
+
+Un administrador de red debe mantener y desarrollar la infraestructura
+de red de un negocio. Este se crea cuando se conecta dos o más equipos
+de una red a través de cables a un eje central, o a través de
+dispositivos inalámbricos para compartir información y recursos.
+
+\section{Protocolo de Configuración Dinámica de Host (DHCP)}
+\label{sec:org353cdb6}
+Es un estándar utilizado para la configuración automática de
+direcciones IP y otros parámetros en redes TCP/IP, reduciendo la carga
+administrativa y la complejidad en la configuración de hosts. Permite
+la gestión centralizada de direcciones IP y la comunicación entre
+equipos clientes y servidores DHCP a través de agentes de
+retransmisión. 
+
+\section{Protocolo Simple de Administración de Red (SNMP)}
+\label{sec:org814df06}
+SNMP es el estándar utilizado para la gestión de redes
+TCP/IP. Facilita la monitorización de la red a través de estaciones de
+trabajo (gestores) que recopilan información de agentes pasivos
+ubicados en dispositivos de red como routers y servidores. SNMP se
+basa en el intercambio de mensajes conocidos como Protocolos de Unidad
+de Datos (PDUs) y es ampliamente utilizado debido a su simplicidad. 
+
+\section{Correo electrónico}
+\label{sec:orgaae7237}
+Los sistemas de correo electrónico constan de dos subsistemas: agentes
+de usuario (MUA) y agentes de transferencia de mensajes (MTA). El MUA
+es un programa que permite componer, recibir y gestionar correos
+electrónicos, mientras que el MTA se encarga de transferir mensajes
+entre hosts utilizando el Protocolo para la Transferencia Simple de
+Correo Electrónico (SMTP). Los mensajes pueden pasar por varios MTAs
+antes de llegar a su destino. 
+
+\section{Domain Name System (DNS)}
+\label{sec:org784a6b9}
+El DNS es un servicio de Internet que traduce nombres de dominio y
+URLs en direcciones IP. Esto facilita a los usuarios recordar sitios
+web utilizando nombres en lugar de direcciones numéricas. El servidor
+DNS procesa las solicitudes y busca en una base de datos para realizar
+la conversión de nombres en direcciones IP. 
+
+\section{Protocolo de Transferencia de Archivos (FTP)}
+\label{sec:org2879929}
+FTP es un protocolo que permite la transferencia de archivos entre
+ordenadores a través de Internet. Utiliza TCP/IP y facilita la carga y
+descarga de archivos. En una conexión FTP, se abre un puerto de
+control en el servidor (puerto 21) y una segunda conexión de datos
+desde el puerto 20 al cliente. FTP es útil para compartir archivos de
+gran tamaño y utiliza el protocolo TCP para gestionar la transferencia
+de datos. 
+
+\section{Conclusión}
+\label{sec:org3dff412}
+A lo largo de la practica aprendi que son los servicios de red y para
+que sirve y como cada uno brinda funcionalidades a las personas en la red.
+
+\section{Referencias}
+\label{sec:org4433765}
+\printbibliography[heading=none]
+\end{document}

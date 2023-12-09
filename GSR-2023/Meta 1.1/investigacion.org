@@ -1,0 +1,116 @@
+
+#+TITLE:  Conocer que es la Administración de redes de cómputo y 
+#+TITLE:  los diferentes elementos que la integran.
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895) 
+#+DATE:   16 de Agosto 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{../sample.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\datasection{Individual}
+
+*Primero* Investigar en sitios confiables, 3 definiciones de ''Administración de
+redes de cómputo''. *Segundo* Investigar en sitios confiables las características
+y elementos principales de la Administración de redes de cómputo y realizar un 
+mapa conceptual.
+
+* Investigación
+** Techopedia
+{{{autocite(Rouse_2017)}}} La administración de redes implica una amplia variedad de tareas operativas que 
+ayudan a que una red funcione de manera fluida y eficiente. Sin la 
+administración de redes, sería difícil mantener las operaciones de red en
+marcha, excepto en las redes más pequeñas.
+
+Las principales tareas asociadas con la administración de redes incluyen:
+
+- Diseño, instalación y evaluación de la red.
+- Ejecución y administración de copias de seguridad regulares.
+- Creación de documentación técnica precisa, como diagramas de red, documentos de cableado de red, etc.
+- Provisión de autenticación precisa para acceder a los recursos de la red.
+- Provisión de asistencia para la resolución de problemas.
+- Administración de la seguridad de la red, incluida la detección de intrusiones.
+# \pagebreak
+
+** Solarwinds
+{{{autocite(unknown_2020)}}} La administración de redes tiene como objetivo gestionar, supervisar, mantener,
+asegurar y brindar servicio a la red de una organización. Sin embargo, las
+tareas y procedimientos específicos pueden variar según el tamaño y el tipo
+de organización . 
+
+** ADMONredes
+{{{autocite(ADMONredes_2023)}}} La administración de redes informáticas, de redes lan, de redes de área local, o
+de redes de computadoras, como queráis nombrarlo, es las diversas tareas que 
+desarrollan los profesionales de TI en una red informática con el objetivo de 
+brindar de forma eficiente numerosos servicios de red, garantizando la 
+disponibilidad y la calidad que espera el usuario final.
+
+* Mapa Conceptual
+#+name: mapa
+#+begin_src plantuml :file ./images/mapa.png :exports results
+  ,@startmindmap
+  !theme plain
+  scale 5
+  skinparam classattributeiconsize 0
+  /'
+   ' Title Administración de redes
+   '/
+
+  ,* Administración de redes
+  ,**_ Características
+  ,*** Monitorización
+  ,*** Configuración
+  ,*** Seguridad
+  ,**_ Elementos Principales
+  ,*** Dispositivos de Red
+  ,*** Topología de Red
+  ,*** Protocolos de Comunicación
+  ,*** Sistemas de Monitorización
+  ,*** Gestión de Configuración
+  ,*** Seguridad de Red
+  ,*** Respaldo y Recuperación
+  ,*** Gestión de Usuarios y Accesos
+  ,*** Documentación
+  ,*** Gestión de Fallas
+
+
+  /'
+   ' * Administración de redes
+   ' **_ ¿Qué es?
+   ' *** La administración de redes informáticas y comunicaciones consiste en administrar y asegurar el funcionamiento correcto de las redes informáticas.
+   ' **_ Habilidades
+   ' *** Conocimientos de software, hardware y de redes
+   '/
+  ,@endmindmap
+#+end_src
+
+#+RESULTS: mapa
+[[file:./images/mapa.png]]
+
+\pagebreak
+
+* Conclusión
+Durante esta practica logre identificar las caracteristicas que hacen a un 
+administrador de redesde computadoras ademas de que son las redes de computo, 
+como futuros ingenieros en software las redes de computadoras son una herramienta
+indispensable debido a la alta interconectividad del mundo actual.
+
+# - Conocí que es la Administración de redes de cómputo.
+# - Identifique los diferentes elementos que integran la Administración de redes de cómputo
+# - Entregue en tiempo y forma la actividad.
+
+* Referencias
+\printbibliography[heading=none]
+

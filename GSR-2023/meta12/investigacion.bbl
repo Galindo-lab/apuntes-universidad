@@ -1,0 +1,139 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{barney_lutkevich_2022}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c0a63f32f57a8edb4dca511ce7f464ff}{%
+           family={Barney},
+           familyi={B\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d37d754df15d457e57248006d2aa9b38}{%
+           family={Lutkevich},
+           familyi={L\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {TechTarget}%
+      }
+      \strng{namehash}{2a0c07b6c5d0038f16056fc7b280b720}
+      \strng{fullhash}{2a0c07b6c5d0038f16056fc7b280b720}
+      \strng{bibnamehash}{2a0c07b6c5d0038f16056fc7b280b720}
+      \strng{authorbibnamehash}{2a0c07b6c5d0038f16056fc7b280b720}
+      \strng{authornamehash}{2a0c07b6c5d0038f16056fc7b280b720}
+      \strng{authorfullhash}{2a0c07b6c5d0038f16056fc7b280b720}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Networking}
+      \field{month}{10}
+      \field{title}{What is network security? definition, importance and types: TechTarget}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.techtarget.com/searchnetworking/definition/network-security
+      \endverb
+      \verb{url}
+      \verb https://www.techtarget.com/searchnetworking/definition/network-security
+      \endverb
+    \endentry
+    \entry{Naz_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=875e9d74b9e4274b17aff38bc801ade8}{%
+           family={Naz},
+           familyi={N\bibinitperiod},
+           given={Zeshan},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{875e9d74b9e4274b17aff38bc801ade8}
+      \strng{fullhash}{875e9d74b9e4274b17aff38bc801ade8}
+      \strng{bibnamehash}{875e9d74b9e4274b17aff38bc801ade8}
+      \strng{authorbibnamehash}{875e9d74b9e4274b17aff38bc801ade8}
+      \strng{authornamehash}{875e9d74b9e4274b17aff38bc801ade8}
+      \strng{authorfullhash}{875e9d74b9e4274b17aff38bc801ade8}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{KnowledgeHut}
+      \field{month}{7}
+      \field{title}{What is network security? importance, types of protections}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.knowledgehut.com/blog/security/network-security
+      \endverb
+      \verb{url}
+      \verb https://www.knowledgehut.com/blog/security/network-security
+      \endverb
+    \endentry
+    \entry{Prabhu_24_2021}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9d9c4578b2ad09ec09bf06d34f13ab86}{%
+           family={Prabhu},
+           familyi={P\bibinitperiod},
+           given={Ruth&nbsp;\bibnamedelima Dsouza},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3ff2bec4957b2bb7c865380c2ee9233}{%
+           family={24},
+           familyi={2\bibinitperiod},
+           given={Last\bibnamedelimb Updated:\bibnamedelima August},
+           giveni={L\bibinitperiod\bibinitdelim U\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7c50f0be0483f8ca479ccd3e67f45e88}
+      \strng{fullhash}{7c50f0be0483f8ca479ccd3e67f45e88}
+      \strng{bibnamehash}{7c50f0be0483f8ca479ccd3e67f45e88}
+      \strng{authorbibnamehash}{7c50f0be0483f8ca479ccd3e67f45e88}
+      \strng{authornamehash}{7c50f0be0483f8ca479ccd3e67f45e88}
+      \strng{authorfullhash}{7c50f0be0483f8ca479ccd3e67f45e88}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Spiceworks}
+      \field{month}{8}
+      \field{title}{What is network security? definition, types, and best practices}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.spiceworks.com/it-security/network-security/articles/what-is-network-security/
+      \endverb
+      \verb{url}
+      \verb https://www.spiceworks.com/it-security/network-security/articles/what-is-network-security/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

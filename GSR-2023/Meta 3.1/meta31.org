@@ -1,0 +1,57 @@
+
+#+TITLE:  Meta 3.1 - Conocer e identificar
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895) 
+#+DATE:   25 de Septiembre 2023
+
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./sources.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-color-cont.png}
+\tableofcontents
+\pagebreak
+\datasection{Individual}
+
+* Realizar un mapa conceptual
+[[file:Mapa mental.png]]
+
+{{{cite(Stallings)}}}
+
+* Modelo de seguridad 
+Un modelo de seguridad es un conjunto de reglas, politicas y procedimientos que 
+se implementan en una red para proteger la integridad, privacidad y el accesos
+a los recursos, el modelo de seguridad en redes nos permite garantizar la 
+seguridad de la red y reducir las amenazas, los ataques cibernéticos y las 
+actividades maliciosas. \\
+
+
+Una adecuado modelo de seguridad permite a toda una organizacion acceder de 
+manera segura a los recursos sin exponer a los demas usuarios y eliminar o al 
+menos mitigar los daños que puedan ser provocado por agentes externos. \\
+
+
+Un modelo de seguridad esta compuestos de diferentes medidas como 
+Políticas de seguridad, Autenticación, Firewalls, Cifrado etc, aun así es 
+nesesario actualizar los modelos de seguridad constantemente la seguridad 
+actualmente es uno de los fatores mas criticos de una organizacion de cualquier
+tipo.
+
+* Conclusión 
+A lo largo de esta practica pude aprender que son ataques, servicios, mecanismos 
+y como un modelo de seguridad puede lograr que la red sea más segura utilizando 
+medidas preventivas de seguridad.
+
+
+* Referencias
+\printbibliography[heading=none]

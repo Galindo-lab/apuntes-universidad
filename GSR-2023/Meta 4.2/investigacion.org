@@ -1,0 +1,86 @@
+
+#+TITLE:  Meta 4.2 Instrucciones
+#+AUTHOR: Luis Eduardo Galindo Amaya 
+#+DATE:   sábado, 11 noviembre 2023
+
+# -----
+#+SUBTITLE: Conocer que son los servicios de redes
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+# -----
+
+#+latex_header: \usepackage{../modern}
+#+latex_header: \bibliography{./sources.bib}
+#+latex_header: \raggedbottom
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+#+macro: autocite @@latex:\autocite{$1}@@
+
+# Informacion extra
+# -----------------
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
+\tableofcontents
+\pagebreak
+\datasection{Individual}
+
+* ¿Qué es un servicio de red?
+{{{autocite(Wikipedia_2023)}}} Un servicio de red es la creación de
+una red de trabajo en un ordenador. Generalmente los servicios de red
+son instalados en uno o más firewalls del servidor seleccionado. Eso
+facilita el uso y el fallo de muchos usuarios.
+
+Un administrador de red debe mantener y desarrollar la infraestructura
+de red de un negocio. Este se crea cuando se conecta dos o más equipos
+de una red a través de cables a un eje central, o a través de
+dispositivos inalámbricos para compartir información y recursos.
+
+* Protocolo de Configuración Dinámica de Host (DHCP)
+Es un estándar utilizado para la configuración automática de
+direcciones IP y otros parámetros en redes TCP/IP, reduciendo la carga
+administrativa y la complejidad en la configuración de hosts. Permite
+la gestión centralizada de direcciones IP y la comunicación entre
+equipos clientes y servidores DHCP a través de agentes de
+retransmisión. 
+
+* Protocolo Simple de Administración de Red (SNMP)
+SNMP es el estándar utilizado para la gestión de redes
+TCP/IP. Facilita la monitorización de la red a través de estaciones de
+trabajo (gestores) que recopilan información de agentes pasivos
+ubicados en dispositivos de red como routers y servidores. SNMP se
+basa en el intercambio de mensajes conocidos como Protocolos de Unidad
+de Datos (PDUs) y es ampliamente utilizado debido a su simplicidad. 
+
+* Correo electrónico
+Los sistemas de correo electrónico constan de dos subsistemas: agentes
+de usuario (MUA) y agentes de transferencia de mensajes (MTA). El MUA
+es un programa que permite componer, recibir y gestionar correos
+electrónicos, mientras que el MTA se encarga de transferir mensajes
+entre hosts utilizando el Protocolo para la Transferencia Simple de
+Correo Electrónico (SMTP). Los mensajes pueden pasar por varios MTAs
+antes de llegar a su destino. 
+
+* Domain Name System (DNS)
+El DNS es un servicio de Internet que traduce nombres de dominio y
+URLs en direcciones IP. Esto facilita a los usuarios recordar sitios
+web utilizando nombres en lugar de direcciones numéricas. El servidor
+DNS procesa las solicitudes y busca en una base de datos para realizar
+la conversión de nombres en direcciones IP. 
+
+* Protocolo de Transferencia de Archivos (FTP)
+FTP es un protocolo que permite la transferencia de archivos entre
+ordenadores a través de Internet. Utiliza TCP/IP y facilita la carga y
+descarga de archivos. En una conexión FTP, se abre un puerto de
+control en el servidor (puerto 21) y una segunda conexión de datos
+desde el puerto 20 al cliente. FTP es útil para compartir archivos de
+gran tamaño y utiliza el protocolo TCP para gestionar la transferencia
+de datos. 
+
+* Conclusión
+A lo largo de la practica aprendi que son los servicios de red y para
+que sirve y como cada uno brinda funcionalidades a las personas en la red.
+
+* Referencias
+\printbibliography[heading=none]
