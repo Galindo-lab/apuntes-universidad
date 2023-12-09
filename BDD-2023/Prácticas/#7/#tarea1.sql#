@@ -1,0 +1,23 @@
+use employees;
+
+-- Parte 1
+-- ---------------------------
+
+-- SELECT fn_anios_transcurridos('2024-10-25');
+-- parte 2
+-- ---------------
+/* DROP PROCEDURE sp_edad_y_anios_trabajados;
+
+delimiter $
+create procedure sp_edad_y_anios_trabajados()
+begin 
+ select 
+ emp_no as Numero_Empleado,
+ concat(first_name,",",last_name) as Nombre_Empleado,
+ gender as Genero,
+ fn_anios_transcurridos(birth_date) as Edad,
+ fn_anios_transcurridos(hire_date) as Antiguedad
+ from employees;
+end
+$ */
+CALL sp_edad_y_anios_trabajados;

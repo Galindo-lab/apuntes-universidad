@@ -1,0 +1,764 @@
+
+#+TITLE:    proyecto
+#+SUBTITLE: 
+#+AUTHOR:   Galindo
+#+DATE:     viernes, 01 diciembre 2023
+
+# -----
+#+OPTIONS: toc:nil ^:nil title:nil num:2
+#+LANGUAGE: es
+# -----
+
+
+* COMMENT Funciones
+** pago_total
+  Calcular el pago total multiplicando horas por salario
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE FUNCTION pago_total(
+      horas INT, 
+      salario INT
+  )
+  RETURNS INT DETERMINISTIC
+  BEGIN
+      DECLARE pago INT;
+      SET pago = horas * salario;
+      RETURN pago;
+  END 
+  %%
+  #+end_src
+
+** horas_trabajadas
+  Obtener el número de horas trabajadas del integrante
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE FUNCTION horas_trabajadas(p_id_integrante INT) 
+  RETURNS INT DETERMINISTIC
+  BEGIN
+      DECLARE total_horas INT;
+
+      SELECT 
+          SUM(TIMESTAMPDIFF(hour, control_horario_entrada, control_horario_salida))
+      INTO total_horas
+      FROM control_horario
+      WHERE control_horario_salida IS NOT NULL
+      AND id_integrante = p_id_integrante;
+
+      RETURN total_horas;
+  END 
+  %%
+  #+end_src
+
+** convertir_segundos_horas
+Convertir segundos a horas
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE FUNCTION convertir_segundos_horas(
+      segundos INT
+  )
+  RETURNS INT DETERMINISTIC
+  BEGIN
+      DECLARE resultado INT;
+      SET resultado = FLOOR(segundos / 3600);
+      RETURN resultado;
+  END 
+  %%
+  #+end_src
+
+
+* COMMENT Procedimientos
+** costo_total_proyecto
+  Obtener el costo total del proyecto
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE costo_total_proyecto()
+  BEGIN
+      SELECT 
+          sum(pago_total(
+              horas_trabajadas(id_integrante),
+              integrante_salario
+          )) as "Costo total proyecto"
+      FROM integrante;
+  END
+  %%
+  #+end_src
+
+** salario_mas_alto_equipo
+  Obtener el salario más alto en el equipo
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE salario_mas_alto_equipo(
+      IN p_id_equipo INT
+  )
+  BEGIN
+      SELECT 
+          MAX(integrante_salario) 
+      FROM integrante
+      WHERE equipo_id_equipo = p_id_equipo;
+  END 
+  %%
+  #+end_src
+
+** salario_mas_bajo_equipo
+  Obtener el salario más bajo en el equipo
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE salario_mas_bajo_equipo(
+      IN p_id_equipo INT
+  )
+  BEGIN
+      SELECT 
+          MIN(integrante_salario) 
+      FROM integrante
+      WHERE equipo_id_equipo = p_id_equipo;
+  END 
+  %%
+  #+end_src
+
+** calcular_promedio_salario
+  Calcular el promedio de salario utilizando la función AVG
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE calcular_promedio_salario()
+  BEGIN
+      SELECT AVG(integrante_salario) 
+      FROM integrante;
+  END 
+  %%
+  #+end_src
+
+** marcar_tarea_completada
+  Marcar una tarea como completada
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE marcar_tarea_completada(
+      IN p_id_tarea INT
+  )
+  BEGIN
+      -- Actualizar el estado de la tarea a 'completado'
+      UPDATE tarea
+      SET tarea_status = 'COMPLETADO'
+      WHERE id_tarea = p_id_tarea;
+  END 
+  %%
+  #+end_src
+
+** marcar_tarea_cancelada
+Marcar una tarea como cancelada
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE marcar_tarea_cancelada(
+      IN p_id_tarea INT
+  )
+  BEGIN
+      -- Actualizar el estado de la tarea a 'cancelado'
+      UPDATE tarea
+      SET tarea_status = 'CANCELADO'
+      WHERE id_tarea = p_id_tarea;
+  END 
+  %%
+  #+end_src
+
+** agregar_prorroga
+Agregar días extras a la duración de una tarea
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE agregar_prorroga(
+      IN p_id_tarea INT,
+      IN p_duracion_prorroga INT
+  )
+  BEGIN
+      DECLARE v_tarea_duracion_actual INT;
+
+      -- Obtener la duración actual de la tarea
+      SELECT tarea_duracion 
+      INTO v_tarea_duracion_actual
+      FROM tarea
+      WHERE id_tarea = p_id_tarea;
+
+      -- Actualizar la duración de la tarea
+      UPDATE tarea
+      SET tarea_duracion = v_tarea_duracion_actual + p_duracion_prorroga
+      WHERE id_tarea = p_id_tarea;
+  END 
+  %%
+  #+end_src
+
+** control_integrante
+  Marcar la entrada o salida de un integrante
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE control_integrante(
+      IN p_integrante_id INT
+  )
+  BEGIN
+      DECLARE v_id_control INT;
+      
+      -- Guardar la última entrada
+      SELECT id_control_horario
+      INTO v_id_control 
+      FROM control_horario
+      WHERE p_integrante_id = id_integrante
+      AND control_horario_salida IS NULL;
+      
+      IF v_id_control IS NULL THEN
+          -- Crear un nuevo registro de control horario para la entrada
+          INSERT INTO control_horario(
+              id_integrante
+          ) 
+          VALUES (
+              p_integrante_id
+          );
+          
+          SELECT 'creado' AS mensaje;     
+      ELSE
+          -- Actualizar el registro de control horario para la salida
+          UPDATE control_horario 
+          SET 
+              control_horario_salida = CURRENT_TIMESTAMP, 
+              id_integrante = p_integrante_id
+          WHERE id_control_horario = v_id_control;
+          
+          SELECT 'actualizado' AS mensaje;     
+      END IF;
+  END
+  %%
+  #+end_src
+
+** crear_integrante
+  Crear un nuevo integrante en el equipo
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE crear_integrante(
+      IN p_nombre VARCHAR(45),
+      IN p_email VARCHAR(45),
+      IN p_salario INT,
+      IN p_equipo_id INT
+  )
+  BEGIN
+      -- Insertar un nuevo integrante en la base de datos
+      INSERT INTO integrante(
+          integrante_nombre,
+          integrante_email
+
+,
+          integrante_salario,
+          equipo_id_equipo
+      )
+      VALUES (
+          p_nombre,
+          p_email,
+          p_salario,
+          p_equipo_id
+      );
+  END
+  %%
+  #+end_src
+
+** crear_equipo
+  Crear un nuevo equipo
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE crear_equipo(
+      IN p_nombre VARCHAR(45)
+  )
+  BEGIN
+      -- Insertar un nuevo equipo en la base de datos
+      INSERT INTO equipo (
+          equipo_nombre, 
+          equipo_estatus
+      ) 
+      VALUES (
+          p_nombre, 
+          "activo"
+      );
+  END
+  %%
+  #+end_src
+
+** crear_tarea
+  Crear una nueva tarea
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE crear_tarea(
+      IN p_inicio DATETIME,
+      IN p_nombre VARCHAR(45),
+      IN p_descripcion VARCHAR(255),
+      IN p_duracion INT
+  )
+  BEGIN
+      -- Insertar una nueva tarea en la base de datos
+      INSERT INTO tarea (
+          tarea_inicio,
+          tarea_nombre,
+          tarea_descripcion,
+          tarea_duracion
+      )
+      VALUES (
+          p_inicio,
+          p_nombre,
+          p_descripcion,
+          p_duracion
+      );
+  END
+  %%
+  #+end_src
+
+** asignar_equipo_tarea
+  Asignar un equipo a una tarea existente
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE asignar_equipo_tarea(
+      IN p_id_equipo INT,
+      IN p_id_tarea INT
+  )
+  BEGIN
+      -- Actualizar el equipo asignado a la tarea
+      UPDATE tarea
+      SET equipo_id_equipo = p_id_equipo
+      WHERE id_tarea = p_id_tarea;
+  END
+  %%
+  #+end_src
+
+** asignar_integrante_tarea
+  Asignar un integrante a una tarea existente
+  
+  #+begin_src sql :engine mysql :database mydb
+  DELIMITER %%
+  CREATE PROCEDURE asignar_integrante_tarea(
+      IN p_id_integrante INT,
+      IN p_id_tarea INT
+  )
+  BEGIN
+      DECLARE v_id_equipo INT;
+      DECLARE v_id_equipo_integrante INT;
+      
+      -- Obtener el equipo al que pertenece la tarea
+      SELECT equipo_id_equipo INTO v_id_equipo
+      FROM tarea
+      WHERE id_tarea = p_id_tarea;
+      
+      -- Obtener el equipo al que pertenece el integrante
+      SELECT equipo_id_equipo INTO v_id_equipo_integrante
+      FROM integrante
+      WHERE id_integrante = p_id_integrante;
+      
+      -- Verificar si el integrante pertenece al equipo de la tarea
+      IF v_id_equipo = v_id_equipo_integrante THEN
+          -- Asignar la tarea al integrante
+          UPDATE 
+              tarea
+          SET 
+              integrante_id_integrante = p_id_integrante,
+              tarea_status = 'PENDIENTE'
+          WHERE 
+              id_tarea = p_id_tarea;
+          
+          SELECT 'Tarea asignada correctamente' AS mensaje;        
+      ELSE
+          SELECT 'El integrante no pertenece al equipo de la tarea' AS mensaje;
+      END IF;
+  END
+  %%
+  #+end_src
+
+
+* COMMENT Triggers
+** after_update_tarea
+   Agrega la marca de tiempo de la entrada de un integrante después de actualizar una tarea.
+   - Autor: [Nombre del Autor]
+
+   #+begin_src sql :engine sqlite
+   DELIMITER %%
+   CREATE TRIGGER after_update_tarea
+   AFTER UPDATE ON mydb.tarea
+   FOR EACH ROW
+   BEGIN
+       IF NEW.tarea_status = 'COMPLETADO' THEN
+           INSERT INTO tarea_completada (
+               tarea_completada_marca, 
+               tarea_id_tarea
+           )
+           VALUES (
+               CURRENT_TIMESTAMP(), 
+               NEW.id_tarea
+           );
+       END IF;
+   END 
+   %%
+   #+end_src
+
+** before_update_duracion_tarea
+   Agrega el tiempo de prorroga que se agrego a la tarea antes de actualizar la duración.
+   - Autor: Luis Eduardo Galindo Amaya
+
+   #+begin_src sql :engine sqlite
+   DELIMITER %%
+   DROP TRIGGER IF EXISTS before_update_duracion_tarea %%
+   CREATE TRIGGER before_update_duracion_tarea
+   BEFORE UPDATE ON tarea
+   FOR EACH ROW
+   BEGIN
+       IF NEW.tarea_duracion != OLD.tarea_duracion THEN
+           INSERT INTO historial_prorroga (
+               tarea_id_tarea,
+               historial_prorroga_duracion
+           )
+           VALUES (
+               NEW.id_tarea,
+               NEW.tarea_duracion - OLD.tarea_duracion
+           );
+       END IF;
+   END 
+   %%
+   #+end_src
+
+** after_update_salario
+   Agrega el salario nuevo al historial después de actualizar el salario de un integrante.
+   - Autor: Luis Eduardo Galindo Amaya
+
+   #+begin_src sql :engine sqlite
+   DELIMITER %%
+   DROP TRIGGER IF EXISTS after_update_salario %%
+   CREATE TRIGGER after_update_salario
+   AFTER UPDATE ON integrante
+   FOR EACH ROW
+   BEGIN
+       IF NEW.integrante_salario != OLD.integrante_salario THEN
+           INSERT INTO historial_salario (
+               historial_salario_anterior, 
+               historial_salario_siguiente, 
+               id_integrante
+           )
+           VALUES (
+               OLD.integrante_salario,
+               NEW.integrante_salario,
+               NEW.id_integrante
+           );
+       END IF;
+   END;
+   %%
+   #+end_src
+
+** before_insert_integrante
+   Evita que se inserten integrantes con salario negativo antes de la inserción.
+   - Autor: [Nombre del Autor]
+
+   #+begin_src sql :engine sqlite
+   DELIMITER %%
+   DROP TRIGGER IF EXISTS before_insert_integrante %%
+   CREATE TRIGGER before_insert_integrante
+   AFTER INSERT
+   ON integrante FOR EACH ROW
+   BEGIN
+       IF NEW.integrante_salario < 0 THEN
+           SIGNAL SQLSTATE '45000'
+           SET MESSAGE_TEXT = 'El salario debe ser mayor a 0';
+       END IF;
+   END;
+   %%
+   #+end_src
+
+** after_insert_integrante
+   Agrega el salario de un integrante al historial después de insertar un nuevo integrante.
+   - Autor: Luis Eduardo Galindo Amaya
+
+   #+begin_src sql :engine sqlite
+   DELIMITER %%
+   DROP TRIGGER IF EXISTS after_insert_integrante %%
+   CREATE TRIGGER after_insert_integrante
+   AFTER INSERT
+   ON integrante FOR EACH ROW
+   BEGIN
+       INSERT INTO historial_salario (
+           historial_salario_anterior,
+           historial_salario_siguiente,
+           id_integrante
+       )
+       VALUES (
+           0,
+           NEW.integrante_salario,
+           NEW.id_integrante
+       );
+   END 
+   %%
+   #+end_src
+
+** before_delete_tarea
+   Evita que se eliminen tareas que ya han sido completadas antes de la eliminación.
+   - Autor: Hector Miguel Macias Baltazar
+
+   #+begin_src sql :engine sqlite
+   DELIMITER %%
+   DROP TRIGGER IF EXISTS before_delete_tarea %%
+   CREATE TRIGGER before_delete_tarea
+   BEFORE DELETE ON tarea
+   FOR EACH ROW
+   BEGIN
+       IF OLD.tarea_status = 'COMPLETADO' THEN
+           SIGNAL SQLSTATE '45000'
+           SET MESSAGE_TEXT = 'No se puede eliminar una tarea completada';
+       END IF;
+   END;
+   %%
+   #+end_src
+
+** after_delete_tarea
+   Elimina las entradas del historial de prorrogas cuando se elimina su tarea asociada después de la eliminación.
+   - Autor: Hector Miguel Macias Baltazar
+
+   #+begin_src sql :engine sqlite
+   DELIMITER %%
+   DROP TRIGGER IF EXISTS after_delete_tarea %%
+   CREATE TRIGGER after_delete_tarea
+   AFTER DELETE 
+   ON tarea FOR EACH ROW
+   BEGIN
+       DELETE FROM historial_prorroga
+       WHERE tarea_id_tarea = OLD.id_tarea;
+   END;
+   %%
+   #+end_src
+
+* COMMENT Vistas
+** Vista: vista_tareas_pendientes
+Muestra las tareas pendientes junto con la información del integrante asignado.
+
+  #+begin_src sql :engine sqlite
+  /*
+   *
+   * reunion natural
+   */
+  CREATE OR REPLACE VIEW vista_tareas_pendientes AS
+  SELECT
+      id_tarea,
+      tarea_inicio,
+      tarea_nombre,
+      tarea_descripcion,
+      tarea_duracion,
+      tarea_status,
+      integrante_nombre
+  FROM
+      tarea
+      INNER JOIN integrante
+      ON integrante_id_integrante = id_integrante
+  WHERE
+      tarea_status = 'PENDIENTE';
+  #+end_src
+
+** Vista: vista_tareas_canceladas
+Muestra las tareas canceladas junto con la información del integrante asignado.
+
+  #+begin_src sql :engine sqlite
+  /*
+   *
+   * reunion derecha
+   */
+  CREATE OR REPLACE VIEW vista_tareas_canceladas AS
+  SELECT
+      id_tarea,
+      tarea_inicio,
+      tarea_nombre,
+      tarea_descripcion,
+      tarea_duracion,
+      tarea_status,
+      integrante_nombre
+  FROM
+      integrante 
+      RIGHT JOIN tarea 
+      ON integrante_id_integrante = id_integrante
+  WHERE 
+      tarea_status = 'CANCELADO';
+  #+end_src
+
+** Vista: vista_tareas_status
+Muestra todas las tareas y sus estados, incluyendo las tareas completadas.
+
+  #+begin_src sql :engine sqlite
+  /**
+  left join
+  */
+  CREATE OR REPLACE VIEW vista_tareas_status AS
+  SELECT
+      *
+  FROM 
+      tarea 
+      RIGHT JOIN tarea_completada
+      ON id_tarea_completa=id_tarea;
+  #+end_src
+
+** Vista: equipos_tareas_view
+Muestra las tareas de cada equipo, incluyendo la información del equipo y la tarea.
+
+  #+begin_src sql :engine sqlite
+  CREATE VIEW equipos_tareas_view AS
+  SELECT
+      e.id_equipo,
+      e.equipo_nombre,
+      t.id_tarea,
+      t.tarea_nombre,
+      t.tarea_descripcion,
+      t.tarea_duracion,
+      t.tarea_status
+  FROM equipo e
+      LEFT JOIN tarea t 
+      ON e.id_equipo = t.equipo_id_equipo
+      
+  UNION
+
+  SELECT
+      e.id_equipo,
+      e.equipo_nombre,
+      t.id_tarea,
+      t.tarea_nombre,
+      t.tarea_descripcion,
+      t.tarea_duracion,
+      t.tarea_status
+  FROM tarea t
+      RIGHT JOIN equipo e 
+      ON e.id_equipo = t.equipo_id_equipo
+  ORDER BY id_equipo;
+  #+end_src
+
+
+* Acciones
+** Crear equipos
+#+begin_src sqlite
+  CALL crear_equipo('Equipo 1');  
+#+end_src
+
+** Crear integrantes
+#+begin_src sqlite
+  CALL crear_equipo('Equipo 1');
+  
+  CALL crear_integrante(
+    'Juan Pérez',                 -- nombre
+    'juan.perez@example.com',     -- correo
+    50,                           -- salario
+    1                             -- id del equipo
+  );
+#+end_src
+
+** Crear tareas
+#+begin_src sqlite
+CALL crear_tarea(
+    '2023-11-23',
+    'Desarrollar Módulo de Autenticación', 
+    'Implementar el sistema de autenticación para el software', 
+    8
+);
+#+end_src
+
+** Asignar tareas a equipos
+#+begin_src sqlite
+  CALL crear_equipo('Equipo 3');  -- Equipo ID = 3
+
+  CALL crear_tarea(               -- tarea ID = 1  
+      '2023-11-23',
+      'Desarrollar Módulo de Autenticación', 
+      'Implementar el sistema de autenticación para el software', 
+      8
+  );
+
+  CALL asignar_equipo_tarea(3,1); 
+#+end_src
+
+** Asignar tareas a integrantes
+#+begin_src sqlite
+  CALL crear_equipo('Equipo 3');  -- equipo ID=3
+
+  CALL crear_integrante(          -- integrnate ID=4
+    'Juan Pérez',                 
+    'juan.perez@example.com',     
+    50,                           
+    3                             
+  );
+
+  CALL crear_tarea(               -- tarea ID=5
+      '2023-11-23',
+      'Desarrollar Módulo de Autenticación', 
+      'Implementar el sistema de autenticación para el software', 
+      8
+  );
+
+  CALL asignar_integrante_tarea(3, 5);
+#+end_src
+
+** Registrar entrada y salida
+#+begin_src sqlite
+  CALL crear_integrante(          -- integrnate ID=2
+       'Juan Pérez',                 
+       'juan.perez@example.com',     
+       50,                           
+       3                             
+  );
+
+  CALL control_integrante(2); 
+#+end_src
+
+** Actualizar salario
+#+begin_src sqlite
+  UPDATE integrante
+  SET integrante_salario = 400    -- nuevo salario  
+  WHERE id_integrante = 1;        -- id del integrante
+#+end_src
+
+** Agregar más tiempo a las tareas
+#+begin_src sqlite
+  CALL crear_tarea(               -- tarea ID = 1  
+      '2023-11-23',
+      'Desarrollar Módulo de Autenticación', 
+      'Implementar el sistema de autenticación para el software', 
+      8
+  );
+
+  CALL agregar_prorroga(1, 10);   -- 10 dias más
+#+end_src
+
+** Cancelar tareas
+#+begin_src sqlite
+  CALL crear_tarea(               -- tarea ID = 1  
+       '2023-11-23',
+       'Desarrollar Módulo de Autenticación', 
+       'Implementar el sistema de autenticación para el software', 
+       8
+  );
+
+  call marcar_tarea_cancelada(1); 
+#+end_src
+
+** Calcular costos del proyecto
+#+begin_src sqlite
+  CALL costo_total_proyecto();
+#+end_src
+
+** Salario mínimo en el personal
+#+begin_src sqlite 
+  CALL salario_mas_bajo_equipo()
+#+end_src
+
+** Salario máximo en el personal
+#+begin_src sqlite
+  CALL salario_mas_alto_equipo()
+#+end_src
+
+** Promedio de salarios 
+#+begin_src sqlite
+  CALL calcular_promedio_salario();   
+#+end_src

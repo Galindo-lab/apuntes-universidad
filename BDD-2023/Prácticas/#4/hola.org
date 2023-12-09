@@ -1,0 +1,23 @@
+
+#+TITLE:    Práctica 4
+#+AUTHOR:   Luis Eduardo Galindo Amaya
+#+DATE:     2023-10-08
+#+OPTIONS:  toc:t ^:nil title:t num:2
+#+language: es
+
+
+
+* A
+#+include: "./p3-1.sql" src
+
+* B
+#+include: "./p3-2.sql" src
+
+* C
+#+include: "./p3-3.sql" src
+
+* D
+#+include: "./p3-4.sql" src
+
+* E
+#+include: "./p3-5.sql" src

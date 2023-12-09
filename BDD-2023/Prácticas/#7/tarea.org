@@ -1,0 +1,457 @@
+
+#+TITLE:  Práctica 7
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   viernes, 27 octubre 2023
+
+# -----
+#+LANGUAGE: es
+#+OPTIONS:  toc:nil ^:nil title:t num:2
+#+SUBTITLE: Funciones, Procedimientos Almacenados y Triggers
+#+PROPERTY: header-args :tangle test.sql
+# -----
+
+#+ODT_STYLES_FILE: ./Carpeta sin título/tarea.ott
+#+latex_header: \usepackage[spanish, mexico]{babel}
+#+latex_header: \usepackage[top=1in,bottom=1in,papersize={8.5in,11in}]{geometry}
+#+latex_header: \usepackage[scaled]{helvet}
+#+latex_header: \renewcommand\familydefault{\sfdefault} 
+#+latex_header: \setlength{\parindent}{0pt}
+
+#+latex: \pagebreak
+
+* Función para Calcular Años Transcurridos
+Crear un FUNCIÓN que reciba una fecha y con base a ella, calcule los
+años transcurridos.
+
+#+begin_src sqlite :exports none
+  -- --------------------------------------------------------------------------
+  --          Actividad 1: Función para Calcular Años Transcurridos
+  -- --------------------------------------------------------------------------
+#+end_src
+
+** Función años transcurridos
+#+begin_src sqlite 
+  DELIMITER $ 
+  CREATE FUNCTION fn_anios_transcurridos (fecha_inicial date)
+  RETURNS int deterministic
+  BEGIN
+      DECLARE days_diff int;
+      DECLARE anios_diff int;
+      SET days_diff = datediff(now(), fecha_inicial);
+      
+      IF (
+          month(fecha_inicial) > month(now())
+          OR (
+              month(fecha_inicial) = month(now()) 
+              AND day(fecha_inicial) > day(now())
+          )
+         )
+      THEN
+        SET anios_diff = days_diff / 365 - 1;
+      ELSE
+         SET anios_diff = days_diff / 365;
+      END IF;
+      
+      RETURN anios_diff;
+  END
+  $
+#+end_src
+
+** Calcular mi edad
+#+begin_src sqlite :tangle no
+  INSERT INTO employees
+         (emp_no, birth_date, first_name, last_name, gender, hire_date)
+      VALUES
+          (20000, "2001-08-20", "Luis", "Galindo", "M", now());
+
+  SELECT
+      fn_anios_transcurridos (birth_date) AS edad
+  FROM employees
+  WHERE emp_no = 20000;
+#+end_src
+
+*** Salida de la prueba
+#+caption: Mi edad es 22 años
+[[file:img/1.png]]
+
+* Procedimiento Almacenado para Calcular Edad y Años de Antigüedad
+Crear un PROCEDIMIENTO ALMACENADO en el cual con base a la tabla employees, y 
+los campos de birth_date y hire_date calcule la edad y los años de antigüedad 
+respectivamente, utilizando la función que creaste.
+
+#+begin_src sqlite :exports none
+  -- --------------------------------------------------------------------------
+  -- Actividad 2: Procedimiento Almacenado para Calcular Edad y Años de Anti...
+  -- --------------------------------------------------------------------------
+#+end_src
+
+** Procedimiento edad y años trabajados
+#+begin_src sqlite 
+  DELIMITER $ 
+  CREATE PROCEDURE sp_edad_y_anios_trabajados ()
+  BEGIN
+      SELECT
+          emp_no AS Numero_Empleado,
+          concat(first_name, ",", last_name) AS Nombre_Empleado,
+          gender AS Genero,
+          fn_anios_transcurridos (birth_date) AS Edad,
+          fn_anios_transcurridos (hire_date) AS Antiguedad,
+          (CASE
+              WHEN fn_anios_transcurridos (birth_date) BETWEEN 60 AND 64 THEN
+                  "Puede iniciar su proceso de pensión"
+              WHEN fn_anios_transcurridos (birth_date) > 64 THEN
+                  "Debe iniciar su proceso de pensión"
+              ELSE
+                  -- Antiguedad < 60
+                  "No es candidato para pensionarse"
+              END) AS Observacion
+      FROM
+          employees;
+
+  END 
+  $
+#+end_src
+
+** Prueba del procedimiento
+#+begin_src sqlite :tangle no
+  call sp_edad_y_anios_trabajados;
+#+end_src
+
+*** Salida de la Prueba
+#+caption: Salida del procedimiento
+[[file:img/2.png]]
+
+* Procedimiento Almacenado para Estadísticas de Edad y Pensión
+Crear un PROCEDIMIENTO ALMACENADO que muestre la estadística con base a la edad
+y los criterios establecidos en el requerimiento 2, nos diga:
+
+- ¿Cuántos hombres y Mujeres NO son candidatos al proceso de pensión?
+- ¿Cuántos hombres y Mujeres PUEDEN iniciar su proceso de pensión? 
+- ¿Cuántos hombres y Mujeres DEBEN iniciar su proceso de pensión?
+
+#+begin_src sqlite :exports none
+  -- --------------------------------------------------------------------------
+  -- Actividad 3: Procedimiento Almacenado para Estadísticas de Edad y Pensión
+  -- --------------------------------------------------------------------------
+#+end_src
+
+** Procedimiento
+#+begin_src sqlite
+  DELIMITER $
+  CREATE PROCEDURE sp_estadistica_pension ()
+  BEGIN
+      DECLARE per_fac int;
+      -- factor que convierte una cantidad de empleados a porcentaje
+      SET per_fac = 100 / (SELECT count(*) FROM employees);
+        
+      -- Calcular el número de empleados
+      CREATE TEMPORARY TABLE IF NOT EXISTS Freq_Pension AS
+      SELECT
+          -- Nombre completo del genero
+          (
+              CASE WHEN gender = "M" THEN
+                  "MASCULINO"
+              WHEN gender = "F" THEN
+                  "FEMENINO"
+              ELSE
+                  "INDEFINIDO"
+              END) AS Genero,
+
+        
+          sum(fn_anios_transcurridos (birth_date) < 60)
+                                     AS NO_Son_Candidatos,
+                                   
+          sum(fn_anios_transcurridos (birth_date) BETWEEN 60 AND 65)
+                                     AS PUEDEN_Iniciar_Proceso_Pension,
+                                   
+          sum(fn_anios_transcurridos (birth_date) > 65)
+                                     AS DEBEN_Iniciar_Proceso_Pension
+      FROM
+          employees
+      GROUP BY
+          gender;
+        
+      -- Calcular porcentajes
+      SELECT
+          Genero,
+          NO_Son_Candidatos,
+          (NO_Son_Candidatos * per_fac)
+                                     AS Per_NO_Son_Candidatos,
+                                   
+          PUEDEN_Iniciar_Proceso_Pension,
+          (PUEDEN_Iniciar_Proceso_Pension * per_fac)
+                                     AS PER_PUEDEN_Iniciar_Proceso_Pension,
+                                   
+          DEBEN_Iniciar_Proceso_Pension,
+          (DEBEN_Iniciar_Proceso_Pension * per_fac)
+                                     AS PER_DEBEN_Iniciar_Proceso_Pension
+      FROM
+          Freq_Pension;
+        
+      -- Eliminar la tabla temporal
+      DROP TABLE Freq_Pension;
+  END
+  $
+#+end_src
+
+** Prueba de estadísticas de pensión
+#+begin_src sqlite :tangle no
+ call sp_estadistica_pension;
+#+end_src
+
+#+caption: En la primera columna esta contabilizado le prueba 
+[[file:img/3.png]]
+
+** Cuestionario
+*** ¿Cuántos hombres y mujeres NO son candidatos al proceso de pensión? 
+- 1 hombre  y 1 mujeres
+
+*** ¿Cuántos hombres y mujeres PUEDEN iniciar su proceso de pensión?
+- 18 hombres y 9 mujeres
+
+*** ¿Cuántos hombres y mujeres DEBEN iniciar su proceso de pensión?
+- 14 hombres y 7 mujeres
+
+* Trigger BEFORE INSERT para asignar categoría
+Crear un TRIGGER con el tiempo y evento BEFORE INSERT donde antes de insertar 
+un nuevo empleado a la tabla employee, se deberá asignar al campo Category el 
+valor 1. 
+
+El campo Category en la tabla employee no existe, por lo tanto, tendrás que 
+agregarlo, las categorías irán de la 1 a la 8.
+
+#+begin_src sqlite :exports none
+  -- --------------------------------------------------------------------------
+  --         Actividad 4: Trigger BEFORE INSERT para asignar categoría
+  -- --------------------------------------------------------------------------
+#+end_src
+
+** Agregar el campo categoria
+El campo 'Category' en la tabla employee no existe, por lo tanto, tendrás que
+agregarlo, las categorías irán de la 1 a la 8.
+
+#+begin_src sqlite
+  ALTER TABLE employees   
+  ADD category INT CHECK (category >= 1 AND category <= 8);
+#+end_src
+
+# source: https://www.w3schools.com/sql/sql_check.asp
+
+** Trigger BEFORE INSERT
+#+begin_src sqlite 
+  DELIMITER %
+  CREATE TRIGGER before_set_category
+      BEFORE INSERT ON employees
+      FOR EACH ROW
+  BEGIN
+      SET new.category = 1;
+  END
+  %
+#+end_src
+
+** Prueba del trigger
+#+begin_src sqlite :tangle no
+  INSERT INTO employees
+         (emp_no, birth_date, first_name, last_name, gender, hire_date)
+  VALUES (20000, "2001-08-30", "Luis", "Galindo", "M", now());
+  
+  SELECT * FROM employees;
+#+end_src
+
+*** Salida del trigger
+
+#+caption: La categoria del registro es '1'
+[[file:img/4.png]]
+
+* Trigger AFTER INSERT para Generar Registro en Salaries
+Crear un TRIGGER con el tiempo y evento AFTER INSERT que después de INSERTAR un
+registro en la tabla employees, genere un registro en la tabla salaries, 
+agregando en from_date la fecha actual, en to_date dejarlo NULL y en salary 
+establecer el valor 5000.
+
+#+begin_src sqlite :exports none
+  -- --------------------------------------------------------------------------
+  --    Actividad 5: Trigger AFTER INSERT para Generar Registro en Salaries
+  -- --------------------------------------------------------------------------
+#+end_src
+
+** Permitir NULL en el campo to_date
+#+begin_src sqlite 
+  ALTER TABLE salaries MODIFY to_date DATE NULL;  
+#+end_src
+
+** Trigger AFTER INSERT
+#+begin_src sqlite 
+  DELIMITER %
+  CREATE TRIGGER after_add_salary
+      AFTER INSERT ON employees
+      FOR EACH ROW
+  BEGIN
+      INSERT INTO salaries
+      (emp_no, salary, from_date, to_date)
+  VALUES
+      (new.emp_no, 5000, now(), null);
+  END
+  %
+#+end_src
+
+** Prueba del AFTER INSERT
+#+begin_src sqlite
+  INSERT INTO employees
+      (emp_no, birth_date, first_name, last_name, gender, hire_date)
+  VALUES 
+      (20000, "2001-08-30", "Luis", "Galindo", "M", now());
+    
+  SELECT * FROM salaries WHERE emp_no=20000;  
+#+end_src
+
+*** Salidas del trigger
+#+caption: Salario de $5000
+[[file:img/5.png]]
+
+* Trigger BEFORE UPDATE con Auditoría de Cambios en Categoría
+Crear un TRIGGER con el tiempo y evento BEFORE UPDATE donde antes de ACTUALIZAR
+un registro en la tabla employees, genere un registro en la tabla 
+employee_category_audit, agregando para dicho empleado la categoría nueva, la 
+categoría vieja y la fecha en la que se realizó dicho cambio. Esta tabla 
+*NO EXISTE* así que tendrás que crearla.
+
+#+begin_src sqlite :exports none
+  -- --------------------------------------------------------------------------
+  --  Actividad 6: Trigger BEFORE UPDATE con Auditoría de Cambios en Categoría
+  -- --------------------------------------------------------------------------
+#+end_src
+
+** Crear tabla employee_category_audit
+#+begin_src sqlite
+  CREATE TABLE if not exists employee_category_audit (
+      emp_no int not null,
+      change_date date,
+      old_category int,
+      new_Category int,
+
+      CONSTRAINT FK_emp_no FOREIGN KEY (emp_no) 
+      references employees(emp_no)
+  );  
+#+end_src
+
+# https://www.w3schools.com/sql/sql_foreignkey.asp
+
+** Trigger BEFORE UPDATE
+#+begin_src sqlite
+  DELIMITER %
+  CREATE TRIGGER after_category_update
+      BEFORE UPDATE ON employees
+      FOR EACH ROW
+  BEGIN
+      IF old.category <> new.category THEN
+          INSERT INTO employee_category_audit
+          (emp_no, change_date, old_category, new_Category)
+      VALUES
+          (new.emp_no, now(), old.category, new.category);
+      END IF;
+  END
+  %
+#+end_src
+
+** Prueba de Trigger BEFORE UPDATE
+#+begin_src sqlite
+  UPDATE employees SET category=2 WHERE emp_no=20000;
+  SELECT * FROM employee_category_audit;
+#+end_src
+
+*** Salida del comando
+
+#+caption: Categoría actualizada
+[[file:img/6.png]]
+
+* Trigger AFTER UPDATE para Incrementar Salario y Fecha
+Crear un TRIGGER con el tiempo y evento AFTER UPDATE donde después de 
+ACTUALIZAR el campo Category de la tabla employees, genere un registro en la 
+tabla salaries, donde para dicho empleado deberás realizar lo siguiente:
+
+#+begin_src sqlite :exports none
+  -- --------------------------------------------------------------------------
+  --    Actividad 7: Trigger AFTER UPDATE para Incrementar Salario y Fecha
+  -- --------------------------------------------------------------------------
+#+end_src
+
+** Eliminar las llaves primarias de salaries 
+#+begin_src sqlite
+  ALTER TABLE salaries DROP CONSTRAINT salaries_ibfk_1;
+  ALTER TABLE salaries DROP CONSTRAINT `PRIMARY`;
+#+end_src
+
+** Trigger
+#+begin_src sqlite
+  DELIMITER %
+  CREATE TRIGGER after_set_category
+      AFTER UPDATE ON employees
+      FOR EACH ROW
+  BEGIN
+      DECLARE old_salary INT;
+      DECLARE salary_fac FLOAT;
+      DECLARE aplication_date date;
+
+      -- ultimo salario
+      SET old_salary = (SELECT salary FROM salaries
+          WHERE old.emp_no AND to_date IS NULL);
+
+      -- factor de porcentaje
+      SET salary_fac = (old_salary / 100);
+
+      -- si es sabado o domingo
+      SET aplication_date = (CASE
+          WHEN DAYOFWEEK (now()) = 1 THEN
+               date_add (now(), interval 1 day) -- domingo
+          WHEN DAYOFWEEK (now()) = 7 THEN
+               date_add (now(), interval 2 day) -- sabado
+          ELSE
+              now()
+      END);
+
+  IF old.category <> new.category THEN
+      -- Actualizar fecha del salario
+      UPDATE salaries SET to_date = now()
+      WHERE emp_no = old.emp_no AND to_date IS NULL;
+
+      -- insertar el nuevo saliario
+      INSERT INTO salaries (emp_no, from_date, to_date, salary)
+             VALUES (new.emp_no, aplication_date, NULL, (
+              -- calcular nuevo salario
+              CASE WHEN new.category = 1 THEN
+                  old_salary + salary_fac * 5  -- + 5%
+              WHEN new.category BETWEEN 2 AND 4 THEN
+                  old_salary + salary_fac * 10 -- +10%
+              WHEN new.category BETWEEN 5 AND 7 THEN
+                  old_salary + salary_fac * 30 -- +30%
+              WHEN new.category = 8 THEN
+                  old_salary + salary_fac * 60 -- +60%
+              END));
+      END IF;
+  END
+  %
+#+end_src
+
+** Probar el trigger
+#+begin_src sqlite :tangle no
+  -- crear al empleado
+  INSERT INTO employees
+         (emp_no, birth_date,first_name,last_name,gender,hire_date,category)
+  VALUES 
+         (20000, "2001-08-30", "Luis", "Galindo", "M", now(), 0);
+
+  -- Agregar un salario 
+  INSERT INTO salaries
+         (emp_no,salary,from_date,to_date) 
+  VALUES 
+         (20000, 1000, now(), NULL);
+
+  -- Actualizar datos
+  UPDATE employees SET category=3 WHERE emp_no=20000;
+#+end_src
+# https://stackoverflow.com/questions/67703524/1305-function-clubmc-dateadd-does-not-exist-mysql
+
+*** Capturas
+#+caption: Salida del trigger
+[[file:img/7.png]]

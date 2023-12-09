@@ -1,0 +1,54 @@
+
+#+TITLE:    Proyecto
+#+SUBTITLE: 
+#+AUTHOR:   Galindo
+#+DATE:     miércoles, 15 noviembre 2023
+
+# -----
+#+OPTIONS: toc:nil ^:nil title:t num:2
+#+LANGUAGE: es
+# -----
+
+* Tablas
+- Equipos :: Nombres de los equipos
+- Integrante :: Miebros de los equipos, deben tener un salario y un nombre
+- Tareas :: Que debe realizar el equipos, debe tener un tiempo de
+  duracion y un estatus  
+
+
+* Relaciones
+- Usuarios - Equipos :: A que equipo pertence cada persona 
+- Usuarios - Tareas :: Que persona se hace responsable de cada equipo
+- Tareas - equipos :: A que equipo pertence cada tarea
+
+
+* Registro
+- Salarios :: Cuanto gana cada Integrante
+- HoraEntrada :: Hora a la que llego el Integrante
+- HoraSalida :: Hora a la que Salio el integrante
+
+
+* Tablas de actualización
+- FechaTerminacion :: cuando se termino una tarea
+- RegistroSalarios :: historial de salarios    
+- Prorrogas :: si se aumento el tiempo que debe tomar una tarea 
+
+
+* Funciones
+- HorasTrabajadas :: Horas trabajadas a lo largo del proyecto 
+- TotalProyecto :: Suma de los pagos de todos los miembros del equipo
+- TotalIntegrante :: suma de los pagos de un solo integrante del equipo
+
+
+* Triggers
+- FechaTerminacionTarea :: Agregar cuando se termino la tarea a FechaTerminacion
+- FechaDeCreacion :: Agregar la fecha en la que se agrego la tarea 
+- ActualizaciónFechaTask :: Agregar la cantidad de dias extra que se
+  agrego a la tarea en Prorrogas 
+
+
+* Vistas
+- Usuarios - tareas :: ver las tareas de cada usuario
+- Equipos - usuarios :: ver a que equipo pertence cada usuario
+- Pagos - equipo :: cuanto se le paga a cada miembro del equipo
+

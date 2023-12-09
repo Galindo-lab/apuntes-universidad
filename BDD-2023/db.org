@@ -1,0 +1,27 @@
+
+#+TITLE:  db
+#+AUTHOR: Galindo
+#+DATE:   2023-08-10
+
+* 
+
+  / estrategico \
+ /    tactico    \ 
+/    operativo    \
+
+
+* Modelo relacional
+Interpretar y aplicar el modelo relaciona mediante la teoria de conjuntos 
+y operadores y operadores relacionales, para establecer las bases del diseño
+de base de datos.
+
+* ¿Quien lo creo y cuando surgio?
+- Edgar Frank Codd :: Laboratorio de investigacion de IBM en San José California 
+
+su tesis se publico en Junio de 1970
+
+** ¿pq es tan influyente?
+en 1960 los modelos de datos predominantes eran en redes y jerarquicos.
+
+los registros eran entrelazados en forma de grafos o de arboles respectivamente
+

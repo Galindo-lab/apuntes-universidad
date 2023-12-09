@@ -1,0 +1,8 @@
+#+TITLE:  ejercicio1
+#+AUTHOR: Galindo
+#+DATE:   2023-08-22
+
+- Relaciones       :: 
+- Atributos        :: 
+- Claves primarias :: 
+- Claves foráneas  :: 
