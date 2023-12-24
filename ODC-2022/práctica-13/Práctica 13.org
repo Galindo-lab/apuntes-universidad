@@ -1,0 +1,65 @@
+
+#+TITLE:  Acceso a subrutinas de ensamblador por \\
+#+TITLE:  programas de alto nivel
+
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   25-11-2022
+
+#+MACRO:  tagline  Práctica 13
+#+INCLUDE: "../includes/template.org"
+#+OPTIONS: ^:nil
+
+* Objetivo
+
+Desarrollar subrutinas de lenguaje ensamblador para ser llamadas desde un lenguaje de alto nivel para comprender las convenciones que los compiladores trabajan en sistemas basados en microprocesador.
+
+* Desarrollo
+** 1. Cree una carpeta llamada P13_nombre_apellido. Dentro de esta carpeta crear los archivos =P13_c.c= y =P13_a.asm=.
+
+
+** 2. En el archivo P13_c.c definir una función externa llamada sumaMatrices, de la siguiente manera:
+
+#+BEGIN_SRC C
+   extern void sumaMatrices(int[WIDTH][HEIGHT], int[WIDTH][HEIGHT],
+                            int[WIDTH][HEIGHT], int, int);
+#+END_SRC
+
++ a. Recibe 5 parámetros, 3 matrices, y otros 2 datos que representan las dimensiones de dichas matrices (Las matrices serán del mismo tamaño).
+
++ b. Los primeros 2 parámetros son las matrices a ser sumadas. El tercer parámetro es la matriz resultante.
+
++ c. Crear dos matrices de enteros con las dimensiones WIDTH y HEIGHT. Definir WIDTH y HEIGHT como Macros de C.
+
++ d. Inicializar ambas matrices.
+
+
+** 3. En el archivo P13_a.asm crear la subrutina sumaMatrices que realice el proceso de la suma de todos los elementos de las matrices pasadas como parámetros y los retorne.
+
+
+** 4. Llamar la subrutina sumaMatrices definida en ensamblador desde C, pasando como parámetros las matrices declaradas anteriormente.
+
+
+** 5. Validar su algoritmo en ensamblador imprimiendo las matrices desde C.
+
+
+
+* Capturas 
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 8cm
+#+CAPTION: Los resultados de la suma estan en la matriz C
+[[file:src/salida.png]]
+
+* Conclusiones y comentarios
+A pesar de que los lenguajes de alto nivel son muy practicos para implementar algoritmos más complejos hay algunas situaciones en las que la velocidad de ensamblador es muy util, podriamos pensar que tener uno nos hace perder todas las ventajas del otro pero en los lenguajes de bajo nivel es posible integrarlos, solo tenemos que tener cudado con como el programa maneja las variables a basjo nivel.
+
+\pagebreak
+
+* Código 
+** Makefile
+{{{code(./src/makefile)}}}
+
+** P13_ASM.asm
+{{{code(./src/P13_ASM.asm)}}}
+
+** P13_C.c
+{{{code(./src/P13_C.c)}}}
