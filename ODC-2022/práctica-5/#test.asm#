@@ -1,0 +1,17 @@
+;;   AUTHOR: Luis Eduardo Galindo Amaya
+;;     DATE: 22-09-2022
+;; ASSEMBLE: 
+;;     LINK:     
+;;      RUN:      
+;;   OUTPUT: 
+
+section .data
+    
+
+section .text
+global _start
+
+_start:
+;; TERMINAR PROGRAMA
+    mov eax, 1
+    int 0x80                    

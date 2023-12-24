@@ -1,0 +1,63 @@
+
+#+TITLE:  Generación de un Programa Ejecutable
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   21-09-2022
+
+#+MACRO:  tagline  Práctica 5
+#+include: "../includes/template.org"
+#+options: ^:nil 
+
+
+* Código
+** codigo_base.asm
+{{{code(./codigo_base.asm)}}}
+
+** Compilando el Ejemplo 
+#+BEGIN_SRC sh :exports both :results code
+  nasm -f elf codigo_base.asm
+  ld -m elf_i386 codigo_base.o libpc_io.a -o salida.out
+  ./salida.out 
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC sh
+Hello, world!
+#+END_SRC
+
+\pagebreak
+
+* Imprimir tres strings
+Modificar código_base.asm y nombrarlo Apellido_Nombre_P5.asm. Modificar el código para que imprima al menos 3 cadenas diferentes. Las cadenas debes ser definidas de la misma forma como se hace en código_base.asm.
+
+{{{code(./Galindo_amaya_luis_eduardo.P5.asm)}}}
+
+** Compilación 
+#+BEGIN_SRC sh :exports both :results code
+  nasm -f elf Galindo_Amaya_Luis_Eduardo.P5.asm
+  ld -m elf_i386 Galindo_Amaya_Luis_Eduardo.P5.o libpc_io.a -o salida2.out
+  ./salida2.out 
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC sh
+Hello, world!
+Otro String!
+y otro String!
+#+END_SRC
+
+\pagebreak
+
+* Captura con getch y imprime con putchar
+Dentro del mismo código, añada la opción de capturar un carácter (vea getche) y justo después, imprimirlo (vea putchar).
+
+{{{code(./captura-p5.asm)}}}
+
+\pagebreak
+
+* Conclusiones y dificultades
+Nasm es mas difícil que marie.js, tiene operaciones mas avanzadas pero requiere que pongamos mas de nuestra parte para entender que estamos haciendo.
+
+* Capturas
+[[file:img/1.png]]
+
+[[file:img/2.png]]
