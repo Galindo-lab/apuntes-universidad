@@ -1,0 +1,30 @@
+
+P10.o:     formato del fichero elf32-i386
+
+
+Desensamblado de la sección .text:
+
+00000000 <_start>:
+   0:	b9 00 00 00 00       	mov    $0x0,%ecx
+   5:	e8 0c 00 00 00       	call   16 <puts>
+   a:	b8 01 00 00 00       	mov    $0x1,%eax
+   f:	bb 00 00 00 00       	mov    $0x0,%ebx
+  14:	cd 80                	int    $0x80
+
+00000016 <puts>:
+  16:	ba 00 00 00 00       	mov    $0x0,%edx
+  1b:	89 c8                	mov    %ecx,%eax
+
+0000001d <puts.loop>:
+  1d:	80 39 00             	cmpb   $0x0,(%ecx)
+  20:	74 04                	je     26 <puts.end>
+  22:	41                   	inc    %ecx
+  23:	42                   	inc    %edx
+  24:	eb f7                	jmp    1d <puts.loop>
+
+00000026 <puts.end>:
+  26:	89 c1                	mov    %eax,%ecx
+  28:	b8 04 00 00 00       	mov    $0x4,%eax
+  2d:	bb 01 00 00 00       	mov    $0x1,%ebx
+  32:	cd 80                	int    $0x80
+  34:	c3                   	ret    

@@ -1,0 +1,23 @@
+ / Solicite al usuario 2 números y despliegue el resultado de la
+ / ecuación 2x+3y-5.
+ 
+ INPUT                            / Captura el valor de X
+ Store X                          
+ INPUT                            / Captura un valor de Y
+ Store Y                          
+ 
+ Clear                            / limpiar Acumulador, hacer AC ← 0
+ 
+ Add X                            / 2x
+ Add X 
+ Add Y                            / 3y
+ Add Y
+ Add Y
+ Subt R                           / -5
+ 
+ Output
+ Halt
+ 
+ X, DEC 0
+ Y, DEC 0
+ R, DEC 5

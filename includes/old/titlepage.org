@@ -1,0 +1,55 @@
+
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [12pt]
+#+OPTIONS: \n:nil num:nil toc:nil title:nil
+#+LANGUAGE: es
+
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage{geometry}
+#+LATEX_HEADER: \geometry{ a4paper, left=.75in, right=.75in, top=1in, bottom=1in }
+
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \renewcommand\familydefault{\sfdefault} 
+#+LATEX_HEADER: \usepackage{sectsty}
+#+LATEX_HEADER: \sectionfont{\normalfont\huge}
+#+LATEX_HEADER: \subsectionfont{\normalfont\huge}
+#+LATEX_HEADER: \usepackage{fancyvrb}
+
+
+#+BEGIN_EXPORT latex
+\begin{titlepage}
+  \vspace*{0.75in}
+  \begin{flushleft} 
+	\sffamily      
+    
+	\large
+    \tagline \\
+
+	\Huge
+    \@title \\
+    \vspace{0.25in}
+    \hline
+    \vspace{0.25in}
+	% \vspace{0.50in}
+
+    \Large
+    \@author
+    
+    
+    \vspace*{\fill}
+	
+    \large
+    \begin{tabular}{ |l|l| }
+      \hline
+      Asignatura & \asignatura \rule{0pt}{15pt}\\
+      Docente & \docente \rule{0pt}{15pt}\\
+      Fecha & \@date \rule{0pt}{15pt}\\
+      \hline
+    \end{tabular} \\
+\end{titlepage}
+
+\setlength\parindent{0pt}   % eliminar el intentado
+\setlength{\parskip}{0.75em}   % expandir el espacio entre párrafos
+\vspace*{0.75in}
+#+END_EXPORT

@@ -1,0 +1,10 @@
+
+    ;esto no funciona
+    mov eax, bx
+
+    ;aceguramos que el registro este vacio ya que
+    ;dentro de eax podria haber cualquier cosa 
+    mov eax, 0
+    mov ax, bx
+
+

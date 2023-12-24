@@ -1,0 +1,67 @@
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [12pt]
+#+OPTIONS: \n:nil num:nil toc:nil title:nil
+
+# Ajustar el lenguaje de babel
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LANGUAGE: es
+
+# Ajustes de la hoja
+#+LATEX_HEADER: \usepackage{geometry}
+#+LATEX_HEADER: \geometry{ a4paper, left=.75in, right=.75in, top=1in, bottom=1in }
+
+# Cambiar la tipografia 
+#+LATEX_HEADER: \renewcommand\familydefault{\sfdefault} 
+
+#+LATEX_HEADER: \usepackage[scaled]{helvet}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+
+#+LATEX_HEADER: \usepackage{sectsty}
+#+LATEX_HEADER: \sectionfont{\normalfont\huge}
+#+LATEX_HEADER: \subsectionfont{\normalfont\huge}
+
+# Fancy verbatism
+#+LATEX_HEADER: \usepackage{fancyvrb}
+
+# obtener los valores de los matadatos 
+#+LATEX_HEADER: \makeatletter
+
+#+BEGIN_EXPORT latex
+\newenvironment{code}
+{
+\VerbatimEnvironment
+\begin{Verbatim}[numbers=left, frame=leftline, framesep=5mm] %
+}
+{
+\end{Verbatim} %
+\pagebreak
+}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\newcommand{\miportada}[1]{
+	\begin{titlepage}
+		\vspace*{0.75in}
+		\begin{flushleft}
+			\sffamily
+			\large #1 \\
+			\Huge \@title \\
+			\hrulefill
+			\vspace{0.25in} \\
+			\Large \@author \\
+			\vspace*{\fill}
+			\large
+			\begin{tabular}{ |l|l| }
+				\hline
+				Asignatura & Organización de Computadoras (331) \\
+				Docente    & Arturo Arreola Alvarez             \\
+				Fecha      & \@date                             \\
+				\hline
+			\end{tabular}
+		\end{flushleft}
+	\end{titlepage}
+}
+#+END_EXPORT
+
+\miportada{ {{{tagline}}} }

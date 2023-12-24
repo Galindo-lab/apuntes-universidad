@@ -1,0 +1,112 @@
+
+/ Programa -------------------------------------
+
+/ capturar los datos
+input 
+store var-altura
+
+input 
+store var-base
+
+/ el iterador determina cuantas veces de sumara
+/ altura a si misma
+store var-iterador 
+jns sub-mult-altura
+/ cargar el resultado de la multiplicacion
+load var-acumulador
+/ guardar el valor en el dividendo
+Store var-dividendo
+Output
+
+/ Reiniciar las variables
+load cons-cero
+Store var-iterador
+Store var-acumulador
+
+/ no ocupamos cargar el valor del 
+/ dividendo, ya que lo guardamos antes
+JnS sub-div-dos
+load var-iterador
+Output
+
+halt 
+
+
+/ Subrutinas -----------------------------------
+
+/ suma "var-altura" la cantidad de veces
+/ que diga "var-iterador" y lo almacena en 
+/ "var-acumulador"
+sub-mult-altura, hex 000
+/ incrementar en 1 a "var-iterador", esto 
+/ simplifica la logica del skipcond, para que solo
+/ salte si AC es mayor a 0
+add cons-uno
+Store var-iterador
+
+x-mult-altura-ini, load var-iterador
+	/ restar uno al acumulador
+	Subt cons-uno
+      
+   	/ detener la iteracion si AC es mayor a 0
+	Skipcond 800
+	JumpI sub-mult-altura
+         
+    / almacena el iterador para la siguiente
+    / iteracion 
+	Store var-iterador
+    / carga el acumulador y suma "var-altura"
+	Load var-acumulador
+	Add var-altura
+    / lo almacena en "var-acumulador" y repite
+    / hasta que "var-iterador" es 0
+   	Store var-acumulador
+	jump x-mult-altura-ini
+
+
+
+
+
+/ division entera de "var-dividendo" entre 
+/ dos y lo almacena en "var-iterador"
+sub-div-dos, hex 000
+
+/ se resta 2 de "var-dividendo"
+x-div-dos-ini, load var-dividendo
+	subt cons-dos
+
+	/ si el resultado de la resta es mayor a 0
+	/ continua iterando
+    Skipcond 800
+    Jump x-div-dos-termina
+	
+/ incrementa el itinerador
+x-div-dos-inc-itn, Store var-dividendo
+	Load var-iterador
+	Add cons-uno
+	Store var-iterador
+	Jump x-div-dos-ini    
+  
+/ si la division es exacta se repite el 
+/ subproceso para incrementar el iterador,
+/ al terminar ese subproceso regresa al 
+/ inicio de "sub-div-dos" entonces se vuelve
+/ a restar 2 al dividendo y ahora el numero es
+/ menor a 0 y diferente a 0 y ahora si
+/ termina el subproceso "sub-div-dos"
+x-div-dos-termina, Skipcond 400
+	JumpI sub-div-dos 
+    Jump x-div-dos-inc-itn
+
+
+/ Constantes -----------------------------------
+cons-cero, dec 0
+cons-uno, dec 1
+cons-dos, dec 2
+
+/ Variables ------------------------------------
+var-base, dec 0
+var-altura, dec 0
+var-iterador, dec 0 
+var-acumulador, dec 0
+var-dividendo, dec 0

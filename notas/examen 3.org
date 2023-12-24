@@ -1,0 +1,75 @@
+
+#+TITLE:  Notas para el examen 3
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   01-12-2022
+
+#+MACRO:  tagline  examen 3
+#+INCLUDE: "../includes/template.org"
+#+OPTIONS: ^:nil
+
+* Pregunta 1
+En la seccion =.data= con la sintaxis:
+
+#+BEGIN_SRC nasm
+  gets_message  db   'Prueba de gets: ', 0xA, 0x0
+  ;   ^         ^     \________________________/              
+  ; nombre    tamaño              |
+  ;                           Definicion   
+#+END_SRC
+
+|---+---------+--------------------+----------|
+|   | Símbolo | Significado        | Tamaño   |
+| / | <       | <                  | <>       |
+|---+---------+--------------------+----------|
+|   | =db=    | define byte        | 1 byte   |
+|   | =dw=    | define word        | 2 bytes  |
+|   | =dd=    | define double word | 4 bytes  |
+|   | =dq=    | define quad word   | 8 bytes  |
+|   | =dt=    | define 'ten bytes' | 10 bytes |
+|---+---------+--------------------+----------|
+
+* Pregunta 2
+En la seccion =.bss= con la sintaxis:
+#+BEGIN_SRC nasm
+  string_captura_getAlpha resb     255
+  ;   ^                    ^        ^
+  ; Nombre               Tamaño  Espacio reservado
+#+END_SRC
+
+|---+---------+----------------------+---------|
+|   | Simbolo | Significado          | Tamaño  |
+| / | <       | <                    | <>      |
+|---+---------+----------------------+---------|
+|   | =resb=  | reserva bytes        | 1 byte  |
+|   | =resw=  | reserva words        | 2 byte  |
+|   | =resd=  | reserva double words | 4 byte  |
+|   | =redq=  | reserva quad words   | 8 byte  |
+|   | =redt=  | reserva 'ten bytes'  | 10 byte |
+|---+---------+----------------------+---------|
+
+* Pregunta 3
+#+BEGIN_SRC nasm
+  %macro delay 1                  ;subrutina con loop
+      mov cx, %1
+      nop
+      nop
+      nop
+      nop
+      nop	
+  %endmacro
+#+END_SRC
+
+* Pregunta 4
+** a
+0xFF9 - 16 = 0xFE9, 4 bytes de direccion de retorno y 12 bytes de parametros
+** b
+[ebp+8] = a, [ebp+12] = b y [ebp+16] = c
+** c
+[ebp+4]
+** d
+[ebp+12]
+** e
+los valores se retornaran en =eax=, para valores mayores a 32 bits =edx:eax=
+
+* Pregunta 5
+

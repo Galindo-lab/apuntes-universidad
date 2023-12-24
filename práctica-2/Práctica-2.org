@@ -1,0 +1,58 @@
+
+#+Title:  Interconexión de Elementos en la Organización de una
+#+Title:  Computadora de Propósito General
+#+AUTHOR: Luis Eduardo Galindo Amaya \\
+#+AUTHOR: 1274895
+#+DATE:   2022-08-29
+
+#+MACRO:  tagline    Práctica 2
+#+include: "../includes/template.org"
+
+
+* Cuestionario 
+1. ¿Qué tamaño en bits tiene el bus de direcciones?
+   - 12 bits.
+
+2. ¿Qué tamaño en bits tiene el bus de datos?
+   - 16 bits.
+
+3. ¿Qué tamaño en bits tiene el código de operación (opcode) de las instrucciones?
+   - 16 bits[fn:bus].
+
+4. ¿Cuál es la dirección máxima de memoria que se puede acceder?
+   - El bus de memoria es solo de 12 bits por lo que la maxima posicion de memoria accesibles es \(2^12 = 4096\) bits[fn:hex].
+
+5. ¿Por qué el registro =MAR= es de 12 bits?
+   - =MAR= es el acronimo de "Memory Address Register" y sirve para acumular la posicion memoria que se vaya a operar, por lo tanto esta conectada al bus de direcciones, y el bus de direcciones es de 12 bits [fn:bus].
+
+6. ¿Por qué el registro =MBR= es de 16 bits?
+   - El =MBR= esta conectado al bus de datos y solo contiene el valor del buffer de datos, 
+
+[fn:hex] 1000 en hexadecimal. En la linea 65 en [[https://github.com/MARIE-js/MARIE.js/blob/master/src/js/marie.js][código]] de marie.js esta explícitamente definido.
+
+[fn:bus] Los primeros 4 bits son para la intruccion y los siguientes 12 son para representar direcciones.
+
+* Programa: Lista de Arrays
+{{{lstlisting(src/lista-con-punteros.mas)}}}
+
+** Capturas
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 12cm
+#+Caption: Captura de 5 valores, en color rojo.
+[[./img/capturaArreglo.png]]
+
+\pagebreak
+
+* Programa: Área Del Triangulo
+{{{lstlisting(src/area-de-un-triangulo.mas)}}}
+
+** Captura
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+Caption: Con base 10, altura 5.
+[[./img/capturaArreglo.png]]
+
+* Conclusión
+#+BEGIN_mdframed
+A modo de conclusión me gustaría poner mis reflexiones, Al tener operaciones muy limitadas en marie.js es muy complicado de obtener el valor de una división, se tiene que recurrir a métodos mas sencillos para poder realizar las operaciones más complejas, recuerdo que algunos profesores siempre nos dicen: /"Las computadoras son tontas"/ y al programar en assembly, recuerdo lo sencillas que realmente son es nuestro trabajo como programadores expandir las limitadas capacidades de estos dispositivos para que sean realmente útiles.
+#+END_mdframed

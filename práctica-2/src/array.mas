@@ -1,0 +1,35 @@
+﻿
+load const-rango-inicio
+Store var-ptr
+
+JnS sub-capturar-arreglo
+
+Halt
+
+
+
+sub-capturar-arreglo, HEX 000
+x-capturar-arreglo, load var-iterador
+	Subt const-arreglo-size
+	Skipcond 000
+    JumpI sub-capturar-arreglo
+   
+    load const-rango-inicio
+    add var-iterador
+    Store var-ptr
+    
+	Input
+	StoreI var-ptr
+	Load var-iterador
+	Add const-uno
+	Store var-iterador
+	Jump x-capturar-arreglo
+    
+    
+
+const-uno, dec 1
+const-rango-inicio, hex 300
+const-arreglo-size, dec 10
+
+var-iterador, dec 0
+var-ptr, hex 0

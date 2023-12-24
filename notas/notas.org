@@ -1,0 +1,316 @@
+#+TITLE:  Arquitectura De Computadoras 
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   2022-08-25
+
+#+MACRO:  tagline    Notas
+#+include: "../includes/template.org"
+
+* Arquitectura de computadora
+** Bus de direcciones 
+El bus de direcciones son las lineas de cobre dentro del procesador. Dependiendo de la cantidad de lineas que tenga podremos saber el tamaño de las dirección de memoria máxima direccionable 
+
+#+caption: \(2^3\) direcciones máximas direccionables.
+#+BEGIN_SRC 
+            +-----------------+
+            |                 |
+  Bus 1 ----+                 |
+            |                 |
+  Bus 2 ----+      Main       |
+            |                 |
+  Bus 3 ----+                 |
+            |                 | 
+            +-----------------+
+#+END_SRC
+
+
+** Bus de datos 
+Nos permite saber si el tamaño de los registros, el bus de datos es bidireccional, puede dar y recibir datos el bus de datos es trifásico[fn:trifásico]:  Leyendo, escribiendo y esperando.
+
+
+[fn:trifásico] Que tiene tres estados.
+    
+
+** Bus de control
+De cuatro a diez lineas en paralelo, les dice a los periféricos y la memoria que hacer, el bus de control es la manera mediante la cual se comunica la CPU con los otros dispositivos:
+
+#+BEGIN_mdframed
+1. El CPU trae la información de memoria, las instrucciones están codificadas por lo que ocupan vario bytes
+2. Decodifica la instrucción. 
+3. Determina las operaciones.
+4. Trae el operador
+   + El dato por  el bus de datos 
+   + y la instrucción por el bus de control
+   + el resultado sale por el bus de datos 
+#+END_mdframed
+
+** Arquitecturas CISC y RISC
+** Computadora de conjunto de instrucciones complejas (CISC)
+- un conjunto de operaciones mas complejas en el procesador
+- las operaciones requieren mas de un ciclo del procesador
+- las operaciones tienen tamaños variables en memoria
+
+** Computadora de conjunto de instrucciones reducidas (RISC)
+- Cada operación se realiza en un solo ciclo de reloj
+- Tamaño constante de instrucciones, usualmente un byte
+- las operaciones son mas sencillas[fn:marie]
+
+[fn:marie] Se parece mas a las operaciones en marie.js
+
+** Segmentación encausada
+Podemos interpretarlo como una linea de ensamble dentro del procesador en la que el procesador va pasando las operaciones de una a una para evitar detenerse. 
+
+** Arquitectura Harvard
+#
+
+** Arquitectura Von Neuman
+#
+
+
+
+
+* Practica 3
+** Ejercicio 1
+dec -> bin
+*** a - 200
+|     | rem 2 |
+|-----+-------|
+| 200 |     0 |
+| 100 |     0 |
+|  50 |     0 |
+|  25 |     1 |
+|  12 |     0 |
+|   6 |     0 |
+|   3 |     1 |
+|   1 |     1 |
+
+*** b - 680
+|     | rem 2 |
+|-----+-------|
+| 680 |     0 |
+| 340 |     0 |
+| 170 |     0 |
+|  85 |     1 |
+|  42 |     0 |
+|  21 |     1 |
+|  10 |     0 |
+|   5 |     1 |
+|   2 |     0 |
+|   1 |     1 |
+
+*** c - 76.375
+|  Parte entera |  rem |
+|---------------+------|
+|            76 |    0 |
+|            38 |    0 |
+|            19 |    1 |
+|             9 |    1 |
+|             4 |    0 |
+|             2 |    0 |
+|             1 |    1 |
+|---------------+------|
+| Parte Decimal |  res |
+|---------------+------|
+|      .375 * 2 | 0.75 |
+|       .75 * 2 |  1.5 |
+|       .50 * 2 |    1 |
+
+1001100.011
+
+*** d - 0.34375
+|---------------+--------+-----|
+| Parte Decimal |    res | bit |
+|---------------+--------+-----|
+|       0.34375 | 0.6875 |   0 |
+|        0.6875 |  1.375 |   1 |
+|         0.375 |   0.75 |   0 |
+|          0.75 |    1.5 |   1 |
+|           0.5 |      1 |   1 |
+
+** Ejercicio 2
+dec -> hex
+*** a - 1536
+|------+-----+-----|
+|      | res | hex |
+|------+-----+-----|
+| 1536 |   0 |   0 |
+|   96 |   0 |   0 |
+|    6 |   6 |   6 |
+
+*** b - 5000
+|      | res | hex |
+|------+-----+-----|
+| 5000 |   8 |   8 |
+|  312 |   8 |   8 |
+|   19 |   3 |   3 |
+|    1 |   1 |   1 |
+
+*** c - 856
+|     | res | hex |
+|-----+-----+-----|
+| 856 |   8 |   8 |
+|  53 |   5 |   5 |
+|   3 |   3 |   3 |
+
+*** d - 128
+|     | res | hex |
+|-----+-----+-----|
+| 128 |   0 |   0 |
+|   8 |   8 |   8 |
+
+** Ejercicio 3
+hex -> dec
+*** a - 0xB4
+\[
+11 * 16 + 4 = 180
+\]
+
+*** b - 0x123
+\[
+1*16^2 + 2*16 + 3 = 291
+\]
+
+*** c - 0xA5A5
+\[
+10*16^3 + 5*16^2 + 10*16 + 5
+\]
+
+*** d - F001
+\[
+15*16^3+0+0+1 = 61441
+\]
+
+** Ejercicio 4
+bin -> dec
+*** 10011010
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|-----+----+----+----+---+---+---+---|
+|   1 |  0 |  0 |  1 | 1 | 0 | 1 | 0 |
+
+154
+
+*** 00110111
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|-----+----+----+----+---+---+---+---|
+|   0 |  0 |  1 |  1 | 0 | 1 | 1 | 1 |
+
+55
+
+*** 11100001
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|-----+----+----+----+---+---+---+---|
+|   1 |  1 |  1 |  0 | 0 | 0 | 0 | 1 |
+
+225
+
+*** 10111100
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|-----+----+----+----+---+---+---+---|
+|   1 |  0 |  1 |  1 | 1 | 1 | 0 | 0 |
+
+188
+
+** Ejercicio 5
+hex -> bin
+*** BA
+|    B |    A |
+|------+------|
+| 1011 | 1010 |
+
+*** D5
+|    D |    5 |
+|------+------|
+| 1101 | 0101 |
+
+*** 9E
+|    9 |    E |
+|------+------|
+| 1001 | 1110 |
+
+*** 32D8
+|    3 |    2 |    D |    8 |
+|------+------+------+------|
+| 0011 | 0010 | 1101 | 1000 |
+
+** Ejercicio 6
+bin -> hex
+*** 10011010
+| 1001 | 1010 |
+|------+------|
+|    9 |    A |
+
+*** 00110111
+| 0011 | 0111 |
+|------+------|
+|    3 |    7 |
+
+*** 01011000
+| 0101 | 1000 |
+|------+------|
+|  5   |   8  |
+
+*** 11100001
+| 1110 | 0001 |
+|------+------|
+|   E  |  1   |
+
+** Ejercicio 7
+represente los siguientes números en su formato signo-magnitud (8 bits):
+*** +58
+| signo | magnitud |
+|-------+----------|
+|     0 | 011 1010 |
+
+*** +37
+| signo | magnitud |
+|-------+----------|
+|     0 | 010 0101 |
+
+*** -101
+| signo | magnitud |
+|-------+----------|
+|     1 | 110 0101 |
+
+*** -68
+| signo | magnitud |
+|-------+----------|
+|     1 | 100 0100 |
+
+** Ejercicio 8
+complemento a 2 (8 bits)
+*** +128
+| stp   | MSB |          |
+|-------+-----+----------|
+| bin   |   1 | 000 0000 |
+| cmp_1 |   0 | 111 1111 |
+| cmp_2 |   1 | 000 0000 |
+
+resultado: 1000 0000
+
+Es posible aplicar el complemento dos al numero, sin embrago la representacion de 128 requiere del bit mas significativo por lo que no es posible registrar el valor junto con su signo. 
+
+*** +24
+| stp   | MSB |          |
+|-------+-----+----------|
+| bin   |   0 | 001 1000 |
+| cmp_1 |   1 | 110 0111 |
+| cmp_2 |   1 | 110 1000 |
+
+resultado: 1110 1000
+
+*** -53
+| stp   | MSB |          |
+|-------+-----+----------|
+| bin   |   0 | 011 0101 |
+| cmp_1 |   1 | 100 1010 |
+| cmp_2 |   1 | 100 1011 |
+
+resultado: 1100 1011
+
+*** -24
+| stp   | MSB |          |
+|-------+-----+----------|
+| bin   |   0 | 001 1000 |
+| cmp_1 |   1 | 110 0111 |
+| cmp_2 |   1 | 110 1000 |
+
+resultado: 1110 1000

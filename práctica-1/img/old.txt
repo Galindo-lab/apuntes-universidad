@@ -1,0 +1,31 @@
+#+BEGIN_SRC plantuml :file ./img/maquina-von-neumann.png
+@startditaa ditaa(--no-shadows )
+                     +-----------------------+
+                     |+---------------------+|
+                     ||                     ||
+                     ||   Unidad Central    ||
+                     ||  De Procesamiento   ||
+                     ||                     ||
+                     || +-----------------+ ||
+                     || |    Unidad De    | ||
+                     || |     Control     | ||
+                     || +-----------------+ ||
++-----------+        ||                     ||        +-----------+
+|Dispositivo|        || +-----------------+ ||        |Dispositivo|
+|    De     +------->|| |     Unidad      | |+------->|    De     |
+|  Entrada  |        || |Aritmético Lógica| ||        |  Salida   |
++-----------+        || +---+-------------+ ||        +-----------+
+                     ||     |          ^    ||
+                     ||     |          |    ||
+                     ||     V          |    ||
+                     || +--------------+--+ ||
+                     || |    Unidad De    | ||
+                     || |     Memoria     | ||
+                     || +-----------------+ ||
+                     |+---------------------+|
+                     +-----------------------+
+@endditaa
+#+END_SRC
+
+#+RESULTS:
+[[file:./img/maquina-von-neumann.png]]

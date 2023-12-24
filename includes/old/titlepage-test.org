@@ -1,0 +1,92 @@
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [12pt]
+#+OPTIONS: \n:nil num:nil toc:nil title:nil
+
+# Ajustar el lenguaje de babel
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LANGUAGE: es
+
+# Ajustes de la hoja
+#+LATEX_HEADER: \usepackage{geometry}
+#+LATEX_HEADER: \geometry{ a4paper, left=.75in, right=.75in, top=1in, bottom=1in }
+
+# Cambiar la tipografia 
+#+LATEX_HEADER: \renewcommand\familydefault{\sfdefault} 
+
+#+LATEX_HEADER: \usepackage[scaled]{helvet}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+
+#+LATEX_HEADER: \usepackage{sectsty}
+#+LATEX_HEADER: \sectionfont{\normalfont\huge}
+#+LATEX_HEADER: \subsectionfont{\normalfont\huge}
+
+# Fancy verbatism
+#+LATEX_HEADER: \usepackage{fancyvrb}
+
+# obtener los valores de los matadatos 
+#+LATEX_HEADER: \makeatletter
+
+#+BEGIN_EXPORT latex
+\begin{titlepage}
+\vspace*{0.75in}
+\begin{flushleft} 
+\sffamily         
+\large
+#+END_EXPORT
+
+{{{tagline}}}  \\
+
+#+LATEX: \Huge 
+
+{{{title}}} 
+
+#+BEGIN_EXPORT latex
+  \\
+\vspace{0.25in}
+\hline
+\vspace{0.25in}
+\Large 
+#+END_EXPORT
+
+
+{{{author}}}  \\
+
+
+#+BEGIN_EXPORT latex
+\vspace*{\fill}
+\large
+\begin{tabular}{ |l|l| }
+\hline
+Asignatura & 
+#+END_EXPORT
+
+{{{asignatura}}} 
+
+#+BEGIN_EXPORT latex
+\rule{0pt}{15pt}\\
+Docente &
+#+END_EXPORT
+
+{{{docente}}} 
+
+#+BEGIN_EXPORT latex
+\rule{0pt}{15pt}\\
+Fecha & 
+#+END_EXPORT
+
+{{{date}}}
+
+#+BEGIN_EXPORT latex
+\rule{0pt}{15pt}\\
+\hline
+\end{tabular} \\
+\end{flushleft}
+\end{titlepage}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\setlength\parindent{0pt}   % eliminar el intentado
+\setlength{\parskip}{0.75em}   % expandir el espacio entre párrafos
+%\vspace*{0.75in}
+#+END_EXPORT
