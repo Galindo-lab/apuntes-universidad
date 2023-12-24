@@ -1,0 +1,256 @@
+En el fichero libpc_io.a:
+
+pc_io.o:     formato del fichero elf32-i386
+
+
+Desensamblado de la sección .text:
+
+00000000 <clrscr>:
+   0:	50                   	push   %eax
+   1:	53                   	push   %ebx
+   2:	51                   	push   %ecx
+   3:	52                   	push   %edx
+   4:	b8 04 00 00 00       	mov    $0x4,%eax
+   9:	bb 01 00 00 00       	mov    $0x1,%ebx
+   e:	b9 00 00 00 00       	mov    $0x0,%ecx
+  13:	ba 07 00 00 00       	mov    $0x7,%edx
+  18:	cd 80                	int    $0x80
+  1a:	5a                   	pop    %edx
+  1b:	59                   	pop    %ecx
+  1c:	5b                   	pop    %ebx
+  1d:	58                   	pop    %eax
+  1e:	c3                   	ret    
+
+0000001f <gotoxy>:
+  1f:	50                   	push   %eax
+  20:	53                   	push   %ebx
+  21:	51                   	push   %ecx
+  22:	b0 1b                	mov    $0x1b,%al
+  24:	e8 53 00 00 00       	call   7c <putchar>
+  29:	b0 5b                	mov    $0x5b,%al
+  2b:	e8 4c 00 00 00       	call   7c <putchar>
+  30:	66 b8 00 00          	mov    $0x0,%ax
+  34:	88 d8                	mov    %bl,%al
+  36:	b1 0a                	mov    $0xa,%cl
+  38:	f6 f1                	div    %cl
+  3a:	3c 00                	cmp    $0x0,%al
+  3c:	74 07                	je     45 <gotoxy.next>
+  3e:	04 30                	add    $0x30,%al
+  40:	e8 37 00 00 00       	call   7c <putchar>
+
+00000045 <gotoxy.next>:
+  45:	88 e0                	mov    %ah,%al
+  47:	04 30                	add    $0x30,%al
+  49:	e8 2e 00 00 00       	call   7c <putchar>
+  4e:	b0 3b                	mov    $0x3b,%al
+  50:	e8 27 00 00 00       	call   7c <putchar>
+  55:	66 b8 00 00          	mov    $0x0,%ax
+  59:	88 f8                	mov    %bh,%al
+  5b:	f6 f1                	div    %cl
+  5d:	3c 00                	cmp    $0x0,%al
+  5f:	74 07                	je     68 <gotoxy.next2>
+  61:	04 30                	add    $0x30,%al
+  63:	e8 14 00 00 00       	call   7c <putchar>
+
+00000068 <gotoxy.next2>:
+  68:	88 e0                	mov    %ah,%al
+  6a:	04 30                	add    $0x30,%al
+  6c:	e8 0b 00 00 00       	call   7c <putchar>
+  71:	b0 66                	mov    $0x66,%al
+  73:	e8 04 00 00 00       	call   7c <putchar>
+  78:	59                   	pop    %ecx
+  79:	5b                   	pop    %ebx
+  7a:	58                   	pop    %eax
+  7b:	c3                   	ret    
+
+0000007c <putchar>:
+  7c:	52                   	push   %edx
+  7d:	51                   	push   %ecx
+  7e:	53                   	push   %ebx
+  7f:	50                   	push   %eax
+  80:	b8 04 00 00 00       	mov    $0x4,%eax
+  85:	bb 01 00 00 00       	mov    $0x1,%ebx
+  8a:	89 e1                	mov    %esp,%ecx
+  8c:	ba 01 00 00 00       	mov    $0x1,%edx
+  91:	cd 80                	int    $0x80
+  93:	58                   	pop    %eax
+  94:	5b                   	pop    %ebx
+  95:	59                   	pop    %ecx
+  96:	5a                   	pop    %edx
+  97:	c3                   	ret    
+
+00000098 <puts>:
+  98:	50                   	push   %eax
+  99:	52                   	push   %edx
+
+0000009a <puts.next>:
+  9a:	8a 02                	mov    (%edx),%al
+  9c:	3c 00                	cmp    $0x0,%al
+  9e:	74 08                	je     a8 <puts.fin>
+  a0:	e8 d7 ff ff ff       	call   7c <putchar>
+  a5:	42                   	inc    %edx
+  a6:	eb f2                	jmp    9a <puts.next>
+
+000000a8 <puts.fin>:
+  a8:	5a                   	pop    %edx
+  a9:	58                   	pop    %eax
+  aa:	c3                   	ret    
+
+000000ab <getche>:
+  ab:	52                   	push   %edx
+  ac:	51                   	push   %ecx
+  ad:	53                   	push   %ebx
+  ae:	6a 00                	push   $0x0
+  b0:	e8 44 00 00 00       	call   f9 <ICANON_disable>
+  b5:	b8 03 00 00 00       	mov    $0x3,%eax
+  ba:	bb 00 00 00 00       	mov    $0x0,%ebx
+  bf:	89 e1                	mov    %esp,%ecx
+  c1:	ba 01 00 00 00       	mov    $0x1,%edx
+  c6:	cd 80                	int    $0x80
+  c8:	e8 68 00 00 00       	call   135 <ICANON_enable>
+  cd:	58                   	pop    %eax
+  ce:	5b                   	pop    %ebx
+  cf:	59                   	pop    %ecx
+  d0:	5a                   	pop    %edx
+  d1:	c3                   	ret    
+
+000000d2 <getch>:
+  d2:	52                   	push   %edx
+  d3:	51                   	push   %ecx
+  d4:	53                   	push   %ebx
+  d5:	6a 00                	push   $0x0
+  d7:	e8 95 00 00 00       	call   171 <ICANON_ECHO_disable>
+  dc:	b8 03 00 00 00       	mov    $0x3,%eax
+  e1:	bb 00 00 00 00       	mov    $0x0,%ebx
+  e6:	89 e1                	mov    %esp,%ecx
+  e8:	ba 01 00 00 00       	mov    $0x1,%edx
+  ed:	cd 80                	int    $0x80
+  ef:	e8 c0 00 00 00       	call   1b4 <ICANON_ECHO_enable>
+  f4:	58                   	pop    %eax
+  f5:	5b                   	pop    %ebx
+  f6:	59                   	pop    %ecx
+  f7:	5a                   	pop    %edx
+  f8:	c3                   	ret    
+
+000000f9 <ICANON_disable>:
+  f9:	50                   	push   %eax
+  fa:	53                   	push   %ebx
+  fb:	51                   	push   %ecx
+  fc:	52                   	push   %edx
+  fd:	b8 36 00 00 00       	mov    $0x36,%eax
+ 102:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 107:	b9 01 54 00 00       	mov    $0x5401,%ecx
+ 10c:	ba 00 00 00 00       	mov    $0x0,%edx
+ 111:	cd 80                	int    $0x80
+ 113:	83 25 0c 00 00 00 fd 	andl   $0xfffffffd,0xc
+ 11a:	b8 36 00 00 00       	mov    $0x36,%eax
+ 11f:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 124:	b9 02 54 00 00       	mov    $0x5402,%ecx
+ 129:	ba 00 00 00 00       	mov    $0x0,%edx
+ 12e:	cd 80                	int    $0x80
+ 130:	5a                   	pop    %edx
+ 131:	59                   	pop    %ecx
+ 132:	5b                   	pop    %ebx
+ 133:	58                   	pop    %eax
+ 134:	c3                   	ret    
+
+00000135 <ICANON_enable>:
+ 135:	50                   	push   %eax
+ 136:	53                   	push   %ebx
+ 137:	51                   	push   %ecx
+ 138:	52                   	push   %edx
+ 139:	b8 36 00 00 00       	mov    $0x36,%eax
+ 13e:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 143:	b9 01 54 00 00       	mov    $0x5401,%ecx
+ 148:	ba 00 00 00 00       	mov    $0x0,%edx
+ 14d:	cd 80                	int    $0x80
+ 14f:	83 0d 0c 00 00 00 02 	orl    $0x2,0xc
+ 156:	b8 36 00 00 00       	mov    $0x36,%eax
+ 15b:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 160:	b9 02 54 00 00       	mov    $0x5402,%ecx
+ 165:	ba 00 00 00 00       	mov    $0x0,%edx
+ 16a:	cd 80                	int    $0x80
+ 16c:	5a                   	pop    %edx
+ 16d:	59                   	pop    %ecx
+ 16e:	5b                   	pop    %ebx
+ 16f:	58                   	pop    %eax
+ 170:	c3                   	ret    
+
+00000171 <ICANON_ECHO_disable>:
+ 171:	50                   	push   %eax
+ 172:	53                   	push   %ebx
+ 173:	51                   	push   %ecx
+ 174:	52                   	push   %edx
+ 175:	b8 36 00 00 00       	mov    $0x36,%eax
+ 17a:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 17f:	b9 01 54 00 00       	mov    $0x5401,%ecx
+ 184:	ba 00 00 00 00       	mov    $0x0,%edx
+ 189:	cd 80                	int    $0x80
+ 18b:	83 25 0c 00 00 00 fd 	andl   $0xfffffffd,0xc
+ 192:	83 25 0c 00 00 00 f7 	andl   $0xfffffff7,0xc
+ 199:	b8 36 00 00 00       	mov    $0x36,%eax
+ 19e:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 1a3:	b9 02 54 00 00       	mov    $0x5402,%ecx
+ 1a8:	ba 00 00 00 00       	mov    $0x0,%edx
+ 1ad:	cd 80                	int    $0x80
+ 1af:	5a                   	pop    %edx
+ 1b0:	59                   	pop    %ecx
+ 1b1:	5b                   	pop    %ebx
+ 1b2:	58                   	pop    %eax
+ 1b3:	c3                   	ret    
+
+000001b4 <ICANON_ECHO_enable>:
+ 1b4:	50                   	push   %eax
+ 1b5:	53                   	push   %ebx
+ 1b6:	51                   	push   %ecx
+ 1b7:	52                   	push   %edx
+ 1b8:	b8 36 00 00 00       	mov    $0x36,%eax
+ 1bd:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 1c2:	b9 01 54 00 00       	mov    $0x5401,%ecx
+ 1c7:	ba 00 00 00 00       	mov    $0x0,%edx
+ 1cc:	cd 80                	int    $0x80
+ 1ce:	83 0d 0c 00 00 00 02 	orl    $0x2,0xc
+ 1d5:	83 0d 0c 00 00 00 08 	orl    $0x8,0xc
+ 1dc:	b8 36 00 00 00       	mov    $0x36,%eax
+ 1e1:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 1e6:	b9 02 54 00 00       	mov    $0x5402,%ecx
+ 1eb:	ba 00 00 00 00       	mov    $0x0,%edx
+ 1f0:	cd 80                	int    $0x80
+ 1f2:	5a                   	pop    %edx
+ 1f3:	59                   	pop    %ecx
+ 1f4:	5b                   	pop    %ebx
+ 1f5:	58                   	pop    %eax
+ 1f6:	c3                   	ret    
+
+000001f7 <pHex_n>:
+ 1f7:	50                   	push   %eax
+ 1f8:	24 0f                	and    $0xf,%al
+ 1fa:	3c 0a                	cmp    $0xa,%al
+ 1fc:	72 02                	jb     200 <pHex_n.num>
+ 1fe:	04 07                	add    $0x7,%al
+
+00000200 <pHex_n.num>:
+ 200:	04 30                	add    $0x30,%al
+ 202:	e8 75 fe ff ff       	call   7c <putchar>
+ 207:	58                   	pop    %eax
+ 208:	c3                   	ret    
+
+00000209 <pHex_w>:
+ 209:	50                   	push   %eax
+ 20a:	51                   	push   %ecx
+ 20b:	b9 04 00 00 00       	mov    $0x4,%ecx
+
+00000210 <pHex_w.next>:
+ 210:	66 c1 c0 04          	rol    $0x4,%ax
+ 214:	e8 de ff ff ff       	call   1f7 <pHex_n>
+ 219:	e2 f5                	loop   210 <pHex_w.next>
+ 21b:	59                   	pop    %ecx
+ 21c:	58                   	pop    %eax
+ 21d:	c3                   	ret    
+
+0000021e <p_LF>:
+ 21e:	50                   	push   %eax
+ 21f:	b0 0a                	mov    $0xa,%al
+ 221:	e8 56 fe ff ff       	call   7c <putchar>
+ 226:	58                   	pop    %eax
+ 227:	c3                   	ret    

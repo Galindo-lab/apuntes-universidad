@@ -1,0 +1,45 @@
+
+#+TITLE:  Macros y Lenguaje Ensamblador de Alto Nivel
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   18-11-2022
+
+#+MACRO:  tagline  Práctica 11
+#+INCLUDE: "../includes/template.org"
+#+OPTIONS: ^:nil
+
+* Objetivo 
+Identificar el funcionamiento y beneficio de utilizar macros en un lenguaje de bajo nivel. Identificar la estructura del  lenguaje ensamblador de alto nivel para el desarrollo de sistemas basados en microprocesador.
+
+* Desarollo 
+Cree un archivo llamado P11_Menu.asm en donde deberá escribir un programa en lenguaje ensamblador que haga lo siguiente:
+
+1. El programa deberá mostrar un menú principal con al menos 2 opciones y una opción para terminar el programa.
+
+2. Cree la macro print_menu que le ayudara a la impresión de los menús.
+
+3. Cuando el usuario seleccione una de las opciones se debe desplegar un submenú con al menos 2 opciones y una opción para regresar al menú principal.
+
+#+BEGIN_SRC  
+Ejemplo:
+Menú
+|Operaciones Aritméticas
+ |Suma
+ |Resta
+ |Regresar
+|Operaciones Binarias
+  |AND
+  |OR
+  |Regresar
+|Salir
+#+END_SRC
+
+* Conclusiones y comentarios
+Cuando trabajamos con macros debemos ser cuidadosos, pienso que no debemos abusar de ellos, en mi opinion un macro adecuado no debe tener mas de 10 lineas de codigo y no ser abusado exesivamente.
+
+
+#+BEGIN_SRC python
+  print("hola")
+#+END_SRC
+
+* Código
+{{{code(./src/P11.asm)}}}
