@@ -1,0 +1,86 @@
+#+TITLE:  Interrupciones
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   04-11-2022
+
+#+MACRO:  tagline  Práctica 10
+#+INCLUDE: "../includes/template.org"
+#+OPTIONS: ^:nil
+
+* Objetivo
+Seleccionar las instrucciones de llamadas al sistema adecuadas, para 
+desarrollar aplicaciones de sistemas basados en microprocesador, 
+mediante el análisis de su funcionalidad, de forma responsable y eficiente.
+
+* Desarollo
+** Actvidad 1
+Completar la tabla sobre los parámetros necesarios en las llamadas al
+sistema operativo para el manejo de archivos en Linux por medio de la 
+interrupción 80h.
+
+|---+----------+---------------------+----------------------------------|
+|   | Servicio | Param. del servicio | Explicación                      |
+| / | <>       | <>                  | <>                               |
+|---+----------+---------------------+----------------------------------|
+|   |          | EAX = 3             | Numero del servicio[fn:wq]       |
+|   | Leer     | EBX = 0             | Unidad de entrada[fn:us]         |
+|   |          | ECX = ptr           | puntero a un área de memoria     |
+|   |          | EDX = length        | Número de caracteres a leer      |
+|---+----------+---------------------+----------------------------------|
+|   |          | EAX = 4             | Numero del servicio              |
+|   | Escribir | EBX = 1             | unidad de salida[fn:es]          |
+|   |          | ECX = ptr           | Puntero a un área de memoria     |
+|   |          | EDX = lenght        | Número máximo de caracteres      |
+|---+----------+---------------------+----------------------------------|
+|   |          | EAX = 5             | Numero del servicio              |
+|   | Abrir    | EBX = path          | Dir. de una cadena de caracteres |
+|   |          | ECX = mode          | Modo de acceso[fn:mr]            |
+|   |          | EDX = permisos      | Permisos al archivo              |
+|---+----------+---------------------+----------------------------------|
+
+[fn:wq] al terminar el servicio el valor se reemmplaza con el numero de caracteres capturados
+[fn:us] 0: Entrada estándar o teclado.
+[fn:es] 1: salida estándar o terminal.
+[fn:mr] Más informacion: https://es.wikipedia.org/wiki/Int_80h
+
+** Actividad 2
+Codifique las funciones gets y puts las cuales capturan e imprimen una 
+cadena de caracteres en pantalla, respectivamente. Solo haga uso de la 
+interrupción 80h. No haga uso de la librería proporcionada.
+
+- La subrutina gets :: solo debe poder capturar la cantidad máxima de caracteres que caben en el buffer en el que se guardará la cadena.
+
+- La subrutina puts :: debe ser capaz de detectar la longitud de la cadena a imprimir y pasar este valor a la interrupción 80h para establecer la cantidad de  caracteres a imprmir.
+
+** Actividad 3
+Cree un archivo dentro de la misma carpeta, llamado P10.txt. Dentro de
+este archivo, coloque su nombre y su matrícula. Desarrolle una subrutina
+que le permita leer el contenido del archivo e imprimirlo en pantalla
+utilizando la interrupción 80h. Mencione que datos se deben colocar en
+cada registro para lograr esto. 
+
+* Captura
+[[file:img/a.png]]
+
+* Conclusiones
+Cuando trabajamos con interrupciones lo principal cosa que debemos tomar en cuenta
+es que cada sistema operativo es diferente, por lo que nuestro código va a tener
+que modificarse de acuerdo a cada sistema operativo lo cual añade una capa mas
+a las complicaciones que requiere el ensamblador para funcionar.
+
+* Dificultades
+Con la interrupción de captura tuve que añadir una funcion para vaciar el 
+buffer, ya que pasaba los valores a la siguiente captura.
+
+* Código
+{{{code(./src/P10.asm)}}}
+
+* Fuentes
+- Lista de interrupciones :: https://es.wikipedia.org/wiki/Int_80h
+- Descripciones de las interrupciones :: http://www.int80h.org/
+- Leer un archivo e imprimir el contenido :: https://stackoverflow.com/q/26963871
+- Mover un valor desde .data a un registro :: https://stackoverflow.com/a/64005239
+- Generalidades de NASM :: https://shorturl.at/lsuHS
+- Direccion en un arreglo :: https://reverseengineering.stackexchange.com/a/18711
+
+# - Generalidades de NASM :: http://cv.uoc.edu/annotation/8255a8c320f60c2bfd6c9f2ce11b2e7f/619469/PID_00218273/PID_00218273.html#w31aac15c19c53
+# https://stackoverflow.com/questions/49784186/segmentation-fault-int-80h
