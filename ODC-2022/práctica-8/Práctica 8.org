@@ -1,0 +1,76 @@
+
+#+TITLE:  Instrucciones, lógicas y de manipulación de bits.
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   14-10-2022
+
+#+MACRO:  tagline  Práctica 8
+#+INCLUDE: "../includes/template.org"
+#+OPTIONS: ^:nil
+
+* Objetivo
+Seleccionar las instrucciones lógicas y de manipulación de bits adecuadas
+para desarrollar aplicaciones de sistemas basados en microprocesador
+mediante la distinción de su funcionamiento, de forma lógica y ordenada.
+
+* Desarrollo
+** Parte 1
+Descargue el archivo print_hex.asm proporcionado en la plataforma. Abra un notebook en Google
+Colab y ensamble el código con NASM por medio del comando:
+
+#+BEGIN_SRC
+nasm -f elf print_hex.asm
+#+END_SRC
+
+Encadene el archivo con la librería utilizando el siguiente comando:
+
+#+BEGIN_SRC 
+ld -m -elf_i386 print_hex.o <PATH_de_la_libreria> -o print_hex
+#+END_SRC
+
+El cual generará el archivo ejecutable print_hex.
+Ejecute el archivo por medio del comando:
+
+#+BEGIN_SRC 
+./print_hex
+#+END_SRC
+
+Pruebe el programa colocando diferentes valores en EAX para entender el funcionamiento del
+mismo.
+
+** Parte 2
+*** Instrucciones
+Cree un programa llamado P8.asm que contenga la rutina print_hex, la cual recibe en EAX un
+valor que se quiere imprimir en formato hexadecimal. Agregue a P8.asm las instrucciones
+necesarias para hacer lo que se indica a continuación:
+
+- a. Coloque en EAX el valor 0x22446688 y por medio de rotaciones obtener 0x82244668.
+- b. Coloque en CX el valor 0x3F48 y por medio de corrimientos obtener 0xFA40.
+- c. Colocar en el registro ESI el valor 0x20D685F3 y por medio de enmascaramiento invertir los bits 0, 5, 13, 18 y 30, sin modificar los demás.
+- d. Guardar ESI en la pila
+- e. Colocar en el registro CH el valor 0xA7 y por medio de enmascaramiento activar los bits 3 y
+- 6, sin modificar los demás.
+- f. Colocar en el registro BP el valor 0x67DA y por medio de enmascaramiento desactivar los bits 1, 4, 6, 10 y 14, sin modificar los demás
+- g. Dividir BP entre 8 usando operaciones de manipulación de bits.
+- h. Dividir EBX entre 32 usando operaciones de manipulación de bits.
+- i. Multiplicar CX por 8 usando operaciones de manipulación de bits.
+- j. Sacar un valor de la pila y guardarlo en ESI.
+- k. Multiplicar ESI por 10 usando operaciones de manipulación de bits.
+
+- NOTA :: Por cada inciso, despliegue en pantalla el nuevo valor del registro modificado utilizando la subrutina print_hex.
+
+*** Capturas
+[[file:img/1.png]]
+
+*** Código
+{{{code(./src/P8.asm)}}}
+
+* Conclusiones y comentarios
+Las operaciones con bits son más complicadas para nosotros porque estamos acostumbrados a trbajar 
+con los valores decimales, sin embargo la compurtadora trabaja mas facilmente en binario por lo que 
+para ganar mas velocidad de ejecucion podemos utilizar estas operaciones, quiza unos pocos 
+cientos de veces no es justificacion para poder justificar usar ASM pero millones haga alguna 
+diferencia significativa.
+
+
+* Referencias
+- Bitshifting to multiply an integer by 10 :: https://stackoverflow.com/a/10758005

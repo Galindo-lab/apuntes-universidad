@@ -1,0 +1,50 @@
+#+TITLE:  Modos de Direccionamiento
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   23-09-2022
+
+#+MACRO:  tagline  Práctica 6
+#+include: "../includes/template.org"
+
+* Objetivo
+Identificar los modos de direccionamiento adecuados para manejo de memoria en aplicaciones de sistemas basados en microprocesador mediante la distinción de su funcionamiento, de forma lógica y responsable.
+
+* Desarollo
+** Actividad 1
+El programa solicita al usuario el ingreso de su nombre y despliega un mensaje de saludo.
+
+*** Código
+{{{code(./src/captura.asm)}}}
+
+
+** Actividad 2
+Cree un programa llamado Apellido_Nombre_P6.asm que contenga las instrucciones necesarias para hacer lo que se indica a continuación:
+
+- a) :: Reservar dos espacios en memoria no inicializados, uno de 32 bytes etiquetado como A y el otro de 1 byte etiquetado como N.
+
+- b) :: Solicitar una cadena que se almacene en A.
+
+- c) :: Copiar el caracter en la posición 0 de A en la variable N. Use un modo de direccionamiento base.
+
+- d) :: Reemplazar el caracter en la posición 3 de A por un asterisco ‘*’, usando un modo de direccionamiento base con desplazamiento.
+
+- e) :: Reemplazar el caracter en la posición 6 de A por un arroba ‘@’ usando un direccionamiento base con índice escalado.
+
+- f) :: Copiar el caracter en la posición 1 de A y almacenarlo en los bits 15-8 del acumulador.
+
+- g) :: Reemplazar el caracter en la posición 9 de A por el caracter en los bits 15-8 del acumulador, usando un direccionamiento base con índice escalado y desplazamiento.
+
+- h) :: Solicite un caracter al usuario y guárdelo en la posición 5 de A.
+
+
+*** Código
+{{{code(./src/t1.asm)}}}
+
+* Conclusiones y comentarios
+#+BEGIN_mdframed
+Es interesante ver que hay mas maneras de redireccionar memoria, a pesar de que se ve un poco extraño redireccionar con índice escalado esto nos permite acceder mas rápidamente a las posiciones de memoria y es importante aprender a usarlo.
+#+END_mdframed
+
+* Dificultades en el desarrollo
+#+BEGIN_mdframed
+En el inciso 'h' del ejercicio 2 al insertar el valor no mostraba el resultado final insertaba un salto de linea, tuve que pasar el valor capturado al valor 'N' para eliminar el salto de linea.
+#+END_mdframed

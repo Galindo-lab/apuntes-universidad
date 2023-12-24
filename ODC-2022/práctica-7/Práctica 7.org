@@ -1,0 +1,91 @@
+#+TITLE:  Instrucciones de transferencia y aritmeticas.
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   07-10-2022
+
+#+MACRO:  tagline  Práctica 7
+#+INCLUDE: "../includes/template.org"
+#+OPTIONS: ^:nil
+
+* Instrucciones 
+** Objetivo
+Seleccionar las instrucciones aritméticas y de transferencia de datos
+adecuadas para desarrollar aplicaciones de sistemas basados en
+microprocesador mediante la distinción de su funcionamiento, de forma
+lógica y ordenada.
+
+** Desarollo 
+*** Parte 1
+Descargue el archivo print_hex.asm proporcionado en la plataforma. Abra Google Colab y ensamble el código con NASM por medio del comando:
+
+#+BEGIN_SRC 
+nasm -f elf print_hex.asm
+#+END_SRC
+
+Encadene el archivo con la librería utilizando el siguiente comando:
+
+#+BEGIN_SRC 
+ld -m -elf_i386 print_hex.o <PATH_de_la_libreria> -o print_hex
+#+END_SRC
+
+El cual generará el archivo ejecutable print_hex. Ejecute el archivo por medio del comando:
+
+#+BEGIN_SRC 
+./print_hex
+#+END_SRC
+
+Pruebe el programa colocando diferentes valores en EAX para entender el funcionamiento del mismo.
+
+*** Parte 2
+Cree un programa llamado P7.asm que contenga la rutina print_hex, la cual recibe en EAX un valor que se quiere imprimir en formato hexadecimal. Agregue a P7.asm las instrucciones necesarias para hacer lo que se indica a continuación:
+
+- a. Coloque en EBX el valor 0x5C4B2A60. Sume su matrícula como valor hexadecimal. Si su matrícula es 12345678 expresarla como 0x12345678. Almacene el resultado en EBX.
+
+- b. Coloque los 16 bits menos significativos de EBX en la pila.
+
+- c. Defina una variable N de 2 bytes de longitud. En ella, guarde el resultado de la multiplicación de BL por 8, sin considerar los signos.
+
+- d. Incrementar en 1 el valor guardado en N.
+
+- e. Divida el valor almacenado en BX entre 0xFF. Imprima tanto el cociente como el residuo de la operación.
+
+- f. Realice la suma entre el valor almacenado en N y el residuo de la división anterior. Guarde el valor en N y decremente N. Realice las operaciones necesarias para imprimir el registro de banderas y explique que banderas están activas y porque.
+
+- g. Saque un dato de 16 bits de la pila.
+
+#+BEGIN_VERSE
+NOTA: Por cada inciso, despliegue en pantalla el nuevo valor del registro modificado utilizando la subrutina print_hex.
+#+END_VERSE
+
+\pagebreak
+
+
+* Desarollo de las actividades
+** parte 1
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 7cm
+[[file:img/1.png]]
+
+El programa se pudo compilar con los siguiente comandos:
+#+BEGIN_SRC bash
+nasm -f elf print_hex.asm
+ld -m elf_i386 print_hex.o libpc_io.a -o a
+./a
+
+00BBCCDD
+#+END_SRC
+
+** parte 2
+*** código
+{{{code(./src/P7.asm)}}}
+
+*** Foto
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 7cm
+[[file:img/2.png]]
+
+* Conclusiones y comentarios
+Fue muy interesante ver como hacer operaciones en ASM es bastante diferente de otros lenguajes, y entender por que la pila es tan útil para las operaciones matemáticas.
+
+* Dificultades en el desarrollo
+Imprimir los valores del hex en la pantalla daba problemas, pude resolver parcialmente el error extendiendo el tamaño de string_hex a 255 y haciendo que todas mis variables fueran de 4 bytes.

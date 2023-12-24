@@ -1,0 +1,67 @@
+#+TITLE:  Instrucciones de control de flujo.
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   21-10-2022
+
+#+MACRO:  tagline  Práctica 9
+#+INCLUDE: "../includes/template.org"
+#+OPTIONS: ^:nil num:nil
+
+* Objetivo
+Seleccionar las instrucciones de control de flujo del programa adecuadas, para
+desarrollar aplicaciones de sistemas basados en microp
+
+* Desarrollo
+Programe las siguientes rutinas usando las instrucciones de control de flujo del
+procesador 80386 y las rutinas en la biblioteca de funciones libpc_io.a. Escriba su
+código fuente en un archivo llamado P8.asm, ensamble el código con NASM y
+encadénelo con el comando ld.
+
+** a) gets
+Almacena en memoria una cadena de caracteres ingresada por el usuario por medio
+del teclado. La captura termina cuando el usuario presiona la tecla ENTER. La 
+cadena se almacena a partir de la dirección EDX y con un 0 (null) al final que 
+indica el fin de cadena. Cuando el usuario teclea la cadena, se deben 
+visualizar en pantalla los caracteres ingresados.
+
+Una vez que tenga funcional la rutina, modifíquela de forma que acepte la tecla
+BACKSPACE. Cada que el usuario presiona esta tecla, el último carácter de la 
+cadena es borrado de pantalla y de memoria. La rutina no debe usar gotoxy, 
+haga uso de getch/getche y putchar.
+
+*Información*: El código ASCII de la tecla ENTER es 10. El BACKSPACE es 8. Se 
+hace uso de getch/getche para recibir cada carácter individual del teclado y 
+se verifica si se recibió un ENTER ó BACKSPACE, para proceder a terminar la 
+captura o hacer el borrado del último carácter ingresado.
+
+** b) getsAlpha
+El procedimiento es similar a gets, a excepción de que sólo acepta caracteres
+del abecedario a – z y A – Z.
+
+** c) asteriscos
+Colocar en CX la cantidad de renglones con asteriscos se desean imprimir. El
+procedimiento imprime las líneas con asteriscos. La primera línea cuenta con 
+1 asterisco, la segunda con 2, etc. Ejemplo: Si CX = 5 el procedimiento debe 
+imprimir:
+
+#+BEGIN_SRC 
+*
+**
+***
+****
+*****
+#+END_SRC
+
+
+
+
+* Capturas
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: Programa funcionando
+[[file:img/1.png]]
+
+* Código
+{{{code(./src/P9.asm)}}}
+
+* Comentarios 
+Capturar cosas con asembly no es facil, pero es un desafio interesante.

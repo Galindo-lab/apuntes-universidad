@@ -1,0 +1,3 @@
+#+BEGIN_SRC python
+return [bin(0x22446688),bin(0x33441122)]
+#+END_SRC
