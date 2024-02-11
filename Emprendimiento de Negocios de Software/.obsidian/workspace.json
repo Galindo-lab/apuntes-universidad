@@ -1,0 +1,168 @@
+{
+  "main": {
+    "id": "c10f3dd961ba1ab9",
+    "type": "split",
+    "children": [
+      {
+        "id": "936463e2a1e28498",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b29f93f97b739b40",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "aa894785557b3bd3",
+    "type": "split",
+    "children": [
+      {
+        "id": "4c9930578376df5f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72ff363d2133ca5f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9c88d5d5b818e2a6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "34bb39553b65d90f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a014c5053fedfae7",
+    "type": "split",
+    "children": [
+      {
+        "id": "1736952c88d68920",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8da5656f666e5cce",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d1ab427aa15b8ed9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "255befb89de754e5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c4148fb46b84229b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo canvas": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "72ff363d2133ca5f",
+  "lastOpenFiles": [
+    "img/288300054-278844f1-a8bf-43fd-b276-8fc5c6386be2.png",
+    "img",
+    "Unidad 1/Meta 1.2/output.png",
+    "Unidad 1/Meta 1.2/Proyectos con Base Tecnológica.canvas",
+    "README.md",
+    "Unidad 1/Meta 1.1/Untitled.canvas",
+    "Unidad 1/Meta 1.2/Welcome.md",
+    "Unidad 1/Meta 1.2/Caracteristicas.md",
+    "Unidad 1/Meta 1.2/img/Pasted image 20240210180830.png",
+    "Unidad 1/Meta 1.2/img/mano-robotica.png",
+    "Unidad 1/Meta 1.2/img/uber.png",
+    "Unidad 1/Meta 1.2/img/seleccion-de-caracteristicas (1).png",
+    "Unidad 1/Meta 1.2/img/seleccion-de-caracteristicas.png",
+    "Unidad 1/Meta 1.2/img/_.png",
+    "Unidad 1/Meta 1.2/img",
+    "Unidad 1/Meta 1.2/imagenes"
+  ]
+}

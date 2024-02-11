@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"ec0999f1f8ef761e","type":"text","text":"Emprender","x":-60,"y":-1360,"width":250,"height":60},
+		{"id":"4c2e73305dd36d3b","type":"text","text":"Identificar tareas y técnicas requeridas","x":-60,"y":-540,"width":250,"height":60},
+		{"id":"6cfefb056ddf9efe","type":"text","text":"factores económicos, legales, técnicos","x":360,"y":-540,"width":250,"height":60},
+		{"id":"58956c6a911bab20","type":"text","text":"Analisis viabilidad","x":360,"y":-820,"width":250,"height":60},
+		{"id":"7007ef905fad85c3","type":"text","text":"Organizar la estructura, políticas y operaciones","x":-60,"y":-300,"width":250,"height":60},
+		{"id":"6e9004e58f2cb5ab","type":"text","text":"analisis de negocio","x":-60,"y":-820,"width":250,"height":60},
+		{"id":"343e74436e0066be","type":"text","text":"requiere","x":140,"y":-1120,"width":250,"height":60},
+		{"id":"5594fbc82ecf4f47","type":"text","text":"Acción Iniciar","x":-480,"y":-820,"width":250,"height":60},
+		{"id":"078590168f42246e","type":"text","text":"determinar si es realizable","x":360,"y":-300,"width":250,"height":60},
+		{"id":"882ab9946e8d3701","type":"text","text":"Proyecto, negocio o empresa","x":-60,"y":-80,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"2954921b6fe030b5","fromNode":"ec0999f1f8ef761e","fromSide":"bottom","toNode":"5594fbc82ecf4f47","toSide":"top","label":"es"},
+		{"id":"68fd81b60aee2469","fromNode":"5594fbc82ecf4f47","fromSide":"bottom","toNode":"882ab9946e8d3701","toSide":"left","label":"un"},
+		{"id":"ed56d0096f35b247","fromNode":"4c2e73305dd36d3b","fromSide":"bottom","toNode":"7007ef905fad85c3","toSide":"top","label":"para"},
+		{"id":"1d99d7eabc1a4e61","fromNode":"6cfefb056ddf9efe","fromSide":"bottom","toNode":"078590168f42246e","toSide":"top","label":"para"},
+		{"id":"e08ec5d2ef591f6d","fromNode":"58956c6a911bab20","fromSide":"bottom","toNode":"6cfefb056ddf9efe","toSide":"top","label":"analiza"},
+		{"id":"4ee564a08d22283f","fromNode":"6e9004e58f2cb5ab","fromSide":"bottom","toNode":"4c2e73305dd36d3b","toSide":"top","label":"para"},
+		{"id":"0013d5fe35eb69b4","fromNode":"078590168f42246e","fromSide":"bottom","toNode":"882ab9946e8d3701","toSide":"right","label":"un"},
+		{"id":"42419f386ed230fa","fromNode":"7007ef905fad85c3","fromSide":"bottom","toNode":"882ab9946e8d3701","toSide":"top","label":"del"},
+		{"id":"07dca64fbbe351f5","fromNode":"343e74436e0066be","fromSide":"bottom","toNode":"6e9004e58f2cb5ab","toSide":"top","label":"hacer"},
+		{"id":"681e16f5fa433335","fromNode":"343e74436e0066be","fromSide":"bottom","toNode":"58956c6a911bab20","toSide":"top","label":"hacer"},
+		{"id":"f2dafc0cfd7ef2c2","fromNode":"ec0999f1f8ef761e","fromSide":"bottom","toNode":"343e74436e0066be","toSide":"top"}
+	]
+}

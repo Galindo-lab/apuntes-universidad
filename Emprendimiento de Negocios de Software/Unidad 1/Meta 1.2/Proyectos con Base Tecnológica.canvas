@@ -1,0 +1,34 @@
+{
+	"nodes":[
+		{"id":"6022d47885ce6b59","type":"group","x":1595,"y":-733,"width":613,"height":577,"color":"#81be50","label":"Desafíos"},
+		{"id":"185f5fb2d6f5deaa","type":"group","x":787,"y":-295,"width":584,"height":507,"color":"#297045","label":"Características"},
+		{"id":"d87d0b7a3c41b630","type":"group","x":875,"y":-758,"width":496,"height":337,"color":"#204e4a","label":"Definición"},
+		{"id":"50eedfa5355d96b7","type":"group","x":1963,"y":-41,"width":391,"height":357,"color":"#297045","label":"Ejemplos de Éxito"},
+		{"id":"10ee1db5a97a3e51","type":"text","text":"# Proyectos con base tecnológica\nIntegran conocimiento científico o tecnológico en productos, procesos o servicios. Pueden centrarse en la tecnología como elemento clave o como un componente de su propuesta de valor.","x":736,"y":-709,"width":463,"height":253,"color":"#204e4a"},
+		{"id":"e5ac9d4501b8a519","type":"text","text":"# Fuentes\nPérez, A. (n.d.). Proyecto Tecnológico: Definición y Características. OBS Business School. https://www.obsbusiness.school/blog/proyecto-tecnologico-definicion-y-caracteristicas\n\nCantalapiedra, M. (2021, October 21). Diez características para identificar a Una Empresa de Base Tecnológica. Think Big. https://empresas.blogthinkbig.com/empresa-de-base-tecnologica/","x":710,"y":286,"width":763,"height":211,"color":"#ffffff"},
+		{"id":"037da2907a6a8347","type":"text","text":"**Escalabilidad y Flexibilidad:**\nDiseñados para crecer y adaptarse a las demandas cambiantes del mercado.","x":1094,"y":-220,"width":354,"height":88,"color":"#297045"},
+		{"id":"8a04823b2a7e71e9","type":"text","text":" **Viabilidad Comercial:**\n Además de innovadores, deben ser comercialmente viables con un modelo de negocio sólido.","x":1091,"y":-102,"width":360,"height":118,"color":"#297045"},
+		{"id":"2532daf0c0128b71","type":"text","text":"**Innovación Tecnológica:** Enfoque en tecnologías avanzadas como IA, blockchain, IoT, etc.","x":1091,"y":53,"width":360,"height":88,"color":"#297045"},
+		{"id":"282eacf7acec49e5","type":"text","text":"**Desarrollo de Software:** \nCreación de aplicaciones, sistemas o herramientas informáticas.","x":1091,"y":-339,"width":360,"height":88,"color":"#297045"},
+		{"id":"0b2021ccb3867981","type":"text","text":"**Enfoque en el Usuario:**\nPrioridad en la experiencia del usuario para soluciones intuitivas y fáciles de usar.","x":693,"y":-273,"width":367,"height":117,"color":"#297045"},
+		{"id":"e24ead8c57147b33","type":"file","file":"Unidad 1/Meta 1.2/img/seleccion-de-caracteristicas (1).png","x":693,"y":-121,"width":367,"height":367,"color":"#297045"},
+		{"id":"736e012a227e37c2","type":"file","file":"Unidad 1/Meta 1.2/img/confundido.png","x":1244,"y":-709,"width":253,"height":253,"color":"#204e4a"},
+		{"id":"c50bfd3851ec5d43","type":"text","text":"**Rápida Evolución Tecnológica:**\nNecesidad de actualización continua para evitar obsolescencia.","x":1581,"y":-569,"width":326,"height":88,"color":"#81be50"},
+		{"id":"f3efe7339a65b92a","type":"text","text":"**Financiamiento y Recursos: **\nDesafíos críticos en la obtención y gestión de recursos.","x":1581,"y":-456,"width":326,"height":88,"color":"#81be50"},
+		{"id":"f848c9aa4ddf3b9b","type":"text","text":"**Adopción del Usuario:**\nSuperar resistencias al cambio y garantizar percepción positiva del producto. ","x":1581,"y":-709,"width":330,"height":118,"color":"#81be50"},
+		{"id":"64242ac571d27c6b","type":"file","file":"Unidad 1/Meta 1.2/img/desafio.png","x":1965,"y":-786,"width":330,"height":330,"color":"#81be50"},
+		{"id":"391ea104defe8c9b","type":"text","text":"**Regulaciones y Cumplimiento:**\nImpacto significativo por cambios en regulaciones y requisitos.","x":1969,"y":-412,"width":330,"height":108,"color":"#81be50"},
+		{"id":"b3c9349b8e434679","type":"text","text":"**Seguridad y Privacidad: **\nEnfoque constante en la protección de datos y prevención de brechas.","x":1973,"y":-273,"width":326,"height":88,"color":"#81be50"},
+		{"id":"13745b6da06bd8b9","type":"file","file":"Unidad 1/Meta 1.2/img/mano-robotica.png","x":1491,"y":-319,"width":416,"height":416,"color":"#81be50"},
+		{"id":"c1bf2ee3a3fa0123","type":"text","text":"## AWS\nRe-definición de la gestión de infraestructuras tecnológicas con servicios en la nube","x":1985,"y":-19,"width":337,"height":145,"color":"#328151"},
+		{"id":"eda1ff090dba103b","type":"text","text":"## Uber\nTransformación en la industria del transporte compartido a nivel mundial.","x":1985,"y":141,"width":337,"height":145,"color":"#328151"},
+		{"id":"9c4fffb05c7734d2","type":"file","file":"Unidad 1/Meta 1.2/img/Pasted image 20240210180830.png","x":1699,"y":246,"width":200,"height":120,"color":"#ffffff"},
+		{"id":"e96724b9690cbe2b","type":"file","file":"Unidad 1/Meta 1.2/img/uber.png","x":1491,"y":145,"width":161,"height":161,"color":"#ffffff"}
+	],
+	"edges":[
+		{"id":"9b906c0c8891793d","fromNode":"736e012a227e37c2","fromSide":"right","toNode":"f3efe7339a65b92a","toSide":"left","color":"#204e4a"},
+		{"id":"5381a211682b03fd","fromNode":"13745b6da06bd8b9","fromSide":"left","toNode":"e24ead8c57147b33","toSide":"right","color":"#204e4a"},
+		{"id":"d386aca20769ee8c","fromNode":"13745b6da06bd8b9","fromSide":"bottom","toNode":"50eedfa5355d96b7","toSide":"left","color":"#ffffff"},
+		{"id":"f43f613f0ec30c8b","fromNode":"13745b6da06bd8b9","fromSide":"bottom","toNode":"50eedfa5355d96b7","toSide":"left","color":"#296f44"}
+	]
+}
