@@ -4,5 +4,5 @@ Portafolio del curso de Emprendimiento de Negocios de Software (371) impartido p
 
 ## Contenido
 1. Introducción a la planeación de negocios TI
-	1. [Mapa conceptual](./Meta 1.1/Meta.md)
-	2. [[Investigacion]]
+	1. [Mapa conceptual](https://github.com/Galindo-lab/apuntes-universidad/blob/main/Emprendimiento%20de%20Negocios%20de%20Software/Unidad%201/Meta%201.1/Meta.md)
+	2. [Infografia](https://github.com/Galindo-lab/apuntes-universidad/blob/main/Emprendimiento%20de%20Negocios%20de%20Software/Unidad%201/Meta%201.2/Investigacion.md)
