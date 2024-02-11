@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unidad 1/Meta 1.2/Investigacion.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Unidad 1/Meta 1.2/Investigacion.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Unidad 1/Meta 1.2/Investigacion.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Unidad 1/Meta 1.2/Investigacion.md"
+                "file": "README.md"
               }
             }
           }
@@ -160,8 +160,9 @@
   },
   "active": "c096542599241550",
   "lastOpenFiles": [
-    "README.md",
     "Unidad 1/Meta 1.1/Meta.md",
+    "README.md",
+    "ds.md",
     "Unidad 1/Meta 1.2/Investigacion.md",
     "Unidad 1/Meta 1.1/output.png",
     "Unidad 1/Meta 1.1/Untitled.canvas",
