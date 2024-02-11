@@ -8,12 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b29f93f97b739b40",
+            "id": "c096542599241550",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Unidad 1/Meta 1.2/Investigacion.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c8b75afe8a4a0391",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Unidad 1/Meta 1.1/Meta.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Unidad 1/Meta 1.2/Investigacion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Unidad 1/Meta 1.2/Investigacion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Unidad 1/Meta 1.2/Investigacion.md"
               }
             }
           }
@@ -146,15 +158,18 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "b29f93f97b739b40",
+  "active": "c096542599241550",
   "lastOpenFiles": [
-    "Unidad 1/Meta 1.2/Investigacion.md",
     "README.md",
+    "Unidad 1/Meta 1.1/Meta.md",
+    "Unidad 1/Meta 1.2/Investigacion.md",
+    "Unidad 1/Meta 1.1/output.png",
     "Unidad 1/Meta 1.1/Untitled.canvas",
+    "Unidad 1/Meta 1.2/Proyectos con Base Tecnológica.canvas",
     "Unidad 1/Meta 1.2/output.png",
+    "Unidad 1/Meta 1.1/indez.md",
     "img/288300054-278844f1-a8bf-43fd-b276-8fc5c6386be2.png",
     "img",
-    "Unidad 1/Meta 1.2/Proyectos con Base Tecnológica.canvas",
     "Unidad 1/Meta 1.2/Welcome.md",
     "Unidad 1/Meta 1.2/Caracteristicas.md",
     "Unidad 1/Meta 1.2/img/Pasted image 20240210180830.png",

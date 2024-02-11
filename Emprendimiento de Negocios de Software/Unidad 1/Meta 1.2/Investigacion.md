@@ -1,17 +1,30 @@
+## Instrucciones 
+**Investigación:** Utilizando fuentes de información confiable investiga qué es un proyecto con base tecnológica, identificando sus principales características, ventajas, desafíos y ejemplos de éxito. Algunas preguntas guía para la investigación podrían ser:
 
-# Table of Contents
+- ¿Cómo se define un proyecto con base tecnológica?
+- ¿Cuáles son las características distintivas de estos proyectos?
+- ¿Qué ejemplos de proyectos con base tecnológica han tenido éxito en el mercado actual?
+- ¿Cuáles son los mayores desafíos que enfrentan estos proyectos?
 
-1.  [¿Cómo se define un proyecto con base tecnológica?](#orgefc2d84)
-2.  [¿Cuáles son las características distintivas de estos proyectos?](#orgbdafe6f)
-3.  [¿Qué ejemplos de proyectos con base tecnológica han tenido éxito en el mercado actual?](#org153fb75)
-4.  [¿Cuáles son los mayores desafíos que enfrentan estos proyectos?](#org19670da)
-5.  [Fuentes](#org0cc9035)
+**Creación de la Infografía:** Con la información recopilada, cada estudiante diseñará una infografía que resuma los puntos clave de su investigación. La infografía debe ser clara, visualmente atractiva y fácil de entender. 
 
+Deberá incluir:
 
+- Definición de proyecto con base tecnológica.
+- Principales características.
+- Ejemplos de proyectos exitosos.
+- Desafíos comunes en este tipo de proyectos.
 
-<a id="orgefc2d84"></a>
+**Publicación en el Foro de Discusión:** Una vez creada la infografía, deberá participar en el foro de discusión creado para esta actividad.
 
-# ¿Cómo se define un proyecto con base tecnológica?
+Además de publicar su propio trabajo, se espera que cada alumno participe comentando al menos dos infografías de sus compañeros, ofreciendo retroalimentación constructiva, preguntas o puntos de vista adicionales para enriquecer la discusión. La participación en el foro debe ser respetuosa, constructiva y fomentar el intercambio de ideas.
+###### Recomendaciones
+- Asegúrate de citar todas tus fuentes de información para mantener la integridad académica.
+- Al diseñar tu infografía, utiliza herramientas que te permitan crear diseños atractivos y profesionales, como Canva, Lucidchart, Piktochart, Adobe Spark, entre otros.
+- En tus participaciones en el foro, intenta aportar valor agregado a la discusión, ya sea a través de preguntas que profundicen el tema, ofreciendo una perspectiva diferente o compartiendo recursos adicionales.
+
+## Investigación 
+### ¿Cómo se define un proyecto con base tecnológica?
 
 -   Proyectos emprendedores con base tecnológica son aquellos que, de
     forma íntegra o parcial, hacen uso del conocimiento científico o
@@ -23,10 +36,7 @@
     usuarios, e incluso, en la infraestructura desarrollada para que el
     negocio funcione.
 
-
-<a id="orgbdafe6f"></a>
-
-# ¿Cuáles son las características distintivas de estos proyectos?
+### ¿Cuáles son las características distintivas de estos proyectos?
 
 -   **Desarrollo de software:** El núcleo del proyecto implica la creación
     de aplicaciones informáticas, sistemas, plataformas o herramientas
@@ -55,10 +65,7 @@
     negocio sólido, un mercado objetivo claro y una estrategia de
     monetización efectiva.
 
-
-<a id="org153fb75"></a>
-
-# ¿Qué ejemplos de proyectos con base tecnológica han tenido éxito en el mercado actual?
+### ¿Qué ejemplos de proyectos con base tecnológica han tenido éxito en el mercado actual?
 
 -   **Uber:** La aplicación de transporte compartido ha alterado la
     industria del taxi en todo el mundo, ofreciendo una forma
@@ -71,7 +78,7 @@
 
 <a id="org19670da"></a>
 
-# ¿Cuáles son los mayores desafíos que enfrentan estos proyectos?
+### ¿Cuáles son los mayores desafíos que enfrentan estos proyectos?
 
 -   **Rápida Evolución Tecnológica:** La constante evolución de las
     tecnologías puede hacer que un proyecto quede obsoleto si no se
@@ -97,9 +104,13 @@
 
 <a id="org0cc9035"></a>
 
-# Fuentes
+### Fuentes
 
     Pérez, A. (n.d.). Proyecto Tecnológico: Definición y Características. OBS Business School. https://www.obsbusiness.school/blog/proyecto-tecnologico-definicion-y-caracteristicas
     
     Cantalapiedra, M. (2021, October 21). Diez características para identificar a Una Empresa de Base Tecnológica. Think Big. https://empresas.blogthinkbig.com/empresa-de-base-tecnologica/
 
+
+
+## Infografía
+![](./output.png)

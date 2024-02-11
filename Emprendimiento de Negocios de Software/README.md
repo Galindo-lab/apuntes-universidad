@@ -3,5 +3,7 @@
 Portafolio del curso de Emprendimiento de Negocios de Software (371) impartido por la docente Carelia Guadalupe Gaxiola Pacheco presentado por el alumno **Luis Eduardo Galindo Amaya** matricula 1274895 en el plan de estudios de ingeniero en software y tecnologías emergenes en la universidad autonoma de baja californa durante el periodo 2024-1.
 
 ## Contenido
-- UNIDAD I. Introducción a la planeación de negocios TI
-	- 
+1.  Introducción a la planeación de negocios TI
+    1. [Participación en Foro de Discusión](Meta)
+    2. [Participación en Foro de Discusión](Investigacion) 
+2. 
