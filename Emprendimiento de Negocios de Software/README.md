@@ -4,5 +4,5 @@ Portafolio del curso de Emprendimiento de Negocios de Software (371) impartido p
 
 ## Contenido
 1. Introducción a la planeación de negocios TI
-    1. [Mapa conceptual](./Meta 1.1/Meta.md)
-    2. [Infografia](Investigacion) 
+	1. [[Meta]]
+	2. [[Investigacion]]
