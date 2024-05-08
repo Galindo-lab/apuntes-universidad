@@ -11,11 +11,14 @@
             "id": "c096542599241550",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
+                "file": "Unidad 4/Meta 4.2/3.canvas",
+                "viewState": {
+                  "x": -8,
+                  "y": -267,
+                  "zoom": -1.2140860602026287
+                }
               }
             }
           },
@@ -97,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Unidad 4/Meta 4.2/3.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Unidad 4/Meta 4.2/3.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Unidad 4/Meta 4.2/3.canvas"
               }
             }
           }
@@ -150,9 +153,9 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "canvas:Crear nuevo lienzo": false,
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo canvas": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false
@@ -160,8 +163,20 @@
   },
   "active": "c096542599241550",
   "lastOpenFiles": [
-    "Unidad 1/Meta 1.1/Meta.md",
+    "Unidad 4/Meta 4.2/Meta 4.2.pdf",
+    "Unidad 4/Meta 4.2/lu21399223ibbc.tmp",
+    "Unidad 4/Meta 4.2/lu21399223ibaz.tmp",
+    "Unidad 4/Meta 4.2/3.png",
+    "negocio.png",
+    "finanzas.png",
+    "codificacion.png",
+    "sitio-web.png",
+    "banco.png",
+    "tasa-de-interes.png",
+    "Unidad 4/Meta 4.2/lu21399223ib2f.tmp",
     "README.md",
+    "Unidad 4/Meta 4.2/3.canvas",
+    "Unidad 1/Meta 1.1/Meta.md",
     "ds.md",
     "Unidad 1/Meta 1.2/Investigacion.md",
     "Unidad 1/Meta 1.1/output.png",
@@ -173,12 +188,6 @@
     "img",
     "Unidad 1/Meta 1.2/Welcome.md",
     "Unidad 1/Meta 1.2/Caracteristicas.md",
-    "Unidad 1/Meta 1.2/img/Pasted image 20240210180830.png",
-    "Unidad 1/Meta 1.2/img/mano-robotica.png",
-    "Unidad 1/Meta 1.2/img/uber.png",
-    "Unidad 1/Meta 1.2/img/seleccion-de-caracteristicas (1).png",
-    "Unidad 1/Meta 1.2/img/seleccion-de-caracteristicas.png",
-    "Unidad 1/Meta 1.2/img/_.png",
     "Unidad 1/Meta 1.2/img",
     "Unidad 1/Meta 1.2/imagenes"
   ]

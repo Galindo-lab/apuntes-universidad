@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"fe43181b7d064df4","type":"text","text":"## Expansión\nObjetivo de ampliar la base de usuarios post-financiamiento, con la necesidad de contratar equipo y estrategias de marketing.","x":21,"y":90,"width":447,"height":270,"color":"4"},
+		{"id":"6e54b9f2bc2f072f","type":"file","file":"negocio.png","x":264,"y":225,"width":185,"height":185,"color":"4"},
+		{"id":"6d9844c851477ab4","type":"text","text":"## Solicitud de financiación \nProceso a seguir para solicitar financiamiento una vez se cumplen los requisitos, incluyendo registro en institución bancaria.","x":-503,"y":-52,"width":446,"height":277,"color":"2"},
+		{"id":"9af0255e7df8faf9","type":"file","file":"finanzas.png","x":-280,"y":87,"width":185,"height":185,"color":"2"},
+		{"id":"bdad5b1f33e2cc43","type":"text","text":"## Registro en el SAT\nPaso necesario para cumplir requisitos de formalidad empresarial, con lista detallada de documentos requeridos.","x":3,"y":-362,"width":484,"height":222,"color":"5"},
+		{"id":"38cb552b25a6f42c","type":"file","file":"sitio-web.png","x":283,"y":-182,"width":185,"height":185,"color":"5"},
+		{"id":"3a710e176611a9fc","type":"text","text":"## Desarrollo de una versión simple del producto\nPaso necesario para cumplir requisitos de formalidad empresarial, con lista detallada de documentos requeridos.\n\n","x":-502,"y":-547,"width":446,"height":277,"color":"3"},
+		{"id":"3932d1a089352164","type":"file","file":"codificacion.png","x":-279,"y":-362,"width":185,"height":185,"color":"3"},
+		{"id":"b157091e28f3c2cf","type":"text","text":"## Financiación intermedia\nMientras se espera el cumplimiento de requisitos para financiamiento oficial, se consideran opciones temporales como préstamos familiares o crowdfunding.","x":41,"y":-822,"width":446,"height":230,"color":"1"},
+		{"id":"d0b6d7c9458f1075","type":"file","file":"banco.png","x":283,"y":-639,"width":185,"height":185,"color":"1"},
+		{"id":"6f0c6acd9f10cbb9","type":"text","text":"## Reducción en las tasas \nEsperar una disminución en las tasas de interés para facilitar financiamiento.","x":-501,"y":-944,"width":446,"height":185,"color":"6"},
+		{"id":"cb26be8a27b8b04b","type":"file","file":"tasa-de-interes.png","x":-279,"y":-824,"width":185,"height":185,"color":"6"}
+	],
+	"edges":[
+		{"id":"fde9aa25020aac54","fromNode":"6f0c6acd9f10cbb9","fromSide":"right","toNode":"b157091e28f3c2cf","toSide":"top","color":"#626060"},
+		{"id":"c86668b10a491dcf","fromNode":"b157091e28f3c2cf","fromSide":"bottom","toNode":"3a710e176611a9fc","toSide":"top","color":"#626060"},
+		{"id":"3e070c194077be8b","fromNode":"3a710e176611a9fc","fromSide":"right","toNode":"bdad5b1f33e2cc43","toSide":"top","color":"#626060"},
+		{"id":"cf861ecdc303ae2a","fromNode":"bdad5b1f33e2cc43","fromSide":"bottom","toNode":"6d9844c851477ab4","toSide":"top","color":"#626060"},
+		{"id":"da92ee239fc598b8","fromNode":"6d9844c851477ab4","fromSide":"right","toNode":"fe43181b7d064df4","toSide":"top","color":"#626060"}
+	]
+}
