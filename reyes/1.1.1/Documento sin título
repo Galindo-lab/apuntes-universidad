@@ -1,0 +1,9 @@
+from django.core.mail import send_mail
+
+send_mail(
+    'Test Subject',  # Subject of the email
+    'This is a test email.',  # Message body
+    'cepa.prestamo@uabc.edu.mx',  # From email address
+    ['egalindo54@uabc.edu.mx'],  # To email address (list)
+    fail_silently=False,
+)

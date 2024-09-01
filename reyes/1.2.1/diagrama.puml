@@ -1,0 +1,42 @@
+
+@startmindmap
+title Diseño Centrado en el Usuario 
+scale 2.0
+
+!theme plain
+
+* UCD
+** Elementos Esenciales
+*** Visibilidad
+**** El usuario puede entender el sitio\ny cómo usarlo desde el inicio.
+*** Accesibilidad
+**** La información debe ser fácil\nde encontrar.
+*** Legibilidad
+**** El texto debe ser fácil de leer.
+*** Lenguaje
+**** El lenguaje debe ser fácil de\nentender.
+**** Evitar jerga técnica que pueda\ncausar confusión.
+** Principios
+*** Participación Temprana y\nActiva del Usuario
+**** Decisiones de diseño basadas en las\nnecesidades del usuario.
+*** Clarificación de Requisitos
+**** Identificar y alinear requisitos de\nusuario con objetivos comerciales.
+*** Retroalimentación Continua
+**** Incorporar feedback de usuarios y\nrealizar pruebas de usabilidad regularmente.
+*** Diseño Iterativo
+**** Mejorar el producto mediante cambios\ngraduales basados en pruebas.
+** Fases del Proceso
+*** Investigación
+**** Identificar usuarios y condiciones de uso.
+**** Crear perfiles (personas) para comprender necesidades\ny comportamientos.
+*** Ideación
+**** Desarrollar soluciones creativas.
+**** Usar herramientas como mapeo de\nviaje y storyboarding.
+*** Validación
+**** Probar ideas con usuarios reales.
+**** Comparar con mejores prácticas de UX y\najustar según resultados.
+*** Mejora
+**** Optimizar la experiencia y la interfaz\nbasada en datos de validación.
+*** Reflexión
+**** Involucrar al usuario en todas las etapas\npara asegurar la efectividad del producto.
+@endmindmap
