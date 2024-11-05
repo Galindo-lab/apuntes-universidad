@@ -1,0 +1,68 @@
+
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="styles/base.css" rel="stylesheet">
+
+    <!-- se puede añadir un poco de interacción con Javascript,
+         en este caso para tener que modificar la pagina cada vez
+         que se agrega un registro -->
+
+    <!-- Aquí están las entradas, se pueden agregar más zines -->
+    <script defer src="scripts/registers.js"></script>
+
+    <!-- Aqui esta el código que se encarga de cargar los registro -->
+    <script defer src="scripts/register_loader.js"></script>
+    
+    <title>Directorio de Zines</title>
+
+    <style>
+
+      /* estilos que solo se usan en esta pagina */
+      
+      .book {
+          padding-block: 1em;
+      }
+
+      .book sub {
+          color: var(--text-muted);
+      }
+      
+    </style>
+    
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">
+        <img alt="" src="images/logo.png" width="50px"/>
+      </a>
+
+      <ul>
+        <li><a href="#content">Contenido</a></li>
+        <li><a href="directorio.html">Directorio</a></li>
+        <li><a href="linktree.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Directorio de Zines</h1>
+      
+      <p>
+        Nullam eu ante vel est convallis dignissim.
+        nbsp;Fusce suscipit, wisi nec facilisis facilisis,
+        est dui fermentum leo, quis tempor ligula erat quis.
+        convallis dignissim. leo.
+      </p>
+    </header>
+    <hr/>
+    <a id="content"></a>
+
+    <!-- aquí javascript inserta los registro -->
+    <article id="lista-registros">
+    </article>
+
+  </body>
+</html>

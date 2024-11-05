@@ -1,0 +1,1 @@
+La **interacción** se refiere al proceso de comunicación bidireccional entre el ser humano ([[Usuarios]]) y un [[Sistema]] informático (computadora, software, dispositivo).

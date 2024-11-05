@@ -1,0 +1,8 @@
+Aspecto,IEEE 1061,McCall,FURPS
+Antecedentes,Desarrollado por IEEE en 1992.,Propuesto en 1977 por Jim McCall.,Propuesto por Hewlett-Packard en los años 80.
+Principales características,Proceso sistemático de métricas. Enfoque adaptable.,"Evaluación desde operación, revisión y transición del software.",Clasificación de atributos en cinco categorías.
+Componentes del modelo,"Métricas, criterios de evaluación, validación de métricas.","Factores de calidad (11), criterios y métricas.","Funcionalidad, Usabilidad, Fiabilidad, Rendimiento y Soportabilidad."
+Ventajas,"Flexible, adaptativo a las necesidades del proyecto.",Cubrir fases del ciclo de vida del software.,"Sencillo, fácil de entender, completo."
+Desventajas,Complejo para proyectos pequeños.,No cubre atributos modernos como seguridad.,Se enfoca más en aspectos no técnicos.
+Similitudes,Enfocados en la medición y evaluación de la calidad del software.,Todos permiten la evaluación a través de factores o métricas.,Se enfocan en garantizar que el software cumpla con ciertos estándares de calidad.
+Diferencias,Proceso sistemático para definir métricas.,Más orientado a la calidad desde varias perspectivas del ciclo de vida del software.,Se centra más en atributos funcionales y no funcionales del software.

@@ -1,0 +1,1 @@
+Involucran la observación directa de [[Usuarios]] reales mientras interactúan con el [[Sistema]]. El evaluador registra cómo los usuarios completan [[Examen/Tareas]] específicas y analiza las dificultades que encuentran.

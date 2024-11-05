@@ -1,0 +1,83 @@
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+    /* barra de navegación en computadoras*/
+    nav {
+
+        button {
+            display: none;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+
+            li {
+                padding-inline: 0.75rem;
+                padding-block: 0.5rem;
+                margin-left: 1rem;
+            }
+
+            /* Call to action */
+            li:last-child {
+                background-color: var(--primary-color);
+                border-radius: 10rem;
+                
+                a {
+                    color: var(--color-white);
+                }
+            }
+            
+        }
+    }
+
+    /*Heaer*/
+    header {
+
+        height: auto;
+        
+        ul {
+            justify-content: center;
+            flex-direction: row;
+            gap: 1rem;
+
+            li {
+                max-width: 200px;
+            }
+        }
+    }
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    /* convertir todo en una columna */
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        gap: 2rem;    
+    }    
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly; /* Reparte el espacio uniformemente */
+        column-gap: 1.5rem;
+        row-gap: 0rem;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Estilos para pantallas grandes */
+}
+
+@media (min-width: 1200px) {
+    /* Estilos para pantallas extra grandes */
+}
+
+@media (min-width: 1400px) {
+    /* Estilos para pantallas más grandes */
+}

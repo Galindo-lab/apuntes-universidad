@@ -1,0 +1,1 @@
+Este método involucra la evaluación de la interfaz por expertos en [[Usabilidad]] sin la participación directa de [[Usuarios]], permite identificar problemas potenciales de [[Usabilidad]].

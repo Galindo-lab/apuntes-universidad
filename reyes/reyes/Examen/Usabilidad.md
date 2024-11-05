@@ -1,0 +1,1 @@
+La medida en que un producto puede ser utilizado por usuarios específicos para alcanzar objetivos determinados, con efectividad, eficiencia y satisfacción en un contexto de usuario específico.

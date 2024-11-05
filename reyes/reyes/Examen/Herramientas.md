@@ -1,0 +1,1 @@
+Las herramientas son las [interfaces](Interfaz.md) que conectan a los usuarios con los [[Sistema|sistemas]], incluyendo componentes de hardware y software.

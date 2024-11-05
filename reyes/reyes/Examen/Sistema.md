@@ -1,0 +1,1 @@
+cualquier conjunto de componentes tecnológicos diseñados para interactuar con los [[Usuarios]] con el fin de cumplir con [[Examen/Tareas]] específicas.

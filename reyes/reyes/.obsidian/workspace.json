@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "2f5c26578f374618",
+    "type": "split",
+    "children": [
+      {
+        "id": "2573ef91e3421823",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bc38d99bc69f2d54",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Preguntas a contestar.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Preguntas a contestar"
+            }
+          },
+          {
+            "id": "3d4aabfbf2530c3e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Preguntas a contestar.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Preguntas a contestar"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "eca758872cfffa1a",
+    "type": "split",
+    "children": [
+      {
+        "id": "a7edd2179061f890",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6ce14f109604af54",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "3ff723e1b2152a15",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "b93cd561fad19bbd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 231.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "db6826c775dace01",
+    "type": "split",
+    "children": [
+      {
+        "id": "0230de9b9c79b50e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "13ca848040768712",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "4118e98202cb0b31",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Tareas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Tareas"
+            }
+          },
+          {
+            "id": "5b8f05ebd1f6ddf0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Tareas.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Tareas"
+            }
+          },
+          {
+            "id": "661530db02c16501",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Sin título 4.md"
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de Sin título 4"
+            }
+          },
+          {
+            "id": "8e63811405082c81",
+            "type": "leaf",
+            "state": {
+              "type": "custom-frames-chatgpt",
+              "state": {},
+              "icon": "lucide-bot",
+              "title": "ChatGpt"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 698.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-custom-frames:Open ChatGpt": false,
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "3d4aabfbf2530c3e",
+  "lastOpenFiles": [
+    "Sin nombre/Usability.md",
+    "Preguntas a contestar.md",
+    "Sin nombre/5 Essential Usability Metrics in UX Research.md",
+    "Sin nombre/Using the 5Es to understand users.md",
+    "Sin nombre/Usability is a key element of User Experience.md",
+    "Sin nombre/Usability 101- Introduction to Usability.md",
+    "Sin nombre/Five usability factors that make products usable.md",
+    "Sin nombre/5E’s of Whitney Quesenbery.md",
+    "Sin nombre/5es-citj0204.pdf",
+    "e/Tareas.md",
+    "e",
+    "Sin nombre/Five usability factors.md",
+    "Sin nombre/Sin nombre",
+    "Sin nombre",
+    "Excalidraw/Drawing 2024-10-28 14.35.59_0.excalidraw.md",
+    "Excalidraw/Drawing 2024-10-28 14.35.59.excalidraw.md",
+    "e/Sin título 4.md",
+    "Excalidraw",
+    "e/Sin título 3.md",
+    "e/Sin título 2.md",
+    "e/Sin título 1.md",
+    "e/Sin título.md",
+    "e/Reflexionar sobre el impacto de la mala calidad en el software.md",
+    "xs.md",
+    "Examen/Usuarios.md",
+    "Examen/Usabilidad.md",
+    "Sin título 1.canvas",
+    "Sin título.canvas",
+    "2024-10-12.md",
+    "Sin a.md",
+    "Excalidraw/Drawing 2024-10-12 17.42.47.excalidraw.md",
+    "Examen/Sistemas interactivos.md",
+    "Pasted image 20241001162812.png",
+    "Examen"
+  ]
+}

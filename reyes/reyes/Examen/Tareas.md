@@ -1,0 +1,1 @@
+Las tareas son las acciones que los usuarios realizan para alcanzar un objetivo en un sistema. Al analizarlas, los diseñadores pueden crear interfaces más intuitivas, considerando la complejidad, habilidades necesarias y tiempo requerido.

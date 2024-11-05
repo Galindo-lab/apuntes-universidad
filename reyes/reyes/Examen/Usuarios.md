@@ -1,0 +1,4 @@
+Es la persona que interactúa con un sistema computacional o digital con el objetivo de realizar tareas o alcanzar metas específicas. Los usuarios pueden tener diferentes niveles de conocimiento, habilidades y expectativas, lo que influye en cómo interactúan con una interfaz o sistema.
+
+
+Los usuarios son el foco principal en la investigación de [[Interacción Humano-Computadora (IHC)]], ya que sus preferencias, características y comportamientos guían el diseño de sistemas e interfaces. Se analizan emociones, experiencias y capacidades cognitivas, además de sus objetivos y necesidades, para crear tecnología adecuada. Los usuarios se benefician de mejores experiencias al interactuar con sistemas y dispositivos.

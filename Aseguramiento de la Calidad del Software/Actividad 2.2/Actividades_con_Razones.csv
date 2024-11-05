@@ -1,0 +1,17 @@
+Actividad,Etapa,Razón
+Definición de estándares de calidad,Planeación,Se deben establecer estándares claros antes de comenzar el desarrollo.
+Planificación de QA,Planeación,Es crucial planificar cómo se ejecutarán las actividades de QA y qué recursos serán necesarios.
+Revisiones y auditorías,Monitoreo,Se realiza para detectar errores y asegurar el cumplimiento de estándares a lo largo del desarrollo.
+Revisión y control de requisitos,Monitoreo,"Permite asegurar que los requisitos sean correctos, evitando problemas futuros en el desarrollo."
+Pruebas,Monitoreo,Es necesario verificar continuamente que el software funcione correctamente.
+Automatización de pruebas,Monitoreo,La automatización aumenta la eficiencia y la cobertura de las pruebas a lo largo del ciclo de desarrollo.
+Gestión de defectos,Monitoreo,Se debe controlar la identificación y corrección de defectos para mejorar la calidad.
+Seguridad,Control,Es crucial controlar y mitigar las vulnerabilidades del software para evitar riesgos de seguridad.
+Administración de la seguridad,Control,Se asegura que existan políticas de seguridad adecuadas para proteger los datos del software.
+Rendimiento,Monitoreo,El rendimiento del software debe monitorearse para cumplir con los requisitos de eficiencia.
+Documentación,Control,Es necesario controlar los resultados y procesos para garantizar la trazabilidad de las actividades.
+Mejora continua,Control,Es un proceso continuo para implementar mejoras en base a lanzamientos y comentarios previos.
+Administración de riesgos,Planeación,Planificación necesaria para identificar y mitigar riesgos de manera efectiva.
+Administración del cambio,Planeación,Es fundamental planificar cómo se administrarán los cambios para evitar confusiones.
+Educación,Planeación,Es importante educar continuamente al equipo para mejorar las prácticas de desarrollo.
+Administración de proveedores,Planeación,Se debe garantizar que los proveedores externos cumplan con los estándares de calidad.
